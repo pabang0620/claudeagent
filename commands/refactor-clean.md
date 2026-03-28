@@ -1,5 +1,7 @@
 # Refactor Clean
 
+Use the refactor-cleaner agent to perform this task.
+
 테스트 검증과 함께 데드 코드를 안전하게 식별하고 제거합니다:
 
 1. 데드 코드 분석 도구 실행:

@@ -1,5 +1,7 @@
 # Update Documentation
 
+Use the doc-updater agent to perform this task.
+
 단일 출처(source-of-truth)에서 문서 동기화:
 
 1. package.json scripts 섹션 읽기

@@ -1,5 +1,7 @@
 # Code Review
 
+Invoke the code-reviewer skill to perform this review.
+
 커밋되지 않은 변경사항에 대한 종합적인 보안 및 품질 리뷰:
 
 1. 변경된 파일 확인: git diff --name-only HEAD
