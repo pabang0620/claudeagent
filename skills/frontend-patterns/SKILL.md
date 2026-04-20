@@ -1,631 +1,445 @@
 ---
 name: frontend-patterns
-description: React, 상태 관리, 성능 최적화, UI 베스트 프랙티스를 위한 프론트엔드 개발 패턴
+description: React 19 + Vite 7 프론트엔드 개발 패턴. React 19 신규 API, 컴포넌트 설계, 상태관리, 성능 최적화, 접근성 베스트 프랙티스
 ---
 
-# 프론트엔드 개발 패턴
+# 프론트엔드 개발 패턴 (React 19 + Vite 7)
 
-React 및 고성능 사용자 인터페이스를 위한 현대적인 프론트엔드 패턴
+## React 19 신규 API
 
-## 컴포넌트 패턴
+### use() — 비동기 언래핑
+```javascript
+import { use, Suspense } from 'react'
+
+function UserProfile({ userPromise }) {
+  const user = use(userPromise) // Suspense 경계 안에서만 사용
+  return <div>{user.name}</div>
+}
+
+<Suspense fallback={<Skeleton />}>
+  <UserProfile userPromise={fetchUser(id)} />
+</Suspense>
+```
+
+### useOptimistic — 낙관적 업데이트
+```javascript
+import { useOptimistic, useTransition } from 'react'
+
+function LikeButton({ post }) {
+  const [optimisticLikes, addOptimisticLike] = useOptimistic(
+    post.likes,
+    (current, delta) => current + delta
+  )
+  const [isPending, startTransition] = useTransition()
+
+  const handleLike = () => {
+    startTransition(async () => {
+      addOptimisticLike(1)
+      await likePost(post.id)
+    })
+  }
+
+  return <button onClick={handleLike}>{optimisticLikes} 좋아요</button>
+}
+```
+
+### useActionState — 폼 액션 상태
+```javascript
+import { useActionState } from 'react'
+
+async function submitForm(prevState, formData) {
+  const name = formData.get('name')
+  if (!name) return { error: '이름을 입력하세요' }
+  await saveUser({ name })
+  return { error: null, success: true }
+}
+
+function UserForm() {
+  const [state, formAction, isPending] = useActionState(submitForm, { error: null })
+
+  return (
+    <form action={formAction}>
+      <input name="name" disabled={isPending} />
+      {state.error && <p role="alert">{state.error}</p>}
+      <button type="submit" disabled={isPending}>
+        {isPending ? '저장 중...' : '저장'}
+      </button>
+    </form>
+  )
+}
+```
+
+---
+
+## 컴포넌트 설계 원칙
+
+### 파일 분류 기준
+```
+pages/          → 라우트 진입점 (데이터 페칭 담당)
+features/       → 도메인 기능 단위 (비즈니스 로직 포함)
+components/ui/  → 순수 UI (재사용 가능, 비즈니스 로직 없음)
+hooks/          → 커스텀 훅 (상태·사이드이펙트 로직)
+utils/          → 순수 함수 유틸리티
+```
+
+### Compound Component 패턴
+```javascript
+const Card = {
+  Root: ({ children, className }) => (
+    <div className={`rounded-lg border p-4 ${className}`}>{children}</div>
+  ),
+  Header: ({ children }) => <div className="font-semibold mb-3">{children}</div>,
+  Body: ({ children }) => <div className="text-sm">{children}</div>,
+}
+
+// 사용
+<Card.Root>
+  <Card.Header>제목</Card.Header>
+  <Card.Body>내용</Card.Body>
+</Card.Root>
+```
 
 ### 상속보다 조합
-
 ```javascript
-// ✅ 좋은 예: 컴포넌트 조합
-function Card({ children, variant = 'default' }) {
-  return <div className={`card card-${variant}`}>{children}</div>;
-}
-
-function CardHeader({ children }) {
-  return <div className="card-header">{children}</div>;
-}
-
-function CardBody({ children }) {
-  return <div className="card-body">{children}</div>;
-}
-
-// 사용법
-<Card>
-  <CardHeader>제목</CardHeader>
-  <CardBody>내용</CardBody>
-</Card>
-```
-
-### 복합 컴포넌트 (Compound Components)
-
-```javascript
-import { createContext, useContext, useState } from 'react';
-
-const TabsContext = createContext();
-
-function Tabs({ children, defaultTab }) {
-  const [activeTab, setActiveTab] = useState(defaultTab);
-
-  return (
-    <TabsContext.Provider value={{ activeTab, setActiveTab }}>
-      {children}
-    </TabsContext.Provider>
-  );
-}
-
-function TabList({ children }) {
-  return <div className="tab-list">{children}</div>;
-}
-
-function Tab({ id, children }) {
-  const context = useContext(TabsContext);
-  if (!context) throw new Error('Tab은 Tabs 내에서 사용해야 합니다');
-
-  return (
-    <button
-      className={context.activeTab === id ? 'active' : ''}
-      onClick={() => context.setActiveTab(id)}
-    >
-      {children}
-    </button>
-  );
-}
-
-// 사용법
-<Tabs defaultTab="overview">
-  <TabList>
-    <Tab id="overview">개요</Tab>
-    <Tab id="details">상세</Tab>
-  </TabList>
-</Tabs>
-```
-
-### Render Props 패턴
-
-```javascript
-function DataLoader({ url, children }) {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    fetch(url)
-      .then(res => res.json())
-      .then(setData)
-      .catch(setError)
-      .finally(() => setLoading(false));
-  }, [url]);
-
-  return <>{children(data, loading, error)}</>;
-}
-
-// 사용법
-<DataLoader url="/api/markets">
-  {(markets, loading, error) => {
-    if (loading) return <Spinner />;
-    if (error) return <Error error={error} />;
-    return <MarketList markets={markets} />;
-  }}
-</DataLoader>
-```
-
-## 커스텀 Hooks 패턴
-
-### 상태 관리 Hook
-
-```javascript
-function useToggle(initialValue = false) {
-  const [value, setValue] = useState(initialValue);
-
-  const toggle = useCallback(() => {
-    setValue(v => !v);
-  }, []);
-
-  return [value, toggle];
-}
-
-// 사용법
-const [isOpen, toggleOpen] = useToggle();
-```
-
-### 비동기 데이터 페칭 Hook
-
-```javascript
-function useQuery(key, fetcher, options) {
-  const [data, setData] = useState(null);
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false);
-
-  const refetch = useCallback(async () => {
-    setLoading(true);
-    setError(null);
-
-    try {
-      const result = await fetcher();
-      setData(result);
-      options?.onSuccess?.(result);
-    } catch (err) {
-      const error = err;
-      setError(error);
-      options?.onError?.(error);
-    } finally {
-      setLoading(false);
-    }
-  }, [fetcher, options]);
-
-  useEffect(() => {
-    if (options?.enabled !== false) {
-      refetch();
-    }
-  }, [key, refetch, options?.enabled]);
-
-  return { data, error, loading, refetch };
-}
-
-// 사용법
-const { data: markets, loading, error, refetch } = useQuery(
-  'markets',
-  () => fetch('/api/markets').then(r => r.json()),
-  {
-    onSuccess: data => console.log('조회함', data.length, '개 마켓'),
-    onError: err => console.error('실패:', err)
-  }
-);
-```
-
-### 디바운스 Hook
-
-```javascript
-function useDebounce(value, delay) {
-  const [debouncedValue, setDebouncedValue] = useState(value);
-
-  useEffect(() => {
-    const handler = setTimeout(() => {
-      setDebouncedValue(value);
-    }, delay);
-
-    return () => clearTimeout(handler);
-  }, [value, delay]);
-
-  return debouncedValue;
-}
-
-// 사용법
-const [searchQuery, setSearchQuery] = useState('');
-const debouncedQuery = useDebounce(searchQuery, 500);
-
-useEffect(() => {
-  if (debouncedQuery) {
-    performSearch(debouncedQuery);
-  }
-}, [debouncedQuery]);
-```
-
-## 상태 관리 패턴
-
-### Context + Reducer 패턴
-
-```javascript
-const MarketContext = createContext();
-
-function marketReducer(state, action) {
-  switch (action.type) {
-    case 'SET_MARKETS':
-      return { ...state, markets: action.payload };
-    case 'SELECT_MARKET':
-      return { ...state, selectedMarket: action.payload };
-    case 'SET_LOADING':
-      return { ...state, loading: action.payload };
-    default:
-      return state;
-  }
-}
-
-function MarketProvider({ children }) {
-  const [state, dispatch] = useReducer(marketReducer, {
-    markets: [],
-    selectedMarket: null,
-    loading: false
-  });
-
-  return (
-    <MarketContext.Provider value={{ state, dispatch }}>
-      {children}
-    </MarketContext.Provider>
-  );
-}
-
-function useMarkets() {
-  const context = useContext(MarketContext);
-  if (!context) throw new Error('useMarkets는 MarketProvider 내에서 사용해야 합니다');
-  return context;
-}
-```
-
-## 성능 최적화
-
-### 메모이제이션
-
-```javascript
-import { useMemo, useCallback } from 'react';
-
-// ✅ 비용이 큰 계산을 useMemo로
-const sortedMarkets = useMemo(() => {
-  return markets.sort((a, b) => b.volume - a.volume);
-}, [markets]);
-
-// ✅ 자식에게 전달되는 함수를 useCallback으로
-const handleSearch = useCallback((query) => {
-  setSearchQuery(query);
-}, []);
-
-// ✅ 순수 컴포넌트에 React.memo
-const MarketCard = React.memo(({ market }) => {
-  return (
-    <div className="market-card">
-      <h3>{market.name}</h3>
-      <p>{market.description}</p>
-    </div>
-  );
-});
-```
-
-### 코드 분할 & 지연 로딩
-
-```javascript
-import { lazy, Suspense } from 'react';
-
-// ✅ 무거운 컴포넌트 지연 로딩
-const HeavyChart = lazy(() => import('./HeavyChart'));
-const ThreeJsBackground = lazy(() => import('./ThreeJsBackground'));
-
-function Dashboard() {
-  return (
-    <div>
-      <Suspense fallback={<ChartSkeleton />}>
-        <HeavyChart data={data} />
-      </Suspense>
-
-      <Suspense fallback={null}>
-        <ThreeJsBackground />
-      </Suspense>
-    </div>
-  );
-}
-```
-
-### 긴 목록 가상화
-
-```javascript
-import { useVirtualizer } from '@tanstack/react-virtual';
-import { useRef } from 'react';
-
-function VirtualMarketList({ markets }) {
-  const parentRef = useRef(null);
-
-  const virtualizer = useVirtualizer({
-    count: markets.length,
-    getScrollElement: () => parentRef.current,
-    estimateSize: () => 100,  // 예상 행 높이
-    overscan: 5  // 추가로 렌더링할 항목
-  });
-
-  return (
-    <div ref={parentRef} style={{ height: '600px', overflow: 'auto' }}>
-      <div
-        style={{
-          height: `${virtualizer.getTotalSize()}px`,
-          position: 'relative'
-        }}
-      >
-        {virtualizer.getVirtualItems().map(virtualRow => (
-          <div
-            key={virtualRow.index}
-            style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: `${virtualRow.size}px`,
-              transform: `translateY(${virtualRow.start}px)`
-            }}
-          >
-            <MarketCard market={markets[virtualRow.index]} />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-```
-
-## 폼 처리 패턴
-
-### 제어 컴포넌트 + 유효성 검사
-
-```javascript
-function CreateMarketForm() {
-  const [formData, setFormData] = useState({
-    name: '',
-    description: '',
-    endDate: ''
-  });
-
-  const [errors, setErrors] = useState({});
-
-  const validate = () => {
-    const newErrors = {};
-
-    if (!formData.name.trim()) {
-      newErrors.name = '이름은 필수입니다';
-    } else if (formData.name.length > 200) {
-      newErrors.name = '이름은 200자 이하여야 합니다';
-    }
-
-    if (!formData.description.trim()) {
-      newErrors.description = '설명은 필수입니다';
-    }
-
-    if (!formData.endDate) {
-      newErrors.endDate = '종료 날짜는 필수입니다';
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    if (!validate()) return;
-
-    try {
-      await createMarket(formData);
-      // 성공 처리
-    } catch (error) {
-      // 에러 처리
-    }
-  };
-
-  return (
-    <form onSubmit={handleSubmit}>
-      <input
-        value={formData.name}
-        onChange={e => setFormData(prev => ({ ...prev, name: e.target.value }))}
-        placeholder="마켓 이름"
-      />
-      {errors.name && <span className="error">{errors.name}</span>}
-
-      {/* 다른 필드 */}
-
-      <button type="submit">마켓 생성</button>
-    </form>
-  );
-}
-```
-
-## Error Boundary 패턴
-
-```javascript
-class ErrorBoundary extends React.Component {
-  state = {
-    hasError: false,
-    error: null
-  };
-
-  static getDerivedStateFromError(error) {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error, errorInfo) {
-    console.error('Error boundary가 에러를 잡음:', error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return (
-        <div className="error-fallback">
-          <h2>문제가 발생했습니다</h2>
-          <p>{this.state.error?.message}</p>
-          <button onClick={() => this.setState({ hasError: false })}>
-            다시 시도
-          </button>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}
-
-// 사용법
-<ErrorBoundary>
-  <App />
-</ErrorBoundary>
-```
-
-## 애니메이션 패턴
-
-### Framer Motion 애니메이션
-
-```javascript
-import { motion, AnimatePresence } from 'framer-motion';
-
-// ✅ 리스트 애니메이션
-function AnimatedMarketList({ markets }) {
-  return (
-    <AnimatePresence>
-      {markets.map(market => (
-        <motion.div
-          key={market.id}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.3 }}
-        >
-          <MarketCard market={market} />
-        </motion.div>
-      ))}
-    </AnimatePresence>
-  );
-}
-
-// ✅ 모달 애니메이션
-function Modal({ isOpen, onClose, children }) {
-  return (
-    <AnimatePresence>
-      {isOpen && (
-        <>
-          <motion.div
-            className="modal-overlay"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={onClose}
-          />
-          <motion.div
-            className="modal-content"
-            initial={{ opacity: 0, scale: 0.9, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.9, y: 20 }}
-          >
-            {children}
-          </motion.div>
-        </>
-      )}
-    </AnimatePresence>
-  );
-}
-```
-
-## 접근성 패턴
-
-### 키보드 내비게이션
-
-```javascript
-function Dropdown({ options, onSelect }) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const handleKeyDown = (e) => {
-    switch (e.key) {
-      case 'ArrowDown':
-        e.preventDefault();
-        setActiveIndex(i => Math.min(i + 1, options.length - 1));
-        break;
-      case 'ArrowUp':
-        e.preventDefault();
-        setActiveIndex(i => Math.max(i - 1, 0));
-        break;
-      case 'Enter':
-        e.preventDefault();
-        onSelect(options[activeIndex]);
-        setIsOpen(false);
-        break;
-      case 'Escape':
-        setIsOpen(false);
-        break;
-    }
-  };
-
-  return (
-    <div
-      role="combobox"
-      aria-expanded={isOpen}
-      aria-haspopup="listbox"
-      onKeyDown={handleKeyDown}
-    >
-      {/* 드롭다운 구현 */}
-    </div>
-  );
-}
-```
-
-### 포커스 관리
-
-```javascript
-function Modal({ isOpen, onClose, children }) {
-  const modalRef = useRef(null);
-  const previousFocusRef = useRef(null);
-
-  useEffect(() => {
-    if (isOpen) {
-      // 현재 포커스된 요소 저장
-      previousFocusRef.current = document.activeElement;
-
-      // 모달에 포커스
-      modalRef.current?.focus();
-    } else {
-      // 닫을 때 포커스 복원
-      previousFocusRef.current?.focus();
-    }
-  }, [isOpen]);
-
-  return isOpen ? (
-    <div
-      ref={modalRef}
-      role="dialog"
-      aria-modal="true"
-      tabIndex={-1}
-      onKeyDown={e => e.key === 'Escape' && onClose()}
-    >
-      {children}
-    </div>
-  ) : null;
-}
-```
-
-## 일반적인 실수 피하기
-
-### ❌ 잘못됨: Props Drilling
-```javascript
-// 여러 단계를 거쳐 props 전달
+// ❌ Props drilling 3단계 이상 → Context로 교체
 <Parent data={data}>
   <Child data={data}>
     <GrandChild data={data} />
   </Child>
 </Parent>
-```
 
-### ✅ 올바름: Context 사용
-```javascript
-const DataContext = createContext();
-
+// ✅ Context
+const DataContext = createContext()
 <DataContext.Provider value={data}>
-  <Parent>
-    <Child>
-      <GrandChild />  {/* useContext(DataContext)로 접근 */}
-    </Child>
-  </Parent>
+  <GrandChild /> // useContext(DataContext)로 접근
 </DataContext.Provider>
-```
-
-### ❌ 잘못됨: useEffect 의존성 누락
-```javascript
-useEffect(() => {
-  fetchData(userId);  // userId가 변경되어도 재실행 안됨
-}, []);
-```
-
-### ✅ 올바름: 모든 의존성 포함
-```javascript
-useEffect(() => {
-  fetchData(userId);
-}, [userId]);  // userId 변경 시 재실행
-```
-
-### ❌ 잘못됨: 인라인 객체/함수
-```javascript
-// 매 렌더링마다 새 객체 생성 → 불필요한 재렌더링
-<Component config={{ option: 'value' }} />
-<Component onClick={() => handleClick()} />
-```
-
-### ✅ 올바름: 메모이제이션
-```javascript
-const config = useMemo(() => ({ option: 'value' }), []);
-const handleClick = useCallback(() => { /* ... */ }, []);
-
-<Component config={config} />
-<Component onClick={handleClick} />
 ```
 
 ---
 
-**핵심**: 현대 프론트엔드 패턴은 유지보수 가능하고 성능이 좋은 사용자 인터페이스를 가능하게 합니다. 프로젝트 복잡도에 맞는 패턴을 선택하세요.
+## 커스텀 훅 패턴
+
+### 데이터 페칭 훅
+```javascript
+function useAsync(asyncFn, deps = []) {
+  const [state, setState] = useState({ data: null, error: null, isLoading: false })
+
+  const execute = useCallback(async () => {
+    setState({ data: null, error: null, isLoading: true })
+    try {
+      const data = await asyncFn()
+      setState({ data, error: null, isLoading: false })
+    } catch (error) {
+      setState({ data: null, error, isLoading: false })
+    }
+  }, deps)
+
+  useEffect(() => { execute() }, [execute])
+
+  return { ...state, refetch: execute }
+}
+
+// 사용
+const { data: users, isLoading, error, refetch } = useAsync(() => getUsers(), [])
+```
+
+### 디바운스 훅
+```javascript
+function useDebounce(value, delay) {
+  const [debouncedValue, setDebouncedValue] = useState(value)
+
+  useEffect(() => {
+    const handler = setTimeout(() => setDebouncedValue(value), delay)
+    return () => clearTimeout(handler)
+  }, [value, delay])
+
+  return debouncedValue
+}
+```
+
+### 로컬스토리지 훅
+```javascript
+function useLocalStorage(key, initialValue) {
+  const [storedValue, setStoredValue] = useState(() => {
+    try {
+      const item = localStorage.getItem(key)
+      return item ? JSON.parse(item) : initialValue
+    } catch {
+      return initialValue
+    }
+  })
+
+  const setValue = useCallback((value) => {
+    const valueToStore = value instanceof Function ? value(storedValue) : value
+    setStoredValue(valueToStore)
+    localStorage.setItem(key, JSON.stringify(valueToStore))
+  }, [key, storedValue])
+
+  return [storedValue, setValue]
+}
+```
+
+---
+
+## 상태관리 결정 기준
+
+| 범위 | 방법 |
+|------|------|
+| 단일 컴포넌트 | `useState` |
+| 복잡한 폼 | `useActionState` / `useReducer` |
+| 서버 데이터 | React Query / SWR |
+| 전역 UI 상태 (모달·테마) | Zustand or Context |
+| URL 상태 | `searchParams` |
+
+**주의**: 자주 변경되는 값을 Context에 넣으면 하위 트리 전체 리렌더링 발생
+
+### Context + Reducer (전역 UI)
+```javascript
+const AppContext = createContext()
+
+function appReducer(state, action) {
+  switch (action.type) {
+    case 'OPEN_MODAL': return { ...state, modal: { isOpen: true, data: action.payload } }
+    case 'CLOSE_MODAL': return { ...state, modal: { isOpen: false, data: null } }
+    default: return state
+  }
+}
+
+function AppProvider({ children }) {
+  const [state, dispatch] = useReducer(appReducer, { modal: { isOpen: false, data: null } })
+  return <AppContext.Provider value={{ state, dispatch }}>{children}</AppContext.Provider>
+}
+
+function useApp() {
+  const context = useContext(AppContext)
+  if (!context) throw new Error('useApp은 AppProvider 안에서만 사용 가능')
+  return context
+}
+```
+
+---
+
+## 성능 최적화
+
+### 메모이제이션 — 측정 후 적용
+```javascript
+// ❌ 과도한 메모이제이션 (단순 계산은 불필요)
+const value = useMemo(() => a + b, [a, b])
+
+// ✅ 비싼 연산에만
+const filtered = useMemo(
+  () => largeList.filter(item => item.active && item.score > threshold),
+  [largeList, threshold]
+)
+
+// ✅ 자식에게 내려주는 함수
+const handleSubmit = useCallback(async (data) => {
+  await submit(data)
+}, []) // 의존성 없으면 빈 배열
+```
+
+### 지연 로딩
+```javascript
+const HeavyChart = lazy(() => import('./HeavyChart'))
+
+function Dashboard() {
+  return (
+    <Suspense fallback={<ChartSkeleton />}>
+      <HeavyChart />
+    </Suspense>
+  )
+}
+```
+
+### 가상화 — 1000개 이상 리스트
+```javascript
+import { useVirtualizer } from '@tanstack/react-virtual'
+
+function VirtualList({ items }) {
+  const parentRef = useRef(null)
+  const virtualizer = useVirtualizer({
+    count: items.length,
+    getScrollElement: () => parentRef.current,
+    estimateSize: () => 60,
+  })
+
+  return (
+    <div ref={parentRef} style={{ height: '400px', overflow: 'auto' }}>
+      <div style={{ height: virtualizer.getTotalSize() }}>
+        {virtualizer.getVirtualItems().map(row => (
+          <div
+            key={row.key}
+            style={{ position: 'absolute', top: 0, transform: `translateY(${row.start}px)`, width: '100%' }}
+          >
+            <ItemRow item={items[row.index]} />
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+```
+
+---
+
+## 폼 처리
+
+### useActionState (React 19 권장)
+```javascript
+// 위 React 19 섹션 참조
+```
+
+### 제어 컴포넌트 + zod 검증
+```javascript
+import { z } from 'zod'
+
+const schema = z.object({
+  email: z.string().email('올바른 이메일을 입력하세요'),
+  name: z.string().min(1).max(50),
+})
+
+function Form() {
+  const [errors, setErrors] = useState({})
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const result = schema.safeParse(Object.fromEntries(new FormData(e.target)))
+    if (!result.success) {
+      setErrors(result.error.flatten().fieldErrors)
+      return
+    }
+    await submit(result.data)
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input name="email" />
+      {errors.email && <span role="alert">{errors.email[0]}</span>}
+    </form>
+  )
+}
+```
+
+---
+
+## 에러 처리
+
+### Error Boundary
+```javascript
+import { Component } from 'react'
+
+class ErrorBoundary extends Component {
+  state = { hasError: false }
+
+  static getDerivedStateFromError() {
+    return { hasError: true }
+  }
+
+  componentDidCatch(error, info) {
+    console.error('컴포넌트 오류:', error, info)
+  }
+
+  render() {
+    if (this.state.hasError) return this.props.fallback
+    return this.props.children
+  }
+}
+
+// 사용
+<ErrorBoundary fallback={<ErrorPage />}>
+  <FeatureComponent />
+</ErrorBoundary>
+```
+
+---
+
+## 접근성 (a11y)
+
+```javascript
+// ✅ 시맨틱 HTML + ARIA
+function Modal({ isOpen, onClose, title, children }) {
+  return (
+    <dialog open={isOpen} aria-labelledby="modal-title" aria-modal="true">
+      <h2 id="modal-title">{title}</h2>
+      {children}
+      <button onClick={onClose} aria-label="모달 닫기">×</button>
+    </dialog>
+  )
+}
+
+// ✅ 포커스 관리
+function useModalFocus(isOpen) {
+  const ref = useRef(null)
+  const previousFocus = useRef(null)
+
+  useEffect(() => {
+    if (isOpen) {
+      previousFocus.current = document.activeElement
+      ref.current?.focus()
+    } else {
+      previousFocus.current?.focus()
+    }
+  }, [isOpen])
+
+  return ref
+}
+```
+
+---
+
+## 자주 하는 실수
+
+### ❌ useEffect 의존성 누락
+```javascript
+useEffect(() => { fetchData(userId) }, []) // userId 변경 무시
+// ✅
+useEffect(() => { fetchData(userId) }, [userId])
+```
+
+### ❌ 인라인 객체/함수 → 매 렌더 재생성
+```javascript
+<Component config={{ option: 'value' }} />      // 매번 새 객체
+<Component onClick={() => handleClick()} />     // 매번 새 함수
+// ✅
+const config = useMemo(() => ({ option: 'value' }), [])
+const handleClick = useCallback(() => { /* ... */ }, [])
+```
+
+### ❌ 상태 직접 변이
+```javascript
+user.name = '새 이름'  // 렌더링 안됨
+items.push(newItem)
+// ✅
+setUser(prev => ({ ...prev, name: '새 이름' }))
+setItems(prev => [...prev, newItem])
+```
+
+---
+
+**핵심**: React 19는 서버 통합과 낙관적 업데이트를 위한 API가 강화됐습니다. Profile first, optimize what matters.
+
+---
+
+## WeCom 회고 기반 프론트엔드 패턴 (347 fix 분석 교훈)
+
+### 모바일 퍼스트 원칙
+- CSS 기본: 모바일(375px) → `@media (min-width: 768px)` PC 확장만
+- `pages/mobile/*` 복제 파일 금지 → `useIsMobile()` 조건부 렌더
+- 고정 `width: Npx` 금지 (아이콘 80px 미만 예외) → `max-width`/`min()` 사용
+- 전역 reset 7종 필수 (box-sizing, img max-width, button font, overflow-x hidden 등)
+
+### 디자인 토큰 필수
+- 모든 color/spacing/radius/shadow/font-weight 는 `var(--토큰)` 참조
+- 하드코딩 hex `#RRGGBB`, `border-radius: Npx`, `box-shadow: N` 금지
+- 토큰 수정 시 sed 일괄 수정 금지 → Edit 개별 수정
+
+### 상태관리 안전 패턴
+- 필터 "전체" 값: `null` 금지 → `ALL` 센티넬 상수 사용
+- Zustand: `useStore((s) => s)` 금지 → 개별 셀렉터
+- blob URL 생성 즉시 `useEffect return` 에 `revokeObjectURL` 짝
+- Modal/BottomSheet: `useScrollLock` 필수 (document.body.style.overflow 직접 조작 금지)
+
+### 이벤트 핸들러 안전
+- 드래그: window/document 레벨 Pointer Events API (`onPointerDown` → `window.addEventListener`)
+- 터치: React 합성 `onTouchMove` + `preventDefault` 금지 → `addEventListener('touchmove', fn, { passive: false })`
+- Mutation 버튼: `pendingRef` 즉시 락 + `try/finally` 해제

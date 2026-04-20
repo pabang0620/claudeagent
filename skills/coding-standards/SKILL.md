@@ -502,3 +502,26 @@ setTimeout(callback, DEBOUNCE_DELAY_MS);
 ---
 
 **핵심**: 코드 품질은 타협할 수 없습니다. 명확하고 유지보수 가능한 코드는 빠른 개발과 자신감 있는 리팩토링을 가능하게 합니다.
+
+---
+
+## WeCom 회고 기반 추가 표준 (347 fix 분석 교훈)
+
+### 컨벤션 강제 (convention-enforcer 스킬 참조)
+- navigate/Link 경로 문자열 리터럴 금지 → ROUTES 상수 사용
+- useParams 변수명은 라우트 정의 `:paramName` 과 일치 필수
+- admin*Routes.js 에 requireAdmin 미사용 시 부팅 실패
+- .env.example 필수, zod 런타임 검증
+
+### 파일 규칙
+- 컴포넌트: PascalCase.jsx
+- 훅: use*.js
+- 함수 50줄 미만, 파일 800줄 미만
+- pages/mobile/* 복제 디렉터리 금지
+
+### 에러 방지 (error-prevention-rules 스킬 참조)
+- useEffect fetch → AbortController cleanup
+- img onError → onerror=null 자기 해제
+- setTimeout/setInterval/Observer → useEffect cleanup
+- addEventListener → removeEventListener
+- localStorage.setItem → try/catch (iOS Safari)

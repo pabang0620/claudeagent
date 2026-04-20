@@ -114,6 +114,22 @@ reaction_type  ENUM('like','dislike') NOT NULL DEFAULT 'like'
 - 결제·정산(settlements) = Phase 3 → 현재 스키마에 FK 연결만 준비, 구현 보류
 - "나중에 필요할 것 같아서" 테이블 추가 금지 — 기능명세서 기준
 
+### MySQL 8 예약어 블랙리스트
+컬럼/테이블명에 다음 사용 금지 (백틱으로도 피할 것):
+- 기획 흔한: `rank`→award_rank, `order`→sort_order, `group`→group_name, `key`→key_name, `desc`→description, `read`→read_at, `value`→value_text, `match`→match_score, `condition`→condition_text, `interval`→time_interval
+- 윈도우 함수: `over`, `window`, `lead`, `lag`, `dense_rank`, `row_number`, `cume_dist`, `percent_rank`
+- 시스템: `system`, `current`, `usage`, `recursive`, `precision`, `function`, `procedure`, `trigger`
+- 근거: WeCom `event_results.rank` 컬럼이 2회 수정됨 (`1275e75`, `6ceae13`)
+
+### ENUM 단일 소스 원칙 (SSOT)
+- DB `ENUM('a','b','c')` 정의 시 반드시 `shared/constants/enums.ts` 에도 동일 값 export
+- Zod 스키마는 `enums.ts` 에서 import 하여 `z.enum(DOMAIN_STATUS)` 형태로만 참조
+- DB↔코드 ENUM 수기 동기화 금지 — WeCom 에서 ENUM drift 8건 발생
+
+### FK 미사용 시 리스크 (WeCom 회고)
+- FK 없으면 존재하지 않는 컬럼 참조 버그 발생 가능 (WeCom 3건: `author_note`, `deleted_at`, `start_date→started_at`)
+- 보완: `wecom-schema-field-checker` 또는 유사 스키마↔코드 정합성 검증 도구 함께 사용 권장
+
 ---
 
 
@@ -223,6 +239,8 @@ CREATE TABLE users (
   balance numeric(10,2)
 );
 ```
+
+- 이미지 width/height: `INT UNSIGNED` 사용 (SMALLINT 사용 금지 — 65535 초과 가능. WeCom에서 `images.width SMALLINT` → `INT UNSIGNED` 후행 변경 발생)
 
 ### 2. 기본 키 전략
 
@@ -357,6 +375,14 @@ SELECT * FROM products WHERE id > 199980 ORDER BY id LIMIT 20;
 - [ ] 복잡한 쿼리에 EXPLAIN ANALYZE 실행됨
 - [ ] 소문자 식별자 사용됨
 - [ ] 트랜잭션이 짧게 유지됨
+
+### MySQL ALTER TABLE 잠금 특성
+- `ADD COLUMN NULL`: ALGORITHM=INSTANT (무락, MySQL 8.0.12+)
+- `ADD COLUMN NOT NULL DEFAULT`: ALGORITHM=INSTANT (MySQL 8.0.29+)
+- `ENUM 끝에 값 추가`: ALGORITHM=INSTANT
+- `ENUM 중간 삽입/제거`: ALGORITHM=COPY (테이블 풀 락!)
+- `ADD INDEX`: ALGORITHM=INPLACE, LOCK=NONE
+- `DROP COLUMN`: ALGORITHM=INPLACE (MySQL 8.0.29+)
 
 ---
 

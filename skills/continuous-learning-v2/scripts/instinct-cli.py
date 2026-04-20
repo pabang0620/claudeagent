@@ -438,10 +438,150 @@ def cmd_evolve(args):
             print()
 
     if args.generate:
-        print("\n[Would generate evolved structures here]")
-        print("  Skills would be saved to:", EVOLVED_DIR / "skills")
-        print("  Commands would be saved to:", EVOLVED_DIR / "commands")
-        print("  Agents would be saved to:", EVOLVED_DIR / "agents")
+        generated_files = []
+        now_iso = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
+
+        # Generate skill files from skill candidates
+        for cand in skill_candidates[:5]:
+            trigger = cand['trigger'].strip()
+            name_slug = re.sub(r'[^a-z0-9]+', '-', trigger.lower()).strip('-')[:40]
+            if not name_slug:
+                continue
+            title = name_slug.replace('-', ' ').title()
+            instinct_ids = [i.get('id', 'unknown') for i in cand['instincts']]
+            evolved_from_lines = '\n'.join(f'  - {iid}' for iid in instinct_ids)
+            # Synthesize behavior from instinct actions
+            actions = []
+            for inst in cand['instincts']:
+                content = inst.get('content', '')
+                action_match = re.search(r'## Action\s*\n\s*(.+?)(?:\n\n|\n##|$)', content, re.DOTALL)
+                if action_match:
+                    actions.append(action_match.group(1).strip().split('\n')[0][:100])
+            behavior = '\n'.join(f'- {a}' for a in actions) if actions else f'- Apply learned patterns for: {trigger}'
+            source_list = '\n'.join(f'- {iid}: {i.get("confidence", 0.5):.2f}' for iid, i in zip(instinct_ids, cand['instincts']))
+
+            content_md = f"""---
+name: {name_slug}
+description: Auto-evolved skill from instinct cluster — {trigger}
+evolved_from:
+{evolved_from_lines}
+auto_generated: true
+generated_at: {now_iso}
+---
+
+# {title}
+
+## When to Use
+{trigger.capitalize()} — applies patterns observed across {len(cand['instincts'])} instincts with average confidence {cand['avg_confidence']:.0%}.
+
+## Behavior
+{behavior}
+
+## Source Instincts
+{source_list}
+"""
+            out_path = EVOLVED_DIR / "skills" / f"{name_slug}.md"
+            out_path.write_text(content_md)
+            generated_files.append(str(out_path))
+            print(f"  [skill] {out_path}")
+
+        # Generate command files from workflow instinct candidates
+        for inst in workflow_instincts[:5]:
+            trigger = inst.get('trigger', 'unknown').strip()
+            cmd_slug = re.sub(r'[^a-z0-9]+', '-', trigger.lower()).strip('-')[:30]
+            if not cmd_slug:
+                continue
+            title = cmd_slug.replace('-', ' ').title()
+            iid = inst.get('id', 'unknown')
+            content = inst.get('content', '')
+            action_match = re.search(r'## Action\s*\n\s*(.+?)(?:\n\n|\n##|$)', content, re.DOTALL)
+            behavior = action_match.group(1).strip() if action_match else f'Execute workflow for: {trigger}'
+
+            content_md = f"""---
+name: {cmd_slug}
+description: Auto-evolved command from workflow instinct — {trigger}
+evolved_from:
+  - {iid}
+auto_generated: true
+generated_at: {now_iso}
+---
+
+# /{cmd_slug}
+
+## When to Use
+{trigger.capitalize()} — confidence {inst.get('confidence', 0.5):.0%}.
+
+## Behavior
+{behavior}
+
+## Source Instincts
+- {iid}: {inst.get('confidence', 0.5):.2f}
+"""
+            out_path = EVOLVED_DIR / "commands" / f"{cmd_slug}.md"
+            out_path.write_text(content_md)
+            generated_files.append(str(out_path))
+            print(f"  [command] {out_path}")
+
+        # Generate agent files from high-confidence multi-instinct clusters
+        for cand in agent_candidates[:3]:
+            trigger = cand['trigger'].strip()
+            name_slug = re.sub(r'[^a-z0-9]+', '-', trigger.lower()).strip('-')[:35]
+            if not name_slug:
+                continue
+            agent_slug = name_slug + '-agent'
+            title = name_slug.replace('-', ' ').title() + ' Agent'
+            instinct_ids = [i.get('id', 'unknown') for i in cand['instincts']]
+            evolved_from_lines = '\n'.join(f'  - {iid}' for iid in instinct_ids)
+            actions = []
+            for inst in cand['instincts']:
+                content = inst.get('content', '')
+                action_match = re.search(r'## Action\s*\n\s*(.+?)(?:\n\n|\n##|$)', content, re.DOTALL)
+                if action_match:
+                    actions.append(action_match.group(1).strip().split('\n')[0][:100])
+            behavior = '\n'.join(f'- {a}' for a in actions) if actions else f'- Orchestrate complex workflows for: {trigger}'
+            source_list = '\n'.join(f'- {iid}: {i.get("confidence", 0.5):.2f}' for iid, i in zip(instinct_ids, cand['instincts']))
+
+            content_md = f"""---
+name: {agent_slug}
+description: Auto-evolved agent from instinct cluster — {trigger}
+evolved_from:
+{evolved_from_lines}
+auto_generated: true
+generated_at: {now_iso}
+---
+
+# {title}
+
+## When to Use
+{trigger.capitalize()} — covers {len(cand['instincts'])} instincts with average confidence {cand['avg_confidence']:.0%}.
+
+## Behavior
+{behavior}
+
+## Source Instincts
+{source_list}
+"""
+            out_path = EVOLVED_DIR / "agents" / f"{agent_slug}.md"
+            out_path.write_text(content_md)
+            generated_files.append(str(out_path))
+            print(f"  [agent] {out_path}")
+
+        if generated_files:
+            print(f"\n  Generated {len(generated_files)} file(s) total.")
+        else:
+            print("\n  No files generated (insufficient candidates).")
+
+        # Log generation to evolution-log.jsonl
+        log_path = HOMUNCULUS_DIR / "evolution-log.jsonl"
+        log_entry = {
+            'timestamp': now_iso,
+            'trigger': 'cli-generate',
+            'generated': generated_files,
+            'instinct_count': len(instincts),
+            'skill_candidates': len(skill_candidates),
+        }
+        with open(log_path, 'a') as lf:
+            lf.write(json.dumps(log_entry) + '\n')
 
     print(f"\n{'='*60}\n")
     return 0

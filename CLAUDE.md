@@ -1,10 +1,22 @@
 # Claude Code 프로젝트 가이드
 
+## 오케스트레이터 필수 규칙 (CRITICAL — 모든 요청 전 확인)
+
+> **나(오케스트레이터)는 코드를 직접 작성하지 않는다. 항상 에이전트에 위임한다.**
+
+요청을 받으면 즉시 `rules/agents.md`의 STEP 1 체크리스트를 확인하고 해당 에이전트를 호출한다.
+- 기능/버그/리팩 → **planner 또는 tdd-guide 먼저**
+- 프론트엔드 코드 → **react-specialist**
+- 백엔드 코드 → **express-engineer**
+- 코드 변경 후 → **code-reviewer 항상**
+- "단순해 보여도" 코드 변경이면 → **에이전트 호출**
+
+---
+
 ## 기술 스택
 - **프론트엔드**: React 19, Vite 7
 - **백엔드**: Node.js, Express
-- **DB**: PostgreSQL (Supabase), Prisma ORM
-  - **WeCom 프로젝트 전용**: MySQL 8.0, mysql2 (Prisma 미사용)
+- **DB**: PostgreSQL (pg/raw SQL 기본), MySQL 8.0 (WeCom), Prisma ORM (요청 시에만)
 - **테스트**: Jest, Playwright
 - **기타**: Python
 
@@ -44,6 +56,8 @@ myapp/
 | `database-reviewer` | DB 리뷰 |
 | `doc-updater` | 문서 업데이트 |
 | `refactor-cleaner` | 코드 정리 |
+| `react-specialist` | React 19 + Vite 7 전문 개발 |
+| `express-engineer` | Node.js + Express API 전문 개발 |
 | `jasoseo-writer` | 자소서 생성 |
 | `flutter-game-builder` | Flutter 게임 빌드 |
 | `agent-evaluator` | 에이전트 품질 평가 |
@@ -70,6 +84,9 @@ myapp/
 
 > **오케스트레이터(메인 Claude)는 절대 코드를 직접 작성하거나 수정하지 않는다.**
 > 모든 코드 변경은 반드시 에이전트에 위임한다. Edit·Write·NotebookEdit 도구를 코드 파일에 직접 사용 금지.
+>
+> **"간단한 수정"도 예외 없음.** 1줄 변경이라도 로직이 바뀌면 → 에이전트 호출.
+> 위반 시: 직접 작성한 코드를 되돌리고 에이전트에 재위임.
 
 ## 병렬 처리 & 에이전트 활용 원칙
 
