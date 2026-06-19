@@ -1,15 +1,31 @@
 # Claude Code 프로젝트 가이드
 
-## 오케스트레이터 필수 규칙 (CRITICAL — 모든 요청 전 확인)
+## 답변 전 검토 체크리스트 (매 응답 직전 필수)
 
-> **나(오케스트레이터)는 코드를 직접 작성하지 않는다. 항상 에이전트에 위임한다.**
+1. 요구사항 해석이 정확한가? (모호하면 먼저 질문)
+2. 기존 코드에서 문제 지점·연관 지점을 특정했는가?
+3. 작업 유형에 맞는 구현안인가?
+   - 버그 수정/리팩토링 → 최소 수정안
+   - 신규 기능 → 요구사항을 충족하는 확실한 구현 (불필요한 추상화는 금지)
+4. 회귀 테스트 관점에서 영향 범위를 점검했는가?
 
-요청을 받으면 즉시 `rules/agents.md`의 STEP 1 체크리스트를 확인하고 해당 에이전트를 호출한다.
-- 기능/버그/리팩 → **planner 또는 tdd-guide 먼저**
-- 프론트엔드 코드 → **react-specialist**
-- 백엔드 코드 → **express-engineer**
-- 코드 변경 후 → **code-reviewer 항상**
-- "단순해 보여도" 코드 변경이면 → **에이전트 호출**
+---
+
+## 오케스트레이터 필수 규칙 (CRITICAL)
+
+> **나(오케스트레이터)는 코드 작성·Bash 실행·파일 탐색·설치/검증 작업을 직접 수행하지 않는다. 항상 에이전트에 위임한다.**
+
+요청 분류 및 에이전트 라우팅 → **`rules/agents.md` STEP 1 체크리스트** 참고
+
+**직접 허용 예외 (단순 조회에 한함)**:
+- `git status`, `ls`, 단일 파일 Read 등 1회성 상태 확인
+- 에이전트 위임 범위를 파악하기 위한 최소한의 사전 조회 (Read 1회, grep 1회 수준)
+
+**위반 예시 (반드시 에이전트 위임)**:
+- `npm install`, `sh install.sh` 등 설치·빌드 → build-error-resolver
+- `npm run build && npm run test` 등 다단계 검증 → tdd-guide
+- 여러 파일 grep·find 탐색 → Explore 에이전트
+- 서버 기동·포트 확인·프로세스 관리 → 전문 에이전트
 
 ---
 
@@ -32,43 +48,22 @@ myapp/
 ## 슬래시 커맨드
 | 커맨드 | 용도 |
 |--------|------|
-| `/dispatch` | 자동 도구 선택 (dispatcher 스킬 호출) |
+| `/dispatch` | 자동 도구 선택 |
 | `/plan` | 구현 계획 수립 |
 | `/tdd` | TDD 워크플로우 |
 | `/code-review` | 코드 리뷰 |
 | `/build-fix` | 빌드 에러 수정 |
 | `/e2e` | E2E 테스트 |
-| `/learn` | 패턴 학습 |
-| `/evolve` | 본능 → 스킬 진화 |
-| `/orchestrate` | 복잡한 작업 |
 | `/refactor-clean` | 리팩토링 |
 | `/update-docs` | 문서 업데이트 |
-
-## 에이전트
-| 에이전트 | 역할 |
-|---------|------|
-| `architect` | 아키텍처 설계 |
-| `planner` | 작업 계획 |
-| `security-reviewer` | 보안 감사 |
-| `tdd-guide` | TDD 가이드 |
-| `build-error-resolver` | 빌드 에러 |
-| `e2e-runner` | E2E 테스트 |
-| `database-reviewer` | DB 리뷰 |
-| `doc-updater` | 문서 업데이트 |
-| `refactor-cleaner` | 코드 정리 |
-| `react-specialist` | React 19 + Vite 7 전문 개발 |
-| `express-engineer` | Node.js + Express API 전문 개발 |
-| `jasoseo-writer` | 자소서 생성 |
-| `flutter-game-builder` | Flutter 게임 빌드 |
-| `agent-evaluator` | 에이전트 품질 평가 |
 
 ## 스킬
 | 스킬 | 역할 | 호출 방식 |
 |------|------|----------|
 | `code-reviewer` | 코드 리뷰 (context: fork) | 자동 + `/code-reviewer` |
-| `feature-critic` | 기능 필요성 검토 (context: fork) | 자동 + `/feature-critic` |
-| `dispatcher` | 자동 도구 선택 (context: fork) | 자동 + `/dispatcher` |
-| `project-structure-guide` | 폴더구조/네이밍 컨벤션 | 자동 적용 (배경지식) |
+| `feature-critic` | 기능 필요성 검토 | 자동 + `/feature-critic` |
+| `dispatcher` | 자동 도구 선택 | 자동 + `/dispatcher` |
+| `project-structure-guide` | 폴더구조/네이밍 컨벤션 | 자동 적용 |
 | `verify` | 빌드/타입/린트/테스트 검증 | `/verify` (사용자만) |
 | `checkpoint` | 체크포인트 생성/검증 | `/checkpoint` (사용자만) |
 | `test-coverage` | 테스트 커버리지 분석 | 자동 + `/test-coverage` |
@@ -80,35 +75,21 @@ myapp/
 
 > 주의: `@google/generative-ai` 아님 → `@google/genai` 사용할 것
 
-## 오케스트레이터 원칙 (CRITICAL)
-
-> **오케스트레이터(메인 Claude)는 절대 코드를 직접 작성하거나 수정하지 않는다.**
-> 모든 코드 변경은 반드시 에이전트에 위임한다. Edit·Write·NotebookEdit 도구를 코드 파일에 직접 사용 금지.
->
-> **"간단한 수정"도 예외 없음.** 1줄 변경이라도 로직이 바뀌면 → 에이전트 호출.
-> 위반 시: 직접 작성한 코드를 되돌리고 에이전트에 재위임.
-
-## 병렬 처리 & 에이전트 활용 원칙
-
-### 병렬 처리 (MUST)
-- **독립적인 작업은 반드시 병렬로 실행** — 순차 실행은 명시적 의존성이 있을 때만
-- 파일 읽기, 검색, 에이전트 실행 등 서로 무관한 작업은 단일 메시지에 묶어서 동시 실행
-- 예: 여러 파일 검토 → 파일별로 병렬 에이전트 실행 (파일 1개 = 에이전트 1개)
-
-### 에이전트 적극 활용 (MUST)
-- **복잡한 탐색·분석은 Explore 에이전트** — 단순 grep/read 보다 Agent 우선 고려
-- **코드 작성 후 반드시 code-reviewer 스킬** — 리뷰 없는 코드 머지 금지
-- **새 기능·리팩토링 시 planner 에이전트 먼저** — 계획 없는 구현 금지
-- **여러 파일 동시 리뷰 시 파일 1개당 에이전트 1개 병렬 실행**
-- 에이전트 목록: `agents/` 폴더 참조 / 모르면 `dispatcher` 스킬에 위임
-- 일부 에이전트(code-reviewer, feature-critic, dispatcher 등)는 `context: fork` 스킬로 전환되어 효율적으로 실행됨
-
 ## 개발 규칙
 - 기능 보존: 수정 시 기존 기능 변경 금지
 - 들여쓰기: 2 spaces
 - 네이밍: 컴포넌트 PascalCase / 함수·변수 camelCase / 상수 UPPER_SNAKE_CASE
-- DB ID: UUID (Supabase 기본), 마이그레이션: Prisma
+- DB ID: UUID, 마이그레이션: Prisma
 - 환경변수: `.env` 사용, 커밋 금지
 - 테스트 커버리지: 핵심 기능 80% 이상
 
 세부 규칙: `rules/` 디렉토리 참조
+
+---
+
+## Cursor 연동
+
+| Cursor 규칙 파일 | 역할 |
+|----------------|------|
+| `.cursor/rules/00-orchestrator.mdc` | 오케스트레이터 행동 + 에이전트 라우팅 |
+| `.cursor/rules/01-workspace-rules.mdc` | 질문 우선·API 승낙·Git·.env 규칙 |

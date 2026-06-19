@@ -60,6 +60,127 @@ npx playwright test --project=webkit
 
 ## E2E 테스팅 워크플로우
 
+## 인증 설정 (storageState 패턴) — 필수
+
+로그인이 필요한 E2E 테스트 전에 반드시 이 패턴을 적용:
+
+```typescript
+// playwright.config.ts에 추가
+projects: [
+  { name: 'db-setup', testMatch: 'setup/db.setup.ts' },
+  { name: 'auth-setup', testMatch: 'setup/auth.setup.ts', dependencies: ['db-setup'] },
+  {
+    name: 'chromium',
+    dependencies: ['auth-setup'],
+    use: { ...devices['Desktop Chrome'], storageState: 'playwright/.auth/user.json' },
+  },
+  {
+    name: 'firefox',
+    dependencies: ['auth-setup'],
+    use: { ...devices['Desktop Firefox'], storageState: 'playwright/.auth/user.json' },
+  },
+  {
+    name: 'webkit',
+    dependencies: ['auth-setup'],
+    use: { ...devices['Desktop Safari'], storageState: 'playwright/.auth/user.json' },
+  },
+]
+
+// tests/e2e/setup/auth.setup.ts
+import { test as setup } from '@playwright/test'
+import { mkdirSync } from 'node:fs'
+const authFile = 'playwright/.auth/user.json'
+setup('로그인 세션 저장', async ({ page }) => {
+  mkdirSync('playwright/.auth', { recursive: true })
+  await page.goto('/login')
+  // tests/e2e/setup/auth.setup.ts
+  await page.getByLabel('이메일').fill(process.env.TEST_USER_EMAIL ?? '')
+  await page.getByLabel('비밀번호').fill(process.env.TEST_USER_PASSWORD ?? '')
+  await page.getByRole('button', { name: '로그인' }).click()
+  await page.waitForURL('/dashboard')
+  await page.context().storageState({ path: authFile })
+})
+
+// .gitignore에 추가 필수 (인증 세션 토큰 커밋 방지)
+// playwright/.auth/
+```
+
+### 관리자 역할 auth 패턴
+
+```typescript
+// tests/e2e/setup/admin.setup.ts
+const adminFile = 'playwright/.auth/admin.json'
+setup('관리자 로그인 세션 저장', async ({ page }) => {
+  await page.goto('/login')
+  await page.getByLabel('이메일').fill(process.env.TEST_ADMIN_EMAIL ?? '')
+  await page.getByLabel('비밀번호').fill(process.env.TEST_ADMIN_PASSWORD ?? '')
+  await page.getByRole('button', { name: '로그인' }).click()
+  await page.waitForURL('/admin')
+  await page.context().storageState({ path: adminFile })
+})
+```
+
+## DB Seed — 테스트 데이터 준비 (projects-based db-setup)
+
+DB 시딩은 playwright.config.ts의 projects 배열 기반 `db-setup` 프로젝트로만 수행한다 (globalSetup/globalTeardown 미사용 — 이중 시딩 방지):
+
+```typescript
+// tests/e2e/setup/db.setup.ts
+import { test as setup } from '@playwright/test'
+import { exec } from 'node:child_process'
+import { promisify } from 'node:util'
+const execAsync = promisify(exec)
+
+setup('테스트 DB 시드', async () => {
+  try {
+    await execAsync('npm run db:seed:test')
+  } catch (e) {
+    const msg = e instanceof Error ? e.message : String(e)
+    throw new Error(`DB seed failed: ${msg}`)
+  }
+})
+
+// tests/e2e/setup/db.teardown.ts
+import { test as teardown } from '@playwright/test'
+import { exec } from 'node:child_process'
+import { promisify } from 'node:util'
+const execAsync = promisify(exec)
+
+teardown('테스트 DB 정리', async () => {
+  try {
+    await execAsync('npm run db:clean:test')
+  } catch (e) {
+    console.error('Teardown failed:', e)
+  }
+})
+```
+
+## Playwright 권장: project dependencies 방식 (2026 기준)
+globalSetup/globalTeardown API 대신 playwright.config.ts의 projects 배열 사용 권장:
+
+```typescript
+projects: [
+  { name: 'db-setup', testMatch: 'setup/db.setup.ts', teardown: 'db-teardown' },
+  { name: 'db-teardown', testMatch: 'setup/db.teardown.ts' },
+  { name: 'auth-setup', testMatch: 'setup/auth.setup.ts', dependencies: ['db-setup'] },
+  { name: 'admin-setup', testMatch: 'setup/admin.setup.ts', dependencies: ['db-setup'] },
+  { name: 'chromium', dependencies: ['auth-setup'], use: { ...devices['Desktop Chrome'], storageState: 'playwright/.auth/user.json' } },
+]
+```
+장점: trace 파일 포함, HTML 리포트에 setup 결과 노출, fixture 사용 가능
+
+## flaky 진단 절차
+
+```
+1. --repeat-each=10 으로 재현 확인
+2. --trace on 으로 재실행: npx playwright test failing.spec.ts --trace on
+3. npx playwright show-report 으로 타임라인 확인
+   - 네트워크 워터폴에서 API 응답 시간 확인
+   - 액션 타임라인에서 waitFor 실패 시점 확인
+4. 원인 분류 후 해당 수정 패턴 적용
+5. --repeat-each=10 재실행으로 수정 검증
+```
+
 ### 1. 테스트 계획 단계
 ```
 a) 중요한 사용자 여정 식별
@@ -90,7 +211,7 @@ c) 위험별 우선순위
    - 중요한 지점에 스크린샷 추가
 
 2. 테스트를 견고하게 만들기
-   - 적절한 locator 사용 (data-testid 선호)
+   - 적절한 locator 사용 (getByRole, getByLabel, getByText 순 — ARIA-first 접근, data-testid는 마지막 수단)
    - 동적 콘텐츠를 위한 대기 추가
    - 경쟁 조건 처리
    - 재시도 로직 구현
@@ -116,20 +237,19 @@ export class MarketsPage {
 
   constructor(page: Page) {
     this.page = page
-    this.searchInput = page.locator('[data-testid="search-input"]')
-    this.marketCards = page.locator('[data-testid="market-card"]')
-    this.createMarketButton = page.locator('[data-testid="create-market-btn"]')
+    this.searchInput = page.getByRole('searchbox', { name: '마켓 검색' })
+    this.marketCards = page.getByRole('article')
+    this.createMarketButton = page.getByRole('button', { name: '마켓 만들기' })
   }
 
   async goto() {
     await this.page.goto('/markets')
-    await this.page.waitForLoadState('networkidle')
+    await this.page.waitForLoadState('domcontentloaded')
   }
 
   async searchMarkets(query: string) {
     await this.searchInput.fill(query)
     await this.page.waitForResponse(resp => resp.url().includes('/api/markets/search'))
-    await this.page.waitForLoadState('networkidle')
   }
 
   async getMarketCount() {
@@ -206,7 +326,7 @@ test('불안정: 복잡한 쿼리로 마켓 검색', async ({ page }) => {
 
 // 또는 조건부 skip 사용
 test('복잡한 쿼리로 마켓 검색', async ({ page }) => {
-  test.skip(process.env.CI, 'CI에서 불안정함 - 이슈 #123')
+  test.skip(!!process.env.CI, 'CI에서 불안정함 - 이슈 #123')
 
   // 테스트 코드...
 })
@@ -237,10 +357,9 @@ await page.waitForResponse(resp => resp.url().includes('/api/markets'))
 // ❌ 불안정: 애니메이션 중 클릭
 await page.click('[data-testid="menu-item"]')
 
-// ✅ 안정적: 애니메이션 완료 대기
+// ✅ 안정적: 조건부 대기 (networkidle 제거 — SPA에서 무한 대기 발생)
 await page.locator('[data-testid="menu-item"]').waitFor({ state: 'visible' })
-await page.waitForLoadState('networkidle')
-await page.click('[data-testid="menu-item"]')
+await page.locator('[data-testid="menu-item"]').click()
 ```
 
 ## Playwright 설정
@@ -251,44 +370,96 @@ import { defineConfig, devices } from '@playwright/test'
 
 export default defineConfig({
   testDir: './tests/e2e',
-  fullyParallel: true,
+  fullyParallel: !!process.env.CI ? false : true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
+  workers: process.env.CI ? 4 : undefined,
   reporter: [
     ['html', { outputFolder: 'playwright-report' }],
     ['junit', { outputFile: 'playwright-results.xml' }],
     ['json', { outputFile: 'playwright-results.json' }]
   ],
   use: {
-    baseURL: process.env.BASE_URL || 'http://localhost:3000',
+    baseURL: process.env.BASE_URL || 'http://localhost:5173',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     actionTimeout: 10000,
     navigationTimeout: 30000,
   },
+  outputDir: 'test-results',
   projects: [
+    { name: 'db-setup', testMatch: 'setup/db.setup.ts', teardown: 'db-teardown' },
+    { name: 'db-teardown', testMatch: 'setup/db.teardown.ts' },
+    { name: 'auth-setup', testMatch: 'setup/auth.setup.ts', dependencies: ['db-setup'] },
+    { name: 'admin-setup', testMatch: 'setup/admin.setup.ts', dependencies: ['db-setup'] },
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      dependencies: ['auth-setup'],
+      use: { ...devices['Desktop Chrome'], storageState: 'playwright/.auth/user.json' },
     },
     {
       name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
+      dependencies: ['auth-setup'],
+      use: { ...devices['Desktop Firefox'], storageState: 'playwright/.auth/user.json' },
     },
     {
       name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
+      dependencies: ['auth-setup'],
+      use: { ...devices['Desktop Safari'], storageState: 'playwright/.auth/user.json' },
+    },
+    {
+      name: 'admin-chromium',
+      dependencies: ['admin-setup'],
+      use: { ...devices['Desktop Chrome'], storageState: 'playwright/.auth/admin.json' },
+      testMatch: /.*admin.*\.spec\.ts/,
     },
   ],
-  webServer: {
-    command: 'npm run dev',
-    url: 'http://localhost:3000',
-    reuseExistingServer: !process.env.CI,
-    timeout: 120000,
-  },
+  webServer: [
+    {
+      command: 'npm run dev',
+      url: process.env.BASE_URL || 'http://localhost:5173',
+      reuseExistingServer: !process.env.CI,
+      timeout: 120000,
+    },
+    {
+      command: 'npm run start:backend',
+      url: process.env.API_URL || 'http://localhost:4000',
+      reuseExistingServer: !process.env.CI,
+      timeout: 60000,
+    },
+  ],
 })
+```
+
+## GitHub Actions CI 통합
+
+```yaml
+# .github/workflows/e2e.yml
+name: E2E Tests
+on: [push, pull_request]
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npx playwright test
+        env:
+          CI: true
+          BASE_URL: ${{ vars.BASE_URL || 'http://localhost:5173' }}
+          TEST_USER_EMAIL: ${{ secrets.TEST_USER_EMAIL }}
+          TEST_USER_PASSWORD: ${{ secrets.TEST_USER_PASSWORD }}
+          TEST_ADMIN_EMAIL: ${{ secrets.TEST_ADMIN_EMAIL }}
+          TEST_ADMIN_PASSWORD: ${{ secrets.TEST_ADMIN_PASSWORD }}
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-report
+          path: playwright-report/
 ```
 
 ## 성공 지표

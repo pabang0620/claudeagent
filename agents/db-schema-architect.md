@@ -64,6 +64,7 @@ values      → value_list
 match       → match_score, similarity_score
 condition   → condition_text, requirement, condition_name
 interval    → time_interval, period
+event       → event_entry, event_record, webtoon_event (테이블명), ev_type (컬럼명)
 ```
 
 ### 윈도우 함수·계산식 관련
@@ -102,7 +103,8 @@ unique      → is_unique
 
 ### Grep 검증 (ERE 플래그로 크로스 플랫폼)
 ```bash
-grep -iEn "^[[:space:]]+\`?(rank|order|group|key|desc|read|status|value|values|match|condition|interval|over|window|groups|rows|lead|lag|dense_rank|row_number|cume_dist|percent_rank|first_value|last_value|nth_value|system|current|usage|recursive|precision|function|procedure|trigger|primary|unique)\`?[[:space:]]+(INT|BIGINT|VARCHAR|CHAR|DATETIME|TIMESTAMP|ENUM|TINYINT|SMALLINT|TEXT|DECIMAL|JSON|BOOLEAN)" <schema.sql>
+grep -iEn "(^|,)[[:space:]]*\`?(rank|order|group|key|desc|read|value|values|match|condition|interval|event|over|window|groups|rows|lead|lag|dense_rank|row_number|cume_dist|percent_rank|first_value|last_value|nth_value|system|current|usage|recursive|precision|function|procedure|trigger|primary|unique)\`?[[:space:]]+(INT|BIGINT|VARCHAR|CHAR|DATETIME|TIMESTAMP|ENUM|TINYINT|SMALLINT|TEXT|DECIMAL|JSON|BOOLEAN|FLOAT|DOUBLE)" <대상파일>
+# event # 비예약어이지만 혼동 방지를 위해 포함
 ```
 **중요**: `` `rank` INT `` 처럼 백틱으로 감싸도 감지되도록 `\`?` 포함.
 
@@ -115,6 +117,11 @@ grep -iEn "^[[:space:]]+\`?(rank|order|group|key|desc|read|status|value|values|m
 #### 입력 수집
 1. **도메인 이름** — 예: `webtoon`, `event`, `notification`
    ⚠️ 입력 받은 도메인 이름을 즉시 예약어 블랙리스트와 대조 — 충돌 시 사용자에게 대체명 제안 후 중단
+
+   사용자가 대체명 확정 시:
+   → 확정된 이름을 {domain}으로 치환하여 입력 수집 2번(엔티티 목록)부터 재개
+   → notifications.target_type ENUM의 도메인 참조값도 대체명으로 수정 필요 여부 확인
+
 2. 엔티티 목록 + 관계
 3. 상태 머신 여부 (로그테이블 필요 판단)
 4. 알림 필요 여부 (notifications 연계)
@@ -136,7 +143,7 @@ grep -iEn "^[[:space:]]+\`?(rank|order|group|key|desc|read|status|value|values|m
 
 CREATE TABLE IF NOT EXISTS {domain}s (
   id             INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  {domain}_id    CHAR(36) NOT NULL UNIQUE COMMENT 'UUID',
+  {domain}_id    CHAR(36) NOT NULL UNIQUE COMMENT 'UUID — 애플리케이션에서 생성 (uuid.v4()). MySQL 8.0.13+ 에서는 DEFAULT (UUID()) 사용 가능',
 
   -- 핵심 컬럼
   title          VARCHAR(200) NOT NULL,
@@ -244,50 +251,77 @@ CREATE TABLE IF NOT EXISTS user_notification_settings (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 ```
 
+## notifications.target_type ENUM 갱신 (신규 도메인 시 필수)
+notifications 테이블이 이미 존재하는 경우:
+```sql
+ALTER TABLE notifications
+  MODIFY COLUMN target_type ENUM('webtoon','episode','comment','event','admin_notice','{domain}')
+  NOT NULL,
+  ALGORITHM=INSTANT;
+```
+shared/constants/enums.ts의 NOTIFICATION_TARGET_TYPE 상수도 동시 갱신 필수
+
 ---
 
 ### REVIEW 모드 — 기존 스키마 감사
 
 ```bash
+# 0. 스키마 파일 동적 탐색
+SCHEMA_FILE=$(find . -name "*.sql" -path "*schema*" | head -1)
+if [ -z "$SCHEMA_FILE" ]; then
+  echo "스키마 파일을 찾을 수 없습니다. 경로를 지정해주세요."
+  exit 1
+fi
+echo "REVIEW 대상 파일: $SCHEMA_FILE"
+# 이후 모든 grep/awk에서 wecom_schema.sql → "$SCHEMA_FILE" 으로 사용
+
+# .claude/db-review-reports/ 내 리뷰 보고서는 스캔에서 제외
+grep -rE "ENUM|FOREIGN KEY" --include="*.sql" --exclude-dir=".claude" .
+
 # 1. 예약어 충돌 (공식 목록 기반, ERE + 백틱 지원) — status 는 비예약이므로 제외
-grep -iEn "^[[:space:]]+\`?(rank|order|group|key|desc|read|value|values|match|condition|interval|over|window|groups|lead|lag|dense_rank|row_number|cume_dist|percent_rank|system|current|usage|recursive|precision|function|procedure|trigger|primary|unique)\`?[[:space:]]+(INT|BIGINT|VARCHAR|CHAR|DATETIME|TIMESTAMP|ENUM|TINYINT|SMALLINT|TEXT|DECIMAL|JSON|BOOLEAN)" wecom_schema.sql
+# ※ 이 grep이 기준 패턴 — DESIGN 자기검증 grep과 동일한 목록 유지 필수
+grep -iEn "(^|,)[[:space:]]*\`?(rank|order|group|key|desc|read|value|values|match|condition|interval|event|over|window|groups|rows|lead|lag|dense_rank|row_number|cume_dist|percent_rank|first_value|last_value|nth_value|system|current|usage|recursive|precision|function|procedure|trigger|primary|unique)\`?[[:space:]]+(INT|BIGINT|VARCHAR|CHAR|DATETIME|TIMESTAMP|ENUM|TINYINT|SMALLINT|TEXT|DECIMAL|JSON|BOOLEAN|FLOAT|DOUBLE)" "$SCHEMA_FILE"
+# event # 비예약어이지만 혼동 방지를 위해 포함
 
 # 2. 이중 ID 미준수 테이블 (gawk/mawk 공통 방식)
+# POSIX 호환 주의: Ubuntu 기본 AWK(mawk)는 3-arg match() 미지원
+# match($0, /pat/, arr) 대신: match($0, /pat/) 후 substr($0, RSTART, RLENGTH) 사용
 awk '/^CREATE TABLE/{
-  match($0, /`([a-z0-9_]+)`/, arr)
-  cur = arr[1]
+  if (match($0, /CREATE TABLE[[:space:]]+(IF NOT EXISTS[[:space:]]+)?`?[a-z_][a-z0-9_]*`?/)) {
+    cur = substr($0, RSTART, RLENGTH); sub(/.*[[:space:]]/, "", cur); gsub(/`/, "", cur)
+  }
   has_uuid = 0
 }
 /CHAR\(36\).*UNIQUE/{ has_uuid = 1 }
 /^\);/{
   if (!has_uuid && cur != "") print "NO_UUID: " cur
   cur = ""
-}' wecom_schema.sql
+}' "$SCHEMA_FILE"
 
 # 3. deleted_at 누락 테이블 (로그·pivot·인증·설정 테이블 제외)
-ALL_TABLES=$(grep -E "^CREATE TABLE" wecom_schema.sql \
+ALL_TABLES=$(grep -E "^CREATE TABLE" "$SCHEMA_FILE" \
   | sed -E 's/CREATE TABLE (IF NOT EXISTS )?[`"]?([a-z0-9_]+)[`"]?.*/\2/i' \
   | grep -vE "(_logs$|_genres$|_skills$|_tags$|email_verifications|phone_verifications|password_reset_tokens|social_accounts|user_notification_settings|file_uploads|admin_logs|ratings|likes)")
-TABLES_WITH_DELETED=$(awk '/^CREATE TABLE/{match($0, /`([a-z0-9_]+)`/, arr); cur = arr[1]} /deleted_at/{print cur}' wecom_schema.sql | sort -u)
+TABLES_WITH_DELETED=$(awk '/^CREATE TABLE/{ if (match($0, /CREATE TABLE[[:space:]]+(IF NOT EXISTS[[:space:]]+)?`?[a-z_][a-z0-9_]*`?/)) { cur = substr($0, RSTART, RLENGTH); sub(/.*[[:space:]]/, "", cur); gsub(/`/, "", cur) } } /deleted_at/{print cur}' "$SCHEMA_FILE" | sort -u)
 echo "=== deleted_at 누락 테이블 (예외 제외 후) ==="
 comm -23 <(echo "$ALL_TABLES" | sort -u) <(echo "$TABLES_WITH_DELETED")
 
 # 4. JSON 컬럼 잔존 (audit_logs 외)
-grep -iEn "^[[:space:]]+[a-z0-9_]+[[:space:]]+JSON([[:space:]]|,|$)" wecom_schema.sql | grep -v "audit_log"
+grep -iEn "^[[:space:]]+[a-z0-9_]+[[:space:]]+JSON([[:space:]]|,|$)" "$SCHEMA_FILE" | grep -v "audit_log"
 
 # 5. Polymorphic VARCHAR target_type
-grep -iEn "target_type[[:space:]]+VARCHAR" wecom_schema.sql
+grep -iEn "target_type[[:space:]]+VARCHAR" "$SCHEMA_FILE"
 
 # 6. 픽셀 SMALLINT 잔존
-grep -iEn "(width|height|pixel|size)[[:space:]]+SMALLINT" wecom_schema.sql
+grep -iEn "(width|height|pixel|size)[[:space:]]+SMALLINT" "$SCHEMA_FILE"
 
 # 7. TINYINT role (ENUM 권장)
-grep -iEn "[[:space:]]role[[:space:]]+TINYINT" wecom_schema.sql
+grep -iEn "[[:space:]]role[[:space:]]+TINYINT" "$SCHEMA_FILE"
 
 # 8. FK 인덱스 누락 (CHAR(36) 참조 컬럼 vs INDEX 매칭)
 awk '/^CREATE TABLE/{
-  match($0, /`([a-z0-9_]+)`/, arr); cur = arr[1]
-  delete fks; delete indexed
+  if (match($0, /CREATE TABLE[[:space:]]+(IF NOT EXISTS[[:space:]]+)?`?[a-z_][a-z0-9_]*`?/)) { cur = substr($0, RSTART, RLENGTH); sub(/.*[[:space:]]/, "", cur); gsub(/`/, "", cur) }
+  for (k in fks) delete fks[k]; for (k in indexed) delete indexed[k]
 }
 /CHAR\(36\)/{
   if (match($0, /[a-z_]+_id/) && !/UNIQUE/) {
@@ -305,15 +339,15 @@ awk '/^CREATE TABLE/{
 /^\);/{
   for (col in fks) if (!(col in indexed)) print "FK_NO_IDX: " cur "." col
   cur = ""
-}' wecom_schema.sql
+}' "$SCHEMA_FILE"
 
 # 9. UNIQUE KEY 누락 탐지 (likes, comments, reactions 같은 폴리모픽 테이블)
-grep -iEn "UNIQUE KEY|UNIQUE INDEX" wecom_schema.sql
+grep -iEn "UNIQUE KEY|UNIQUE INDEX" "$SCHEMA_FILE"
 
 # 10. 로그 테이블 updated_at 금지 위반 (테이블당 1회만 출력)
-awk '/^CREATE TABLE[[:space:]]+`[a-z_]+_logs`/{inlog=1; lname=$0; warned=0; next}
+awk '/^CREATE TABLE[[:space:]]+(IF NOT EXISTS[[:space:]]+)?`?[a-z_]+_logs`?/{inlog=1; lname=$0; warned=0; next}
      inlog && /updated_at/ && !warned {print "WARN: 로그테이블 updated_at 위반 — " lname; warned=1}
-     /^\);/{inlog=0; warned=0}' wecom_schema.sql
+     /^\);/{inlog=0; warned=0}' "$SCHEMA_FILE"
 ```
 
 #### REVIEW 리포트 포맷
@@ -321,7 +355,7 @@ awk '/^CREATE TABLE[[:space:]]+`[a-z_]+_logs`/{inlog=1; lname=$0; warned=0; next
 🔍 스키마 감사 리포트
 
 [CRITICAL]
-- 예약어 충돌: event_results.rank (라인 142)
+- 예약어 충돌: results.rank (라인 142)
   → award_rank 또는 rank_position 으로 변경 권장
 
 [HIGH]
@@ -338,6 +372,15 @@ awk '/^CREATE TABLE[[:space:]]+`[a-z_]+_logs`/{inlog=1; lname=$0; warned=0; next
 
 총 위반: critical 1 / high 3 / medium 2 / low 2
 ```
+
+#### REVIEW 완료 후 처리
+
+CRITICAL/HIGH 항목 발견 시 → MIGRATE 모드로 전환하여 수정 파일 생성:
+- 예약어 충돌: `RENAME COLUMN` 마이그레이션 필요
+- deleted_at 누락: `ADD COLUMN deleted_at DATETIME NULL` 마이그레이션
+- JSON 컬럼 잔존: 정규화 마이그레이션 (복잡도 높음 — planner 먼저 협의)
+
+REVIEW 결과를 사용자에게 보고 후 MIGRATE 진행 여부 확인 필수.
 
 #### 알려진 예외 (LOW 분류)
 
@@ -361,6 +404,50 @@ REVIEW 스크립트가 이 3건을 탐지하면 자동으로 LOW 로 분류. 신
 - `wecom_schema.sql` 직접 수정 금지 — 반드시 `migrations/YYYYMMDD_HHMM_<desc>.sql` 파일 생성
 - 롤백 가능하도록 `-- DOWN` 섹션 포함
 - 운영 DB 영향 평가: 락 유발(ALTER), 다운타임 필요 여부 주석
+
+### DOWN 섹션 필수 (롤백 보장)
+
+모든 마이그레이션 파일에 DOWN 섹션을 반드시 포함한다:
+
+```sql
+-- UP
+ALTER TABLE users ADD COLUMN display_name VARCHAR(100);
+
+-- DOWN (롤백 시 실행, 순서는 UP의 역순)
+ALTER TABLE users DROP COLUMN display_name;
+```
+
+**DOWN 작성 원칙:**
+- ADD COLUMN → DROP COLUMN
+- CREATE TABLE → DROP TABLE
+- CREATE INDEX → DROP INDEX
+- ADD CONSTRAINT → DROP CONSTRAINT
+- 데이터 손실이 발생하는 DOWN은 `-- ⚠️ 데이터 손실 주의: 롤백 전 백업 필수` 주석 추가
+- ENUM 값 제거는 안전한 롤백 불가 → `-- DOWN: ENUM 값 제거 불가, 수동 절차 필요` 기록
+
+#### 패턴 0: 컬럼 RENAME (예약어 충돌 수정)
+```sql
+-- ======================================================================
+-- 패턴 0: 컬럼 RENAME (예약어 충돌 수정) — MySQL 8.0.4+ 지원
+-- ALGORITHM=INPLACE, LOCK=NONE 가능 (무락 DDL)
+-- ⚠️ 애플리케이션 코드(Repository SQL, Zod 스키마) 동시 수정 필수
+-- ======================================================================
+
+-- UP
+ALTER TABLE results
+  RENAME COLUMN `rank` TO award_rank,
+  ALGORITHM=INPLACE, LOCK=NONE;
+
+-- 애플리케이션 코드 수정 안내:
+-- 1. grep -rn 'rank' backend/repositories/ 로 참조 전수 탐색
+-- 2. Repository SQL, Zod 스키마, 프론트 타입 동시 수정
+-- 3. 코드 배포 후 마이그레이션 실행
+
+-- DOWN
+ALTER TABLE results
+  RENAME COLUMN award_rank TO `rank`,
+  ALGORITHM=INPLACE, LOCK=NONE;
+```
 
 #### 패턴 1: 인덱스 추가 (안전, 무락)
 ```sql
@@ -403,6 +490,21 @@ ALTER TABLE webtoons
 -- 2) 안전 확인 후에만:
 -- ALTER TABLE webtoons
 --   MODIFY COLUMN status ENUM('draft','scheduled','published','deleted') NOT NULL DEFAULT 'draft';
+```
+
+#### ENUM ALTER 안전 절차 (운영 DB 무중단)
+
+```sql
+-- ⚠️ MySQL ENUM ALTER: 운영 DB에서 잠금 발생 가능
+-- 안전한 COPY 방식 (무중단)
+-- 1. 새 ENUM 값 추가 (기존 값 마지막에 추가는 즉시 적용)
+ALTER TABLE orders MODIFY COLUMN status ENUM('pending','processing','completed','cancelled','refunded') NOT NULL DEFAULT 'pending';
+-- 2. 삭제 또는 순서 변경은 테이블 재빌드 필요 → pt-online-schema-change 또는 gh-ost 권장
+-- 3. ENUM 순서 변경 시 반드시 shared/constants/enums.ts 동시 업데이트 (ENUM SSOT 원칙)
+
+-- ⚠️ ALGORITHM=COPY 시 LOCK=NONE 사용 불가 (MySQL 제약)
+-- COPY는 테이블 전체 재빌드 → 배타 락(LOCK=EXCLUSIVE) 발생 불가피
+-- 대안: gh-ost 또는 pt-online-schema-change 사용 (무중단 대규모 변경)
 ```
 
 #### 패턴 3: 컬럼 추가 (NULL 허용 = INSTANT)
@@ -457,8 +559,9 @@ WeCom은 FK 미사용이므로 CASCADE는 애플리케이션 레이어 책임:
 ## 자기검증 체크리스트 (DESIGN 모드 완료 시)
 
 ```bash
-# 1. 예약어 사용 여부
-grep -iE "\b(rank|order|group|key|desc|read|interval|lead|lag|over|window|system|current|usage|recursive)\b\s+(INT|VARCHAR|DATETIME|ENUM|TINYINT|TEXT|CHAR|BIGINT|DECIMAL)" migrations/<new-file>.sql
+# 1. 예약어 사용 여부 (REVIEW grep과 동일한 완전한 목록 유지 — 기준 패턴과 항상 동기화)
+grep -iEn "^[[:space:]]+\`?(rank|order|group|key|desc|read|value|values|match|condition|interval|event|over|window|groups|rows|lead|lag|dense_rank|row_number|cume_dist|percent_rank|first_value|last_value|nth_value|system|current|usage|recursive|precision|function|procedure|trigger|primary|unique)\`?[[:space:]]+(INT|BIGINT|VARCHAR|CHAR|DATETIME|TIMESTAMP|ENUM|TINYINT|SMALLINT|TEXT|DECIMAL|JSON|BOOLEAN|FLOAT|DOUBLE)" migrations/<new-file>.sql
+# event # 비예약어이지만 혼동 방지를 위해 포함
 
 # 2. 이중 ID 준수 (ERE + 다중 공백 대응)
 grep -cE "CHAR\(36\)[[:space:]]+NOT NULL[[:space:]]+UNIQUE" migrations/<new-file>.sql   # 테이블 개수와 일치해야

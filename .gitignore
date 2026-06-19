@@ -1,3 +1,5 @@
 __pycache__/
 *.pyc
 settings.local.json
+jasoseo-data/
+scheduled_tasks.lock

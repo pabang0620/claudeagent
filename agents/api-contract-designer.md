@@ -16,7 +16,7 @@ WeCom 프로젝트에서 **이 에이전트가 없어서 일어난 일들**:
 - `f55e885` — FormData + axios Content-Type `application/json` 오염 (5+회)
 - `58bcdae` — 전화번호 하이픈 프론트/백 규칙 불일치
 - multer non-MulterError 500 누출 2회
-- `wecom-schema-field-checker` 에이전트를 중반에 **별도 제작** 해야 했음
+- 필드명 drift 검증을 중반에 `db-schema-architect` 로 **별도 대응** 해야 했음
 
 이 에이전트가 Day 0부터 있었다면 **fix 50+건 예방**.
 
@@ -124,12 +124,43 @@ echo "validate 패턴: $VALIDATE_PATTERN"
 - MSW 설치 여부 (`msw` in package.json)
 - `USE_TS=false` 시 `.ts` 대신 `.js` 생성, Zod 스키마도 `.js` 형태로 export
 
+### USE_TS=false 시 JavaScript 출력 가이드
+
+TypeScript 프로젝트가 아닐 경우 (`USE_TS=false`):
+- `.ts` → `.js` 파일명 사용
+- `z.infer<typeof Schema>` → JSDoc `@typedef` 로 교체
+- `import type` → 일반 `import` 사용
+
+```javascript
+// shared/constants/enums.js (JS 버전, USE_TS=false 시)
+export const USER_STATUS = Object.freeze(['active', 'suspended', 'deleted'])
+/** @typedef {'active'|'suspended'|'deleted'} UserStatus */
+```
+
+```javascript
+// shared/schemas/webtoon.js (JS 버전)
+import { z } from 'zod'
+import { WEBTOON_STATUS } from '../constants/enums.js'
+
+export const WebtoonSchema = z.object({
+  id: z.number().int().positive(),
+  title: z.string().min(1).max(200),
+  status: z.enum(WEBTOON_STATUS),
+})
+// TypeScript 타입 없음 — JSDoc 사용 권장
+/** @typedef {z.infer<typeof WebtoonSchema>} Webtoon */
+```
+
 **적응형 템플릿 결정 규칙**:
 - `$STRUCTURE=domain-driven` → `backend/src/domains/<domain>/` 경로 사용
 - `$STRUCTURE=flat` → `backend/controllers/`, `backend/routes/` 경로 사용
 - `$RESPONSE_FUNCS` 에 `successResponse/errorResponse` 감지 시 → 그것들 사용, `ok/created` 금지
 - `$DB_VAR` 에 default export (pool) 감지 시 → `import pool from ...` + `pool.query`
-- `$USER_FIELDS` 에 `user_type/is_admin` 감지 시 → `requireAdmin` 내부에서 해당 필드 확인
+- `$USER_FIELDS` 에 `user_type/is_admin` 감지 시:
+  → auth.js requireAdmin 함수 내부를 패턴 B로 치환하여 생성:
+    `if (req.user?.user_type !== 'admin' || !req.user?.is_admin) return forbidden(res, '관리자 권한 필요')`
+  그 외 (기본):
+  → 패턴 A 유지: `if (req.user?.role !== 'admin') return forbidden(res, '관리자 권한 필요')`
 - `$ADMIN_PATTERN` 이 `requireRole` 기반이면 → `requireRole('admin')` 사용
 - PARAM 컨벤션이 camelCase (예: `req.params.webtoonUuid`) → 템플릿도 camelCase 통일
 
@@ -207,6 +238,7 @@ export const unauthorized = (res, error = '로그인이 필요합니다') => res
 export const forbidden = (res, error = '권한이 없습니다') => res.status(403).json({ success: false, error })
 export const notFound = (res, error = '리소스를 찾을 수 없습니다') => res.status(404).json({ success: false, error })
 export const serverError = (res, error = '서버 오류가 발생했습니다') => {
+  // 프로젝트에 logger(winston/pino)가 있으면 console.error 대신 logger.error 사용
   console.error('[serverError]', error)
   return res.status(500).json({ success: false, error })
 }
@@ -217,6 +249,7 @@ export const serverError = (res, error = '서버 오류가 발생했습니다') 
 /**
  * Zod 스키마 기반 요청 검증. 실패 시 400 + 에러 메시지.
  */
+import { z } from 'zod'
 import { badRequest } from '../utils/response.js'
 
 export const validate = ({ body, query, params }) => (req, res, next) => {
@@ -226,8 +259,8 @@ export const validate = ({ body, query, params }) => (req, res, next) => {
     if (params) req.params = params.parse(req.params)
     next()
   } catch (e) {
-    if (e.name === 'ZodError') {
-      const msg = e.errors.map((err) => `${err.path.join('.')}: ${err.message}`).join(', ')
+    if (e instanceof z.ZodError) {
+      const msg = (e.issues ?? e.errors).map((err) => `${err.path.join('.')}: ${err.message}`).join(', ')
       return badRequest(res, msg)
     }
     next(e)
@@ -264,6 +297,11 @@ export const authMiddleware = async (req, res, next) => {
 }
 
 export const requireAdmin = (req, res, next) => {
+  // Phase 0 자동 전환 규칙:
+  // $USER_FIELDS에 'user_type' 또는 'is_admin' 감지 → 주석 제거하고 패턴 B 활성화
+  // $USER_FIELDS에 'role'만 감지 → 기본 패턴 A (현재 활성) 유지
+  // 두 가지 모두 없으면 → 패턴 A 유지 후 사용자에게 req.user 구조 확인 요청
+  //
   // 패턴 A: role 필드 단일 (신규 프로젝트 권장)
   // if (req.user?.role !== 'admin') return forbidden(res, '관리자 권한 필요')
   //
@@ -377,6 +415,7 @@ export const handlers = [
 ### BOOTSTRAP 완료 메시지
 ```
 ✓ shared/constants/enums.ts
+✓ backend/config/env.js (dotenv + Zod 환경변수 검증, auth.js 의존)
 ✓ backend/utils/response.js (ok/created/badRequest/unauthorized/forbidden/notFound/serverError)
 ✓ backend/middleware/validate.js (Zod)
 ✓ backend/middleware/auth.js (authMiddleware/requireAdmin/verifyOwnership)
@@ -385,6 +424,29 @@ export const handlers = [
 ✓ frontend/src/api/uploadClient.js (FormData + boundary 자동)
 ✓ frontend/src/mocks/handlers.js (MSW)
 ```
+
+### BOOTSTRAP 체크리스트
+
+- [ ] `shared/constants/enums.ts` 생성
+- [ ] `backend/utils/response.js` 생성
+- [ ] `backend/middleware/validate.js` 생성
+- [ ] `backend/middleware/auth.js` 생성
+- [ ] `backend/middleware/uploadErrorHandler.js` 생성
+- [ ] `frontend/src/api/client.js` 생성
+- [ ] `frontend/src/api/uploadClient.js` 생성
+- [ ] `frontend/src/mocks/handlers.js` 생성
+- [ ] `backend/config/env.js` 생성 — `dotenv.config()` 호출 후 필수 환경변수 Zod로 검증 (없으면 프로세스 즉시 종료)
+  ```javascript
+  // backend/config/env.js
+  import 'dotenv/config'
+  import { z } from 'zod'
+  const schema = z.object({
+    PORT: z.coerce.number().default(4000),
+    DATABASE_URL: z.string().url(),
+    JWT_SECRET: z.string().min(32),
+  })
+  export const env = schema.parse(process.env) // 검증 실패 시 즉시 throw
+  ```
 
 ---
 
@@ -457,11 +519,18 @@ export const WebtoonSchema = z.object({
 export type Webtoon = z.infer<typeof WebtoonSchema>
 
 // 생성 시 — 클라이언트가 보내는 필드만
-export const CreateWebtoonInput = WebtoonSchema.pick({
-  title: true,
-  author: true,
-  summary: true,
-}).extend({
+// ⚠️ multipart/FormData 경로: 숫자/불리언은 String()으로 직렬화되어 전송됨.
+//    따라서 FormData로 들어오는 필드는 반드시 z.coerce.* 를 사용해야 validate({body})가 통과한다.
+//    (uploadClient.create()는 모든 값을 String(v)로 append → coerce 없으면 validate 거부)
+export const CreateWebtoonInput = z.object({
+  title: z.string().min(1).max(200),
+  author: z.string().min(1).max(100),
+  summary: z.string().max(2000).nullable().optional(),
+  // FormData 전송 필드는 coerce 필수 (문자열 → 타입 변환)
+  episode_count: z.coerce.number().int().nonnegative().optional(),
+  // ⚠️ multipart 경로에서 boolean: z.coerce.boolean()은 "false"(비어있지 않은 문자열)도 true로 만든다.
+  //    enum('true','false') → transform 패턴으로 명시 변환해야 안전하다.
+  is_featured: z.enum(['true', 'false']).transform(v => v === 'true').optional(),
   // 파일은 multer가 req.file로 주입. 여기선 URL 아님
 })
 export type CreateWebtoonInput = z.infer<typeof CreateWebtoonInput>
@@ -470,13 +539,20 @@ export type CreateWebtoonInput = z.infer<typeof CreateWebtoonInput>
 export const UpdateWebtoonInput = CreateWebtoonInput.partial()
 export type UpdateWebtoonInput = z.infer<typeof UpdateWebtoonInput>
 
-// 쿼리 파라미터
+// 쿼리 파라미터 (offset 방식)
 export const ListWebtoonQuery = z.object({
   page: z.coerce.number().int().positive().default(1),
   limit: z.coerce.number().int().min(1).max(100).default(20),
   status: z.enum(WEBTOON_STATUS).optional(),
 })
 export type ListWebtoonQuery = z.infer<typeof ListWebtoonQuery>
+
+// cursor 방식 (pagination=cursor 선택 시)
+export const ListCursorQuery = z.object({
+  after_id: z.coerce.number().int().positive().optional(),
+  limit: z.coerce.number().int().min(1).max(100).default(20),
+})
+export type ListCursorQuery = z.infer<typeof ListCursorQuery>
 
 // Params — WeCom 이중 ID: 외부 식별자는 항상 UUID(webtoon_id)
 export const WebtoonIdParam = z.object({
@@ -489,7 +565,7 @@ export const WebtoonIdParam = z.object({
 import { Router } from 'express'
 import multer from 'multer'
 import { validate } from '../middleware/validate.js'
-import { authMiddleware, requireAdmin } from '../middleware/auth.js'
+import { authMiddleware, requireAdmin, verifyOwnership } from '../middleware/auth.js'
 import { uploadErrorHandler } from '../middleware/uploadErrorHandler.js'
 import {
   WebtoonIdParam,
@@ -532,6 +608,23 @@ router.patch(
   ctrl.update
 )
 
+// ⚠️ 순서 엄수: authMiddleware(인증) → verifyOwnership(소유권) → multer(파일) → validate → ctrl
+// multer를 auth 앞에 두면 익명 사용자 파일이 메모리에 올라간 후 인증 실패 → DoS 위험
+router.patch(
+  '/:webtoon_id/cover',
+  authMiddleware,                                   // 1. 인증 (req.user 주입)
+  verifyOwnership(async (req) => {                 // 2. 소유권 (req.user 사용)
+    // ★ 아키텍처 개선: repo를 routes에서 직접 import하지 말 것
+    // verifyOwnership 콜백을 controller로 이동하거나, ctrl.verifyOwnerMiddleware 형태로 분리
+    // 예: ctrl.verifyOwnerMiddleware → 내부에서 repo.findById 호출 후 req.resource 주입
+    // routes에서는 아래처럼 controller가 제공하는 미들웨어를 참조
+    return ctrl.getWebtoonOwnerId(req)             // controller가 repo 의존성 캡슐화
+  }),
+  upload.single('cover_image'),                    // 3. 파일 업로드 (Multer)
+  validate({ params: WebtoonIdParam }),             // 4. 검증
+  ctrl.updateCover
+)
+
 router.delete(
   '/:webtoon_id',
   authMiddleware,
@@ -567,6 +660,12 @@ export const getOne = async (req, res) => {
   } catch (e) {
     return serverError(res, e.message)
   }
+}
+
+// verifyOwnership 콜백용 — repo 의존성을 controller에 캡슐화 (routes에서 repo 직접 import 금지)
+export const getWebtoonOwnerId = async (req) => {
+  const row = await repo.findById(req.params.webtoon_id)
+  return row?.owner_id ?? null
 }
 
 export const create = async (req, res) => {
@@ -643,14 +742,14 @@ export const findById = async (webtoon_id) => {
 export const insert = async (input) => {
   const webtoon_id = randomUUID()
   await db.query(
-    `INSERT INTO webtoons (webtoon_id, title, author, summary, cover_image_url, status) VALUES (?, ?, ?, ?, ?, ?)`,
-    [webtoon_id, input.title, input.author, input.summary ?? null, input.cover_image_url ?? null, input.status ?? 'draft']
+    `INSERT INTO webtoons (webtoon_id, title, author, summary, cover_image_url, status, episode_count, is_featured) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+    [webtoon_id, input.title, input.author, input.summary ?? null, input.cover_image_url ?? null, input.status ?? 'draft', input.episode_count ?? 0, input.is_featured ?? false]
   )
   return webtoon_id  // UUID 반환 (AUTO_INCREMENT 내부 ID 노출 금지)
 }
 
 // 화이트리스트 — 스키마와 동기 (zod schema 의 partial() 과 중복 방어)
-const UPDATABLE_COLS = new Set(['title', 'author', 'summary', 'cover_image_url', 'status'])
+const UPDATABLE_COLS = new Set(['title', 'author', 'summary', 'episode_count', 'is_featured'])
 
 export const update = async (webtoon_id, input) => {
   const fields = []
@@ -682,7 +781,7 @@ export const listCursor = async ({ after_id, limit }) => {
 }
 ```
 
-> **참고**: 비즈니스 로직이 복잡할 경우 Service 계층은 `wecom-backend-coder` 에이전트에 위임. 이 에이전트는 최소 CRUD Repository만 생성.
+> **참고**: 비즈니스 로직이 복잡할 경우 Service 계층은 `express-engineer` 에이전트에 위임. 이 에이전트는 최소 CRUD Repository만 생성.
 
 #### (4) `frontend/src/api/webtoon.ts` — 타입 안전 클라이언트
 ```typescript
@@ -755,6 +854,27 @@ export const webtoonHandlers = [
 
 ---
 
+### PATCH + 파일 업로드 패턴 (주의)
+
+Express는 PATCH 메서드에도 multer를 사용할 수 있지만, Content-Type이 multipart/form-data여야 함:
+
+```javascript
+// ❌ 잘못됨: PATCH에서 express.json() 미들웨어 사용 시 FormData 파싱 안 됨
+router.patch('/users/:id/avatar', express.json(), uploadAvatar)
+
+// ✅ 올바름: PATCH에도 multer 미들웨어 명시
+import { upload } from '../middleware/upload.js'
+router.patch('/users/:id/avatar', upload.single('avatar'), updateUserAvatar)
+
+// 프론트엔드: PATCH + FormData
+const formData = new FormData()
+formData.append('avatar', file)
+await apiClient.patch(`/users/${id}/avatar`, formData)
+// ⚠️ Content-Type 헤더를 직접 설정하지 말 것 — 브라우저가 boundary 포함하여 자동 설정
+```
+
+---
+
 ## 자기검증 체크리스트 (GENERATE 모드 완료 시)
 
 각 출력 파일 생성 후 **반드시** 다음을 검증:
@@ -777,9 +897,14 @@ grep "res.json\|res.send" backend/controllers/<domain>Controller.js
 # 직접 res.json 호출 있으면 error (ok/created/notFound 등만 사용해야)
 
 # 5. UPDATABLE_COLS ↔ Zod UpdateInput 동기 검증
-ZOD_KEYS=$(grep -oE "^\s+\w+:" shared/schemas/<domain>.ts 2>/dev/null | tr -d ' :' | sort -u)
-REPO_COLS=$(grep -oE "'[a-z_]+'" backend/repositories/<domain>Repository.js 2>/dev/null | grep -v "WHERE\|webtoon_id\|_id$" | tr -d "'" | sort -u)
-diff <(echo "$ZOD_KEYS") <(echo "$REPO_COLS") && echo "✓ Zod↔Repo 동기" || echo "⚠️ UPDATABLE_COLS와 Zod UpdateInput 불일치"
+# ⚠️ 전체 WebtoonSchema 키(id/created_at 등 포함)와 비교하면 항상 불일치(false positive).
+#    반드시 업데이트 가능한 부분집합인 CreateInput/UpdateInput 스키마의 키만 추출해 비교한다.
+# CreateWebtoonInput = z.object({ ... }) 블록 내부 키만 추출 (UpdateInput은 이것의 .partial())
+UPDATE_KEYS=$(awk '/export const Create[A-Za-z]+Input = z.object\(\{/,/^\}\)/' shared/schemas/<domain>.ts 2>/dev/null \
+  | grep -oE "^\s+\w+:" | tr -d ' :' | sort -u)
+REPO_COLS=$(grep -oE "UPDATABLE_COLS = new Set\(\[[^]]*\]" backend/repositories/<domain>Repository.js 2>/dev/null \
+  | grep -oE "'[a-z_]+'" | tr -d "'" | sort -u)
+diff <(echo "$UPDATE_KEYS") <(echo "$REPO_COLS") && echo "✓ UpdateInput↔UPDATABLE_COLS 동기" || echo "⚠️ UPDATABLE_COLS와 Zod UpdateInput 불일치"
 ```
 
 자기검증 실패 시 해당 파일 자동 수정 후 재검증.
@@ -798,6 +923,12 @@ echo "controllers=$CONTROLLER_DIR routes=$ROUTES_DIR"
 ```
 
 ```bash
+# 하드코딩 도메인/포트 감지 (변경 시 반드시 실행)
+grep -rE "(https?://[a-z0-9.-]+\.[a-z]{2,}|localhost:[0-9]{4})" \
+  --include="*.ts" --include="*.js" \
+  --exclude-dir=node_modules --exclude-dir=dist \
+  --exclude="*.test.*" --exclude="*.spec.*" .
+
 # insertId 단독 반환 탐지 (주석 제외)
 grep -rn "insertId" "$CONTROLLER_DIR"/ | grep -v "^\s*//" | head -20
 
@@ -814,7 +945,7 @@ grep -rn "Content-Type.*json" frontend/src/api/ | grep -v uploadClient
 **탐지 후 처리**:
 1. 결과를 심각도 분류 (`CRITICAL / HIGH / MEDIUM`) 후 사용자에게 보고
 2. **자동 수정 금지** — 감사 결과는 목록화만. 실제 수정은 사용자 승인 후 진행 (CLAUDE.md 승낙 원칙)
-3. 필드명 drift 감지 시 `wecom-schema-field-checker` 또는 `db-schema-architect` 호출 권장
+3. 필드명 drift 감지 시 `db-schema-architect` 호출 권장
 
 **심각도 분류 예시**:
 ```
@@ -831,6 +962,9 @@ grep -rn "Content-Type.*json" frontend/src/api/ | grep -v uploadClient
 - React 컴포넌트 작성 — `react-specialist` 담당
 - 보안 감사 전반 — `security-reviewer` 담당
 - Zod 이외 validation 도구 지원 (yup, joi) — Zod만 지원
+- DB 마이그레이션 파일 생성 — db-schema-architect에 위임
+- 테스트 파일 생성 — tdd-guide에 위임
+- 기존 Zod 스키마 파일 삭제/이름 변경
 
 ## 성공 지표
 

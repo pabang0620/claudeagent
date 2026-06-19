@@ -43,6 +43,15 @@ WeCom 프로젝트에서 **이 에이전트가 없어서 일어난 일들**:
 3. 존재함 → AUDIT 모드 (기존 시스템 점검·개선)
 ```
 
+### Phase 0 분기 결정
+1. tokens.css 존재 여부 확인
+   - 없으면 → 2번으로
+2. CSS 방법론 충돌 감지
+   - BEM + Tailwind 혼재 등 충돌 감지 시 → **BOOTSTRAP 진입 차단**
+   - 사용자에게: "CSS 충돌이 감지되어 Bootstrap 실행을 차단합니다. 먼저 AUDIT 모드로 현황을 확인하시겠습니까?"
+   - AUDIT-LITE(하드코딩 스캔만) 실행 후 사용자 방향 결정 대기
+3. 충돌 없으면 → BOOTSTRAP 모드 진입
+
 ### Phase 1: 사전 스캔 (양쪽 모드 공통)
 ```bash
 # 기술 스택 확인
@@ -60,20 +69,87 @@ ls src/hooks/ 2>/dev/null
   - `tailwind.config.*` 또는 `@tailwind` 지시자 → **Tailwind**
   - 아무것도 없음 → 사용자에게 선택 요청 (기본값: CSS Modules)
 - **WeCom 프로젝트 감지**: `wecom/.claude/CLAUDE.md` 또는 `wecom_schema.sql` 존재 시 → **BEM 강제**, CSS Modules 생성 금지, `Component.css` 네이밍 사용
+- **선택적 연계 (mobile-first-checker / error-prevention-rules)**: 해당 스킬이 있으면 활용, 없으면 건너뜀. 본 에이전트는 이 스킬들에 의존하지 않으며 단독으로 동작한다.
 - 기존 토큰·컴포넌트 존재 여부
 - TypeScript vs JavaScript
 
+### TypeScript 감지 시 전환 규칙 (tsconfig.json 존재 또는 .tsx 파일 존재 시)
+- 모든 .jsx → .tsx, .js → .ts
+- Props 타입: JSDoc 금지 → `interface Props { ... }` 선언 필수
+- 훅 시그니처 타입 명시:
+  - `useIsMobile(bp?: number): boolean`
+  - `useDragScroll(): { ref: RefObject<HTMLDivElement>; onPointerDown: PointerEventHandler<HTMLDivElement> }`
+  - `useScrollLock(locked: boolean): void`
+- tsconfig.json 없으면 생성 제안 (strict: true 기본)
+
+```tsx
+// Button.tsx — TypeScript 버전 예시
+import styles from './Button.module.css'
+
+interface ButtonProps {
+  variant?: 'primary' | 'secondary' | 'ghost' | 'danger'
+  size?: 'sm' | 'md' | 'lg'
+  loading?: boolean
+  disabled?: boolean
+  className?: string
+  children: React.ReactNode
+  onClick?: React.MouseEventHandler<HTMLButtonElement>
+}
+
+export function Button({
+  variant = 'primary',
+  size = 'md',
+  loading = false,
+  disabled = false,
+  className = '',
+  children,
+  ...props
+}: ButtonProps) {
+  return (
+    <button
+      className={[styles.btn, styles[variant], styles[size], loading ? styles.loading : '', className].filter(Boolean).join(' ')}
+      disabled={disabled || loading}
+      {...props}
+    >
+      {loading ? <span className={styles.spinner} aria-hidden="true" /> : null}
+      {children}
+    </button>
+  )
+}
+// 나머지 컴포넌트도 동일 패턴 적용 (Props 인터페이스 + export function)
+```
+
 **충돌 시**:
-- Tailwind + BEM 혼재: `93cd44e` 재앙을 언급하고 하나로 통일할 것을 요구. 진행 금지
+- Tailwind + BEM 혼재: `93cd44e` 재앙을 언급하고 하나로 통일할 것을 요구.
 - CSS Modules + BEM 혼재: 동일. 방법론 통일 후 진행
+
+**충돌 감지 후 사용자 대화 템플릿**:
+> "Tailwind와 BEM이 혼재하고 있습니다. 전체 개선 전에 방법론을 하나로 통일해야 합니다.
+> 옵션 1: Tailwind로 통일 (기존 BEM 클래스 제거 필요)
+> 옵션 2: BEM/CSS Modules로 통일 (Tailwind 의존성 제거 필요)
+> 방향을 결정해 주시면 진행합니다. 그전까지는 하드코딩 스캔 리포트만 제공합니다."
 - **생성할 스타일 파일 결정 로직**:
   - 감지된 방법론이 BEM → `Button.jsx` + `Button.css` (일반 CSS, BEM 클래스명)
   - 감지된 방법론이 CSS Modules → `Button.jsx` + `Button.module.css`
   - Tailwind → `Button.jsx` (className 인라인), CSS 파일 없음, tokens.css를 `@theme`로 통합 제안
 
+CSS 방법론별 컴포넌트 클래스 산출 규칙:
+- CSS Modules: styles.button (기본)
+- BEM: block__element--modifier (예: .btn .btn__icon .btn--primary)
+- Tailwind: @apply 또는 유틸 클래스 직접 + cva/clsx 변형
+감지된 방법론에 맞춰 13개 컴포넌트 클래스명을 변환한다.
+
+> 본 문서의 13개 컴포넌트 예시는 모두 CSS Modules(`styles.button`) 기준으로 작성되어 있다. BEM 또는 Tailwind가 감지되면 위 규칙에 따라 13개 컴포넌트 전체의 클래스명을 일괄 변환하여 생성한다.
+
 ---
 
 ## BOOTSTRAP 모드 — Day 0 일괄 생성
+
+### 기존 파일 충돌 확인 (BOOTSTRAP 전 필수)
+기존 공용 컴포넌트 파일이 있으면 사용자에게 확인:
+> "다음 파일이 이미 존재합니다: [목록]
+> 덮어쓰기하면 기존 커스터마이징이 사라집니다. 진행하시겠습니까? (Y/N)"
+> N 선택 시 AUDIT 모드로 전환
 
 ### 1. `styles/tokens.css` 생성
 
@@ -202,7 +278,7 @@ ls src/hooks/ 2>/dev/null
 
 ```css
 /* ==========================================================================
-   Global Reset — mobile-first-checker mf-001 필수 7종
+   Global Reset — 전역 리셋 7종 (선택적 연계: mobile-first-checker가 있으면 mf-001로 검증, 없으면 건너뜀)
    ========================================================================== */
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -288,7 +364,7 @@ import { useCallback, useRef } from 'react'
 /**
  * 가로 드래그 스크롤. Pointer Events API 사용 — 마우스+터치+펜 통합 처리.
  * setPointerCapture 로 커서 이탈 및 엘리먼트 밖 이동 대응.
- * mobile-first-checker mf-005 준수.
+ * 선택적 연계: mobile-first-checker가 있으면 mf-005로 검증, 없으면 건너뜀.
  *
  * 사용:
  *   const { ref, onPointerDown } = useDragScroll()
@@ -331,7 +407,7 @@ import { useEffect } from 'react'
 
 /**
  * Modal/BottomSheet 스크롤 잠금. 스크롤바 너비 보정 포함.
- * mobile-first-checker mf-009 준수.
+ * 선택적 연계: mobile-first-checker가 있으면 mf-009로 검증, 없으면 건너뜀.
  * HMR 안전 — window에 카운터 저장하여 Vite 모듈 재평가 시 상태 유지.
  *
  * 사용:
@@ -369,7 +445,7 @@ export function useScrollLock(locked) {
 ```javascript
 /**
  * 필터 "전체" 센티넬. null 대신 사용.
- * mobile-first-checker mf-007 준수.
+ * 선택적 연계: mobile-first-checker가 있으면 mf-007로 검증, 없으면 건너뜀.
  */
 export const ALL = 'ALL'
 ```
@@ -467,6 +543,7 @@ export function Button({
 import { useEffect, useRef, useId } from 'react'
 import { createPortal } from 'react-dom'
 import { useScrollLock } from '../../hooks/useScrollLock'
+import styles from './Modal.module.css'
 
 export function Modal({ isOpen, onClose, title, children, className = '' }) {
   useScrollLock(isOpen)
@@ -506,13 +583,14 @@ export function Modal({ isOpen, onClose, title, children, className = '' }) {
   if (!isOpen) return null
   return createPortal(
     <div ref={overlayRef}
+      className={styles.overlay}
       onClick={(e) => { if (e.target === overlayRef.current) onClose?.() }}>
       {/* role="dialog" 는 대화상자 내부 컨테이너에 (WAI-ARIA APG 표준) */}
       <div ref={dialogRef}
         role="dialog"
         aria-modal="true"
         aria-labelledby={title ? titleId : undefined}
-        className={className}>
+        className={`${styles.dialog} ${className}`}>
         {title && (
           <header>
             <h2 id={titleId}>{title}</h2>
@@ -527,11 +605,36 @@ export function Modal({ isOpen, onClose, title, children, className = '' }) {
 }
 ```
 
+```css
+/* Modal.module.css */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--color-overlay, rgba(0,0,0,0.5));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-modal-backdrop, 100);
+}
+.dialog {
+  position: relative;
+  background: var(--color-bg, #fff);
+  border-radius: var(--radius-xl, 16px);
+  padding: var(--space-6, 24px);
+  box-shadow: var(--shadow-xl);
+  max-width: 90vw;
+  max-height: 85vh;
+  overflow-y: auto;
+  z-index: var(--z-modal, 101);
+}
+```
+
 #### `BottomSheet.jsx` (모바일 바텀시트, scrollLock + focus trap + ESC + return focus + touchmove passive:false)
 ```jsx
 import { useEffect, useRef, useId } from 'react'
 import { createPortal } from 'react-dom'
 import { useScrollLock } from '../../hooks/useScrollLock'
+import styles from './BottomSheet.module.css'
 
 export function BottomSheet({ isOpen, onClose, title, children, className = '' }) {
   useScrollLock(isOpen)
@@ -561,7 +664,7 @@ export function BottomSheet({ isOpen, onClose, title, children, className = '' }
         ;(e.shiftKey ? last : first).focus()
       }
     }
-    // mf-006: React 합성 onTouchMove 는 passive:true 고정이므로 네이티브 리스너로 부착
+    // React 합성 onTouchMove 는 passive:true 고정이므로 네이티브 리스너로 부착 (mobile-first-checker가 있으면 mf-006으로 검증)
     const el = sheetRef.current
     const onTouch = (e) => {
       if (e.target.closest('[data-scroll]')) return
@@ -578,12 +681,12 @@ export function BottomSheet({ isOpen, onClose, title, children, className = '' }
 
   if (!isOpen) return null
   return createPortal(
-    <div onClick={(e) => { if (e.target === e.currentTarget) onClose?.() }}>
+    <div className={styles.overlay} onClick={(e) => { if (e.target === e.currentTarget) onClose?.() }}>
       <div ref={sheetRef}
         role="dialog"
         aria-modal="true"
         aria-labelledby={title ? titleId : undefined}
-        className={className}>
+        className={`${styles.sheet} ${className}`}>
         {children}
       </div>
     </div>,
@@ -592,8 +695,34 @@ export function BottomSheet({ isOpen, onClose, title, children, className = '' }
 }
 ```
 
+```css
+/* BottomSheet.module.css */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--color-overlay, rgba(0,0,0,0.5));
+  z-index: var(--z-modal-backdrop, 100);
+}
+.sheet {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--color-bg, #fff);
+  border-radius: var(--radius-2xl, 24px) var(--radius-2xl, 24px) 0 0;
+  padding: var(--space-6, 24px);
+  max-height: 90vh;
+  overflow-y: auto;
+  z-index: var(--z-modal, 101);
+}
+```
+
 #### `Toast.jsx` + `toast.js` (포털 + 큐 + 자동 dismiss)
-```jsx
+
+다음 두 파일을 각각 생성:
+
+**`utils/toast.js`**:
+```js
 // utils/toast.js
 const listeners = new Set()
 let seq = 0
@@ -604,7 +733,10 @@ export const toast = (msg, type = 'info', duration = 3000) => {
 }
 export const dismiss = (id) => listeners.forEach((fn) => fn({ type: 'remove', id }))
 export const _subscribe = (fn) => { listeners.add(fn); return () => listeners.delete(fn) }
+```
 
+**`components/common/Toast.jsx`**:
+```jsx
 // components/common/Toast.jsx
 import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
@@ -657,26 +789,42 @@ export function SafeImage({ src, fallback = '/images/placeholder.png', alt = '',
 
 #### `ChipScroller.jsx` (가로 드래그 + 좌우 화살표 + useDragScroll 사용)
 ```jsx
+import styles from './ChipScroller.module.css'
 import { useDragScroll } from '../../hooks/useDragScroll'
 
 export function ChipScroller({ children, className = '' }) {
   const { ref, onPointerDown } = useDragScroll()
   const scrollBy = (dx) => ref.current?.scrollBy({ left: dx, behavior: 'smooth' })
   return (
-    <div className={className}>
-      <button type="button" onClick={() => scrollBy(-200)} aria-label="이전">‹</button>
+    <div className={`${styles.wrapper} ${className}`}>
+      <button type="button" onClick={() => scrollBy(-200)} aria-label="이전" className={styles.arrow}>‹</button>
       <div
         ref={ref}
         onPointerDown={onPointerDown}
-        style={{ overflowX: 'auto', display: 'flex', gap: 'var(--space-2)' }}
+        className={styles.track}
         data-scroll
       >
         {children}
       </div>
-      <button type="button" onClick={() => scrollBy(200)} aria-label="다음">›</button>
+      <button type="button" onClick={() => scrollBy(200)} aria-label="다음" className={styles.arrow}>›</button>
     </div>
   )
 }
+```
+
+**`ChipScroller.module.css`**:
+```css
+/* ChipScroller.module.css */
+.wrapper { position: relative; display: flex; align-items: center; gap: var(--space-2); }
+.track { flex: 1; overflow-x: auto; display: flex; gap: var(--space-2); scrollbar-width: none; }
+.track::-webkit-scrollbar { display: none; }
+.arrow { flex-shrink: 0; }
+.wrapper::before, .wrapper::after {
+  content: ''; position: absolute; top: 0; bottom: 0; width: var(--space-6);
+  pointer-events: none; z-index: 1;
+}
+.wrapper::before { left: 32px; background: linear-gradient(to right, var(--color-bg), transparent); }
+.wrapper::after { right: 32px; background: linear-gradient(to left, var(--color-bg), transparent); }
 ```
 
 #### `Input.jsx` (accessible, aria-invalid, error/disabled/readonly)
@@ -1062,7 +1210,7 @@ export function Avatar({
           alt=""
           className={styles.image}
           onError={(e) => {
-            e.target.onerror = null  // ep-002: 자기 해제 (무한 루프 방지)
+            e.target.onerror = null  // 자기 해제 (무한 루프 방지; error-prevention-rules가 있으면 ep-002로 검증)
             setErrored(true)
           }}
           loading="lazy"
@@ -1186,15 +1334,13 @@ export function Skeleton({
 module.exports = {
   extends: ['stylelint-config-standard'],
   rules: {
-    /* 'color-no-hex' 는 stylelint 공식 룰이 아님.
-       hex 금지는 CI grep 으로 보완: grep -rEn "#[0-9a-fA-F]{3,8}" src/ --include="*.css" | grep -v tokens.css
-       또는 커스텀 stylelint 플러그인 작성 필요. */
+    'color-no-hex': true,  // 하드코딩 hex 차단 — 토큰 사용 강제 (tokens.css는 ignoreFiles로 제외)
     'color-named': 'never',
     'color-hex-length': 'long',   /* #fff → #ffffff 강제 (일관성) */
 
     /* 하드코딩 radius 금지 */
     'declaration-property-value-disallowed-list': {
-      'border-radius': ['/^\\d+px$/', '/^\\d+rem$/'],
+      '/^border-radius/': ['/(^|\\s)\\d/'],  // 숫자로 시작하는 모든 값 차단 (shorthand 포함, 예: 4px 4px 0 0)
       // box-shadow 하드코딩 금지는 grep 기반 CI 보완으로만 처리
       // (정규식 false positive 과다: none/inherit/initial 모두 유효한 값)
       // grep -rEn "box-shadow:[[:space:]]*[0-9]" src/ --include="*.css"
@@ -1231,6 +1377,19 @@ module.exports = {
 4. 신규 페이지 작성 시 var(--토큰) 만 사용. 하드코딩은 stylelint가 거부
 ```
 
+## Bootstrap 실패 시 롤백
+생성된 파일을 되돌리려면:
+```bash
+# Git 사용 시 (권장):
+git checkout -- src/ stylelint.config.cjs
+
+# Git 미사용 시:
+rm -f src/styles/tokens.css src/styles/reset.css
+rm -f src/hooks/useIsMobile.js src/hooks/useDragScroll.js src/hooks/useScrollLock.js
+rm -rf src/components/common/
+rm -f stylelint.config.cjs
+```
+
 ### Bootstrap 자기검증 (필수 — 완료 메시지 출력 전 자동 실행)
 
 7개 산출물 생성 완료 후 즉시 다음 검증 수행. 실패 시 Bootstrap 실패로 판정:
@@ -1254,6 +1413,25 @@ grep -n "export const ALL" src/utils/sentinels.js
 ```
 
 각 항목이 예상대로 나오면 성공. 잔존 하드코딩 또는 필수 훅/유틸 누락 발견 시 Bootstrap 실패 보고 후 자동 재시도.
+
+### 하드코딩 grep gate를 husky pre-commit에 배선 (필수)
+
+위 자기검증 1번의 하드코딩 컬러/shadow grep gate(라인 ~1392)는 CI 뿐 아니라 **husky pre-commit 훅에도 반드시 배선**한다. 그래야 위반이 커밋 단계에서 차단되고, CI까지 도달하지 않는다. `.husky/pre-commit` 에 다음 게이트를 추가:
+
+```bash
+# .husky/pre-commit — 하드코딩 컬러/shadow 차단 게이트
+HARDCODED=$(grep -rEn "#[0-9a-fA-F]{3,8}" src/ --include="*.css" --include="*.scss" \
+  | grep -v tokens.css | grep -v reset.css)
+SHADOW=$(grep -rEn "box-shadow:[[:space:]]*[0-9]" src/ --include="*.css" --include="*.scss")
+if [ -n "$HARDCODED" ] || [ -n "$SHADOW" ]; then
+  echo "✗ 하드코딩 컬러/shadow 감지 — 토큰(var(--...))으로 치환 후 커밋하세요:"
+  echo "$HARDCODED"
+  echo "$SHADOW"
+  exit 1
+fi
+```
+
+husky 미설치 시: `npm install -D husky && npx husky init` 후 위 게이트를 `.husky/pre-commit` 에 추가한다. 이 게이트는 stylelint 실행과 별개로 항상 커밋을 차단한다.
 
 ---
 
@@ -1285,8 +1463,8 @@ grep -rEn "width:[[:space:]]*[1-9][0-9]{2,}px" src/ --include="*.css"
 
 ### B. 중복 컴포넌트 감지
 ```bash
-# 별점·토스트·뒤로가기 버튼이 여러 페이지에 재구현 됐는지 (ERE 플래그)
-grep -rEln "star|rating|toast|back.*button" src/components src/pages
+# 별점·토스트·뒤로가기 버튼이 여러 페이지에 재구현 됐는지 (ERE 플래그, -i로 PascalCase 감지)
+grep -rEiln "star|rating|toast|back.*button" src/components src/pages
 ```
 
 동일한 패턴이 3회 이상 반복되면 `components/common/` 으로 추출 제안.
@@ -1296,6 +1474,21 @@ grep -rEln "star|rating|toast|back.*button" src/components src/pages
 - Modal/BottomSheet 에서 `useScrollLock` 사용 여부
 - 이미지에 `SafeImage` 사용 여부 (raw `<img>` 금지)
 - `outline: none` 사용 금지 (`:focus-visible` 활용)
+
+### C-1. 미사용 토큰 + 부재 컴포넌트 실제 감지
+```bash
+# 미사용 토큰 감지
+grep -oE -- '--[a-z][a-z0-9-]+' src/styles/tokens.css | sort -u > /tmp/defined_tokens.txt
+grep -roE -- 'var\(--[a-z][a-z0-9-]+\)' src/ --include="*.css" --include="*.jsx" --include="*.tsx" \
+  | grep -oE -- '--[a-z][a-z0-9-]+' | sort -u > /tmp/used_tokens.txt
+echo "미사용 토큰:" && comm -23 /tmp/defined_tokens.txt /tmp/used_tokens.txt
+
+# 부재한 컴포넌트 감지 (13종 목록 대비)
+EXPECTED="Button Input Select Modal BottomSheet Chip ChipScroller Card Badge Toast SafeImage Avatar Skeleton"
+for c in $EXPECTED; do
+  [ ! -f "src/components/common/${c}.jsx" ] && [ ! -f "src/components/common/${c}.tsx" ] && echo "MISSING: $c"
+done
+```
 
 ### D. 리포트 출력
 ```
@@ -1329,8 +1522,8 @@ grep -rEln "star|rating|toast|back.*button" src/components src/pages
 4. **공용 컴포넌트 재사용 강제** — 3회 이상 반복되는 UI 패턴은 `components/common/` 으로 추출.
 5. **접근성 기본** — 포커스 링, ARIA, 키보드 네비게이션 필수. `outline: none` 금지.
 6. **다크모드 무료** — 토큰만 덮어쓰면 자동 적용되도록 설계. 다크모드 전용 컴포넌트 금지.
-7. **mobile-first-checker 스킬과 연계** — 생성하는 컴포넌트는 mf-001~mf-011 모든 룰을 위반하지 않도록 작성. Bootstrap 완료 후 mobile-first-checker로 자기검증 실행 권장.
-8. **PC/모바일 단일 파일 원칙 (mf-000)** — 생성하는 모든 컴포넌트는 `useIsMobile()` 로 분기. `MobileButton.jsx`, `Button.mobile.jsx`, `pages/mobile/` 복제 파일 생성 금지. BottomSheet만 모바일 전용 렌더 예외(페이지 레벨에서 조건부 렌더).
+7. **mobile-first-checker 스킬과 선택적 연계** — 해당 스킬이 있으면 활용, 없으면 건너뜀. 있으면 생성하는 컴포넌트가 mf-001~mf-011 룰을 위반하지 않도록 작성하고 Bootstrap 완료 후 자기검증 실행 권장.
+8. **PC/모바일 단일 파일 원칙** — 생성하는 모든 컴포넌트는 `useIsMobile()` 로 분기. `MobileButton.jsx`, `Button.mobile.jsx`, `pages/mobile/` 복제 파일 생성 금지. BottomSheet만 모바일 전용 렌더 예외(페이지 레벨에서 조건부 렌더). (mobile-first-checker가 있으면 mf-000으로 검증.)
 
 ---
 

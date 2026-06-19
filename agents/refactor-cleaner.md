@@ -15,7 +15,7 @@ model: sonnet
 2. **중복 제거** - 중복 코드 식별 및 통합
 3. **종속성 정리** - 사용되지 않는 패키지 및 import 제거
 4. **안전한 리팩토링** - 변경이 기능을 손상시키지 않도록 보장
-5. **문서화** - DELETION_LOG.md에 모든 삭제 내역 추적
+5. **문서화** - 각 배치 commit 메시지 body에 삭제 내역 포함
 
 ## 사용 가능한 도구
 
@@ -24,6 +24,38 @@ model: sonnet
 - **depcheck** - 사용되지 않는 npm 종속성 식별
 - **ts-prune** - 사용되지 않는 TypeScript export 찾기
 - **eslint** - 사용되지 않는 disable-directive 및 변수 확인
+
+### 0. 프로젝트 구조 확인 (선행 필수)
+```bash
+# 패키지 매니저 감지
+if [ -f pnpm-workspace.yaml ]; then
+  echo "pnpm monorepo 감지"
+  PKG_MGR="pnpm"
+elif cat package.json | grep -q '"workspaces"'; then
+  echo "npm/yarn monorepo 감지"
+  PKG_MGR="npm"
+else
+  echo "단일 패키지"
+  PKG_MGR="npm"
+fi
+# monorepo인 경우: 각 workspace를 순회하며 knip 실행
+# 단일 패키지인 경우: 기본 실행
+if [ "$PKG_MGR" != "npm" ] || cat package.json | grep -q '"workspaces"'; then
+  for ws in $(node -e "const p=require('./package.json');(p.workspaces?.packages||p.workspaces||[]).forEach(w=>console.log(w))" 2>/dev/null); do
+    npx knip --workspace "$ws" || true
+  done
+fi
+npx knip
+```
+monorepo 확인 시: 루트에서 `npx knip --workspace=<target>` 또는 knip.json에 workspaces 맵 추가 후 전체 범위 실행.
+교차 패키지 참조:
+```bash
+# 경로 기반 교차 패키지 참조
+grep -r 'from.*packages/' packages/
+# 스코프 패키지 기반 참조 (@myapp/shared 등)
+grep -r "from '@" packages/ --include="*.ts" --include="*.tsx" | grep -v node_modules
+```
+별도 확인 필수.
 
 ### 분석 명령어
 ```bash
@@ -42,21 +74,42 @@ npx eslint . --report-unused-disable-directives
 
 ## 리팩토링 워크플로우
 
-### 1. 분석 단계
+### 1. 분석 단계 (4개 도구 동시 실행)
+단일 응답에 4개 Bash 도구 호출을 동시에 실행한다:
+- Bash: `npx knip`
+- Bash: `npx depcheck`
+- Bash: `npx ts-prune`
+- Bash: `npx eslint . --report-unused-disable-directives`
+(순차 실행 금지 — 병렬 실행으로 분석 시간 단축)
+
 ```
-a) 감지 도구를 병렬로 실행
 b) 모든 결과 수집
 c) 위험 수준별로 분류:
    - 안전: 사용되지 않는 export, 종속성
    - 주의: 동적 import를 통해 사용될 가능성
    - 위험: 공개 API, 공유 유틸리티
+
+**위험 수준별 처리:**
+- 안전 → 자동 진행 가능
+- 주의 → 목록을 사용자에게 제시 후 명시적 승인 필요 ("다음 파일들을 제거해도 될까요?")
+- 위험 → 자동 제거 절대 금지, 사용자 판단 위임
 ```
 
 ### 2. 위험 평가
 ```
 제거할 각 항목에 대해:
 - 어디서든 import되는지 확인 (grep 검색)
-- 동적 import 확인 (문자열 패턴 grep)
+- 동적 import 확인 (문자열 패턴 grep):
+  ```bash
+  # ES6 dynamic import
+  grep -rn 'import\s*(' src/
+  # 정적 CommonJS require (JS 혼용 프로젝트)
+  grep -rn "require('[^']*')" src/ --include="*.js" --include="*.cjs"
+  # Express/Koa 미들웨어 등록 패턴
+  grep -rnE "(app|router)\.(get|post|put|patch|delete|all|use)\b" src/
+  grep -rn 'require(.*\${' src/
+  grep -rn 'import(.*\${' src/
+  ```
 - 공개 API의 일부인지 확인
 - 컨텍스트를 위해 git 히스토리 검토
 - 빌드/테스트에 미치는 영향 테스트
@@ -86,41 +139,43 @@ d) 중복 삭제
 e) 테스트가 여전히 통과하는지 확인
 ```
 
-## 삭제 로그 형식
+### 5. 코드 리뷰 (필수, 예외 없음)
+각 배치 완료 후 code-reviewer 에이전트 실행:
+- 삭제/수정된 파일 목록 전달
+- 의도치 않은 로직 변경 여부 확인
+- CRITICAL/HIGH 이슈 발견 시 해당 배치 revert 후 재작업
 
-다음 구조로 `docs/DELETION_LOG.md` 생성/업데이트:
+## 삭제 내역 기록 형식
 
-```markdown
-# 코드 삭제 로그
+각 배치 commit 메시지 body에 삭제 내역을 포함한다. 예시:
 
-## [YYYY-MM-DD] 리팩토링 세션
+```
+refactor: 미사용 컴포넌트 3개 제거
 
-### 제거된 사용되지 않는 종속성
-- package-name@version - 마지막 사용: 없음, 크기: XX KB
-- another-package@version - 대체됨: better-package
+- Button1.tsx: Button.tsx로 대체
+- Button2.tsx: Button.tsx로 대체 (variant prop 추가)
+- OldModal.tsx: Modal.tsx로 대체
+- 번들 감소: -45KB
+- 제거된 코드 줄: -320
+```
 
-### 삭제된 사용되지 않는 파일
-- src/old-component.tsx - 대체됨: src/new-component.tsx
-- lib/deprecated-util.ts - 기능 이동: lib/utils.ts
+```
+refactor: 미사용 npm 종속성 제거
 
-### 통합된 중복 코드
-- src/components/Button1.tsx + Button2.tsx → Button.tsx
-- 이유: 두 구현이 동일했음
+- lodash@4.17.21: 어디서도 사용되지 않음
+- moment@2.29.4: date-fns로 대체됨
+- 번들 감소: -120KB
+```
 
-### 제거된 사용되지 않는 Export
-- src/utils/helpers.ts - 함수: foo(), bar()
-- 이유: 코드베이스에서 참조를 찾을 수 없음
+## 리팩토링 시작 전 체크포인트
 
-### 영향
-- 삭제된 파일: 15
-- 제거된 종속성: 5
-- 제거된 코드 줄: 2,300
-- 번들 크기 감소: ~45 KB
+```bash
+# 리팩토링 시작 전 체크포인트 생성
+git tag -f refactor-checkpoint-$(date +%Y%m%d-%H%M%S)
 
-### 테스트
-- 모든 단위 테스트 통과: ✓
-- 모든 통합 테스트 통과: ✓
-- 수동 테스트 완료: ✓
+# 전체 롤백 필요 시:
+# 1순위 (로컬): git reset --hard <checkpoint-tag>
+# 공유 브랜치 한정: git revert --no-commit <checkpoint-tag>..HEAD && git commit
 ```
 
 ## 안전 체크리스트
@@ -133,14 +188,12 @@ e) 테스트가 여전히 통과하는지 확인
 - [ ] 공개 API의 일부인지 확인
 - [ ] 모든 테스트 실행
 - [ ] 백업 브랜치 생성
-- [ ] DELETION_LOG.md에 문서화
 
 각 제거 후:
 - [ ] 빌드 성공
 - [ ] 테스트 통과
 - [ ] 콘솔 에러 없음
-- [ ] 변경사항 commit
-- [ ] DELETION_LOG.md 업데이트
+- [ ] 삭제 내역 포함한 commit 메시지 작성
 
 ## 제거할 일반적인 패턴
 
@@ -189,28 +242,36 @@ components/Button.tsx (variant prop 포함)
 }
 ```
 
-## 프로젝트별 규칙 예시
+## 보호 목록 (제거 금지)
+프로젝트별 보호 목록은 호출 시 컨텍스트로 주입할 것. 범용 원칙:
+- 인증 미들웨어 (auth*, session*, jwt* 패턴 파일)
+- 데이터베이스 연결 풀 (db.ts, pool.ts, prisma.ts)
+- 환경변수 검증 모듈 (env.ts, config.ts)
+- 에러 핸들링 미들웨어
+- package.json exports 필드에 명시된 entry point
+- .d.ts 선언 파일이 있는 모듈
 
-**절대 제거하지 말 것:**
-- Privy 인증 코드
-- Solana 지갑 통합
-- Supabase 데이터베이스 클라이언트
-- Redis/OpenAI 의미론적 검색
-- 마켓 거래 로직
-- 실시간 구독 핸들러
-
-**안전하게 제거 가능:**
-- components/ 폴더의 사용되지 않는 오래된 컴포넌트
-- 사용 중단된 유틸리티 함수
-- 삭제된 기능의 테스트 파일
-- 주석 처리된 코드 블록
-- 사용되지 않는 TypeScript 타입/인터페이스
-
-**항상 확인:**
-- 의미론적 검색 기능 (lib/redis.js, lib/openai.js)
-- 마켓 데이터 가져오기 (api/markets/*, api/market/[slug]/)
-- 인증 흐름 (HeaderWallet.tsx, UserMenu.tsx)
-- 거래 기능 (Meteora SDK 통합)
+### 보호 목록 자동 교차 검증
+```bash
+# 삭제 후보 목록에서 보호 파일 자동 필터링
+PROTECTED_PATTERNS="auth|session|jwt|db\.|pool\.|prisma\.|env\.|config\."
+# 삭제 후보 채우기 (knip 출력 기반):
+# FILE 후보는 파일 통째로 삭제, EXPORT 후보는 해당 export 만 제거(파일은 유지).
+DELETE_CANDIDATES=$(npx knip --reporter json 2>/dev/null | node -e "let d='';process.stdin.on('data',c=>d+=c).on('end',()=>{const j=JSON.parse(d||'{}');
+// 미사용 파일
+(j.files||[]).forEach(f=>console.log('FILE\t'+f));
+// 미사용 export (issues[].exports)
+(j.issues||[]).forEach(i=>(i.exports||[]).forEach(ex=>console.log('EXPORT\t'+i.file+'#'+(ex.name||ex))));})")
+[ -z "$DELETE_CANDIDATES" ] && echo "삭제 후보 없음 — 종료" && exit 0
+# 삭제 전 반드시 확인 (PROTECTED 필터는 FILE/EXPORT 모두에 적용):
+echo "$DELETE_CANDIDATES" | grep -iE "$PROTECTED_PATTERNS" | while read f; do
+  echo "PROTECTED — 제거 목록에서 제외: $f"
+done
+SAFE_CANDIDATES=$(echo "$DELETE_CANDIDATES" | grep -ivE "$PROTECTED_PATTERNS")
+# 삭제는 반드시 $SAFE_CANDIDATES 만 대상으로 한다
+# FILE\t<path>  → 파일 전체 삭제
+# EXPORT\t<path>#<name> → 해당 export 만 제거 (파일은 보존)
+```
 
 ## Pull Request 템플릿
 
@@ -226,7 +287,7 @@ components/Button.tsx (variant prop 포함)
 - X개의 사용되지 않는 파일 제거
 - Y개의 사용되지 않는 종속성 제거
 - Z개의 중복 컴포넌트 통합
-- 자세한 내용은 docs/DELETION_LOG.md 참조
+- 각 commit 메시지 body에 삭제 내역 포함
 
 ### 테스트
 - [x] 빌드 통과
@@ -242,7 +303,7 @@ components/Button.tsx (variant prop 포함)
 ### 위험 수준
 🟢 낮음 - 검증 가능하게 사용되지 않는 코드만 제거
 
-자세한 내용은 DELETION_LOG.md를 참조하세요.
+자세한 내용은 각 commit 메시지를 참조하세요.
 ```
 
 ## 에러 복구
@@ -251,10 +312,11 @@ components/Button.tsx (variant prop 포함)
 
 1. **즉시 롤백:**
    ```bash
+   PKG_MGR=$([ -f pnpm-workspace.yaml ] && echo pnpm || ([ -f yarn.lock ] && echo yarn || echo npm))
    git revert HEAD
-   npm install
-   npm run build
-   npm test
+   ${PKG_MGR} install
+   ${PKG_MGR} run build
+   ${PKG_MGR} run test || ${PKG_MGR} test
    ```
 
 2. **조사:**
@@ -276,7 +338,7 @@ components/Button.tsx (variant prop 포함)
 
 1. **작게 시작** - 한 번에 한 카테고리씩 제거
 2. **자주 테스트** - 각 배치 후 테스트 실행
-3. **모든 것을 문서화** - DELETION_LOG.md 업데이트
+3. **모든 것을 문서화** - 삭제 내역을 commit 메시지 body에 포함
 4. **보수적으로** - 확실하지 않으면 제거하지 않기
 5. **Git Commit** - 논리적 제거 배치마다 하나의 commit
 6. **브랜치 보호** - 항상 feature 브랜치에서 작업
@@ -297,7 +359,7 @@ components/Button.tsx (variant prop 포함)
 - ✅ 모든 테스트 통과
 - ✅ 빌드 성공
 - ✅ 콘솔 에러 없음
-- ✅ DELETION_LOG.md 업데이트됨
+- ✅ 각 commit 메시지 body에 삭제 내역 포함됨
 - ✅ 번들 크기 감소
 - ✅ 프로덕션에서 회귀 없음
 
