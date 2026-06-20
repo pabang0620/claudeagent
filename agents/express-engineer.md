@@ -31,6 +31,9 @@ model: sonnet
 작업 전 반드시 수행:
 1. 기존 라우터·미들웨어 구조 파악 (`Glob`, `Grep` 활용)
 2. 현재 DB 연결 방식 확인 (pg/mysql2/Prisma)
+   → 발견한 드라이버가 요청 스펙과 다를 경우: 코드 작성 전 반드시 사용자에게 확인한다.
+     예: "요청은 pg 기반이지만 현재 프로젝트는 mysql2 환경입니다. 어느 쪽으로 진행할까요?"
+     사용자 확인 없이 스펙을 임의 변경하는 것은 금지한다.
 3. 기존 에러 핸들러·미들웨어 확인 (중복 작성 방지)
 4. `package.json` 확인 → 이미 설치된 패키지 우선 활용
 5. 환경변수 사용 패턴 확인 (`.env` 파일)
@@ -114,9 +117,10 @@ export default app
 
 ## 2층 인증 기본값 강제 (CRITICAL)
 리소스를 변경하는 모든 엔드포인트(PATCH/PUT/DELETE)는 `authenticate, verifyOwnership(UserRepository)` 2층 인증을 **선택이 아닌 기본값**으로 포함한다. 코드 생성 시 "제안"이 아니라 실제 라우트 코드에 직접 작성한다. `verifyOwnership`은 Repository 객체(`.findByUuid()` 보유)를 인자로 받는다 — 소유자 컬럼이 다르면 `verifyOwnership(PostRepository, 'author_id')`처럼 두 번째 인자로 지정한다.
-예: router.patch('/:id', authenticate, verifyOwnership(UserRepository), validate(uuidParamSchema, 'params'), validate(updateSchema), controller.update)
+예: router.patch('/:id', authenticate, validate(uuidParamSchema, 'params'), verifyOwnership(UserRepository), validate(updateSchema), controller.update)
 - POST(생성)는 authenticate만 (소유권 검사 대상 없음)
 - 관리자 전용은 authenticate, requireAdmin
+- **verifyOwnership 미들웨어가 프로젝트에 없을 경우**: 서비스 레이어에서 소유권 처리로 대체하는 것은 컨벤션 위반이다. WeCom 회고 섹션의 verifyOwnership 패턴을 참조하여 `src/middlewares/verifyOwnership.js`를 신규 생성한 뒤 적용한다.
 
 ---
 
@@ -138,8 +142,8 @@ const router = Router()
 router.get('/', authenticate, userController.getUsers)
 router.get('/:id', authenticate, userController.getUserById)
 router.post('/', validate(createUserSchema), userController.createUser)
-router.put('/:id', authenticate, verifyOwnership(UserRepository), validate(uuidParamSchema, 'params'), validate(updateUserSchema), userController.updateUser)
-router.delete('/:id', authenticate, verifyOwnership(UserRepository), validate(uuidParamSchema, 'params'), userController.deleteUser)
+router.put('/:id', authenticate, validate(uuidParamSchema, 'params'), verifyOwnership(UserRepository), validate(updateUserSchema), userController.updateUser)
+router.delete('/:id', authenticate, validate(uuidParamSchema, 'params'), verifyOwnership(UserRepository), userController.deleteUser)
 
 export default router
 ```
@@ -325,7 +329,7 @@ import { AppError } from '../utils/AppError.js'
 export const errorHandler = (err, req, res, next) => {
   const isDev = process.env.NODE_ENV === 'development'
 
-  if (err.name === 'AppError') {
+  if (err instanceof AppError) {
     return res.status(err.statusCode).json({
       success: false,
       error: err.message,
@@ -335,6 +339,11 @@ export const errorHandler = (err, req, res, next) => {
   // DB 고유 제약 위반
   if (err.code === '23505') {
     return res.status(409).json({ success: false, error: '이미 존재하는 데이터입니다.' })
+  }
+
+  // pg 22P02: 잘못된 UUID 형식 (defense in depth — validate 미들웨어 통과 후 발생 케이스)
+  if (err.code === '22P02') {
+    return res.status(400).json({ success: false, error: '잘못된 ID 형식입니다.' })
   }
 
   console.error('[ERROR]', err)
@@ -396,14 +405,19 @@ export const authorize = (...roles) => (req, res, next) => {
   next()
 }
 
-// src/config/roles.js (별도 파일로 분리 — auth.js 내부 선언 금지)
+```
+
+```javascript
+// src/config/roles.js (별도 파일 — auth.js 내부 선언 금지)
 export const ROLES = {
   ADMIN: 'admin',
   USER: 'user',
   MODERATOR: 'moderator',
 }
+```
 
-// auth.js에서는 import (하드코딩 문자열 금지)
+```javascript
+// src/middlewares/auth.js (requireAdmin — ROLES import 후 정의)
 import { ROLES } from '../config/roles.js'
 export const requireAdmin = authorize(ROLES.ADMIN)
 ```
@@ -636,7 +650,7 @@ afterAll(async () => {
   export const messageResponse = (res, message, statusCode = 200) =>
     res.status(statusCode).json({ success: true, message })
   ```
-- DELETE 등 데이터 없는 응답도 래퍼 사용: `messageResponse(res, '삭제되었습니다.')` (res.json 직접 호출 금지). messageResponse가 없으면 successResponse(res, null, '삭제되었습니다.') 사용.
+- DELETE 등 데이터 없는 응답도 래퍼 사용: `messageResponse(res, '삭제되었습니다.')` (res.json 직접 호출 금지). messageResponse는 response.js에 항상 포함한다 (누락 시 신규 추가). `successResponse(res, null, '삭제되었습니다.')` 형태는 statusCode 자리에 문자열이 들어가는 버그이므로 사용 금지.
 
 ### POST/PATCH 전체 리소스 재조회
 - INSERT 후 `insertId`만 반환 금지 → 전체 리소스 `findById` 재조회 후 반환
@@ -658,6 +672,18 @@ afterAll(async () => {
   )
   if (result.affectedRows === 0) throw new AppError('게시글을 찾을 수 없습니다.', 404)
   return findByUuid(uuid)  // AUTO_INCREMENT id 아닌 UUID로 조회
+  ```
+
+  ```javascript
+  // mysql2 + withTransaction 완전 흐름 예시 (PATCH /:id)
+  const updated = await withTransaction(pool, async (conn) => {
+    const [{ affectedRows }] = await conn.execute(
+      'UPDATE comments SET body=? WHERE comment_uuid=? AND deleted_at IS NULL',
+      [body, uuid]
+    )
+    if (affectedRows === 0) throw new AppError('댓글을 찾을 수 없습니다.', 404)
+    return findByUuid(uuid)  // 전체 리소스 재조회 반환
+  })
   ```
 
 ### 인증 2층 구조
@@ -694,8 +720,8 @@ export function verifyOwnership(Model, ownerField = 'user_id') {
   }
 }
 
-// 사용 예시:
-router.put('/:id', authenticate, verifyOwnership(PostRepository, 'author_id'), postController.update)
+// 사용 예시 (validate params → verifyOwnership 순서 필수):
+router.put('/:id', authenticate, validate(uuidParamSchema, 'params'), verifyOwnership(PostRepository, 'author_id'), postController.update)
 ```
 
 ### 파일 업로드
@@ -767,7 +793,7 @@ router.put('/:id', authenticate, verifyOwnership(PostRepository, 'author_id'), p
       return res.status(400).json({
         success: false,
         error: '입력값이 올바르지 않습니다.',
-        details: result.error.errors.map(e => ({
+        details: result.error.issues.map(e => ({
           field: e.path.join('.'),
           message: e.message,
         })),
@@ -781,7 +807,7 @@ router.put('/:id', authenticate, verifyOwnership(PostRepository, 'author_id'), p
   router.get('/', validate(listQuerySchema, 'query'), controller.list)
   router.get('/:id', validate(idParamSchema, 'params'), controller.getById)
   ```
-- **모든 `/:id` 파라미터 라우트는 `validate(uuidParamSchema, 'params')`를 기본 포함** — 누락 시 잘못된 id가 pg에 전달되어 invalid_text_representation 500 에러 발생. 예시가 아닌 기본 패턴으로 항상 적용.
+- **모든 `/:id` 파라미터 라우트는 `validate(uuidParamSchema, 'params')`를 기본 포함** — 반드시 `verifyOwnership` **앞에** 배치. 누락·순서 역전 시 잘못된 UUID가 DB에 전달되어 `22P02 invalid_text_representation` 500 에러 발생. 예시가 아닌 기본 패턴으로 항상 적용.
 
 ### Repository 패턴 — defense in depth
 - UPDATE 시 `UPDATABLE_COLS` 화이트리스트 사용 (SQL 인젝션 defense in depth)

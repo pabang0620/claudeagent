@@ -33,6 +33,20 @@
 
 ---
 
+## 에이전트 모델 제약 (PERMANENT)
+
+> **opus 절대 금지** — 모든 에이전트 정의파일의 `model:` 필드에 opus 사용 불가.
+> 허용: `model: sonnet` 또는 `model: haiku`만 사용.
+> `flutter-game-builder`는 빌드 워커 특성상 `model: haiku` 의도적 사용 (예외 아님, 정상).
+>
+> **신규 에이전트 생성 시 필수 체크리스트**:
+> - [ ] frontmatter: `name`, `description`, `tools`, `model` 4개 필드 모두 포함
+> - [ ] `model:` 값이 `sonnet` 또는 `haiku` 인지 확인 (opus 입력 시 즉시 거부)
+> - [ ] `description`이 "언제 사용하는가"를 한 문장으로 설명하는지 확인
+> - [ ] 생성 후 agent-evaluator 평가 → 90점 이상 달성 후 배포
+
+---
+
 ## Available Agents
 
 Located in `~/.claude/agents/`:
@@ -44,13 +58,21 @@ Located in `~/.claude/agents/`:
 | tdd-guide | TDD 워크플로우 | 모든 버그 수정, 신규 기능 |
 | react-specialist | React 19 + Vite 7 | 프론트엔드 코드 작성 |
 | express-engineer | Node.js + Express | 백엔드 코드 작성 |
-| code-reviewer | 코드 리뷰 | 코드 변경 후 항상 |
-| security-reviewer | 보안 분석 | 인증/권한/민감 데이터 |
+| api-contract-designer | API 엔드포인트 SSOT 설계 | 신규 API, 업로드, 관리자 엔드포인트 |
+| db-schema-architect | MySQL 8.0 스키마 설계·마이그레이션 | WeCom DB, 신규 테이블, 마이그레이션 |
+| security-reviewer | 보안 분석 (진단 전용) | 인증/권한/민감 데이터 |
 | build-error-resolver | 빌드 에러 수정 | 빌드/타입 실패 시 |
 | e2e-runner | E2E 테스트 | 핵심 사용자 플로우 |
-| refactor-cleaner | 코드 정리 | 리팩토링 실행 |
-| database-reviewer | DB 리뷰 | DB 설계/쿼리/마이그레이션 |
-| doc-updater | 문서 업데이트 | 기능 완료 후 |
+| refactor-cleaner | 코드 정리·불필요 코드 제거 | 리팩토링 실행 |
+| database-reviewer | DB 리뷰 (리뷰 전용) | 기존 쿼리/스키마/인덱스 감사 |
+| doc-updater | 문서·코드맵 업데이트 | 기능 완료 후 |
+| project-bootstrapper | 신규 프로젝트 Day 0 셋업 | 새 프로젝트 초기화 |
+| ui-design-system | 디자인 시스템·토큰 생성 | 디자인 토큰, 공용 컴포넌트 |
+| funnel-portfolio-merger | landing-maker → funnel-portfolio 병합 | 두 프로젝트 병합 작업 |
+| jasoseo-writer | 자소서·지원서 작성 | 자소서, 자기소개서 요청 |
+| flutter-game-builder | Flutter 게임 APK·웹 빌드 | Flutter 빌드 요청 |
+| agent-evaluator | 에이전트 정의파일 품질 평가 | 에이전트 생성·수정 후 |
+| **code-reviewer** | **스킬** (에이전트 아님) | `code-reviewer` 스킬로 호출 |
 
 ---
 

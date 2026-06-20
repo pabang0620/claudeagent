@@ -114,7 +114,9 @@ tdd-guide는 구현 완료 후에만 실행 가능하므로 항상 순차.
 > **에이전트 이름 규칙**: 반드시 아래 목록에서만 선택 (임의 이름 사용 금지)
 > 허용: architect, planner, security-reviewer, tdd-guide, build-error-resolver,
 > e2e-runner, refactor-cleaner, database-reviewer, doc-updater,
-> react-specialist, express-engineer, api-contract-designer, db-schema-architect
+> react-specialist, express-engineer, api-contract-designer, db-schema-architect,
+> funnel-portfolio-merger, project-bootstrapper, ui-design-system,
+> jasoseo-writer, flutter-game-builder, agent-evaluator
 >
 > **코드 리뷰 스킬**: 에이전트 실행 순서와 별도로, 코드 변경 단계 완료 후
 > 오케스트레이터에게 code-reviewer 스킬 실행을 권고할 것.
