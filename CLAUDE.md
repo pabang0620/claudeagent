@@ -67,6 +67,8 @@ myapp/
 | `verify` | 빌드/타입/린트/테스트 검증 | `/verify` (사용자만) |
 | `checkpoint` | 체크포인트 생성/검증 | `/checkpoint` (사용자만) |
 | `test-coverage` | 테스트 커버리지 분석 | 자동 + `/test-coverage` |
+| `proposal-pt` | 정부사업 RFP 제안 발표자료(PT) 생성 | `/proposal-pt` |
+| `deep-research` | 공공기관·논문 PDF 심층 리서치 | `/deep-research` |
 
 ## Context7 MCP
 외부 라이브러리 사용 시 요청 끝에 `use context7` 추가 → 최신 API 문서 자동 조회

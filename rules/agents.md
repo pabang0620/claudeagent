@@ -18,6 +18,9 @@
 | **프론트엔드** | React 컴포넌트, hooks, 상태관리, UI | react-specialist |
 | **백엔드** | Express 라우터, 미들웨어, API 엔드포인트 | express-engineer |
 | **문서 생성** | 계약서, 보고서, 제안서, 공문서, .docx 파일 생성 (md/README/마크다운은 해당 없음) | doc-generator |
+| **PT/발표자료** | "PT 만들어", "제안서 슬라이드", "발표자료", RFP 제안 발표자료, PPTX | proposal-pt-builder |
+| **에이전트 평가** | 에이전트 정의파일 품질 점검·개선 | agent-evaluator-v2 |
+| **스킬 평가** | 스킬(.md) 품질 점검·개선 | skill-evaluator |
 
 ### STEP 2: 코드 변경 후 필수 (예외 없음)
 
@@ -72,7 +75,10 @@ Located in `~/.claude/agents/`:
 | ui-design-system | 디자인 시스템·토큰 생성 | 디자인 토큰, 공용 컴포넌트 |
 | jasoseo-writer | 자소서·지원서 작성 | 자소서, 자기소개서 요청 |
 | flutter-game-builder | Flutter 게임 APK·웹 빌드 | Flutter 빌드 요청 |
-| agent-evaluator | 에이전트 정의파일 품질 평가 | 에이전트 생성·수정 후 |
+| agent-evaluator | 에이전트 정의파일 품질 평가 (기본) | 에이전트 생성·수정 후 |
+| agent-evaluator-v2 | 에이전트 정의파일 9관점 100점 평가·개선 | 에이전트 생성·수정 후 (권장) |
+| skill-evaluator | 스킬(.md) 품질 평가·개선 (100점 척도) | 스킬 생성·수정 후 |
+| proposal-pt-builder | 정부사업 RFP 제안 PT → Marp+PPTX | PT/발표자료 요청 시 |
 | **code-reviewer** | **스킬** (에이전트 아님) | `code-reviewer` 스킬로 호출 |
 
 ---
