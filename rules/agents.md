@@ -17,6 +17,7 @@
 | **빌드 에러** | 빌드 실패, 타입 에러, 컴파일 에러 | build-error-resolver |
 | **프론트엔드** | React 컴포넌트, hooks, 상태관리, UI | react-specialist |
 | **백엔드** | Express 라우터, 미들웨어, API 엔드포인트 | express-engineer |
+| **문서 생성** | 계약서, 보고서, 제안서, 공문서, .docx 파일 생성 (md/README/마크다운은 해당 없음) | doc-generator |
 
 ### STEP 2: 코드 변경 후 필수 (예외 없음)
 
@@ -66,9 +67,9 @@ Located in `~/.claude/agents/`:
 | refactor-cleaner | 코드 정리·불필요 코드 제거 | 리팩토링 실행 |
 | database-reviewer | DB 리뷰 (리뷰 전용) | 기존 쿼리/스키마/인덱스 감사 |
 | doc-updater | 문서·코드맵 업데이트 | 기능 완료 후 |
+| doc-generator | DOCX/한글 문서 생성 (계약서·보고서·제안서) | 문서 생성 요청 시 |
 | project-bootstrapper | 신규 프로젝트 Day 0 셋업 | 새 프로젝트 초기화 |
 | ui-design-system | 디자인 시스템·토큰 생성 | 디자인 토큰, 공용 컴포넌트 |
-| funnel-portfolio-merger | landing-maker → funnel-portfolio 병합 | 두 프로젝트 병합 작업 |
 | jasoseo-writer | 자소서·지원서 작성 | 자소서, 자기소개서 요청 |
 | flutter-game-builder | Flutter 게임 APK·웹 빌드 | Flutter 빌드 요청 |
 | agent-evaluator | 에이전트 정의파일 품질 평가 | 에이전트 생성·수정 후 |
