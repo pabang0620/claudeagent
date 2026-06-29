@@ -24,6 +24,7 @@
 | **E2E 테스트 코드** | "E2E 테스트 작성", "playwright test 스위트", "테스트 코드 만들어" | e2e-runner |
 | **에이전트 평가** | 에이전트 정의파일 품질 점검·개선 | agent-evaluator-v2 |
 | **스킬 평가** | 스킬(.md) 품질 점검·개선 | skill-evaluator |
+| **리뷰 플랜 수립** | "검증해줘", "플랜 만들어줘", "수정 계획 세워줘", "리뷰 결과 반영", "이슈 플랜" | review-plan-builder |
 
 ### STEP 2: 코드 변경 후 필수 (예외 없음)
 
@@ -84,6 +85,7 @@ Located in `~/.claude/agents/`:
 | skill-evaluator | 스킬(.md) 품질 평가·개선 (100점 척도) | 스킬 생성·수정 후 |
 | proposal-pt-builder | 정부사업 RFP 제안 PT → Marp+PPTX | PT/발표자료 요청 시 |
 | hwp-generator | HWPX 공문서 생성 (계약서·제안요청서·보고서·공문·계획서·회의록) | "hwp 만들어", "계약서", "제안요청서", ".hwpx" 요청 시 |
+| review-plan-builder | 리뷰 결과 재검토 → 수정 플랜 수립 → 병렬 검증 루프(2회 연속 클린) → FINAL_PLAN.md → 실행 직전 중단 | "검증해줘", "플랜 만들어줘", "수정 계획 세워줘" |
 | **code-reviewer** | **스킬** (에이전트 아님) | `code-reviewer` 스킬로 호출 |
 
 ---
