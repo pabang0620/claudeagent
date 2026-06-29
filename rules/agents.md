@@ -20,6 +20,8 @@
 | **HWPX 문서 생성** | 계약서, 용역계약서, 제안요청서, 보고서, 공문, 기안문, 계획서, 회의록 → .hwpx 파일 생성 | hwp-generator |
 | **DOCX 문서 생성** | 계약서, 보고서, 제안서, 공문서 → .docx 파일 생성 (md/README/마크다운은 해당 없음) | doc-generator |
 | **PT/발표자료** | "PT 만들어", "제안서 슬라이드", "발표자료", RFP 제안 발표자료, PPTX | proposal-pt-builder |
+| **Playwright 검증** | "playwright", "검증", "기능 눌러봐", "개발자모드 켜고", "브라우저 운전", "기능 전체 검증" | playwright-verify-loop |
+| **E2E 테스트 코드** | "E2E 테스트 작성", "playwright test 스위트", "테스트 코드 만들어" | e2e-runner |
 | **에이전트 평가** | 에이전트 정의파일 품질 점검·개선 | agent-evaluator-v2 |
 | **스킬 평가** | 스킬(.md) 품질 점검·개선 | skill-evaluator |
 
@@ -67,7 +69,8 @@ Located in `~/.claude/agents/`:
 | db-schema-architect | MySQL 8.0 스키마 설계·마이그레이션 | WeCom DB, 신규 테이블, 마이그레이션 |
 | security-reviewer | 보안 분석 (진단 전용) | 인증/권한/민감 데이터 |
 | build-error-resolver | 빌드 에러 수정 | 빌드/타입 실패 시 |
-| e2e-runner | E2E 테스트 | 핵심 사용자 플로우 |
+| playwright-verify-loop | 브라우저 직접 운전 검증 루프 (개발자모드·콘솔·네트워크 수집 → 리포트 → 수정 위임 → 재검증) | "playwright", "검증", "기능 눌러봐", "개발자모드 켜고" |
+| e2e-runner | E2E 테스트 코드 작성·유지·실행 (npx playwright test 스위트 전용) | "테스트 코드 작성", "playwright test 스위트" |
 | refactor-cleaner | 코드 정리·불필요 코드 제거 | 리팩토링 실행 |
 | database-reviewer | DB 리뷰 (리뷰 전용) | 기존 쿼리/스키마/인덱스 감사 |
 | doc-updater | 문서·코드맵 업데이트 | 기능 완료 후 |
@@ -106,6 +109,14 @@ Located in `~/.claude/agents/`:
 ```
 1. architect (설계)
 2. [승낙 후] planner (구현 계획)
+```
+
+### Playwright 검증 요청 ("playwright", "검증해", "기능 눌러봐", "개발자모드 켜고")
+```
+playwright-verify-loop 에이전트 사용 (e2e-runner 금지)
+- 브라우저를 직접 운전하며 기능 전체 워크스루
+- 콘솔·네트워크·서버로그 수집 → 병렬 원인조사 → 리포트 → 수정 위임 → 재검증 루프
+- npx playwright test 실행이 아님
 ```
 
 ---

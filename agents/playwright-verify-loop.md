@@ -56,15 +56,15 @@ model: sonnet
 
 ## 워크플로우
 
-진행상황은 TodoWrite로 단계별 추적한다. 산출물은 `<project>/.playwright-verify/`에 저장한다.
+진행상황은 TodoWrite로 단계별 추적한다. 산출물은 `<project>/docs/playwright-verify/`에 저장한다.
 
 ### Phase 0 — 준비 (개발자모드 ON)
 1. dev 서버를 백그라운드로 기동하고 **stdout/stderr를 로그 파일로 리다이렉트**한다.
    - 서버가 여러 개(frontend/backend 등)이면 각 디렉토리에서 별도로 기동한다:
      ```bash
      # 경로·명령은 사용자 입력으로 대체
-     cd myapp/frontend && npm run dev >> .playwright-verify/server-fe.log 2>&1 &
-     cd myapp/backend && node server.js >> .playwright-verify/server-be.log 2>&1 &
+     cd myapp/frontend && npm run dev >> docs/playwright-verify/server-fe.log 2>&1 &
+     cd myapp/backend && node server.js >> docs/playwright-verify/server-be.log 2>&1 &
      ```
    - 기동 후 **포트 대기 (health check)**: 기동한 모든 포트 각각에 대해 `timeout`으로 30초 상한을 걸고 폴링한다 (서버가 영영 안 뜰 때 무한대기 방지).
      ```bash
@@ -134,7 +134,7 @@ model: sonnet
 
 ---
 
-## 산출물 (`<project>/.playwright-verify/`)
+## 산출물 (`<project>/docs/playwright-verify/`)
 
 - `report-<NNN>.md` — 사이클별 오류 리포트
 - `deferred.md` — 보류된 오류 (진전 없음/시도 한계)
