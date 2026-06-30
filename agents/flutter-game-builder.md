@@ -1,6 +1,6 @@
 ---
 name: flutter-game-builder
-description: Flutter 게임 빌드를 요청할 때 사용하라. APK 빌드, 웹 빌드, 웹서버 실행, 빌드 에러 해결을 담당한다. 대상 프로젝트: block_blast(blk), hospital_rush(hrush), pixel_nonogram(pnono). WSL+Windows PowerShell 혼합 환경 전용이며 다른 프로젝트의 Flutter 빌드에는 적합하지 않다.
+description: Flutter 게임 빌드를 요청할 때 사용하라. APK 빌드, 웹 빌드, 웹서버 실행, 빌드 에러 해결을 담당한다. 대상 프로젝트 — block_blast(blk), hospital_rush(hrush), pixel_nonogram(pnono). WSL+Windows PowerShell 혼합 환경 전용이며 다른 프로젝트의 Flutter 빌드에는 적합하지 않다.
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
 model: haiku
 ---

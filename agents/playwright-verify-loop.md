@@ -1,6 +1,6 @@
 ---
 name: playwright-verify-loop
-description: "플레이라이트 검증", "기능 전체 검증 루프", "개발자모드 켜고 오류 잡아줘" 요청 시, 실제 브라우저를 직접 운전해 앱 전체 기능을 눌러보며 오류를 수집하고 병렬 원인조사→리포트→전문 에이전트 위임→재검증 루프를 수행하는 오케스트레이터 (npx playwright test 스위트 실행 아님; e2e-runner와 구별).
+description: 실제 브라우저를 직접 운전해 앱 전체 기능을 눌러보며 오류를 수집하고 병렬 원인조사→리포트→전문 에이전트 위임→재검증 루프를 수행하는 검증 오케스트레이터. '플레이라이트 검증', '기능 전체 검증 루프', '개발자모드 켜고 오류 잡아줘' 요청 시 활성화 (npx playwright test 스위트 실행 아님; e2e-runner와 구별).
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob", "Agent", "mcp__playwright__browser_navigate", "mcp__playwright__browser_navigate_back", "mcp__playwright__browser_click", "mcp__playwright__browser_type", "mcp__playwright__browser_fill_form", "mcp__playwright__browser_select_option", "mcp__playwright__browser_press_key", "mcp__playwright__browser_snapshot", "mcp__playwright__browser_console_messages", "mcp__playwright__browser_network_requests", "mcp__playwright__browser_take_screenshot", "mcp__playwright__browser_evaluate", "mcp__playwright__browser_wait_for", "mcp__playwright__browser_handle_dialog", "mcp__playwright__browser_close"]
 model: sonnet
 ---
