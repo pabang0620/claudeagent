@@ -41,17 +41,21 @@
 
 ---
 
-## 에이전트 모델 제약 (PERMANENT)
+## 에이전트 모델 제약 (PERMANENT, SONNET-ONLY)
 
-> **opus 절대 금지** — 모든 에이전트 정의파일의 `model:` 필드에 opus 사용 불가.
-> 허용: `model: sonnet` 또는 `model: haiku`만 사용.
-> `flutter-game-builder`는 빌드 워커 특성상 `model: haiku` 의도적 사용 (예외 아님, 정상).
+> **`model: sonnet` 단일 정책** — 사용자 지시(2026-07-02): "소넷 외에는 쓰지 않는다."
+> 모든 에이전트 정의파일의 `model:` 필드는 `sonnet` 고정. opus/haiku/fable 절대 금지.
+> (기존 flutter-game-builder haiku 예외도 2026-07-02 sonnet으로 통일 완료)
 >
-> **신규 에이전트 생성 시 필수 체크리스트**:
+> **신규 에이전트 생성 시 필수 체크리스트** (공식 문서 기준):
 > - [ ] frontmatter: `name`, `description`, `tools`, `model` 4개 필드 모두 포함
-> - [ ] `model:` 값이 `sonnet` 또는 `haiku` 인지 확인 (opus 입력 시 즉시 거부)
-> - [ ] `description`이 "언제 사용하는가"를 한 문장으로 설명하는지 확인
-> - [ ] 생성 후 agent-evaluator 평가 → 90점 이상 달성 후 배포
+> - [ ] `name`: 소문자+하이픈만 사용, 전체 scope에서 유일 (`/doctor`로 중복 감지 가능)
+> - [ ] `model: sonnet` 확인 (다른 값 입력 시 즉시 거부)
+> - [ ] `description`: "무엇을 하는가" + **"언제 사용하는가"(트리거 키워드)** 명시.
+>       자동 위임을 원하면 "~시 사전에 적극 활용(use proactively when ~)" 패턴 포함
+> - [ ] `tools`: 최소 권한 allowlist. 읽기 전용 에이전트에 Write/Edit 금지,
+>       서브에이전트 스폰이 필요할 때만 `Agent` 포함
+> - [ ] 생성 후 agent-evaluator-v2 평가 → 90점 이상 달성 후 배포
 
 ---
 
@@ -80,8 +84,7 @@ Located in `~/.claude/agents/`:
 | ui-design-system | 디자인 시스템·토큰 생성 | 디자인 토큰, 공용 컴포넌트 |
 | jasoseo-writer | 자소서·지원서 작성 | 자소서, 자기소개서 요청 |
 | flutter-game-builder | Flutter 게임 APK·웹 빌드 | Flutter 빌드 요청 |
-| agent-evaluator | 에이전트 정의파일 품질 평가 (기본) | 에이전트 생성·수정 후 |
-| agent-evaluator-v2 | 에이전트 정의파일 9관점 100점 평가·개선 | 에이전트 생성·수정 후 (권장) |
+| agent-evaluator-v2 | 에이전트 정의파일 3계층 100점 평가 (정적 린트·트리거 F1 → 9 judge 병렬 → 근거잠금 채점·회귀 비교). v1은 agents-archive/로 퇴역 | 에이전트 생성·수정 후 (표준) |
 | skill-evaluator | 스킬(.md) 품질 평가·개선 (100점 척도) | 스킬 생성·수정 후 |
 | proposal-pt-builder | 정부사업 RFP 제안 PT → Marp+PPTX | PT/발표자료 요청 시 |
 | hwp-generator | HWPX 공문서 생성 (계약서·제안요청서·보고서·공문·계획서·회의록) | "hwp 만들어", "계약서", "제안요청서", ".hwpx" 요청 시 |
