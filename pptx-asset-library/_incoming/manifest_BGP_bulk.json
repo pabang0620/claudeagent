@@ -1,0 +1,6850 @@
+[
+  {
+    "id": "BGP-013",
+    "category": "BGP",
+    "name": "표지 좌패널 · navy/L-narrow",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-left_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:BGP-013",
+    "tags": [
+      "표지",
+      "배경",
+      "네이비패널",
+      "navy"
+    ],
+    "params": {
+      "style": "cover-left-panel",
+      "palette": "navy",
+      "placement": "L-narrow",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-014",
+    "category": "BGP",
+    "name": "표지 좌패널 · blue/L-narrow",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-left_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:BGP-014",
+    "tags": [
+      "표지",
+      "배경",
+      "네이비패널",
+      "blue"
+    ],
+    "params": {
+      "style": "cover-left-panel",
+      "palette": "blue",
+      "placement": "L-narrow",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-015",
+    "category": "BGP",
+    "name": "표지 좌패널 · teal/L-narrow",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-left_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:BGP-015",
+    "tags": [
+      "표지",
+      "배경",
+      "네이비패널",
+      "teal"
+    ],
+    "params": {
+      "style": "cover-left-panel",
+      "palette": "teal",
+      "placement": "L-narrow",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-016",
+    "category": "BGP",
+    "name": "표지 좌패널 · purple/L-narrow",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-left_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:BGP-016",
+    "tags": [
+      "표지",
+      "배경",
+      "네이비패널",
+      "purple"
+    ],
+    "params": {
+      "style": "cover-left-panel",
+      "palette": "purple",
+      "placement": "L-narrow",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-017",
+    "category": "BGP",
+    "name": "표지 좌패널 · cyan/L-narrow",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-left_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:BGP-017",
+    "tags": [
+      "표지",
+      "배경",
+      "네이비패널",
+      "cyan"
+    ],
+    "params": {
+      "style": "cover-left-panel",
+      "palette": "cyan",
+      "placement": "L-narrow",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-018",
+    "category": "BGP",
+    "name": "표지 좌패널 · slate/L-narrow",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-left_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:BGP-018",
+    "tags": [
+      "표지",
+      "배경",
+      "네이비패널",
+      "slate"
+    ],
+    "params": {
+      "style": "cover-left-panel",
+      "palette": "slate",
+      "placement": "L-narrow",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-019",
+    "category": "BGP",
+    "name": "표지 좌패널 · navy/L-wide",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-left_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:BGP-019",
+    "tags": [
+      "표지",
+      "배경",
+      "네이비패널",
+      "navy"
+    ],
+    "params": {
+      "style": "cover-left-panel",
+      "palette": "navy",
+      "placement": "L-wide",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-020",
+    "category": "BGP",
+    "name": "표지 좌패널 · blue/L-wide",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-left_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:BGP-020",
+    "tags": [
+      "표지",
+      "배경",
+      "네이비패널",
+      "blue"
+    ],
+    "params": {
+      "style": "cover-left-panel",
+      "palette": "blue",
+      "placement": "L-wide",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-021",
+    "category": "BGP",
+    "name": "표지 좌패널 · teal/L-wide",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-left_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:BGP-021",
+    "tags": [
+      "표지",
+      "배경",
+      "네이비패널",
+      "teal"
+    ],
+    "params": {
+      "style": "cover-left-panel",
+      "palette": "teal",
+      "placement": "L-wide",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-022",
+    "category": "BGP",
+    "name": "표지 좌패널 · purple/L-wide",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-left_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:BGP-022",
+    "tags": [
+      "표지",
+      "배경",
+      "네이비패널",
+      "purple"
+    ],
+    "params": {
+      "style": "cover-left-panel",
+      "palette": "purple",
+      "placement": "L-wide",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-023",
+    "category": "BGP",
+    "name": "표지 좌패널 · cyan/L-wide",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-left_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:BGP-023",
+    "tags": [
+      "표지",
+      "배경",
+      "네이비패널",
+      "cyan"
+    ],
+    "params": {
+      "style": "cover-left-panel",
+      "palette": "cyan",
+      "placement": "L-wide",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-024",
+    "category": "BGP",
+    "name": "표지 좌패널 · slate/L-wide",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-left_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:BGP-024",
+    "tags": [
+      "표지",
+      "배경",
+      "네이비패널",
+      "slate"
+    ],
+    "params": {
+      "style": "cover-left-panel",
+      "palette": "slate",
+      "placement": "L-wide",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-025",
+    "category": "BGP",
+    "name": "표지 좌패널 · navy/R",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-left_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:BGP-025",
+    "tags": [
+      "표지",
+      "배경",
+      "네이비패널",
+      "navy"
+    ],
+    "params": {
+      "style": "cover-left-panel",
+      "palette": "navy",
+      "placement": "R",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-026",
+    "category": "BGP",
+    "name": "표지 좌패널 · blue/R",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-left_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:BGP-026",
+    "tags": [
+      "표지",
+      "배경",
+      "네이비패널",
+      "blue"
+    ],
+    "params": {
+      "style": "cover-left-panel",
+      "palette": "blue",
+      "placement": "R",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-027",
+    "category": "BGP",
+    "name": "표지 좌패널 · teal/R",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-left_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:BGP-027",
+    "tags": [
+      "표지",
+      "배경",
+      "네이비패널",
+      "teal"
+    ],
+    "params": {
+      "style": "cover-left-panel",
+      "palette": "teal",
+      "placement": "R",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-028",
+    "category": "BGP",
+    "name": "표지 좌패널 · purple/R",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-left_v1.pptx",
+    "slide": 16,
+    "anchor": "asset:BGP-028",
+    "tags": [
+      "표지",
+      "배경",
+      "네이비패널",
+      "purple"
+    ],
+    "params": {
+      "style": "cover-left-panel",
+      "palette": "purple",
+      "placement": "R",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-029",
+    "category": "BGP",
+    "name": "표지 하단밴드 · navy/h18",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-band_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:BGP-029",
+    "tags": [
+      "표지",
+      "배경",
+      "그라데이션",
+      "navy"
+    ],
+    "params": {
+      "style": "cover-bottom-band",
+      "palette": "navy",
+      "placement": "h18",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-030",
+    "category": "BGP",
+    "name": "표지 하단밴드 · blue/h18",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-band_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:BGP-030",
+    "tags": [
+      "표지",
+      "배경",
+      "그라데이션",
+      "blue"
+    ],
+    "params": {
+      "style": "cover-bottom-band",
+      "palette": "blue",
+      "placement": "h18",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-031",
+    "category": "BGP",
+    "name": "표지 하단밴드 · teal/h18",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-band_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:BGP-031",
+    "tags": [
+      "표지",
+      "배경",
+      "그라데이션",
+      "teal"
+    ],
+    "params": {
+      "style": "cover-bottom-band",
+      "palette": "teal",
+      "placement": "h18",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-032",
+    "category": "BGP",
+    "name": "표지 하단밴드 · purple/h18",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-band_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:BGP-032",
+    "tags": [
+      "표지",
+      "배경",
+      "그라데이션",
+      "purple"
+    ],
+    "params": {
+      "style": "cover-bottom-band",
+      "palette": "purple",
+      "placement": "h18",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-033",
+    "category": "BGP",
+    "name": "표지 하단밴드 · cyan/h18",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-band_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:BGP-033",
+    "tags": [
+      "표지",
+      "배경",
+      "그라데이션",
+      "cyan"
+    ],
+    "params": {
+      "style": "cover-bottom-band",
+      "palette": "cyan",
+      "placement": "h18",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-034",
+    "category": "BGP",
+    "name": "표지 하단밴드 · slate/h18",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-band_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:BGP-034",
+    "tags": [
+      "표지",
+      "배경",
+      "그라데이션",
+      "slate"
+    ],
+    "params": {
+      "style": "cover-bottom-band",
+      "palette": "slate",
+      "placement": "h18",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-035",
+    "category": "BGP",
+    "name": "표지 하단밴드 · navy/h24",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-band_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:BGP-035",
+    "tags": [
+      "표지",
+      "배경",
+      "그라데이션",
+      "navy"
+    ],
+    "params": {
+      "style": "cover-bottom-band",
+      "palette": "navy",
+      "placement": "h24",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-036",
+    "category": "BGP",
+    "name": "표지 하단밴드 · blue/h24",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-band_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:BGP-036",
+    "tags": [
+      "표지",
+      "배경",
+      "그라데이션",
+      "blue"
+    ],
+    "params": {
+      "style": "cover-bottom-band",
+      "palette": "blue",
+      "placement": "h24",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-037",
+    "category": "BGP",
+    "name": "표지 하단밴드 · teal/h24",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-band_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:BGP-037",
+    "tags": [
+      "표지",
+      "배경",
+      "그라데이션",
+      "teal"
+    ],
+    "params": {
+      "style": "cover-bottom-band",
+      "palette": "teal",
+      "placement": "h24",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-038",
+    "category": "BGP",
+    "name": "표지 하단밴드 · purple/h24",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-band_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:BGP-038",
+    "tags": [
+      "표지",
+      "배경",
+      "그라데이션",
+      "purple"
+    ],
+    "params": {
+      "style": "cover-bottom-band",
+      "palette": "purple",
+      "placement": "h24",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-039",
+    "category": "BGP",
+    "name": "표지 하단밴드 · cyan/h24",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-band_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:BGP-039",
+    "tags": [
+      "표지",
+      "배경",
+      "그라데이션",
+      "cyan"
+    ],
+    "params": {
+      "style": "cover-bottom-band",
+      "palette": "cyan",
+      "placement": "h24",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-040",
+    "category": "BGP",
+    "name": "표지 하단밴드 · slate/h24",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-band_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:BGP-040",
+    "tags": [
+      "표지",
+      "배경",
+      "그라데이션",
+      "slate"
+    ],
+    "params": {
+      "style": "cover-bottom-band",
+      "palette": "slate",
+      "placement": "h24",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-041",
+    "category": "BGP",
+    "name": "표지 하단밴드 · navy/h30",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-band_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:BGP-041",
+    "tags": [
+      "표지",
+      "배경",
+      "그라데이션",
+      "navy"
+    ],
+    "params": {
+      "style": "cover-bottom-band",
+      "palette": "navy",
+      "placement": "h30",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-042",
+    "category": "BGP",
+    "name": "표지 하단밴드 · blue/h30",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-band_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:BGP-042",
+    "tags": [
+      "표지",
+      "배경",
+      "그라데이션",
+      "blue"
+    ],
+    "params": {
+      "style": "cover-bottom-band",
+      "palette": "blue",
+      "placement": "h30",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-043",
+    "category": "BGP",
+    "name": "표지 하단밴드 · teal/h30",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-band_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:BGP-043",
+    "tags": [
+      "표지",
+      "배경",
+      "그라데이션",
+      "teal"
+    ],
+    "params": {
+      "style": "cover-bottom-band",
+      "palette": "teal",
+      "placement": "h30",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-044",
+    "category": "BGP",
+    "name": "표지 하단밴드 · purple/h30",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-band_v1.pptx",
+    "slide": 16,
+    "anchor": "asset:BGP-044",
+    "tags": [
+      "표지",
+      "배경",
+      "그라데이션",
+      "purple"
+    ],
+    "params": {
+      "style": "cover-bottom-band",
+      "palette": "purple",
+      "placement": "h30",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-045",
+    "category": "BGP",
+    "name": "표지 사선레이어 · navy/br",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-diag_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:BGP-045",
+    "tags": [
+      "표지",
+      "배경",
+      "기하",
+      "navy"
+    ],
+    "params": {
+      "style": "cover-diagonal-layers",
+      "palette": "navy",
+      "placement": "br",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-046",
+    "category": "BGP",
+    "name": "표지 사선레이어 · blue/br",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-diag_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:BGP-046",
+    "tags": [
+      "표지",
+      "배경",
+      "기하",
+      "blue"
+    ],
+    "params": {
+      "style": "cover-diagonal-layers",
+      "palette": "blue",
+      "placement": "br",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-047",
+    "category": "BGP",
+    "name": "표지 사선레이어 · teal/br",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-diag_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:BGP-047",
+    "tags": [
+      "표지",
+      "배경",
+      "기하",
+      "teal"
+    ],
+    "params": {
+      "style": "cover-diagonal-layers",
+      "palette": "teal",
+      "placement": "br",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-048",
+    "category": "BGP",
+    "name": "표지 사선레이어 · purple/br",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-diag_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:BGP-048",
+    "tags": [
+      "표지",
+      "배경",
+      "기하",
+      "purple"
+    ],
+    "params": {
+      "style": "cover-diagonal-layers",
+      "palette": "purple",
+      "placement": "br",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-049",
+    "category": "BGP",
+    "name": "표지 사선레이어 · cyan/br",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-diag_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:BGP-049",
+    "tags": [
+      "표지",
+      "배경",
+      "기하",
+      "cyan"
+    ],
+    "params": {
+      "style": "cover-diagonal-layers",
+      "palette": "cyan",
+      "placement": "br",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-050",
+    "category": "BGP",
+    "name": "표지 사선레이어 · slate/br",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-diag_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:BGP-050",
+    "tags": [
+      "표지",
+      "배경",
+      "기하",
+      "slate"
+    ],
+    "params": {
+      "style": "cover-diagonal-layers",
+      "palette": "slate",
+      "placement": "br",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-051",
+    "category": "BGP",
+    "name": "표지 사선레이어 · navy/bl",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-diag_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:BGP-051",
+    "tags": [
+      "표지",
+      "배경",
+      "기하",
+      "navy"
+    ],
+    "params": {
+      "style": "cover-diagonal-layers",
+      "palette": "navy",
+      "placement": "bl",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-052",
+    "category": "BGP",
+    "name": "표지 사선레이어 · blue/bl",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-diag_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:BGP-052",
+    "tags": [
+      "표지",
+      "배경",
+      "기하",
+      "blue"
+    ],
+    "params": {
+      "style": "cover-diagonal-layers",
+      "palette": "blue",
+      "placement": "bl",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-053",
+    "category": "BGP",
+    "name": "표지 사선레이어 · teal/bl",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-diag_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:BGP-053",
+    "tags": [
+      "표지",
+      "배경",
+      "기하",
+      "teal"
+    ],
+    "params": {
+      "style": "cover-diagonal-layers",
+      "palette": "teal",
+      "placement": "bl",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-054",
+    "category": "BGP",
+    "name": "표지 사선레이어 · purple/bl",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-diag_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:BGP-054",
+    "tags": [
+      "표지",
+      "배경",
+      "기하",
+      "purple"
+    ],
+    "params": {
+      "style": "cover-diagonal-layers",
+      "palette": "purple",
+      "placement": "bl",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-055",
+    "category": "BGP",
+    "name": "표지 사선레이어 · cyan/bl",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-diag_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:BGP-055",
+    "tags": [
+      "표지",
+      "배경",
+      "기하",
+      "cyan"
+    ],
+    "params": {
+      "style": "cover-diagonal-layers",
+      "palette": "cyan",
+      "placement": "bl",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-056",
+    "category": "BGP",
+    "name": "표지 사선레이어 · slate/bl",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-diag_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:BGP-056",
+    "tags": [
+      "표지",
+      "배경",
+      "기하",
+      "slate"
+    ],
+    "params": {
+      "style": "cover-diagonal-layers",
+      "palette": "slate",
+      "placement": "bl",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-057",
+    "category": "BGP",
+    "name": "표지 사선레이어 · navy/tr",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-diag_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:BGP-057",
+    "tags": [
+      "표지",
+      "배경",
+      "기하",
+      "navy"
+    ],
+    "params": {
+      "style": "cover-diagonal-layers",
+      "palette": "navy",
+      "placement": "tr",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-058",
+    "category": "BGP",
+    "name": "표지 사선레이어 · blue/tr",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-diag_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:BGP-058",
+    "tags": [
+      "표지",
+      "배경",
+      "기하",
+      "blue"
+    ],
+    "params": {
+      "style": "cover-diagonal-layers",
+      "palette": "blue",
+      "placement": "tr",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-059",
+    "category": "BGP",
+    "name": "표지 사선레이어 · teal/tr",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-diag_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:BGP-059",
+    "tags": [
+      "표지",
+      "배경",
+      "기하",
+      "teal"
+    ],
+    "params": {
+      "style": "cover-diagonal-layers",
+      "palette": "teal",
+      "placement": "tr",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-060",
+    "category": "BGP",
+    "name": "표지 사선레이어 · purple/tr",
+    "file": "decks/10_backgrounds/BGP_bulk_cover-diag_v1.pptx",
+    "slide": 16,
+    "anchor": "asset:BGP-060",
+    "tags": [
+      "표지",
+      "배경",
+      "기하",
+      "purple"
+    ],
+    "params": {
+      "style": "cover-diagonal-layers",
+      "palette": "purple",
+      "placement": "tr",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-061",
+    "category": "BGP",
+    "name": "섹션번호 배경 · navy/barL",
+    "file": "decks/10_backgrounds/BGP_bulk_sec-num_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:BGP-061",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "섹션번호",
+      "navy"
+    ],
+    "params": {
+      "style": "section-number-bg",
+      "palette": "navy",
+      "placement": "barL",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-062",
+    "category": "BGP",
+    "name": "섹션번호 배경 · blue/barL",
+    "file": "decks/10_backgrounds/BGP_bulk_sec-num_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:BGP-062",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "섹션번호",
+      "blue"
+    ],
+    "params": {
+      "style": "section-number-bg",
+      "palette": "blue",
+      "placement": "barL",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-063",
+    "category": "BGP",
+    "name": "섹션번호 배경 · teal/barL",
+    "file": "decks/10_backgrounds/BGP_bulk_sec-num_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:BGP-063",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "섹션번호",
+      "teal"
+    ],
+    "params": {
+      "style": "section-number-bg",
+      "palette": "teal",
+      "placement": "barL",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-064",
+    "category": "BGP",
+    "name": "섹션번호 배경 · purple/barL",
+    "file": "decks/10_backgrounds/BGP_bulk_sec-num_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:BGP-064",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "섹션번호",
+      "purple"
+    ],
+    "params": {
+      "style": "section-number-bg",
+      "palette": "purple",
+      "placement": "barL",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-065",
+    "category": "BGP",
+    "name": "섹션번호 배경 · cyan/barL",
+    "file": "decks/10_backgrounds/BGP_bulk_sec-num_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:BGP-065",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "섹션번호",
+      "cyan"
+    ],
+    "params": {
+      "style": "section-number-bg",
+      "palette": "cyan",
+      "placement": "barL",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-066",
+    "category": "BGP",
+    "name": "섹션번호 배경 · slate/barL",
+    "file": "decks/10_backgrounds/BGP_bulk_sec-num_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:BGP-066",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "섹션번호",
+      "slate"
+    ],
+    "params": {
+      "style": "section-number-bg",
+      "palette": "slate",
+      "placement": "barL",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-067",
+    "category": "BGP",
+    "name": "섹션번호 배경 · navy/barR",
+    "file": "decks/10_backgrounds/BGP_bulk_sec-num_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:BGP-067",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "섹션번호",
+      "navy"
+    ],
+    "params": {
+      "style": "section-number-bg",
+      "palette": "navy",
+      "placement": "barR",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-068",
+    "category": "BGP",
+    "name": "섹션번호 배경 · blue/barR",
+    "file": "decks/10_backgrounds/BGP_bulk_sec-num_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:BGP-068",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "섹션번호",
+      "blue"
+    ],
+    "params": {
+      "style": "section-number-bg",
+      "palette": "blue",
+      "placement": "barR",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-069",
+    "category": "BGP",
+    "name": "섹션번호 배경 · teal/barR",
+    "file": "decks/10_backgrounds/BGP_bulk_sec-num_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:BGP-069",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "섹션번호",
+      "teal"
+    ],
+    "params": {
+      "style": "section-number-bg",
+      "palette": "teal",
+      "placement": "barR",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-070",
+    "category": "BGP",
+    "name": "섹션번호 배경 · purple/barR",
+    "file": "decks/10_backgrounds/BGP_bulk_sec-num_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:BGP-070",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "섹션번호",
+      "purple"
+    ],
+    "params": {
+      "style": "section-number-bg",
+      "palette": "purple",
+      "placement": "barR",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-071",
+    "category": "BGP",
+    "name": "섹션번호 배경 · cyan/barR",
+    "file": "decks/10_backgrounds/BGP_bulk_sec-num_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:BGP-071",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "섹션번호",
+      "cyan"
+    ],
+    "params": {
+      "style": "section-number-bg",
+      "palette": "cyan",
+      "placement": "barR",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-072",
+    "category": "BGP",
+    "name": "섹션번호 배경 · slate/barR",
+    "file": "decks/10_backgrounds/BGP_bulk_sec-num_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:BGP-072",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "섹션번호",
+      "slate"
+    ],
+    "params": {
+      "style": "section-number-bg",
+      "palette": "slate",
+      "placement": "barR",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-073",
+    "category": "BGP",
+    "name": "섹션번호 배경 · navy/barL2",
+    "file": "decks/10_backgrounds/BGP_bulk_sec-num_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:BGP-073",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "섹션번호",
+      "navy"
+    ],
+    "params": {
+      "style": "section-number-bg",
+      "palette": "navy",
+      "placement": "barL2",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-074",
+    "category": "BGP",
+    "name": "섹션번호 배경 · blue/barL2",
+    "file": "decks/10_backgrounds/BGP_bulk_sec-num_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:BGP-074",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "섹션번호",
+      "blue"
+    ],
+    "params": {
+      "style": "section-number-bg",
+      "palette": "blue",
+      "placement": "barL2",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-075",
+    "category": "BGP",
+    "name": "섹션번호 배경 · teal/barL2",
+    "file": "decks/10_backgrounds/BGP_bulk_sec-num_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:BGP-075",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "섹션번호",
+      "teal"
+    ],
+    "params": {
+      "style": "section-number-bg",
+      "palette": "teal",
+      "placement": "barL2",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-076",
+    "category": "BGP",
+    "name": "섹션번호 배경 · purple/barL2",
+    "file": "decks/10_backgrounds/BGP_bulk_sec-num_v1.pptx",
+    "slide": 16,
+    "anchor": "asset:BGP-076",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "섹션번호",
+      "purple"
+    ],
+    "params": {
+      "style": "section-number-bg",
+      "palette": "purple",
+      "placement": "barL2",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-077",
+    "category": "BGP",
+    "name": "섹션 상단밴드 · navy/h22",
+    "file": "decks/10_backgrounds/BGP_bulk_sec-band_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:BGP-077",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "헤더밴드",
+      "navy"
+    ],
+    "params": {
+      "style": "section-top-band",
+      "palette": "navy",
+      "placement": "h22",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-078",
+    "category": "BGP",
+    "name": "섹션 상단밴드 · blue/h22",
+    "file": "decks/10_backgrounds/BGP_bulk_sec-band_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:BGP-078",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "헤더밴드",
+      "blue"
+    ],
+    "params": {
+      "style": "section-top-band",
+      "palette": "blue",
+      "placement": "h22",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-079",
+    "category": "BGP",
+    "name": "섹션 상단밴드 · teal/h22",
+    "file": "decks/10_backgrounds/BGP_bulk_sec-band_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:BGP-079",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "헤더밴드",
+      "teal"
+    ],
+    "params": {
+      "style": "section-top-band",
+      "palette": "teal",
+      "placement": "h22",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-080",
+    "category": "BGP",
+    "name": "섹션 상단밴드 · purple/h22",
+    "file": "decks/10_backgrounds/BGP_bulk_sec-band_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:BGP-080",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "헤더밴드",
+      "purple"
+    ],
+    "params": {
+      "style": "section-top-band",
+      "palette": "purple",
+      "placement": "h22",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-081",
+    "category": "BGP",
+    "name": "섹션 상단밴드 · cyan/h22",
+    "file": "decks/10_backgrounds/BGP_bulk_sec-band_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:BGP-081",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "헤더밴드",
+      "cyan"
+    ],
+    "params": {
+      "style": "section-top-band",
+      "palette": "cyan",
+      "placement": "h22",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-082",
+    "category": "BGP",
+    "name": "섹션 상단밴드 · slate/h22",
+    "file": "decks/10_backgrounds/BGP_bulk_sec-band_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:BGP-082",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "헤더밴드",
+      "slate"
+    ],
+    "params": {
+      "style": "section-top-band",
+      "palette": "slate",
+      "placement": "h22",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-083",
+    "category": "BGP",
+    "name": "섹션 상단밴드 · navy/h27",
+    "file": "decks/10_backgrounds/BGP_bulk_sec-band_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:BGP-083",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "헤더밴드",
+      "navy"
+    ],
+    "params": {
+      "style": "section-top-band",
+      "palette": "navy",
+      "placement": "h27",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-084",
+    "category": "BGP",
+    "name": "섹션 상단밴드 · blue/h27",
+    "file": "decks/10_backgrounds/BGP_bulk_sec-band_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:BGP-084",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "헤더밴드",
+      "blue"
+    ],
+    "params": {
+      "style": "section-top-band",
+      "palette": "blue",
+      "placement": "h27",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-085",
+    "category": "BGP",
+    "name": "섹션 상단밴드 · teal/h27",
+    "file": "decks/10_backgrounds/BGP_bulk_sec-band_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:BGP-085",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "헤더밴드",
+      "teal"
+    ],
+    "params": {
+      "style": "section-top-band",
+      "palette": "teal",
+      "placement": "h27",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-086",
+    "category": "BGP",
+    "name": "섹션 상단밴드 · purple/h27",
+    "file": "decks/10_backgrounds/BGP_bulk_sec-band_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:BGP-086",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "헤더밴드",
+      "purple"
+    ],
+    "params": {
+      "style": "section-top-band",
+      "palette": "purple",
+      "placement": "h27",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-087",
+    "category": "BGP",
+    "name": "섹션 상단밴드 · cyan/h27",
+    "file": "decks/10_backgrounds/BGP_bulk_sec-band_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:BGP-087",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "헤더밴드",
+      "cyan"
+    ],
+    "params": {
+      "style": "section-top-band",
+      "palette": "cyan",
+      "placement": "h27",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-088",
+    "category": "BGP",
+    "name": "섹션 상단밴드 · slate/h27",
+    "file": "decks/10_backgrounds/BGP_bulk_sec-band_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:BGP-088",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "헤더밴드",
+      "slate"
+    ],
+    "params": {
+      "style": "section-top-band",
+      "palette": "slate",
+      "placement": "h27",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-089",
+    "category": "BGP",
+    "name": "섹션 상단밴드 · navy/h32",
+    "file": "decks/10_backgrounds/BGP_bulk_sec-band_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:BGP-089",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "헤더밴드",
+      "navy"
+    ],
+    "params": {
+      "style": "section-top-band",
+      "palette": "navy",
+      "placement": "h32",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-090",
+    "category": "BGP",
+    "name": "섹션 상단밴드 · blue/h32",
+    "file": "decks/10_backgrounds/BGP_bulk_sec-band_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:BGP-090",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "헤더밴드",
+      "blue"
+    ],
+    "params": {
+      "style": "section-top-band",
+      "palette": "blue",
+      "placement": "h32",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-091",
+    "category": "BGP",
+    "name": "섹션 상단밴드 · teal/h32",
+    "file": "decks/10_backgrounds/BGP_bulk_sec-band_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:BGP-091",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "헤더밴드",
+      "teal"
+    ],
+    "params": {
+      "style": "section-top-band",
+      "palette": "teal",
+      "placement": "h32",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-092",
+    "category": "BGP",
+    "name": "섹션 상단밴드 · purple/h32",
+    "file": "decks/10_backgrounds/BGP_bulk_sec-band_v1.pptx",
+    "slide": 16,
+    "anchor": "asset:BGP-092",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "헤더밴드",
+      "purple"
+    ],
+    "params": {
+      "style": "section-top-band",
+      "palette": "purple",
+      "placement": "h32",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-093",
+    "category": "BGP",
+    "name": "간지 사이드바 · navy/L-narrow",
+    "file": "decks/10_backgrounds/BGP_bulk_interstitial_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:BGP-093",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "목차",
+      "navy"
+    ],
+    "params": {
+      "style": "toc-sidebar",
+      "palette": "navy",
+      "placement": "L-narrow",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "간지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-094",
+    "category": "BGP",
+    "name": "간지 사이드바 · blue/L-narrow",
+    "file": "decks/10_backgrounds/BGP_bulk_interstitial_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:BGP-094",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "목차",
+      "blue"
+    ],
+    "params": {
+      "style": "toc-sidebar",
+      "palette": "blue",
+      "placement": "L-narrow",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "간지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-095",
+    "category": "BGP",
+    "name": "간지 사이드바 · teal/L-narrow",
+    "file": "decks/10_backgrounds/BGP_bulk_interstitial_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:BGP-095",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "목차",
+      "teal"
+    ],
+    "params": {
+      "style": "toc-sidebar",
+      "palette": "teal",
+      "placement": "L-narrow",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "간지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-096",
+    "category": "BGP",
+    "name": "간지 사이드바 · purple/L-narrow",
+    "file": "decks/10_backgrounds/BGP_bulk_interstitial_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:BGP-096",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "목차",
+      "purple"
+    ],
+    "params": {
+      "style": "toc-sidebar",
+      "palette": "purple",
+      "placement": "L-narrow",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "간지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-097",
+    "category": "BGP",
+    "name": "간지 사이드바 · cyan/L-narrow",
+    "file": "decks/10_backgrounds/BGP_bulk_interstitial_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:BGP-097",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "목차",
+      "cyan"
+    ],
+    "params": {
+      "style": "toc-sidebar",
+      "palette": "cyan",
+      "placement": "L-narrow",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "간지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-098",
+    "category": "BGP",
+    "name": "간지 사이드바 · slate/L-narrow",
+    "file": "decks/10_backgrounds/BGP_bulk_interstitial_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:BGP-098",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "목차",
+      "slate"
+    ],
+    "params": {
+      "style": "toc-sidebar",
+      "palette": "slate",
+      "placement": "L-narrow",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "간지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-099",
+    "category": "BGP",
+    "name": "간지 사이드바 · navy/L-wide",
+    "file": "decks/10_backgrounds/BGP_bulk_interstitial_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:BGP-099",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "목차",
+      "navy"
+    ],
+    "params": {
+      "style": "toc-sidebar",
+      "palette": "navy",
+      "placement": "L-wide",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "간지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-100",
+    "category": "BGP",
+    "name": "간지 사이드바 · blue/L-wide",
+    "file": "decks/10_backgrounds/BGP_bulk_interstitial_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:BGP-100",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "목차",
+      "blue"
+    ],
+    "params": {
+      "style": "toc-sidebar",
+      "palette": "blue",
+      "placement": "L-wide",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "간지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-101",
+    "category": "BGP",
+    "name": "간지 사이드바 · teal/L-wide",
+    "file": "decks/10_backgrounds/BGP_bulk_interstitial_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:BGP-101",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "목차",
+      "teal"
+    ],
+    "params": {
+      "style": "toc-sidebar",
+      "palette": "teal",
+      "placement": "L-wide",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "간지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-102",
+    "category": "BGP",
+    "name": "간지 사이드바 · purple/L-wide",
+    "file": "decks/10_backgrounds/BGP_bulk_interstitial_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:BGP-102",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "목차",
+      "purple"
+    ],
+    "params": {
+      "style": "toc-sidebar",
+      "palette": "purple",
+      "placement": "L-wide",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "간지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-103",
+    "category": "BGP",
+    "name": "간지 사이드바 · cyan/L-wide",
+    "file": "decks/10_backgrounds/BGP_bulk_interstitial_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:BGP-103",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "목차",
+      "cyan"
+    ],
+    "params": {
+      "style": "toc-sidebar",
+      "palette": "cyan",
+      "placement": "L-wide",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "간지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-104",
+    "category": "BGP",
+    "name": "간지 사이드바 · slate/L-wide",
+    "file": "decks/10_backgrounds/BGP_bulk_interstitial_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:BGP-104",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "목차",
+      "slate"
+    ],
+    "params": {
+      "style": "toc-sidebar",
+      "palette": "slate",
+      "placement": "L-wide",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "간지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-105",
+    "category": "BGP",
+    "name": "간지 사이드바 · navy/R",
+    "file": "decks/10_backgrounds/BGP_bulk_interstitial_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:BGP-105",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "목차",
+      "navy"
+    ],
+    "params": {
+      "style": "toc-sidebar",
+      "palette": "navy",
+      "placement": "R",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "간지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-106",
+    "category": "BGP",
+    "name": "간지 사이드바 · blue/R",
+    "file": "decks/10_backgrounds/BGP_bulk_interstitial_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:BGP-106",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "목차",
+      "blue"
+    ],
+    "params": {
+      "style": "toc-sidebar",
+      "palette": "blue",
+      "placement": "R",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "간지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-107",
+    "category": "BGP",
+    "name": "간지 사이드바 · teal/R",
+    "file": "decks/10_backgrounds/BGP_bulk_interstitial_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:BGP-107",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "목차",
+      "teal"
+    ],
+    "params": {
+      "style": "toc-sidebar",
+      "palette": "teal",
+      "placement": "R",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "간지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-108",
+    "category": "BGP",
+    "name": "간지 사이드바 · purple/R",
+    "file": "decks/10_backgrounds/BGP_bulk_interstitial_v1.pptx",
+    "slide": 16,
+    "anchor": "asset:BGP-108",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "목차",
+      "purple"
+    ],
+    "params": {
+      "style": "toc-sidebar",
+      "palette": "purple",
+      "placement": "R",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "간지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-109",
+    "category": "BGP",
+    "name": "헤더밴드 · navy/h095",
+    "file": "decks/10_backgrounds/BGP_bulk_header_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:BGP-109",
+    "tags": [
+      "배경",
+      "헤더밴드",
+      "navy"
+    ],
+    "params": {
+      "style": "header-band",
+      "palette": "navy",
+      "placement": "h095",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 헤더",
+      "반복 사용"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-110",
+    "category": "BGP",
+    "name": "헤더밴드 · blue/h095",
+    "file": "decks/10_backgrounds/BGP_bulk_header_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:BGP-110",
+    "tags": [
+      "배경",
+      "헤더밴드",
+      "blue"
+    ],
+    "params": {
+      "style": "header-band",
+      "palette": "blue",
+      "placement": "h095",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 헤더",
+      "반복 사용"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-111",
+    "category": "BGP",
+    "name": "헤더밴드 · teal/h095",
+    "file": "decks/10_backgrounds/BGP_bulk_header_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:BGP-111",
+    "tags": [
+      "배경",
+      "헤더밴드",
+      "teal"
+    ],
+    "params": {
+      "style": "header-band",
+      "palette": "teal",
+      "placement": "h095",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 헤더",
+      "반복 사용"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-112",
+    "category": "BGP",
+    "name": "헤더밴드 · purple/h095",
+    "file": "decks/10_backgrounds/BGP_bulk_header_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:BGP-112",
+    "tags": [
+      "배경",
+      "헤더밴드",
+      "purple"
+    ],
+    "params": {
+      "style": "header-band",
+      "palette": "purple",
+      "placement": "h095",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 헤더",
+      "반복 사용"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-113",
+    "category": "BGP",
+    "name": "헤더밴드 · cyan/h095",
+    "file": "decks/10_backgrounds/BGP_bulk_header_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:BGP-113",
+    "tags": [
+      "배경",
+      "헤더밴드",
+      "cyan"
+    ],
+    "params": {
+      "style": "header-band",
+      "palette": "cyan",
+      "placement": "h095",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 헤더",
+      "반복 사용"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-114",
+    "category": "BGP",
+    "name": "헤더밴드 · slate/h095",
+    "file": "decks/10_backgrounds/BGP_bulk_header_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:BGP-114",
+    "tags": [
+      "배경",
+      "헤더밴드",
+      "slate"
+    ],
+    "params": {
+      "style": "header-band",
+      "palette": "slate",
+      "placement": "h095",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 헤더",
+      "반복 사용"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-115",
+    "category": "BGP",
+    "name": "헤더밴드 · navy/h12",
+    "file": "decks/10_backgrounds/BGP_bulk_header_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:BGP-115",
+    "tags": [
+      "배경",
+      "헤더밴드",
+      "navy"
+    ],
+    "params": {
+      "style": "header-band",
+      "palette": "navy",
+      "placement": "h12",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 헤더",
+      "반복 사용"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-116",
+    "category": "BGP",
+    "name": "헤더밴드 · blue/h12",
+    "file": "decks/10_backgrounds/BGP_bulk_header_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:BGP-116",
+    "tags": [
+      "배경",
+      "헤더밴드",
+      "blue"
+    ],
+    "params": {
+      "style": "header-band",
+      "palette": "blue",
+      "placement": "h12",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 헤더",
+      "반복 사용"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-117",
+    "category": "BGP",
+    "name": "헤더밴드 · teal/h12",
+    "file": "decks/10_backgrounds/BGP_bulk_header_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:BGP-117",
+    "tags": [
+      "배경",
+      "헤더밴드",
+      "teal"
+    ],
+    "params": {
+      "style": "header-band",
+      "palette": "teal",
+      "placement": "h12",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 헤더",
+      "반복 사용"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-118",
+    "category": "BGP",
+    "name": "헤더밴드 · purple/h12",
+    "file": "decks/10_backgrounds/BGP_bulk_header_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:BGP-118",
+    "tags": [
+      "배경",
+      "헤더밴드",
+      "purple"
+    ],
+    "params": {
+      "style": "header-band",
+      "palette": "purple",
+      "placement": "h12",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 헤더",
+      "반복 사용"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-119",
+    "category": "BGP",
+    "name": "헤더밴드 · cyan/h12",
+    "file": "decks/10_backgrounds/BGP_bulk_header_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:BGP-119",
+    "tags": [
+      "배경",
+      "헤더밴드",
+      "cyan"
+    ],
+    "params": {
+      "style": "header-band",
+      "palette": "cyan",
+      "placement": "h12",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 헤더",
+      "반복 사용"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-120",
+    "category": "BGP",
+    "name": "헤더밴드 · slate/h12",
+    "file": "decks/10_backgrounds/BGP_bulk_header_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:BGP-120",
+    "tags": [
+      "배경",
+      "헤더밴드",
+      "slate"
+    ],
+    "params": {
+      "style": "header-band",
+      "palette": "slate",
+      "placement": "h12",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 헤더",
+      "반복 사용"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-121",
+    "category": "BGP",
+    "name": "헤더밴드 · navy/h15",
+    "file": "decks/10_backgrounds/BGP_bulk_header_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:BGP-121",
+    "tags": [
+      "배경",
+      "헤더밴드",
+      "navy"
+    ],
+    "params": {
+      "style": "header-band",
+      "palette": "navy",
+      "placement": "h15",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 헤더",
+      "반복 사용"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-122",
+    "category": "BGP",
+    "name": "헤더밴드 · blue/h15",
+    "file": "decks/10_backgrounds/BGP_bulk_header_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:BGP-122",
+    "tags": [
+      "배경",
+      "헤더밴드",
+      "blue"
+    ],
+    "params": {
+      "style": "header-band",
+      "palette": "blue",
+      "placement": "h15",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 헤더",
+      "반복 사용"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-123",
+    "category": "BGP",
+    "name": "헤더밴드 · teal/h15",
+    "file": "decks/10_backgrounds/BGP_bulk_header_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:BGP-123",
+    "tags": [
+      "배경",
+      "헤더밴드",
+      "teal"
+    ],
+    "params": {
+      "style": "header-band",
+      "palette": "teal",
+      "placement": "h15",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 헤더",
+      "반복 사용"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-124",
+    "category": "BGP",
+    "name": "헤더밴드 · purple/h15",
+    "file": "decks/10_backgrounds/BGP_bulk_header_v1.pptx",
+    "slide": 16,
+    "anchor": "asset:BGP-124",
+    "tags": [
+      "배경",
+      "헤더밴드",
+      "purple"
+    ],
+    "params": {
+      "style": "header-band",
+      "palette": "purple",
+      "placement": "h15",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 헤더",
+      "반복 사용"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-125",
+    "category": "BGP",
+    "name": "푸터바 · navy/solid",
+    "file": "decks/10_backgrounds/BGP_bulk_footer_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:BGP-125",
+    "tags": [
+      "배경",
+      "푸터",
+      "navy"
+    ],
+    "params": {
+      "style": "footer-bar",
+      "palette": "navy",
+      "placement": "solid",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 푸터",
+      "페이지 표기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-126",
+    "category": "BGP",
+    "name": "푸터바 · blue/solid",
+    "file": "decks/10_backgrounds/BGP_bulk_footer_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:BGP-126",
+    "tags": [
+      "배경",
+      "푸터",
+      "blue"
+    ],
+    "params": {
+      "style": "footer-bar",
+      "palette": "blue",
+      "placement": "solid",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 푸터",
+      "페이지 표기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-127",
+    "category": "BGP",
+    "name": "푸터바 · teal/solid",
+    "file": "decks/10_backgrounds/BGP_bulk_footer_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:BGP-127",
+    "tags": [
+      "배경",
+      "푸터",
+      "teal"
+    ],
+    "params": {
+      "style": "footer-bar",
+      "palette": "teal",
+      "placement": "solid",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 푸터",
+      "페이지 표기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-128",
+    "category": "BGP",
+    "name": "푸터바 · purple/solid",
+    "file": "decks/10_backgrounds/BGP_bulk_footer_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:BGP-128",
+    "tags": [
+      "배경",
+      "푸터",
+      "purple"
+    ],
+    "params": {
+      "style": "footer-bar",
+      "palette": "purple",
+      "placement": "solid",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 푸터",
+      "페이지 표기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-129",
+    "category": "BGP",
+    "name": "푸터바 · cyan/solid",
+    "file": "decks/10_backgrounds/BGP_bulk_footer_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:BGP-129",
+    "tags": [
+      "배경",
+      "푸터",
+      "cyan"
+    ],
+    "params": {
+      "style": "footer-bar",
+      "palette": "cyan",
+      "placement": "solid",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 푸터",
+      "페이지 표기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-130",
+    "category": "BGP",
+    "name": "푸터바 · slate/solid",
+    "file": "decks/10_backgrounds/BGP_bulk_footer_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:BGP-130",
+    "tags": [
+      "배경",
+      "푸터",
+      "slate"
+    ],
+    "params": {
+      "style": "footer-bar",
+      "palette": "slate",
+      "placement": "solid",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 푸터",
+      "페이지 표기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-131",
+    "category": "BGP",
+    "name": "푸터바 · navy/line",
+    "file": "decks/10_backgrounds/BGP_bulk_footer_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:BGP-131",
+    "tags": [
+      "배경",
+      "푸터",
+      "navy"
+    ],
+    "params": {
+      "style": "footer-bar",
+      "palette": "navy",
+      "placement": "line",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 푸터",
+      "페이지 표기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-132",
+    "category": "BGP",
+    "name": "푸터바 · blue/line",
+    "file": "decks/10_backgrounds/BGP_bulk_footer_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:BGP-132",
+    "tags": [
+      "배경",
+      "푸터",
+      "blue"
+    ],
+    "params": {
+      "style": "footer-bar",
+      "palette": "blue",
+      "placement": "line",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 푸터",
+      "페이지 표기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-133",
+    "category": "BGP",
+    "name": "푸터바 · teal/line",
+    "file": "decks/10_backgrounds/BGP_bulk_footer_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:BGP-133",
+    "tags": [
+      "배경",
+      "푸터",
+      "teal"
+    ],
+    "params": {
+      "style": "footer-bar",
+      "palette": "teal",
+      "placement": "line",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 푸터",
+      "페이지 표기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-134",
+    "category": "BGP",
+    "name": "푸터바 · purple/line",
+    "file": "decks/10_backgrounds/BGP_bulk_footer_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:BGP-134",
+    "tags": [
+      "배경",
+      "푸터",
+      "purple"
+    ],
+    "params": {
+      "style": "footer-bar",
+      "palette": "purple",
+      "placement": "line",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 푸터",
+      "페이지 표기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-135",
+    "category": "BGP",
+    "name": "푸터바 · cyan/line",
+    "file": "decks/10_backgrounds/BGP_bulk_footer_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:BGP-135",
+    "tags": [
+      "배경",
+      "푸터",
+      "cyan"
+    ],
+    "params": {
+      "style": "footer-bar",
+      "palette": "cyan",
+      "placement": "line",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 푸터",
+      "페이지 표기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-136",
+    "category": "BGP",
+    "name": "푸터바 · slate/line",
+    "file": "decks/10_backgrounds/BGP_bulk_footer_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:BGP-136",
+    "tags": [
+      "배경",
+      "푸터",
+      "slate"
+    ],
+    "params": {
+      "style": "footer-bar",
+      "palette": "slate",
+      "placement": "line",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 푸터",
+      "페이지 표기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-137",
+    "category": "BGP",
+    "name": "푸터바 · navy/grad",
+    "file": "decks/10_backgrounds/BGP_bulk_footer_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:BGP-137",
+    "tags": [
+      "배경",
+      "푸터",
+      "navy"
+    ],
+    "params": {
+      "style": "footer-bar",
+      "palette": "navy",
+      "placement": "grad",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 푸터",
+      "페이지 표기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-138",
+    "category": "BGP",
+    "name": "푸터바 · blue/grad",
+    "file": "decks/10_backgrounds/BGP_bulk_footer_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:BGP-138",
+    "tags": [
+      "배경",
+      "푸터",
+      "blue"
+    ],
+    "params": {
+      "style": "footer-bar",
+      "palette": "blue",
+      "placement": "grad",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 푸터",
+      "페이지 표기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-139",
+    "category": "BGP",
+    "name": "푸터바 · teal/grad",
+    "file": "decks/10_backgrounds/BGP_bulk_footer_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:BGP-139",
+    "tags": [
+      "배경",
+      "푸터",
+      "teal"
+    ],
+    "params": {
+      "style": "footer-bar",
+      "palette": "teal",
+      "placement": "grad",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 푸터",
+      "페이지 표기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-140",
+    "category": "BGP",
+    "name": "푸터바 · purple/grad",
+    "file": "decks/10_backgrounds/BGP_bulk_footer_v1.pptx",
+    "slide": 16,
+    "anchor": "asset:BGP-140",
+    "tags": [
+      "배경",
+      "푸터",
+      "purple"
+    ],
+    "params": {
+      "style": "footer-bar",
+      "palette": "purple",
+      "placement": "grad",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 푸터",
+      "페이지 표기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-141",
+    "category": "BGP",
+    "name": "사이드 패널 · navy/L-narrow",
+    "file": "decks/10_backgrounds/BGP_bulk_sidepanel_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:BGP-141",
+    "tags": [
+      "배경",
+      "사이드패널",
+      "navy"
+    ],
+    "params": {
+      "style": "side-panel",
+      "palette": "navy",
+      "placement": "L-narrow",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "본문 강조",
+      "사이드 패널"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-142",
+    "category": "BGP",
+    "name": "사이드 패널 · blue/L-narrow",
+    "file": "decks/10_backgrounds/BGP_bulk_sidepanel_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:BGP-142",
+    "tags": [
+      "배경",
+      "사이드패널",
+      "blue"
+    ],
+    "params": {
+      "style": "side-panel",
+      "palette": "blue",
+      "placement": "L-narrow",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "본문 강조",
+      "사이드 패널"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-143",
+    "category": "BGP",
+    "name": "사이드 패널 · teal/L-narrow",
+    "file": "decks/10_backgrounds/BGP_bulk_sidepanel_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:BGP-143",
+    "tags": [
+      "배경",
+      "사이드패널",
+      "teal"
+    ],
+    "params": {
+      "style": "side-panel",
+      "palette": "teal",
+      "placement": "L-narrow",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "본문 강조",
+      "사이드 패널"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-144",
+    "category": "BGP",
+    "name": "사이드 패널 · purple/L-narrow",
+    "file": "decks/10_backgrounds/BGP_bulk_sidepanel_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:BGP-144",
+    "tags": [
+      "배경",
+      "사이드패널",
+      "purple"
+    ],
+    "params": {
+      "style": "side-panel",
+      "palette": "purple",
+      "placement": "L-narrow",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "본문 강조",
+      "사이드 패널"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-145",
+    "category": "BGP",
+    "name": "사이드 패널 · cyan/L-narrow",
+    "file": "decks/10_backgrounds/BGP_bulk_sidepanel_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:BGP-145",
+    "tags": [
+      "배경",
+      "사이드패널",
+      "cyan"
+    ],
+    "params": {
+      "style": "side-panel",
+      "palette": "cyan",
+      "placement": "L-narrow",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "본문 강조",
+      "사이드 패널"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-146",
+    "category": "BGP",
+    "name": "사이드 패널 · slate/L-narrow",
+    "file": "decks/10_backgrounds/BGP_bulk_sidepanel_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:BGP-146",
+    "tags": [
+      "배경",
+      "사이드패널",
+      "slate"
+    ],
+    "params": {
+      "style": "side-panel",
+      "palette": "slate",
+      "placement": "L-narrow",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "본문 강조",
+      "사이드 패널"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-147",
+    "category": "BGP",
+    "name": "사이드 패널 · navy/L-wide",
+    "file": "decks/10_backgrounds/BGP_bulk_sidepanel_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:BGP-147",
+    "tags": [
+      "배경",
+      "사이드패널",
+      "navy"
+    ],
+    "params": {
+      "style": "side-panel",
+      "palette": "navy",
+      "placement": "L-wide",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "본문 강조",
+      "사이드 패널"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-148",
+    "category": "BGP",
+    "name": "사이드 패널 · blue/L-wide",
+    "file": "decks/10_backgrounds/BGP_bulk_sidepanel_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:BGP-148",
+    "tags": [
+      "배경",
+      "사이드패널",
+      "blue"
+    ],
+    "params": {
+      "style": "side-panel",
+      "palette": "blue",
+      "placement": "L-wide",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "본문 강조",
+      "사이드 패널"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-149",
+    "category": "BGP",
+    "name": "사이드 패널 · teal/L-wide",
+    "file": "decks/10_backgrounds/BGP_bulk_sidepanel_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:BGP-149",
+    "tags": [
+      "배경",
+      "사이드패널",
+      "teal"
+    ],
+    "params": {
+      "style": "side-panel",
+      "palette": "teal",
+      "placement": "L-wide",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "본문 강조",
+      "사이드 패널"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-150",
+    "category": "BGP",
+    "name": "사이드 패널 · purple/L-wide",
+    "file": "decks/10_backgrounds/BGP_bulk_sidepanel_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:BGP-150",
+    "tags": [
+      "배경",
+      "사이드패널",
+      "purple"
+    ],
+    "params": {
+      "style": "side-panel",
+      "palette": "purple",
+      "placement": "L-wide",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "본문 강조",
+      "사이드 패널"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-151",
+    "category": "BGP",
+    "name": "사이드 패널 · cyan/L-wide",
+    "file": "decks/10_backgrounds/BGP_bulk_sidepanel_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:BGP-151",
+    "tags": [
+      "배경",
+      "사이드패널",
+      "cyan"
+    ],
+    "params": {
+      "style": "side-panel",
+      "palette": "cyan",
+      "placement": "L-wide",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "본문 강조",
+      "사이드 패널"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-152",
+    "category": "BGP",
+    "name": "사이드 패널 · slate/L-wide",
+    "file": "decks/10_backgrounds/BGP_bulk_sidepanel_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:BGP-152",
+    "tags": [
+      "배경",
+      "사이드패널",
+      "slate"
+    ],
+    "params": {
+      "style": "side-panel",
+      "palette": "slate",
+      "placement": "L-wide",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "본문 강조",
+      "사이드 패널"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-153",
+    "category": "BGP",
+    "name": "사이드 패널 · navy/R",
+    "file": "decks/10_backgrounds/BGP_bulk_sidepanel_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:BGP-153",
+    "tags": [
+      "배경",
+      "사이드패널",
+      "navy"
+    ],
+    "params": {
+      "style": "side-panel",
+      "palette": "navy",
+      "placement": "R",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "본문 강조",
+      "사이드 패널"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-154",
+    "category": "BGP",
+    "name": "사이드 패널 · blue/R",
+    "file": "decks/10_backgrounds/BGP_bulk_sidepanel_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:BGP-154",
+    "tags": [
+      "배경",
+      "사이드패널",
+      "blue"
+    ],
+    "params": {
+      "style": "side-panel",
+      "palette": "blue",
+      "placement": "R",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "본문 강조",
+      "사이드 패널"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-155",
+    "category": "BGP",
+    "name": "사이드 패널 · teal/R",
+    "file": "decks/10_backgrounds/BGP_bulk_sidepanel_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:BGP-155",
+    "tags": [
+      "배경",
+      "사이드패널",
+      "teal"
+    ],
+    "params": {
+      "style": "side-panel",
+      "palette": "teal",
+      "placement": "R",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "본문 강조",
+      "사이드 패널"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-156",
+    "category": "BGP",
+    "name": "코너 기하장식 · navy/tr",
+    "file": "decks/10_backgrounds/BGP_bulk_corner_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:BGP-156",
+    "tags": [
+      "배경",
+      "기하",
+      "블루악센트",
+      "navy"
+    ],
+    "params": {
+      "style": "corner-geo",
+      "palette": "navy",
+      "placement": "tr",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "코너 장식",
+      "콘텐츠 배경"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-157",
+    "category": "BGP",
+    "name": "코너 기하장식 · blue/tr",
+    "file": "decks/10_backgrounds/BGP_bulk_corner_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:BGP-157",
+    "tags": [
+      "배경",
+      "기하",
+      "블루악센트",
+      "blue"
+    ],
+    "params": {
+      "style": "corner-geo",
+      "palette": "blue",
+      "placement": "tr",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "코너 장식",
+      "콘텐츠 배경"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-158",
+    "category": "BGP",
+    "name": "코너 기하장식 · teal/tr",
+    "file": "decks/10_backgrounds/BGP_bulk_corner_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:BGP-158",
+    "tags": [
+      "배경",
+      "기하",
+      "블루악센트",
+      "teal"
+    ],
+    "params": {
+      "style": "corner-geo",
+      "palette": "teal",
+      "placement": "tr",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "코너 장식",
+      "콘텐츠 배경"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-159",
+    "category": "BGP",
+    "name": "코너 기하장식 · purple/tr",
+    "file": "decks/10_backgrounds/BGP_bulk_corner_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:BGP-159",
+    "tags": [
+      "배경",
+      "기하",
+      "블루악센트",
+      "purple"
+    ],
+    "params": {
+      "style": "corner-geo",
+      "palette": "purple",
+      "placement": "tr",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "코너 장식",
+      "콘텐츠 배경"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-160",
+    "category": "BGP",
+    "name": "코너 기하장식 · cyan/tr",
+    "file": "decks/10_backgrounds/BGP_bulk_corner_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:BGP-160",
+    "tags": [
+      "배경",
+      "기하",
+      "블루악센트",
+      "cyan"
+    ],
+    "params": {
+      "style": "corner-geo",
+      "palette": "cyan",
+      "placement": "tr",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "코너 장식",
+      "콘텐츠 배경"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-161",
+    "category": "BGP",
+    "name": "코너 기하장식 · slate/tr",
+    "file": "decks/10_backgrounds/BGP_bulk_corner_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:BGP-161",
+    "tags": [
+      "배경",
+      "기하",
+      "블루악센트",
+      "slate"
+    ],
+    "params": {
+      "style": "corner-geo",
+      "palette": "slate",
+      "placement": "tr",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "코너 장식",
+      "콘텐츠 배경"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-162",
+    "category": "BGP",
+    "name": "코너 기하장식 · navy/tl",
+    "file": "decks/10_backgrounds/BGP_bulk_corner_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:BGP-162",
+    "tags": [
+      "배경",
+      "기하",
+      "블루악센트",
+      "navy"
+    ],
+    "params": {
+      "style": "corner-geo",
+      "palette": "navy",
+      "placement": "tl",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "코너 장식",
+      "콘텐츠 배경"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-163",
+    "category": "BGP",
+    "name": "코너 기하장식 · blue/tl",
+    "file": "decks/10_backgrounds/BGP_bulk_corner_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:BGP-163",
+    "tags": [
+      "배경",
+      "기하",
+      "블루악센트",
+      "blue"
+    ],
+    "params": {
+      "style": "corner-geo",
+      "palette": "blue",
+      "placement": "tl",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "코너 장식",
+      "콘텐츠 배경"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-164",
+    "category": "BGP",
+    "name": "코너 기하장식 · teal/tl",
+    "file": "decks/10_backgrounds/BGP_bulk_corner_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:BGP-164",
+    "tags": [
+      "배경",
+      "기하",
+      "블루악센트",
+      "teal"
+    ],
+    "params": {
+      "style": "corner-geo",
+      "palette": "teal",
+      "placement": "tl",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "코너 장식",
+      "콘텐츠 배경"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-165",
+    "category": "BGP",
+    "name": "코너 기하장식 · purple/tl",
+    "file": "decks/10_backgrounds/BGP_bulk_corner_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:BGP-165",
+    "tags": [
+      "배경",
+      "기하",
+      "블루악센트",
+      "purple"
+    ],
+    "params": {
+      "style": "corner-geo",
+      "palette": "purple",
+      "placement": "tl",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "코너 장식",
+      "콘텐츠 배경"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-166",
+    "category": "BGP",
+    "name": "코너 기하장식 · cyan/tl",
+    "file": "decks/10_backgrounds/BGP_bulk_corner_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:BGP-166",
+    "tags": [
+      "배경",
+      "기하",
+      "블루악센트",
+      "cyan"
+    ],
+    "params": {
+      "style": "corner-geo",
+      "palette": "cyan",
+      "placement": "tl",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "코너 장식",
+      "콘텐츠 배경"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-167",
+    "category": "BGP",
+    "name": "코너 기하장식 · slate/tl",
+    "file": "decks/10_backgrounds/BGP_bulk_corner_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:BGP-167",
+    "tags": [
+      "배경",
+      "기하",
+      "블루악센트",
+      "slate"
+    ],
+    "params": {
+      "style": "corner-geo",
+      "palette": "slate",
+      "placement": "tl",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "코너 장식",
+      "콘텐츠 배경"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-168",
+    "category": "BGP",
+    "name": "코너 기하장식 · navy/br",
+    "file": "decks/10_backgrounds/BGP_bulk_corner_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:BGP-168",
+    "tags": [
+      "배경",
+      "기하",
+      "블루악센트",
+      "navy"
+    ],
+    "params": {
+      "style": "corner-geo",
+      "palette": "navy",
+      "placement": "br",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "코너 장식",
+      "콘텐츠 배경"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-169",
+    "category": "BGP",
+    "name": "코너 기하장식 · blue/br",
+    "file": "decks/10_backgrounds/BGP_bulk_corner_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:BGP-169",
+    "tags": [
+      "배경",
+      "기하",
+      "블루악센트",
+      "blue"
+    ],
+    "params": {
+      "style": "corner-geo",
+      "palette": "blue",
+      "placement": "br",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "코너 장식",
+      "콘텐츠 배경"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-170",
+    "category": "BGP",
+    "name": "코너 기하장식 · teal/br",
+    "file": "decks/10_backgrounds/BGP_bulk_corner_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:BGP-170",
+    "tags": [
+      "배경",
+      "기하",
+      "블루악센트",
+      "teal"
+    ],
+    "params": {
+      "style": "corner-geo",
+      "palette": "teal",
+      "placement": "br",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "코너 장식",
+      "콘텐츠 배경"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-171",
+    "category": "BGP",
+    "name": "라이트그레이 콘텐츠배경 · navy/circles",
+    "file": "decks/10_backgrounds/BGP_bulk_lightgray_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:BGP-171",
+    "tags": [
+      "배경",
+      "라이트",
+      "콘텐츠배경",
+      "navy"
+    ],
+    "params": {
+      "style": "content-lightgray",
+      "palette": "navy",
+      "placement": "circles",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 배경",
+      "섹션 배경"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-172",
+    "category": "BGP",
+    "name": "라이트그레이 콘텐츠배경 · blue/circles",
+    "file": "decks/10_backgrounds/BGP_bulk_lightgray_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:BGP-172",
+    "tags": [
+      "배경",
+      "라이트",
+      "콘텐츠배경",
+      "blue"
+    ],
+    "params": {
+      "style": "content-lightgray",
+      "palette": "blue",
+      "placement": "circles",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 배경",
+      "섹션 배경"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-173",
+    "category": "BGP",
+    "name": "라이트그레이 콘텐츠배경 · teal/circles",
+    "file": "decks/10_backgrounds/BGP_bulk_lightgray_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:BGP-173",
+    "tags": [
+      "배경",
+      "라이트",
+      "콘텐츠배경",
+      "teal"
+    ],
+    "params": {
+      "style": "content-lightgray",
+      "palette": "teal",
+      "placement": "circles",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 배경",
+      "섹션 배경"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-174",
+    "category": "BGP",
+    "name": "라이트그레이 콘텐츠배경 · purple/circles",
+    "file": "decks/10_backgrounds/BGP_bulk_lightgray_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:BGP-174",
+    "tags": [
+      "배경",
+      "라이트",
+      "콘텐츠배경",
+      "purple"
+    ],
+    "params": {
+      "style": "content-lightgray",
+      "palette": "purple",
+      "placement": "circles",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 배경",
+      "섹션 배경"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-175",
+    "category": "BGP",
+    "name": "라이트그레이 콘텐츠배경 · cyan/circles",
+    "file": "decks/10_backgrounds/BGP_bulk_lightgray_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:BGP-175",
+    "tags": [
+      "배경",
+      "라이트",
+      "콘텐츠배경",
+      "cyan"
+    ],
+    "params": {
+      "style": "content-lightgray",
+      "palette": "cyan",
+      "placement": "circles",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 배경",
+      "섹션 배경"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-176",
+    "category": "BGP",
+    "name": "라이트그레이 콘텐츠배경 · slate/circles",
+    "file": "decks/10_backgrounds/BGP_bulk_lightgray_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:BGP-176",
+    "tags": [
+      "배경",
+      "라이트",
+      "콘텐츠배경",
+      "slate"
+    ],
+    "params": {
+      "style": "content-lightgray",
+      "palette": "slate",
+      "placement": "circles",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 배경",
+      "섹션 배경"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-177",
+    "category": "BGP",
+    "name": "라이트그레이 콘텐츠배경 · navy/corner",
+    "file": "decks/10_backgrounds/BGP_bulk_lightgray_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:BGP-177",
+    "tags": [
+      "배경",
+      "라이트",
+      "콘텐츠배경",
+      "navy"
+    ],
+    "params": {
+      "style": "content-lightgray",
+      "palette": "navy",
+      "placement": "corner",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 배경",
+      "섹션 배경"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-178",
+    "category": "BGP",
+    "name": "라이트그레이 콘텐츠배경 · blue/corner",
+    "file": "decks/10_backgrounds/BGP_bulk_lightgray_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:BGP-178",
+    "tags": [
+      "배경",
+      "라이트",
+      "콘텐츠배경",
+      "blue"
+    ],
+    "params": {
+      "style": "content-lightgray",
+      "palette": "blue",
+      "placement": "corner",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 배경",
+      "섹션 배경"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-179",
+    "category": "BGP",
+    "name": "라이트그레이 콘텐츠배경 · teal/corner",
+    "file": "decks/10_backgrounds/BGP_bulk_lightgray_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:BGP-179",
+    "tags": [
+      "배경",
+      "라이트",
+      "콘텐츠배경",
+      "teal"
+    ],
+    "params": {
+      "style": "content-lightgray",
+      "palette": "teal",
+      "placement": "corner",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 배경",
+      "섹션 배경"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-180",
+    "category": "BGP",
+    "name": "라이트그레이 콘텐츠배경 · purple/corner",
+    "file": "decks/10_backgrounds/BGP_bulk_lightgray_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:BGP-180",
+    "tags": [
+      "배경",
+      "라이트",
+      "콘텐츠배경",
+      "purple"
+    ],
+    "params": {
+      "style": "content-lightgray",
+      "palette": "purple",
+      "placement": "corner",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 배경",
+      "섹션 배경"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-181",
+    "category": "BGP",
+    "name": "라이트그레이 콘텐츠배경 · cyan/corner",
+    "file": "decks/10_backgrounds/BGP_bulk_lightgray_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:BGP-181",
+    "tags": [
+      "배경",
+      "라이트",
+      "콘텐츠배경",
+      "cyan"
+    ],
+    "params": {
+      "style": "content-lightgray",
+      "palette": "cyan",
+      "placement": "corner",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 배경",
+      "섹션 배경"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-182",
+    "category": "BGP",
+    "name": "라이트그레이 콘텐츠배경 · slate/corner",
+    "file": "decks/10_backgrounds/BGP_bulk_lightgray_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:BGP-182",
+    "tags": [
+      "배경",
+      "라이트",
+      "콘텐츠배경",
+      "slate"
+    ],
+    "params": {
+      "style": "content-lightgray",
+      "palette": "slate",
+      "placement": "corner",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 배경",
+      "섹션 배경"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-183",
+    "category": "BGP",
+    "name": "라이트그레이 콘텐츠배경 · navy/stripe",
+    "file": "decks/10_backgrounds/BGP_bulk_lightgray_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:BGP-183",
+    "tags": [
+      "배경",
+      "라이트",
+      "콘텐츠배경",
+      "navy"
+    ],
+    "params": {
+      "style": "content-lightgray",
+      "palette": "navy",
+      "placement": "stripe",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 배경",
+      "섹션 배경"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-184",
+    "category": "BGP",
+    "name": "라이트그레이 콘텐츠배경 · blue/stripe",
+    "file": "decks/10_backgrounds/BGP_bulk_lightgray_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:BGP-184",
+    "tags": [
+      "배경",
+      "라이트",
+      "콘텐츠배경",
+      "blue"
+    ],
+    "params": {
+      "style": "content-lightgray",
+      "palette": "blue",
+      "placement": "stripe",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 배경",
+      "섹션 배경"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-185",
+    "category": "BGP",
+    "name": "라이트그레이 콘텐츠배경 · teal/stripe",
+    "file": "decks/10_backgrounds/BGP_bulk_lightgray_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:BGP-185",
+    "tags": [
+      "배경",
+      "라이트",
+      "콘텐츠배경",
+      "teal"
+    ],
+    "params": {
+      "style": "content-lightgray",
+      "palette": "teal",
+      "placement": "stripe",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 배경",
+      "섹션 배경"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-186",
+    "category": "BGP",
+    "name": "대각 그라데이션 표지 · navy/a45",
+    "file": "decks/10_backgrounds/BGP_bulk_diaggrad_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:BGP-186",
+    "tags": [
+      "표지",
+      "배경",
+      "그라데이션",
+      "기하",
+      "navy"
+    ],
+    "params": {
+      "style": "cover-diagonal-gradient",
+      "palette": "navy",
+      "placement": "a45",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-187",
+    "category": "BGP",
+    "name": "대각 그라데이션 표지 · blue/a45",
+    "file": "decks/10_backgrounds/BGP_bulk_diaggrad_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:BGP-187",
+    "tags": [
+      "표지",
+      "배경",
+      "그라데이션",
+      "기하",
+      "blue"
+    ],
+    "params": {
+      "style": "cover-diagonal-gradient",
+      "palette": "blue",
+      "placement": "a45",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-188",
+    "category": "BGP",
+    "name": "대각 그라데이션 표지 · teal/a45",
+    "file": "decks/10_backgrounds/BGP_bulk_diaggrad_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:BGP-188",
+    "tags": [
+      "표지",
+      "배경",
+      "그라데이션",
+      "기하",
+      "teal"
+    ],
+    "params": {
+      "style": "cover-diagonal-gradient",
+      "palette": "teal",
+      "placement": "a45",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-189",
+    "category": "BGP",
+    "name": "대각 그라데이션 표지 · purple/a45",
+    "file": "decks/10_backgrounds/BGP_bulk_diaggrad_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:BGP-189",
+    "tags": [
+      "표지",
+      "배경",
+      "그라데이션",
+      "기하",
+      "purple"
+    ],
+    "params": {
+      "style": "cover-diagonal-gradient",
+      "palette": "purple",
+      "placement": "a45",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-190",
+    "category": "BGP",
+    "name": "대각 그라데이션 표지 · cyan/a45",
+    "file": "decks/10_backgrounds/BGP_bulk_diaggrad_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:BGP-190",
+    "tags": [
+      "표지",
+      "배경",
+      "그라데이션",
+      "기하",
+      "cyan"
+    ],
+    "params": {
+      "style": "cover-diagonal-gradient",
+      "palette": "cyan",
+      "placement": "a45",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-191",
+    "category": "BGP",
+    "name": "대각 그라데이션 표지 · slate/a45",
+    "file": "decks/10_backgrounds/BGP_bulk_diaggrad_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:BGP-191",
+    "tags": [
+      "표지",
+      "배경",
+      "그라데이션",
+      "기하",
+      "slate"
+    ],
+    "params": {
+      "style": "cover-diagonal-gradient",
+      "palette": "slate",
+      "placement": "a45",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-192",
+    "category": "BGP",
+    "name": "대각 그라데이션 표지 · navy/a135",
+    "file": "decks/10_backgrounds/BGP_bulk_diaggrad_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:BGP-192",
+    "tags": [
+      "표지",
+      "배경",
+      "그라데이션",
+      "기하",
+      "navy"
+    ],
+    "params": {
+      "style": "cover-diagonal-gradient",
+      "palette": "navy",
+      "placement": "a135",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-193",
+    "category": "BGP",
+    "name": "대각 그라데이션 표지 · blue/a135",
+    "file": "decks/10_backgrounds/BGP_bulk_diaggrad_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:BGP-193",
+    "tags": [
+      "표지",
+      "배경",
+      "그라데이션",
+      "기하",
+      "blue"
+    ],
+    "params": {
+      "style": "cover-diagonal-gradient",
+      "palette": "blue",
+      "placement": "a135",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-194",
+    "category": "BGP",
+    "name": "대각 그라데이션 표지 · teal/a135",
+    "file": "decks/10_backgrounds/BGP_bulk_diaggrad_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:BGP-194",
+    "tags": [
+      "표지",
+      "배경",
+      "그라데이션",
+      "기하",
+      "teal"
+    ],
+    "params": {
+      "style": "cover-diagonal-gradient",
+      "palette": "teal",
+      "placement": "a135",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-195",
+    "category": "BGP",
+    "name": "대각 그라데이션 표지 · purple/a135",
+    "file": "decks/10_backgrounds/BGP_bulk_diaggrad_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:BGP-195",
+    "tags": [
+      "표지",
+      "배경",
+      "그라데이션",
+      "기하",
+      "purple"
+    ],
+    "params": {
+      "style": "cover-diagonal-gradient",
+      "palette": "purple",
+      "placement": "a135",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-196",
+    "category": "BGP",
+    "name": "대각 그라데이션 표지 · cyan/a135",
+    "file": "decks/10_backgrounds/BGP_bulk_diaggrad_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:BGP-196",
+    "tags": [
+      "표지",
+      "배경",
+      "그라데이션",
+      "기하",
+      "cyan"
+    ],
+    "params": {
+      "style": "cover-diagonal-gradient",
+      "palette": "cyan",
+      "placement": "a135",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-197",
+    "category": "BGP",
+    "name": "대각 그라데이션 표지 · slate/a135",
+    "file": "decks/10_backgrounds/BGP_bulk_diaggrad_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:BGP-197",
+    "tags": [
+      "표지",
+      "배경",
+      "그라데이션",
+      "기하",
+      "slate"
+    ],
+    "params": {
+      "style": "cover-diagonal-gradient",
+      "palette": "slate",
+      "placement": "a135",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-198",
+    "category": "BGP",
+    "name": "대각 그라데이션 표지 · navy/a90",
+    "file": "decks/10_backgrounds/BGP_bulk_diaggrad_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:BGP-198",
+    "tags": [
+      "표지",
+      "배경",
+      "그라데이션",
+      "기하",
+      "navy"
+    ],
+    "params": {
+      "style": "cover-diagonal-gradient",
+      "palette": "navy",
+      "placement": "a90",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-199",
+    "category": "BGP",
+    "name": "대각 그라데이션 표지 · blue/a90",
+    "file": "decks/10_backgrounds/BGP_bulk_diaggrad_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:BGP-199",
+    "tags": [
+      "표지",
+      "배경",
+      "그라데이션",
+      "기하",
+      "blue"
+    ],
+    "params": {
+      "style": "cover-diagonal-gradient",
+      "palette": "blue",
+      "placement": "a90",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-200",
+    "category": "BGP",
+    "name": "대각 그라데이션 표지 · teal/a90",
+    "file": "decks/10_backgrounds/BGP_bulk_diaggrad_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:BGP-200",
+    "tags": [
+      "표지",
+      "배경",
+      "그라데이션",
+      "기하",
+      "teal"
+    ],
+    "params": {
+      "style": "cover-diagonal-gradient",
+      "palette": "teal",
+      "placement": "a90",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  }
+]

@@ -1,0 +1,645 @@
+[
+  {
+    "id": "ORG-001",
+    "category": "ORG",
+    "name": "표준 위계 조직도 (발주기관-PM-팀3)",
+    "file": "decks/06_org/ORG_hierarchy_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ORG-001",
+    "tags": [
+      "조직도",
+      "위계",
+      "수행조직",
+      "트리"
+    ],
+    "params": {
+      "levels": 3,
+      "teams": 3,
+      "orient": "vertical"
+    },
+    "bindings": {
+      "nodes": [
+        {
+          "role": "발주기관",
+          "level": 1
+        },
+        {
+          "role": "총괄PM",
+          "level": 2
+        },
+        {
+          "role": "분석팀",
+          "level": 3
+        },
+        {
+          "role": "개발팀",
+          "level": 3
+        },
+        {
+          "role": "품질관리(QA)팀",
+          "level": 3
+        }
+      ],
+      "levels": 3,
+      "edges": [
+        [
+          "발주기관",
+          "총괄PM"
+        ],
+        [
+          "총괄PM",
+          "분석팀"
+        ],
+        [
+          "총괄PM",
+          "개발팀"
+        ],
+        [
+          "총괄PM",
+          "품질관리(QA)팀"
+        ]
+      ]
+    },
+    "editable": [
+      "node-text",
+      "add-node",
+      "color",
+      "connector"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행조직",
+      "위계 조직",
+      "역할분담"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ORG-002",
+    "category": "ORG",
+    "name": "총괄+분야별 팀 매트릭스형 (PM+4팀)",
+    "file": "decks/06_org/ORG_hierarchy_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ORG-002",
+    "tags": [
+      "조직도",
+      "매트릭스",
+      "총괄",
+      "수행조직"
+    ],
+    "params": {
+      "levels": 2,
+      "teams": 4,
+      "orient": "matrix"
+    },
+    "bindings": {
+      "nodes": [
+        {
+          "role": "총괄PM",
+          "level": 1
+        },
+        {
+          "role": "기획팀",
+          "team": "전략·기획",
+          "level": 2
+        },
+        {
+          "role": "기술지원팀",
+          "team": "개발·인프라",
+          "level": 2
+        },
+        {
+          "role": "현지화팀",
+          "team": "번역·현지화",
+          "level": 2
+        },
+        {
+          "role": "품질관리팀",
+          "team": "검수·품질",
+          "level": 2
+        }
+      ],
+      "levels": 2,
+      "edges": [
+        [
+          "총괄PM",
+          "기획팀"
+        ],
+        [
+          "총괄PM",
+          "기술지원팀"
+        ],
+        [
+          "총괄PM",
+          "현지화팀"
+        ],
+        [
+          "총괄PM",
+          "품질관리팀"
+        ]
+      ]
+    },
+    "editable": [
+      "node-text",
+      "add-node",
+      "color",
+      "connector"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행조직",
+      "팀 구성",
+      "역할분담"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ORG-005",
+    "category": "ORG",
+    "name": "역할·책임(R&R) 구조도 (팀별 역할 불릿)",
+    "file": "decks/06_org/ORG_hierarchy_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:ORG-005",
+    "tags": [
+      "조직도",
+      "R&R",
+      "역할책임",
+      "역할분담"
+    ],
+    "params": {
+      "levels": 2,
+      "teams": 4,
+      "style": "role-card"
+    },
+    "bindings": {
+      "nodes": [
+        {
+          "role": "총괄PM",
+          "level": 1
+        },
+        {
+          "role": "기획·총괄",
+          "duties": [
+            "사업 총괄 관리",
+            "일정·리스크 관리",
+            "발주처 협의"
+          ],
+          "level": 2
+        },
+        {
+          "role": "기술지원팀",
+          "duties": [
+            "플랫폼 구축",
+            "API 연동",
+            "인프라 운영"
+          ],
+          "level": 2
+        },
+        {
+          "role": "현지화팀",
+          "duties": [
+            "다국어 번역",
+            "문화 현지화",
+            "현지 검수"
+          ],
+          "level": 2
+        },
+        {
+          "role": "품질관리",
+          "duties": [
+            "QA 테스트",
+            "산출물 검수",
+            "안정화 지원"
+          ],
+          "level": 2
+        }
+      ],
+      "levels": 2,
+      "edges": [
+        [
+          "총괄PM",
+          "기획·총괄"
+        ],
+        [
+          "총괄PM",
+          "기술지원팀"
+        ],
+        [
+          "총괄PM",
+          "현지화팀"
+        ],
+        [
+          "총괄PM",
+          "품질관리"
+        ]
+      ]
+    },
+    "editable": [
+      "node-text",
+      "add-node",
+      "color",
+      "connector"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "역할분담",
+      "R&R 정의",
+      "책임 명세"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ORG-006",
+    "category": "ORG",
+    "name": "거버넌스 체계 3층 (운영위/실무/실행)",
+    "file": "decks/06_org/ORG_hierarchy_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:ORG-006",
+    "tags": [
+      "조직도",
+      "거버넌스",
+      "체계도",
+      "3층"
+    ],
+    "params": {
+      "levels": 3,
+      "tiers": [
+        "운영위",
+        "실무협의체",
+        "실행조직"
+      ]
+    },
+    "bindings": {
+      "nodes": [
+        {
+          "role": "운영위원회",
+          "level": 1
+        },
+        {
+          "role": "실무협의체",
+          "level": 2
+        },
+        {
+          "role": "실행조직-분석기획",
+          "level": 3
+        },
+        {
+          "role": "실행조직-개발구축",
+          "level": 3
+        },
+        {
+          "role": "실행조직-현지화운영",
+          "level": 3
+        }
+      ],
+      "levels": 3,
+      "edges": [
+        [
+          "운영위원회",
+          "실무협의체"
+        ],
+        [
+          "실무협의체",
+          "실행조직-분석기획"
+        ],
+        [
+          "실무협의체",
+          "실행조직-개발구축"
+        ],
+        [
+          "실무협의체",
+          "실행조직-현지화운영"
+        ]
+      ]
+    },
+    "editable": [
+      "node-text",
+      "add-node",
+      "color",
+      "connector"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "거버넌스",
+      "추진체계",
+      "운영 구조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ORG-003",
+    "category": "ORG",
+    "name": "추진체계도 (발주처-수행사-협력사 양방향)",
+    "file": "decks/06_org/ORG_governance-network_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ORG-003",
+    "tags": [
+      "추진체계",
+      "체계도",
+      "3주체",
+      "양방향"
+    ],
+    "params": {
+      "actors": 3,
+      "orient": "horizontal",
+      "edge_labels": [
+        "보고/검수",
+        "위탁/납품"
+      ]
+    },
+    "bindings": {
+      "nodes": [
+        {
+          "role": "발주처"
+        },
+        {
+          "role": "수행사"
+        },
+        {
+          "role": "협력사"
+        }
+      ],
+      "levels": 1,
+      "edges": [
+        [
+          "발주처",
+          "수행사"
+        ],
+        [
+          "수행사",
+          "협력사"
+        ]
+      ]
+    },
+    "editable": [
+      "node-text",
+      "add-node",
+      "color",
+      "connector"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진체계",
+      "역할분담",
+      "협업 구조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ORG-004",
+    "category": "ORG",
+    "name": "자문위원회 포함형 (본조직+자문단 점선)",
+    "file": "decks/06_org/ORG_governance-network_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ORG-004",
+    "tags": [
+      "조직도",
+      "자문위원",
+      "위계",
+      "점선연결"
+    ],
+    "params": {
+      "levels": 3,
+      "teams": 2,
+      "advisory": true,
+      "advisory_link": "dashed"
+    },
+    "bindings": {
+      "nodes": [
+        {
+          "role": "발주기관",
+          "level": 1
+        },
+        {
+          "role": "총괄PM",
+          "level": 2
+        },
+        {
+          "role": "기술지원팀",
+          "level": 3
+        },
+        {
+          "role": "현지화팀",
+          "level": 3
+        },
+        {
+          "role": "자문위원회",
+          "level": 2,
+          "type": "advisory"
+        }
+      ],
+      "levels": 3,
+      "edges": [
+        [
+          "발주기관",
+          "총괄PM"
+        ],
+        [
+          "총괄PM",
+          "기술지원팀"
+        ],
+        [
+          "총괄PM",
+          "현지화팀"
+        ],
+        [
+          "총괄PM",
+          "자문위원회"
+        ]
+      ]
+    },
+    "editable": [
+      "node-text",
+      "add-node",
+      "color",
+      "connector"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행조직",
+      "자문 구조",
+      "거버넌스"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ORG-007",
+    "category": "ORG",
+    "name": "협업 네트워크형 (중앙 허브+방사형 파트너)",
+    "file": "decks/06_org/ORG_governance-network_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:ORG-007",
+    "tags": [
+      "조직도",
+      "네트워크",
+      "허브",
+      "협업"
+    ],
+    "params": {
+      "hub": 1,
+      "partners": 6,
+      "orient": "radial"
+    },
+    "bindings": {
+      "nodes": [
+        {
+          "role": "총괄 플랫폼",
+          "type": "hub"
+        },
+        {
+          "role": "현지 파트너",
+          "type": "partner"
+        },
+        {
+          "role": "배급사",
+          "type": "partner"
+        },
+        {
+          "role": "제작 스튜디오",
+          "type": "partner"
+        },
+        {
+          "role": "마케팅 대행",
+          "type": "partner"
+        },
+        {
+          "role": "번역 전문",
+          "type": "partner"
+        },
+        {
+          "role": "법무·자문",
+          "type": "partner"
+        }
+      ],
+      "levels": 2,
+      "edges": [
+        [
+          "총괄 플랫폼",
+          "현지 파트너"
+        ],
+        [
+          "총괄 플랫폼",
+          "배급사"
+        ],
+        [
+          "총괄 플랫폼",
+          "제작 스튜디오"
+        ],
+        [
+          "총괄 플랫폼",
+          "마케팅 대행"
+        ],
+        [
+          "총괄 플랫폼",
+          "번역 전문"
+        ],
+        [
+          "총괄 플랫폼",
+          "법무·자문"
+        ]
+      ]
+    },
+    "editable": [
+      "node-text",
+      "add-node",
+      "color",
+      "connector"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "협업 구조",
+      "파트너 네트워크",
+      "생태계"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ORG-008",
+    "category": "ORG",
+    "name": "컨소시엄 구성도 (주관사+참여사 분담)",
+    "file": "decks/06_org/ORG_governance-network_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:ORG-008",
+    "tags": [
+      "조직도",
+      "컨소시엄",
+      "분담",
+      "참여사"
+    ],
+    "params": {
+      "levels": 2,
+      "members": 3,
+      "show_share": true
+    },
+    "bindings": {
+      "nodes": [
+        {
+          "role": "주관사",
+          "level": 1
+        },
+        {
+          "role": "참여사 A",
+          "duty": "플랫폼 개발",
+          "share": "40%",
+          "level": 2
+        },
+        {
+          "role": "참여사 B",
+          "duty": "현지화·운영",
+          "share": "35%",
+          "level": 2
+        },
+        {
+          "role": "참여사 C",
+          "duty": "마케팅·배급",
+          "share": "25%",
+          "level": 2
+        }
+      ],
+      "levels": 2,
+      "edges": [
+        [
+          "주관사",
+          "참여사 A"
+        ],
+        [
+          "주관사",
+          "참여사 B"
+        ],
+        [
+          "주관사",
+          "참여사 C"
+        ]
+      ]
+    },
+    "editable": [
+      "node-text",
+      "add-node",
+      "color",
+      "connector"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "컨소시엄",
+      "역할분담",
+      "수행조직"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  }
+]

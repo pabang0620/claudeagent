@@ -1,0 +1,7022 @@
+[
+  {
+    "id": "ICN-021",
+    "category": "ICN",
+    "name": "아이콘 · 폴더 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ICN-021",
+    "tags": [
+      "아이콘",
+      "폴더",
+      "분류",
+      "자료",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "folder",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "폴더"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-022",
+    "category": "ICN",
+    "name": "아이콘 · 폴더 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ICN-022",
+    "tags": [
+      "아이콘",
+      "폴더",
+      "분류",
+      "자료",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "folder",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "폴더"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-023",
+    "category": "ICN",
+    "name": "아이콘 · 폴더 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ICN-023",
+    "tags": [
+      "아이콘",
+      "폴더",
+      "분류",
+      "자료",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "folder",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "폴더"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-024",
+    "category": "ICN",
+    "name": "아이콘 · 폴더 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ICN-024",
+    "tags": [
+      "아이콘",
+      "폴더",
+      "분류",
+      "자료",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "folder",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "폴더"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-025",
+    "category": "ICN",
+    "name": "아이콘 · 폴더 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ICN-025",
+    "tags": [
+      "아이콘",
+      "폴더",
+      "분류",
+      "자료",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "folder",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "폴더"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-026",
+    "category": "ICN",
+    "name": "아이콘 · 파일 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ICN-026",
+    "tags": [
+      "아이콘",
+      "파일",
+      "문서",
+      "페이지",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "file",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "파일"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-027",
+    "category": "ICN",
+    "name": "아이콘 · 파일 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ICN-027",
+    "tags": [
+      "아이콘",
+      "파일",
+      "문서",
+      "페이지",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "file",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "파일"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-028",
+    "category": "ICN",
+    "name": "아이콘 · 파일 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ICN-028",
+    "tags": [
+      "아이콘",
+      "파일",
+      "문서",
+      "페이지",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "file",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "파일"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-029",
+    "category": "ICN",
+    "name": "아이콘 · 파일 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ICN-029",
+    "tags": [
+      "아이콘",
+      "파일",
+      "문서",
+      "페이지",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "file",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "파일"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-030",
+    "category": "ICN",
+    "name": "아이콘 · 파일 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ICN-030",
+    "tags": [
+      "아이콘",
+      "파일",
+      "문서",
+      "페이지",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "file",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "파일"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-031",
+    "category": "ICN",
+    "name": "아이콘 · 파이차트 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ICN-031",
+    "tags": [
+      "아이콘",
+      "차트",
+      "비중",
+      "통계",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "piechart",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "파이차트"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-032",
+    "category": "ICN",
+    "name": "아이콘 · 파이차트 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ICN-032",
+    "tags": [
+      "아이콘",
+      "차트",
+      "비중",
+      "통계",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "piechart",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "파이차트"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-033",
+    "category": "ICN",
+    "name": "아이콘 · 파이차트 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ICN-033",
+    "tags": [
+      "아이콘",
+      "차트",
+      "비중",
+      "통계",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "piechart",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "파이차트"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-034",
+    "category": "ICN",
+    "name": "아이콘 · 파이차트 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ICN-034",
+    "tags": [
+      "아이콘",
+      "차트",
+      "비중",
+      "통계",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "piechart",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "파이차트"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-035",
+    "category": "ICN",
+    "name": "아이콘 · 파이차트 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ICN-035",
+    "tags": [
+      "아이콘",
+      "차트",
+      "비중",
+      "통계",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "piechart",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "파이차트"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-036",
+    "category": "ICN",
+    "name": "아이콘 · 선그래프 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ICN-036",
+    "tags": [
+      "아이콘",
+      "차트",
+      "추세",
+      "성과",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "linechart",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "선그래프"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-037",
+    "category": "ICN",
+    "name": "아이콘 · 선그래프 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:ICN-037",
+    "tags": [
+      "아이콘",
+      "차트",
+      "추세",
+      "성과",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "linechart",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "선그래프"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-038",
+    "category": "ICN",
+    "name": "아이콘 · 선그래프 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:ICN-038",
+    "tags": [
+      "아이콘",
+      "차트",
+      "추세",
+      "성과",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "linechart",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "선그래프"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-039",
+    "category": "ICN",
+    "name": "아이콘 · 선그래프 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:ICN-039",
+    "tags": [
+      "아이콘",
+      "차트",
+      "추세",
+      "성과",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "linechart",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "선그래프"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-040",
+    "category": "ICN",
+    "name": "아이콘 · 선그래프 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:ICN-040",
+    "tags": [
+      "아이콘",
+      "차트",
+      "추세",
+      "성과",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "linechart",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "선그래프"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-041",
+    "category": "ICN",
+    "name": "아이콘 · 감소 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:ICN-041",
+    "tags": [
+      "아이콘",
+      "감소",
+      "하락",
+      "하향",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "arrowdown",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "감소"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-042",
+    "category": "ICN",
+    "name": "아이콘 · 감소 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:ICN-042",
+    "tags": [
+      "아이콘",
+      "감소",
+      "하락",
+      "하향",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "arrowdown",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "감소"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-043",
+    "category": "ICN",
+    "name": "아이콘 · 감소 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:ICN-043",
+    "tags": [
+      "아이콘",
+      "감소",
+      "하락",
+      "하향",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "arrowdown",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "감소"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-044",
+    "category": "ICN",
+    "name": "아이콘 · 감소 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:ICN-044",
+    "tags": [
+      "아이콘",
+      "감소",
+      "하락",
+      "하향",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "arrowdown",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "감소"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-045",
+    "category": "ICN",
+    "name": "아이콘 · 감소 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:ICN-045",
+    "tags": [
+      "아이콘",
+      "감소",
+      "하락",
+      "하향",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "arrowdown",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "감소"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-046",
+    "category": "ICN",
+    "name": "아이콘 · 체크리스트 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:ICN-046",
+    "tags": [
+      "아이콘",
+      "체크리스트",
+      "점검",
+      "항목",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "checklist",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "체크리스트"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-047",
+    "category": "ICN",
+    "name": "아이콘 · 체크리스트 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:ICN-047",
+    "tags": [
+      "아이콘",
+      "체크리스트",
+      "점검",
+      "항목",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "checklist",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "체크리스트"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-048",
+    "category": "ICN",
+    "name": "아이콘 · 체크리스트 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:ICN-048",
+    "tags": [
+      "아이콘",
+      "체크리스트",
+      "점검",
+      "항목",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "checklist",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "체크리스트"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-049",
+    "category": "ICN",
+    "name": "아이콘 · 체크리스트 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:ICN-049",
+    "tags": [
+      "아이콘",
+      "체크리스트",
+      "점검",
+      "항목",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "checklist",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "체크리스트"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-050",
+    "category": "ICN",
+    "name": "아이콘 · 체크리스트 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:ICN-050",
+    "tags": [
+      "아이콘",
+      "체크리스트",
+      "점검",
+      "항목",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "checklist",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "체크리스트"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-051",
+    "category": "ICN",
+    "name": "아이콘 · 취소 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:ICN-051",
+    "tags": [
+      "아이콘",
+      "취소",
+      "불가",
+      "제외",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "xcircle",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "취소"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-052",
+    "category": "ICN",
+    "name": "아이콘 · 취소 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:ICN-052",
+    "tags": [
+      "아이콘",
+      "취소",
+      "불가",
+      "제외",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "xcircle",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "취소"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-053",
+    "category": "ICN",
+    "name": "아이콘 · 취소 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:ICN-053",
+    "tags": [
+      "아이콘",
+      "취소",
+      "불가",
+      "제외",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "xcircle",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "취소"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-054",
+    "category": "ICN",
+    "name": "아이콘 · 취소 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:ICN-054",
+    "tags": [
+      "아이콘",
+      "취소",
+      "불가",
+      "제외",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "xcircle",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "취소"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-055",
+    "category": "ICN",
+    "name": "아이콘 · 취소 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:ICN-055",
+    "tags": [
+      "아이콘",
+      "취소",
+      "불가",
+      "제외",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "xcircle",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "취소"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-056",
+    "category": "ICN",
+    "name": "아이콘 · 경고 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:ICN-056",
+    "tags": [
+      "아이콘",
+      "경고",
+      "주의",
+      "위험",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "warning",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "경고"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-057",
+    "category": "ICN",
+    "name": "아이콘 · 경고 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:ICN-057",
+    "tags": [
+      "아이콘",
+      "경고",
+      "주의",
+      "위험",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "warning",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "경고"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-058",
+    "category": "ICN",
+    "name": "아이콘 · 경고 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:ICN-058",
+    "tags": [
+      "아이콘",
+      "경고",
+      "주의",
+      "위험",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "warning",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "경고"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-059",
+    "category": "ICN",
+    "name": "아이콘 · 경고 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:ICN-059",
+    "tags": [
+      "아이콘",
+      "경고",
+      "주의",
+      "위험",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "warning",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "경고"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-060",
+    "category": "ICN",
+    "name": "아이콘 · 경고 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:ICN-060",
+    "tags": [
+      "아이콘",
+      "경고",
+      "주의",
+      "위험",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "warning",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "경고"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-061",
+    "category": "ICN",
+    "name": "아이콘 · 정보 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:ICN-061",
+    "tags": [
+      "아이콘",
+      "정보",
+      "안내",
+      "설명",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "info",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "정보"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-062",
+    "category": "ICN",
+    "name": "아이콘 · 정보 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:ICN-062",
+    "tags": [
+      "아이콘",
+      "정보",
+      "안내",
+      "설명",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "info",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "정보"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-063",
+    "category": "ICN",
+    "name": "아이콘 · 정보 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:ICN-063",
+    "tags": [
+      "아이콘",
+      "정보",
+      "안내",
+      "설명",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "info",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "정보"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-064",
+    "category": "ICN",
+    "name": "아이콘 · 정보 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:ICN-064",
+    "tags": [
+      "아이콘",
+      "정보",
+      "안내",
+      "설명",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "info",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "정보"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-065",
+    "category": "ICN",
+    "name": "아이콘 · 정보 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:ICN-065",
+    "tags": [
+      "아이콘",
+      "정보",
+      "안내",
+      "설명",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "info",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "정보"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-066",
+    "category": "ICN",
+    "name": "아이콘 · 문의 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:ICN-066",
+    "tags": [
+      "아이콘",
+      "문의",
+      "질문",
+      "FAQ",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "question",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "문의"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-067",
+    "category": "ICN",
+    "name": "아이콘 · 문의 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:ICN-067",
+    "tags": [
+      "아이콘",
+      "문의",
+      "질문",
+      "FAQ",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "question",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "문의"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-068",
+    "category": "ICN",
+    "name": "아이콘 · 문의 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:ICN-068",
+    "tags": [
+      "아이콘",
+      "문의",
+      "질문",
+      "FAQ",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "question",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "문의"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-069",
+    "category": "ICN",
+    "name": "아이콘 · 문의 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:ICN-069",
+    "tags": [
+      "아이콘",
+      "문의",
+      "질문",
+      "FAQ",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "question",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "문의"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-070",
+    "category": "ICN",
+    "name": "아이콘 · 문의 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:ICN-070",
+    "tags": [
+      "아이콘",
+      "문의",
+      "질문",
+      "FAQ",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "question",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "문의"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-071",
+    "category": "ICN",
+    "name": "아이콘 · 서버 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:ICN-071",
+    "tags": [
+      "아이콘",
+      "서버",
+      "인프라",
+      "호스팅",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "server",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "서버"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-072",
+    "category": "ICN",
+    "name": "아이콘 · 서버 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:ICN-072",
+    "tags": [
+      "아이콘",
+      "서버",
+      "인프라",
+      "호스팅",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "server",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "서버"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-073",
+    "category": "ICN",
+    "name": "아이콘 · 서버 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:ICN-073",
+    "tags": [
+      "아이콘",
+      "서버",
+      "인프라",
+      "호스팅",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "server",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "서버"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-074",
+    "category": "ICN",
+    "name": "아이콘 · 서버 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:ICN-074",
+    "tags": [
+      "아이콘",
+      "서버",
+      "인프라",
+      "호스팅",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "server",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "서버"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-075",
+    "category": "ICN",
+    "name": "아이콘 · 서버 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:ICN-075",
+    "tags": [
+      "아이콘",
+      "서버",
+      "인프라",
+      "호스팅",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "server",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "서버"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-076",
+    "category": "ICN",
+    "name": "아이콘 · 업로드 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:ICN-076",
+    "tags": [
+      "아이콘",
+      "업로드",
+      "전송",
+      "등록",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "upload",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "업로드"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-077",
+    "category": "ICN",
+    "name": "아이콘 · 업로드 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:ICN-077",
+    "tags": [
+      "아이콘",
+      "업로드",
+      "전송",
+      "등록",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "upload",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "업로드"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-078",
+    "category": "ICN",
+    "name": "아이콘 · 업로드 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:ICN-078",
+    "tags": [
+      "아이콘",
+      "업로드",
+      "전송",
+      "등록",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "upload",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "업로드"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-079",
+    "category": "ICN",
+    "name": "아이콘 · 업로드 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:ICN-079",
+    "tags": [
+      "아이콘",
+      "업로드",
+      "전송",
+      "등록",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "upload",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "업로드"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-080",
+    "category": "ICN",
+    "name": "아이콘 · 업로드 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g1_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:ICN-080",
+    "tags": [
+      "아이콘",
+      "업로드",
+      "전송",
+      "등록",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "upload",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "업로드"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-081",
+    "category": "ICN",
+    "name": "아이콘 · 다운로드 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ICN-081",
+    "tags": [
+      "아이콘",
+      "다운로드",
+      "내려받기",
+      "저장",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "download",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "다운로드"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-082",
+    "category": "ICN",
+    "name": "아이콘 · 다운로드 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ICN-082",
+    "tags": [
+      "아이콘",
+      "다운로드",
+      "내려받기",
+      "저장",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "download",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "다운로드"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-083",
+    "category": "ICN",
+    "name": "아이콘 · 다운로드 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ICN-083",
+    "tags": [
+      "아이콘",
+      "다운로드",
+      "내려받기",
+      "저장",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "download",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "다운로드"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-084",
+    "category": "ICN",
+    "name": "아이콘 · 다운로드 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ICN-084",
+    "tags": [
+      "아이콘",
+      "다운로드",
+      "내려받기",
+      "저장",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "download",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "다운로드"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-085",
+    "category": "ICN",
+    "name": "아이콘 · 다운로드 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ICN-085",
+    "tags": [
+      "아이콘",
+      "다운로드",
+      "내려받기",
+      "저장",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "download",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "다운로드"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-086",
+    "category": "ICN",
+    "name": "아이콘 · 공유 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ICN-086",
+    "tags": [
+      "아이콘",
+      "공유",
+      "확산",
+      "배포",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "share",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "공유"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-087",
+    "category": "ICN",
+    "name": "아이콘 · 공유 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ICN-087",
+    "tags": [
+      "아이콘",
+      "공유",
+      "확산",
+      "배포",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "share",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "공유"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-088",
+    "category": "ICN",
+    "name": "아이콘 · 공유 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ICN-088",
+    "tags": [
+      "아이콘",
+      "공유",
+      "확산",
+      "배포",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "share",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "공유"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-089",
+    "category": "ICN",
+    "name": "아이콘 · 공유 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ICN-089",
+    "tags": [
+      "아이콘",
+      "공유",
+      "확산",
+      "배포",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "share",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "공유"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-090",
+    "category": "ICN",
+    "name": "아이콘 · 공유 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ICN-090",
+    "tags": [
+      "아이콘",
+      "공유",
+      "확산",
+      "배포",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "share",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "공유"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-091",
+    "category": "ICN",
+    "name": "아이콘 · 잠금 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ICN-091",
+    "tags": [
+      "아이콘",
+      "잠금",
+      "보안",
+      "비밀",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "lock",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "잠금"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-092",
+    "category": "ICN",
+    "name": "아이콘 · 잠금 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ICN-092",
+    "tags": [
+      "아이콘",
+      "잠금",
+      "보안",
+      "비밀",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "lock",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "잠금"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-093",
+    "category": "ICN",
+    "name": "아이콘 · 잠금 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ICN-093",
+    "tags": [
+      "아이콘",
+      "잠금",
+      "보안",
+      "비밀",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "lock",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "잠금"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-094",
+    "category": "ICN",
+    "name": "아이콘 · 잠금 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ICN-094",
+    "tags": [
+      "아이콘",
+      "잠금",
+      "보안",
+      "비밀",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "lock",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "잠금"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-095",
+    "category": "ICN",
+    "name": "아이콘 · 잠금 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ICN-095",
+    "tags": [
+      "아이콘",
+      "잠금",
+      "보안",
+      "비밀",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "lock",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "잠금"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-096",
+    "category": "ICN",
+    "name": "아이콘 · 인증 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ICN-096",
+    "tags": [
+      "아이콘",
+      "인증",
+      "권한",
+      "열쇠",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "key",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "인증"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-097",
+    "category": "ICN",
+    "name": "아이콘 · 인증 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:ICN-097",
+    "tags": [
+      "아이콘",
+      "인증",
+      "권한",
+      "열쇠",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "key",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "인증"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-098",
+    "category": "ICN",
+    "name": "아이콘 · 인증 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:ICN-098",
+    "tags": [
+      "아이콘",
+      "인증",
+      "권한",
+      "열쇠",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "key",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "인증"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-099",
+    "category": "ICN",
+    "name": "아이콘 · 인증 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:ICN-099",
+    "tags": [
+      "아이콘",
+      "인증",
+      "권한",
+      "열쇠",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "key",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "인증"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-100",
+    "category": "ICN",
+    "name": "아이콘 · 인증 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:ICN-100",
+    "tags": [
+      "아이콘",
+      "인증",
+      "권한",
+      "열쇠",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "key",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "인증"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-101",
+    "category": "ICN",
+    "name": "아이콘 · 즐겨찾기 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:ICN-101",
+    "tags": [
+      "아이콘",
+      "즐겨찾기",
+      "우수",
+      "추천",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "star",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "즐겨찾기"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-102",
+    "category": "ICN",
+    "name": "아이콘 · 즐겨찾기 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:ICN-102",
+    "tags": [
+      "아이콘",
+      "즐겨찾기",
+      "우수",
+      "추천",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "star",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "즐겨찾기"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-103",
+    "category": "ICN",
+    "name": "아이콘 · 즐겨찾기 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:ICN-103",
+    "tags": [
+      "아이콘",
+      "즐겨찾기",
+      "우수",
+      "추천",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "star",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "즐겨찾기"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-104",
+    "category": "ICN",
+    "name": "아이콘 · 즐겨찾기 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:ICN-104",
+    "tags": [
+      "아이콘",
+      "즐겨찾기",
+      "우수",
+      "추천",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "star",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "즐겨찾기"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-105",
+    "category": "ICN",
+    "name": "아이콘 · 즐겨찾기 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:ICN-105",
+    "tags": [
+      "아이콘",
+      "즐겨찾기",
+      "우수",
+      "추천",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "star",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "즐겨찾기"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-106",
+    "category": "ICN",
+    "name": "아이콘 · 관심 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:ICN-106",
+    "tags": [
+      "아이콘",
+      "관심",
+      "선호",
+      "만족",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "heart",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "관심"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-107",
+    "category": "ICN",
+    "name": "아이콘 · 관심 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:ICN-107",
+    "tags": [
+      "아이콘",
+      "관심",
+      "선호",
+      "만족",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "heart",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "관심"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-108",
+    "category": "ICN",
+    "name": "아이콘 · 관심 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:ICN-108",
+    "tags": [
+      "아이콘",
+      "관심",
+      "선호",
+      "만족",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "heart",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "관심"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-109",
+    "category": "ICN",
+    "name": "아이콘 · 관심 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:ICN-109",
+    "tags": [
+      "아이콘",
+      "관심",
+      "선호",
+      "만족",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "heart",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "관심"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-110",
+    "category": "ICN",
+    "name": "아이콘 · 관심 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:ICN-110",
+    "tags": [
+      "아이콘",
+      "관심",
+      "선호",
+      "만족",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "heart",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "관심"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-111",
+    "category": "ICN",
+    "name": "아이콘 · 북마크 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:ICN-111",
+    "tags": [
+      "아이콘",
+      "북마크",
+      "저장",
+      "표시",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "bookmark",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "북마크"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-112",
+    "category": "ICN",
+    "name": "아이콘 · 북마크 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:ICN-112",
+    "tags": [
+      "아이콘",
+      "북마크",
+      "저장",
+      "표시",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "bookmark",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "북마크"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-113",
+    "category": "ICN",
+    "name": "아이콘 · 북마크 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:ICN-113",
+    "tags": [
+      "아이콘",
+      "북마크",
+      "저장",
+      "표시",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "bookmark",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "북마크"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-114",
+    "category": "ICN",
+    "name": "아이콘 · 북마크 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:ICN-114",
+    "tags": [
+      "아이콘",
+      "북마크",
+      "저장",
+      "표시",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "bookmark",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "북마크"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-115",
+    "category": "ICN",
+    "name": "아이콘 · 북마크 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:ICN-115",
+    "tags": [
+      "아이콘",
+      "북마크",
+      "저장",
+      "표시",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "bookmark",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "북마크"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-116",
+    "category": "ICN",
+    "name": "아이콘 · 알림 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:ICN-116",
+    "tags": [
+      "아이콘",
+      "알림",
+      "공지",
+      "이벤트",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "bell",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "알림"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-117",
+    "category": "ICN",
+    "name": "아이콘 · 알림 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:ICN-117",
+    "tags": [
+      "아이콘",
+      "알림",
+      "공지",
+      "이벤트",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "bell",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "알림"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-118",
+    "category": "ICN",
+    "name": "아이콘 · 알림 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:ICN-118",
+    "tags": [
+      "아이콘",
+      "알림",
+      "공지",
+      "이벤트",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "bell",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "알림"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-119",
+    "category": "ICN",
+    "name": "아이콘 · 알림 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:ICN-119",
+    "tags": [
+      "아이콘",
+      "알림",
+      "공지",
+      "이벤트",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "bell",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "알림"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-120",
+    "category": "ICN",
+    "name": "아이콘 · 알림 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:ICN-120",
+    "tags": [
+      "아이콘",
+      "알림",
+      "공지",
+      "이벤트",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "bell",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "알림"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-121",
+    "category": "ICN",
+    "name": "아이콘 · 사용자 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:ICN-121",
+    "tags": [
+      "아이콘",
+      "사용자",
+      "회원",
+      "개인",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "user",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "사용자"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-122",
+    "category": "ICN",
+    "name": "아이콘 · 사용자 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:ICN-122",
+    "tags": [
+      "아이콘",
+      "사용자",
+      "회원",
+      "개인",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "user",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "사용자"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-123",
+    "category": "ICN",
+    "name": "아이콘 · 사용자 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:ICN-123",
+    "tags": [
+      "아이콘",
+      "사용자",
+      "회원",
+      "개인",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "user",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "사용자"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-124",
+    "category": "ICN",
+    "name": "아이콘 · 사용자 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:ICN-124",
+    "tags": [
+      "아이콘",
+      "사용자",
+      "회원",
+      "개인",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "user",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "사용자"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-125",
+    "category": "ICN",
+    "name": "아이콘 · 사용자 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:ICN-125",
+    "tags": [
+      "아이콘",
+      "사용자",
+      "회원",
+      "개인",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "user",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "사용자"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-126",
+    "category": "ICN",
+    "name": "아이콘 · 그룹 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:ICN-126",
+    "tags": [
+      "아이콘",
+      "그룹",
+      "팀",
+      "커뮤니티",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "group",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "그룹"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-127",
+    "category": "ICN",
+    "name": "아이콘 · 그룹 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:ICN-127",
+    "tags": [
+      "아이콘",
+      "그룹",
+      "팀",
+      "커뮤니티",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "group",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "그룹"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-128",
+    "category": "ICN",
+    "name": "아이콘 · 그룹 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:ICN-128",
+    "tags": [
+      "아이콘",
+      "그룹",
+      "팀",
+      "커뮤니티",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "group",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "그룹"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-129",
+    "category": "ICN",
+    "name": "아이콘 · 그룹 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:ICN-129",
+    "tags": [
+      "아이콘",
+      "그룹",
+      "팀",
+      "커뮤니티",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "group",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "그룹"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-130",
+    "category": "ICN",
+    "name": "아이콘 · 그룹 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:ICN-130",
+    "tags": [
+      "아이콘",
+      "그룹",
+      "팀",
+      "커뮤니티",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "group",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "그룹"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-131",
+    "category": "ICN",
+    "name": "아이콘 · 기관 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:ICN-131",
+    "tags": [
+      "아이콘",
+      "기관",
+      "기업",
+      "건물",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "building",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "기관"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-132",
+    "category": "ICN",
+    "name": "아이콘 · 기관 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:ICN-132",
+    "tags": [
+      "아이콘",
+      "기관",
+      "기업",
+      "건물",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "building",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "기관"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-133",
+    "category": "ICN",
+    "name": "아이콘 · 기관 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:ICN-133",
+    "tags": [
+      "아이콘",
+      "기관",
+      "기업",
+      "건물",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "building",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "기관"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-134",
+    "category": "ICN",
+    "name": "아이콘 · 기관 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:ICN-134",
+    "tags": [
+      "아이콘",
+      "기관",
+      "기업",
+      "건물",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "building",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "기관"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-135",
+    "category": "ICN",
+    "name": "아이콘 · 기관 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:ICN-135",
+    "tags": [
+      "아이콘",
+      "기관",
+      "기업",
+      "건물",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "building",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "기관"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-136",
+    "category": "ICN",
+    "name": "아이콘 · 생산 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:ICN-136",
+    "tags": [
+      "아이콘",
+      "생산",
+      "제조",
+      "공장",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "factory",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "생산"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-137",
+    "category": "ICN",
+    "name": "아이콘 · 생산 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:ICN-137",
+    "tags": [
+      "아이콘",
+      "생산",
+      "제조",
+      "공장",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "factory",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "생산"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-138",
+    "category": "ICN",
+    "name": "아이콘 · 생산 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:ICN-138",
+    "tags": [
+      "아이콘",
+      "생산",
+      "제조",
+      "공장",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "factory",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "생산"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-139",
+    "category": "ICN",
+    "name": "아이콘 · 생산 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:ICN-139",
+    "tags": [
+      "아이콘",
+      "생산",
+      "제조",
+      "공장",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "factory",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "생산"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-140",
+    "category": "ICN",
+    "name": "아이콘 · 생산 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g2_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:ICN-140",
+    "tags": [
+      "아이콘",
+      "생산",
+      "제조",
+      "공장",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "factory",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "생산"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-141",
+    "category": "ICN",
+    "name": "아이콘 · 글로벌 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ICN-141",
+    "tags": [
+      "아이콘",
+      "글로벌",
+      "해외",
+      "세계",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "globe",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "글로벌"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-142",
+    "category": "ICN",
+    "name": "아이콘 · 글로벌 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ICN-142",
+    "tags": [
+      "아이콘",
+      "글로벌",
+      "해외",
+      "세계",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "globe",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "글로벌"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-143",
+    "category": "ICN",
+    "name": "아이콘 · 글로벌 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ICN-143",
+    "tags": [
+      "아이콘",
+      "글로벌",
+      "해외",
+      "세계",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "globe",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "글로벌"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-144",
+    "category": "ICN",
+    "name": "아이콘 · 글로벌 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ICN-144",
+    "tags": [
+      "아이콘",
+      "글로벌",
+      "해외",
+      "세계",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "globe",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "글로벌"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-145",
+    "category": "ICN",
+    "name": "아이콘 · 글로벌 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ICN-145",
+    "tags": [
+      "아이콘",
+      "글로벌",
+      "해외",
+      "세계",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "globe",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "글로벌"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-146",
+    "category": "ICN",
+    "name": "아이콘 · 방향 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ICN-146",
+    "tags": [
+      "아이콘",
+      "방향",
+      "전략",
+      "탐색",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "compass",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "방향"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-147",
+    "category": "ICN",
+    "name": "아이콘 · 방향 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ICN-147",
+    "tags": [
+      "아이콘",
+      "방향",
+      "전략",
+      "탐색",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "compass",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "방향"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-148",
+    "category": "ICN",
+    "name": "아이콘 · 방향 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ICN-148",
+    "tags": [
+      "아이콘",
+      "방향",
+      "전략",
+      "탐색",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "compass",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "방향"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-149",
+    "category": "ICN",
+    "name": "아이콘 · 방향 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ICN-149",
+    "tags": [
+      "아이콘",
+      "방향",
+      "전략",
+      "탐색",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "compass",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "방향"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-150",
+    "category": "ICN",
+    "name": "아이콘 · 방향 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ICN-150",
+    "tags": [
+      "아이콘",
+      "방향",
+      "전략",
+      "탐색",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "compass",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "방향"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-151",
+    "category": "ICN",
+    "name": "아이콘 · 타이머 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ICN-151",
+    "tags": [
+      "아이콘",
+      "타이머",
+      "측정",
+      "속도",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "timer",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "타이머"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-152",
+    "category": "ICN",
+    "name": "아이콘 · 타이머 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ICN-152",
+    "tags": [
+      "아이콘",
+      "타이머",
+      "측정",
+      "속도",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "timer",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "타이머"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-153",
+    "category": "ICN",
+    "name": "아이콘 · 타이머 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ICN-153",
+    "tags": [
+      "아이콘",
+      "타이머",
+      "측정",
+      "속도",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "timer",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "타이머"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-154",
+    "category": "ICN",
+    "name": "아이콘 · 타이머 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ICN-154",
+    "tags": [
+      "아이콘",
+      "타이머",
+      "측정",
+      "속도",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "timer",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "타이머"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-155",
+    "category": "ICN",
+    "name": "아이콘 · 타이머 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ICN-155",
+    "tags": [
+      "아이콘",
+      "타이머",
+      "측정",
+      "속도",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "timer",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "타이머"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-156",
+    "category": "ICN",
+    "name": "아이콘 · 태블릿 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ICN-156",
+    "tags": [
+      "아이콘",
+      "태블릿",
+      "기기",
+      "콘텐츠",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "tablet",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "태블릿"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-157",
+    "category": "ICN",
+    "name": "아이콘 · 태블릿 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:ICN-157",
+    "tags": [
+      "아이콘",
+      "태블릿",
+      "기기",
+      "콘텐츠",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "tablet",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "태블릿"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-158",
+    "category": "ICN",
+    "name": "아이콘 · 태블릿 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:ICN-158",
+    "tags": [
+      "아이콘",
+      "태블릿",
+      "기기",
+      "콘텐츠",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "tablet",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "태블릿"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-159",
+    "category": "ICN",
+    "name": "아이콘 · 태블릿 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:ICN-159",
+    "tags": [
+      "아이콘",
+      "태블릿",
+      "기기",
+      "콘텐츠",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "tablet",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "태블릿"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-160",
+    "category": "ICN",
+    "name": "아이콘 · 태블릿 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:ICN-160",
+    "tags": [
+      "아이콘",
+      "태블릿",
+      "기기",
+      "콘텐츠",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "tablet",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "태블릿"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-161",
+    "category": "ICN",
+    "name": "아이콘 · 노트북 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:ICN-161",
+    "tags": [
+      "아이콘",
+      "노트북",
+      "업무",
+      "온라인",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "laptop",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "노트북"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-162",
+    "category": "ICN",
+    "name": "아이콘 · 노트북 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:ICN-162",
+    "tags": [
+      "아이콘",
+      "노트북",
+      "업무",
+      "온라인",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "laptop",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "노트북"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-163",
+    "category": "ICN",
+    "name": "아이콘 · 노트북 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:ICN-163",
+    "tags": [
+      "아이콘",
+      "노트북",
+      "업무",
+      "온라인",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "laptop",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "노트북"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-164",
+    "category": "ICN",
+    "name": "아이콘 · 노트북 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:ICN-164",
+    "tags": [
+      "아이콘",
+      "노트북",
+      "업무",
+      "온라인",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "laptop",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "노트북"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-165",
+    "category": "ICN",
+    "name": "아이콘 · 노트북 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:ICN-165",
+    "tags": [
+      "아이콘",
+      "노트북",
+      "업무",
+      "온라인",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "laptop",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "노트북"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-166",
+    "category": "ICN",
+    "name": "아이콘 · 카메라 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:ICN-166",
+    "tags": [
+      "아이콘",
+      "카메라",
+      "촬영",
+      "미디어",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "camera",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "카메라"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-167",
+    "category": "ICN",
+    "name": "아이콘 · 카메라 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:ICN-167",
+    "tags": [
+      "아이콘",
+      "카메라",
+      "촬영",
+      "미디어",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "camera",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "카메라"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-168",
+    "category": "ICN",
+    "name": "아이콘 · 카메라 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:ICN-168",
+    "tags": [
+      "아이콘",
+      "카메라",
+      "촬영",
+      "미디어",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "camera",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "카메라"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-169",
+    "category": "ICN",
+    "name": "아이콘 · 카메라 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:ICN-169",
+    "tags": [
+      "아이콘",
+      "카메라",
+      "촬영",
+      "미디어",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "camera",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "카메라"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-170",
+    "category": "ICN",
+    "name": "아이콘 · 카메라 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:ICN-170",
+    "tags": [
+      "아이콘",
+      "카메라",
+      "촬영",
+      "미디어",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "camera",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "카메라"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-171",
+    "category": "ICN",
+    "name": "아이콘 · 필터 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:ICN-171",
+    "tags": [
+      "아이콘",
+      "필터",
+      "선별",
+      "정제",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "filter",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "필터"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-172",
+    "category": "ICN",
+    "name": "아이콘 · 필터 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:ICN-172",
+    "tags": [
+      "아이콘",
+      "필터",
+      "선별",
+      "정제",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "filter",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "필터"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-173",
+    "category": "ICN",
+    "name": "아이콘 · 필터 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:ICN-173",
+    "tags": [
+      "아이콘",
+      "필터",
+      "선별",
+      "정제",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "filter",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "필터"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-174",
+    "category": "ICN",
+    "name": "아이콘 · 필터 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:ICN-174",
+    "tags": [
+      "아이콘",
+      "필터",
+      "선별",
+      "정제",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "filter",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "필터"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-175",
+    "category": "ICN",
+    "name": "아이콘 · 필터 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:ICN-175",
+    "tags": [
+      "아이콘",
+      "필터",
+      "선별",
+      "정제",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "filter",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "필터"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-176",
+    "category": "ICN",
+    "name": "아이콘 · 새로고침 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:ICN-176",
+    "tags": [
+      "아이콘",
+      "새로고침",
+      "갱신",
+      "순환",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "refresh",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "새로고침"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-177",
+    "category": "ICN",
+    "name": "아이콘 · 새로고침 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:ICN-177",
+    "tags": [
+      "아이콘",
+      "새로고침",
+      "갱신",
+      "순환",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "refresh",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "새로고침"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-178",
+    "category": "ICN",
+    "name": "아이콘 · 새로고침 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:ICN-178",
+    "tags": [
+      "아이콘",
+      "새로고침",
+      "갱신",
+      "순환",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "refresh",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "새로고침"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-179",
+    "category": "ICN",
+    "name": "아이콘 · 새로고침 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:ICN-179",
+    "tags": [
+      "아이콘",
+      "새로고침",
+      "갱신",
+      "순환",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "refresh",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "새로고침"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-180",
+    "category": "ICN",
+    "name": "아이콘 · 새로고침 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:ICN-180",
+    "tags": [
+      "아이콘",
+      "새로고침",
+      "갱신",
+      "순환",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "refresh",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "새로고침"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-181",
+    "category": "ICN",
+    "name": "아이콘 · 추가 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:ICN-181",
+    "tags": [
+      "아이콘",
+      "추가",
+      "신규",
+      "확대",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "plus",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "추가"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-182",
+    "category": "ICN",
+    "name": "아이콘 · 추가 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:ICN-182",
+    "tags": [
+      "아이콘",
+      "추가",
+      "신규",
+      "확대",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "plus",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "추가"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-183",
+    "category": "ICN",
+    "name": "아이콘 · 추가 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:ICN-183",
+    "tags": [
+      "아이콘",
+      "추가",
+      "신규",
+      "확대",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "plus",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "추가"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-184",
+    "category": "ICN",
+    "name": "아이콘 · 추가 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:ICN-184",
+    "tags": [
+      "아이콘",
+      "추가",
+      "신규",
+      "확대",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "plus",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "추가"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-185",
+    "category": "ICN",
+    "name": "아이콘 · 추가 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:ICN-185",
+    "tags": [
+      "아이콘",
+      "추가",
+      "신규",
+      "확대",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "plus",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "추가"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-186",
+    "category": "ICN",
+    "name": "아이콘 · 배터리 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:ICN-186",
+    "tags": [
+      "아이콘",
+      "배터리",
+      "전력",
+      "지속",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "battery",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "배터리"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-187",
+    "category": "ICN",
+    "name": "아이콘 · 배터리 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:ICN-187",
+    "tags": [
+      "아이콘",
+      "배터리",
+      "전력",
+      "지속",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "battery",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "배터리"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-188",
+    "category": "ICN",
+    "name": "아이콘 · 배터리 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:ICN-188",
+    "tags": [
+      "아이콘",
+      "배터리",
+      "전력",
+      "지속",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "battery",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "배터리"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-189",
+    "category": "ICN",
+    "name": "아이콘 · 배터리 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:ICN-189",
+    "tags": [
+      "아이콘",
+      "배터리",
+      "전력",
+      "지속",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "battery",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "배터리"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-190",
+    "category": "ICN",
+    "name": "아이콘 · 배터리 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:ICN-190",
+    "tags": [
+      "아이콘",
+      "배터리",
+      "전력",
+      "지속",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "battery",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "배터리"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-191",
+    "category": "ICN",
+    "name": "아이콘 · 지도 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:ICN-191",
+    "tags": [
+      "아이콘",
+      "지도",
+      "위치",
+      "권역",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "map",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "지도"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-192",
+    "category": "ICN",
+    "name": "아이콘 · 지도 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:ICN-192",
+    "tags": [
+      "아이콘",
+      "지도",
+      "위치",
+      "권역",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "map",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "지도"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-193",
+    "category": "ICN",
+    "name": "아이콘 · 지도 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:ICN-193",
+    "tags": [
+      "아이콘",
+      "지도",
+      "위치",
+      "권역",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "map",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "지도"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-194",
+    "category": "ICN",
+    "name": "아이콘 · 지도 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:ICN-194",
+    "tags": [
+      "아이콘",
+      "지도",
+      "위치",
+      "권역",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "map",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "지도"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-195",
+    "category": "ICN",
+    "name": "아이콘 · 지도 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:ICN-195",
+    "tags": [
+      "아이콘",
+      "지도",
+      "위치",
+      "권역",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "map",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "지도"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-196",
+    "category": "ICN",
+    "name": "아이콘 · 홈 (시안)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:ICN-196",
+    "tags": [
+      "아이콘",
+      "홈",
+      "메인",
+      "기본",
+      "플랫",
+      "2색",
+      "시안"
+    ],
+    "params": {
+      "glyph": "home",
+      "colors": 2,
+      "accent": "cyan"
+    },
+    "bindings": {
+      "label": "홈"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-197",
+    "category": "ICN",
+    "name": "아이콘 · 홈 (틸)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:ICN-197",
+    "tags": [
+      "아이콘",
+      "홈",
+      "메인",
+      "기본",
+      "플랫",
+      "2색",
+      "틸"
+    ],
+    "params": {
+      "glyph": "home",
+      "colors": 2,
+      "accent": "teal"
+    },
+    "bindings": {
+      "label": "홈"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-198",
+    "category": "ICN",
+    "name": "아이콘 · 홈 (블루)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:ICN-198",
+    "tags": [
+      "아이콘",
+      "홈",
+      "메인",
+      "기본",
+      "플랫",
+      "2색",
+      "블루"
+    ],
+    "params": {
+      "glyph": "home",
+      "colors": 2,
+      "accent": "blue"
+    },
+    "bindings": {
+      "label": "홈"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-199",
+    "category": "ICN",
+    "name": "아이콘 · 홈 (퍼플)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:ICN-199",
+    "tags": [
+      "아이콘",
+      "홈",
+      "메인",
+      "기본",
+      "플랫",
+      "2색",
+      "퍼플"
+    ],
+    "params": {
+      "glyph": "home",
+      "colors": 2,
+      "accent": "purple"
+    },
+    "bindings": {
+      "label": "홈"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-200",
+    "category": "ICN",
+    "name": "아이콘 · 홈 (네이비)",
+    "file": "decks/11_icons/ICN_bulk_g3_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:ICN-200",
+    "tags": [
+      "아이콘",
+      "홈",
+      "메인",
+      "기본",
+      "플랫",
+      "2색",
+      "네이비"
+    ],
+    "params": {
+      "glyph": "home",
+      "colors": 2,
+      "accent": "navy"
+    },
+    "bindings": {
+      "label": "홈"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  }
+]

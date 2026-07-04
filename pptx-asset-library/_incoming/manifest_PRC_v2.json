@@ -1,0 +1,438 @@
+[
+  {
+    "id": "PRC-013",
+    "category": "PRC",
+    "name": "퍼널 깔때기 4단",
+    "file": "decks/03_process/PRC_funnel_v2.pptx",
+    "slide": 1,
+    "anchor": "asset:PRC-013",
+    "tags": [
+      "프로세스",
+      "퍼널",
+      "깔때기",
+      "4단계",
+      "전환"
+    ],
+    "params": {
+      "count": 4,
+      "style": "funnel"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "도달"
+        },
+        {
+          "label": "관심"
+        },
+        {
+          "label": "검토"
+        },
+        {
+          "label": "전환"
+        }
+      ],
+      "count": 4,
+      "direction": "top-down"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "전환흐름",
+      "고객여정",
+      "단계별축소"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-014",
+    "category": "PRC",
+    "name": "게이트형 파이프라인 (박스+판단)",
+    "file": "decks/03_process/PRC_gated-pipeline_v2.pptx",
+    "slide": 1,
+    "anchor": "asset:PRC-014",
+    "tags": [
+      "프로세스",
+      "파이프라인",
+      "게이트",
+      "판단",
+      "반려"
+    ],
+    "params": {
+      "count": 5,
+      "style": "gated-pipeline"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "요구 정의"
+        },
+        {
+          "label": "요건 검토",
+          "type": "gate"
+        },
+        {
+          "label": "설계·구현"
+        },
+        {
+          "label": "품질 승인",
+          "type": "gate"
+        },
+        {
+          "label": "배포·이관"
+        }
+      ],
+      "count": 5,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "품질게이트",
+      "검수절차",
+      "승인프로세스"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-015",
+    "category": "PRC",
+    "name": "세로 번호 스텝 5 (번호원+설명)",
+    "file": "decks/03_process/PRC_numbered-steps_v2.pptx",
+    "slide": 1,
+    "anchor": "asset:PRC-015",
+    "tags": [
+      "프로세스",
+      "5단계",
+      "세로",
+      "번호",
+      "설명카드"
+    ],
+    "params": {
+      "count": 5,
+      "style": "numbered-steps"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "요구 분석"
+        },
+        {
+          "label": "설계"
+        },
+        {
+          "label": "구축"
+        },
+        {
+          "label": "검증"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 5,
+      "direction": "vertical"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행절차",
+      "추진단계",
+      "방법론"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-016",
+    "category": "PRC",
+    "name": "허브앤스포크 프로세스 (중앙+방사 6)",
+    "file": "decks/03_process/PRC_hub-spoke_v2.pptx",
+    "slide": 1,
+    "anchor": "asset:PRC-016",
+    "tags": [
+      "프로세스",
+      "허브앤스포크",
+      "방사형",
+      "중앙집중",
+      "연계"
+    ],
+    "params": {
+      "count": 6,
+      "style": "hub-spoke"
+    },
+    "bindings": {
+      "hub": "통합 관리 플랫폼",
+      "spokes": [
+        {
+          "label": "데이터 수집"
+        },
+        {
+          "label": "정제·표준화"
+        },
+        {
+          "label": "품질 검증"
+        },
+        {
+          "label": "분석·활용"
+        },
+        {
+          "label": "성과 관리"
+        },
+        {
+          "label": "대외 연계"
+        }
+      ],
+      "count": 6,
+      "direction": "radial"
+    },
+    "editable": [
+      "hub-text",
+      "spoke-text",
+      "spoke-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "통합체계",
+      "연계구조",
+      "플랫폼중심"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-017",
+    "category": "PRC",
+    "name": "지그재그 흐름 4 (좌우 교차)",
+    "file": "decks/03_process/PRC_zigzag_v2.pptx",
+    "slide": 1,
+    "anchor": "asset:PRC-017",
+    "tags": [
+      "프로세스",
+      "4단계",
+      "지그재그",
+      "S자",
+      "교차흐름"
+    ],
+    "params": {
+      "count": 4,
+      "style": "zigzag"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "기획"
+        },
+        {
+          "label": "개발"
+        },
+        {
+          "label": "검증"
+        },
+        {
+          "label": "배포"
+        }
+      ],
+      "count": 4,
+      "direction": "snake"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진절차",
+      "업무흐름",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-018",
+    "category": "PRC",
+    "name": "하강 계단 화살표 4 (우하향)",
+    "file": "decks/03_process/PRC_descending-stairs_v2.pptx",
+    "slide": 1,
+    "anchor": "asset:PRC-018",
+    "tags": [
+      "프로세스",
+      "4단계",
+      "계단식",
+      "우하향",
+      "저감"
+    ],
+    "params": {
+      "count": 4,
+      "style": "descending-stairs"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "리스크 식별"
+        },
+        {
+          "label": "영향 분석"
+        },
+        {
+          "label": "완화 조치"
+        },
+        {
+          "label": "잔여 관리"
+        }
+      ],
+      "count": 4,
+      "direction": "down-right"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "리스크저감",
+      "단계적축소",
+      "하향절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-019",
+    "category": "PRC",
+    "name": "분기/병합 흐름 (1→2갈래→합류)",
+    "file": "decks/03_process/PRC_branch-merge_v2.pptx",
+    "slide": 1,
+    "anchor": "asset:PRC-019",
+    "tags": [
+      "프로세스",
+      "분기",
+      "병합",
+      "병렬경로",
+      "합류"
+    ],
+    "params": {
+      "count": 4,
+      "style": "branch-merge"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "요청 접수"
+        },
+        {
+          "label": "자동 처리 경로",
+          "branch": "A"
+        },
+        {
+          "label": "수동 검토 경로",
+          "branch": "B"
+        },
+        {
+          "label": "결과 통합"
+        }
+      ],
+      "count": 4,
+      "direction": "split-merge"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "병렬처리",
+      "분기흐름",
+      "통합처리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-020",
+    "category": "PRC",
+    "name": "원형 5단계 순환",
+    "file": "decks/03_process/PRC_circular5_v2.pptx",
+    "slide": 1,
+    "anchor": "asset:PRC-020",
+    "tags": [
+      "프로세스",
+      "5단계",
+      "순환",
+      "사이클",
+      "환류"
+    ],
+    "params": {
+      "count": 5,
+      "style": "circular"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "계획"
+        },
+        {
+          "label": "실행"
+        },
+        {
+          "label": "점검"
+        },
+        {
+          "label": "개선"
+        },
+        {
+          "label": "확산"
+        }
+      ],
+      "count": 5,
+      "direction": "cyclic"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "환류체계",
+      "지속개선",
+      "운영사이클"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  }
+]

@@ -1,0 +1,469 @@
+[
+  {
+    "id": "TML-001",
+    "category": "timeline",
+    "name": "수평 타임라인 (마일스톤 5개)",
+    "file": "decks/05_timeline/TML_timeline_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:TML-001",
+    "tags": [
+      "타임라인",
+      "수평",
+      "마일스톤",
+      "추진일정"
+    ],
+    "params": {
+      "orientation": "horizontal",
+      "count": 5,
+      "label_alt": true
+    },
+    "bindings": {
+      "milestones": [
+        {
+          "label": "착수·분석",
+          "when": "M1"
+        },
+        {
+          "label": "설계",
+          "when": "M2"
+        },
+        {
+          "label": "구축",
+          "when": "M3"
+        },
+        {
+          "label": "시험·안정화",
+          "when": "M4"
+        },
+        {
+          "label": "최종납품",
+          "when": "M5"
+        }
+      ],
+      "count": 5,
+      "orientation": "horizontal"
+    },
+    "editable": [
+      "milestone-text",
+      "count",
+      "color",
+      "when-label"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "단계별 계획",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-002",
+    "category": "timeline",
+    "name": "간트차트형 일정표 (작업 4행)",
+    "file": "decks/05_timeline/TML_timeline_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:TML-002",
+    "tags": [
+      "타임라인",
+      "간트",
+      "일정표",
+      "추진일정",
+      "막대"
+    ],
+    "params": {
+      "tasks": 4,
+      "periods": 6,
+      "shape_based": true
+    },
+    "bindings": {
+      "periods": [
+        "1분기",
+        "2분기",
+        "3분기",
+        "4분기",
+        "5분기",
+        "6분기"
+      ],
+      "tasks": [
+        {
+          "name": "착수·분석",
+          "start": 0,
+          "span": 2
+        },
+        {
+          "name": "설계",
+          "start": 1,
+          "span": 2
+        },
+        {
+          "name": "구축",
+          "start": 2,
+          "span": 3
+        },
+        {
+          "name": "시험·안정화",
+          "start": 4,
+          "span": 2
+        }
+      ],
+      "count": 4,
+      "orientation": "horizontal"
+    },
+    "editable": [
+      "milestone-text",
+      "count",
+      "bar-length",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-003",
+    "category": "timeline",
+    "name": "단계별 로드맵 (4단계 화살표)",
+    "file": "decks/05_timeline/TML_roadmap_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:TML-003",
+    "tags": [
+      "로드맵",
+      "단계별",
+      "화살표",
+      "산출물",
+      "추진일정"
+    ],
+    "params": {
+      "phases": 4,
+      "band": "chevron",
+      "items_per_phase": 3
+    },
+    "bindings": {
+      "phases": [
+        {
+          "no": 1,
+          "name": "착수·분석"
+        },
+        {
+          "no": 2,
+          "name": "설계"
+        },
+        {
+          "no": 3,
+          "name": "구축"
+        },
+        {
+          "no": 4,
+          "name": "시험·안정화"
+        }
+      ],
+      "count": 4,
+      "orientation": "horizontal"
+    },
+    "editable": [
+      "milestone-text",
+      "count",
+      "color",
+      "bar-length"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계별 계획",
+      "로드맵",
+      "추진일정"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-004",
+    "category": "timeline",
+    "name": "분기별 로드맵 (Q1~Q4)",
+    "file": "decks/05_timeline/TML_roadmap_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:TML-004",
+    "tags": [
+      "로드맵",
+      "분기별",
+      "컬럼",
+      "활동카드",
+      "추진일정"
+    ],
+    "params": {
+      "quarters": 4,
+      "cards_per_q": 3
+    },
+    "bindings": {
+      "quarters": [
+        {
+          "q": "Q1",
+          "theme": "착수·분석"
+        },
+        {
+          "q": "Q2",
+          "theme": "설계"
+        },
+        {
+          "q": "Q3",
+          "theme": "구축"
+        },
+        {
+          "q": "Q4",
+          "theme": "안정화"
+        }
+      ],
+      "count": 4,
+      "orientation": "horizontal"
+    },
+    "editable": [
+      "milestone-text",
+      "count",
+      "color",
+      "bar-length"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분기 계획",
+      "로드맵",
+      "추진일정"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-005",
+    "category": "timeline",
+    "name": "마일스톤 플래그 타임라인",
+    "file": "decks/05_timeline/TML_timeline_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:TML-005",
+    "tags": [
+      "타임라인",
+      "마일스톤",
+      "플래그",
+      "깃발",
+      "추진일정"
+    ],
+    "params": {
+      "orientation": "horizontal",
+      "count": 4,
+      "flag": true
+    },
+    "bindings": {
+      "milestones": [
+        {
+          "label": "사업 착수",
+          "when": "M1"
+        },
+        {
+          "label": "중간보고",
+          "when": "M3"
+        },
+        {
+          "label": "시범 운영",
+          "when": "M4"
+        },
+        {
+          "label": "최종납품",
+          "when": "M6"
+        }
+      ],
+      "count": 4,
+      "orientation": "horizontal"
+    },
+    "editable": [
+      "milestone-text",
+      "count",
+      "color",
+      "when-label"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-006",
+    "category": "timeline",
+    "name": "로드맵 3트랙 (트랙별 레인)",
+    "file": "decks/05_timeline/TML_timeline_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:TML-006",
+    "tags": [
+      "로드맵",
+      "트랙",
+      "레인",
+      "활동박스",
+      "추진일정"
+    ],
+    "params": {
+      "tracks": 3,
+      "phases": 4
+    },
+    "bindings": {
+      "phases": [
+        "1단계",
+        "2단계",
+        "3단계",
+        "4단계"
+      ],
+      "tracks": [
+        {
+          "name": "기획"
+        },
+        {
+          "name": "구축"
+        },
+        {
+          "name": "운영"
+        }
+      ],
+      "count": 3,
+      "orientation": "horizontal"
+    },
+    "editable": [
+      "milestone-text",
+      "count",
+      "color",
+      "bar-length"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "로드맵",
+      "추진체계",
+      "단계별 계획"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-007",
+    "category": "timeline",
+    "name": "연차별 발전 로드맵 (계단 상승형)",
+    "file": "decks/05_timeline/TML_roadmap_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:TML-007",
+    "tags": [
+      "로드맵",
+      "연차별",
+      "계단",
+      "성장",
+      "추진일정"
+    ],
+    "params": {
+      "steps": 3,
+      "shape": "stair"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "year": "1년차",
+          "focus": "기반 구축"
+        },
+        {
+          "year": "2년차",
+          "focus": "확산·고도화"
+        },
+        {
+          "year": "3년차",
+          "focus": "고도화·성과"
+        }
+      ],
+      "count": 3,
+      "orientation": "horizontal"
+    },
+    "editable": [
+      "milestone-text",
+      "count",
+      "color",
+      "bar-length"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "중장기 계획",
+      "로드맵",
+      "발전 방향"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-008",
+    "category": "timeline",
+    "name": "추진일정 요약 (단계·활동·산출물)",
+    "file": "decks/05_timeline/TML_roadmap_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:TML-008",
+    "tags": [
+      "추진일정",
+      "로드맵",
+      "표형",
+      "산출물",
+      "매핑"
+    ],
+    "params": {
+      "cols": 3,
+      "rows": 5,
+      "table": true
+    },
+    "bindings": {
+      "rows": [
+        {
+          "stage": "1단계 착수·분석",
+          "deliverable": "요구사항 정의서"
+        },
+        {
+          "stage": "2단계 설계",
+          "deliverable": "설계서 일체"
+        },
+        {
+          "stage": "3단계 구축",
+          "deliverable": "개발 산출물"
+        },
+        {
+          "stage": "4단계 시험·안정화",
+          "deliverable": "시험 결과서"
+        },
+        {
+          "stage": "5단계 최종납품",
+          "deliverable": "완료보고서"
+        }
+      ],
+      "count": 5,
+      "orientation": "table"
+    },
+    "editable": [
+      "milestone-text",
+      "count",
+      "color",
+      "bar-length"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "단계별 계획",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  }
+]

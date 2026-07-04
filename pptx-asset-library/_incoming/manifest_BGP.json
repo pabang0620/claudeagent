@@ -1,0 +1,414 @@
+[
+  {
+    "id": "BGP-001",
+    "category": "BGP",
+    "name": "표지 배경A · 좌 네이비 패널 + 블루 악센트",
+    "file": "decks/10_backgrounds/BGP_cover_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:BGP-001",
+    "tags": [
+      "표지",
+      "배경",
+      "네이비패널",
+      "블루악센트"
+    ],
+    "params": {
+      "style": "cover-left-navy",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-002",
+    "category": "BGP",
+    "name": "표지 배경B · 하단 네이비 밴드 + 상단 그라데이션",
+    "file": "decks/10_backgrounds/BGP_cover_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:BGP-002",
+    "tags": [
+      "표지",
+      "배경",
+      "그라데이션",
+      "네이비패널"
+    ],
+    "params": {
+      "style": "cover-bottom-band",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-003",
+    "category": "BGP",
+    "name": "표지 배경C · 우하단 사선 기하 레이어",
+    "file": "decks/10_backgrounds/BGP_cover_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:BGP-003",
+    "tags": [
+      "표지",
+      "배경",
+      "기하",
+      "네이비패널"
+    ],
+    "params": {
+      "style": "cover-diagonal-layers",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-004",
+    "category": "BGP",
+    "name": "섹션 구분 배경A · 좌 컬러바 + 대형 섹션번호",
+    "file": "decks/10_backgrounds/BGP_cover_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:BGP-004",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "네이비패널",
+      "섹션번호"
+    ],
+    "params": {
+      "style": "section-number-left-bar",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "제목을 입력하세요",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-005",
+    "category": "BGP",
+    "name": "섹션 구분 배경B · 상단 네이비 밴드 + 큰 제목",
+    "file": "decks/10_backgrounds/BGP_cover_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:BGP-005",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "네이비패널",
+      "헤더밴드"
+    ],
+    "params": {
+      "style": "section-top-band",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "제목을 입력하세요",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-006",
+    "category": "BGP",
+    "name": "간지 배경 · 좌 네이비 사이드바 + 우 목차 리스트",
+    "file": "decks/10_backgrounds/BGP_section-panel_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:BGP-006",
+    "tags": [
+      "섹션간지",
+      "배경",
+      "네이비패널",
+      "목차"
+    ],
+    "params": {
+      "style": "toc-sidebar-left",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "목차",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "간지"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-007",
+    "category": "BGP",
+    "name": "사이드 패널 · 좌측 세로 네이비(본문 강조)",
+    "file": "decks/10_backgrounds/BGP_section-panel_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:BGP-007",
+    "tags": [
+      "배경",
+      "네이비패널",
+      "사이드패널"
+    ],
+    "params": {
+      "style": "side-panel-left",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "본문 강조",
+      "사이드 패널"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-008",
+    "category": "BGP",
+    "name": "헤더 밴드 · 상단 가로 네이비 + 블루 악센트(반복)",
+    "file": "decks/10_backgrounds/BGP_section-panel_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:BGP-008",
+    "tags": [
+      "배경",
+      "네이비패널",
+      "헤더밴드",
+      "블루악센트"
+    ],
+    "params": {
+      "style": "header-band-top",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "제목을 입력하세요",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 헤더",
+      "반복 사용"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-009",
+    "category": "BGP",
+    "name": "콘텐츠 푸터 바 · 네이비 solid",
+    "file": "decks/10_backgrounds/BGP_section-panel_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:BGP-009",
+    "tags": [
+      "배경",
+      "네이비패널",
+      "푸터"
+    ],
+    "params": {
+      "style": "footer-navy-bar",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 푸터",
+      "페이지 표기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-010",
+    "category": "BGP",
+    "name": "콘텐츠 푸터 바 · 라인 + 블루 블록",
+    "file": "decks/10_backgrounds/BGP_section-panel_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:BGP-010",
+    "tags": [
+      "배경",
+      "푸터",
+      "블루악센트"
+    ],
+    "params": {
+      "style": "footer-line-accent",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "사업명",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 푸터",
+      "페이지 표기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-011",
+    "category": "BGP",
+    "name": "코너 장식 · 우상단 기하 삼각 레이어(절제)",
+    "file": "decks/10_backgrounds/BGP_section-panel_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:BGP-011",
+    "tags": [
+      "배경",
+      "기하",
+      "네이비패널",
+      "블루악센트"
+    ],
+    "params": {
+      "style": "corner-geo-topright",
+      "gradient": false
+    },
+    "bindings": {
+      "title": "제목을 입력하세요",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "코너 장식",
+      "콘텐츠 배경"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "BGP-012",
+    "category": "BGP",
+    "name": "라이트 그레이 콘텐츠 배경 · F7F9FC + 미세 도형",
+    "file": "decks/10_backgrounds/BGP_section-panel_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:BGP-012",
+    "tags": [
+      "배경",
+      "라이트",
+      "콘텐츠배경"
+    ],
+    "params": {
+      "style": "content-lightgray",
+      "gradient": false,
+      "bg_hex": "F7F9FC"
+    },
+    "bindings": {
+      "title": "제목을 입력하세요",
+      "year": "2026",
+      "part": "01"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 배경",
+      "섹션 배경"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  }
+]

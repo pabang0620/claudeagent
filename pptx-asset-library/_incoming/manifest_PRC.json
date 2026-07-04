@@ -1,0 +1,626 @@
+[
+  {
+    "id": "PRC-001",
+    "category": "PRC",
+    "name": "셰브론 밴드 3단계",
+    "file": "decks/03_process/PRC_chevron_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:PRC-001",
+    "tags": [
+      "프로세스",
+      "3단계",
+      "셰브론",
+      "추진절차"
+    ],
+    "params": {
+      "count": 3,
+      "style": "chevron"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "착수·현황분석"
+        },
+        {
+          "label": "체계수립"
+        },
+        {
+          "label": "활용·성과확산"
+        }
+      ],
+      "count": 3,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진절차",
+      "수행방법론",
+      "사업흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-002",
+    "category": "PRC",
+    "name": "셰브론 밴드 4단계",
+    "file": "decks/03_process/PRC_chevron_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:PRC-002",
+    "tags": [
+      "프로세스",
+      "4단계",
+      "셰브론",
+      "추진절차"
+    ],
+    "params": {
+      "count": 4,
+      "style": "chevron"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "착수·분석"
+        },
+        {
+          "label": "체계수립"
+        },
+        {
+          "label": "정보검증"
+        },
+        {
+          "label": "활용기획"
+        }
+      ],
+      "count": 4,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진절차",
+      "수행방법론",
+      "사업흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-003",
+    "category": "PRC",
+    "name": "셰브론 밴드 5단계",
+    "file": "decks/03_process/PRC_chevron_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:PRC-003",
+    "tags": [
+      "프로세스",
+      "5단계",
+      "셰브론",
+      "추진절차"
+    ],
+    "params": {
+      "count": 5,
+      "style": "chevron"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "착수·분석"
+        },
+        {
+          "label": "현황조사"
+        },
+        {
+          "label": "체계수립"
+        },
+        {
+          "label": "정보검증"
+        },
+        {
+          "label": "활용기획"
+        }
+      ],
+      "count": 5,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진절차",
+      "수행방법론",
+      "사업흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-006",
+    "category": "PRC",
+    "name": "화살표 계단식 우상향 4단계",
+    "file": "decks/03_process/PRC_chevron_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:PRC-006",
+    "tags": [
+      "프로세스",
+      "4단계",
+      "계단식",
+      "우상향",
+      "성장"
+    ],
+    "params": {
+      "count": 4,
+      "style": "staircase"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "기반구축"
+        },
+        {
+          "label": "체계수립"
+        },
+        {
+          "label": "고도화"
+        },
+        {
+          "label": "성과확산"
+        }
+      ],
+      "count": 4,
+      "direction": "up-right"
+    },
+    "editable": [
+      "step-text",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계적성장",
+      "고도화로드맵",
+      "추진전략"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-007",
+    "category": "PRC",
+    "name": "박스+화살표 수평 흐름 4단계",
+    "file": "decks/03_process/PRC_flow-box_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:PRC-007",
+    "tags": [
+      "프로세스",
+      "4단계",
+      "박스흐름",
+      "수평",
+      "추진절차"
+    ],
+    "params": {
+      "count": 4,
+      "style": "flow-box"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "착수·분석",
+          "desc": "사업 착수 및\n현황·요구사항 분석"
+        },
+        {
+          "label": "체계수립",
+          "desc": "추진체계 설계 및\n관리방안 수립"
+        },
+        {
+          "label": "정보검증",
+          "desc": "수집 정보의\n정합성·신뢰성 검증"
+        },
+        {
+          "label": "활용기획",
+          "desc": "성과 활용 및\n확산 방안 기획"
+        }
+      ],
+      "count": 4,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행방법론",
+      "추진절차",
+      "업무흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-008",
+    "category": "PRC",
+    "name": "박스+화살표 수평 흐름 3단계",
+    "file": "decks/03_process/PRC_flow-box_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:PRC-008",
+    "tags": [
+      "프로세스",
+      "3단계",
+      "박스흐름",
+      "수평",
+      "추진절차"
+    ],
+    "params": {
+      "count": 3,
+      "style": "flow-box"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "체계수립",
+          "desc": "정보 수집·관리\n추진체계 구축"
+        },
+        {
+          "label": "정보검증",
+          "desc": "데이터 정합성\n교차 검증 수행"
+        },
+        {
+          "label": "활용기획",
+          "desc": "검증정보 기반\n서비스 활용 기획"
+        }
+      ],
+      "count": 3,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행방법론",
+      "추진절차",
+      "업무흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-011",
+    "category": "PRC",
+    "name": "컬러헤더+2줄설명 밴드 3단",
+    "file": "decks/03_process/PRC_flow-box_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:PRC-011",
+    "tags": [
+      "프로세스",
+      "3단계",
+      "헤더밴드",
+      "추진절차",
+      "체계수립"
+    ],
+    "params": {
+      "count": 3,
+      "style": "header-band"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "체계수립",
+          "desc": "정보 수집·관리 체계 설계\n표준 프로세스 정립"
+        },
+        {
+          "label": "정보검증",
+          "desc": "수집 데이터 정합성 점검\n교차·전문가 검증 수행"
+        },
+        {
+          "label": "활용기획",
+          "desc": "검증 정보의 서비스 연계\n성과 활용·확산 기획"
+        }
+      ],
+      "count": 3,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진절차",
+      "수행방법론",
+      "정보관리흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-012",
+    "category": "PRC",
+    "name": "좌우 대비 화살표 (현재→미래)",
+    "file": "decks/03_process/PRC_flow-box_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:PRC-012",
+    "tags": [
+      "프로세스",
+      "2단계",
+      "비교",
+      "BeforeAfter",
+      "현재미래"
+    ],
+    "params": {
+      "count": 2,
+      "style": "before-after"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현재 (As-Is)",
+          "desc": "· 정보 분산·수기 관리\n· 검증 절차 부재\n· 활용도 저조"
+        },
+        {
+          "label": "미래 (To-Be)",
+          "desc": "· 통합 관리체계 구축\n· 검증 프로세스 정착\n· 성과 활용 극대화"
+        }
+      ],
+      "count": 2,
+      "direction": "left-right"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "개선효과",
+      "기대효과",
+      "AsIs-ToBe"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-004",
+    "category": "PRC",
+    "name": "원형 번호 스텝 4단계",
+    "file": "decks/03_process/PRC_circular-vertical_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:PRC-004",
+    "tags": [
+      "프로세스",
+      "4단계",
+      "원형스텝",
+      "번호",
+      "추진절차"
+    ],
+    "params": {
+      "count": 4,
+      "style": "circle-step"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "착수·분석"
+        },
+        {
+          "label": "체계수립"
+        },
+        {
+          "label": "정보검증"
+        },
+        {
+          "label": "활용기획"
+        }
+      ],
+      "count": 4,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진절차",
+      "수행단계",
+      "사업흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-005",
+    "category": "PRC",
+    "name": "원형 번호 스텝 5단계",
+    "file": "decks/03_process/PRC_circular-vertical_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:PRC-005",
+    "tags": [
+      "프로세스",
+      "5단계",
+      "원형스텝",
+      "번호",
+      "추진절차"
+    ],
+    "params": {
+      "count": 5,
+      "style": "circle-step"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "착수·분석"
+        },
+        {
+          "label": "현황조사"
+        },
+        {
+          "label": "체계수립"
+        },
+        {
+          "label": "정보검증"
+        },
+        {
+          "label": "활용기획"
+        }
+      ],
+      "count": 5,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진절차",
+      "수행단계",
+      "사업흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-009",
+    "category": "PRC",
+    "name": "세로 프로세스 위→아래 5단계",
+    "file": "decks/03_process/PRC_circular-vertical_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:PRC-009",
+    "tags": [
+      "프로세스",
+      "5단계",
+      "세로",
+      "수직",
+      "추진절차"
+    ],
+    "params": {
+      "count": 5,
+      "style": "vertical"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "착수·분석",
+          "desc": "현황 진단"
+        },
+        {
+          "label": "현황조사",
+          "desc": "실태 파악"
+        },
+        {
+          "label": "체계수립",
+          "desc": "추진체계 설계"
+        },
+        {
+          "label": "정보검증",
+          "desc": "정합성 검증"
+        },
+        {
+          "label": "활용기획",
+          "desc": "성과 확산"
+        }
+      ],
+      "count": 5,
+      "direction": "vertical"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진절차",
+      "수행방법론",
+      "업무흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-010",
+    "category": "PRC",
+    "name": "순환 프로세스 4단계 (PDCA)",
+    "file": "decks/03_process/PRC_circular-vertical_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:PRC-010",
+    "tags": [
+      "프로세스",
+      "4단계",
+      "순환",
+      "사이클",
+      "PDCA"
+    ],
+    "params": {
+      "count": 4,
+      "style": "circular"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "계획(Plan)"
+        },
+        {
+          "label": "실행(Do)"
+        },
+        {
+          "label": "점검(Check)"
+        },
+        {
+          "label": "개선(Act)"
+        }
+      ],
+      "count": 4,
+      "direction": "cyclic"
+    },
+    "editable": [
+      "step-text",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "환류체계",
+      "지속개선",
+      "운영사이클"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  }
+]

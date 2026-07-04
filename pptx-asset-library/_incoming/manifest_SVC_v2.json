@@ -1,0 +1,564 @@
+[
+  {
+    "id": "SVC-009",
+    "category": "service",
+    "name": "레이어드 아키텍처 (5계층 스택)",
+    "file": "decks/07_service/SVC_architecture_v2.pptx",
+    "slide": 1,
+    "anchor": "asset:SVC-009",
+    "tags": [
+      "구조도",
+      "아키텍처",
+      "레이어드",
+      "5계층",
+      "스택",
+      "수직적층"
+    ],
+    "params": {
+      "layout": "layered-stack",
+      "layers": 5,
+      "flow": "top-down"
+    },
+    "bindings": {
+      "layers": [
+        {
+          "name": "표현",
+          "items": [
+            "웹 UI",
+            "모바일 UI",
+            "관리자 콘솔"
+          ]
+        },
+        {
+          "name": "애플리케이션",
+          "items": [
+            "업무 서비스",
+            "워크플로우",
+            "알림 처리"
+          ]
+        },
+        {
+          "name": "도메인",
+          "items": [
+            "비즈니스 로직",
+            "규칙 엔진",
+            "도메인 모델"
+          ]
+        },
+        {
+          "name": "데이터 접근",
+          "items": [
+            "ORM 매퍼",
+            "캐시",
+            "쿼리 빌더"
+          ]
+        },
+        {
+          "name": "인프라",
+          "items": [
+            "데이터베이스",
+            "스토리지",
+            "네트워크"
+          ]
+        }
+      ],
+      "flow": "top-down"
+    },
+    "editable": [
+      "layer_labels",
+      "layer_items",
+      "layer_color",
+      "arrows"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "시스템 구성",
+      "기술 아키텍처",
+      "계층 구조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "SVC-010",
+    "category": "service",
+    "name": "시스템 통합·연계 맵 (EAI/ESB)",
+    "file": "decks/07_service/SVC_architecture_v2.pptx",
+    "slide": 2,
+    "anchor": "asset:SVC-010",
+    "tags": [
+      "구조도",
+      "통합",
+      "연계",
+      "EAI",
+      "ESB",
+      "연동맵"
+    ],
+    "params": {
+      "layout": "center-hub-icons",
+      "modules": 6,
+      "flow": "bidirectional"
+    },
+    "bindings": {
+      "layers": [
+        {
+          "name": "통합버스",
+          "items": [
+            "ESB / API Gateway"
+          ]
+        },
+        {
+          "name": "연동시스템",
+          "items": [
+            "그룹웨어",
+            "ERP",
+            "회계 시스템",
+            "인사 시스템",
+            "대외 기관",
+            "SSO 인증"
+          ]
+        }
+      ],
+      "flow": "hub-radial-bidirectional"
+    },
+    "editable": [
+      "center_label",
+      "module_labels",
+      "module_icons",
+      "module_color",
+      "connectors"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "시스템 통합",
+      "연계 구조",
+      "서비스 연동"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "SVC-011",
+    "category": "service",
+    "name": "보안 아키텍처 (구간 분리·방화벽)",
+    "file": "decks/07_service/SVC_architecture_v2.pptx",
+    "slide": 3,
+    "anchor": "asset:SVC-011",
+    "tags": [
+      "구조도",
+      "보안",
+      "아키텍처",
+      "방화벽",
+      "구간분리",
+      "DMZ"
+    ],
+    "params": {
+      "layout": "security-zones",
+      "zones": 3,
+      "firewalls": 2,
+      "flow": "top-down"
+    },
+    "bindings": {
+      "layers": [
+        {
+          "name": "외부 구간",
+          "items": [
+            "일반 사용자",
+            "외부 기관",
+            "인터넷"
+          ]
+        },
+        {
+          "name": "DMZ 방화벽",
+          "items": [
+            "Perimeter Firewall"
+          ]
+        },
+        {
+          "name": "DMZ 구간",
+          "items": [
+            "WAF",
+            "리버스 프록시",
+            "웹 서버"
+          ]
+        },
+        {
+          "name": "내부 방화벽",
+          "items": [
+            "Internal Firewall"
+          ]
+        },
+        {
+          "name": "내부 구간",
+          "items": [
+            "WAS",
+            "운영 DB",
+            "내부 시스템"
+          ]
+        }
+      ],
+      "flow": "top-down"
+    },
+    "editable": [
+      "zone_labels",
+      "zone_items",
+      "firewall_labels",
+      "zone_color",
+      "arrows"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "보안 아키텍처",
+      "인프라 보안",
+      "네트워크 구성"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "SVC-012",
+    "category": "service",
+    "name": "클라우드 인프라 구성도",
+    "file": "decks/07_service/SVC_architecture_v2.pptx",
+    "slide": 4,
+    "anchor": "asset:SVC-012",
+    "tags": [
+      "구조도",
+      "클라우드",
+      "인프라",
+      "VPC",
+      "아키텍처",
+      "온프레미스"
+    ],
+    "params": {
+      "layout": "cloud-container",
+      "services": 6,
+      "flow": "bottom-up"
+    },
+    "bindings": {
+      "layers": [
+        {
+          "name": "클라우드 VPC",
+          "items": [
+            "로드밸런서",
+            "컴퓨팅 (VM)",
+            "컨테이너 (K8s)",
+            "관리형 DB",
+            "오브젝트 스토리지",
+            "CDN·캐시"
+          ]
+        },
+        {
+          "name": "온프레미스",
+          "items": [
+            "온프레미스 데이터센터"
+          ]
+        }
+      ],
+      "flow": "bottom-up"
+    },
+    "editable": [
+      "cloud_label",
+      "service_blocks",
+      "service_color",
+      "onprem_label",
+      "arrow"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "클라우드 구성",
+      "인프라 아키텍처",
+      "시스템 구성"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "SVC-013",
+    "category": "service",
+    "name": "시스템 개선 전·후 비교 (As-Is/To-Be)",
+    "file": "decks/07_service/SVC_flow-compare_v2.pptx",
+    "slide": 1,
+    "anchor": "asset:SVC-013",
+    "tags": [
+      "구조도",
+      "비교",
+      "전후",
+      "AsIs",
+      "ToBe",
+      "개선"
+    ],
+    "params": {
+      "layout": "before-after",
+      "columns": 2,
+      "rows": 5,
+      "flow": "left-right"
+    },
+    "bindings": {
+      "layers": [
+        {
+          "name": "As-Is",
+          "items": [
+            "시스템 분산 운영",
+            "수기 데이터 입력",
+            "데이터 사일로 고립",
+            "실시간 처리 불가",
+            "수동 모니터링"
+          ]
+        },
+        {
+          "name": "To-Be",
+          "items": [
+            "단일 통합 플랫폼",
+            "자동 연계·수집",
+            "통합 데이터 관리",
+            "실시간 처리·분석",
+            "지능형 관제·알림"
+          ]
+        }
+      ],
+      "flow": "left-right"
+    },
+    "editable": [
+      "before_items",
+      "after_items",
+      "column_color",
+      "center_arrow"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "개선 효과",
+      "전후 비교",
+      "사업 필요성"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "SVC-014",
+    "category": "service",
+    "name": "마이크로서비스 구성도 (모듈 격자)",
+    "file": "decks/07_service/SVC_flow-compare_v2.pptx",
+    "slide": 2,
+    "anchor": "asset:SVC-014",
+    "tags": [
+      "구조도",
+      "마이크로서비스",
+      "MSA",
+      "격자",
+      "게이트웨이",
+      "이벤트버스"
+    ],
+    "params": {
+      "layout": "msa-grid",
+      "services": 9,
+      "grid": "3x3",
+      "flow": "gateway-bus"
+    },
+    "bindings": {
+      "layers": [
+        {
+          "name": "게이트웨이",
+          "items": [
+            "API Gateway"
+          ]
+        },
+        {
+          "name": "서비스",
+          "items": [
+            "사용자",
+            "주문",
+            "결제",
+            "상품",
+            "배송",
+            "정산",
+            "알림",
+            "검색",
+            "리뷰"
+          ]
+        },
+        {
+          "name": "이벤트버스",
+          "items": [
+            "Event Bus / Message Queue"
+          ]
+        }
+      ],
+      "flow": "gateway-services-bus"
+    },
+    "editable": [
+      "gateway_label",
+      "service_cards",
+      "service_color",
+      "bus_label",
+      "connectors"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "MSA 구조",
+      "서비스 구성",
+      "시스템 아키텍처"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "SVC-015",
+    "category": "service",
+    "name": "데이터 파이프라인 구성도",
+    "file": "decks/07_service/SVC_flow-compare_v2.pptx",
+    "slide": 3,
+    "anchor": "asset:SVC-015",
+    "tags": [
+      "구조도",
+      "데이터파이프라인",
+      "ETL",
+      "흐름도",
+      "DW",
+      "적재"
+    ],
+    "params": {
+      "layout": "pipeline-with-db",
+      "stages": 4,
+      "flow": "left-right"
+    },
+    "bindings": {
+      "layers": [
+        {
+          "name": "수집",
+          "items": [
+            "로그 수집",
+            "API 연동",
+            "스트리밍"
+          ]
+        },
+        {
+          "name": "변환",
+          "items": [
+            "정제·검증",
+            "표준화",
+            "가공·매핑"
+          ]
+        },
+        {
+          "name": "적재",
+          "items": [
+            "DW 적재",
+            "파티셔닝",
+            "인덱싱"
+          ]
+        },
+        {
+          "name": "분석",
+          "items": [
+            "집계·통계",
+            "ML 모델",
+            "리포트"
+          ]
+        },
+        {
+          "name": "저장소",
+          "items": [
+            "데이터 웨어하우스"
+          ]
+        }
+      ],
+      "flow": "left-right"
+    },
+    "editable": [
+      "stage_labels",
+      "stage_items",
+      "stage_color",
+      "db_label",
+      "arrows",
+      "connectors"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "데이터 처리",
+      "파이프라인",
+      "ETL 흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "SVC-016",
+    "category": "service",
+    "name": "사용자 여정 맵 (User Journey)",
+    "file": "decks/07_service/SVC_flow-compare_v2.pptx",
+    "slide": 4,
+    "anchor": "asset:SVC-016",
+    "tags": [
+      "구조도",
+      "사용자여정",
+      "저니맵",
+      "터치포인트",
+      "UX",
+      "단계"
+    ],
+    "params": {
+      "layout": "journey-map",
+      "stages": 5,
+      "flow": "left-right"
+    },
+    "bindings": {
+      "layers": [
+        {
+          "name": "단계",
+          "items": [
+            "인지",
+            "탐색",
+            "가입",
+            "이용",
+            "재방문"
+          ]
+        },
+        {
+          "name": "터치포인트",
+          "items": [
+            "포털 배너·SNS",
+            "홈페이지·검색·후기",
+            "회원가입·본인인증",
+            "신청서·알림·상담",
+            "마이페이지·추천"
+          ]
+        },
+        {
+          "name": "사용자감정",
+          "items": [
+            "관심",
+            "기대",
+            "신중",
+            "만족",
+            "충성"
+          ]
+        }
+      ],
+      "flow": "left-right"
+    },
+    "editable": [
+      "stage_labels",
+      "touchpoints",
+      "emotions",
+      "stage_color",
+      "arrows"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "사용자 경험",
+      "여정 설계",
+      "서비스 기획"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  }
+]

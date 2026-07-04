@@ -1,0 +1,458 @@
+[
+  {
+    "id": "TML-009",
+    "category": "timeline",
+    "name": "스윔레인 타임라인 (3 레인 × 기간)",
+    "file": "decks/05_timeline/TML_timeline_v2.pptx",
+    "slide": 1,
+    "anchor": "asset:TML-009",
+    "tags": [
+      "타임라인",
+      "스윔레인",
+      "레인",
+      "기간막대",
+      "추진일정"
+    ],
+    "params": {
+      "lanes": 3,
+      "periods": 6,
+      "swimlane": true
+    },
+    "bindings": {
+      "periods": [
+        "1분기",
+        "2분기",
+        "3분기",
+        "4분기",
+        "5분기",
+        "6분기"
+      ],
+      "lanes": [
+        {
+          "name": "기획"
+        },
+        {
+          "name": "구축"
+        },
+        {
+          "name": "운영"
+        }
+      ],
+      "count": 3,
+      "orientation": "horizontal"
+    },
+    "editable": [
+      "lane-name",
+      "bar-text",
+      "bar-length",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "병행 작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-010",
+    "category": "timeline",
+    "name": "마일스톤 카드 로우 (상단 점 연결)",
+    "file": "decks/05_timeline/TML_timeline_v2.pptx",
+    "slide": 2,
+    "anchor": "asset:TML-010",
+    "tags": [
+      "타임라인",
+      "마일스톤",
+      "카드",
+      "점연결",
+      "추진일정"
+    ],
+    "params": {
+      "cards": 4,
+      "top_connector": true
+    },
+    "bindings": {
+      "milestones": [
+        {
+          "when": "M1",
+          "head": "사업 착수"
+        },
+        {
+          "when": "M2",
+          "head": "설계 완료"
+        },
+        {
+          "when": "M4",
+          "head": "중간보고"
+        },
+        {
+          "when": "M6",
+          "head": "최종납품"
+        }
+      ],
+      "count": 4,
+      "orientation": "horizontal"
+    },
+    "editable": [
+      "when-label",
+      "card-head",
+      "card-desc",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-011",
+    "category": "timeline",
+    "name": "원형 연차 로드맵 (원 둘레 단계)",
+    "file": "decks/05_timeline/TML_roadmap_v2.pptx",
+    "slide": 1,
+    "anchor": "asset:TML-011",
+    "tags": [
+      "로드맵",
+      "원형",
+      "연차별",
+      "허브",
+      "추진일정"
+    ],
+    "params": {
+      "stages": 4,
+      "circular": true
+    },
+    "bindings": {
+      "stages": [
+        {
+          "label": "1년차 기반"
+        },
+        {
+          "label": "2년차 확산"
+        },
+        {
+          "label": "3년차 성과"
+        },
+        {
+          "label": "4년차 정착"
+        }
+      ],
+      "count": 4,
+      "orientation": "radial"
+    },
+    "editable": [
+      "stage-label",
+      "focus-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "중장기 계획",
+      "연차 로드맵",
+      "발전 방향"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-012",
+    "category": "timeline",
+    "name": "단계 + 산출물 로드맵 (단계 원 → 산출물)",
+    "file": "decks/05_timeline/TML_roadmap_v2.pptx",
+    "slide": 2,
+    "anchor": "asset:TML-012",
+    "tags": [
+      "로드맵",
+      "단계별",
+      "산출물",
+      "화살표",
+      "추진일정"
+    ],
+    "params": {
+      "stages": 4,
+      "deliverables_per_stage": 3
+    },
+    "bindings": {
+      "stages": [
+        {
+          "no": 1,
+          "name": "착수·분석"
+        },
+        {
+          "no": 2,
+          "name": "설계"
+        },
+        {
+          "no": 3,
+          "name": "구축"
+        },
+        {
+          "no": 4,
+          "name": "시험·안정화"
+        }
+      ],
+      "count": 4,
+      "orientation": "horizontal"
+    },
+    "editable": [
+      "stage-name",
+      "deliverable-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계별 계획",
+      "산출물 매핑",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-013",
+    "category": "timeline",
+    "name": "세로 타임라인 (좌 시간축 + 우 이벤트)",
+    "file": "decks/05_timeline/TML_timeline_v2.pptx",
+    "slide": 3,
+    "anchor": "asset:TML-013",
+    "tags": [
+      "타임라인",
+      "세로",
+      "시간축",
+      "이벤트카드",
+      "추진일정"
+    ],
+    "params": {
+      "events": 4,
+      "vertical": true
+    },
+    "bindings": {
+      "events": [
+        {
+          "when": "1단계",
+          "head": "착수·분석"
+        },
+        {
+          "when": "2단계",
+          "head": "설계"
+        },
+        {
+          "when": "3단계",
+          "head": "구축"
+        },
+        {
+          "when": "4단계",
+          "head": "시험·안정화"
+        }
+      ],
+      "count": 4,
+      "orientation": "vertical"
+    },
+    "editable": [
+      "when-label",
+      "event-head",
+      "event-desc",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "단계별 계획",
+      "연혁"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-014",
+    "category": "timeline",
+    "name": "간트 v2 (색 구분 다중 트랙)",
+    "file": "decks/05_timeline/TML_timeline_v2.pptx",
+    "slide": 4,
+    "anchor": "asset:TML-014",
+    "tags": [
+      "타임라인",
+      "간트",
+      "다중트랙",
+      "세그먼트",
+      "범례",
+      "추진일정"
+    ],
+    "params": {
+      "tracks": 4,
+      "periods": 6,
+      "multi_segment": true,
+      "legend": true
+    },
+    "bindings": {
+      "periods": [
+        "1분기",
+        "2분기",
+        "3분기",
+        "4분기",
+        "5분기",
+        "6분기"
+      ],
+      "tracks": [
+        {
+          "name": "기획·분석"
+        },
+        {
+          "name": "설계"
+        },
+        {
+          "name": "개발"
+        },
+        {
+          "name": "시험·이관"
+        }
+      ],
+      "count": 4,
+      "orientation": "horizontal"
+    },
+    "editable": [
+      "track-name",
+      "segment-text",
+      "bar-length",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "병행 작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-015",
+    "category": "timeline",
+    "name": "분기 그리드 (활동군 × 4 분기)",
+    "file": "decks/05_timeline/TML_roadmap_v2.pptx",
+    "slide": 3,
+    "anchor": "asset:TML-015",
+    "tags": [
+      "로드맵",
+      "분기별",
+      "그리드",
+      "활동군",
+      "추진일정"
+    ],
+    "params": {
+      "rows": 4,
+      "quarters": 4,
+      "grid": true
+    },
+    "bindings": {
+      "quarters": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "rows": [
+        {
+          "cat": "기획·관리"
+        },
+        {
+          "cat": "설계·개발"
+        },
+        {
+          "cat": "시험·운영"
+        },
+        {
+          "cat": "확산·교육"
+        }
+      ],
+      "count": 4,
+      "orientation": "grid"
+    },
+    "editable": [
+      "cat-name",
+      "cell-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분기 계획",
+      "활동 매핑",
+      "추진일정"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-016",
+    "category": "timeline",
+    "name": "Now / Next / Later 3열 로드맵",
+    "file": "decks/05_timeline/TML_roadmap_v2.pptx",
+    "slide": 4,
+    "anchor": "asset:TML-016",
+    "tags": [
+      "로드맵",
+      "우선순위",
+      "Now-Next-Later",
+      "3열",
+      "제품로드맵"
+    ],
+    "params": {
+      "cols": 3,
+      "priority_roadmap": true
+    },
+    "bindings": {
+      "cols": [
+        {
+          "label": "Now",
+          "tag": "현재 추진"
+        },
+        {
+          "label": "Next",
+          "tag": "다음 단계"
+        },
+        {
+          "label": "Later",
+          "tag": "향후 과제"
+        }
+      ],
+      "count": 3,
+      "orientation": "horizontal"
+    },
+    "editable": [
+      "col-label",
+      "card-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "우선순위 로드맵",
+      "제품 로드맵",
+      "추진 방향"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  }
+]

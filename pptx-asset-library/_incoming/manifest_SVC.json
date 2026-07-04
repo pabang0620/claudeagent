@@ -1,0 +1,520 @@
+[
+  {
+    "id": "SVC-001",
+    "category": "service",
+    "name": "시스템 구성도 (4계층 아키텍처)",
+    "file": "decks/07_service/SVC_architecture_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:SVC-001",
+    "tags": [
+      "구조도",
+      "시스템구성",
+      "아키텍처",
+      "4계층",
+      "데이터흐름"
+    ],
+    "params": {
+      "layout": "vertical-layers",
+      "layers": 4,
+      "flow": "top-down"
+    },
+    "bindings": {
+      "layers": [
+        {
+          "name": "수집",
+          "items": [
+            "공공데이터 API",
+            "내부 시스템",
+            "외부 데이터원"
+          ]
+        },
+        {
+          "name": "처리",
+          "items": [
+            "데이터 정제",
+            "표준화·변환",
+            "품질 검증"
+          ]
+        },
+        {
+          "name": "저장",
+          "items": [
+            "운영 DB",
+            "데이터 웨어하우스",
+            "메타데이터"
+          ]
+        },
+        {
+          "name": "서비스",
+          "items": [
+            "Open API",
+            "관리 대시보드",
+            "통계 리포트"
+          ]
+        }
+      ],
+      "flow": "top-down"
+    },
+    "editable": [
+      "layer_labels",
+      "layer_items",
+      "layer_color",
+      "arrows"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "시스템 구성",
+      "서비스 구조",
+      "사업 흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "SVC-002",
+    "category": "service",
+    "name": "3-Tier 아키텍처 구조도",
+    "file": "decks/07_service/SVC_architecture_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:SVC-002",
+    "tags": [
+      "구조도",
+      "아키텍처",
+      "3티어",
+      "시스템구성",
+      "수평밴드"
+    ],
+    "params": {
+      "layout": "horizontal-bands",
+      "tiers": 3,
+      "flow": "bidirectional"
+    },
+    "bindings": {
+      "layers": [
+        {
+          "name": "사용자",
+          "items": [
+            "웹 포털",
+            "모바일 앱",
+            "관리자 콘솔"
+          ]
+        },
+        {
+          "name": "애플리케이션",
+          "items": [
+            "인증·권한",
+            "업무 로직",
+            "API 게이트웨이",
+            "배치 처리"
+          ]
+        },
+        {
+          "name": "데이터",
+          "items": [
+            "운영 DB",
+            "캐시",
+            "파일 스토리지"
+          ]
+        }
+      ],
+      "flow": "vertical-bidirectional"
+    },
+    "editable": [
+      "tier_names",
+      "tier_items",
+      "tier_color",
+      "band_arrows"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "시스템 구성",
+      "서비스 구조",
+      "기술 아키텍처"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "SVC-003",
+    "category": "service",
+    "name": "플랫폼 구조도 (입력·플랫폼·출력)",
+    "file": "decks/07_service/SVC_architecture_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:SVC-003",
+    "tags": [
+      "구조도",
+      "플랫폼",
+      "시스템구성",
+      "입출력",
+      "아키텍처"
+    ],
+    "params": {
+      "layout": "center-hub",
+      "inputs": 3,
+      "outputs": 3,
+      "flow": "left-right"
+    },
+    "bindings": {
+      "layers": [
+        {
+          "name": "입력",
+          "items": [
+            "공공데이터",
+            "내부 시스템",
+            "외부 API"
+          ]
+        },
+        {
+          "name": "플랫폼",
+          "items": [
+            "수집 엔진",
+            "처리 엔진",
+            "저장소",
+            "API 서버"
+          ]
+        },
+        {
+          "name": "출력",
+          "items": [
+            "Open API",
+            "대시보드",
+            "성과 리포트"
+          ]
+        }
+      ],
+      "flow": "left-right"
+    },
+    "editable": [
+      "platform_label",
+      "core_modules",
+      "input_modules",
+      "output_modules",
+      "arrows"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "서비스 구조",
+      "플랫폼 소개",
+      "시스템 구성"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "SVC-004",
+    "category": "service",
+    "name": "데이터 흐름도 (수집→통합→활용)",
+    "file": "decks/07_service/SVC_architecture_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:SVC-004",
+    "tags": [
+      "구조도",
+      "데이터흐름",
+      "시스템구성",
+      "ETL",
+      "연계"
+    ],
+    "params": {
+      "layout": "converge-diverge",
+      "sources": 4,
+      "uses": 4,
+      "flow": "left-right"
+    },
+    "bindings": {
+      "layers": [
+        {
+          "name": "소스",
+          "items": [
+            "공공데이터 포털",
+            "내부 업무 시스템",
+            "외부 제휴 API",
+            "센서·로그"
+          ]
+        },
+        {
+          "name": "통합",
+          "items": [
+            "데이터 통합·정제(ETL)"
+          ]
+        },
+        {
+          "name": "활용",
+          "items": [
+            "정책 의사결정",
+            "대민 서비스",
+            "통계 분석",
+            "연계 기관 제공"
+          ]
+        }
+      ],
+      "flow": "left-right"
+    },
+    "editable": [
+      "source_nodes",
+      "hub_label",
+      "use_nodes",
+      "connectors"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "데이터 흐름",
+      "사업 흐름",
+      "서비스 구조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "SVC-005",
+    "category": "service",
+    "name": "서비스 운영 프로세스 (스윔레인)",
+    "file": "decks/07_service/SVC_operation-flow_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:SVC-005",
+    "tags": [
+      "운영프로세스",
+      "스윔레인",
+      "구조도",
+      "흐름도",
+      "업무흐름"
+    ],
+    "params": {
+      "layout": "swimlane",
+      "lanes": 2,
+      "stages": 4,
+      "flow": "left-right"
+    },
+    "bindings": {
+      "layers": [
+        {
+          "name": "신청 기관",
+          "items": [
+            "① 신청서 제출",
+            "④ 서비스 제공"
+          ]
+        },
+        {
+          "name": "수행 기관",
+          "items": [
+            "② 서류 검토",
+            "③ 승인 심의"
+          ]
+        }
+      ],
+      "flow": "left-right-swimlane"
+    },
+    "editable": [
+      "lane_names",
+      "stage_labels",
+      "lane_assignment",
+      "connectors"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "운영 프로세스",
+      "사업 흐름",
+      "업무 절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "SVC-006",
+    "category": "service",
+    "name": "사업 추진 개념도 (로직 모델)",
+    "file": "decks/07_service/SVC_operation-flow_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:SVC-006",
+    "tags": [
+      "구조도",
+      "로직모델",
+      "개념도",
+      "성과관리",
+      "흐름도"
+    ],
+    "params": {
+      "layout": "logic-model",
+      "columns": 4,
+      "flow": "left-right"
+    },
+    "bindings": {
+      "layers": [
+        {
+          "name": "투입",
+          "items": [
+            "예산·인력",
+            "인프라",
+            "데이터 자산"
+          ]
+        },
+        {
+          "name": "활동",
+          "items": [
+            "시스템 구축",
+            "데이터 정제",
+            "교육·홍보"
+          ]
+        },
+        {
+          "name": "산출",
+          "items": [
+            "구축 시스템",
+            "정제 데이터셋",
+            "운영 매뉴얼"
+          ]
+        },
+        {
+          "name": "성과",
+          "items": [
+            "업무 효율화",
+            "대민 만족도",
+            "성과 관리 체계"
+          ]
+        }
+      ],
+      "flow": "left-right"
+    },
+    "editable": [
+      "stage_names",
+      "stage_items",
+      "stage_color",
+      "arrows"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "사업 흐름",
+      "성과 관리",
+      "추진 체계"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "SVC-007",
+    "category": "service",
+    "name": "정보 연계도 (허브-스포크)",
+    "file": "decks/07_service/SVC_operation-flow_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:SVC-007",
+    "tags": [
+      "구조도",
+      "연계도",
+      "허브스포크",
+      "기관연계",
+      "데이터흐름"
+    ],
+    "params": {
+      "layout": "hub-spoke",
+      "spokes": 6,
+      "flow": "bidirectional"
+    },
+    "bindings": {
+      "layers": [
+        {
+          "name": "허브",
+          "items": [
+            "데이터 연계 허브"
+          ]
+        },
+        {
+          "name": "스포크",
+          "items": [
+            "중앙부처",
+            "광역 지자체",
+            "기초 지자체",
+            "공공기관",
+            "유관 기관",
+            "민간 협력사"
+          ]
+        }
+      ],
+      "flow": "hub-radial-bidirectional"
+    },
+    "editable": [
+      "hub_label",
+      "spoke_labels",
+      "spoke_color",
+      "connectors"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "정보 연계",
+      "기관 협력",
+      "서비스 구조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "SVC-008",
+    "category": "service",
+    "name": "통합 관제·모니터링 구조도",
+    "file": "decks/07_service/SVC_operation-flow_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:SVC-008",
+    "tags": [
+      "구조도",
+      "모니터링",
+      "관제",
+      "시스템구성",
+      "흐름도"
+    ],
+    "params": {
+      "layout": "pipeline",
+      "stages": 4,
+      "flow": "left-right"
+    },
+    "bindings": {
+      "layers": [
+        {
+          "name": "관제센터",
+          "items": [
+            "통합 관제 센터"
+          ]
+        },
+        {
+          "name": "파이프라인",
+          "items": [
+            "수집",
+            "분석",
+            "대시보드",
+            "알림"
+          ]
+        },
+        {
+          "name": "소스",
+          "items": [
+            "서버",
+            "네트워크",
+            "애플리케이션",
+            "사용자 이벤트"
+          ]
+        }
+      ],
+      "flow": "left-right"
+    },
+    "editable": [
+      "center_label",
+      "stage_labels",
+      "stage_desc",
+      "stage_color",
+      "arrows"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "시스템 구성",
+      "운영 모니터링",
+      "서비스 구조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  }
+]

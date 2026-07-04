@@ -1,0 +1,9747 @@
+[
+  {
+    "id": "CMP-019",
+    "category": "CMP",
+    "name": "2x2 전략 포지셔닝 매트릭스",
+    "file": "decks/04_compare/CMP_bulk_matrix2x2_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:CMP-019",
+    "tags": [
+      "매트릭스",
+      "2x2",
+      "사분면",
+      "포지셔닝",
+      "blue"
+    ],
+    "params": {
+      "family": "matrix2x2",
+      "quadrants": 4,
+      "axis": 2,
+      "theme": "blue"
+    },
+    "bindings": {
+      "quadrants": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ],
+      "axis": [
+        "x",
+        "y"
+      ]
+    },
+    "editable": [
+      "quad_titles",
+      "quad_desc",
+      "axis_labels",
+      "quad_fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "전략 포지셔닝",
+      "우선순위",
+      "경쟁력 비교"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-020",
+    "category": "CMP",
+    "name": "2x2 전략 포지셔닝 매트릭스",
+    "file": "decks/04_compare/CMP_bulk_matrix2x2_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:CMP-020",
+    "tags": [
+      "매트릭스",
+      "2x2",
+      "사분면",
+      "포지셔닝",
+      "teal"
+    ],
+    "params": {
+      "family": "matrix2x2",
+      "quadrants": 4,
+      "axis": 2,
+      "theme": "teal"
+    },
+    "bindings": {
+      "quadrants": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ],
+      "axis": [
+        "x",
+        "y"
+      ]
+    },
+    "editable": [
+      "quad_titles",
+      "quad_desc",
+      "axis_labels",
+      "quad_fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "전략 포지셔닝",
+      "우선순위",
+      "경쟁력 비교"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-021",
+    "category": "CMP",
+    "name": "2x2 전략 포지셔닝 매트릭스",
+    "file": "decks/04_compare/CMP_bulk_matrix2x2_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:CMP-021",
+    "tags": [
+      "매트릭스",
+      "2x2",
+      "사분면",
+      "포지셔닝",
+      "cyan"
+    ],
+    "params": {
+      "family": "matrix2x2",
+      "quadrants": 4,
+      "axis": 2,
+      "theme": "cyan"
+    },
+    "bindings": {
+      "quadrants": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ],
+      "axis": [
+        "x",
+        "y"
+      ]
+    },
+    "editable": [
+      "quad_titles",
+      "quad_desc",
+      "axis_labels",
+      "quad_fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "전략 포지셔닝",
+      "우선순위",
+      "경쟁력 비교"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-022",
+    "category": "CMP",
+    "name": "2x2 전략 포지셔닝 매트릭스",
+    "file": "decks/04_compare/CMP_bulk_matrix2x2_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:CMP-022",
+    "tags": [
+      "매트릭스",
+      "2x2",
+      "사분면",
+      "포지셔닝",
+      "purple"
+    ],
+    "params": {
+      "family": "matrix2x2",
+      "quadrants": 4,
+      "axis": 2,
+      "theme": "purple"
+    },
+    "bindings": {
+      "quadrants": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ],
+      "axis": [
+        "x",
+        "y"
+      ]
+    },
+    "editable": [
+      "quad_titles",
+      "quad_desc",
+      "axis_labels",
+      "quad_fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "전략 포지셔닝",
+      "우선순위",
+      "경쟁력 비교"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-023",
+    "category": "CMP",
+    "name": "2x2 전략 포지셔닝 매트릭스",
+    "file": "decks/04_compare/CMP_bulk_matrix2x2_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:CMP-023",
+    "tags": [
+      "매트릭스",
+      "2x2",
+      "사분면",
+      "포지셔닝",
+      "navy"
+    ],
+    "params": {
+      "family": "matrix2x2",
+      "quadrants": 4,
+      "axis": 2,
+      "theme": "navy"
+    },
+    "bindings": {
+      "quadrants": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ],
+      "axis": [
+        "x",
+        "y"
+      ]
+    },
+    "editable": [
+      "quad_titles",
+      "quad_desc",
+      "axis_labels",
+      "quad_fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "전략 포지셔닝",
+      "우선순위",
+      "경쟁력 비교"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-024",
+    "category": "CMP",
+    "name": "2x2 전략 포지셔닝 매트릭스",
+    "file": "decks/04_compare/CMP_bulk_matrix2x2_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:CMP-024",
+    "tags": [
+      "매트릭스",
+      "2x2",
+      "사분면",
+      "포지셔닝",
+      "blue"
+    ],
+    "params": {
+      "family": "matrix2x2",
+      "quadrants": 4,
+      "axis": 2,
+      "theme": "blue"
+    },
+    "bindings": {
+      "quadrants": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ],
+      "axis": [
+        "x",
+        "y"
+      ]
+    },
+    "editable": [
+      "quad_titles",
+      "quad_desc",
+      "axis_labels",
+      "quad_fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "전략 포지셔닝",
+      "우선순위",
+      "경쟁력 비교"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-025",
+    "category": "CMP",
+    "name": "2x2 전략 포지셔닝 매트릭스",
+    "file": "decks/04_compare/CMP_bulk_matrix2x2_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:CMP-025",
+    "tags": [
+      "매트릭스",
+      "2x2",
+      "사분면",
+      "포지셔닝",
+      "teal"
+    ],
+    "params": {
+      "family": "matrix2x2",
+      "quadrants": 4,
+      "axis": 2,
+      "theme": "teal"
+    },
+    "bindings": {
+      "quadrants": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ],
+      "axis": [
+        "x",
+        "y"
+      ]
+    },
+    "editable": [
+      "quad_titles",
+      "quad_desc",
+      "axis_labels",
+      "quad_fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "전략 포지셔닝",
+      "우선순위",
+      "경쟁력 비교"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-026",
+    "category": "CMP",
+    "name": "2x2 전략 포지셔닝 매트릭스",
+    "file": "decks/04_compare/CMP_bulk_matrix2x2_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:CMP-026",
+    "tags": [
+      "매트릭스",
+      "2x2",
+      "사분면",
+      "포지셔닝",
+      "cyan"
+    ],
+    "params": {
+      "family": "matrix2x2",
+      "quadrants": 4,
+      "axis": 2,
+      "theme": "cyan"
+    },
+    "bindings": {
+      "quadrants": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ],
+      "axis": [
+        "x",
+        "y"
+      ]
+    },
+    "editable": [
+      "quad_titles",
+      "quad_desc",
+      "axis_labels",
+      "quad_fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "전략 포지셔닝",
+      "우선순위",
+      "경쟁력 비교"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-027",
+    "category": "CMP",
+    "name": "2x2 전략 포지셔닝 매트릭스",
+    "file": "decks/04_compare/CMP_bulk_matrix2x2_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:CMP-027",
+    "tags": [
+      "매트릭스",
+      "2x2",
+      "사분면",
+      "포지셔닝",
+      "purple"
+    ],
+    "params": {
+      "family": "matrix2x2",
+      "quadrants": 4,
+      "axis": 2,
+      "theme": "purple"
+    },
+    "bindings": {
+      "quadrants": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ],
+      "axis": [
+        "x",
+        "y"
+      ]
+    },
+    "editable": [
+      "quad_titles",
+      "quad_desc",
+      "axis_labels",
+      "quad_fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "전략 포지셔닝",
+      "우선순위",
+      "경쟁력 비교"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-028",
+    "category": "CMP",
+    "name": "2x2 전략 포지셔닝 매트릭스",
+    "file": "decks/04_compare/CMP_bulk_matrix2x2_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:CMP-028",
+    "tags": [
+      "매트릭스",
+      "2x2",
+      "사분면",
+      "포지셔닝",
+      "navy"
+    ],
+    "params": {
+      "family": "matrix2x2",
+      "quadrants": 4,
+      "axis": 2,
+      "theme": "navy"
+    },
+    "bindings": {
+      "quadrants": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ],
+      "axis": [
+        "x",
+        "y"
+      ]
+    },
+    "editable": [
+      "quad_titles",
+      "quad_desc",
+      "axis_labels",
+      "quad_fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "전략 포지셔닝",
+      "우선순위",
+      "경쟁력 비교"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-029",
+    "category": "CMP",
+    "name": "2x2 전략 포지셔닝 매트릭스",
+    "file": "decks/04_compare/CMP_bulk_matrix2x2_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:CMP-029",
+    "tags": [
+      "매트릭스",
+      "2x2",
+      "사분면",
+      "포지셔닝",
+      "blue"
+    ],
+    "params": {
+      "family": "matrix2x2",
+      "quadrants": 4,
+      "axis": 2,
+      "theme": "blue"
+    },
+    "bindings": {
+      "quadrants": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ],
+      "axis": [
+        "x",
+        "y"
+      ]
+    },
+    "editable": [
+      "quad_titles",
+      "quad_desc",
+      "axis_labels",
+      "quad_fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "전략 포지셔닝",
+      "우선순위",
+      "경쟁력 비교"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-030",
+    "category": "CMP",
+    "name": "2x2 전략 포지셔닝 매트릭스",
+    "file": "decks/04_compare/CMP_bulk_matrix2x2_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:CMP-030",
+    "tags": [
+      "매트릭스",
+      "2x2",
+      "사분면",
+      "포지셔닝",
+      "teal"
+    ],
+    "params": {
+      "family": "matrix2x2",
+      "quadrants": 4,
+      "axis": 2,
+      "theme": "teal"
+    },
+    "bindings": {
+      "quadrants": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ],
+      "axis": [
+        "x",
+        "y"
+      ]
+    },
+    "editable": [
+      "quad_titles",
+      "quad_desc",
+      "axis_labels",
+      "quad_fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "전략 포지셔닝",
+      "우선순위",
+      "경쟁력 비교"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-031",
+    "category": "CMP",
+    "name": "2x2 전략 포지셔닝 매트릭스",
+    "file": "decks/04_compare/CMP_bulk_matrix2x2_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:CMP-031",
+    "tags": [
+      "매트릭스",
+      "2x2",
+      "사분면",
+      "포지셔닝",
+      "cyan"
+    ],
+    "params": {
+      "family": "matrix2x2",
+      "quadrants": 4,
+      "axis": 2,
+      "theme": "cyan"
+    },
+    "bindings": {
+      "quadrants": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ],
+      "axis": [
+        "x",
+        "y"
+      ]
+    },
+    "editable": [
+      "quad_titles",
+      "quad_desc",
+      "axis_labels",
+      "quad_fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "전략 포지셔닝",
+      "우선순위",
+      "경쟁력 비교"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-032",
+    "category": "CMP",
+    "name": "2x2 전략 포지셔닝 매트릭스",
+    "file": "decks/04_compare/CMP_bulk_matrix2x2_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:CMP-032",
+    "tags": [
+      "매트릭스",
+      "2x2",
+      "사분면",
+      "포지셔닝",
+      "purple"
+    ],
+    "params": {
+      "family": "matrix2x2",
+      "quadrants": 4,
+      "axis": 2,
+      "theme": "purple"
+    },
+    "bindings": {
+      "quadrants": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ],
+      "axis": [
+        "x",
+        "y"
+      ]
+    },
+    "editable": [
+      "quad_titles",
+      "quad_desc",
+      "axis_labels",
+      "quad_fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "전략 포지셔닝",
+      "우선순위",
+      "경쟁력 비교"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-033",
+    "category": "CMP",
+    "name": "3열 평가표 (현행 vs 개선)",
+    "file": "decks/04_compare/CMP_bulk_evaltable_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:CMP-033",
+    "tags": [
+      "평가표",
+      "비교표",
+      "현행개선",
+      "기호평가",
+      "blue"
+    ],
+    "params": {
+      "family": "evaltable",
+      "cols": 3,
+      "rows": 4,
+      "symbols": [
+        "○",
+        "△",
+        "✕"
+      ],
+      "theme": "blue"
+    },
+    "bindings": {
+      "rows": [
+        "글로벌 대응 역량",
+        "협업 프로세스",
+        "AI 활용 성숙도",
+        "품질 관리 체계"
+      ],
+      "cols": [
+        "평가 항목",
+        "현행",
+        "개선"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_symbols",
+      "cell_color",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "개선 효과 제시",
+      "현황 진단",
+      "평가 기준"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-034",
+    "category": "CMP",
+    "name": "4열 평가표 (현행 vs 개선)",
+    "file": "decks/04_compare/CMP_bulk_evaltable_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:CMP-034",
+    "tags": [
+      "평가표",
+      "비교표",
+      "현행개선",
+      "기호평가",
+      "teal"
+    ],
+    "params": {
+      "family": "evaltable",
+      "cols": 4,
+      "rows": 5,
+      "symbols": [
+        "○",
+        "△",
+        "✕"
+      ],
+      "theme": "teal"
+    },
+    "bindings": {
+      "rows": [
+        "협업 프로세스",
+        "AI 활용 성숙도",
+        "품질 관리 체계",
+        "가격 경쟁력",
+        "납기 대응력"
+      ],
+      "cols": [
+        "평가 항목",
+        "현행",
+        "개선",
+        "목표"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_symbols",
+      "cell_color",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "개선 효과 제시",
+      "현황 진단",
+      "평가 기준"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-035",
+    "category": "CMP",
+    "name": "3열 평가표 (현행 vs 개선)",
+    "file": "decks/04_compare/CMP_bulk_evaltable_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:CMP-035",
+    "tags": [
+      "평가표",
+      "비교표",
+      "현행개선",
+      "기호평가",
+      "cyan"
+    ],
+    "params": {
+      "family": "evaltable",
+      "cols": 3,
+      "rows": 6,
+      "symbols": [
+        "○",
+        "△",
+        "✕"
+      ],
+      "theme": "cyan"
+    },
+    "bindings": {
+      "rows": [
+        "AI 활용 성숙도",
+        "품질 관리 체계",
+        "가격 경쟁력",
+        "납기 대응력",
+        "기술 전문성",
+        "데이터 보안 수준"
+      ],
+      "cols": [
+        "평가 항목",
+        "현행",
+        "개선"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_symbols",
+      "cell_color",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "개선 효과 제시",
+      "현황 진단",
+      "평가 기준"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-036",
+    "category": "CMP",
+    "name": "4열 평가표 (현행 vs 개선)",
+    "file": "decks/04_compare/CMP_bulk_evaltable_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:CMP-036",
+    "tags": [
+      "평가표",
+      "비교표",
+      "현행개선",
+      "기호평가",
+      "purple"
+    ],
+    "params": {
+      "family": "evaltable",
+      "cols": 4,
+      "rows": 7,
+      "symbols": [
+        "○",
+        "△",
+        "✕"
+      ],
+      "theme": "purple"
+    },
+    "bindings": {
+      "rows": [
+        "품질 관리 체계",
+        "가격 경쟁력",
+        "납기 대응력",
+        "기술 전문성",
+        "데이터 보안 수준",
+        "사용자 경험",
+        "시스템 확장성"
+      ],
+      "cols": [
+        "평가 항목",
+        "현행",
+        "개선",
+        "목표"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_symbols",
+      "cell_color",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "개선 효과 제시",
+      "현황 진단",
+      "평가 기준"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-037",
+    "category": "CMP",
+    "name": "3열 평가표 (현행 vs 개선)",
+    "file": "decks/04_compare/CMP_bulk_evaltable_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:CMP-037",
+    "tags": [
+      "평가표",
+      "비교표",
+      "현행개선",
+      "기호평가",
+      "navy"
+    ],
+    "params": {
+      "family": "evaltable",
+      "cols": 3,
+      "rows": 4,
+      "symbols": [
+        "○",
+        "△",
+        "✕"
+      ],
+      "theme": "navy"
+    },
+    "bindings": {
+      "rows": [
+        "가격 경쟁력",
+        "납기 대응력",
+        "기술 전문성",
+        "데이터 보안 수준"
+      ],
+      "cols": [
+        "평가 항목",
+        "현행",
+        "개선"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_symbols",
+      "cell_color",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "개선 효과 제시",
+      "현황 진단",
+      "평가 기준"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-038",
+    "category": "CMP",
+    "name": "4열 평가표 (현행 vs 개선)",
+    "file": "decks/04_compare/CMP_bulk_evaltable_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:CMP-038",
+    "tags": [
+      "평가표",
+      "비교표",
+      "현행개선",
+      "기호평가",
+      "blue"
+    ],
+    "params": {
+      "family": "evaltable",
+      "cols": 4,
+      "rows": 5,
+      "symbols": [
+        "○",
+        "△",
+        "✕"
+      ],
+      "theme": "blue"
+    },
+    "bindings": {
+      "rows": [
+        "납기 대응력",
+        "기술 전문성",
+        "데이터 보안 수준",
+        "사용자 경험",
+        "시스템 확장성"
+      ],
+      "cols": [
+        "평가 항목",
+        "현행",
+        "개선",
+        "목표"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_symbols",
+      "cell_color",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "개선 효과 제시",
+      "현황 진단",
+      "평가 기준"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-039",
+    "category": "CMP",
+    "name": "3열 평가표 (현행 vs 개선)",
+    "file": "decks/04_compare/CMP_bulk_evaltable_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:CMP-039",
+    "tags": [
+      "평가표",
+      "비교표",
+      "현행개선",
+      "기호평가",
+      "teal"
+    ],
+    "params": {
+      "family": "evaltable",
+      "cols": 3,
+      "rows": 6,
+      "symbols": [
+        "○",
+        "△",
+        "✕"
+      ],
+      "theme": "teal"
+    },
+    "bindings": {
+      "rows": [
+        "기술 전문성",
+        "데이터 보안 수준",
+        "사용자 경험",
+        "시스템 확장성",
+        "유지보수 편의",
+        "고객 지원 체계"
+      ],
+      "cols": [
+        "평가 항목",
+        "현행",
+        "개선"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_symbols",
+      "cell_color",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "개선 효과 제시",
+      "현황 진단",
+      "평가 기준"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-040",
+    "category": "CMP",
+    "name": "4열 평가표 (현행 vs 개선)",
+    "file": "decks/04_compare/CMP_bulk_evaltable_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:CMP-040",
+    "tags": [
+      "평가표",
+      "비교표",
+      "현행개선",
+      "기호평가",
+      "cyan"
+    ],
+    "params": {
+      "family": "evaltable",
+      "cols": 4,
+      "rows": 7,
+      "symbols": [
+        "○",
+        "△",
+        "✕"
+      ],
+      "theme": "cyan"
+    },
+    "bindings": {
+      "rows": [
+        "데이터 보안 수준",
+        "사용자 경험",
+        "시스템 확장성",
+        "유지보수 편의",
+        "고객 지원 체계",
+        "시장 이해도",
+        "운영 효율성"
+      ],
+      "cols": [
+        "평가 항목",
+        "현행",
+        "개선",
+        "목표"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_symbols",
+      "cell_color",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "개선 효과 제시",
+      "현황 진단",
+      "평가 기준"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-041",
+    "category": "CMP",
+    "name": "3열 평가표 (현행 vs 개선)",
+    "file": "decks/04_compare/CMP_bulk_evaltable_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:CMP-041",
+    "tags": [
+      "평가표",
+      "비교표",
+      "현행개선",
+      "기호평가",
+      "purple"
+    ],
+    "params": {
+      "family": "evaltable",
+      "cols": 3,
+      "rows": 4,
+      "symbols": [
+        "○",
+        "△",
+        "✕"
+      ],
+      "theme": "purple"
+    },
+    "bindings": {
+      "rows": [
+        "사용자 경험",
+        "시스템 확장성",
+        "유지보수 편의",
+        "고객 지원 체계"
+      ],
+      "cols": [
+        "평가 항목",
+        "현행",
+        "개선"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_symbols",
+      "cell_color",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "개선 효과 제시",
+      "현황 진단",
+      "평가 기준"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-042",
+    "category": "CMP",
+    "name": "4열 평가표 (현행 vs 개선)",
+    "file": "decks/04_compare/CMP_bulk_evaltable_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:CMP-042",
+    "tags": [
+      "평가표",
+      "비교표",
+      "현행개선",
+      "기호평가",
+      "navy"
+    ],
+    "params": {
+      "family": "evaltable",
+      "cols": 4,
+      "rows": 5,
+      "symbols": [
+        "○",
+        "△",
+        "✕"
+      ],
+      "theme": "navy"
+    },
+    "bindings": {
+      "rows": [
+        "시스템 확장성",
+        "유지보수 편의",
+        "고객 지원 체계",
+        "시장 이해도",
+        "운영 효율성"
+      ],
+      "cols": [
+        "평가 항목",
+        "현행",
+        "개선",
+        "목표"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_symbols",
+      "cell_color",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "개선 효과 제시",
+      "현황 진단",
+      "평가 기준"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-043",
+    "category": "CMP",
+    "name": "3열 평가표 (현행 vs 개선)",
+    "file": "decks/04_compare/CMP_bulk_evaltable_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:CMP-043",
+    "tags": [
+      "평가표",
+      "비교표",
+      "현행개선",
+      "기호평가",
+      "blue"
+    ],
+    "params": {
+      "family": "evaltable",
+      "cols": 3,
+      "rows": 6,
+      "symbols": [
+        "○",
+        "△",
+        "✕"
+      ],
+      "theme": "blue"
+    },
+    "bindings": {
+      "rows": [
+        "유지보수 편의",
+        "고객 지원 체계",
+        "시장 이해도",
+        "운영 효율성",
+        "혁신 역량",
+        "브랜드 신뢰도"
+      ],
+      "cols": [
+        "평가 항목",
+        "현행",
+        "개선"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_symbols",
+      "cell_color",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "개선 효과 제시",
+      "현황 진단",
+      "평가 기준"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-044",
+    "category": "CMP",
+    "name": "4열 평가표 (현행 vs 개선)",
+    "file": "decks/04_compare/CMP_bulk_evaltable_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:CMP-044",
+    "tags": [
+      "평가표",
+      "비교표",
+      "현행개선",
+      "기호평가",
+      "teal"
+    ],
+    "params": {
+      "family": "evaltable",
+      "cols": 4,
+      "rows": 7,
+      "symbols": [
+        "○",
+        "△",
+        "✕"
+      ],
+      "theme": "teal"
+    },
+    "bindings": {
+      "rows": [
+        "고객 지원 체계",
+        "시장 이해도",
+        "운영 효율성",
+        "혁신 역량",
+        "브랜드 신뢰도",
+        "현지화 수준",
+        "리스크 관리"
+      ],
+      "cols": [
+        "평가 항목",
+        "현행",
+        "개선",
+        "목표"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_symbols",
+      "cell_color",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "개선 효과 제시",
+      "현황 진단",
+      "평가 기준"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-045",
+    "category": "CMP",
+    "name": "3열 평가표 (현행 vs 개선)",
+    "file": "decks/04_compare/CMP_bulk_evaltable_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:CMP-045",
+    "tags": [
+      "평가표",
+      "비교표",
+      "현행개선",
+      "기호평가",
+      "cyan"
+    ],
+    "params": {
+      "family": "evaltable",
+      "cols": 3,
+      "rows": 4,
+      "symbols": [
+        "○",
+        "△",
+        "✕"
+      ],
+      "theme": "cyan"
+    },
+    "bindings": {
+      "rows": [
+        "시장 이해도",
+        "운영 효율성",
+        "혁신 역량",
+        "브랜드 신뢰도"
+      ],
+      "cols": [
+        "평가 항목",
+        "현행",
+        "개선"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_symbols",
+      "cell_color",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "개선 효과 제시",
+      "현황 진단",
+      "평가 기준"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-046",
+    "category": "CMP",
+    "name": "4열 평가표 (현행 vs 개선)",
+    "file": "decks/04_compare/CMP_bulk_evaltable_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:CMP-046",
+    "tags": [
+      "평가표",
+      "비교표",
+      "현행개선",
+      "기호평가",
+      "purple"
+    ],
+    "params": {
+      "family": "evaltable",
+      "cols": 4,
+      "rows": 5,
+      "symbols": [
+        "○",
+        "△",
+        "✕"
+      ],
+      "theme": "purple"
+    },
+    "bindings": {
+      "rows": [
+        "운영 효율성",
+        "혁신 역량",
+        "브랜드 신뢰도",
+        "현지화 수준",
+        "리스크 관리"
+      ],
+      "cols": [
+        "평가 항목",
+        "현행",
+        "개선",
+        "목표"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_symbols",
+      "cell_color",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "개선 효과 제시",
+      "현황 진단",
+      "평가 기준"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-047",
+    "category": "CMP",
+    "name": "우열 비교표 (자사 vs 경쟁 2사)",
+    "file": "decks/04_compare/CMP_bulk_versus_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:CMP-047",
+    "tags": [
+      "비교표",
+      "우열비교",
+      "자사강조",
+      "경쟁분석",
+      "blue"
+    ],
+    "params": {
+      "family": "versus",
+      "cols": 4,
+      "rows": 5,
+      "highlight_col": "자사",
+      "competitors": 2,
+      "symbols": [
+        "○",
+        "△",
+        "✕"
+      ],
+      "theme": "blue"
+    },
+    "bindings": {
+      "rows": [
+        "글로벌 대응 역량",
+        "협업 프로세스",
+        "AI 활용 성숙도",
+        "품질 관리 체계",
+        "가격 경쟁력"
+      ],
+      "cols": [
+        "평가 항목",
+        "자사",
+        "경쟁사 A",
+        "경쟁사 B"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_symbols",
+      "highlight_col",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "경쟁력 비교",
+      "차별성 강조",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-048",
+    "category": "CMP",
+    "name": "우열 비교표 (자사 vs 경쟁 3사)",
+    "file": "decks/04_compare/CMP_bulk_versus_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:CMP-048",
+    "tags": [
+      "비교표",
+      "우열비교",
+      "자사강조",
+      "경쟁분석",
+      "teal"
+    ],
+    "params": {
+      "family": "versus",
+      "cols": 5,
+      "rows": 6,
+      "highlight_col": "자사",
+      "competitors": 3,
+      "symbols": [
+        "○",
+        "△",
+        "✕"
+      ],
+      "theme": "teal"
+    },
+    "bindings": {
+      "rows": [
+        "협업 프로세스",
+        "AI 활용 성숙도",
+        "품질 관리 체계",
+        "가격 경쟁력",
+        "납기 대응력",
+        "기술 전문성"
+      ],
+      "cols": [
+        "평가 항목",
+        "자사",
+        "경쟁사 A",
+        "경쟁사 B",
+        "경쟁사 C"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_symbols",
+      "highlight_col",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "경쟁력 비교",
+      "차별성 강조",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-049",
+    "category": "CMP",
+    "name": "우열 비교표 (자사 vs 경쟁 4사)",
+    "file": "decks/04_compare/CMP_bulk_versus_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:CMP-049",
+    "tags": [
+      "비교표",
+      "우열비교",
+      "자사강조",
+      "경쟁분석",
+      "cyan"
+    ],
+    "params": {
+      "family": "versus",
+      "cols": 6,
+      "rows": 7,
+      "highlight_col": "자사",
+      "competitors": 4,
+      "symbols": [
+        "○",
+        "△",
+        "✕"
+      ],
+      "theme": "cyan"
+    },
+    "bindings": {
+      "rows": [
+        "AI 활용 성숙도",
+        "품질 관리 체계",
+        "가격 경쟁력",
+        "납기 대응력",
+        "기술 전문성",
+        "데이터 보안 수준",
+        "사용자 경험"
+      ],
+      "cols": [
+        "평가 항목",
+        "자사",
+        "경쟁사 A",
+        "경쟁사 B",
+        "경쟁사 C",
+        "경쟁사 D"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_symbols",
+      "highlight_col",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "경쟁력 비교",
+      "차별성 강조",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-050",
+    "category": "CMP",
+    "name": "우열 비교표 (자사 vs 경쟁 2사)",
+    "file": "decks/04_compare/CMP_bulk_versus_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:CMP-050",
+    "tags": [
+      "비교표",
+      "우열비교",
+      "자사강조",
+      "경쟁분석",
+      "purple"
+    ],
+    "params": {
+      "family": "versus",
+      "cols": 4,
+      "rows": 5,
+      "highlight_col": "자사",
+      "competitors": 2,
+      "symbols": [
+        "○",
+        "△",
+        "✕"
+      ],
+      "theme": "purple"
+    },
+    "bindings": {
+      "rows": [
+        "품질 관리 체계",
+        "가격 경쟁력",
+        "납기 대응력",
+        "기술 전문성",
+        "데이터 보안 수준"
+      ],
+      "cols": [
+        "평가 항목",
+        "자사",
+        "경쟁사 A",
+        "경쟁사 B"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_symbols",
+      "highlight_col",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "경쟁력 비교",
+      "차별성 강조",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-051",
+    "category": "CMP",
+    "name": "우열 비교표 (자사 vs 경쟁 3사)",
+    "file": "decks/04_compare/CMP_bulk_versus_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:CMP-051",
+    "tags": [
+      "비교표",
+      "우열비교",
+      "자사강조",
+      "경쟁분석",
+      "navy"
+    ],
+    "params": {
+      "family": "versus",
+      "cols": 5,
+      "rows": 6,
+      "highlight_col": "자사",
+      "competitors": 3,
+      "symbols": [
+        "○",
+        "△",
+        "✕"
+      ],
+      "theme": "navy"
+    },
+    "bindings": {
+      "rows": [
+        "가격 경쟁력",
+        "납기 대응력",
+        "기술 전문성",
+        "데이터 보안 수준",
+        "사용자 경험",
+        "시스템 확장성"
+      ],
+      "cols": [
+        "평가 항목",
+        "자사",
+        "경쟁사 A",
+        "경쟁사 B",
+        "경쟁사 C"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_symbols",
+      "highlight_col",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "경쟁력 비교",
+      "차별성 강조",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-052",
+    "category": "CMP",
+    "name": "우열 비교표 (자사 vs 경쟁 4사)",
+    "file": "decks/04_compare/CMP_bulk_versus_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:CMP-052",
+    "tags": [
+      "비교표",
+      "우열비교",
+      "자사강조",
+      "경쟁분석",
+      "blue"
+    ],
+    "params": {
+      "family": "versus",
+      "cols": 6,
+      "rows": 7,
+      "highlight_col": "자사",
+      "competitors": 4,
+      "symbols": [
+        "○",
+        "△",
+        "✕"
+      ],
+      "theme": "blue"
+    },
+    "bindings": {
+      "rows": [
+        "납기 대응력",
+        "기술 전문성",
+        "데이터 보안 수준",
+        "사용자 경험",
+        "시스템 확장성",
+        "유지보수 편의",
+        "고객 지원 체계"
+      ],
+      "cols": [
+        "평가 항목",
+        "자사",
+        "경쟁사 A",
+        "경쟁사 B",
+        "경쟁사 C",
+        "경쟁사 D"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_symbols",
+      "highlight_col",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "경쟁력 비교",
+      "차별성 강조",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-053",
+    "category": "CMP",
+    "name": "우열 비교표 (자사 vs 경쟁 2사)",
+    "file": "decks/04_compare/CMP_bulk_versus_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:CMP-053",
+    "tags": [
+      "비교표",
+      "우열비교",
+      "자사강조",
+      "경쟁분석",
+      "teal"
+    ],
+    "params": {
+      "family": "versus",
+      "cols": 4,
+      "rows": 5,
+      "highlight_col": "자사",
+      "competitors": 2,
+      "symbols": [
+        "○",
+        "△",
+        "✕"
+      ],
+      "theme": "teal"
+    },
+    "bindings": {
+      "rows": [
+        "기술 전문성",
+        "데이터 보안 수준",
+        "사용자 경험",
+        "시스템 확장성",
+        "유지보수 편의"
+      ],
+      "cols": [
+        "평가 항목",
+        "자사",
+        "경쟁사 A",
+        "경쟁사 B"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_symbols",
+      "highlight_col",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "경쟁력 비교",
+      "차별성 강조",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-054",
+    "category": "CMP",
+    "name": "우열 비교표 (자사 vs 경쟁 3사)",
+    "file": "decks/04_compare/CMP_bulk_versus_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:CMP-054",
+    "tags": [
+      "비교표",
+      "우열비교",
+      "자사강조",
+      "경쟁분석",
+      "cyan"
+    ],
+    "params": {
+      "family": "versus",
+      "cols": 5,
+      "rows": 6,
+      "highlight_col": "자사",
+      "competitors": 3,
+      "symbols": [
+        "○",
+        "△",
+        "✕"
+      ],
+      "theme": "cyan"
+    },
+    "bindings": {
+      "rows": [
+        "데이터 보안 수준",
+        "사용자 경험",
+        "시스템 확장성",
+        "유지보수 편의",
+        "고객 지원 체계",
+        "시장 이해도"
+      ],
+      "cols": [
+        "평가 항목",
+        "자사",
+        "경쟁사 A",
+        "경쟁사 B",
+        "경쟁사 C"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_symbols",
+      "highlight_col",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "경쟁력 비교",
+      "차별성 강조",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-055",
+    "category": "CMP",
+    "name": "우열 비교표 (자사 vs 경쟁 4사)",
+    "file": "decks/04_compare/CMP_bulk_versus_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:CMP-055",
+    "tags": [
+      "비교표",
+      "우열비교",
+      "자사강조",
+      "경쟁분석",
+      "purple"
+    ],
+    "params": {
+      "family": "versus",
+      "cols": 6,
+      "rows": 7,
+      "highlight_col": "자사",
+      "competitors": 4,
+      "symbols": [
+        "○",
+        "△",
+        "✕"
+      ],
+      "theme": "purple"
+    },
+    "bindings": {
+      "rows": [
+        "사용자 경험",
+        "시스템 확장성",
+        "유지보수 편의",
+        "고객 지원 체계",
+        "시장 이해도",
+        "운영 효율성",
+        "혁신 역량"
+      ],
+      "cols": [
+        "평가 항목",
+        "자사",
+        "경쟁사 A",
+        "경쟁사 B",
+        "경쟁사 C",
+        "경쟁사 D"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_symbols",
+      "highlight_col",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "경쟁력 비교",
+      "차별성 강조",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-056",
+    "category": "CMP",
+    "name": "우열 비교표 (자사 vs 경쟁 2사)",
+    "file": "decks/04_compare/CMP_bulk_versus_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:CMP-056",
+    "tags": [
+      "비교표",
+      "우열비교",
+      "자사강조",
+      "경쟁분석",
+      "navy"
+    ],
+    "params": {
+      "family": "versus",
+      "cols": 4,
+      "rows": 5,
+      "highlight_col": "자사",
+      "competitors": 2,
+      "symbols": [
+        "○",
+        "△",
+        "✕"
+      ],
+      "theme": "navy"
+    },
+    "bindings": {
+      "rows": [
+        "시스템 확장성",
+        "유지보수 편의",
+        "고객 지원 체계",
+        "시장 이해도",
+        "운영 효율성"
+      ],
+      "cols": [
+        "평가 항목",
+        "자사",
+        "경쟁사 A",
+        "경쟁사 B"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_symbols",
+      "highlight_col",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "경쟁력 비교",
+      "차별성 강조",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-057",
+    "category": "CMP",
+    "name": "우열 비교표 (자사 vs 경쟁 3사)",
+    "file": "decks/04_compare/CMP_bulk_versus_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:CMP-057",
+    "tags": [
+      "비교표",
+      "우열비교",
+      "자사강조",
+      "경쟁분석",
+      "blue"
+    ],
+    "params": {
+      "family": "versus",
+      "cols": 5,
+      "rows": 6,
+      "highlight_col": "자사",
+      "competitors": 3,
+      "symbols": [
+        "○",
+        "△",
+        "✕"
+      ],
+      "theme": "blue"
+    },
+    "bindings": {
+      "rows": [
+        "유지보수 편의",
+        "고객 지원 체계",
+        "시장 이해도",
+        "운영 효율성",
+        "혁신 역량",
+        "브랜드 신뢰도"
+      ],
+      "cols": [
+        "평가 항목",
+        "자사",
+        "경쟁사 A",
+        "경쟁사 B",
+        "경쟁사 C"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_symbols",
+      "highlight_col",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "경쟁력 비교",
+      "차별성 강조",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-058",
+    "category": "CMP",
+    "name": "우열 비교표 (자사 vs 경쟁 4사)",
+    "file": "decks/04_compare/CMP_bulk_versus_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:CMP-058",
+    "tags": [
+      "비교표",
+      "우열비교",
+      "자사강조",
+      "경쟁분석",
+      "teal"
+    ],
+    "params": {
+      "family": "versus",
+      "cols": 6,
+      "rows": 7,
+      "highlight_col": "자사",
+      "competitors": 4,
+      "symbols": [
+        "○",
+        "△",
+        "✕"
+      ],
+      "theme": "teal"
+    },
+    "bindings": {
+      "rows": [
+        "고객 지원 체계",
+        "시장 이해도",
+        "운영 효율성",
+        "혁신 역량",
+        "브랜드 신뢰도",
+        "현지화 수준",
+        "리스크 관리"
+      ],
+      "cols": [
+        "평가 항목",
+        "자사",
+        "경쟁사 A",
+        "경쟁사 B",
+        "경쟁사 C",
+        "경쟁사 D"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_symbols",
+      "highlight_col",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "경쟁력 비교",
+      "차별성 강조",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-059",
+    "category": "CMP",
+    "name": "우열 비교표 (자사 vs 경쟁 2사)",
+    "file": "decks/04_compare/CMP_bulk_versus_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:CMP-059",
+    "tags": [
+      "비교표",
+      "우열비교",
+      "자사강조",
+      "경쟁분석",
+      "cyan"
+    ],
+    "params": {
+      "family": "versus",
+      "cols": 4,
+      "rows": 5,
+      "highlight_col": "자사",
+      "competitors": 2,
+      "symbols": [
+        "○",
+        "△",
+        "✕"
+      ],
+      "theme": "cyan"
+    },
+    "bindings": {
+      "rows": [
+        "시장 이해도",
+        "운영 효율성",
+        "혁신 역량",
+        "브랜드 신뢰도",
+        "현지화 수준"
+      ],
+      "cols": [
+        "평가 항목",
+        "자사",
+        "경쟁사 A",
+        "경쟁사 B"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_symbols",
+      "highlight_col",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "경쟁력 비교",
+      "차별성 강조",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-060",
+    "category": "CMP",
+    "name": "우열 비교표 (자사 vs 경쟁 3사)",
+    "file": "decks/04_compare/CMP_bulk_versus_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:CMP-060",
+    "tags": [
+      "비교표",
+      "우열비교",
+      "자사강조",
+      "경쟁분석",
+      "purple"
+    ],
+    "params": {
+      "family": "versus",
+      "cols": 5,
+      "rows": 6,
+      "highlight_col": "자사",
+      "competitors": 3,
+      "symbols": [
+        "○",
+        "△",
+        "✕"
+      ],
+      "theme": "purple"
+    },
+    "bindings": {
+      "rows": [
+        "운영 효율성",
+        "혁신 역량",
+        "브랜드 신뢰도",
+        "현지화 수준",
+        "리스크 관리",
+        "규제 준수"
+      ],
+      "cols": [
+        "평가 항목",
+        "자사",
+        "경쟁사 A",
+        "경쟁사 B",
+        "경쟁사 C"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_symbols",
+      "highlight_col",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "경쟁력 비교",
+      "차별성 강조",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-061",
+    "category": "CMP",
+    "name": "우열 비교표 (자사 vs 경쟁 4사)",
+    "file": "decks/04_compare/CMP_bulk_versus_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:CMP-061",
+    "tags": [
+      "비교표",
+      "우열비교",
+      "자사강조",
+      "경쟁분석",
+      "navy"
+    ],
+    "params": {
+      "family": "versus",
+      "cols": 6,
+      "rows": 7,
+      "highlight_col": "자사",
+      "competitors": 4,
+      "symbols": [
+        "○",
+        "△",
+        "✕"
+      ],
+      "theme": "navy"
+    },
+    "bindings": {
+      "rows": [
+        "혁신 역량",
+        "브랜드 신뢰도",
+        "현지화 수준",
+        "리스크 관리",
+        "규제 준수",
+        "연동 용이성",
+        "글로벌 대응 역량"
+      ],
+      "cols": [
+        "평가 항목",
+        "자사",
+        "경쟁사 A",
+        "경쟁사 B",
+        "경쟁사 C",
+        "경쟁사 D"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_symbols",
+      "highlight_col",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "경쟁력 비교",
+      "차별성 강조",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-062",
+    "category": "CMP",
+    "name": "우열 비교표 (자사 vs 경쟁 2사)",
+    "file": "decks/04_compare/CMP_bulk_versus_v1.pptx",
+    "slide": 16,
+    "anchor": "asset:CMP-062",
+    "tags": [
+      "비교표",
+      "우열비교",
+      "자사강조",
+      "경쟁분석",
+      "blue"
+    ],
+    "params": {
+      "family": "versus",
+      "cols": 4,
+      "rows": 5,
+      "highlight_col": "자사",
+      "competitors": 2,
+      "symbols": [
+        "○",
+        "△",
+        "✕"
+      ],
+      "theme": "blue"
+    },
+    "bindings": {
+      "rows": [
+        "브랜드 신뢰도",
+        "현지화 수준",
+        "리스크 관리",
+        "규제 준수",
+        "연동 용이성"
+      ],
+      "cols": [
+        "평가 항목",
+        "자사",
+        "경쟁사 A",
+        "경쟁사 B"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_symbols",
+      "highlight_col",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "경쟁력 비교",
+      "차별성 강조",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-063",
+    "category": "CMP",
+    "name": "가중치 스코어카드 (4항목)",
+    "file": "decks/04_compare/CMP_bulk_scorecard_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:CMP-063",
+    "tags": [
+      "평가표",
+      "스코어카드",
+      "가중치",
+      "환산점수",
+      "blue"
+    ],
+    "params": {
+      "family": "scorecard",
+      "cols": 4,
+      "rows": 4,
+      "total_row": true,
+      "computed_col": "환산",
+      "theme": "blue"
+    },
+    "bindings": {
+      "rows": [
+        "글로벌 대응 역량",
+        "협업 프로세스",
+        "AI 활용 성숙도",
+        "품질 관리 체계"
+      ],
+      "cols": [
+        "평가 항목",
+        "가중치",
+        "점수",
+        "환산점수"
+      ]
+    },
+    "editable": [
+      "rows",
+      "weights",
+      "scores",
+      "converted",
+      "total"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "정량 평가",
+      "가중 채점",
+      "심사 대응"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-064",
+    "category": "CMP",
+    "name": "가중치 스코어카드 (5항목)",
+    "file": "decks/04_compare/CMP_bulk_scorecard_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:CMP-064",
+    "tags": [
+      "평가표",
+      "스코어카드",
+      "가중치",
+      "환산점수",
+      "teal"
+    ],
+    "params": {
+      "family": "scorecard",
+      "cols": 4,
+      "rows": 5,
+      "total_row": true,
+      "computed_col": "환산",
+      "theme": "teal"
+    },
+    "bindings": {
+      "rows": [
+        "협업 프로세스",
+        "AI 활용 성숙도",
+        "품질 관리 체계",
+        "가격 경쟁력",
+        "납기 대응력"
+      ],
+      "cols": [
+        "평가 항목",
+        "가중치",
+        "점수",
+        "환산점수"
+      ]
+    },
+    "editable": [
+      "rows",
+      "weights",
+      "scores",
+      "converted",
+      "total"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "정량 평가",
+      "가중 채점",
+      "심사 대응"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-065",
+    "category": "CMP",
+    "name": "가중치 스코어카드 (6항목)",
+    "file": "decks/04_compare/CMP_bulk_scorecard_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:CMP-065",
+    "tags": [
+      "평가표",
+      "스코어카드",
+      "가중치",
+      "환산점수",
+      "cyan"
+    ],
+    "params": {
+      "family": "scorecard",
+      "cols": 4,
+      "rows": 6,
+      "total_row": true,
+      "computed_col": "환산",
+      "theme": "cyan"
+    },
+    "bindings": {
+      "rows": [
+        "AI 활용 성숙도",
+        "품질 관리 체계",
+        "가격 경쟁력",
+        "납기 대응력",
+        "기술 전문성",
+        "데이터 보안 수준"
+      ],
+      "cols": [
+        "평가 항목",
+        "가중치",
+        "점수",
+        "환산점수"
+      ]
+    },
+    "editable": [
+      "rows",
+      "weights",
+      "scores",
+      "converted",
+      "total"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "정량 평가",
+      "가중 채점",
+      "심사 대응"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-066",
+    "category": "CMP",
+    "name": "가중치 스코어카드 (4항목)",
+    "file": "decks/04_compare/CMP_bulk_scorecard_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:CMP-066",
+    "tags": [
+      "평가표",
+      "스코어카드",
+      "가중치",
+      "환산점수",
+      "purple"
+    ],
+    "params": {
+      "family": "scorecard",
+      "cols": 4,
+      "rows": 4,
+      "total_row": true,
+      "computed_col": "환산",
+      "theme": "purple"
+    },
+    "bindings": {
+      "rows": [
+        "품질 관리 체계",
+        "가격 경쟁력",
+        "납기 대응력",
+        "기술 전문성"
+      ],
+      "cols": [
+        "평가 항목",
+        "가중치",
+        "점수",
+        "환산점수"
+      ]
+    },
+    "editable": [
+      "rows",
+      "weights",
+      "scores",
+      "converted",
+      "total"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "정량 평가",
+      "가중 채점",
+      "심사 대응"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-067",
+    "category": "CMP",
+    "name": "가중치 스코어카드 (5항목)",
+    "file": "decks/04_compare/CMP_bulk_scorecard_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:CMP-067",
+    "tags": [
+      "평가표",
+      "스코어카드",
+      "가중치",
+      "환산점수",
+      "navy"
+    ],
+    "params": {
+      "family": "scorecard",
+      "cols": 4,
+      "rows": 5,
+      "total_row": true,
+      "computed_col": "환산",
+      "theme": "navy"
+    },
+    "bindings": {
+      "rows": [
+        "가격 경쟁력",
+        "납기 대응력",
+        "기술 전문성",
+        "데이터 보안 수준",
+        "사용자 경험"
+      ],
+      "cols": [
+        "평가 항목",
+        "가중치",
+        "점수",
+        "환산점수"
+      ]
+    },
+    "editable": [
+      "rows",
+      "weights",
+      "scores",
+      "converted",
+      "total"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "정량 평가",
+      "가중 채점",
+      "심사 대응"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-068",
+    "category": "CMP",
+    "name": "가중치 스코어카드 (6항목)",
+    "file": "decks/04_compare/CMP_bulk_scorecard_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:CMP-068",
+    "tags": [
+      "평가표",
+      "스코어카드",
+      "가중치",
+      "환산점수",
+      "blue"
+    ],
+    "params": {
+      "family": "scorecard",
+      "cols": 4,
+      "rows": 6,
+      "total_row": true,
+      "computed_col": "환산",
+      "theme": "blue"
+    },
+    "bindings": {
+      "rows": [
+        "납기 대응력",
+        "기술 전문성",
+        "데이터 보안 수준",
+        "사용자 경험",
+        "시스템 확장성",
+        "유지보수 편의"
+      ],
+      "cols": [
+        "평가 항목",
+        "가중치",
+        "점수",
+        "환산점수"
+      ]
+    },
+    "editable": [
+      "rows",
+      "weights",
+      "scores",
+      "converted",
+      "total"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "정량 평가",
+      "가중 채점",
+      "심사 대응"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-069",
+    "category": "CMP",
+    "name": "가중치 스코어카드 (4항목)",
+    "file": "decks/04_compare/CMP_bulk_scorecard_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:CMP-069",
+    "tags": [
+      "평가표",
+      "스코어카드",
+      "가중치",
+      "환산점수",
+      "teal"
+    ],
+    "params": {
+      "family": "scorecard",
+      "cols": 4,
+      "rows": 4,
+      "total_row": true,
+      "computed_col": "환산",
+      "theme": "teal"
+    },
+    "bindings": {
+      "rows": [
+        "기술 전문성",
+        "데이터 보안 수준",
+        "사용자 경험",
+        "시스템 확장성"
+      ],
+      "cols": [
+        "평가 항목",
+        "가중치",
+        "점수",
+        "환산점수"
+      ]
+    },
+    "editable": [
+      "rows",
+      "weights",
+      "scores",
+      "converted",
+      "total"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "정량 평가",
+      "가중 채점",
+      "심사 대응"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-070",
+    "category": "CMP",
+    "name": "가중치 스코어카드 (5항목)",
+    "file": "decks/04_compare/CMP_bulk_scorecard_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:CMP-070",
+    "tags": [
+      "평가표",
+      "스코어카드",
+      "가중치",
+      "환산점수",
+      "cyan"
+    ],
+    "params": {
+      "family": "scorecard",
+      "cols": 4,
+      "rows": 5,
+      "total_row": true,
+      "computed_col": "환산",
+      "theme": "cyan"
+    },
+    "bindings": {
+      "rows": [
+        "데이터 보안 수준",
+        "사용자 경험",
+        "시스템 확장성",
+        "유지보수 편의",
+        "고객 지원 체계"
+      ],
+      "cols": [
+        "평가 항목",
+        "가중치",
+        "점수",
+        "환산점수"
+      ]
+    },
+    "editable": [
+      "rows",
+      "weights",
+      "scores",
+      "converted",
+      "total"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "정량 평가",
+      "가중 채점",
+      "심사 대응"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-071",
+    "category": "CMP",
+    "name": "가중치 스코어카드 (6항목)",
+    "file": "decks/04_compare/CMP_bulk_scorecard_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:CMP-071",
+    "tags": [
+      "평가표",
+      "스코어카드",
+      "가중치",
+      "환산점수",
+      "purple"
+    ],
+    "params": {
+      "family": "scorecard",
+      "cols": 4,
+      "rows": 6,
+      "total_row": true,
+      "computed_col": "환산",
+      "theme": "purple"
+    },
+    "bindings": {
+      "rows": [
+        "사용자 경험",
+        "시스템 확장성",
+        "유지보수 편의",
+        "고객 지원 체계",
+        "시장 이해도",
+        "운영 효율성"
+      ],
+      "cols": [
+        "평가 항목",
+        "가중치",
+        "점수",
+        "환산점수"
+      ]
+    },
+    "editable": [
+      "rows",
+      "weights",
+      "scores",
+      "converted",
+      "total"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "정량 평가",
+      "가중 채점",
+      "심사 대응"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-072",
+    "category": "CMP",
+    "name": "가중치 스코어카드 (4항목)",
+    "file": "decks/04_compare/CMP_bulk_scorecard_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:CMP-072",
+    "tags": [
+      "평가표",
+      "스코어카드",
+      "가중치",
+      "환산점수",
+      "navy"
+    ],
+    "params": {
+      "family": "scorecard",
+      "cols": 4,
+      "rows": 4,
+      "total_row": true,
+      "computed_col": "환산",
+      "theme": "navy"
+    },
+    "bindings": {
+      "rows": [
+        "시스템 확장성",
+        "유지보수 편의",
+        "고객 지원 체계",
+        "시장 이해도"
+      ],
+      "cols": [
+        "평가 항목",
+        "가중치",
+        "점수",
+        "환산점수"
+      ]
+    },
+    "editable": [
+      "rows",
+      "weights",
+      "scores",
+      "converted",
+      "total"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "정량 평가",
+      "가중 채점",
+      "심사 대응"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-073",
+    "category": "CMP",
+    "name": "가중치 스코어카드 (5항목)",
+    "file": "decks/04_compare/CMP_bulk_scorecard_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:CMP-073",
+    "tags": [
+      "평가표",
+      "스코어카드",
+      "가중치",
+      "환산점수",
+      "blue"
+    ],
+    "params": {
+      "family": "scorecard",
+      "cols": 4,
+      "rows": 5,
+      "total_row": true,
+      "computed_col": "환산",
+      "theme": "blue"
+    },
+    "bindings": {
+      "rows": [
+        "유지보수 편의",
+        "고객 지원 체계",
+        "시장 이해도",
+        "운영 효율성",
+        "혁신 역량"
+      ],
+      "cols": [
+        "평가 항목",
+        "가중치",
+        "점수",
+        "환산점수"
+      ]
+    },
+    "editable": [
+      "rows",
+      "weights",
+      "scores",
+      "converted",
+      "total"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "정량 평가",
+      "가중 채점",
+      "심사 대응"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-074",
+    "category": "CMP",
+    "name": "가중치 스코어카드 (6항목)",
+    "file": "decks/04_compare/CMP_bulk_scorecard_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:CMP-074",
+    "tags": [
+      "평가표",
+      "스코어카드",
+      "가중치",
+      "환산점수",
+      "teal"
+    ],
+    "params": {
+      "family": "scorecard",
+      "cols": 4,
+      "rows": 6,
+      "total_row": true,
+      "computed_col": "환산",
+      "theme": "teal"
+    },
+    "bindings": {
+      "rows": [
+        "고객 지원 체계",
+        "시장 이해도",
+        "운영 효율성",
+        "혁신 역량",
+        "브랜드 신뢰도",
+        "현지화 수준"
+      ],
+      "cols": [
+        "평가 항목",
+        "가중치",
+        "점수",
+        "환산점수"
+      ]
+    },
+    "editable": [
+      "rows",
+      "weights",
+      "scores",
+      "converted",
+      "total"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "정량 평가",
+      "가중 채점",
+      "심사 대응"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-075",
+    "category": "CMP",
+    "name": "가중치 스코어카드 (4항목)",
+    "file": "decks/04_compare/CMP_bulk_scorecard_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:CMP-075",
+    "tags": [
+      "평가표",
+      "스코어카드",
+      "가중치",
+      "환산점수",
+      "cyan"
+    ],
+    "params": {
+      "family": "scorecard",
+      "cols": 4,
+      "rows": 4,
+      "total_row": true,
+      "computed_col": "환산",
+      "theme": "cyan"
+    },
+    "bindings": {
+      "rows": [
+        "시장 이해도",
+        "운영 효율성",
+        "혁신 역량",
+        "브랜드 신뢰도"
+      ],
+      "cols": [
+        "평가 항목",
+        "가중치",
+        "점수",
+        "환산점수"
+      ]
+    },
+    "editable": [
+      "rows",
+      "weights",
+      "scores",
+      "converted",
+      "total"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "정량 평가",
+      "가중 채점",
+      "심사 대응"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-076",
+    "category": "CMP",
+    "name": "가중치 스코어카드 (5항목)",
+    "file": "decks/04_compare/CMP_bulk_scorecard_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:CMP-076",
+    "tags": [
+      "평가표",
+      "스코어카드",
+      "가중치",
+      "환산점수",
+      "purple"
+    ],
+    "params": {
+      "family": "scorecard",
+      "cols": 4,
+      "rows": 5,
+      "total_row": true,
+      "computed_col": "환산",
+      "theme": "purple"
+    },
+    "bindings": {
+      "rows": [
+        "운영 효율성",
+        "혁신 역량",
+        "브랜드 신뢰도",
+        "현지화 수준",
+        "리스크 관리"
+      ],
+      "cols": [
+        "평가 항목",
+        "가중치",
+        "점수",
+        "환산점수"
+      ]
+    },
+    "editable": [
+      "rows",
+      "weights",
+      "scores",
+      "converted",
+      "total"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "정량 평가",
+      "가중 채점",
+      "심사 대응"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-077",
+    "category": "CMP",
+    "name": "기능 매트릭스 그리드 (3옵션)",
+    "file": "decks/04_compare/CMP_bulk_featgrid_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:CMP-077",
+    "tags": [
+      "비교표",
+      "기능매트릭스",
+      "그리드",
+      "제공여부",
+      "blue"
+    ],
+    "params": {
+      "family": "featgrid",
+      "cols": 4,
+      "rows": 5,
+      "options": 3,
+      "states": [
+        "y",
+        "p",
+        "n"
+      ],
+      "symbols": [
+        "✓",
+        "△",
+        "✗"
+      ],
+      "theme": "blue"
+    },
+    "bindings": {
+      "rows": [
+        "글로벌 대응 역량",
+        "협업 프로세스",
+        "AI 활용 성숙도",
+        "품질 관리 체계",
+        "가격 경쟁력"
+      ],
+      "cols": [
+        "기능 항목",
+        "기본",
+        "표준",
+        "프리미엄"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_states",
+      "state_symbols",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "기능 비교",
+      "옵션 제공표",
+      "제안 범위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-078",
+    "category": "CMP",
+    "name": "기능 매트릭스 그리드 (4옵션)",
+    "file": "decks/04_compare/CMP_bulk_featgrid_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:CMP-078",
+    "tags": [
+      "비교표",
+      "기능매트릭스",
+      "그리드",
+      "제공여부",
+      "teal"
+    ],
+    "params": {
+      "family": "featgrid",
+      "cols": 5,
+      "rows": 6,
+      "options": 4,
+      "states": [
+        "y",
+        "p",
+        "n"
+      ],
+      "symbols": [
+        "✓",
+        "△",
+        "✗"
+      ],
+      "theme": "teal"
+    },
+    "bindings": {
+      "rows": [
+        "협업 프로세스",
+        "AI 활용 성숙도",
+        "품질 관리 체계",
+        "가격 경쟁력",
+        "납기 대응력",
+        "기술 전문성"
+      ],
+      "cols": [
+        "기능 항목",
+        "기본",
+        "표준",
+        "프리미엄",
+        "엔터프라이즈"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_states",
+      "state_symbols",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "기능 비교",
+      "옵션 제공표",
+      "제안 범위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-079",
+    "category": "CMP",
+    "name": "기능 매트릭스 그리드 (3옵션)",
+    "file": "decks/04_compare/CMP_bulk_featgrid_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:CMP-079",
+    "tags": [
+      "비교표",
+      "기능매트릭스",
+      "그리드",
+      "제공여부",
+      "cyan"
+    ],
+    "params": {
+      "family": "featgrid",
+      "cols": 4,
+      "rows": 7,
+      "options": 3,
+      "states": [
+        "y",
+        "p",
+        "n"
+      ],
+      "symbols": [
+        "✓",
+        "△",
+        "✗"
+      ],
+      "theme": "cyan"
+    },
+    "bindings": {
+      "rows": [
+        "AI 활용 성숙도",
+        "품질 관리 체계",
+        "가격 경쟁력",
+        "납기 대응력",
+        "기술 전문성",
+        "데이터 보안 수준",
+        "사용자 경험"
+      ],
+      "cols": [
+        "기능 항목",
+        "기본",
+        "표준",
+        "프리미엄"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_states",
+      "state_symbols",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "기능 비교",
+      "옵션 제공표",
+      "제안 범위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-080",
+    "category": "CMP",
+    "name": "기능 매트릭스 그리드 (4옵션)",
+    "file": "decks/04_compare/CMP_bulk_featgrid_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:CMP-080",
+    "tags": [
+      "비교표",
+      "기능매트릭스",
+      "그리드",
+      "제공여부",
+      "purple"
+    ],
+    "params": {
+      "family": "featgrid",
+      "cols": 5,
+      "rows": 5,
+      "options": 4,
+      "states": [
+        "y",
+        "p",
+        "n"
+      ],
+      "symbols": [
+        "✓",
+        "△",
+        "✗"
+      ],
+      "theme": "purple"
+    },
+    "bindings": {
+      "rows": [
+        "품질 관리 체계",
+        "가격 경쟁력",
+        "납기 대응력",
+        "기술 전문성",
+        "데이터 보안 수준"
+      ],
+      "cols": [
+        "기능 항목",
+        "기본",
+        "표준",
+        "프리미엄",
+        "엔터프라이즈"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_states",
+      "state_symbols",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "기능 비교",
+      "옵션 제공표",
+      "제안 범위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-081",
+    "category": "CMP",
+    "name": "기능 매트릭스 그리드 (3옵션)",
+    "file": "decks/04_compare/CMP_bulk_featgrid_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:CMP-081",
+    "tags": [
+      "비교표",
+      "기능매트릭스",
+      "그리드",
+      "제공여부",
+      "navy"
+    ],
+    "params": {
+      "family": "featgrid",
+      "cols": 4,
+      "rows": 6,
+      "options": 3,
+      "states": [
+        "y",
+        "p",
+        "n"
+      ],
+      "symbols": [
+        "✓",
+        "△",
+        "✗"
+      ],
+      "theme": "navy"
+    },
+    "bindings": {
+      "rows": [
+        "가격 경쟁력",
+        "납기 대응력",
+        "기술 전문성",
+        "데이터 보안 수준",
+        "사용자 경험",
+        "시스템 확장성"
+      ],
+      "cols": [
+        "기능 항목",
+        "기본",
+        "표준",
+        "프리미엄"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_states",
+      "state_symbols",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "기능 비교",
+      "옵션 제공표",
+      "제안 범위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-082",
+    "category": "CMP",
+    "name": "기능 매트릭스 그리드 (4옵션)",
+    "file": "decks/04_compare/CMP_bulk_featgrid_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:CMP-082",
+    "tags": [
+      "비교표",
+      "기능매트릭스",
+      "그리드",
+      "제공여부",
+      "blue"
+    ],
+    "params": {
+      "family": "featgrid",
+      "cols": 5,
+      "rows": 7,
+      "options": 4,
+      "states": [
+        "y",
+        "p",
+        "n"
+      ],
+      "symbols": [
+        "✓",
+        "△",
+        "✗"
+      ],
+      "theme": "blue"
+    },
+    "bindings": {
+      "rows": [
+        "납기 대응력",
+        "기술 전문성",
+        "데이터 보안 수준",
+        "사용자 경험",
+        "시스템 확장성",
+        "유지보수 편의",
+        "고객 지원 체계"
+      ],
+      "cols": [
+        "기능 항목",
+        "기본",
+        "표준",
+        "프리미엄",
+        "엔터프라이즈"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_states",
+      "state_symbols",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "기능 비교",
+      "옵션 제공표",
+      "제안 범위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-083",
+    "category": "CMP",
+    "name": "기능 매트릭스 그리드 (3옵션)",
+    "file": "decks/04_compare/CMP_bulk_featgrid_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:CMP-083",
+    "tags": [
+      "비교표",
+      "기능매트릭스",
+      "그리드",
+      "제공여부",
+      "teal"
+    ],
+    "params": {
+      "family": "featgrid",
+      "cols": 4,
+      "rows": 5,
+      "options": 3,
+      "states": [
+        "y",
+        "p",
+        "n"
+      ],
+      "symbols": [
+        "✓",
+        "△",
+        "✗"
+      ],
+      "theme": "teal"
+    },
+    "bindings": {
+      "rows": [
+        "기술 전문성",
+        "데이터 보안 수준",
+        "사용자 경험",
+        "시스템 확장성",
+        "유지보수 편의"
+      ],
+      "cols": [
+        "기능 항목",
+        "기본",
+        "표준",
+        "프리미엄"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_states",
+      "state_symbols",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "기능 비교",
+      "옵션 제공표",
+      "제안 범위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-084",
+    "category": "CMP",
+    "name": "기능 매트릭스 그리드 (4옵션)",
+    "file": "decks/04_compare/CMP_bulk_featgrid_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:CMP-084",
+    "tags": [
+      "비교표",
+      "기능매트릭스",
+      "그리드",
+      "제공여부",
+      "cyan"
+    ],
+    "params": {
+      "family": "featgrid",
+      "cols": 5,
+      "rows": 6,
+      "options": 4,
+      "states": [
+        "y",
+        "p",
+        "n"
+      ],
+      "symbols": [
+        "✓",
+        "△",
+        "✗"
+      ],
+      "theme": "cyan"
+    },
+    "bindings": {
+      "rows": [
+        "데이터 보안 수준",
+        "사용자 경험",
+        "시스템 확장성",
+        "유지보수 편의",
+        "고객 지원 체계",
+        "시장 이해도"
+      ],
+      "cols": [
+        "기능 항목",
+        "기본",
+        "표준",
+        "프리미엄",
+        "엔터프라이즈"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_states",
+      "state_symbols",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "기능 비교",
+      "옵션 제공표",
+      "제안 범위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-085",
+    "category": "CMP",
+    "name": "기능 매트릭스 그리드 (3옵션)",
+    "file": "decks/04_compare/CMP_bulk_featgrid_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:CMP-085",
+    "tags": [
+      "비교표",
+      "기능매트릭스",
+      "그리드",
+      "제공여부",
+      "purple"
+    ],
+    "params": {
+      "family": "featgrid",
+      "cols": 4,
+      "rows": 7,
+      "options": 3,
+      "states": [
+        "y",
+        "p",
+        "n"
+      ],
+      "symbols": [
+        "✓",
+        "△",
+        "✗"
+      ],
+      "theme": "purple"
+    },
+    "bindings": {
+      "rows": [
+        "사용자 경험",
+        "시스템 확장성",
+        "유지보수 편의",
+        "고객 지원 체계",
+        "시장 이해도",
+        "운영 효율성",
+        "혁신 역량"
+      ],
+      "cols": [
+        "기능 항목",
+        "기본",
+        "표준",
+        "프리미엄"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_states",
+      "state_symbols",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "기능 비교",
+      "옵션 제공표",
+      "제안 범위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-086",
+    "category": "CMP",
+    "name": "기능 매트릭스 그리드 (4옵션)",
+    "file": "decks/04_compare/CMP_bulk_featgrid_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:CMP-086",
+    "tags": [
+      "비교표",
+      "기능매트릭스",
+      "그리드",
+      "제공여부",
+      "navy"
+    ],
+    "params": {
+      "family": "featgrid",
+      "cols": 5,
+      "rows": 5,
+      "options": 4,
+      "states": [
+        "y",
+        "p",
+        "n"
+      ],
+      "symbols": [
+        "✓",
+        "△",
+        "✗"
+      ],
+      "theme": "navy"
+    },
+    "bindings": {
+      "rows": [
+        "시스템 확장성",
+        "유지보수 편의",
+        "고객 지원 체계",
+        "시장 이해도",
+        "운영 효율성"
+      ],
+      "cols": [
+        "기능 항목",
+        "기본",
+        "표준",
+        "프리미엄",
+        "엔터프라이즈"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_states",
+      "state_symbols",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "기능 비교",
+      "옵션 제공표",
+      "제안 범위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-087",
+    "category": "CMP",
+    "name": "기능 매트릭스 그리드 (3옵션)",
+    "file": "decks/04_compare/CMP_bulk_featgrid_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:CMP-087",
+    "tags": [
+      "비교표",
+      "기능매트릭스",
+      "그리드",
+      "제공여부",
+      "blue"
+    ],
+    "params": {
+      "family": "featgrid",
+      "cols": 4,
+      "rows": 6,
+      "options": 3,
+      "states": [
+        "y",
+        "p",
+        "n"
+      ],
+      "symbols": [
+        "✓",
+        "△",
+        "✗"
+      ],
+      "theme": "blue"
+    },
+    "bindings": {
+      "rows": [
+        "유지보수 편의",
+        "고객 지원 체계",
+        "시장 이해도",
+        "운영 효율성",
+        "혁신 역량",
+        "브랜드 신뢰도"
+      ],
+      "cols": [
+        "기능 항목",
+        "기본",
+        "표준",
+        "프리미엄"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_states",
+      "state_symbols",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "기능 비교",
+      "옵션 제공표",
+      "제안 범위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-088",
+    "category": "CMP",
+    "name": "기능 매트릭스 그리드 (4옵션)",
+    "file": "decks/04_compare/CMP_bulk_featgrid_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:CMP-088",
+    "tags": [
+      "비교표",
+      "기능매트릭스",
+      "그리드",
+      "제공여부",
+      "teal"
+    ],
+    "params": {
+      "family": "featgrid",
+      "cols": 5,
+      "rows": 7,
+      "options": 4,
+      "states": [
+        "y",
+        "p",
+        "n"
+      ],
+      "symbols": [
+        "✓",
+        "△",
+        "✗"
+      ],
+      "theme": "teal"
+    },
+    "bindings": {
+      "rows": [
+        "고객 지원 체계",
+        "시장 이해도",
+        "운영 효율성",
+        "혁신 역량",
+        "브랜드 신뢰도",
+        "현지화 수준",
+        "리스크 관리"
+      ],
+      "cols": [
+        "기능 항목",
+        "기본",
+        "표준",
+        "프리미엄",
+        "엔터프라이즈"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_states",
+      "state_symbols",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "기능 비교",
+      "옵션 제공표",
+      "제안 범위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-089",
+    "category": "CMP",
+    "name": "기능 매트릭스 그리드 (3옵션)",
+    "file": "decks/04_compare/CMP_bulk_featgrid_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:CMP-089",
+    "tags": [
+      "비교표",
+      "기능매트릭스",
+      "그리드",
+      "제공여부",
+      "cyan"
+    ],
+    "params": {
+      "family": "featgrid",
+      "cols": 4,
+      "rows": 5,
+      "options": 3,
+      "states": [
+        "y",
+        "p",
+        "n"
+      ],
+      "symbols": [
+        "✓",
+        "△",
+        "✗"
+      ],
+      "theme": "cyan"
+    },
+    "bindings": {
+      "rows": [
+        "시장 이해도",
+        "운영 효율성",
+        "혁신 역량",
+        "브랜드 신뢰도",
+        "현지화 수준"
+      ],
+      "cols": [
+        "기능 항목",
+        "기본",
+        "표준",
+        "프리미엄"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_states",
+      "state_symbols",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "기능 비교",
+      "옵션 제공표",
+      "제안 범위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-090",
+    "category": "CMP",
+    "name": "기능 매트릭스 그리드 (4옵션)",
+    "file": "decks/04_compare/CMP_bulk_featgrid_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:CMP-090",
+    "tags": [
+      "비교표",
+      "기능매트릭스",
+      "그리드",
+      "제공여부",
+      "purple"
+    ],
+    "params": {
+      "family": "featgrid",
+      "cols": 5,
+      "rows": 6,
+      "options": 4,
+      "states": [
+        "y",
+        "p",
+        "n"
+      ],
+      "symbols": [
+        "✓",
+        "△",
+        "✗"
+      ],
+      "theme": "purple"
+    },
+    "bindings": {
+      "rows": [
+        "운영 효율성",
+        "혁신 역량",
+        "브랜드 신뢰도",
+        "현지화 수준",
+        "리스크 관리",
+        "규제 준수"
+      ],
+      "cols": [
+        "기능 항목",
+        "기본",
+        "표준",
+        "프리미엄",
+        "엔터프라이즈"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_states",
+      "state_symbols",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "기능 비교",
+      "옵션 제공표",
+      "제안 범위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-091",
+    "category": "CMP",
+    "name": "기능 매트릭스 그리드 (3옵션)",
+    "file": "decks/04_compare/CMP_bulk_featgrid_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:CMP-091",
+    "tags": [
+      "비교표",
+      "기능매트릭스",
+      "그리드",
+      "제공여부",
+      "navy"
+    ],
+    "params": {
+      "family": "featgrid",
+      "cols": 4,
+      "rows": 7,
+      "options": 3,
+      "states": [
+        "y",
+        "p",
+        "n"
+      ],
+      "symbols": [
+        "✓",
+        "△",
+        "✗"
+      ],
+      "theme": "navy"
+    },
+    "bindings": {
+      "rows": [
+        "혁신 역량",
+        "브랜드 신뢰도",
+        "현지화 수준",
+        "리스크 관리",
+        "규제 준수",
+        "연동 용이성",
+        "글로벌 대응 역량"
+      ],
+      "cols": [
+        "기능 항목",
+        "기본",
+        "표준",
+        "프리미엄"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_states",
+      "state_symbols",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "기능 비교",
+      "옵션 제공표",
+      "제안 범위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-092",
+    "category": "CMP",
+    "name": "기능 매트릭스 그리드 (4옵션)",
+    "file": "decks/04_compare/CMP_bulk_featgrid_v1.pptx",
+    "slide": 16,
+    "anchor": "asset:CMP-092",
+    "tags": [
+      "비교표",
+      "기능매트릭스",
+      "그리드",
+      "제공여부",
+      "blue"
+    ],
+    "params": {
+      "family": "featgrid",
+      "cols": 5,
+      "rows": 5,
+      "options": 4,
+      "states": [
+        "y",
+        "p",
+        "n"
+      ],
+      "symbols": [
+        "✓",
+        "△",
+        "✗"
+      ],
+      "theme": "blue"
+    },
+    "bindings": {
+      "rows": [
+        "브랜드 신뢰도",
+        "현지화 수준",
+        "리스크 관리",
+        "규제 준수",
+        "연동 용이성"
+      ],
+      "cols": [
+        "기능 항목",
+        "기본",
+        "표준",
+        "프리미엄",
+        "엔터프라이즈"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_states",
+      "state_symbols",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "기능 비교",
+      "옵션 제공표",
+      "제안 범위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-093",
+    "category": "CMP",
+    "name": "SWOT 2x2 분석 (2항목)",
+    "file": "decks/04_compare/CMP_bulk_swot_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:CMP-093",
+    "tags": [
+      "매트릭스",
+      "2x2",
+      "SWOT",
+      "사분면",
+      "blue"
+    ],
+    "params": {
+      "family": "swot",
+      "quadrants": 4,
+      "items_per_quad": 2,
+      "layout": "SWOT",
+      "theme": "blue"
+    },
+    "bindings": {
+      "quadrants": [
+        "S",
+        "W",
+        "O",
+        "T"
+      ],
+      "axis": [
+        "internal",
+        "external"
+      ]
+    },
+    "editable": [
+      "quad_letters",
+      "quad_labels",
+      "quad_items",
+      "quad_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "SWOT 분석",
+      "전략 진단",
+      "환경 분석"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-094",
+    "category": "CMP",
+    "name": "SWOT 2x2 분석 (3항목)",
+    "file": "decks/04_compare/CMP_bulk_swot_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:CMP-094",
+    "tags": [
+      "매트릭스",
+      "2x2",
+      "SWOT",
+      "사분면",
+      "teal"
+    ],
+    "params": {
+      "family": "swot",
+      "quadrants": 4,
+      "items_per_quad": 3,
+      "layout": "SWOT",
+      "theme": "teal"
+    },
+    "bindings": {
+      "quadrants": [
+        "S",
+        "W",
+        "O",
+        "T"
+      ],
+      "axis": [
+        "internal",
+        "external"
+      ]
+    },
+    "editable": [
+      "quad_letters",
+      "quad_labels",
+      "quad_items",
+      "quad_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "SWOT 분석",
+      "전략 진단",
+      "환경 분석"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-095",
+    "category": "CMP",
+    "name": "SWOT 2x2 분석 (2항목)",
+    "file": "decks/04_compare/CMP_bulk_swot_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:CMP-095",
+    "tags": [
+      "매트릭스",
+      "2x2",
+      "SWOT",
+      "사분면",
+      "cyan"
+    ],
+    "params": {
+      "family": "swot",
+      "quadrants": 4,
+      "items_per_quad": 2,
+      "layout": "SWOT",
+      "theme": "cyan"
+    },
+    "bindings": {
+      "quadrants": [
+        "S",
+        "W",
+        "O",
+        "T"
+      ],
+      "axis": [
+        "internal",
+        "external"
+      ]
+    },
+    "editable": [
+      "quad_letters",
+      "quad_labels",
+      "quad_items",
+      "quad_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "SWOT 분석",
+      "전략 진단",
+      "환경 분석"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-096",
+    "category": "CMP",
+    "name": "SWOT 2x2 분석 (3항목)",
+    "file": "decks/04_compare/CMP_bulk_swot_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:CMP-096",
+    "tags": [
+      "매트릭스",
+      "2x2",
+      "SWOT",
+      "사분면",
+      "purple"
+    ],
+    "params": {
+      "family": "swot",
+      "quadrants": 4,
+      "items_per_quad": 3,
+      "layout": "SWOT",
+      "theme": "purple"
+    },
+    "bindings": {
+      "quadrants": [
+        "S",
+        "W",
+        "O",
+        "T"
+      ],
+      "axis": [
+        "internal",
+        "external"
+      ]
+    },
+    "editable": [
+      "quad_letters",
+      "quad_labels",
+      "quad_items",
+      "quad_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "SWOT 분석",
+      "전략 진단",
+      "환경 분석"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-097",
+    "category": "CMP",
+    "name": "SWOT 2x2 분석 (2항목)",
+    "file": "decks/04_compare/CMP_bulk_swot_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:CMP-097",
+    "tags": [
+      "매트릭스",
+      "2x2",
+      "SWOT",
+      "사분면",
+      "navy"
+    ],
+    "params": {
+      "family": "swot",
+      "quadrants": 4,
+      "items_per_quad": 2,
+      "layout": "SWOT",
+      "theme": "navy"
+    },
+    "bindings": {
+      "quadrants": [
+        "S",
+        "W",
+        "O",
+        "T"
+      ],
+      "axis": [
+        "internal",
+        "external"
+      ]
+    },
+    "editable": [
+      "quad_letters",
+      "quad_labels",
+      "quad_items",
+      "quad_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "SWOT 분석",
+      "전략 진단",
+      "환경 분석"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-098",
+    "category": "CMP",
+    "name": "SWOT 2x2 분석 (3항목)",
+    "file": "decks/04_compare/CMP_bulk_swot_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:CMP-098",
+    "tags": [
+      "매트릭스",
+      "2x2",
+      "SWOT",
+      "사분면",
+      "blue"
+    ],
+    "params": {
+      "family": "swot",
+      "quadrants": 4,
+      "items_per_quad": 3,
+      "layout": "SWOT",
+      "theme": "blue"
+    },
+    "bindings": {
+      "quadrants": [
+        "S",
+        "W",
+        "O",
+        "T"
+      ],
+      "axis": [
+        "internal",
+        "external"
+      ]
+    },
+    "editable": [
+      "quad_letters",
+      "quad_labels",
+      "quad_items",
+      "quad_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "SWOT 분석",
+      "전략 진단",
+      "환경 분석"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-099",
+    "category": "CMP",
+    "name": "SWOT 2x2 분석 (2항목)",
+    "file": "decks/04_compare/CMP_bulk_swot_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:CMP-099",
+    "tags": [
+      "매트릭스",
+      "2x2",
+      "SWOT",
+      "사분면",
+      "teal"
+    ],
+    "params": {
+      "family": "swot",
+      "quadrants": 4,
+      "items_per_quad": 2,
+      "layout": "SWOT",
+      "theme": "teal"
+    },
+    "bindings": {
+      "quadrants": [
+        "S",
+        "W",
+        "O",
+        "T"
+      ],
+      "axis": [
+        "internal",
+        "external"
+      ]
+    },
+    "editable": [
+      "quad_letters",
+      "quad_labels",
+      "quad_items",
+      "quad_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "SWOT 분석",
+      "전략 진단",
+      "환경 분석"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-100",
+    "category": "CMP",
+    "name": "SWOT 2x2 분석 (3항목)",
+    "file": "decks/04_compare/CMP_bulk_swot_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:CMP-100",
+    "tags": [
+      "매트릭스",
+      "2x2",
+      "SWOT",
+      "사분면",
+      "cyan"
+    ],
+    "params": {
+      "family": "swot",
+      "quadrants": 4,
+      "items_per_quad": 3,
+      "layout": "SWOT",
+      "theme": "cyan"
+    },
+    "bindings": {
+      "quadrants": [
+        "S",
+        "W",
+        "O",
+        "T"
+      ],
+      "axis": [
+        "internal",
+        "external"
+      ]
+    },
+    "editable": [
+      "quad_letters",
+      "quad_labels",
+      "quad_items",
+      "quad_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "SWOT 분석",
+      "전략 진단",
+      "환경 분석"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-101",
+    "category": "CMP",
+    "name": "SWOT 2x2 분석 (2항목)",
+    "file": "decks/04_compare/CMP_bulk_swot_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:CMP-101",
+    "tags": [
+      "매트릭스",
+      "2x2",
+      "SWOT",
+      "사분면",
+      "purple"
+    ],
+    "params": {
+      "family": "swot",
+      "quadrants": 4,
+      "items_per_quad": 2,
+      "layout": "SWOT",
+      "theme": "purple"
+    },
+    "bindings": {
+      "quadrants": [
+        "S",
+        "W",
+        "O",
+        "T"
+      ],
+      "axis": [
+        "internal",
+        "external"
+      ]
+    },
+    "editable": [
+      "quad_letters",
+      "quad_labels",
+      "quad_items",
+      "quad_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "SWOT 분석",
+      "전략 진단",
+      "환경 분석"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-102",
+    "category": "CMP",
+    "name": "SWOT 2x2 분석 (3항목)",
+    "file": "decks/04_compare/CMP_bulk_swot_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:CMP-102",
+    "tags": [
+      "매트릭스",
+      "2x2",
+      "SWOT",
+      "사분면",
+      "navy"
+    ],
+    "params": {
+      "family": "swot",
+      "quadrants": 4,
+      "items_per_quad": 3,
+      "layout": "SWOT",
+      "theme": "navy"
+    },
+    "bindings": {
+      "quadrants": [
+        "S",
+        "W",
+        "O",
+        "T"
+      ],
+      "axis": [
+        "internal",
+        "external"
+      ]
+    },
+    "editable": [
+      "quad_letters",
+      "quad_labels",
+      "quad_items",
+      "quad_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "SWOT 분석",
+      "전략 진단",
+      "환경 분석"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-103",
+    "category": "CMP",
+    "name": "SWOT 2x2 분석 (2항목)",
+    "file": "decks/04_compare/CMP_bulk_swot_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:CMP-103",
+    "tags": [
+      "매트릭스",
+      "2x2",
+      "SWOT",
+      "사분면",
+      "blue"
+    ],
+    "params": {
+      "family": "swot",
+      "quadrants": 4,
+      "items_per_quad": 2,
+      "layout": "SWOT",
+      "theme": "blue"
+    },
+    "bindings": {
+      "quadrants": [
+        "S",
+        "W",
+        "O",
+        "T"
+      ],
+      "axis": [
+        "internal",
+        "external"
+      ]
+    },
+    "editable": [
+      "quad_letters",
+      "quad_labels",
+      "quad_items",
+      "quad_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "SWOT 분석",
+      "전략 진단",
+      "환경 분석"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-104",
+    "category": "CMP",
+    "name": "SWOT 2x2 분석 (3항목)",
+    "file": "decks/04_compare/CMP_bulk_swot_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:CMP-104",
+    "tags": [
+      "매트릭스",
+      "2x2",
+      "SWOT",
+      "사분면",
+      "teal"
+    ],
+    "params": {
+      "family": "swot",
+      "quadrants": 4,
+      "items_per_quad": 3,
+      "layout": "SWOT",
+      "theme": "teal"
+    },
+    "bindings": {
+      "quadrants": [
+        "S",
+        "W",
+        "O",
+        "T"
+      ],
+      "axis": [
+        "internal",
+        "external"
+      ]
+    },
+    "editable": [
+      "quad_letters",
+      "quad_labels",
+      "quad_items",
+      "quad_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "SWOT 분석",
+      "전략 진단",
+      "환경 분석"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-105",
+    "category": "CMP",
+    "name": "하비볼 비교표 (3사)",
+    "file": "decks/04_compare/CMP_bulk_harvey_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:CMP-105",
+    "tags": [
+      "비교표",
+      "하비볼",
+      "우열비교",
+      "충족도",
+      "blue"
+    ],
+    "params": {
+      "family": "harvey",
+      "cols": 4,
+      "rows": 5,
+      "competitors": 3,
+      "glyphs": [
+        "●",
+        "◕",
+        "◐",
+        "◔",
+        "○"
+      ],
+      "theme": "blue"
+    },
+    "bindings": {
+      "rows": [
+        "글로벌 대응 역량",
+        "협업 프로세스",
+        "AI 활용 성숙도",
+        "품질 관리 체계",
+        "가격 경쟁력"
+      ],
+      "cols": [
+        "평가 항목",
+        "자사",
+        "경쟁사 A",
+        "경쟁사 B"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_glyphs",
+      "glyph_color",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "충족도 평가",
+      "경쟁력 비교",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-106",
+    "category": "CMP",
+    "name": "하비볼 비교표 (4사)",
+    "file": "decks/04_compare/CMP_bulk_harvey_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:CMP-106",
+    "tags": [
+      "비교표",
+      "하비볼",
+      "우열비교",
+      "충족도",
+      "teal"
+    ],
+    "params": {
+      "family": "harvey",
+      "cols": 5,
+      "rows": 6,
+      "competitors": 4,
+      "glyphs": [
+        "●",
+        "◕",
+        "◐",
+        "◔",
+        "○"
+      ],
+      "theme": "teal"
+    },
+    "bindings": {
+      "rows": [
+        "협업 프로세스",
+        "AI 활용 성숙도",
+        "품질 관리 체계",
+        "가격 경쟁력",
+        "납기 대응력",
+        "기술 전문성"
+      ],
+      "cols": [
+        "평가 항목",
+        "자사",
+        "경쟁사 A",
+        "경쟁사 B",
+        "경쟁사 C"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_glyphs",
+      "glyph_color",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "충족도 평가",
+      "경쟁력 비교",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-107",
+    "category": "CMP",
+    "name": "하비볼 비교표 (3사)",
+    "file": "decks/04_compare/CMP_bulk_harvey_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:CMP-107",
+    "tags": [
+      "비교표",
+      "하비볼",
+      "우열비교",
+      "충족도",
+      "cyan"
+    ],
+    "params": {
+      "family": "harvey",
+      "cols": 4,
+      "rows": 7,
+      "competitors": 3,
+      "glyphs": [
+        "●",
+        "◕",
+        "◐",
+        "◔",
+        "○"
+      ],
+      "theme": "cyan"
+    },
+    "bindings": {
+      "rows": [
+        "AI 활용 성숙도",
+        "품질 관리 체계",
+        "가격 경쟁력",
+        "납기 대응력",
+        "기술 전문성",
+        "데이터 보안 수준",
+        "사용자 경험"
+      ],
+      "cols": [
+        "평가 항목",
+        "자사",
+        "경쟁사 A",
+        "경쟁사 B"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_glyphs",
+      "glyph_color",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "충족도 평가",
+      "경쟁력 비교",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-108",
+    "category": "CMP",
+    "name": "하비볼 비교표 (4사)",
+    "file": "decks/04_compare/CMP_bulk_harvey_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:CMP-108",
+    "tags": [
+      "비교표",
+      "하비볼",
+      "우열비교",
+      "충족도",
+      "purple"
+    ],
+    "params": {
+      "family": "harvey",
+      "cols": 5,
+      "rows": 5,
+      "competitors": 4,
+      "glyphs": [
+        "●",
+        "◕",
+        "◐",
+        "◔",
+        "○"
+      ],
+      "theme": "purple"
+    },
+    "bindings": {
+      "rows": [
+        "품질 관리 체계",
+        "가격 경쟁력",
+        "납기 대응력",
+        "기술 전문성",
+        "데이터 보안 수준"
+      ],
+      "cols": [
+        "평가 항목",
+        "자사",
+        "경쟁사 A",
+        "경쟁사 B",
+        "경쟁사 C"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_glyphs",
+      "glyph_color",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "충족도 평가",
+      "경쟁력 비교",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-109",
+    "category": "CMP",
+    "name": "하비볼 비교표 (3사)",
+    "file": "decks/04_compare/CMP_bulk_harvey_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:CMP-109",
+    "tags": [
+      "비교표",
+      "하비볼",
+      "우열비교",
+      "충족도",
+      "navy"
+    ],
+    "params": {
+      "family": "harvey",
+      "cols": 4,
+      "rows": 6,
+      "competitors": 3,
+      "glyphs": [
+        "●",
+        "◕",
+        "◐",
+        "◔",
+        "○"
+      ],
+      "theme": "navy"
+    },
+    "bindings": {
+      "rows": [
+        "가격 경쟁력",
+        "납기 대응력",
+        "기술 전문성",
+        "데이터 보안 수준",
+        "사용자 경험",
+        "시스템 확장성"
+      ],
+      "cols": [
+        "평가 항목",
+        "자사",
+        "경쟁사 A",
+        "경쟁사 B"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_glyphs",
+      "glyph_color",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "충족도 평가",
+      "경쟁력 비교",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-110",
+    "category": "CMP",
+    "name": "하비볼 비교표 (4사)",
+    "file": "decks/04_compare/CMP_bulk_harvey_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:CMP-110",
+    "tags": [
+      "비교표",
+      "하비볼",
+      "우열비교",
+      "충족도",
+      "blue"
+    ],
+    "params": {
+      "family": "harvey",
+      "cols": 5,
+      "rows": 7,
+      "competitors": 4,
+      "glyphs": [
+        "●",
+        "◕",
+        "◐",
+        "◔",
+        "○"
+      ],
+      "theme": "blue"
+    },
+    "bindings": {
+      "rows": [
+        "납기 대응력",
+        "기술 전문성",
+        "데이터 보안 수준",
+        "사용자 경험",
+        "시스템 확장성",
+        "유지보수 편의",
+        "고객 지원 체계"
+      ],
+      "cols": [
+        "평가 항목",
+        "자사",
+        "경쟁사 A",
+        "경쟁사 B",
+        "경쟁사 C"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_glyphs",
+      "glyph_color",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "충족도 평가",
+      "경쟁력 비교",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-111",
+    "category": "CMP",
+    "name": "하비볼 비교표 (3사)",
+    "file": "decks/04_compare/CMP_bulk_harvey_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:CMP-111",
+    "tags": [
+      "비교표",
+      "하비볼",
+      "우열비교",
+      "충족도",
+      "teal"
+    ],
+    "params": {
+      "family": "harvey",
+      "cols": 4,
+      "rows": 5,
+      "competitors": 3,
+      "glyphs": [
+        "●",
+        "◕",
+        "◐",
+        "◔",
+        "○"
+      ],
+      "theme": "teal"
+    },
+    "bindings": {
+      "rows": [
+        "기술 전문성",
+        "데이터 보안 수준",
+        "사용자 경험",
+        "시스템 확장성",
+        "유지보수 편의"
+      ],
+      "cols": [
+        "평가 항목",
+        "자사",
+        "경쟁사 A",
+        "경쟁사 B"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_glyphs",
+      "glyph_color",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "충족도 평가",
+      "경쟁력 비교",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-112",
+    "category": "CMP",
+    "name": "하비볼 비교표 (4사)",
+    "file": "decks/04_compare/CMP_bulk_harvey_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:CMP-112",
+    "tags": [
+      "비교표",
+      "하비볼",
+      "우열비교",
+      "충족도",
+      "cyan"
+    ],
+    "params": {
+      "family": "harvey",
+      "cols": 5,
+      "rows": 6,
+      "competitors": 4,
+      "glyphs": [
+        "●",
+        "◕",
+        "◐",
+        "◔",
+        "○"
+      ],
+      "theme": "cyan"
+    },
+    "bindings": {
+      "rows": [
+        "데이터 보안 수준",
+        "사용자 경험",
+        "시스템 확장성",
+        "유지보수 편의",
+        "고객 지원 체계",
+        "시장 이해도"
+      ],
+      "cols": [
+        "평가 항목",
+        "자사",
+        "경쟁사 A",
+        "경쟁사 B",
+        "경쟁사 C"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_glyphs",
+      "glyph_color",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "충족도 평가",
+      "경쟁력 비교",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-113",
+    "category": "CMP",
+    "name": "하비볼 비교표 (3사)",
+    "file": "decks/04_compare/CMP_bulk_harvey_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:CMP-113",
+    "tags": [
+      "비교표",
+      "하비볼",
+      "우열비교",
+      "충족도",
+      "purple"
+    ],
+    "params": {
+      "family": "harvey",
+      "cols": 4,
+      "rows": 7,
+      "competitors": 3,
+      "glyphs": [
+        "●",
+        "◕",
+        "◐",
+        "◔",
+        "○"
+      ],
+      "theme": "purple"
+    },
+    "bindings": {
+      "rows": [
+        "사용자 경험",
+        "시스템 확장성",
+        "유지보수 편의",
+        "고객 지원 체계",
+        "시장 이해도",
+        "운영 효율성",
+        "혁신 역량"
+      ],
+      "cols": [
+        "평가 항목",
+        "자사",
+        "경쟁사 A",
+        "경쟁사 B"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_glyphs",
+      "glyph_color",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "충족도 평가",
+      "경쟁력 비교",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-114",
+    "category": "CMP",
+    "name": "하비볼 비교표 (4사)",
+    "file": "decks/04_compare/CMP_bulk_harvey_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:CMP-114",
+    "tags": [
+      "비교표",
+      "하비볼",
+      "우열비교",
+      "충족도",
+      "navy"
+    ],
+    "params": {
+      "family": "harvey",
+      "cols": 5,
+      "rows": 5,
+      "competitors": 4,
+      "glyphs": [
+        "●",
+        "◕",
+        "◐",
+        "◔",
+        "○"
+      ],
+      "theme": "navy"
+    },
+    "bindings": {
+      "rows": [
+        "시스템 확장성",
+        "유지보수 편의",
+        "고객 지원 체계",
+        "시장 이해도",
+        "운영 효율성"
+      ],
+      "cols": [
+        "평가 항목",
+        "자사",
+        "경쟁사 A",
+        "경쟁사 B",
+        "경쟁사 C"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_glyphs",
+      "glyph_color",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "충족도 평가",
+      "경쟁력 비교",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-115",
+    "category": "CMP",
+    "name": "하비볼 비교표 (3사)",
+    "file": "decks/04_compare/CMP_bulk_harvey_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:CMP-115",
+    "tags": [
+      "비교표",
+      "하비볼",
+      "우열비교",
+      "충족도",
+      "blue"
+    ],
+    "params": {
+      "family": "harvey",
+      "cols": 4,
+      "rows": 6,
+      "competitors": 3,
+      "glyphs": [
+        "●",
+        "◕",
+        "◐",
+        "◔",
+        "○"
+      ],
+      "theme": "blue"
+    },
+    "bindings": {
+      "rows": [
+        "유지보수 편의",
+        "고객 지원 체계",
+        "시장 이해도",
+        "운영 효율성",
+        "혁신 역량",
+        "브랜드 신뢰도"
+      ],
+      "cols": [
+        "평가 항목",
+        "자사",
+        "경쟁사 A",
+        "경쟁사 B"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_glyphs",
+      "glyph_color",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "충족도 평가",
+      "경쟁력 비교",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-116",
+    "category": "CMP",
+    "name": "하비볼 비교표 (4사)",
+    "file": "decks/04_compare/CMP_bulk_harvey_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:CMP-116",
+    "tags": [
+      "비교표",
+      "하비볼",
+      "우열비교",
+      "충족도",
+      "teal"
+    ],
+    "params": {
+      "family": "harvey",
+      "cols": 5,
+      "rows": 7,
+      "competitors": 4,
+      "glyphs": [
+        "●",
+        "◕",
+        "◐",
+        "◔",
+        "○"
+      ],
+      "theme": "teal"
+    },
+    "bindings": {
+      "rows": [
+        "고객 지원 체계",
+        "시장 이해도",
+        "운영 효율성",
+        "혁신 역량",
+        "브랜드 신뢰도",
+        "현지화 수준",
+        "리스크 관리"
+      ],
+      "cols": [
+        "평가 항목",
+        "자사",
+        "경쟁사 A",
+        "경쟁사 B",
+        "경쟁사 C"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_glyphs",
+      "glyph_color",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "충족도 평가",
+      "경쟁력 비교",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-117",
+    "category": "CMP",
+    "name": "하비볼 비교표 (3사)",
+    "file": "decks/04_compare/CMP_bulk_harvey_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:CMP-117",
+    "tags": [
+      "비교표",
+      "하비볼",
+      "우열비교",
+      "충족도",
+      "cyan"
+    ],
+    "params": {
+      "family": "harvey",
+      "cols": 4,
+      "rows": 5,
+      "competitors": 3,
+      "glyphs": [
+        "●",
+        "◕",
+        "◐",
+        "◔",
+        "○"
+      ],
+      "theme": "cyan"
+    },
+    "bindings": {
+      "rows": [
+        "시장 이해도",
+        "운영 효율성",
+        "혁신 역량",
+        "브랜드 신뢰도",
+        "현지화 수준"
+      ],
+      "cols": [
+        "평가 항목",
+        "자사",
+        "경쟁사 A",
+        "경쟁사 B"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_glyphs",
+      "glyph_color",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "충족도 평가",
+      "경쟁력 비교",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-118",
+    "category": "CMP",
+    "name": "하비볼 비교표 (4사)",
+    "file": "decks/04_compare/CMP_bulk_harvey_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:CMP-118",
+    "tags": [
+      "비교표",
+      "하비볼",
+      "우열비교",
+      "충족도",
+      "purple"
+    ],
+    "params": {
+      "family": "harvey",
+      "cols": 5,
+      "rows": 6,
+      "competitors": 4,
+      "glyphs": [
+        "●",
+        "◕",
+        "◐",
+        "◔",
+        "○"
+      ],
+      "theme": "purple"
+    },
+    "bindings": {
+      "rows": [
+        "운영 효율성",
+        "혁신 역량",
+        "브랜드 신뢰도",
+        "현지화 수준",
+        "리스크 관리",
+        "규제 준수"
+      ],
+      "cols": [
+        "평가 항목",
+        "자사",
+        "경쟁사 A",
+        "경쟁사 B",
+        "경쟁사 C"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_glyphs",
+      "glyph_color",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "충족도 평가",
+      "경쟁력 비교",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-119",
+    "category": "CMP",
+    "name": "하비볼 비교표 (3사)",
+    "file": "decks/04_compare/CMP_bulk_harvey_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:CMP-119",
+    "tags": [
+      "비교표",
+      "하비볼",
+      "우열비교",
+      "충족도",
+      "navy"
+    ],
+    "params": {
+      "family": "harvey",
+      "cols": 4,
+      "rows": 7,
+      "competitors": 3,
+      "glyphs": [
+        "●",
+        "◕",
+        "◐",
+        "◔",
+        "○"
+      ],
+      "theme": "navy"
+    },
+    "bindings": {
+      "rows": [
+        "혁신 역량",
+        "브랜드 신뢰도",
+        "현지화 수준",
+        "리스크 관리",
+        "규제 준수",
+        "연동 용이성",
+        "글로벌 대응 역량"
+      ],
+      "cols": [
+        "평가 항목",
+        "자사",
+        "경쟁사 A",
+        "경쟁사 B"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_glyphs",
+      "glyph_color",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "충족도 평가",
+      "경쟁력 비교",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-120",
+    "category": "CMP",
+    "name": "하비볼 비교표 (4사)",
+    "file": "decks/04_compare/CMP_bulk_harvey_v1.pptx",
+    "slide": 16,
+    "anchor": "asset:CMP-120",
+    "tags": [
+      "비교표",
+      "하비볼",
+      "우열비교",
+      "충족도",
+      "blue"
+    ],
+    "params": {
+      "family": "harvey",
+      "cols": 5,
+      "rows": 5,
+      "competitors": 4,
+      "glyphs": [
+        "●",
+        "◕",
+        "◐",
+        "◔",
+        "○"
+      ],
+      "theme": "blue"
+    },
+    "bindings": {
+      "rows": [
+        "브랜드 신뢰도",
+        "현지화 수준",
+        "리스크 관리",
+        "규제 준수",
+        "연동 용이성"
+      ],
+      "cols": [
+        "평가 항목",
+        "자사",
+        "경쟁사 A",
+        "경쟁사 B",
+        "경쟁사 C"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_glyphs",
+      "glyph_color",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "충족도 평가",
+      "경쟁력 비교",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-121",
+    "category": "CMP",
+    "name": "3단계 요금/등급 카드",
+    "file": "decks/04_compare/CMP_bulk_tiercard_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:CMP-121",
+    "tags": [
+      "비교표",
+      "요금카드",
+      "등급카드",
+      "플랜비교",
+      "blue"
+    ],
+    "params": {
+      "family": "tiercard",
+      "columns": 3,
+      "recommended_idx": 1,
+      "price_emphasis": true,
+      "theme": "blue"
+    },
+    "bindings": {
+      "rows": [
+        "Basic",
+        "Standard",
+        "Premium"
+      ],
+      "cols": [
+        "기본형",
+        "표준형",
+        "프리미엄"
+      ]
+    },
+    "editable": [
+      "tier_names",
+      "badges",
+      "prices",
+      "units",
+      "feats",
+      "tier_color",
+      "recommended_badge"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "요금제 비교",
+      "등급 제안",
+      "가격 정책"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-122",
+    "category": "CMP",
+    "name": "4단계 요금/등급 카드",
+    "file": "decks/04_compare/CMP_bulk_tiercard_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:CMP-122",
+    "tags": [
+      "비교표",
+      "요금카드",
+      "등급카드",
+      "플랜비교",
+      "teal"
+    ],
+    "params": {
+      "family": "tiercard",
+      "columns": 4,
+      "recommended_idx": 1,
+      "price_emphasis": true,
+      "theme": "teal"
+    },
+    "bindings": {
+      "rows": [
+        "Basic",
+        "Standard",
+        "Premium",
+        "Enterprise"
+      ],
+      "cols": [
+        "기본형",
+        "표준형",
+        "프리미엄",
+        "확장형"
+      ]
+    },
+    "editable": [
+      "tier_names",
+      "badges",
+      "prices",
+      "units",
+      "feats",
+      "tier_color",
+      "recommended_badge"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "요금제 비교",
+      "등급 제안",
+      "가격 정책"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-123",
+    "category": "CMP",
+    "name": "3단계 요금/등급 카드",
+    "file": "decks/04_compare/CMP_bulk_tiercard_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:CMP-123",
+    "tags": [
+      "비교표",
+      "요금카드",
+      "등급카드",
+      "플랜비교",
+      "cyan"
+    ],
+    "params": {
+      "family": "tiercard",
+      "columns": 3,
+      "recommended_idx": 1,
+      "price_emphasis": true,
+      "theme": "cyan"
+    },
+    "bindings": {
+      "rows": [
+        "Basic",
+        "Standard",
+        "Premium"
+      ],
+      "cols": [
+        "기본형",
+        "표준형",
+        "프리미엄"
+      ]
+    },
+    "editable": [
+      "tier_names",
+      "badges",
+      "prices",
+      "units",
+      "feats",
+      "tier_color",
+      "recommended_badge"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "요금제 비교",
+      "등급 제안",
+      "가격 정책"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-124",
+    "category": "CMP",
+    "name": "4단계 요금/등급 카드",
+    "file": "decks/04_compare/CMP_bulk_tiercard_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:CMP-124",
+    "tags": [
+      "비교표",
+      "요금카드",
+      "등급카드",
+      "플랜비교",
+      "purple"
+    ],
+    "params": {
+      "family": "tiercard",
+      "columns": 4,
+      "recommended_idx": 1,
+      "price_emphasis": true,
+      "theme": "purple"
+    },
+    "bindings": {
+      "rows": [
+        "Basic",
+        "Standard",
+        "Premium",
+        "Enterprise"
+      ],
+      "cols": [
+        "기본형",
+        "표준형",
+        "프리미엄",
+        "확장형"
+      ]
+    },
+    "editable": [
+      "tier_names",
+      "badges",
+      "prices",
+      "units",
+      "feats",
+      "tier_color",
+      "recommended_badge"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "요금제 비교",
+      "등급 제안",
+      "가격 정책"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-125",
+    "category": "CMP",
+    "name": "3단계 요금/등급 카드",
+    "file": "decks/04_compare/CMP_bulk_tiercard_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:CMP-125",
+    "tags": [
+      "비교표",
+      "요금카드",
+      "등급카드",
+      "플랜비교",
+      "navy"
+    ],
+    "params": {
+      "family": "tiercard",
+      "columns": 3,
+      "recommended_idx": 1,
+      "price_emphasis": true,
+      "theme": "navy"
+    },
+    "bindings": {
+      "rows": [
+        "Basic",
+        "Standard",
+        "Premium"
+      ],
+      "cols": [
+        "기본형",
+        "표준형",
+        "프리미엄"
+      ]
+    },
+    "editable": [
+      "tier_names",
+      "badges",
+      "prices",
+      "units",
+      "feats",
+      "tier_color",
+      "recommended_badge"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "요금제 비교",
+      "등급 제안",
+      "가격 정책"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-126",
+    "category": "CMP",
+    "name": "4단계 요금/등급 카드",
+    "file": "decks/04_compare/CMP_bulk_tiercard_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:CMP-126",
+    "tags": [
+      "비교표",
+      "요금카드",
+      "등급카드",
+      "플랜비교",
+      "blue"
+    ],
+    "params": {
+      "family": "tiercard",
+      "columns": 4,
+      "recommended_idx": 1,
+      "price_emphasis": true,
+      "theme": "blue"
+    },
+    "bindings": {
+      "rows": [
+        "Basic",
+        "Standard",
+        "Premium",
+        "Enterprise"
+      ],
+      "cols": [
+        "기본형",
+        "표준형",
+        "프리미엄",
+        "확장형"
+      ]
+    },
+    "editable": [
+      "tier_names",
+      "badges",
+      "prices",
+      "units",
+      "feats",
+      "tier_color",
+      "recommended_badge"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "요금제 비교",
+      "등급 제안",
+      "가격 정책"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-127",
+    "category": "CMP",
+    "name": "3단계 요금/등급 카드",
+    "file": "decks/04_compare/CMP_bulk_tiercard_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:CMP-127",
+    "tags": [
+      "비교표",
+      "요금카드",
+      "등급카드",
+      "플랜비교",
+      "teal"
+    ],
+    "params": {
+      "family": "tiercard",
+      "columns": 3,
+      "recommended_idx": 1,
+      "price_emphasis": true,
+      "theme": "teal"
+    },
+    "bindings": {
+      "rows": [
+        "Basic",
+        "Standard",
+        "Premium"
+      ],
+      "cols": [
+        "기본형",
+        "표준형",
+        "프리미엄"
+      ]
+    },
+    "editable": [
+      "tier_names",
+      "badges",
+      "prices",
+      "units",
+      "feats",
+      "tier_color",
+      "recommended_badge"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "요금제 비교",
+      "등급 제안",
+      "가격 정책"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-128",
+    "category": "CMP",
+    "name": "4단계 요금/등급 카드",
+    "file": "decks/04_compare/CMP_bulk_tiercard_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:CMP-128",
+    "tags": [
+      "비교표",
+      "요금카드",
+      "등급카드",
+      "플랜비교",
+      "cyan"
+    ],
+    "params": {
+      "family": "tiercard",
+      "columns": 4,
+      "recommended_idx": 1,
+      "price_emphasis": true,
+      "theme": "cyan"
+    },
+    "bindings": {
+      "rows": [
+        "Basic",
+        "Standard",
+        "Premium",
+        "Enterprise"
+      ],
+      "cols": [
+        "기본형",
+        "표준형",
+        "프리미엄",
+        "확장형"
+      ]
+    },
+    "editable": [
+      "tier_names",
+      "badges",
+      "prices",
+      "units",
+      "feats",
+      "tier_color",
+      "recommended_badge"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "요금제 비교",
+      "등급 제안",
+      "가격 정책"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-129",
+    "category": "CMP",
+    "name": "3단계 요금/등급 카드",
+    "file": "decks/04_compare/CMP_bulk_tiercard_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:CMP-129",
+    "tags": [
+      "비교표",
+      "요금카드",
+      "등급카드",
+      "플랜비교",
+      "purple"
+    ],
+    "params": {
+      "family": "tiercard",
+      "columns": 3,
+      "recommended_idx": 1,
+      "price_emphasis": true,
+      "theme": "purple"
+    },
+    "bindings": {
+      "rows": [
+        "Basic",
+        "Standard",
+        "Premium"
+      ],
+      "cols": [
+        "기본형",
+        "표준형",
+        "프리미엄"
+      ]
+    },
+    "editable": [
+      "tier_names",
+      "badges",
+      "prices",
+      "units",
+      "feats",
+      "tier_color",
+      "recommended_badge"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "요금제 비교",
+      "등급 제안",
+      "가격 정책"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-130",
+    "category": "CMP",
+    "name": "4단계 요금/등급 카드",
+    "file": "decks/04_compare/CMP_bulk_tiercard_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:CMP-130",
+    "tags": [
+      "비교표",
+      "요금카드",
+      "등급카드",
+      "플랜비교",
+      "navy"
+    ],
+    "params": {
+      "family": "tiercard",
+      "columns": 4,
+      "recommended_idx": 1,
+      "price_emphasis": true,
+      "theme": "navy"
+    },
+    "bindings": {
+      "rows": [
+        "Basic",
+        "Standard",
+        "Premium",
+        "Enterprise"
+      ],
+      "cols": [
+        "기본형",
+        "표준형",
+        "프리미엄",
+        "확장형"
+      ]
+    },
+    "editable": [
+      "tier_names",
+      "badges",
+      "prices",
+      "units",
+      "feats",
+      "tier_color",
+      "recommended_badge"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "요금제 비교",
+      "등급 제안",
+      "가격 정책"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-131",
+    "category": "CMP",
+    "name": "3단계 요금/등급 카드",
+    "file": "decks/04_compare/CMP_bulk_tiercard_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:CMP-131",
+    "tags": [
+      "비교표",
+      "요금카드",
+      "등급카드",
+      "플랜비교",
+      "blue"
+    ],
+    "params": {
+      "family": "tiercard",
+      "columns": 3,
+      "recommended_idx": 1,
+      "price_emphasis": true,
+      "theme": "blue"
+    },
+    "bindings": {
+      "rows": [
+        "Basic",
+        "Standard",
+        "Premium"
+      ],
+      "cols": [
+        "기본형",
+        "표준형",
+        "프리미엄"
+      ]
+    },
+    "editable": [
+      "tier_names",
+      "badges",
+      "prices",
+      "units",
+      "feats",
+      "tier_color",
+      "recommended_badge"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "요금제 비교",
+      "등급 제안",
+      "가격 정책"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-132",
+    "category": "CMP",
+    "name": "4단계 요금/등급 카드",
+    "file": "decks/04_compare/CMP_bulk_tiercard_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:CMP-132",
+    "tags": [
+      "비교표",
+      "요금카드",
+      "등급카드",
+      "플랜비교",
+      "teal"
+    ],
+    "params": {
+      "family": "tiercard",
+      "columns": 4,
+      "recommended_idx": 1,
+      "price_emphasis": true,
+      "theme": "teal"
+    },
+    "bindings": {
+      "rows": [
+        "Basic",
+        "Standard",
+        "Premium",
+        "Enterprise"
+      ],
+      "cols": [
+        "기본형",
+        "표준형",
+        "프리미엄",
+        "확장형"
+      ]
+    },
+    "editable": [
+      "tier_names",
+      "badges",
+      "prices",
+      "units",
+      "feats",
+      "tier_color",
+      "recommended_badge"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "요금제 비교",
+      "등급 제안",
+      "가격 정책"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-133",
+    "category": "CMP",
+    "name": "3단계 요금/등급 카드",
+    "file": "decks/04_compare/CMP_bulk_tiercard_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:CMP-133",
+    "tags": [
+      "비교표",
+      "요금카드",
+      "등급카드",
+      "플랜비교",
+      "cyan"
+    ],
+    "params": {
+      "family": "tiercard",
+      "columns": 3,
+      "recommended_idx": 1,
+      "price_emphasis": true,
+      "theme": "cyan"
+    },
+    "bindings": {
+      "rows": [
+        "Basic",
+        "Standard",
+        "Premium"
+      ],
+      "cols": [
+        "기본형",
+        "표준형",
+        "프리미엄"
+      ]
+    },
+    "editable": [
+      "tier_names",
+      "badges",
+      "prices",
+      "units",
+      "feats",
+      "tier_color",
+      "recommended_badge"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "요금제 비교",
+      "등급 제안",
+      "가격 정책"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-134",
+    "category": "CMP",
+    "name": "4단계 요금/등급 카드",
+    "file": "decks/04_compare/CMP_bulk_tiercard_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:CMP-134",
+    "tags": [
+      "비교표",
+      "요금카드",
+      "등급카드",
+      "플랜비교",
+      "purple"
+    ],
+    "params": {
+      "family": "tiercard",
+      "columns": 4,
+      "recommended_idx": 1,
+      "price_emphasis": true,
+      "theme": "purple"
+    },
+    "bindings": {
+      "rows": [
+        "Basic",
+        "Standard",
+        "Premium",
+        "Enterprise"
+      ],
+      "cols": [
+        "기본형",
+        "표준형",
+        "프리미엄",
+        "확장형"
+      ]
+    },
+    "editable": [
+      "tier_names",
+      "badges",
+      "prices",
+      "units",
+      "feats",
+      "tier_color",
+      "recommended_badge"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "요금제 비교",
+      "등급 제안",
+      "가격 정책"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-135",
+    "category": "CMP",
+    "name": "장단점 2열 (3항목)",
+    "file": "decks/04_compare/CMP_bulk_proscons_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:CMP-135",
+    "tags": [
+      "비교표",
+      "장단점",
+      "proscons",
+      "2열대비",
+      "blue"
+    ],
+    "params": {
+      "family": "proscons",
+      "columns": 2,
+      "items": 3,
+      "theme": "blue"
+    },
+    "bindings": {
+      "quadrants": [
+        "pros",
+        "cons"
+      ],
+      "axis": [
+        "state"
+      ]
+    },
+    "editable": [
+      "pros_items",
+      "cons_items",
+      "pros_color",
+      "cons_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "장단점 정리",
+      "의사결정 근거",
+      "리스크 제시"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-136",
+    "category": "CMP",
+    "name": "장단점 2열 (4항목)",
+    "file": "decks/04_compare/CMP_bulk_proscons_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:CMP-136",
+    "tags": [
+      "비교표",
+      "장단점",
+      "proscons",
+      "2열대비",
+      "teal"
+    ],
+    "params": {
+      "family": "proscons",
+      "columns": 2,
+      "items": 4,
+      "theme": "teal"
+    },
+    "bindings": {
+      "quadrants": [
+        "pros",
+        "cons"
+      ],
+      "axis": [
+        "state"
+      ]
+    },
+    "editable": [
+      "pros_items",
+      "cons_items",
+      "pros_color",
+      "cons_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "장단점 정리",
+      "의사결정 근거",
+      "리스크 제시"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-137",
+    "category": "CMP",
+    "name": "장단점 2열 (3항목)",
+    "file": "decks/04_compare/CMP_bulk_proscons_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:CMP-137",
+    "tags": [
+      "비교표",
+      "장단점",
+      "proscons",
+      "2열대비",
+      "cyan"
+    ],
+    "params": {
+      "family": "proscons",
+      "columns": 2,
+      "items": 3,
+      "theme": "cyan"
+    },
+    "bindings": {
+      "quadrants": [
+        "pros",
+        "cons"
+      ],
+      "axis": [
+        "state"
+      ]
+    },
+    "editable": [
+      "pros_items",
+      "cons_items",
+      "pros_color",
+      "cons_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "장단점 정리",
+      "의사결정 근거",
+      "리스크 제시"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-138",
+    "category": "CMP",
+    "name": "장단점 2열 (4항목)",
+    "file": "decks/04_compare/CMP_bulk_proscons_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:CMP-138",
+    "tags": [
+      "비교표",
+      "장단점",
+      "proscons",
+      "2열대비",
+      "purple"
+    ],
+    "params": {
+      "family": "proscons",
+      "columns": 2,
+      "items": 4,
+      "theme": "purple"
+    },
+    "bindings": {
+      "quadrants": [
+        "pros",
+        "cons"
+      ],
+      "axis": [
+        "state"
+      ]
+    },
+    "editable": [
+      "pros_items",
+      "cons_items",
+      "pros_color",
+      "cons_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "장단점 정리",
+      "의사결정 근거",
+      "리스크 제시"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-139",
+    "category": "CMP",
+    "name": "장단점 2열 (3항목)",
+    "file": "decks/04_compare/CMP_bulk_proscons_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:CMP-139",
+    "tags": [
+      "비교표",
+      "장단점",
+      "proscons",
+      "2열대비",
+      "navy"
+    ],
+    "params": {
+      "family": "proscons",
+      "columns": 2,
+      "items": 3,
+      "theme": "navy"
+    },
+    "bindings": {
+      "quadrants": [
+        "pros",
+        "cons"
+      ],
+      "axis": [
+        "state"
+      ]
+    },
+    "editable": [
+      "pros_items",
+      "cons_items",
+      "pros_color",
+      "cons_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "장단점 정리",
+      "의사결정 근거",
+      "리스크 제시"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-140",
+    "category": "CMP",
+    "name": "장단점 2열 (4항목)",
+    "file": "decks/04_compare/CMP_bulk_proscons_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:CMP-140",
+    "tags": [
+      "비교표",
+      "장단점",
+      "proscons",
+      "2열대비",
+      "blue"
+    ],
+    "params": {
+      "family": "proscons",
+      "columns": 2,
+      "items": 4,
+      "theme": "blue"
+    },
+    "bindings": {
+      "quadrants": [
+        "pros",
+        "cons"
+      ],
+      "axis": [
+        "state"
+      ]
+    },
+    "editable": [
+      "pros_items",
+      "cons_items",
+      "pros_color",
+      "cons_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "장단점 정리",
+      "의사결정 근거",
+      "리스크 제시"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-141",
+    "category": "CMP",
+    "name": "장단점 2열 (3항목)",
+    "file": "decks/04_compare/CMP_bulk_proscons_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:CMP-141",
+    "tags": [
+      "비교표",
+      "장단점",
+      "proscons",
+      "2열대비",
+      "teal"
+    ],
+    "params": {
+      "family": "proscons",
+      "columns": 2,
+      "items": 3,
+      "theme": "teal"
+    },
+    "bindings": {
+      "quadrants": [
+        "pros",
+        "cons"
+      ],
+      "axis": [
+        "state"
+      ]
+    },
+    "editable": [
+      "pros_items",
+      "cons_items",
+      "pros_color",
+      "cons_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "장단점 정리",
+      "의사결정 근거",
+      "리스크 제시"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-142",
+    "category": "CMP",
+    "name": "장단점 2열 (4항목)",
+    "file": "decks/04_compare/CMP_bulk_proscons_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:CMP-142",
+    "tags": [
+      "비교표",
+      "장단점",
+      "proscons",
+      "2열대비",
+      "cyan"
+    ],
+    "params": {
+      "family": "proscons",
+      "columns": 2,
+      "items": 4,
+      "theme": "cyan"
+    },
+    "bindings": {
+      "quadrants": [
+        "pros",
+        "cons"
+      ],
+      "axis": [
+        "state"
+      ]
+    },
+    "editable": [
+      "pros_items",
+      "cons_items",
+      "pros_color",
+      "cons_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "장단점 정리",
+      "의사결정 근거",
+      "리스크 제시"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-143",
+    "category": "CMP",
+    "name": "장단점 2열 (3항목)",
+    "file": "decks/04_compare/CMP_bulk_proscons_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:CMP-143",
+    "tags": [
+      "비교표",
+      "장단점",
+      "proscons",
+      "2열대비",
+      "purple"
+    ],
+    "params": {
+      "family": "proscons",
+      "columns": 2,
+      "items": 3,
+      "theme": "purple"
+    },
+    "bindings": {
+      "quadrants": [
+        "pros",
+        "cons"
+      ],
+      "axis": [
+        "state"
+      ]
+    },
+    "editable": [
+      "pros_items",
+      "cons_items",
+      "pros_color",
+      "cons_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "장단점 정리",
+      "의사결정 근거",
+      "리스크 제시"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-144",
+    "category": "CMP",
+    "name": "장단점 2열 (4항목)",
+    "file": "decks/04_compare/CMP_bulk_proscons_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:CMP-144",
+    "tags": [
+      "비교표",
+      "장단점",
+      "proscons",
+      "2열대비",
+      "navy"
+    ],
+    "params": {
+      "family": "proscons",
+      "columns": 2,
+      "items": 4,
+      "theme": "navy"
+    },
+    "bindings": {
+      "quadrants": [
+        "pros",
+        "cons"
+      ],
+      "axis": [
+        "state"
+      ]
+    },
+    "editable": [
+      "pros_items",
+      "cons_items",
+      "pros_color",
+      "cons_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "장단점 정리",
+      "의사결정 근거",
+      "리스크 제시"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-145",
+    "category": "CMP",
+    "name": "장단점 2열 (3항목)",
+    "file": "decks/04_compare/CMP_bulk_proscons_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:CMP-145",
+    "tags": [
+      "비교표",
+      "장단점",
+      "proscons",
+      "2열대비",
+      "blue"
+    ],
+    "params": {
+      "family": "proscons",
+      "columns": 2,
+      "items": 3,
+      "theme": "blue"
+    },
+    "bindings": {
+      "quadrants": [
+        "pros",
+        "cons"
+      ],
+      "axis": [
+        "state"
+      ]
+    },
+    "editable": [
+      "pros_items",
+      "cons_items",
+      "pros_color",
+      "cons_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "장단점 정리",
+      "의사결정 근거",
+      "리스크 제시"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-146",
+    "category": "CMP",
+    "name": "장단점 2열 (4항목)",
+    "file": "decks/04_compare/CMP_bulk_proscons_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:CMP-146",
+    "tags": [
+      "비교표",
+      "장단점",
+      "proscons",
+      "2열대비",
+      "teal"
+    ],
+    "params": {
+      "family": "proscons",
+      "columns": 2,
+      "items": 4,
+      "theme": "teal"
+    },
+    "bindings": {
+      "quadrants": [
+        "pros",
+        "cons"
+      ],
+      "axis": [
+        "state"
+      ]
+    },
+    "editable": [
+      "pros_items",
+      "cons_items",
+      "pros_color",
+      "cons_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "장단점 정리",
+      "의사결정 근거",
+      "리스크 제시"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-147",
+    "category": "CMP",
+    "name": "순위 비교표 (4위)",
+    "file": "decks/04_compare/CMP_bulk_ranking_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:CMP-147",
+    "tags": [
+      "비교표",
+      "순위표",
+      "랭킹",
+      "순위뱃지",
+      "blue"
+    ],
+    "params": {
+      "family": "ranking",
+      "cols": 4,
+      "rows": 4,
+      "rank_badge": true,
+      "top_n_highlight": 3,
+      "theme": "blue"
+    },
+    "bindings": {
+      "rows": [
+        "1위",
+        "2위",
+        "3위",
+        "4위"
+      ],
+      "cols": [
+        "순위",
+        "평가 대상",
+        "종합 점수",
+        "비고"
+      ]
+    },
+    "editable": [
+      "rows",
+      "rank",
+      "target",
+      "score",
+      "note",
+      "rank_fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "순위 제시",
+      "종합 평가",
+      "심사 결과"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-148",
+    "category": "CMP",
+    "name": "순위 비교표 (5위)",
+    "file": "decks/04_compare/CMP_bulk_ranking_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:CMP-148",
+    "tags": [
+      "비교표",
+      "순위표",
+      "랭킹",
+      "순위뱃지",
+      "teal"
+    ],
+    "params": {
+      "family": "ranking",
+      "cols": 4,
+      "rows": 5,
+      "rank_badge": true,
+      "top_n_highlight": 3,
+      "theme": "teal"
+    },
+    "bindings": {
+      "rows": [
+        "1위",
+        "2위",
+        "3위",
+        "4위",
+        "5위"
+      ],
+      "cols": [
+        "순위",
+        "평가 대상",
+        "종합 점수",
+        "비고"
+      ]
+    },
+    "editable": [
+      "rows",
+      "rank",
+      "target",
+      "score",
+      "note",
+      "rank_fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "순위 제시",
+      "종합 평가",
+      "심사 결과"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-149",
+    "category": "CMP",
+    "name": "순위 비교표 (6위)",
+    "file": "decks/04_compare/CMP_bulk_ranking_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:CMP-149",
+    "tags": [
+      "비교표",
+      "순위표",
+      "랭킹",
+      "순위뱃지",
+      "cyan"
+    ],
+    "params": {
+      "family": "ranking",
+      "cols": 4,
+      "rows": 6,
+      "rank_badge": true,
+      "top_n_highlight": 3,
+      "theme": "cyan"
+    },
+    "bindings": {
+      "rows": [
+        "1위",
+        "2위",
+        "3위",
+        "4위",
+        "5위",
+        "6위"
+      ],
+      "cols": [
+        "순위",
+        "평가 대상",
+        "종합 점수",
+        "비고"
+      ]
+    },
+    "editable": [
+      "rows",
+      "rank",
+      "target",
+      "score",
+      "note",
+      "rank_fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "순위 제시",
+      "종합 평가",
+      "심사 결과"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-150",
+    "category": "CMP",
+    "name": "순위 비교표 (7위)",
+    "file": "decks/04_compare/CMP_bulk_ranking_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:CMP-150",
+    "tags": [
+      "비교표",
+      "순위표",
+      "랭킹",
+      "순위뱃지",
+      "purple"
+    ],
+    "params": {
+      "family": "ranking",
+      "cols": 4,
+      "rows": 7,
+      "rank_badge": true,
+      "top_n_highlight": 3,
+      "theme": "purple"
+    },
+    "bindings": {
+      "rows": [
+        "1위",
+        "2위",
+        "3위",
+        "4위",
+        "5위",
+        "6위",
+        "7위"
+      ],
+      "cols": [
+        "순위",
+        "평가 대상",
+        "종합 점수",
+        "비고"
+      ]
+    },
+    "editable": [
+      "rows",
+      "rank",
+      "target",
+      "score",
+      "note",
+      "rank_fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "순위 제시",
+      "종합 평가",
+      "심사 결과"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-151",
+    "category": "CMP",
+    "name": "순위 비교표 (4위)",
+    "file": "decks/04_compare/CMP_bulk_ranking_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:CMP-151",
+    "tags": [
+      "비교표",
+      "순위표",
+      "랭킹",
+      "순위뱃지",
+      "navy"
+    ],
+    "params": {
+      "family": "ranking",
+      "cols": 4,
+      "rows": 4,
+      "rank_badge": true,
+      "top_n_highlight": 3,
+      "theme": "navy"
+    },
+    "bindings": {
+      "rows": [
+        "1위",
+        "2위",
+        "3위",
+        "4위"
+      ],
+      "cols": [
+        "순위",
+        "평가 대상",
+        "종합 점수",
+        "비고"
+      ]
+    },
+    "editable": [
+      "rows",
+      "rank",
+      "target",
+      "score",
+      "note",
+      "rank_fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "순위 제시",
+      "종합 평가",
+      "심사 결과"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-152",
+    "category": "CMP",
+    "name": "순위 비교표 (5위)",
+    "file": "decks/04_compare/CMP_bulk_ranking_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:CMP-152",
+    "tags": [
+      "비교표",
+      "순위표",
+      "랭킹",
+      "순위뱃지",
+      "blue"
+    ],
+    "params": {
+      "family": "ranking",
+      "cols": 4,
+      "rows": 5,
+      "rank_badge": true,
+      "top_n_highlight": 3,
+      "theme": "blue"
+    },
+    "bindings": {
+      "rows": [
+        "1위",
+        "2위",
+        "3위",
+        "4위",
+        "5위"
+      ],
+      "cols": [
+        "순위",
+        "평가 대상",
+        "종합 점수",
+        "비고"
+      ]
+    },
+    "editable": [
+      "rows",
+      "rank",
+      "target",
+      "score",
+      "note",
+      "rank_fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "순위 제시",
+      "종합 평가",
+      "심사 결과"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-153",
+    "category": "CMP",
+    "name": "순위 비교표 (6위)",
+    "file": "decks/04_compare/CMP_bulk_ranking_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:CMP-153",
+    "tags": [
+      "비교표",
+      "순위표",
+      "랭킹",
+      "순위뱃지",
+      "teal"
+    ],
+    "params": {
+      "family": "ranking",
+      "cols": 4,
+      "rows": 6,
+      "rank_badge": true,
+      "top_n_highlight": 3,
+      "theme": "teal"
+    },
+    "bindings": {
+      "rows": [
+        "1위",
+        "2위",
+        "3위",
+        "4위",
+        "5위",
+        "6위"
+      ],
+      "cols": [
+        "순위",
+        "평가 대상",
+        "종합 점수",
+        "비고"
+      ]
+    },
+    "editable": [
+      "rows",
+      "rank",
+      "target",
+      "score",
+      "note",
+      "rank_fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "순위 제시",
+      "종합 평가",
+      "심사 결과"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-154",
+    "category": "CMP",
+    "name": "순위 비교표 (7위)",
+    "file": "decks/04_compare/CMP_bulk_ranking_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:CMP-154",
+    "tags": [
+      "비교표",
+      "순위표",
+      "랭킹",
+      "순위뱃지",
+      "cyan"
+    ],
+    "params": {
+      "family": "ranking",
+      "cols": 4,
+      "rows": 7,
+      "rank_badge": true,
+      "top_n_highlight": 3,
+      "theme": "cyan"
+    },
+    "bindings": {
+      "rows": [
+        "1위",
+        "2위",
+        "3위",
+        "4위",
+        "5위",
+        "6위",
+        "7위"
+      ],
+      "cols": [
+        "순위",
+        "평가 대상",
+        "종합 점수",
+        "비고"
+      ]
+    },
+    "editable": [
+      "rows",
+      "rank",
+      "target",
+      "score",
+      "note",
+      "rank_fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "순위 제시",
+      "종합 평가",
+      "심사 결과"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-155",
+    "category": "CMP",
+    "name": "순위 비교표 (4위)",
+    "file": "decks/04_compare/CMP_bulk_ranking_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:CMP-155",
+    "tags": [
+      "비교표",
+      "순위표",
+      "랭킹",
+      "순위뱃지",
+      "purple"
+    ],
+    "params": {
+      "family": "ranking",
+      "cols": 4,
+      "rows": 4,
+      "rank_badge": true,
+      "top_n_highlight": 3,
+      "theme": "purple"
+    },
+    "bindings": {
+      "rows": [
+        "1위",
+        "2위",
+        "3위",
+        "4위"
+      ],
+      "cols": [
+        "순위",
+        "평가 대상",
+        "종합 점수",
+        "비고"
+      ]
+    },
+    "editable": [
+      "rows",
+      "rank",
+      "target",
+      "score",
+      "note",
+      "rank_fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "순위 제시",
+      "종합 평가",
+      "심사 결과"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-156",
+    "category": "CMP",
+    "name": "순위 비교표 (5위)",
+    "file": "decks/04_compare/CMP_bulk_ranking_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:CMP-156",
+    "tags": [
+      "비교표",
+      "순위표",
+      "랭킹",
+      "순위뱃지",
+      "navy"
+    ],
+    "params": {
+      "family": "ranking",
+      "cols": 4,
+      "rows": 5,
+      "rank_badge": true,
+      "top_n_highlight": 3,
+      "theme": "navy"
+    },
+    "bindings": {
+      "rows": [
+        "1위",
+        "2위",
+        "3위",
+        "4위",
+        "5위"
+      ],
+      "cols": [
+        "순위",
+        "평가 대상",
+        "종합 점수",
+        "비고"
+      ]
+    },
+    "editable": [
+      "rows",
+      "rank",
+      "target",
+      "score",
+      "note",
+      "rank_fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "순위 제시",
+      "종합 평가",
+      "심사 결과"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-157",
+    "category": "CMP",
+    "name": "순위 비교표 (6위)",
+    "file": "decks/04_compare/CMP_bulk_ranking_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:CMP-157",
+    "tags": [
+      "비교표",
+      "순위표",
+      "랭킹",
+      "순위뱃지",
+      "blue"
+    ],
+    "params": {
+      "family": "ranking",
+      "cols": 4,
+      "rows": 6,
+      "rank_badge": true,
+      "top_n_highlight": 3,
+      "theme": "blue"
+    },
+    "bindings": {
+      "rows": [
+        "1위",
+        "2위",
+        "3위",
+        "4위",
+        "5위",
+        "6위"
+      ],
+      "cols": [
+        "순위",
+        "평가 대상",
+        "종합 점수",
+        "비고"
+      ]
+    },
+    "editable": [
+      "rows",
+      "rank",
+      "target",
+      "score",
+      "note",
+      "rank_fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "순위 제시",
+      "종합 평가",
+      "심사 결과"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-158",
+    "category": "CMP",
+    "name": "순위 비교표 (7위)",
+    "file": "decks/04_compare/CMP_bulk_ranking_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:CMP-158",
+    "tags": [
+      "비교표",
+      "순위표",
+      "랭킹",
+      "순위뱃지",
+      "teal"
+    ],
+    "params": {
+      "family": "ranking",
+      "cols": 4,
+      "rows": 7,
+      "rank_badge": true,
+      "top_n_highlight": 3,
+      "theme": "teal"
+    },
+    "bindings": {
+      "rows": [
+        "1위",
+        "2위",
+        "3위",
+        "4위",
+        "5위",
+        "6위",
+        "7위"
+      ],
+      "cols": [
+        "순위",
+        "평가 대상",
+        "종합 점수",
+        "비고"
+      ]
+    },
+    "editable": [
+      "rows",
+      "rank",
+      "target",
+      "score",
+      "note",
+      "rank_fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "순위 제시",
+      "종합 평가",
+      "심사 결과"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-159",
+    "category": "CMP",
+    "name": "순위 비교표 (4위)",
+    "file": "decks/04_compare/CMP_bulk_ranking_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:CMP-159",
+    "tags": [
+      "비교표",
+      "순위표",
+      "랭킹",
+      "순위뱃지",
+      "cyan"
+    ],
+    "params": {
+      "family": "ranking",
+      "cols": 4,
+      "rows": 4,
+      "rank_badge": true,
+      "top_n_highlight": 3,
+      "theme": "cyan"
+    },
+    "bindings": {
+      "rows": [
+        "1위",
+        "2위",
+        "3위",
+        "4위"
+      ],
+      "cols": [
+        "순위",
+        "평가 대상",
+        "종합 점수",
+        "비고"
+      ]
+    },
+    "editable": [
+      "rows",
+      "rank",
+      "target",
+      "score",
+      "note",
+      "rank_fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "순위 제시",
+      "종합 평가",
+      "심사 결과"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-160",
+    "category": "CMP",
+    "name": "순위 비교표 (5위)",
+    "file": "decks/04_compare/CMP_bulk_ranking_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:CMP-160",
+    "tags": [
+      "비교표",
+      "순위표",
+      "랭킹",
+      "순위뱃지",
+      "purple"
+    ],
+    "params": {
+      "family": "ranking",
+      "cols": 4,
+      "rows": 5,
+      "rank_badge": true,
+      "top_n_highlight": 3,
+      "theme": "purple"
+    },
+    "bindings": {
+      "rows": [
+        "1위",
+        "2위",
+        "3위",
+        "4위",
+        "5위"
+      ],
+      "cols": [
+        "순위",
+        "평가 대상",
+        "종합 점수",
+        "비고"
+      ]
+    },
+    "editable": [
+      "rows",
+      "rank",
+      "target",
+      "score",
+      "note",
+      "rank_fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "순위 제시",
+      "종합 평가",
+      "심사 결과"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-161",
+    "category": "CMP",
+    "name": "의사결정 매트릭스 (3기준×3대안)",
+    "file": "decks/04_compare/CMP_bulk_decision_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:CMP-161",
+    "tags": [
+      "매트릭스",
+      "의사결정",
+      "대안평가",
+      "점수표",
+      "blue"
+    ],
+    "params": {
+      "family": "decision",
+      "criteria": 3,
+      "options": 3,
+      "highlight_col": "종합점수",
+      "best_row": true,
+      "theme": "blue"
+    },
+    "bindings": {
+      "rows": [
+        "대안 A (자체구축)",
+        "대안 B (협업제휴)",
+        "대안 C (외주위탁)"
+      ],
+      "cols": [
+        "대안",
+        "기술성",
+        "경제성",
+        "실현성",
+        "종합점수"
+      ]
+    },
+    "editable": [
+      "options",
+      "criteria",
+      "scores",
+      "best_idx",
+      "highlight_col"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대안 비교",
+      "의사결정 근거",
+      "선정 논리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-162",
+    "category": "CMP",
+    "name": "의사결정 매트릭스 (4기준×4대안)",
+    "file": "decks/04_compare/CMP_bulk_decision_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:CMP-162",
+    "tags": [
+      "매트릭스",
+      "의사결정",
+      "대안평가",
+      "점수표",
+      "teal"
+    ],
+    "params": {
+      "family": "decision",
+      "criteria": 4,
+      "options": 4,
+      "highlight_col": "종합점수",
+      "best_row": true,
+      "theme": "teal"
+    },
+    "bindings": {
+      "rows": [
+        "대안 A (자체구축)",
+        "대안 B (협업제휴)",
+        "대안 C (외주위탁)",
+        "대안 D (혼합형)"
+      ],
+      "cols": [
+        "대안",
+        "경제성",
+        "실현성",
+        "확장성",
+        "안정성",
+        "종합점수"
+      ]
+    },
+    "editable": [
+      "options",
+      "criteria",
+      "scores",
+      "best_idx",
+      "highlight_col"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대안 비교",
+      "의사결정 근거",
+      "선정 논리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-163",
+    "category": "CMP",
+    "name": "의사결정 매트릭스 (5기준×3대안)",
+    "file": "decks/04_compare/CMP_bulk_decision_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:CMP-163",
+    "tags": [
+      "매트릭스",
+      "의사결정",
+      "대안평가",
+      "점수표",
+      "cyan"
+    ],
+    "params": {
+      "family": "decision",
+      "criteria": 5,
+      "options": 3,
+      "highlight_col": "종합점수",
+      "best_row": true,
+      "theme": "cyan"
+    },
+    "bindings": {
+      "rows": [
+        "대안 A (자체구축)",
+        "대안 B (협업제휴)",
+        "대안 C (외주위탁)"
+      ],
+      "cols": [
+        "대안",
+        "실현성",
+        "확장성",
+        "안정성",
+        "효율성",
+        "혁신성",
+        "종합점수"
+      ]
+    },
+    "editable": [
+      "options",
+      "criteria",
+      "scores",
+      "best_idx",
+      "highlight_col"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대안 비교",
+      "의사결정 근거",
+      "선정 논리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-164",
+    "category": "CMP",
+    "name": "의사결정 매트릭스 (3기준×4대안)",
+    "file": "decks/04_compare/CMP_bulk_decision_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:CMP-164",
+    "tags": [
+      "매트릭스",
+      "의사결정",
+      "대안평가",
+      "점수표",
+      "purple"
+    ],
+    "params": {
+      "family": "decision",
+      "criteria": 3,
+      "options": 4,
+      "highlight_col": "종합점수",
+      "best_row": true,
+      "theme": "purple"
+    },
+    "bindings": {
+      "rows": [
+        "대안 A (자체구축)",
+        "대안 B (협업제휴)",
+        "대안 C (외주위탁)",
+        "대안 D (혼합형)"
+      ],
+      "cols": [
+        "대안",
+        "확장성",
+        "안정성",
+        "효율성",
+        "종합점수"
+      ]
+    },
+    "editable": [
+      "options",
+      "criteria",
+      "scores",
+      "best_idx",
+      "highlight_col"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대안 비교",
+      "의사결정 근거",
+      "선정 논리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-165",
+    "category": "CMP",
+    "name": "의사결정 매트릭스 (4기준×3대안)",
+    "file": "decks/04_compare/CMP_bulk_decision_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:CMP-165",
+    "tags": [
+      "매트릭스",
+      "의사결정",
+      "대안평가",
+      "점수표",
+      "navy"
+    ],
+    "params": {
+      "family": "decision",
+      "criteria": 4,
+      "options": 3,
+      "highlight_col": "종합점수",
+      "best_row": true,
+      "theme": "navy"
+    },
+    "bindings": {
+      "rows": [
+        "대안 A (자체구축)",
+        "대안 B (협업제휴)",
+        "대안 C (외주위탁)"
+      ],
+      "cols": [
+        "대안",
+        "안정성",
+        "효율성",
+        "혁신성",
+        "지속성",
+        "종합점수"
+      ]
+    },
+    "editable": [
+      "options",
+      "criteria",
+      "scores",
+      "best_idx",
+      "highlight_col"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대안 비교",
+      "의사결정 근거",
+      "선정 논리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-166",
+    "category": "CMP",
+    "name": "의사결정 매트릭스 (5기준×4대안)",
+    "file": "decks/04_compare/CMP_bulk_decision_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:CMP-166",
+    "tags": [
+      "매트릭스",
+      "의사결정",
+      "대안평가",
+      "점수표",
+      "blue"
+    ],
+    "params": {
+      "family": "decision",
+      "criteria": 5,
+      "options": 4,
+      "highlight_col": "종합점수",
+      "best_row": true,
+      "theme": "blue"
+    },
+    "bindings": {
+      "rows": [
+        "대안 A (자체구축)",
+        "대안 B (협업제휴)",
+        "대안 C (외주위탁)",
+        "대안 D (혼합형)"
+      ],
+      "cols": [
+        "대안",
+        "효율성",
+        "혁신성",
+        "지속성",
+        "기술성",
+        "경제성",
+        "종합점수"
+      ]
+    },
+    "editable": [
+      "options",
+      "criteria",
+      "scores",
+      "best_idx",
+      "highlight_col"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대안 비교",
+      "의사결정 근거",
+      "선정 논리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-167",
+    "category": "CMP",
+    "name": "의사결정 매트릭스 (3기준×3대안)",
+    "file": "decks/04_compare/CMP_bulk_decision_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:CMP-167",
+    "tags": [
+      "매트릭스",
+      "의사결정",
+      "대안평가",
+      "점수표",
+      "teal"
+    ],
+    "params": {
+      "family": "decision",
+      "criteria": 3,
+      "options": 3,
+      "highlight_col": "종합점수",
+      "best_row": true,
+      "theme": "teal"
+    },
+    "bindings": {
+      "rows": [
+        "대안 A (자체구축)",
+        "대안 B (협업제휴)",
+        "대안 C (외주위탁)"
+      ],
+      "cols": [
+        "대안",
+        "혁신성",
+        "지속성",
+        "기술성",
+        "종합점수"
+      ]
+    },
+    "editable": [
+      "options",
+      "criteria",
+      "scores",
+      "best_idx",
+      "highlight_col"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대안 비교",
+      "의사결정 근거",
+      "선정 논리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-168",
+    "category": "CMP",
+    "name": "의사결정 매트릭스 (4기준×4대안)",
+    "file": "decks/04_compare/CMP_bulk_decision_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:CMP-168",
+    "tags": [
+      "매트릭스",
+      "의사결정",
+      "대안평가",
+      "점수표",
+      "cyan"
+    ],
+    "params": {
+      "family": "decision",
+      "criteria": 4,
+      "options": 4,
+      "highlight_col": "종합점수",
+      "best_row": true,
+      "theme": "cyan"
+    },
+    "bindings": {
+      "rows": [
+        "대안 A (자체구축)",
+        "대안 B (협업제휴)",
+        "대안 C (외주위탁)",
+        "대안 D (혼합형)"
+      ],
+      "cols": [
+        "대안",
+        "지속성",
+        "기술성",
+        "경제성",
+        "실현성",
+        "종합점수"
+      ]
+    },
+    "editable": [
+      "options",
+      "criteria",
+      "scores",
+      "best_idx",
+      "highlight_col"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대안 비교",
+      "의사결정 근거",
+      "선정 논리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-169",
+    "category": "CMP",
+    "name": "의사결정 매트릭스 (5기준×3대안)",
+    "file": "decks/04_compare/CMP_bulk_decision_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:CMP-169",
+    "tags": [
+      "매트릭스",
+      "의사결정",
+      "대안평가",
+      "점수표",
+      "purple"
+    ],
+    "params": {
+      "family": "decision",
+      "criteria": 5,
+      "options": 3,
+      "highlight_col": "종합점수",
+      "best_row": true,
+      "theme": "purple"
+    },
+    "bindings": {
+      "rows": [
+        "대안 A (자체구축)",
+        "대안 B (협업제휴)",
+        "대안 C (외주위탁)"
+      ],
+      "cols": [
+        "대안",
+        "기술성",
+        "경제성",
+        "실현성",
+        "확장성",
+        "안정성",
+        "종합점수"
+      ]
+    },
+    "editable": [
+      "options",
+      "criteria",
+      "scores",
+      "best_idx",
+      "highlight_col"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대안 비교",
+      "의사결정 근거",
+      "선정 논리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-170",
+    "category": "CMP",
+    "name": "의사결정 매트릭스 (3기준×4대안)",
+    "file": "decks/04_compare/CMP_bulk_decision_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:CMP-170",
+    "tags": [
+      "매트릭스",
+      "의사결정",
+      "대안평가",
+      "점수표",
+      "navy"
+    ],
+    "params": {
+      "family": "decision",
+      "criteria": 3,
+      "options": 4,
+      "highlight_col": "종합점수",
+      "best_row": true,
+      "theme": "navy"
+    },
+    "bindings": {
+      "rows": [
+        "대안 A (자체구축)",
+        "대안 B (협업제휴)",
+        "대안 C (외주위탁)",
+        "대안 D (혼합형)"
+      ],
+      "cols": [
+        "대안",
+        "경제성",
+        "실현성",
+        "확장성",
+        "종합점수"
+      ]
+    },
+    "editable": [
+      "options",
+      "criteria",
+      "scores",
+      "best_idx",
+      "highlight_col"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대안 비교",
+      "의사결정 근거",
+      "선정 논리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-171",
+    "category": "CMP",
+    "name": "의사결정 매트릭스 (4기준×3대안)",
+    "file": "decks/04_compare/CMP_bulk_decision_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:CMP-171",
+    "tags": [
+      "매트릭스",
+      "의사결정",
+      "대안평가",
+      "점수표",
+      "blue"
+    ],
+    "params": {
+      "family": "decision",
+      "criteria": 4,
+      "options": 3,
+      "highlight_col": "종합점수",
+      "best_row": true,
+      "theme": "blue"
+    },
+    "bindings": {
+      "rows": [
+        "대안 A (자체구축)",
+        "대안 B (협업제휴)",
+        "대안 C (외주위탁)"
+      ],
+      "cols": [
+        "대안",
+        "실현성",
+        "확장성",
+        "안정성",
+        "효율성",
+        "종합점수"
+      ]
+    },
+    "editable": [
+      "options",
+      "criteria",
+      "scores",
+      "best_idx",
+      "highlight_col"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대안 비교",
+      "의사결정 근거",
+      "선정 논리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-172",
+    "category": "CMP",
+    "name": "의사결정 매트릭스 (5기준×4대안)",
+    "file": "decks/04_compare/CMP_bulk_decision_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:CMP-172",
+    "tags": [
+      "매트릭스",
+      "의사결정",
+      "대안평가",
+      "점수표",
+      "teal"
+    ],
+    "params": {
+      "family": "decision",
+      "criteria": 5,
+      "options": 4,
+      "highlight_col": "종합점수",
+      "best_row": true,
+      "theme": "teal"
+    },
+    "bindings": {
+      "rows": [
+        "대안 A (자체구축)",
+        "대안 B (협업제휴)",
+        "대안 C (외주위탁)",
+        "대안 D (혼합형)"
+      ],
+      "cols": [
+        "대안",
+        "확장성",
+        "안정성",
+        "효율성",
+        "혁신성",
+        "지속성",
+        "종합점수"
+      ]
+    },
+    "editable": [
+      "options",
+      "criteria",
+      "scores",
+      "best_idx",
+      "highlight_col"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대안 비교",
+      "의사결정 근거",
+      "선정 논리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-173",
+    "category": "CMP",
+    "name": "의사결정 매트릭스 (3기준×3대안)",
+    "file": "decks/04_compare/CMP_bulk_decision_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:CMP-173",
+    "tags": [
+      "매트릭스",
+      "의사결정",
+      "대안평가",
+      "점수표",
+      "cyan"
+    ],
+    "params": {
+      "family": "decision",
+      "criteria": 3,
+      "options": 3,
+      "highlight_col": "종합점수",
+      "best_row": true,
+      "theme": "cyan"
+    },
+    "bindings": {
+      "rows": [
+        "대안 A (자체구축)",
+        "대안 B (협업제휴)",
+        "대안 C (외주위탁)"
+      ],
+      "cols": [
+        "대안",
+        "안정성",
+        "효율성",
+        "혁신성",
+        "종합점수"
+      ]
+    },
+    "editable": [
+      "options",
+      "criteria",
+      "scores",
+      "best_idx",
+      "highlight_col"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대안 비교",
+      "의사결정 근거",
+      "선정 논리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-174",
+    "category": "CMP",
+    "name": "의사결정 매트릭스 (4기준×4대안)",
+    "file": "decks/04_compare/CMP_bulk_decision_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:CMP-174",
+    "tags": [
+      "매트릭스",
+      "의사결정",
+      "대안평가",
+      "점수표",
+      "purple"
+    ],
+    "params": {
+      "family": "decision",
+      "criteria": 4,
+      "options": 4,
+      "highlight_col": "종합점수",
+      "best_row": true,
+      "theme": "purple"
+    },
+    "bindings": {
+      "rows": [
+        "대안 A (자체구축)",
+        "대안 B (협업제휴)",
+        "대안 C (외주위탁)",
+        "대안 D (혼합형)"
+      ],
+      "cols": [
+        "대안",
+        "효율성",
+        "혁신성",
+        "지속성",
+        "기술성",
+        "종합점수"
+      ]
+    },
+    "editable": [
+      "options",
+      "criteria",
+      "scores",
+      "best_idx",
+      "highlight_col"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대안 비교",
+      "의사결정 근거",
+      "선정 논리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-175",
+    "category": "CMP",
+    "name": "Before / After 대비 카드 (3항목)",
+    "file": "decks/04_compare/CMP_bulk_beforeafter_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:CMP-175",
+    "tags": [
+      "비교표",
+      "전후비교",
+      "대비카드",
+      "개선효과",
+      "blue"
+    ],
+    "params": {
+      "family": "beforeafter",
+      "columns": 2,
+      "items": 3,
+      "theme": "blue"
+    },
+    "bindings": {
+      "quadrants": [
+        "before",
+        "after"
+      ],
+      "axis": [
+        "state"
+      ]
+    },
+    "editable": [
+      "before_head",
+      "before_items",
+      "after_head",
+      "after_items",
+      "card_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "개선 효과 제시",
+      "전후 대비",
+      "성과 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-176",
+    "category": "CMP",
+    "name": "Before / After 대비 카드 (4항목)",
+    "file": "decks/04_compare/CMP_bulk_beforeafter_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:CMP-176",
+    "tags": [
+      "비교표",
+      "전후비교",
+      "대비카드",
+      "개선효과",
+      "teal"
+    ],
+    "params": {
+      "family": "beforeafter",
+      "columns": 2,
+      "items": 4,
+      "theme": "teal"
+    },
+    "bindings": {
+      "quadrants": [
+        "before",
+        "after"
+      ],
+      "axis": [
+        "state"
+      ]
+    },
+    "editable": [
+      "before_head",
+      "before_items",
+      "after_head",
+      "after_items",
+      "card_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "개선 효과 제시",
+      "전후 대비",
+      "성과 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-177",
+    "category": "CMP",
+    "name": "Before / After 대비 카드 (5항목)",
+    "file": "decks/04_compare/CMP_bulk_beforeafter_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:CMP-177",
+    "tags": [
+      "비교표",
+      "전후비교",
+      "대비카드",
+      "개선효과",
+      "cyan"
+    ],
+    "params": {
+      "family": "beforeafter",
+      "columns": 2,
+      "items": 5,
+      "theme": "cyan"
+    },
+    "bindings": {
+      "quadrants": [
+        "before",
+        "after"
+      ],
+      "axis": [
+        "state"
+      ]
+    },
+    "editable": [
+      "before_head",
+      "before_items",
+      "after_head",
+      "after_items",
+      "card_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "개선 효과 제시",
+      "전후 대비",
+      "성과 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-178",
+    "category": "CMP",
+    "name": "Before / After 대비 카드 (3항목)",
+    "file": "decks/04_compare/CMP_bulk_beforeafter_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:CMP-178",
+    "tags": [
+      "비교표",
+      "전후비교",
+      "대비카드",
+      "개선효과",
+      "purple"
+    ],
+    "params": {
+      "family": "beforeafter",
+      "columns": 2,
+      "items": 3,
+      "theme": "purple"
+    },
+    "bindings": {
+      "quadrants": [
+        "before",
+        "after"
+      ],
+      "axis": [
+        "state"
+      ]
+    },
+    "editable": [
+      "before_head",
+      "before_items",
+      "after_head",
+      "after_items",
+      "card_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "개선 효과 제시",
+      "전후 대비",
+      "성과 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-179",
+    "category": "CMP",
+    "name": "Before / After 대비 카드 (4항목)",
+    "file": "decks/04_compare/CMP_bulk_beforeafter_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:CMP-179",
+    "tags": [
+      "비교표",
+      "전후비교",
+      "대비카드",
+      "개선효과",
+      "navy"
+    ],
+    "params": {
+      "family": "beforeafter",
+      "columns": 2,
+      "items": 4,
+      "theme": "navy"
+    },
+    "bindings": {
+      "quadrants": [
+        "before",
+        "after"
+      ],
+      "axis": [
+        "state"
+      ]
+    },
+    "editable": [
+      "before_head",
+      "before_items",
+      "after_head",
+      "after_items",
+      "card_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "개선 효과 제시",
+      "전후 대비",
+      "성과 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-180",
+    "category": "CMP",
+    "name": "Before / After 대비 카드 (5항목)",
+    "file": "decks/04_compare/CMP_bulk_beforeafter_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:CMP-180",
+    "tags": [
+      "비교표",
+      "전후비교",
+      "대비카드",
+      "개선효과",
+      "blue"
+    ],
+    "params": {
+      "family": "beforeafter",
+      "columns": 2,
+      "items": 5,
+      "theme": "blue"
+    },
+    "bindings": {
+      "quadrants": [
+        "before",
+        "after"
+      ],
+      "axis": [
+        "state"
+      ]
+    },
+    "editable": [
+      "before_head",
+      "before_items",
+      "after_head",
+      "after_items",
+      "card_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "개선 효과 제시",
+      "전후 대비",
+      "성과 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-181",
+    "category": "CMP",
+    "name": "Before / After 대비 카드 (3항목)",
+    "file": "decks/04_compare/CMP_bulk_beforeafter_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:CMP-181",
+    "tags": [
+      "비교표",
+      "전후비교",
+      "대비카드",
+      "개선효과",
+      "teal"
+    ],
+    "params": {
+      "family": "beforeafter",
+      "columns": 2,
+      "items": 3,
+      "theme": "teal"
+    },
+    "bindings": {
+      "quadrants": [
+        "before",
+        "after"
+      ],
+      "axis": [
+        "state"
+      ]
+    },
+    "editable": [
+      "before_head",
+      "before_items",
+      "after_head",
+      "after_items",
+      "card_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "개선 효과 제시",
+      "전후 대비",
+      "성과 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-182",
+    "category": "CMP",
+    "name": "Before / After 대비 카드 (4항목)",
+    "file": "decks/04_compare/CMP_bulk_beforeafter_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:CMP-182",
+    "tags": [
+      "비교표",
+      "전후비교",
+      "대비카드",
+      "개선효과",
+      "cyan"
+    ],
+    "params": {
+      "family": "beforeafter",
+      "columns": 2,
+      "items": 4,
+      "theme": "cyan"
+    },
+    "bindings": {
+      "quadrants": [
+        "before",
+        "after"
+      ],
+      "axis": [
+        "state"
+      ]
+    },
+    "editable": [
+      "before_head",
+      "before_items",
+      "after_head",
+      "after_items",
+      "card_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "개선 효과 제시",
+      "전후 대비",
+      "성과 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-183",
+    "category": "CMP",
+    "name": "Before / After 대비 카드 (5항목)",
+    "file": "decks/04_compare/CMP_bulk_beforeafter_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:CMP-183",
+    "tags": [
+      "비교표",
+      "전후비교",
+      "대비카드",
+      "개선효과",
+      "purple"
+    ],
+    "params": {
+      "family": "beforeafter",
+      "columns": 2,
+      "items": 5,
+      "theme": "purple"
+    },
+    "bindings": {
+      "quadrants": [
+        "before",
+        "after"
+      ],
+      "axis": [
+        "state"
+      ]
+    },
+    "editable": [
+      "before_head",
+      "before_items",
+      "after_head",
+      "after_items",
+      "card_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "개선 효과 제시",
+      "전후 대비",
+      "성과 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-184",
+    "category": "CMP",
+    "name": "Before / After 대비 카드 (3항목)",
+    "file": "decks/04_compare/CMP_bulk_beforeafter_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:CMP-184",
+    "tags": [
+      "비교표",
+      "전후비교",
+      "대비카드",
+      "개선효과",
+      "navy"
+    ],
+    "params": {
+      "family": "beforeafter",
+      "columns": 2,
+      "items": 3,
+      "theme": "navy"
+    },
+    "bindings": {
+      "quadrants": [
+        "before",
+        "after"
+      ],
+      "axis": [
+        "state"
+      ]
+    },
+    "editable": [
+      "before_head",
+      "before_items",
+      "after_head",
+      "after_items",
+      "card_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "개선 효과 제시",
+      "전후 대비",
+      "성과 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-185",
+    "category": "CMP",
+    "name": "Before / After 대비 카드 (4항목)",
+    "file": "decks/04_compare/CMP_bulk_beforeafter_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:CMP-185",
+    "tags": [
+      "비교표",
+      "전후비교",
+      "대비카드",
+      "개선효과",
+      "blue"
+    ],
+    "params": {
+      "family": "beforeafter",
+      "columns": 2,
+      "items": 4,
+      "theme": "blue"
+    },
+    "bindings": {
+      "quadrants": [
+        "before",
+        "after"
+      ],
+      "axis": [
+        "state"
+      ]
+    },
+    "editable": [
+      "before_head",
+      "before_items",
+      "after_head",
+      "after_items",
+      "card_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "개선 효과 제시",
+      "전후 대비",
+      "성과 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-186",
+    "category": "CMP",
+    "name": "Before / After 대비 카드 (5항목)",
+    "file": "decks/04_compare/CMP_bulk_beforeafter_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:CMP-186",
+    "tags": [
+      "비교표",
+      "전후비교",
+      "대비카드",
+      "개선효과",
+      "teal"
+    ],
+    "params": {
+      "family": "beforeafter",
+      "columns": 2,
+      "items": 5,
+      "theme": "teal"
+    },
+    "bindings": {
+      "quadrants": [
+        "before",
+        "after"
+      ],
+      "axis": [
+        "state"
+      ]
+    },
+    "editable": [
+      "before_head",
+      "before_items",
+      "after_head",
+      "after_items",
+      "card_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "개선 효과 제시",
+      "전후 대비",
+      "성과 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-187",
+    "category": "CMP",
+    "name": "텍스트 제안서 블록 (2섹션)",
+    "file": "decks/04_compare/CMP_bulk_textprop_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:CMP-187",
+    "tags": [
+      "제안서",
+      "텍스트블록",
+      "불릿",
+      "요약패널",
+      "blue"
+    ],
+    "params": {
+      "family": "textprop",
+      "sections": 2,
+      "bullets": 3,
+      "theme": "blue"
+    },
+    "bindings": {
+      "rows": [
+        "추진 배경",
+        "기대 효과"
+      ],
+      "cols": [
+        "heading"
+      ]
+    },
+    "editable": [
+      "heading",
+      "section_subheads",
+      "section_bullets",
+      "accent_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "제안 요약",
+      "본문 채움",
+      "설명 슬라이드"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-188",
+    "category": "CMP",
+    "name": "텍스트 제안서 블록 (3섹션)",
+    "file": "decks/04_compare/CMP_bulk_textprop_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:CMP-188",
+    "tags": [
+      "제안서",
+      "텍스트블록",
+      "불릿",
+      "요약패널",
+      "teal"
+    ],
+    "params": {
+      "family": "textprop",
+      "sections": 3,
+      "bullets": 2,
+      "theme": "teal"
+    },
+    "bindings": {
+      "rows": [
+        "추진 배경",
+        "기대 효과",
+        "핵심 전략"
+      ],
+      "cols": [
+        "heading"
+      ]
+    },
+    "editable": [
+      "heading",
+      "section_subheads",
+      "section_bullets",
+      "accent_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "제안 요약",
+      "본문 채움",
+      "설명 슬라이드"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-189",
+    "category": "CMP",
+    "name": "텍스트 제안서 블록 (2섹션)",
+    "file": "decks/04_compare/CMP_bulk_textprop_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:CMP-189",
+    "tags": [
+      "제안서",
+      "텍스트블록",
+      "불릿",
+      "요약패널",
+      "cyan"
+    ],
+    "params": {
+      "family": "textprop",
+      "sections": 2,
+      "bullets": 3,
+      "theme": "cyan"
+    },
+    "bindings": {
+      "rows": [
+        "추진 배경",
+        "기대 효과"
+      ],
+      "cols": [
+        "heading"
+      ]
+    },
+    "editable": [
+      "heading",
+      "section_subheads",
+      "section_bullets",
+      "accent_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "제안 요약",
+      "본문 채움",
+      "설명 슬라이드"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-190",
+    "category": "CMP",
+    "name": "텍스트 제안서 블록 (3섹션)",
+    "file": "decks/04_compare/CMP_bulk_textprop_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:CMP-190",
+    "tags": [
+      "제안서",
+      "텍스트블록",
+      "불릿",
+      "요약패널",
+      "purple"
+    ],
+    "params": {
+      "family": "textprop",
+      "sections": 3,
+      "bullets": 2,
+      "theme": "purple"
+    },
+    "bindings": {
+      "rows": [
+        "추진 배경",
+        "기대 효과",
+        "핵심 전략"
+      ],
+      "cols": [
+        "heading"
+      ]
+    },
+    "editable": [
+      "heading",
+      "section_subheads",
+      "section_bullets",
+      "accent_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "제안 요약",
+      "본문 채움",
+      "설명 슬라이드"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-191",
+    "category": "CMP",
+    "name": "텍스트 제안서 블록 (2섹션)",
+    "file": "decks/04_compare/CMP_bulk_textprop_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:CMP-191",
+    "tags": [
+      "제안서",
+      "텍스트블록",
+      "불릿",
+      "요약패널",
+      "navy"
+    ],
+    "params": {
+      "family": "textprop",
+      "sections": 2,
+      "bullets": 3,
+      "theme": "navy"
+    },
+    "bindings": {
+      "rows": [
+        "추진 배경",
+        "기대 효과"
+      ],
+      "cols": [
+        "heading"
+      ]
+    },
+    "editable": [
+      "heading",
+      "section_subheads",
+      "section_bullets",
+      "accent_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "제안 요약",
+      "본문 채움",
+      "설명 슬라이드"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-192",
+    "category": "CMP",
+    "name": "텍스트 제안서 블록 (3섹션)",
+    "file": "decks/04_compare/CMP_bulk_textprop_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:CMP-192",
+    "tags": [
+      "제안서",
+      "텍스트블록",
+      "불릿",
+      "요약패널",
+      "blue"
+    ],
+    "params": {
+      "family": "textprop",
+      "sections": 3,
+      "bullets": 2,
+      "theme": "blue"
+    },
+    "bindings": {
+      "rows": [
+        "추진 배경",
+        "기대 효과",
+        "핵심 전략"
+      ],
+      "cols": [
+        "heading"
+      ]
+    },
+    "editable": [
+      "heading",
+      "section_subheads",
+      "section_bullets",
+      "accent_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "제안 요약",
+      "본문 채움",
+      "설명 슬라이드"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-193",
+    "category": "CMP",
+    "name": "텍스트 제안서 블록 (2섹션)",
+    "file": "decks/04_compare/CMP_bulk_textprop_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:CMP-193",
+    "tags": [
+      "제안서",
+      "텍스트블록",
+      "불릿",
+      "요약패널",
+      "teal"
+    ],
+    "params": {
+      "family": "textprop",
+      "sections": 2,
+      "bullets": 3,
+      "theme": "teal"
+    },
+    "bindings": {
+      "rows": [
+        "추진 배경",
+        "기대 효과"
+      ],
+      "cols": [
+        "heading"
+      ]
+    },
+    "editable": [
+      "heading",
+      "section_subheads",
+      "section_bullets",
+      "accent_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "제안 요약",
+      "본문 채움",
+      "설명 슬라이드"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-194",
+    "category": "CMP",
+    "name": "텍스트 제안서 블록 (3섹션)",
+    "file": "decks/04_compare/CMP_bulk_textprop_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:CMP-194",
+    "tags": [
+      "제안서",
+      "텍스트블록",
+      "불릿",
+      "요약패널",
+      "cyan"
+    ],
+    "params": {
+      "family": "textprop",
+      "sections": 3,
+      "bullets": 2,
+      "theme": "cyan"
+    },
+    "bindings": {
+      "rows": [
+        "추진 배경",
+        "기대 효과",
+        "핵심 전략"
+      ],
+      "cols": [
+        "heading"
+      ]
+    },
+    "editable": [
+      "heading",
+      "section_subheads",
+      "section_bullets",
+      "accent_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "제안 요약",
+      "본문 채움",
+      "설명 슬라이드"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-195",
+    "category": "CMP",
+    "name": "텍스트 제안서 블록 (2섹션)",
+    "file": "decks/04_compare/CMP_bulk_textprop_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:CMP-195",
+    "tags": [
+      "제안서",
+      "텍스트블록",
+      "불릿",
+      "요약패널",
+      "purple"
+    ],
+    "params": {
+      "family": "textprop",
+      "sections": 2,
+      "bullets": 3,
+      "theme": "purple"
+    },
+    "bindings": {
+      "rows": [
+        "추진 배경",
+        "기대 효과"
+      ],
+      "cols": [
+        "heading"
+      ]
+    },
+    "editable": [
+      "heading",
+      "section_subheads",
+      "section_bullets",
+      "accent_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "제안 요약",
+      "본문 채움",
+      "설명 슬라이드"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-196",
+    "category": "CMP",
+    "name": "텍스트 제안서 블록 (3섹션)",
+    "file": "decks/04_compare/CMP_bulk_textprop_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:CMP-196",
+    "tags": [
+      "제안서",
+      "텍스트블록",
+      "불릿",
+      "요약패널",
+      "navy"
+    ],
+    "params": {
+      "family": "textprop",
+      "sections": 3,
+      "bullets": 2,
+      "theme": "navy"
+    },
+    "bindings": {
+      "rows": [
+        "추진 배경",
+        "기대 효과",
+        "핵심 전략"
+      ],
+      "cols": [
+        "heading"
+      ]
+    },
+    "editable": [
+      "heading",
+      "section_subheads",
+      "section_bullets",
+      "accent_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "제안 요약",
+      "본문 채움",
+      "설명 슬라이드"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-197",
+    "category": "CMP",
+    "name": "텍스트 제안서 블록 (2섹션)",
+    "file": "decks/04_compare/CMP_bulk_textprop_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:CMP-197",
+    "tags": [
+      "제안서",
+      "텍스트블록",
+      "불릿",
+      "요약패널",
+      "blue"
+    ],
+    "params": {
+      "family": "textprop",
+      "sections": 2,
+      "bullets": 3,
+      "theme": "blue"
+    },
+    "bindings": {
+      "rows": [
+        "추진 배경",
+        "기대 효과"
+      ],
+      "cols": [
+        "heading"
+      ]
+    },
+    "editable": [
+      "heading",
+      "section_subheads",
+      "section_bullets",
+      "accent_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "제안 요약",
+      "본문 채움",
+      "설명 슬라이드"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-198",
+    "category": "CMP",
+    "name": "텍스트 제안서 블록 (3섹션)",
+    "file": "decks/04_compare/CMP_bulk_textprop_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:CMP-198",
+    "tags": [
+      "제안서",
+      "텍스트블록",
+      "불릿",
+      "요약패널",
+      "teal"
+    ],
+    "params": {
+      "family": "textprop",
+      "sections": 3,
+      "bullets": 2,
+      "theme": "teal"
+    },
+    "bindings": {
+      "rows": [
+        "추진 배경",
+        "기대 효과",
+        "핵심 전략"
+      ],
+      "cols": [
+        "heading"
+      ]
+    },
+    "editable": [
+      "heading",
+      "section_subheads",
+      "section_bullets",
+      "accent_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "제안 요약",
+      "본문 채움",
+      "설명 슬라이드"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-199",
+    "category": "CMP",
+    "name": "텍스트 제안서 블록 (2섹션)",
+    "file": "decks/04_compare/CMP_bulk_textprop_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:CMP-199",
+    "tags": [
+      "제안서",
+      "텍스트블록",
+      "불릿",
+      "요약패널",
+      "cyan"
+    ],
+    "params": {
+      "family": "textprop",
+      "sections": 2,
+      "bullets": 3,
+      "theme": "cyan"
+    },
+    "bindings": {
+      "rows": [
+        "추진 배경",
+        "기대 효과"
+      ],
+      "cols": [
+        "heading"
+      ]
+    },
+    "editable": [
+      "heading",
+      "section_subheads",
+      "section_bullets",
+      "accent_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "제안 요약",
+      "본문 채움",
+      "설명 슬라이드"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-200",
+    "category": "CMP",
+    "name": "텍스트 제안서 블록 (3섹션)",
+    "file": "decks/04_compare/CMP_bulk_textprop_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:CMP-200",
+    "tags": [
+      "제안서",
+      "텍스트블록",
+      "불릿",
+      "요약패널",
+      "purple"
+    ],
+    "params": {
+      "family": "textprop",
+      "sections": 3,
+      "bullets": 2,
+      "theme": "purple"
+    },
+    "bindings": {
+      "rows": [
+        "추진 배경",
+        "기대 효과",
+        "핵심 전략"
+      ],
+      "cols": [
+        "heading"
+      ]
+    },
+    "editable": [
+      "heading",
+      "section_subheads",
+      "section_bullets",
+      "accent_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "제안 요약",
+      "본문 채움",
+      "설명 슬라이드"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  }
+]

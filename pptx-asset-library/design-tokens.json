@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "name": "제안서 에셋 라이브러리 디자인 토큰",
+    "version": "1.0",
+    "source": "콘텐츠 해외진출 기획 사업수행계획서 v0.7 팔레트 추상화",
+    "slide": { "width_in": 13.333, "height_in": 7.5, "ratio": "16:9", "note": "에셋은 콤포넌트이므로 조합 템플릿에 이식됨. 원본 PDF는 4:3계열이나 라이브러리 표준은 16:9." }
+  },
+  "color": {
+    "navy_900": "16233B",
+    "navy_800": "1F3864",
+    "navy_600": "2A4A7F",
+    "blue_500": "2E75D6",
+    "cyan_500": "29ABE2",
+    "teal_500": "1F9E8F",
+    "red_500": "C0392B",
+    "purple_600": "7B2D8E",
+    "gray_700": "595959",
+    "gray_500": "808080",
+    "gray_300": "D9D9D9",
+    "gray_100": "F2F2F2",
+    "gray_050": "F7F9FC",
+    "beige_100": "FBF0E1",
+    "text_900": "222222",
+    "white": "FFFFFF"
+  },
+  "role": {
+    "header_fill": "navy_800",
+    "header_text": "white",
+    "row_stripe": "gray_100",
+    "row_base": "white",
+    "border": "gray_300",
+    "accent_primary": "blue_500",
+    "accent_point": "cyan_500",
+    "accent_secondary": "teal_500",
+    "warn": "red_500",
+    "sub_header": "purple_600",
+    "body_text": "text_900",
+    "muted_text": "gray_700",
+    "panel_bg": "gray_050",
+    "analysis_bg": "beige_100"
+  },
+  "font": {
+    "heading": "Pretendard",
+    "heading_fallback": "맑은 고딕",
+    "body": "Pretendard",
+    "body_fallback": "맑은 고딕",
+    "note": "한글은 python-pptx 기본 run.font.name이 a:latin에만 적용됨. 반드시 a:ea/a:cs 동시 설정(common.set_kfont) 필요."
+  },
+  "size_pt": {
+    "asset_title": 10,
+    "table_header": 12,
+    "table_body": 11,
+    "kpi_number": 40,
+    "kpi_label": 12,
+    "step_label": 12,
+    "caption": 9
+  },
+  "geom": {
+    "round_radius": 0.08,
+    "gap_in": 0.15,
+    "border_pt": 1.0
+  }
+}

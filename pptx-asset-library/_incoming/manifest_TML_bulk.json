@@ -1,0 +1,7776 @@
+[
+  {
+    "id": "TML-017",
+    "category": "TML",
+    "name": "수평 타임라인 (3마일스톤)",
+    "file": "decks/05_timeline/TML_bulk_htimeline_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:TML-017",
+    "tags": [
+      "타임라인",
+      "수평",
+      "마일스톤",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 0,
+      "family": "htimeline"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "horizontal",
+      "palette_offset": 0,
+      "unit": "마일스톤"
+    },
+    "editable": [
+      "when-label",
+      "node-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "연혁"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-018",
+    "category": "TML",
+    "name": "마일스톤 카드 로우 (3카드)",
+    "file": "decks/05_timeline/TML_bulk_mcardrow_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:TML-018",
+    "tags": [
+      "타임라인",
+      "마일스톤",
+      "카드",
+      "점연결",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 0,
+      "family": "mcardrow"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "horizontal",
+      "palette_offset": 0,
+      "unit": "카드"
+    },
+    "editable": [
+      "when-label",
+      "card-head",
+      "card-desc",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-019",
+    "category": "TML",
+    "name": "간트 (도형막대) (3트랙)",
+    "file": "decks/05_timeline/TML_bulk_gantt_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:TML-019",
+    "tags": [
+      "타임라인",
+      "간트",
+      "다중트랙",
+      "막대",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 0,
+      "family": "gantt"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "horizontal",
+      "palette_offset": 0,
+      "unit": "트랙"
+    },
+    "editable": [
+      "track-name",
+      "bar-text",
+      "bar-length",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "병행 작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-020",
+    "category": "TML",
+    "name": "단계 셰브론 로드맵 (3단계)",
+    "file": "decks/05_timeline/TML_bulk_stagechevron_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:TML-020",
+    "tags": [
+      "로드맵",
+      "단계별",
+      "셰브론",
+      "산출물",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 0,
+      "family": "stagechevron"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "horizontal",
+      "palette_offset": 0,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-name",
+      "deliverable-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계별 계획",
+      "산출물 매핑",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-021",
+    "category": "TML",
+    "name": "분기 그리드 (3활동군)",
+    "file": "decks/05_timeline/TML_bulk_qgrid_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:TML-021",
+    "tags": [
+      "로드맵",
+      "분기별",
+      "그리드",
+      "활동군",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 0,
+      "family": "qgrid"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "grid",
+      "palette_offset": 0,
+      "unit": "활동군"
+    },
+    "editable": [
+      "cat-name",
+      "cell-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분기 계획",
+      "활동 매핑",
+      "추진일정"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-022",
+    "category": "TML",
+    "name": "세로 타임라인 (3이벤트)",
+    "file": "decks/05_timeline/TML_bulk_vtimeline_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:TML-022",
+    "tags": [
+      "타임라인",
+      "세로",
+      "시간축",
+      "이벤트카드",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 0,
+      "family": "vtimeline"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "vertical",
+      "palette_offset": 0,
+      "unit": "이벤트"
+    },
+    "editable": [
+      "when-label",
+      "event-head",
+      "event-desc",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "단계별 계획",
+      "연혁"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-023",
+    "category": "TML",
+    "name": "원형 연차 로드맵 (3단계)",
+    "file": "decks/05_timeline/TML_bulk_circular_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:TML-023",
+    "tags": [
+      "로드맵",
+      "원형",
+      "연차별",
+      "허브",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 0,
+      "family": "circular"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "radial",
+      "palette_offset": 0,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-label",
+      "focus-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "중장기 계획",
+      "연차 로드맵",
+      "발전 방향"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-024",
+    "category": "TML",
+    "name": "스윔레인 타임라인 (3레인)",
+    "file": "decks/05_timeline/TML_bulk_swimlane_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:TML-024",
+    "tags": [
+      "타임라인",
+      "스윔레인",
+      "레인",
+      "기간막대",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 0,
+      "family": "swimlane"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "horizontal",
+      "palette_offset": 0,
+      "unit": "레인"
+    },
+    "editable": [
+      "lane-name",
+      "bar-text",
+      "bar-length",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "병행 작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-025",
+    "category": "TML",
+    "name": "계단 상승 로드맵 (3단계)",
+    "file": "decks/05_timeline/TML_bulk_staircase_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:TML-025",
+    "tags": [
+      "로드맵",
+      "계단",
+      "상승",
+      "성장",
+      "단계별",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 0,
+      "family": "staircase"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "ascending",
+      "palette_offset": 0,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-name",
+      "focus-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "성장 로드맵",
+      "단계별 발전",
+      "중장기 계획"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-026",
+    "category": "TML",
+    "name": "Now/Next/Later 로드맵 (3구간)",
+    "file": "decks/05_timeline/TML_bulk_horizon_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:TML-026",
+    "tags": [
+      "로드맵",
+      "우선순위",
+      "Now-Next-Later",
+      "호라이즌",
+      "제품로드맵",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 0,
+      "family": "horizon"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "horizontal",
+      "palette_offset": 0,
+      "unit": "구간"
+    },
+    "editable": [
+      "col-label",
+      "card-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "우선순위 로드맵",
+      "제품 로드맵",
+      "추진 방향"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-027",
+    "category": "TML",
+    "name": "플래그 마일스톤 (3깃발)",
+    "file": "decks/05_timeline/TML_bulk_flag_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:TML-027",
+    "tags": [
+      "타임라인",
+      "마일스톤",
+      "깃발",
+      "플래그",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 0,
+      "family": "flag"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "horizontal",
+      "palette_offset": 0,
+      "unit": "깃발"
+    },
+    "editable": [
+      "when-label",
+      "flag-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "핵심 이벤트"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-028",
+    "category": "TML",
+    "name": "3트랙 로드맵 (3페이즈)",
+    "file": "decks/05_timeline/TML_bulk_track3_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:TML-028",
+    "tags": [
+      "로드맵",
+      "3트랙",
+      "병렬트랙",
+      "페이즈",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 0,
+      "family": "track3"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "horizontal",
+      "palette_offset": 0,
+      "unit": "페이즈"
+    },
+    "editable": [
+      "track-name",
+      "phase-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "병렬 트랙 로드맵",
+      "다영역 계획",
+      "추진일정"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-029",
+    "category": "TML",
+    "name": "수평 타임라인 (4마일스톤)",
+    "file": "decks/05_timeline/TML_bulk_htimeline_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:TML-029",
+    "tags": [
+      "타임라인",
+      "수평",
+      "마일스톤",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 0,
+      "family": "htimeline"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "horizontal",
+      "palette_offset": 0,
+      "unit": "마일스톤"
+    },
+    "editable": [
+      "when-label",
+      "node-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "연혁"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-030",
+    "category": "TML",
+    "name": "마일스톤 카드 로우 (4카드)",
+    "file": "decks/05_timeline/TML_bulk_mcardrow_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:TML-030",
+    "tags": [
+      "타임라인",
+      "마일스톤",
+      "카드",
+      "점연결",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 0,
+      "family": "mcardrow"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "horizontal",
+      "palette_offset": 0,
+      "unit": "카드"
+    },
+    "editable": [
+      "when-label",
+      "card-head",
+      "card-desc",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-031",
+    "category": "TML",
+    "name": "간트 (도형막대) (4트랙)",
+    "file": "decks/05_timeline/TML_bulk_gantt_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:TML-031",
+    "tags": [
+      "타임라인",
+      "간트",
+      "다중트랙",
+      "막대",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 0,
+      "family": "gantt"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "horizontal",
+      "palette_offset": 0,
+      "unit": "트랙"
+    },
+    "editable": [
+      "track-name",
+      "bar-text",
+      "bar-length",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "병행 작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-032",
+    "category": "TML",
+    "name": "단계 셰브론 로드맵 (4단계)",
+    "file": "decks/05_timeline/TML_bulk_stagechevron_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:TML-032",
+    "tags": [
+      "로드맵",
+      "단계별",
+      "셰브론",
+      "산출물",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 0,
+      "family": "stagechevron"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "horizontal",
+      "palette_offset": 0,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-name",
+      "deliverable-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계별 계획",
+      "산출물 매핑",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-033",
+    "category": "TML",
+    "name": "분기 그리드 (4활동군)",
+    "file": "decks/05_timeline/TML_bulk_qgrid_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:TML-033",
+    "tags": [
+      "로드맵",
+      "분기별",
+      "그리드",
+      "활동군",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 0,
+      "family": "qgrid"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "grid",
+      "palette_offset": 0,
+      "unit": "활동군"
+    },
+    "editable": [
+      "cat-name",
+      "cell-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분기 계획",
+      "활동 매핑",
+      "추진일정"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-034",
+    "category": "TML",
+    "name": "세로 타임라인 (4이벤트)",
+    "file": "decks/05_timeline/TML_bulk_vtimeline_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:TML-034",
+    "tags": [
+      "타임라인",
+      "세로",
+      "시간축",
+      "이벤트카드",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 0,
+      "family": "vtimeline"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "vertical",
+      "palette_offset": 0,
+      "unit": "이벤트"
+    },
+    "editable": [
+      "when-label",
+      "event-head",
+      "event-desc",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "단계별 계획",
+      "연혁"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-035",
+    "category": "TML",
+    "name": "원형 연차 로드맵 (4단계)",
+    "file": "decks/05_timeline/TML_bulk_circular_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:TML-035",
+    "tags": [
+      "로드맵",
+      "원형",
+      "연차별",
+      "허브",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 0,
+      "family": "circular"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "radial",
+      "palette_offset": 0,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-label",
+      "focus-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "중장기 계획",
+      "연차 로드맵",
+      "발전 방향"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-036",
+    "category": "TML",
+    "name": "스윔레인 타임라인 (4레인)",
+    "file": "decks/05_timeline/TML_bulk_swimlane_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:TML-036",
+    "tags": [
+      "타임라인",
+      "스윔레인",
+      "레인",
+      "기간막대",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 0,
+      "family": "swimlane"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "horizontal",
+      "palette_offset": 0,
+      "unit": "레인"
+    },
+    "editable": [
+      "lane-name",
+      "bar-text",
+      "bar-length",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "병행 작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-037",
+    "category": "TML",
+    "name": "계단 상승 로드맵 (4단계)",
+    "file": "decks/05_timeline/TML_bulk_staircase_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:TML-037",
+    "tags": [
+      "로드맵",
+      "계단",
+      "상승",
+      "성장",
+      "단계별",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 0,
+      "family": "staircase"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "ascending",
+      "palette_offset": 0,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-name",
+      "focus-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "성장 로드맵",
+      "단계별 발전",
+      "중장기 계획"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-038",
+    "category": "TML",
+    "name": "Now/Next/Later 로드맵 (4구간)",
+    "file": "decks/05_timeline/TML_bulk_horizon_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:TML-038",
+    "tags": [
+      "로드맵",
+      "우선순위",
+      "Now-Next-Later",
+      "호라이즌",
+      "제품로드맵",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 0,
+      "family": "horizon"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "horizontal",
+      "palette_offset": 0,
+      "unit": "구간"
+    },
+    "editable": [
+      "col-label",
+      "card-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "우선순위 로드맵",
+      "제품 로드맵",
+      "추진 방향"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-039",
+    "category": "TML",
+    "name": "플래그 마일스톤 (4깃발)",
+    "file": "decks/05_timeline/TML_bulk_flag_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:TML-039",
+    "tags": [
+      "타임라인",
+      "마일스톤",
+      "깃발",
+      "플래그",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 0,
+      "family": "flag"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "horizontal",
+      "palette_offset": 0,
+      "unit": "깃발"
+    },
+    "editable": [
+      "when-label",
+      "flag-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "핵심 이벤트"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-040",
+    "category": "TML",
+    "name": "3트랙 로드맵 (4페이즈)",
+    "file": "decks/05_timeline/TML_bulk_track3_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:TML-040",
+    "tags": [
+      "로드맵",
+      "3트랙",
+      "병렬트랙",
+      "페이즈",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 0,
+      "family": "track3"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "horizontal",
+      "palette_offset": 0,
+      "unit": "페이즈"
+    },
+    "editable": [
+      "track-name",
+      "phase-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "병렬 트랙 로드맵",
+      "다영역 계획",
+      "추진일정"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-041",
+    "category": "TML",
+    "name": "수평 타임라인 (5마일스톤)",
+    "file": "decks/05_timeline/TML_bulk_htimeline_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:TML-041",
+    "tags": [
+      "타임라인",
+      "수평",
+      "마일스톤",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 0,
+      "family": "htimeline"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "horizontal",
+      "palette_offset": 0,
+      "unit": "마일스톤"
+    },
+    "editable": [
+      "when-label",
+      "node-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "연혁"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-042",
+    "category": "TML",
+    "name": "마일스톤 카드 로우 (5카드)",
+    "file": "decks/05_timeline/TML_bulk_mcardrow_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:TML-042",
+    "tags": [
+      "타임라인",
+      "마일스톤",
+      "카드",
+      "점연결",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 0,
+      "family": "mcardrow"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "horizontal",
+      "palette_offset": 0,
+      "unit": "카드"
+    },
+    "editable": [
+      "when-label",
+      "card-head",
+      "card-desc",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-043",
+    "category": "TML",
+    "name": "간트 (도형막대) (5트랙)",
+    "file": "decks/05_timeline/TML_bulk_gantt_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:TML-043",
+    "tags": [
+      "타임라인",
+      "간트",
+      "다중트랙",
+      "막대",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 0,
+      "family": "gantt"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "horizontal",
+      "palette_offset": 0,
+      "unit": "트랙"
+    },
+    "editable": [
+      "track-name",
+      "bar-text",
+      "bar-length",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "병행 작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-044",
+    "category": "TML",
+    "name": "단계 셰브론 로드맵 (5단계)",
+    "file": "decks/05_timeline/TML_bulk_stagechevron_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:TML-044",
+    "tags": [
+      "로드맵",
+      "단계별",
+      "셰브론",
+      "산출물",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 0,
+      "family": "stagechevron"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "horizontal",
+      "palette_offset": 0,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-name",
+      "deliverable-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계별 계획",
+      "산출물 매핑",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-045",
+    "category": "TML",
+    "name": "분기 그리드 (5활동군)",
+    "file": "decks/05_timeline/TML_bulk_qgrid_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:TML-045",
+    "tags": [
+      "로드맵",
+      "분기별",
+      "그리드",
+      "활동군",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 0,
+      "family": "qgrid"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "grid",
+      "palette_offset": 0,
+      "unit": "활동군"
+    },
+    "editable": [
+      "cat-name",
+      "cell-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분기 계획",
+      "활동 매핑",
+      "추진일정"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-046",
+    "category": "TML",
+    "name": "세로 타임라인 (5이벤트)",
+    "file": "decks/05_timeline/TML_bulk_vtimeline_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:TML-046",
+    "tags": [
+      "타임라인",
+      "세로",
+      "시간축",
+      "이벤트카드",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 0,
+      "family": "vtimeline"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "vertical",
+      "palette_offset": 0,
+      "unit": "이벤트"
+    },
+    "editable": [
+      "when-label",
+      "event-head",
+      "event-desc",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "단계별 계획",
+      "연혁"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-047",
+    "category": "TML",
+    "name": "원형 연차 로드맵 (5단계)",
+    "file": "decks/05_timeline/TML_bulk_circular_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:TML-047",
+    "tags": [
+      "로드맵",
+      "원형",
+      "연차별",
+      "허브",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 0,
+      "family": "circular"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "radial",
+      "palette_offset": 0,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-label",
+      "focus-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "중장기 계획",
+      "연차 로드맵",
+      "발전 방향"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-048",
+    "category": "TML",
+    "name": "스윔레인 타임라인 (5레인)",
+    "file": "decks/05_timeline/TML_bulk_swimlane_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:TML-048",
+    "tags": [
+      "타임라인",
+      "스윔레인",
+      "레인",
+      "기간막대",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 0,
+      "family": "swimlane"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "horizontal",
+      "palette_offset": 0,
+      "unit": "레인"
+    },
+    "editable": [
+      "lane-name",
+      "bar-text",
+      "bar-length",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "병행 작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-049",
+    "category": "TML",
+    "name": "계단 상승 로드맵 (5단계)",
+    "file": "decks/05_timeline/TML_bulk_staircase_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:TML-049",
+    "tags": [
+      "로드맵",
+      "계단",
+      "상승",
+      "성장",
+      "단계별",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 0,
+      "family": "staircase"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "ascending",
+      "palette_offset": 0,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-name",
+      "focus-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "성장 로드맵",
+      "단계별 발전",
+      "중장기 계획"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-050",
+    "category": "TML",
+    "name": "Now/Next/Later 로드맵 (5구간)",
+    "file": "decks/05_timeline/TML_bulk_horizon_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:TML-050",
+    "tags": [
+      "로드맵",
+      "우선순위",
+      "Now-Next-Later",
+      "호라이즌",
+      "제품로드맵",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 0,
+      "family": "horizon"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "horizontal",
+      "palette_offset": 0,
+      "unit": "구간"
+    },
+    "editable": [
+      "col-label",
+      "card-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "우선순위 로드맵",
+      "제품 로드맵",
+      "추진 방향"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-051",
+    "category": "TML",
+    "name": "플래그 마일스톤 (5깃발)",
+    "file": "decks/05_timeline/TML_bulk_flag_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:TML-051",
+    "tags": [
+      "타임라인",
+      "마일스톤",
+      "깃발",
+      "플래그",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 0,
+      "family": "flag"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "horizontal",
+      "palette_offset": 0,
+      "unit": "깃발"
+    },
+    "editable": [
+      "when-label",
+      "flag-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "핵심 이벤트"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-052",
+    "category": "TML",
+    "name": "3트랙 로드맵 (5페이즈)",
+    "file": "decks/05_timeline/TML_bulk_track3_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:TML-052",
+    "tags": [
+      "로드맵",
+      "3트랙",
+      "병렬트랙",
+      "페이즈",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 0,
+      "family": "track3"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "horizontal",
+      "palette_offset": 0,
+      "unit": "페이즈"
+    },
+    "editable": [
+      "track-name",
+      "phase-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "병렬 트랙 로드맵",
+      "다영역 계획",
+      "추진일정"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-053",
+    "category": "TML",
+    "name": "수평 타임라인 (6마일스톤)",
+    "file": "decks/05_timeline/TML_bulk_htimeline_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:TML-053",
+    "tags": [
+      "타임라인",
+      "수평",
+      "마일스톤",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 0,
+      "family": "htimeline"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "horizontal",
+      "palette_offset": 0,
+      "unit": "마일스톤"
+    },
+    "editable": [
+      "when-label",
+      "node-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "연혁"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-054",
+    "category": "TML",
+    "name": "마일스톤 카드 로우 (6카드)",
+    "file": "decks/05_timeline/TML_bulk_mcardrow_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:TML-054",
+    "tags": [
+      "타임라인",
+      "마일스톤",
+      "카드",
+      "점연결",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 0,
+      "family": "mcardrow"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "horizontal",
+      "palette_offset": 0,
+      "unit": "카드"
+    },
+    "editable": [
+      "when-label",
+      "card-head",
+      "card-desc",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-055",
+    "category": "TML",
+    "name": "간트 (도형막대) (6트랙)",
+    "file": "decks/05_timeline/TML_bulk_gantt_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:TML-055",
+    "tags": [
+      "타임라인",
+      "간트",
+      "다중트랙",
+      "막대",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 0,
+      "family": "gantt"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "horizontal",
+      "palette_offset": 0,
+      "unit": "트랙"
+    },
+    "editable": [
+      "track-name",
+      "bar-text",
+      "bar-length",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "병행 작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-056",
+    "category": "TML",
+    "name": "단계 셰브론 로드맵 (6단계)",
+    "file": "decks/05_timeline/TML_bulk_stagechevron_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:TML-056",
+    "tags": [
+      "로드맵",
+      "단계별",
+      "셰브론",
+      "산출물",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 0,
+      "family": "stagechevron"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "horizontal",
+      "palette_offset": 0,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-name",
+      "deliverable-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계별 계획",
+      "산출물 매핑",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-057",
+    "category": "TML",
+    "name": "분기 그리드 (6활동군)",
+    "file": "decks/05_timeline/TML_bulk_qgrid_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:TML-057",
+    "tags": [
+      "로드맵",
+      "분기별",
+      "그리드",
+      "활동군",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 0,
+      "family": "qgrid"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "grid",
+      "palette_offset": 0,
+      "unit": "활동군"
+    },
+    "editable": [
+      "cat-name",
+      "cell-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분기 계획",
+      "활동 매핑",
+      "추진일정"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-058",
+    "category": "TML",
+    "name": "세로 타임라인 (6이벤트)",
+    "file": "decks/05_timeline/TML_bulk_vtimeline_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:TML-058",
+    "tags": [
+      "타임라인",
+      "세로",
+      "시간축",
+      "이벤트카드",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 0,
+      "family": "vtimeline"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "vertical",
+      "palette_offset": 0,
+      "unit": "이벤트"
+    },
+    "editable": [
+      "when-label",
+      "event-head",
+      "event-desc",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "단계별 계획",
+      "연혁"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-059",
+    "category": "TML",
+    "name": "원형 연차 로드맵 (6단계)",
+    "file": "decks/05_timeline/TML_bulk_circular_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:TML-059",
+    "tags": [
+      "로드맵",
+      "원형",
+      "연차별",
+      "허브",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 0,
+      "family": "circular"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "radial",
+      "palette_offset": 0,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-label",
+      "focus-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "중장기 계획",
+      "연차 로드맵",
+      "발전 방향"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-060",
+    "category": "TML",
+    "name": "스윔레인 타임라인 (6레인)",
+    "file": "decks/05_timeline/TML_bulk_swimlane_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:TML-060",
+    "tags": [
+      "타임라인",
+      "스윔레인",
+      "레인",
+      "기간막대",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 0,
+      "family": "swimlane"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "horizontal",
+      "palette_offset": 0,
+      "unit": "레인"
+    },
+    "editable": [
+      "lane-name",
+      "bar-text",
+      "bar-length",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "병행 작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-061",
+    "category": "TML",
+    "name": "계단 상승 로드맵 (6단계)",
+    "file": "decks/05_timeline/TML_bulk_staircase_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:TML-061",
+    "tags": [
+      "로드맵",
+      "계단",
+      "상승",
+      "성장",
+      "단계별",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 0,
+      "family": "staircase"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "ascending",
+      "palette_offset": 0,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-name",
+      "focus-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "성장 로드맵",
+      "단계별 발전",
+      "중장기 계획"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-062",
+    "category": "TML",
+    "name": "Now/Next/Later 로드맵 (6구간)",
+    "file": "decks/05_timeline/TML_bulk_horizon_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:TML-062",
+    "tags": [
+      "로드맵",
+      "우선순위",
+      "Now-Next-Later",
+      "호라이즌",
+      "제품로드맵",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 0,
+      "family": "horizon"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "horizontal",
+      "palette_offset": 0,
+      "unit": "구간"
+    },
+    "editable": [
+      "col-label",
+      "card-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "우선순위 로드맵",
+      "제품 로드맵",
+      "추진 방향"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-063",
+    "category": "TML",
+    "name": "플래그 마일스톤 (6깃발)",
+    "file": "decks/05_timeline/TML_bulk_flag_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:TML-063",
+    "tags": [
+      "타임라인",
+      "마일스톤",
+      "깃발",
+      "플래그",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 0,
+      "family": "flag"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "horizontal",
+      "palette_offset": 0,
+      "unit": "깃발"
+    },
+    "editable": [
+      "when-label",
+      "flag-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "핵심 이벤트"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-064",
+    "category": "TML",
+    "name": "3트랙 로드맵 (6페이즈)",
+    "file": "decks/05_timeline/TML_bulk_track3_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:TML-064",
+    "tags": [
+      "로드맵",
+      "3트랙",
+      "병렬트랙",
+      "페이즈",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 0,
+      "family": "track3"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "horizontal",
+      "palette_offset": 0,
+      "unit": "페이즈"
+    },
+    "editable": [
+      "track-name",
+      "phase-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "병렬 트랙 로드맵",
+      "다영역 계획",
+      "추진일정"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-065",
+    "category": "TML",
+    "name": "수평 타임라인 (3마일스톤)",
+    "file": "decks/05_timeline/TML_bulk_htimeline_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:TML-065",
+    "tags": [
+      "타임라인",
+      "수평",
+      "마일스톤",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 1,
+      "family": "htimeline"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "horizontal",
+      "palette_offset": 1,
+      "unit": "마일스톤"
+    },
+    "editable": [
+      "when-label",
+      "node-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "연혁"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-066",
+    "category": "TML",
+    "name": "마일스톤 카드 로우 (3카드)",
+    "file": "decks/05_timeline/TML_bulk_mcardrow_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:TML-066",
+    "tags": [
+      "타임라인",
+      "마일스톤",
+      "카드",
+      "점연결",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 1,
+      "family": "mcardrow"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "horizontal",
+      "palette_offset": 1,
+      "unit": "카드"
+    },
+    "editable": [
+      "when-label",
+      "card-head",
+      "card-desc",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-067",
+    "category": "TML",
+    "name": "간트 (도형막대) (3트랙)",
+    "file": "decks/05_timeline/TML_bulk_gantt_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:TML-067",
+    "tags": [
+      "타임라인",
+      "간트",
+      "다중트랙",
+      "막대",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 1,
+      "family": "gantt"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "horizontal",
+      "palette_offset": 1,
+      "unit": "트랙"
+    },
+    "editable": [
+      "track-name",
+      "bar-text",
+      "bar-length",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "병행 작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-068",
+    "category": "TML",
+    "name": "단계 셰브론 로드맵 (3단계)",
+    "file": "decks/05_timeline/TML_bulk_stagechevron_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:TML-068",
+    "tags": [
+      "로드맵",
+      "단계별",
+      "셰브론",
+      "산출물",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 1,
+      "family": "stagechevron"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "horizontal",
+      "palette_offset": 1,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-name",
+      "deliverable-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계별 계획",
+      "산출물 매핑",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-069",
+    "category": "TML",
+    "name": "분기 그리드 (3활동군)",
+    "file": "decks/05_timeline/TML_bulk_qgrid_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:TML-069",
+    "tags": [
+      "로드맵",
+      "분기별",
+      "그리드",
+      "활동군",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 1,
+      "family": "qgrid"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "grid",
+      "palette_offset": 1,
+      "unit": "활동군"
+    },
+    "editable": [
+      "cat-name",
+      "cell-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분기 계획",
+      "활동 매핑",
+      "추진일정"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-070",
+    "category": "TML",
+    "name": "세로 타임라인 (3이벤트)",
+    "file": "decks/05_timeline/TML_bulk_vtimeline_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:TML-070",
+    "tags": [
+      "타임라인",
+      "세로",
+      "시간축",
+      "이벤트카드",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 1,
+      "family": "vtimeline"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "vertical",
+      "palette_offset": 1,
+      "unit": "이벤트"
+    },
+    "editable": [
+      "when-label",
+      "event-head",
+      "event-desc",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "단계별 계획",
+      "연혁"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-071",
+    "category": "TML",
+    "name": "원형 연차 로드맵 (3단계)",
+    "file": "decks/05_timeline/TML_bulk_circular_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:TML-071",
+    "tags": [
+      "로드맵",
+      "원형",
+      "연차별",
+      "허브",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 1,
+      "family": "circular"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "radial",
+      "palette_offset": 1,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-label",
+      "focus-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "중장기 계획",
+      "연차 로드맵",
+      "발전 방향"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-072",
+    "category": "TML",
+    "name": "스윔레인 타임라인 (3레인)",
+    "file": "decks/05_timeline/TML_bulk_swimlane_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:TML-072",
+    "tags": [
+      "타임라인",
+      "스윔레인",
+      "레인",
+      "기간막대",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 1,
+      "family": "swimlane"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "horizontal",
+      "palette_offset": 1,
+      "unit": "레인"
+    },
+    "editable": [
+      "lane-name",
+      "bar-text",
+      "bar-length",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "병행 작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-073",
+    "category": "TML",
+    "name": "계단 상승 로드맵 (3단계)",
+    "file": "decks/05_timeline/TML_bulk_staircase_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:TML-073",
+    "tags": [
+      "로드맵",
+      "계단",
+      "상승",
+      "성장",
+      "단계별",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 1,
+      "family": "staircase"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "ascending",
+      "palette_offset": 1,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-name",
+      "focus-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "성장 로드맵",
+      "단계별 발전",
+      "중장기 계획"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-074",
+    "category": "TML",
+    "name": "Now/Next/Later 로드맵 (3구간)",
+    "file": "decks/05_timeline/TML_bulk_horizon_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:TML-074",
+    "tags": [
+      "로드맵",
+      "우선순위",
+      "Now-Next-Later",
+      "호라이즌",
+      "제품로드맵",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 1,
+      "family": "horizon"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "horizontal",
+      "palette_offset": 1,
+      "unit": "구간"
+    },
+    "editable": [
+      "col-label",
+      "card-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "우선순위 로드맵",
+      "제품 로드맵",
+      "추진 방향"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-075",
+    "category": "TML",
+    "name": "플래그 마일스톤 (3깃발)",
+    "file": "decks/05_timeline/TML_bulk_flag_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:TML-075",
+    "tags": [
+      "타임라인",
+      "마일스톤",
+      "깃발",
+      "플래그",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 1,
+      "family": "flag"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "horizontal",
+      "palette_offset": 1,
+      "unit": "깃발"
+    },
+    "editable": [
+      "when-label",
+      "flag-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "핵심 이벤트"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-076",
+    "category": "TML",
+    "name": "3트랙 로드맵 (3페이즈)",
+    "file": "decks/05_timeline/TML_bulk_track3_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:TML-076",
+    "tags": [
+      "로드맵",
+      "3트랙",
+      "병렬트랙",
+      "페이즈",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 1,
+      "family": "track3"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "horizontal",
+      "palette_offset": 1,
+      "unit": "페이즈"
+    },
+    "editable": [
+      "track-name",
+      "phase-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "병렬 트랙 로드맵",
+      "다영역 계획",
+      "추진일정"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-077",
+    "category": "TML",
+    "name": "수평 타임라인 (4마일스톤)",
+    "file": "decks/05_timeline/TML_bulk_htimeline_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:TML-077",
+    "tags": [
+      "타임라인",
+      "수평",
+      "마일스톤",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 1,
+      "family": "htimeline"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "horizontal",
+      "palette_offset": 1,
+      "unit": "마일스톤"
+    },
+    "editable": [
+      "when-label",
+      "node-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "연혁"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-078",
+    "category": "TML",
+    "name": "마일스톤 카드 로우 (4카드)",
+    "file": "decks/05_timeline/TML_bulk_mcardrow_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:TML-078",
+    "tags": [
+      "타임라인",
+      "마일스톤",
+      "카드",
+      "점연결",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 1,
+      "family": "mcardrow"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "horizontal",
+      "palette_offset": 1,
+      "unit": "카드"
+    },
+    "editable": [
+      "when-label",
+      "card-head",
+      "card-desc",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-079",
+    "category": "TML",
+    "name": "간트 (도형막대) (4트랙)",
+    "file": "decks/05_timeline/TML_bulk_gantt_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:TML-079",
+    "tags": [
+      "타임라인",
+      "간트",
+      "다중트랙",
+      "막대",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 1,
+      "family": "gantt"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "horizontal",
+      "palette_offset": 1,
+      "unit": "트랙"
+    },
+    "editable": [
+      "track-name",
+      "bar-text",
+      "bar-length",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "병행 작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-080",
+    "category": "TML",
+    "name": "단계 셰브론 로드맵 (4단계)",
+    "file": "decks/05_timeline/TML_bulk_stagechevron_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:TML-080",
+    "tags": [
+      "로드맵",
+      "단계별",
+      "셰브론",
+      "산출물",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 1,
+      "family": "stagechevron"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "horizontal",
+      "palette_offset": 1,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-name",
+      "deliverable-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계별 계획",
+      "산출물 매핑",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-081",
+    "category": "TML",
+    "name": "분기 그리드 (4활동군)",
+    "file": "decks/05_timeline/TML_bulk_qgrid_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:TML-081",
+    "tags": [
+      "로드맵",
+      "분기별",
+      "그리드",
+      "활동군",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 1,
+      "family": "qgrid"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "grid",
+      "palette_offset": 1,
+      "unit": "활동군"
+    },
+    "editable": [
+      "cat-name",
+      "cell-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분기 계획",
+      "활동 매핑",
+      "추진일정"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-082",
+    "category": "TML",
+    "name": "세로 타임라인 (4이벤트)",
+    "file": "decks/05_timeline/TML_bulk_vtimeline_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:TML-082",
+    "tags": [
+      "타임라인",
+      "세로",
+      "시간축",
+      "이벤트카드",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 1,
+      "family": "vtimeline"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "vertical",
+      "palette_offset": 1,
+      "unit": "이벤트"
+    },
+    "editable": [
+      "when-label",
+      "event-head",
+      "event-desc",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "단계별 계획",
+      "연혁"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-083",
+    "category": "TML",
+    "name": "원형 연차 로드맵 (4단계)",
+    "file": "decks/05_timeline/TML_bulk_circular_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:TML-083",
+    "tags": [
+      "로드맵",
+      "원형",
+      "연차별",
+      "허브",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 1,
+      "family": "circular"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "radial",
+      "palette_offset": 1,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-label",
+      "focus-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "중장기 계획",
+      "연차 로드맵",
+      "발전 방향"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-084",
+    "category": "TML",
+    "name": "스윔레인 타임라인 (4레인)",
+    "file": "decks/05_timeline/TML_bulk_swimlane_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:TML-084",
+    "tags": [
+      "타임라인",
+      "스윔레인",
+      "레인",
+      "기간막대",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 1,
+      "family": "swimlane"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "horizontal",
+      "palette_offset": 1,
+      "unit": "레인"
+    },
+    "editable": [
+      "lane-name",
+      "bar-text",
+      "bar-length",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "병행 작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-085",
+    "category": "TML",
+    "name": "계단 상승 로드맵 (4단계)",
+    "file": "decks/05_timeline/TML_bulk_staircase_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:TML-085",
+    "tags": [
+      "로드맵",
+      "계단",
+      "상승",
+      "성장",
+      "단계별",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 1,
+      "family": "staircase"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "ascending",
+      "palette_offset": 1,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-name",
+      "focus-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "성장 로드맵",
+      "단계별 발전",
+      "중장기 계획"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-086",
+    "category": "TML",
+    "name": "Now/Next/Later 로드맵 (4구간)",
+    "file": "decks/05_timeline/TML_bulk_horizon_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:TML-086",
+    "tags": [
+      "로드맵",
+      "우선순위",
+      "Now-Next-Later",
+      "호라이즌",
+      "제품로드맵",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 1,
+      "family": "horizon"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "horizontal",
+      "palette_offset": 1,
+      "unit": "구간"
+    },
+    "editable": [
+      "col-label",
+      "card-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "우선순위 로드맵",
+      "제품 로드맵",
+      "추진 방향"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-087",
+    "category": "TML",
+    "name": "플래그 마일스톤 (4깃발)",
+    "file": "decks/05_timeline/TML_bulk_flag_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:TML-087",
+    "tags": [
+      "타임라인",
+      "마일스톤",
+      "깃발",
+      "플래그",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 1,
+      "family": "flag"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "horizontal",
+      "palette_offset": 1,
+      "unit": "깃발"
+    },
+    "editable": [
+      "when-label",
+      "flag-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "핵심 이벤트"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-088",
+    "category": "TML",
+    "name": "3트랙 로드맵 (4페이즈)",
+    "file": "decks/05_timeline/TML_bulk_track3_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:TML-088",
+    "tags": [
+      "로드맵",
+      "3트랙",
+      "병렬트랙",
+      "페이즈",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 1,
+      "family": "track3"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "horizontal",
+      "palette_offset": 1,
+      "unit": "페이즈"
+    },
+    "editable": [
+      "track-name",
+      "phase-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "병렬 트랙 로드맵",
+      "다영역 계획",
+      "추진일정"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-089",
+    "category": "TML",
+    "name": "수평 타임라인 (5마일스톤)",
+    "file": "decks/05_timeline/TML_bulk_htimeline_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:TML-089",
+    "tags": [
+      "타임라인",
+      "수평",
+      "마일스톤",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 1,
+      "family": "htimeline"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "horizontal",
+      "palette_offset": 1,
+      "unit": "마일스톤"
+    },
+    "editable": [
+      "when-label",
+      "node-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "연혁"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-090",
+    "category": "TML",
+    "name": "마일스톤 카드 로우 (5카드)",
+    "file": "decks/05_timeline/TML_bulk_mcardrow_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:TML-090",
+    "tags": [
+      "타임라인",
+      "마일스톤",
+      "카드",
+      "점연결",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 1,
+      "family": "mcardrow"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "horizontal",
+      "palette_offset": 1,
+      "unit": "카드"
+    },
+    "editable": [
+      "when-label",
+      "card-head",
+      "card-desc",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-091",
+    "category": "TML",
+    "name": "간트 (도형막대) (5트랙)",
+    "file": "decks/05_timeline/TML_bulk_gantt_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:TML-091",
+    "tags": [
+      "타임라인",
+      "간트",
+      "다중트랙",
+      "막대",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 1,
+      "family": "gantt"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "horizontal",
+      "palette_offset": 1,
+      "unit": "트랙"
+    },
+    "editable": [
+      "track-name",
+      "bar-text",
+      "bar-length",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "병행 작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-092",
+    "category": "TML",
+    "name": "단계 셰브론 로드맵 (5단계)",
+    "file": "decks/05_timeline/TML_bulk_stagechevron_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:TML-092",
+    "tags": [
+      "로드맵",
+      "단계별",
+      "셰브론",
+      "산출물",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 1,
+      "family": "stagechevron"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "horizontal",
+      "palette_offset": 1,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-name",
+      "deliverable-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계별 계획",
+      "산출물 매핑",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-093",
+    "category": "TML",
+    "name": "분기 그리드 (5활동군)",
+    "file": "decks/05_timeline/TML_bulk_qgrid_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:TML-093",
+    "tags": [
+      "로드맵",
+      "분기별",
+      "그리드",
+      "활동군",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 1,
+      "family": "qgrid"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "grid",
+      "palette_offset": 1,
+      "unit": "활동군"
+    },
+    "editable": [
+      "cat-name",
+      "cell-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분기 계획",
+      "활동 매핑",
+      "추진일정"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-094",
+    "category": "TML",
+    "name": "세로 타임라인 (5이벤트)",
+    "file": "decks/05_timeline/TML_bulk_vtimeline_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:TML-094",
+    "tags": [
+      "타임라인",
+      "세로",
+      "시간축",
+      "이벤트카드",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 1,
+      "family": "vtimeline"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "vertical",
+      "palette_offset": 1,
+      "unit": "이벤트"
+    },
+    "editable": [
+      "when-label",
+      "event-head",
+      "event-desc",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "단계별 계획",
+      "연혁"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-095",
+    "category": "TML",
+    "name": "원형 연차 로드맵 (5단계)",
+    "file": "decks/05_timeline/TML_bulk_circular_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:TML-095",
+    "tags": [
+      "로드맵",
+      "원형",
+      "연차별",
+      "허브",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 1,
+      "family": "circular"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "radial",
+      "palette_offset": 1,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-label",
+      "focus-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "중장기 계획",
+      "연차 로드맵",
+      "발전 방향"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-096",
+    "category": "TML",
+    "name": "스윔레인 타임라인 (5레인)",
+    "file": "decks/05_timeline/TML_bulk_swimlane_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:TML-096",
+    "tags": [
+      "타임라인",
+      "스윔레인",
+      "레인",
+      "기간막대",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 1,
+      "family": "swimlane"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "horizontal",
+      "palette_offset": 1,
+      "unit": "레인"
+    },
+    "editable": [
+      "lane-name",
+      "bar-text",
+      "bar-length",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "병행 작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-097",
+    "category": "TML",
+    "name": "계단 상승 로드맵 (5단계)",
+    "file": "decks/05_timeline/TML_bulk_staircase_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:TML-097",
+    "tags": [
+      "로드맵",
+      "계단",
+      "상승",
+      "성장",
+      "단계별",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 1,
+      "family": "staircase"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "ascending",
+      "palette_offset": 1,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-name",
+      "focus-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "성장 로드맵",
+      "단계별 발전",
+      "중장기 계획"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-098",
+    "category": "TML",
+    "name": "Now/Next/Later 로드맵 (5구간)",
+    "file": "decks/05_timeline/TML_bulk_horizon_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:TML-098",
+    "tags": [
+      "로드맵",
+      "우선순위",
+      "Now-Next-Later",
+      "호라이즌",
+      "제품로드맵",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 1,
+      "family": "horizon"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "horizontal",
+      "palette_offset": 1,
+      "unit": "구간"
+    },
+    "editable": [
+      "col-label",
+      "card-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "우선순위 로드맵",
+      "제품 로드맵",
+      "추진 방향"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-099",
+    "category": "TML",
+    "name": "플래그 마일스톤 (5깃발)",
+    "file": "decks/05_timeline/TML_bulk_flag_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:TML-099",
+    "tags": [
+      "타임라인",
+      "마일스톤",
+      "깃발",
+      "플래그",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 1,
+      "family": "flag"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "horizontal",
+      "palette_offset": 1,
+      "unit": "깃발"
+    },
+    "editable": [
+      "when-label",
+      "flag-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "핵심 이벤트"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-100",
+    "category": "TML",
+    "name": "3트랙 로드맵 (5페이즈)",
+    "file": "decks/05_timeline/TML_bulk_track3_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:TML-100",
+    "tags": [
+      "로드맵",
+      "3트랙",
+      "병렬트랙",
+      "페이즈",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 1,
+      "family": "track3"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "horizontal",
+      "palette_offset": 1,
+      "unit": "페이즈"
+    },
+    "editable": [
+      "track-name",
+      "phase-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "병렬 트랙 로드맵",
+      "다영역 계획",
+      "추진일정"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-101",
+    "category": "TML",
+    "name": "수평 타임라인 (6마일스톤)",
+    "file": "decks/05_timeline/TML_bulk_htimeline_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:TML-101",
+    "tags": [
+      "타임라인",
+      "수평",
+      "마일스톤",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 1,
+      "family": "htimeline"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "horizontal",
+      "palette_offset": 1,
+      "unit": "마일스톤"
+    },
+    "editable": [
+      "when-label",
+      "node-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "연혁"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-102",
+    "category": "TML",
+    "name": "마일스톤 카드 로우 (6카드)",
+    "file": "decks/05_timeline/TML_bulk_mcardrow_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:TML-102",
+    "tags": [
+      "타임라인",
+      "마일스톤",
+      "카드",
+      "점연결",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 1,
+      "family": "mcardrow"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "horizontal",
+      "palette_offset": 1,
+      "unit": "카드"
+    },
+    "editable": [
+      "when-label",
+      "card-head",
+      "card-desc",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-103",
+    "category": "TML",
+    "name": "간트 (도형막대) (6트랙)",
+    "file": "decks/05_timeline/TML_bulk_gantt_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:TML-103",
+    "tags": [
+      "타임라인",
+      "간트",
+      "다중트랙",
+      "막대",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 1,
+      "family": "gantt"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "horizontal",
+      "palette_offset": 1,
+      "unit": "트랙"
+    },
+    "editable": [
+      "track-name",
+      "bar-text",
+      "bar-length",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "병행 작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-104",
+    "category": "TML",
+    "name": "단계 셰브론 로드맵 (6단계)",
+    "file": "decks/05_timeline/TML_bulk_stagechevron_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:TML-104",
+    "tags": [
+      "로드맵",
+      "단계별",
+      "셰브론",
+      "산출물",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 1,
+      "family": "stagechevron"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "horizontal",
+      "palette_offset": 1,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-name",
+      "deliverable-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계별 계획",
+      "산출물 매핑",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-105",
+    "category": "TML",
+    "name": "분기 그리드 (6활동군)",
+    "file": "decks/05_timeline/TML_bulk_qgrid_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:TML-105",
+    "tags": [
+      "로드맵",
+      "분기별",
+      "그리드",
+      "활동군",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 1,
+      "family": "qgrid"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "grid",
+      "palette_offset": 1,
+      "unit": "활동군"
+    },
+    "editable": [
+      "cat-name",
+      "cell-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분기 계획",
+      "활동 매핑",
+      "추진일정"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-106",
+    "category": "TML",
+    "name": "세로 타임라인 (6이벤트)",
+    "file": "decks/05_timeline/TML_bulk_vtimeline_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:TML-106",
+    "tags": [
+      "타임라인",
+      "세로",
+      "시간축",
+      "이벤트카드",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 1,
+      "family": "vtimeline"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "vertical",
+      "palette_offset": 1,
+      "unit": "이벤트"
+    },
+    "editable": [
+      "when-label",
+      "event-head",
+      "event-desc",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "단계별 계획",
+      "연혁"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-107",
+    "category": "TML",
+    "name": "원형 연차 로드맵 (6단계)",
+    "file": "decks/05_timeline/TML_bulk_circular_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:TML-107",
+    "tags": [
+      "로드맵",
+      "원형",
+      "연차별",
+      "허브",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 1,
+      "family": "circular"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "radial",
+      "palette_offset": 1,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-label",
+      "focus-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "중장기 계획",
+      "연차 로드맵",
+      "발전 방향"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-108",
+    "category": "TML",
+    "name": "스윔레인 타임라인 (6레인)",
+    "file": "decks/05_timeline/TML_bulk_swimlane_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:TML-108",
+    "tags": [
+      "타임라인",
+      "스윔레인",
+      "레인",
+      "기간막대",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 1,
+      "family": "swimlane"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "horizontal",
+      "palette_offset": 1,
+      "unit": "레인"
+    },
+    "editable": [
+      "lane-name",
+      "bar-text",
+      "bar-length",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "병행 작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-109",
+    "category": "TML",
+    "name": "계단 상승 로드맵 (6단계)",
+    "file": "decks/05_timeline/TML_bulk_staircase_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:TML-109",
+    "tags": [
+      "로드맵",
+      "계단",
+      "상승",
+      "성장",
+      "단계별",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 1,
+      "family": "staircase"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "ascending",
+      "palette_offset": 1,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-name",
+      "focus-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "성장 로드맵",
+      "단계별 발전",
+      "중장기 계획"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-110",
+    "category": "TML",
+    "name": "Now/Next/Later 로드맵 (6구간)",
+    "file": "decks/05_timeline/TML_bulk_horizon_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:TML-110",
+    "tags": [
+      "로드맵",
+      "우선순위",
+      "Now-Next-Later",
+      "호라이즌",
+      "제품로드맵",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 1,
+      "family": "horizon"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "horizontal",
+      "palette_offset": 1,
+      "unit": "구간"
+    },
+    "editable": [
+      "col-label",
+      "card-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "우선순위 로드맵",
+      "제품 로드맵",
+      "추진 방향"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-111",
+    "category": "TML",
+    "name": "플래그 마일스톤 (6깃발)",
+    "file": "decks/05_timeline/TML_bulk_flag_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:TML-111",
+    "tags": [
+      "타임라인",
+      "마일스톤",
+      "깃발",
+      "플래그",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 1,
+      "family": "flag"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "horizontal",
+      "palette_offset": 1,
+      "unit": "깃발"
+    },
+    "editable": [
+      "when-label",
+      "flag-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "핵심 이벤트"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-112",
+    "category": "TML",
+    "name": "3트랙 로드맵 (6페이즈)",
+    "file": "decks/05_timeline/TML_bulk_track3_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:TML-112",
+    "tags": [
+      "로드맵",
+      "3트랙",
+      "병렬트랙",
+      "페이즈",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 1,
+      "family": "track3"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "horizontal",
+      "palette_offset": 1,
+      "unit": "페이즈"
+    },
+    "editable": [
+      "track-name",
+      "phase-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "병렬 트랙 로드맵",
+      "다영역 계획",
+      "추진일정"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-113",
+    "category": "TML",
+    "name": "수평 타임라인 (3마일스톤)",
+    "file": "decks/05_timeline/TML_bulk_htimeline_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:TML-113",
+    "tags": [
+      "타임라인",
+      "수평",
+      "마일스톤",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 2,
+      "family": "htimeline"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "horizontal",
+      "palette_offset": 2,
+      "unit": "마일스톤"
+    },
+    "editable": [
+      "when-label",
+      "node-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "연혁"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-114",
+    "category": "TML",
+    "name": "마일스톤 카드 로우 (3카드)",
+    "file": "decks/05_timeline/TML_bulk_mcardrow_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:TML-114",
+    "tags": [
+      "타임라인",
+      "마일스톤",
+      "카드",
+      "점연결",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 2,
+      "family": "mcardrow"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "horizontal",
+      "palette_offset": 2,
+      "unit": "카드"
+    },
+    "editable": [
+      "when-label",
+      "card-head",
+      "card-desc",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-115",
+    "category": "TML",
+    "name": "간트 (도형막대) (3트랙)",
+    "file": "decks/05_timeline/TML_bulk_gantt_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:TML-115",
+    "tags": [
+      "타임라인",
+      "간트",
+      "다중트랙",
+      "막대",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 2,
+      "family": "gantt"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "horizontal",
+      "palette_offset": 2,
+      "unit": "트랙"
+    },
+    "editable": [
+      "track-name",
+      "bar-text",
+      "bar-length",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "병행 작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-116",
+    "category": "TML",
+    "name": "단계 셰브론 로드맵 (3단계)",
+    "file": "decks/05_timeline/TML_bulk_stagechevron_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:TML-116",
+    "tags": [
+      "로드맵",
+      "단계별",
+      "셰브론",
+      "산출물",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 2,
+      "family": "stagechevron"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "horizontal",
+      "palette_offset": 2,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-name",
+      "deliverable-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계별 계획",
+      "산출물 매핑",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-117",
+    "category": "TML",
+    "name": "분기 그리드 (3활동군)",
+    "file": "decks/05_timeline/TML_bulk_qgrid_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:TML-117",
+    "tags": [
+      "로드맵",
+      "분기별",
+      "그리드",
+      "활동군",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 2,
+      "family": "qgrid"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "grid",
+      "palette_offset": 2,
+      "unit": "활동군"
+    },
+    "editable": [
+      "cat-name",
+      "cell-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분기 계획",
+      "활동 매핑",
+      "추진일정"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-118",
+    "category": "TML",
+    "name": "세로 타임라인 (3이벤트)",
+    "file": "decks/05_timeline/TML_bulk_vtimeline_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:TML-118",
+    "tags": [
+      "타임라인",
+      "세로",
+      "시간축",
+      "이벤트카드",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 2,
+      "family": "vtimeline"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "vertical",
+      "palette_offset": 2,
+      "unit": "이벤트"
+    },
+    "editable": [
+      "when-label",
+      "event-head",
+      "event-desc",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "단계별 계획",
+      "연혁"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-119",
+    "category": "TML",
+    "name": "원형 연차 로드맵 (3단계)",
+    "file": "decks/05_timeline/TML_bulk_circular_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:TML-119",
+    "tags": [
+      "로드맵",
+      "원형",
+      "연차별",
+      "허브",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 2,
+      "family": "circular"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "radial",
+      "palette_offset": 2,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-label",
+      "focus-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "중장기 계획",
+      "연차 로드맵",
+      "발전 방향"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-120",
+    "category": "TML",
+    "name": "스윔레인 타임라인 (3레인)",
+    "file": "decks/05_timeline/TML_bulk_swimlane_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:TML-120",
+    "tags": [
+      "타임라인",
+      "스윔레인",
+      "레인",
+      "기간막대",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 2,
+      "family": "swimlane"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "horizontal",
+      "palette_offset": 2,
+      "unit": "레인"
+    },
+    "editable": [
+      "lane-name",
+      "bar-text",
+      "bar-length",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "병행 작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-121",
+    "category": "TML",
+    "name": "계단 상승 로드맵 (3단계)",
+    "file": "decks/05_timeline/TML_bulk_staircase_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:TML-121",
+    "tags": [
+      "로드맵",
+      "계단",
+      "상승",
+      "성장",
+      "단계별",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 2,
+      "family": "staircase"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "ascending",
+      "palette_offset": 2,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-name",
+      "focus-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "성장 로드맵",
+      "단계별 발전",
+      "중장기 계획"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-122",
+    "category": "TML",
+    "name": "Now/Next/Later 로드맵 (3구간)",
+    "file": "decks/05_timeline/TML_bulk_horizon_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:TML-122",
+    "tags": [
+      "로드맵",
+      "우선순위",
+      "Now-Next-Later",
+      "호라이즌",
+      "제품로드맵",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 2,
+      "family": "horizon"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "horizontal",
+      "palette_offset": 2,
+      "unit": "구간"
+    },
+    "editable": [
+      "col-label",
+      "card-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "우선순위 로드맵",
+      "제품 로드맵",
+      "추진 방향"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-123",
+    "category": "TML",
+    "name": "플래그 마일스톤 (3깃발)",
+    "file": "decks/05_timeline/TML_bulk_flag_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:TML-123",
+    "tags": [
+      "타임라인",
+      "마일스톤",
+      "깃발",
+      "플래그",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 2,
+      "family": "flag"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "horizontal",
+      "palette_offset": 2,
+      "unit": "깃발"
+    },
+    "editable": [
+      "when-label",
+      "flag-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "핵심 이벤트"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-124",
+    "category": "TML",
+    "name": "3트랙 로드맵 (3페이즈)",
+    "file": "decks/05_timeline/TML_bulk_track3_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:TML-124",
+    "tags": [
+      "로드맵",
+      "3트랙",
+      "병렬트랙",
+      "페이즈",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 2,
+      "family": "track3"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "horizontal",
+      "palette_offset": 2,
+      "unit": "페이즈"
+    },
+    "editable": [
+      "track-name",
+      "phase-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "병렬 트랙 로드맵",
+      "다영역 계획",
+      "추진일정"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-125",
+    "category": "TML",
+    "name": "수평 타임라인 (4마일스톤)",
+    "file": "decks/05_timeline/TML_bulk_htimeline_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:TML-125",
+    "tags": [
+      "타임라인",
+      "수평",
+      "마일스톤",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 2,
+      "family": "htimeline"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "horizontal",
+      "palette_offset": 2,
+      "unit": "마일스톤"
+    },
+    "editable": [
+      "when-label",
+      "node-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "연혁"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-126",
+    "category": "TML",
+    "name": "마일스톤 카드 로우 (4카드)",
+    "file": "decks/05_timeline/TML_bulk_mcardrow_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:TML-126",
+    "tags": [
+      "타임라인",
+      "마일스톤",
+      "카드",
+      "점연결",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 2,
+      "family": "mcardrow"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "horizontal",
+      "palette_offset": 2,
+      "unit": "카드"
+    },
+    "editable": [
+      "when-label",
+      "card-head",
+      "card-desc",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-127",
+    "category": "TML",
+    "name": "간트 (도형막대) (4트랙)",
+    "file": "decks/05_timeline/TML_bulk_gantt_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:TML-127",
+    "tags": [
+      "타임라인",
+      "간트",
+      "다중트랙",
+      "막대",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 2,
+      "family": "gantt"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "horizontal",
+      "palette_offset": 2,
+      "unit": "트랙"
+    },
+    "editable": [
+      "track-name",
+      "bar-text",
+      "bar-length",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "병행 작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-128",
+    "category": "TML",
+    "name": "단계 셰브론 로드맵 (4단계)",
+    "file": "decks/05_timeline/TML_bulk_stagechevron_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:TML-128",
+    "tags": [
+      "로드맵",
+      "단계별",
+      "셰브론",
+      "산출물",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 2,
+      "family": "stagechevron"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "horizontal",
+      "palette_offset": 2,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-name",
+      "deliverable-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계별 계획",
+      "산출물 매핑",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-129",
+    "category": "TML",
+    "name": "분기 그리드 (4활동군)",
+    "file": "decks/05_timeline/TML_bulk_qgrid_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:TML-129",
+    "tags": [
+      "로드맵",
+      "분기별",
+      "그리드",
+      "활동군",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 2,
+      "family": "qgrid"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "grid",
+      "palette_offset": 2,
+      "unit": "활동군"
+    },
+    "editable": [
+      "cat-name",
+      "cell-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분기 계획",
+      "활동 매핑",
+      "추진일정"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-130",
+    "category": "TML",
+    "name": "세로 타임라인 (4이벤트)",
+    "file": "decks/05_timeline/TML_bulk_vtimeline_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:TML-130",
+    "tags": [
+      "타임라인",
+      "세로",
+      "시간축",
+      "이벤트카드",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 2,
+      "family": "vtimeline"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "vertical",
+      "palette_offset": 2,
+      "unit": "이벤트"
+    },
+    "editable": [
+      "when-label",
+      "event-head",
+      "event-desc",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "단계별 계획",
+      "연혁"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-131",
+    "category": "TML",
+    "name": "원형 연차 로드맵 (4단계)",
+    "file": "decks/05_timeline/TML_bulk_circular_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:TML-131",
+    "tags": [
+      "로드맵",
+      "원형",
+      "연차별",
+      "허브",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 2,
+      "family": "circular"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "radial",
+      "palette_offset": 2,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-label",
+      "focus-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "중장기 계획",
+      "연차 로드맵",
+      "발전 방향"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-132",
+    "category": "TML",
+    "name": "스윔레인 타임라인 (4레인)",
+    "file": "decks/05_timeline/TML_bulk_swimlane_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:TML-132",
+    "tags": [
+      "타임라인",
+      "스윔레인",
+      "레인",
+      "기간막대",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 2,
+      "family": "swimlane"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "horizontal",
+      "palette_offset": 2,
+      "unit": "레인"
+    },
+    "editable": [
+      "lane-name",
+      "bar-text",
+      "bar-length",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "병행 작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-133",
+    "category": "TML",
+    "name": "계단 상승 로드맵 (4단계)",
+    "file": "decks/05_timeline/TML_bulk_staircase_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:TML-133",
+    "tags": [
+      "로드맵",
+      "계단",
+      "상승",
+      "성장",
+      "단계별",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 2,
+      "family": "staircase"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "ascending",
+      "palette_offset": 2,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-name",
+      "focus-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "성장 로드맵",
+      "단계별 발전",
+      "중장기 계획"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-134",
+    "category": "TML",
+    "name": "Now/Next/Later 로드맵 (4구간)",
+    "file": "decks/05_timeline/TML_bulk_horizon_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:TML-134",
+    "tags": [
+      "로드맵",
+      "우선순위",
+      "Now-Next-Later",
+      "호라이즌",
+      "제품로드맵",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 2,
+      "family": "horizon"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "horizontal",
+      "palette_offset": 2,
+      "unit": "구간"
+    },
+    "editable": [
+      "col-label",
+      "card-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "우선순위 로드맵",
+      "제품 로드맵",
+      "추진 방향"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-135",
+    "category": "TML",
+    "name": "플래그 마일스톤 (4깃발)",
+    "file": "decks/05_timeline/TML_bulk_flag_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:TML-135",
+    "tags": [
+      "타임라인",
+      "마일스톤",
+      "깃발",
+      "플래그",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 2,
+      "family": "flag"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "horizontal",
+      "palette_offset": 2,
+      "unit": "깃발"
+    },
+    "editable": [
+      "when-label",
+      "flag-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "핵심 이벤트"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-136",
+    "category": "TML",
+    "name": "3트랙 로드맵 (4페이즈)",
+    "file": "decks/05_timeline/TML_bulk_track3_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:TML-136",
+    "tags": [
+      "로드맵",
+      "3트랙",
+      "병렬트랙",
+      "페이즈",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 2,
+      "family": "track3"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "horizontal",
+      "palette_offset": 2,
+      "unit": "페이즈"
+    },
+    "editable": [
+      "track-name",
+      "phase-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "병렬 트랙 로드맵",
+      "다영역 계획",
+      "추진일정"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-137",
+    "category": "TML",
+    "name": "수평 타임라인 (5마일스톤)",
+    "file": "decks/05_timeline/TML_bulk_htimeline_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:TML-137",
+    "tags": [
+      "타임라인",
+      "수평",
+      "마일스톤",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 2,
+      "family": "htimeline"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "horizontal",
+      "palette_offset": 2,
+      "unit": "마일스톤"
+    },
+    "editable": [
+      "when-label",
+      "node-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "연혁"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-138",
+    "category": "TML",
+    "name": "마일스톤 카드 로우 (5카드)",
+    "file": "decks/05_timeline/TML_bulk_mcardrow_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:TML-138",
+    "tags": [
+      "타임라인",
+      "마일스톤",
+      "카드",
+      "점연결",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 2,
+      "family": "mcardrow"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "horizontal",
+      "palette_offset": 2,
+      "unit": "카드"
+    },
+    "editable": [
+      "when-label",
+      "card-head",
+      "card-desc",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-139",
+    "category": "TML",
+    "name": "간트 (도형막대) (5트랙)",
+    "file": "decks/05_timeline/TML_bulk_gantt_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:TML-139",
+    "tags": [
+      "타임라인",
+      "간트",
+      "다중트랙",
+      "막대",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 2,
+      "family": "gantt"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "horizontal",
+      "palette_offset": 2,
+      "unit": "트랙"
+    },
+    "editable": [
+      "track-name",
+      "bar-text",
+      "bar-length",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "병행 작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-140",
+    "category": "TML",
+    "name": "단계 셰브론 로드맵 (5단계)",
+    "file": "decks/05_timeline/TML_bulk_stagechevron_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:TML-140",
+    "tags": [
+      "로드맵",
+      "단계별",
+      "셰브론",
+      "산출물",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 2,
+      "family": "stagechevron"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "horizontal",
+      "palette_offset": 2,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-name",
+      "deliverable-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계별 계획",
+      "산출물 매핑",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-141",
+    "category": "TML",
+    "name": "분기 그리드 (5활동군)",
+    "file": "decks/05_timeline/TML_bulk_qgrid_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:TML-141",
+    "tags": [
+      "로드맵",
+      "분기별",
+      "그리드",
+      "활동군",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 2,
+      "family": "qgrid"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "grid",
+      "palette_offset": 2,
+      "unit": "활동군"
+    },
+    "editable": [
+      "cat-name",
+      "cell-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분기 계획",
+      "활동 매핑",
+      "추진일정"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-142",
+    "category": "TML",
+    "name": "세로 타임라인 (5이벤트)",
+    "file": "decks/05_timeline/TML_bulk_vtimeline_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:TML-142",
+    "tags": [
+      "타임라인",
+      "세로",
+      "시간축",
+      "이벤트카드",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 2,
+      "family": "vtimeline"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "vertical",
+      "palette_offset": 2,
+      "unit": "이벤트"
+    },
+    "editable": [
+      "when-label",
+      "event-head",
+      "event-desc",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "단계별 계획",
+      "연혁"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-143",
+    "category": "TML",
+    "name": "원형 연차 로드맵 (5단계)",
+    "file": "decks/05_timeline/TML_bulk_circular_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:TML-143",
+    "tags": [
+      "로드맵",
+      "원형",
+      "연차별",
+      "허브",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 2,
+      "family": "circular"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "radial",
+      "palette_offset": 2,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-label",
+      "focus-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "중장기 계획",
+      "연차 로드맵",
+      "발전 방향"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-144",
+    "category": "TML",
+    "name": "스윔레인 타임라인 (5레인)",
+    "file": "decks/05_timeline/TML_bulk_swimlane_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:TML-144",
+    "tags": [
+      "타임라인",
+      "스윔레인",
+      "레인",
+      "기간막대",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 2,
+      "family": "swimlane"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "horizontal",
+      "palette_offset": 2,
+      "unit": "레인"
+    },
+    "editable": [
+      "lane-name",
+      "bar-text",
+      "bar-length",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "병행 작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-145",
+    "category": "TML",
+    "name": "계단 상승 로드맵 (5단계)",
+    "file": "decks/05_timeline/TML_bulk_staircase_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:TML-145",
+    "tags": [
+      "로드맵",
+      "계단",
+      "상승",
+      "성장",
+      "단계별",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 2,
+      "family": "staircase"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "ascending",
+      "palette_offset": 2,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-name",
+      "focus-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "성장 로드맵",
+      "단계별 발전",
+      "중장기 계획"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-146",
+    "category": "TML",
+    "name": "Now/Next/Later 로드맵 (5구간)",
+    "file": "decks/05_timeline/TML_bulk_horizon_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:TML-146",
+    "tags": [
+      "로드맵",
+      "우선순위",
+      "Now-Next-Later",
+      "호라이즌",
+      "제품로드맵",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 2,
+      "family": "horizon"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "horizontal",
+      "palette_offset": 2,
+      "unit": "구간"
+    },
+    "editable": [
+      "col-label",
+      "card-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "우선순위 로드맵",
+      "제품 로드맵",
+      "추진 방향"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-147",
+    "category": "TML",
+    "name": "플래그 마일스톤 (5깃발)",
+    "file": "decks/05_timeline/TML_bulk_flag_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:TML-147",
+    "tags": [
+      "타임라인",
+      "마일스톤",
+      "깃발",
+      "플래그",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 2,
+      "family": "flag"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "horizontal",
+      "palette_offset": 2,
+      "unit": "깃발"
+    },
+    "editable": [
+      "when-label",
+      "flag-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "핵심 이벤트"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-148",
+    "category": "TML",
+    "name": "3트랙 로드맵 (5페이즈)",
+    "file": "decks/05_timeline/TML_bulk_track3_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:TML-148",
+    "tags": [
+      "로드맵",
+      "3트랙",
+      "병렬트랙",
+      "페이즈",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 2,
+      "family": "track3"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "horizontal",
+      "palette_offset": 2,
+      "unit": "페이즈"
+    },
+    "editable": [
+      "track-name",
+      "phase-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "병렬 트랙 로드맵",
+      "다영역 계획",
+      "추진일정"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-149",
+    "category": "TML",
+    "name": "수평 타임라인 (6마일스톤)",
+    "file": "decks/05_timeline/TML_bulk_htimeline_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:TML-149",
+    "tags": [
+      "타임라인",
+      "수평",
+      "마일스톤",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 2,
+      "family": "htimeline"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "horizontal",
+      "palette_offset": 2,
+      "unit": "마일스톤"
+    },
+    "editable": [
+      "when-label",
+      "node-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "연혁"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-150",
+    "category": "TML",
+    "name": "마일스톤 카드 로우 (6카드)",
+    "file": "decks/05_timeline/TML_bulk_mcardrow_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:TML-150",
+    "tags": [
+      "타임라인",
+      "마일스톤",
+      "카드",
+      "점연결",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 2,
+      "family": "mcardrow"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "horizontal",
+      "palette_offset": 2,
+      "unit": "카드"
+    },
+    "editable": [
+      "when-label",
+      "card-head",
+      "card-desc",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-151",
+    "category": "TML",
+    "name": "간트 (도형막대) (6트랙)",
+    "file": "decks/05_timeline/TML_bulk_gantt_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:TML-151",
+    "tags": [
+      "타임라인",
+      "간트",
+      "다중트랙",
+      "막대",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 2,
+      "family": "gantt"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "horizontal",
+      "palette_offset": 2,
+      "unit": "트랙"
+    },
+    "editable": [
+      "track-name",
+      "bar-text",
+      "bar-length",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "병행 작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-152",
+    "category": "TML",
+    "name": "단계 셰브론 로드맵 (6단계)",
+    "file": "decks/05_timeline/TML_bulk_stagechevron_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:TML-152",
+    "tags": [
+      "로드맵",
+      "단계별",
+      "셰브론",
+      "산출물",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 2,
+      "family": "stagechevron"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "horizontal",
+      "palette_offset": 2,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-name",
+      "deliverable-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계별 계획",
+      "산출물 매핑",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-153",
+    "category": "TML",
+    "name": "분기 그리드 (6활동군)",
+    "file": "decks/05_timeline/TML_bulk_qgrid_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:TML-153",
+    "tags": [
+      "로드맵",
+      "분기별",
+      "그리드",
+      "활동군",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 2,
+      "family": "qgrid"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "grid",
+      "palette_offset": 2,
+      "unit": "활동군"
+    },
+    "editable": [
+      "cat-name",
+      "cell-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분기 계획",
+      "활동 매핑",
+      "추진일정"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-154",
+    "category": "TML",
+    "name": "세로 타임라인 (6이벤트)",
+    "file": "decks/05_timeline/TML_bulk_vtimeline_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:TML-154",
+    "tags": [
+      "타임라인",
+      "세로",
+      "시간축",
+      "이벤트카드",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 2,
+      "family": "vtimeline"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "vertical",
+      "palette_offset": 2,
+      "unit": "이벤트"
+    },
+    "editable": [
+      "when-label",
+      "event-head",
+      "event-desc",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "단계별 계획",
+      "연혁"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-155",
+    "category": "TML",
+    "name": "원형 연차 로드맵 (6단계)",
+    "file": "decks/05_timeline/TML_bulk_circular_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:TML-155",
+    "tags": [
+      "로드맵",
+      "원형",
+      "연차별",
+      "허브",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 2,
+      "family": "circular"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "radial",
+      "palette_offset": 2,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-label",
+      "focus-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "중장기 계획",
+      "연차 로드맵",
+      "발전 방향"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-156",
+    "category": "TML",
+    "name": "스윔레인 타임라인 (6레인)",
+    "file": "decks/05_timeline/TML_bulk_swimlane_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:TML-156",
+    "tags": [
+      "타임라인",
+      "스윔레인",
+      "레인",
+      "기간막대",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 2,
+      "family": "swimlane"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "horizontal",
+      "palette_offset": 2,
+      "unit": "레인"
+    },
+    "editable": [
+      "lane-name",
+      "bar-text",
+      "bar-length",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "병행 작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-157",
+    "category": "TML",
+    "name": "계단 상승 로드맵 (6단계)",
+    "file": "decks/05_timeline/TML_bulk_staircase_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:TML-157",
+    "tags": [
+      "로드맵",
+      "계단",
+      "상승",
+      "성장",
+      "단계별",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 2,
+      "family": "staircase"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "ascending",
+      "palette_offset": 2,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-name",
+      "focus-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "성장 로드맵",
+      "단계별 발전",
+      "중장기 계획"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-158",
+    "category": "TML",
+    "name": "Now/Next/Later 로드맵 (6구간)",
+    "file": "decks/05_timeline/TML_bulk_horizon_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:TML-158",
+    "tags": [
+      "로드맵",
+      "우선순위",
+      "Now-Next-Later",
+      "호라이즌",
+      "제품로드맵",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 2,
+      "family": "horizon"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "horizontal",
+      "palette_offset": 2,
+      "unit": "구간"
+    },
+    "editable": [
+      "col-label",
+      "card-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "우선순위 로드맵",
+      "제품 로드맵",
+      "추진 방향"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-159",
+    "category": "TML",
+    "name": "플래그 마일스톤 (6깃발)",
+    "file": "decks/05_timeline/TML_bulk_flag_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:TML-159",
+    "tags": [
+      "타임라인",
+      "마일스톤",
+      "깃발",
+      "플래그",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 2,
+      "family": "flag"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "horizontal",
+      "palette_offset": 2,
+      "unit": "깃발"
+    },
+    "editable": [
+      "when-label",
+      "flag-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "핵심 이벤트"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-160",
+    "category": "TML",
+    "name": "3트랙 로드맵 (6페이즈)",
+    "file": "decks/05_timeline/TML_bulk_track3_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:TML-160",
+    "tags": [
+      "로드맵",
+      "3트랙",
+      "병렬트랙",
+      "페이즈",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 2,
+      "family": "track3"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "horizontal",
+      "palette_offset": 2,
+      "unit": "페이즈"
+    },
+    "editable": [
+      "track-name",
+      "phase-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "병렬 트랙 로드맵",
+      "다영역 계획",
+      "추진일정"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-161",
+    "category": "TML",
+    "name": "수평 타임라인 (3마일스톤)",
+    "file": "decks/05_timeline/TML_bulk_htimeline_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:TML-161",
+    "tags": [
+      "타임라인",
+      "수평",
+      "마일스톤",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 3,
+      "family": "htimeline"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "horizontal",
+      "palette_offset": 3,
+      "unit": "마일스톤"
+    },
+    "editable": [
+      "when-label",
+      "node-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "연혁"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-162",
+    "category": "TML",
+    "name": "마일스톤 카드 로우 (3카드)",
+    "file": "decks/05_timeline/TML_bulk_mcardrow_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:TML-162",
+    "tags": [
+      "타임라인",
+      "마일스톤",
+      "카드",
+      "점연결",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 3,
+      "family": "mcardrow"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "horizontal",
+      "palette_offset": 3,
+      "unit": "카드"
+    },
+    "editable": [
+      "when-label",
+      "card-head",
+      "card-desc",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-163",
+    "category": "TML",
+    "name": "간트 (도형막대) (3트랙)",
+    "file": "decks/05_timeline/TML_bulk_gantt_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:TML-163",
+    "tags": [
+      "타임라인",
+      "간트",
+      "다중트랙",
+      "막대",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 3,
+      "family": "gantt"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "horizontal",
+      "palette_offset": 3,
+      "unit": "트랙"
+    },
+    "editable": [
+      "track-name",
+      "bar-text",
+      "bar-length",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "병행 작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-164",
+    "category": "TML",
+    "name": "단계 셰브론 로드맵 (3단계)",
+    "file": "decks/05_timeline/TML_bulk_stagechevron_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:TML-164",
+    "tags": [
+      "로드맵",
+      "단계별",
+      "셰브론",
+      "산출물",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 3,
+      "family": "stagechevron"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "horizontal",
+      "palette_offset": 3,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-name",
+      "deliverable-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계별 계획",
+      "산출물 매핑",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-165",
+    "category": "TML",
+    "name": "분기 그리드 (3활동군)",
+    "file": "decks/05_timeline/TML_bulk_qgrid_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:TML-165",
+    "tags": [
+      "로드맵",
+      "분기별",
+      "그리드",
+      "활동군",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 3,
+      "family": "qgrid"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "grid",
+      "palette_offset": 3,
+      "unit": "활동군"
+    },
+    "editable": [
+      "cat-name",
+      "cell-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분기 계획",
+      "활동 매핑",
+      "추진일정"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-166",
+    "category": "TML",
+    "name": "세로 타임라인 (3이벤트)",
+    "file": "decks/05_timeline/TML_bulk_vtimeline_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:TML-166",
+    "tags": [
+      "타임라인",
+      "세로",
+      "시간축",
+      "이벤트카드",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 3,
+      "family": "vtimeline"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "vertical",
+      "palette_offset": 3,
+      "unit": "이벤트"
+    },
+    "editable": [
+      "when-label",
+      "event-head",
+      "event-desc",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "단계별 계획",
+      "연혁"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-167",
+    "category": "TML",
+    "name": "원형 연차 로드맵 (3단계)",
+    "file": "decks/05_timeline/TML_bulk_circular_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:TML-167",
+    "tags": [
+      "로드맵",
+      "원형",
+      "연차별",
+      "허브",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 3,
+      "family": "circular"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "radial",
+      "palette_offset": 3,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-label",
+      "focus-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "중장기 계획",
+      "연차 로드맵",
+      "발전 방향"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-168",
+    "category": "TML",
+    "name": "스윔레인 타임라인 (3레인)",
+    "file": "decks/05_timeline/TML_bulk_swimlane_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:TML-168",
+    "tags": [
+      "타임라인",
+      "스윔레인",
+      "레인",
+      "기간막대",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 3,
+      "family": "swimlane"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "horizontal",
+      "palette_offset": 3,
+      "unit": "레인"
+    },
+    "editable": [
+      "lane-name",
+      "bar-text",
+      "bar-length",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "병행 작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-169",
+    "category": "TML",
+    "name": "계단 상승 로드맵 (3단계)",
+    "file": "decks/05_timeline/TML_bulk_staircase_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:TML-169",
+    "tags": [
+      "로드맵",
+      "계단",
+      "상승",
+      "성장",
+      "단계별",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 3,
+      "family": "staircase"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "ascending",
+      "palette_offset": 3,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-name",
+      "focus-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "성장 로드맵",
+      "단계별 발전",
+      "중장기 계획"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-170",
+    "category": "TML",
+    "name": "Now/Next/Later 로드맵 (3구간)",
+    "file": "decks/05_timeline/TML_bulk_horizon_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:TML-170",
+    "tags": [
+      "로드맵",
+      "우선순위",
+      "Now-Next-Later",
+      "호라이즌",
+      "제품로드맵",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 3,
+      "family": "horizon"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "horizontal",
+      "palette_offset": 3,
+      "unit": "구간"
+    },
+    "editable": [
+      "col-label",
+      "card-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "우선순위 로드맵",
+      "제품 로드맵",
+      "추진 방향"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-171",
+    "category": "TML",
+    "name": "플래그 마일스톤 (3깃발)",
+    "file": "decks/05_timeline/TML_bulk_flag_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:TML-171",
+    "tags": [
+      "타임라인",
+      "마일스톤",
+      "깃발",
+      "플래그",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 3,
+      "family": "flag"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "horizontal",
+      "palette_offset": 3,
+      "unit": "깃발"
+    },
+    "editable": [
+      "when-label",
+      "flag-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "핵심 이벤트"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-172",
+    "category": "TML",
+    "name": "3트랙 로드맵 (3페이즈)",
+    "file": "decks/05_timeline/TML_bulk_track3_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:TML-172",
+    "tags": [
+      "로드맵",
+      "3트랙",
+      "병렬트랙",
+      "페이즈",
+      "추진일정",
+      "노드3"
+    ],
+    "params": {
+      "nodes": 3,
+      "color_offset": 3,
+      "family": "track3"
+    },
+    "bindings": {
+      "count": 3,
+      "orientation": "horizontal",
+      "palette_offset": 3,
+      "unit": "페이즈"
+    },
+    "editable": [
+      "track-name",
+      "phase-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "병렬 트랙 로드맵",
+      "다영역 계획",
+      "추진일정"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-173",
+    "category": "TML",
+    "name": "수평 타임라인 (4마일스톤)",
+    "file": "decks/05_timeline/TML_bulk_htimeline_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:TML-173",
+    "tags": [
+      "타임라인",
+      "수평",
+      "마일스톤",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 3,
+      "family": "htimeline"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "horizontal",
+      "palette_offset": 3,
+      "unit": "마일스톤"
+    },
+    "editable": [
+      "when-label",
+      "node-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "연혁"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-174",
+    "category": "TML",
+    "name": "마일스톤 카드 로우 (4카드)",
+    "file": "decks/05_timeline/TML_bulk_mcardrow_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:TML-174",
+    "tags": [
+      "타임라인",
+      "마일스톤",
+      "카드",
+      "점연결",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 3,
+      "family": "mcardrow"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "horizontal",
+      "palette_offset": 3,
+      "unit": "카드"
+    },
+    "editable": [
+      "when-label",
+      "card-head",
+      "card-desc",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-175",
+    "category": "TML",
+    "name": "간트 (도형막대) (4트랙)",
+    "file": "decks/05_timeline/TML_bulk_gantt_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:TML-175",
+    "tags": [
+      "타임라인",
+      "간트",
+      "다중트랙",
+      "막대",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 3,
+      "family": "gantt"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "horizontal",
+      "palette_offset": 3,
+      "unit": "트랙"
+    },
+    "editable": [
+      "track-name",
+      "bar-text",
+      "bar-length",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "병행 작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-176",
+    "category": "TML",
+    "name": "단계 셰브론 로드맵 (4단계)",
+    "file": "decks/05_timeline/TML_bulk_stagechevron_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:TML-176",
+    "tags": [
+      "로드맵",
+      "단계별",
+      "셰브론",
+      "산출물",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 3,
+      "family": "stagechevron"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "horizontal",
+      "palette_offset": 3,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-name",
+      "deliverable-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계별 계획",
+      "산출물 매핑",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-177",
+    "category": "TML",
+    "name": "분기 그리드 (4활동군)",
+    "file": "decks/05_timeline/TML_bulk_qgrid_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:TML-177",
+    "tags": [
+      "로드맵",
+      "분기별",
+      "그리드",
+      "활동군",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 3,
+      "family": "qgrid"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "grid",
+      "palette_offset": 3,
+      "unit": "활동군"
+    },
+    "editable": [
+      "cat-name",
+      "cell-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분기 계획",
+      "활동 매핑",
+      "추진일정"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-178",
+    "category": "TML",
+    "name": "세로 타임라인 (4이벤트)",
+    "file": "decks/05_timeline/TML_bulk_vtimeline_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:TML-178",
+    "tags": [
+      "타임라인",
+      "세로",
+      "시간축",
+      "이벤트카드",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 3,
+      "family": "vtimeline"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "vertical",
+      "palette_offset": 3,
+      "unit": "이벤트"
+    },
+    "editable": [
+      "when-label",
+      "event-head",
+      "event-desc",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "단계별 계획",
+      "연혁"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-179",
+    "category": "TML",
+    "name": "원형 연차 로드맵 (4단계)",
+    "file": "decks/05_timeline/TML_bulk_circular_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:TML-179",
+    "tags": [
+      "로드맵",
+      "원형",
+      "연차별",
+      "허브",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 3,
+      "family": "circular"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "radial",
+      "palette_offset": 3,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-label",
+      "focus-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "중장기 계획",
+      "연차 로드맵",
+      "발전 방향"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-180",
+    "category": "TML",
+    "name": "스윔레인 타임라인 (4레인)",
+    "file": "decks/05_timeline/TML_bulk_swimlane_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:TML-180",
+    "tags": [
+      "타임라인",
+      "스윔레인",
+      "레인",
+      "기간막대",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 3,
+      "family": "swimlane"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "horizontal",
+      "palette_offset": 3,
+      "unit": "레인"
+    },
+    "editable": [
+      "lane-name",
+      "bar-text",
+      "bar-length",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "병행 작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-181",
+    "category": "TML",
+    "name": "계단 상승 로드맵 (4단계)",
+    "file": "decks/05_timeline/TML_bulk_staircase_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:TML-181",
+    "tags": [
+      "로드맵",
+      "계단",
+      "상승",
+      "성장",
+      "단계별",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 3,
+      "family": "staircase"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "ascending",
+      "palette_offset": 3,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-name",
+      "focus-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "성장 로드맵",
+      "단계별 발전",
+      "중장기 계획"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-182",
+    "category": "TML",
+    "name": "Now/Next/Later 로드맵 (4구간)",
+    "file": "decks/05_timeline/TML_bulk_horizon_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:TML-182",
+    "tags": [
+      "로드맵",
+      "우선순위",
+      "Now-Next-Later",
+      "호라이즌",
+      "제품로드맵",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 3,
+      "family": "horizon"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "horizontal",
+      "palette_offset": 3,
+      "unit": "구간"
+    },
+    "editable": [
+      "col-label",
+      "card-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "우선순위 로드맵",
+      "제품 로드맵",
+      "추진 방향"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-183",
+    "category": "TML",
+    "name": "플래그 마일스톤 (4깃발)",
+    "file": "decks/05_timeline/TML_bulk_flag_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:TML-183",
+    "tags": [
+      "타임라인",
+      "마일스톤",
+      "깃발",
+      "플래그",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 3,
+      "family": "flag"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "horizontal",
+      "palette_offset": 3,
+      "unit": "깃발"
+    },
+    "editable": [
+      "when-label",
+      "flag-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "핵심 이벤트"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-184",
+    "category": "TML",
+    "name": "3트랙 로드맵 (4페이즈)",
+    "file": "decks/05_timeline/TML_bulk_track3_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:TML-184",
+    "tags": [
+      "로드맵",
+      "3트랙",
+      "병렬트랙",
+      "페이즈",
+      "추진일정",
+      "노드4"
+    ],
+    "params": {
+      "nodes": 4,
+      "color_offset": 3,
+      "family": "track3"
+    },
+    "bindings": {
+      "count": 4,
+      "orientation": "horizontal",
+      "palette_offset": 3,
+      "unit": "페이즈"
+    },
+    "editable": [
+      "track-name",
+      "phase-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "병렬 트랙 로드맵",
+      "다영역 계획",
+      "추진일정"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-185",
+    "category": "TML",
+    "name": "수평 타임라인 (5마일스톤)",
+    "file": "decks/05_timeline/TML_bulk_htimeline_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:TML-185",
+    "tags": [
+      "타임라인",
+      "수평",
+      "마일스톤",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 3,
+      "family": "htimeline"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "horizontal",
+      "palette_offset": 3,
+      "unit": "마일스톤"
+    },
+    "editable": [
+      "when-label",
+      "node-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "연혁"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-186",
+    "category": "TML",
+    "name": "마일스톤 카드 로우 (5카드)",
+    "file": "decks/05_timeline/TML_bulk_mcardrow_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:TML-186",
+    "tags": [
+      "타임라인",
+      "마일스톤",
+      "카드",
+      "점연결",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 3,
+      "family": "mcardrow"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "horizontal",
+      "palette_offset": 3,
+      "unit": "카드"
+    },
+    "editable": [
+      "when-label",
+      "card-head",
+      "card-desc",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-187",
+    "category": "TML",
+    "name": "간트 (도형막대) (5트랙)",
+    "file": "decks/05_timeline/TML_bulk_gantt_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:TML-187",
+    "tags": [
+      "타임라인",
+      "간트",
+      "다중트랙",
+      "막대",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 3,
+      "family": "gantt"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "horizontal",
+      "palette_offset": 3,
+      "unit": "트랙"
+    },
+    "editable": [
+      "track-name",
+      "bar-text",
+      "bar-length",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "병행 작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-188",
+    "category": "TML",
+    "name": "단계 셰브론 로드맵 (5단계)",
+    "file": "decks/05_timeline/TML_bulk_stagechevron_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:TML-188",
+    "tags": [
+      "로드맵",
+      "단계별",
+      "셰브론",
+      "산출물",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 3,
+      "family": "stagechevron"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "horizontal",
+      "palette_offset": 3,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-name",
+      "deliverable-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계별 계획",
+      "산출물 매핑",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-189",
+    "category": "TML",
+    "name": "분기 그리드 (5활동군)",
+    "file": "decks/05_timeline/TML_bulk_qgrid_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:TML-189",
+    "tags": [
+      "로드맵",
+      "분기별",
+      "그리드",
+      "활동군",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 3,
+      "family": "qgrid"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "grid",
+      "palette_offset": 3,
+      "unit": "활동군"
+    },
+    "editable": [
+      "cat-name",
+      "cell-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분기 계획",
+      "활동 매핑",
+      "추진일정"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-190",
+    "category": "TML",
+    "name": "세로 타임라인 (5이벤트)",
+    "file": "decks/05_timeline/TML_bulk_vtimeline_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:TML-190",
+    "tags": [
+      "타임라인",
+      "세로",
+      "시간축",
+      "이벤트카드",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 3,
+      "family": "vtimeline"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "vertical",
+      "palette_offset": 3,
+      "unit": "이벤트"
+    },
+    "editable": [
+      "when-label",
+      "event-head",
+      "event-desc",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "단계별 계획",
+      "연혁"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-191",
+    "category": "TML",
+    "name": "원형 연차 로드맵 (5단계)",
+    "file": "decks/05_timeline/TML_bulk_circular_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:TML-191",
+    "tags": [
+      "로드맵",
+      "원형",
+      "연차별",
+      "허브",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 3,
+      "family": "circular"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "radial",
+      "palette_offset": 3,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-label",
+      "focus-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "중장기 계획",
+      "연차 로드맵",
+      "발전 방향"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-192",
+    "category": "TML",
+    "name": "스윔레인 타임라인 (5레인)",
+    "file": "decks/05_timeline/TML_bulk_swimlane_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:TML-192",
+    "tags": [
+      "타임라인",
+      "스윔레인",
+      "레인",
+      "기간막대",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 3,
+      "family": "swimlane"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "horizontal",
+      "palette_offset": 3,
+      "unit": "레인"
+    },
+    "editable": [
+      "lane-name",
+      "bar-text",
+      "bar-length",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "병행 작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-193",
+    "category": "TML",
+    "name": "계단 상승 로드맵 (5단계)",
+    "file": "decks/05_timeline/TML_bulk_staircase_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:TML-193",
+    "tags": [
+      "로드맵",
+      "계단",
+      "상승",
+      "성장",
+      "단계별",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 3,
+      "family": "staircase"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "ascending",
+      "palette_offset": 3,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-name",
+      "focus-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "성장 로드맵",
+      "단계별 발전",
+      "중장기 계획"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-194",
+    "category": "TML",
+    "name": "Now/Next/Later 로드맵 (5구간)",
+    "file": "decks/05_timeline/TML_bulk_horizon_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:TML-194",
+    "tags": [
+      "로드맵",
+      "우선순위",
+      "Now-Next-Later",
+      "호라이즌",
+      "제품로드맵",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 3,
+      "family": "horizon"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "horizontal",
+      "palette_offset": 3,
+      "unit": "구간"
+    },
+    "editable": [
+      "col-label",
+      "card-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "우선순위 로드맵",
+      "제품 로드맵",
+      "추진 방향"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-195",
+    "category": "TML",
+    "name": "플래그 마일스톤 (5깃발)",
+    "file": "decks/05_timeline/TML_bulk_flag_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:TML-195",
+    "tags": [
+      "타임라인",
+      "마일스톤",
+      "깃발",
+      "플래그",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 3,
+      "family": "flag"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "horizontal",
+      "palette_offset": 3,
+      "unit": "깃발"
+    },
+    "editable": [
+      "when-label",
+      "flag-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "핵심 이벤트"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-196",
+    "category": "TML",
+    "name": "3트랙 로드맵 (5페이즈)",
+    "file": "decks/05_timeline/TML_bulk_track3_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:TML-196",
+    "tags": [
+      "로드맵",
+      "3트랙",
+      "병렬트랙",
+      "페이즈",
+      "추진일정",
+      "노드5"
+    ],
+    "params": {
+      "nodes": 5,
+      "color_offset": 3,
+      "family": "track3"
+    },
+    "bindings": {
+      "count": 5,
+      "orientation": "horizontal",
+      "palette_offset": 3,
+      "unit": "페이즈"
+    },
+    "editable": [
+      "track-name",
+      "phase-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "병렬 트랙 로드맵",
+      "다영역 계획",
+      "추진일정"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-197",
+    "category": "TML",
+    "name": "수평 타임라인 (6마일스톤)",
+    "file": "decks/05_timeline/TML_bulk_htimeline_v1.pptx",
+    "slide": 16,
+    "anchor": "asset:TML-197",
+    "tags": [
+      "타임라인",
+      "수평",
+      "마일스톤",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 3,
+      "family": "htimeline"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "horizontal",
+      "palette_offset": 3,
+      "unit": "마일스톤"
+    },
+    "editable": [
+      "when-label",
+      "node-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "연혁"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-198",
+    "category": "TML",
+    "name": "마일스톤 카드 로우 (6카드)",
+    "file": "decks/05_timeline/TML_bulk_mcardrow_v1.pptx",
+    "slide": 16,
+    "anchor": "asset:TML-198",
+    "tags": [
+      "타임라인",
+      "마일스톤",
+      "카드",
+      "점연결",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 3,
+      "family": "mcardrow"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "horizontal",
+      "palette_offset": 3,
+      "unit": "카드"
+    },
+    "editable": [
+      "when-label",
+      "card-head",
+      "card-desc",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "주요 마일스톤",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-199",
+    "category": "TML",
+    "name": "간트 (도형막대) (6트랙)",
+    "file": "decks/05_timeline/TML_bulk_gantt_v1.pptx",
+    "slide": 16,
+    "anchor": "asset:TML-199",
+    "tags": [
+      "타임라인",
+      "간트",
+      "다중트랙",
+      "막대",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 3,
+      "family": "gantt"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "horizontal",
+      "palette_offset": 3,
+      "unit": "트랙"
+    },
+    "editable": [
+      "track-name",
+      "bar-text",
+      "bar-length",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "병행 작업 일정",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TML-200",
+    "category": "TML",
+    "name": "단계 셰브론 로드맵 (6단계)",
+    "file": "decks/05_timeline/TML_bulk_stagechevron_v1.pptx",
+    "slide": 16,
+    "anchor": "asset:TML-200",
+    "tags": [
+      "로드맵",
+      "단계별",
+      "셰브론",
+      "산출물",
+      "추진일정",
+      "노드6"
+    ],
+    "params": {
+      "nodes": 6,
+      "color_offset": 3,
+      "family": "stagechevron"
+    },
+    "bindings": {
+      "count": 6,
+      "orientation": "horizontal",
+      "palette_offset": 3,
+      "unit": "단계"
+    },
+    "editable": [
+      "stage-name",
+      "deliverable-text",
+      "count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계별 계획",
+      "산출물 매핑",
+      "로드맵"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  }
+]

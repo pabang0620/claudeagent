@@ -1,0 +1,742 @@
+[
+  {
+    "id": "ICN-001",
+    "category": "ICN",
+    "name": "아이콘 · 문서",
+    "file": "decks/11_icons/ICN_flat-set_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ICN-001",
+    "tags": [
+      "아이콘",
+      "문서",
+      "리포트",
+      "자료",
+      "플랫",
+      "2색"
+    ],
+    "params": {
+      "glyph": "document",
+      "colors": 2
+    },
+    "bindings": {
+      "label": "문서"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-002",
+    "category": "ICN",
+    "name": "아이콘 · 막대그래프",
+    "file": "decks/11_icons/ICN_flat-set_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ICN-002",
+    "tags": [
+      "아이콘",
+      "차트",
+      "통계",
+      "실적",
+      "플랫",
+      "2색"
+    ],
+    "params": {
+      "glyph": "barchart",
+      "colors": 2
+    },
+    "bindings": {
+      "label": "막대그래프"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-003",
+    "category": "ICN",
+    "name": "아이콘 · 성장",
+    "file": "decks/11_icons/ICN_flat-set_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ICN-003",
+    "tags": [
+      "아이콘",
+      "성장",
+      "상향",
+      "증가",
+      "플랫",
+      "2색"
+    ],
+    "params": {
+      "glyph": "growth",
+      "colors": 2
+    },
+    "bindings": {
+      "label": "성장"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-004",
+    "category": "ICN",
+    "name": "아이콘 · 분석",
+    "file": "decks/11_icons/ICN_flat-set_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ICN-004",
+    "tags": [
+      "아이콘",
+      "분석",
+      "돋보기",
+      "탐색",
+      "플랫",
+      "2색"
+    ],
+    "params": {
+      "glyph": "magnifier",
+      "colors": 2
+    },
+    "bindings": {
+      "label": "분석"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-005",
+    "category": "ICN",
+    "name": "아이콘 · 검증",
+    "file": "decks/11_icons/ICN_flat-set_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ICN-005",
+    "tags": [
+      "아이콘",
+      "검증",
+      "완료",
+      "승인",
+      "플랫",
+      "2색"
+    ],
+    "params": {
+      "glyph": "checkcircle",
+      "colors": 2
+    },
+    "bindings": {
+      "label": "검증"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-006",
+    "category": "ICN",
+    "name": "아이콘 · 위치",
+    "file": "decks/11_icons/ICN_flat-set_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ICN-006",
+    "tags": [
+      "아이콘",
+      "위치",
+      "지역",
+      "현장",
+      "플랫",
+      "2색"
+    ],
+    "params": {
+      "glyph": "pin",
+      "colors": 2
+    },
+    "bindings": {
+      "label": "위치"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-007",
+    "category": "ICN",
+    "name": "아이콘 · 데이터베이스",
+    "file": "decks/11_icons/ICN_flat-set_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ICN-007",
+    "tags": [
+      "아이콘",
+      "데이터",
+      "저장",
+      "DB",
+      "플랫",
+      "2색"
+    ],
+    "params": {
+      "glyph": "database",
+      "colors": 2
+    },
+    "bindings": {
+      "label": "데이터베이스"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-008",
+    "category": "ICN",
+    "name": "아이콘 · 네트워크",
+    "file": "decks/11_icons/ICN_flat-set_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:ICN-008",
+    "tags": [
+      "아이콘",
+      "연계",
+      "네트워크",
+      "협력",
+      "플랫",
+      "2색"
+    ],
+    "params": {
+      "glyph": "network",
+      "colors": 2
+    },
+    "bindings": {
+      "label": "네트워크"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-009",
+    "category": "ICN",
+    "name": "아이콘 · 보안",
+    "file": "decks/11_icons/ICN_flat-set_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ICN-009",
+    "tags": [
+      "아이콘",
+      "보안",
+      "보호",
+      "안전",
+      "플랫",
+      "2색"
+    ],
+    "params": {
+      "glyph": "shield",
+      "colors": 2
+    },
+    "bindings": {
+      "label": "보안"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-010",
+    "category": "ICN",
+    "name": "아이콘 · 목표",
+    "file": "decks/11_icons/ICN_flat-set_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ICN-010",
+    "tags": [
+      "아이콘",
+      "목표",
+      "타깃",
+      "정확도",
+      "플랫",
+      "2색"
+    ],
+    "params": {
+      "glyph": "target",
+      "colors": 2
+    },
+    "bindings": {
+      "label": "목표"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-011",
+    "category": "ICN",
+    "name": "아이콘 · 모니터",
+    "file": "decks/11_icons/ICN_flat-set_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ICN-011",
+    "tags": [
+      "아이콘",
+      "시스템",
+      "화면",
+      "플랫폼",
+      "플랫",
+      "2색"
+    ],
+    "params": {
+      "glyph": "monitor",
+      "colors": 2
+    },
+    "bindings": {
+      "label": "모니터"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-012",
+    "category": "ICN",
+    "name": "아이콘 · 모바일",
+    "file": "decks/11_icons/ICN_flat-set_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ICN-012",
+    "tags": [
+      "아이콘",
+      "모바일",
+      "앱",
+      "서비스",
+      "플랫",
+      "2색"
+    ],
+    "params": {
+      "glyph": "mobile",
+      "colors": 2
+    },
+    "bindings": {
+      "label": "모바일"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-013",
+    "category": "ICN",
+    "name": "아이콘 · 메일",
+    "file": "decks/11_icons/ICN_flat-set_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ICN-013",
+    "tags": [
+      "아이콘",
+      "메일",
+      "소통",
+      "안내",
+      "플랫",
+      "2색"
+    ],
+    "params": {
+      "glyph": "mail",
+      "colors": 2
+    },
+    "bindings": {
+      "label": "메일"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-014",
+    "category": "ICN",
+    "name": "아이콘 · 일정",
+    "file": "decks/11_icons/ICN_flat-set_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ICN-014",
+    "tags": [
+      "아이콘",
+      "일정",
+      "달력",
+      "기간",
+      "플랫",
+      "2색"
+    ],
+    "params": {
+      "glyph": "calendar",
+      "colors": 2
+    },
+    "bindings": {
+      "label": "일정"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-015",
+    "category": "ICN",
+    "name": "아이콘 · 목표지점",
+    "file": "decks/11_icons/ICN_flat-set_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ICN-015",
+    "tags": [
+      "아이콘",
+      "마일스톤",
+      "깃발",
+      "달성",
+      "플랫",
+      "2색"
+    ],
+    "params": {
+      "glyph": "flag",
+      "colors": 2
+    },
+    "bindings": {
+      "label": "목표지점"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-016",
+    "category": "ICN",
+    "name": "아이콘 · 아이디어",
+    "file": "decks/11_icons/ICN_flat-set_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:ICN-016",
+    "tags": [
+      "아이콘",
+      "아이디어",
+      "혁신",
+      "기획",
+      "플랫",
+      "2색"
+    ],
+    "params": {
+      "glyph": "bulb",
+      "colors": 2
+    },
+    "bindings": {
+      "label": "아이디어"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-017",
+    "category": "ICN",
+    "name": "아이콘 · 시간",
+    "file": "decks/11_icons/ICN_flat-set_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:ICN-017",
+    "tags": [
+      "아이콘",
+      "시간",
+      "효율",
+      "신속",
+      "플랫",
+      "2색"
+    ],
+    "params": {
+      "glyph": "clock",
+      "colors": 2
+    },
+    "bindings": {
+      "label": "시간"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-018",
+    "category": "ICN",
+    "name": "아이콘 · 설정",
+    "file": "decks/11_icons/ICN_flat-set_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:ICN-018",
+    "tags": [
+      "아이콘",
+      "설정",
+      "운영",
+      "관리",
+      "플랫",
+      "2색"
+    ],
+    "params": {
+      "glyph": "gear",
+      "colors": 2
+    },
+    "bindings": {
+      "label": "설정"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-019",
+    "category": "ICN",
+    "name": "아이콘 · 클라우드",
+    "file": "decks/11_icons/ICN_flat-set_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:ICN-019",
+    "tags": [
+      "아이콘",
+      "클라우드",
+      "업로드",
+      "인프라",
+      "플랫",
+      "2색"
+    ],
+    "params": {
+      "glyph": "cloud",
+      "colors": 2
+    },
+    "bindings": {
+      "label": "클라우드"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ICN-020",
+    "category": "ICN",
+    "name": "아이콘 · 연결",
+    "file": "decks/11_icons/ICN_flat-set_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:ICN-020",
+    "tags": [
+      "아이콘",
+      "연계",
+      "링크",
+      "통합",
+      "플랫",
+      "2색"
+    ],
+    "params": {
+      "glyph": "link",
+      "colors": 2
+    },
+    "bindings": {
+      "label": "연결"
+    },
+    "editable": [
+      "color",
+      "label",
+      "size"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목 아이콘",
+      "불릿 강조",
+      "섹션 상징"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  }
+]

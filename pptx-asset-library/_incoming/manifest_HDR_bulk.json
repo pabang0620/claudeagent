@@ -1,0 +1,6564 @@
+[
+  {
+    "id": "HDR-025",
+    "category": "HDR",
+    "name": "섹션 번호 pill · 사업추진 전략 (네이비)",
+    "file": "decks/09_headers/HDR_bulk_section-pill_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-025",
+    "tags": [
+      "섹션헤더",
+      "pill",
+      "네이비"
+    ],
+    "params": {
+      "fill": "navy_800",
+      "w_in": 4.6,
+      "h_in": 0.6
+    },
+    "bindings": {
+      "number": "1",
+      "title": "사업추진 전략"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분",
+      "목차 헤더"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-026",
+    "category": "HDR",
+    "name": "섹션 번호 pill · 사업추진 전략 (블루)",
+    "file": "decks/09_headers/HDR_bulk_section-pill_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-026",
+    "tags": [
+      "섹션헤더",
+      "pill",
+      "블루"
+    ],
+    "params": {
+      "fill": "blue_500",
+      "w_in": 4.6,
+      "h_in": 0.6
+    },
+    "bindings": {
+      "number": "1",
+      "title": "사업추진 전략"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분",
+      "목차 헤더"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-027",
+    "category": "HDR",
+    "name": "섹션 번호 pill · 사업추진 전략 (틸)",
+    "file": "decks/09_headers/HDR_bulk_section-pill_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-027",
+    "tags": [
+      "섹션헤더",
+      "pill",
+      "틸"
+    ],
+    "params": {
+      "fill": "teal_500",
+      "w_in": 4.6,
+      "h_in": 0.6
+    },
+    "bindings": {
+      "number": "1",
+      "title": "사업추진 전략"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분",
+      "목차 헤더"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-028",
+    "category": "HDR",
+    "name": "섹션 번호 pill · 사업추진 전략 (퍼플)",
+    "file": "decks/09_headers/HDR_bulk_section-pill_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-028",
+    "tags": [
+      "섹션헤더",
+      "pill",
+      "퍼플"
+    ],
+    "params": {
+      "fill": "purple_600",
+      "w_in": 4.6,
+      "h_in": 0.6
+    },
+    "bindings": {
+      "number": "1",
+      "title": "사업추진 전략"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분",
+      "목차 헤더"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-029",
+    "category": "HDR",
+    "name": "섹션 번호 pill · 사업추진 전략 (시안)",
+    "file": "decks/09_headers/HDR_bulk_section-pill_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-029",
+    "tags": [
+      "섹션헤더",
+      "pill",
+      "시안"
+    ],
+    "params": {
+      "fill": "cyan_500",
+      "w_in": 4.6,
+      "h_in": 0.6
+    },
+    "bindings": {
+      "number": "1",
+      "title": "사업추진 전략"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분",
+      "목차 헤더"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-030",
+    "category": "HDR",
+    "name": "섹션 번호 pill · 사업추진 전략 (레드)",
+    "file": "decks/09_headers/HDR_bulk_section-pill_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-030",
+    "tags": [
+      "섹션헤더",
+      "pill",
+      "레드"
+    ],
+    "params": {
+      "fill": "red_500",
+      "w_in": 4.6,
+      "h_in": 0.6
+    },
+    "bindings": {
+      "number": "1",
+      "title": "사업추진 전략"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분",
+      "목차 헤더"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-031",
+    "category": "HDR",
+    "name": "섹션 번호 pill · 추진 체계 (네이비)",
+    "file": "decks/09_headers/HDR_bulk_section-pill_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-031",
+    "tags": [
+      "섹션헤더",
+      "pill",
+      "네이비"
+    ],
+    "params": {
+      "fill": "navy_800",
+      "w_in": 4.6,
+      "h_in": 0.6
+    },
+    "bindings": {
+      "number": "2",
+      "title": "추진 체계 및 조직"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분",
+      "목차 헤더"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-032",
+    "category": "HDR",
+    "name": "섹션 번호 pill · 추진 체계 (블루)",
+    "file": "decks/09_headers/HDR_bulk_section-pill_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-032",
+    "tags": [
+      "섹션헤더",
+      "pill",
+      "블루"
+    ],
+    "params": {
+      "fill": "blue_500",
+      "w_in": 4.6,
+      "h_in": 0.6
+    },
+    "bindings": {
+      "number": "2",
+      "title": "추진 체계 및 조직"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분",
+      "목차 헤더"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-033",
+    "category": "HDR",
+    "name": "섹션 번호 pill · 추진 체계 (틸)",
+    "file": "decks/09_headers/HDR_bulk_section-pill_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-033",
+    "tags": [
+      "섹션헤더",
+      "pill",
+      "틸"
+    ],
+    "params": {
+      "fill": "teal_500",
+      "w_in": 4.6,
+      "h_in": 0.6
+    },
+    "bindings": {
+      "number": "2",
+      "title": "추진 체계 및 조직"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분",
+      "목차 헤더"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-034",
+    "category": "HDR",
+    "name": "섹션 번호 pill · 추진 체계 (퍼플)",
+    "file": "decks/09_headers/HDR_bulk_section-pill_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-034",
+    "tags": [
+      "섹션헤더",
+      "pill",
+      "퍼플"
+    ],
+    "params": {
+      "fill": "purple_600",
+      "w_in": 4.6,
+      "h_in": 0.6
+    },
+    "bindings": {
+      "number": "2",
+      "title": "추진 체계 및 조직"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분",
+      "목차 헤더"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-035",
+    "category": "HDR",
+    "name": "섹션 번호 pill · 추진 체계 (시안)",
+    "file": "decks/09_headers/HDR_bulk_section-pill_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-035",
+    "tags": [
+      "섹션헤더",
+      "pill",
+      "시안"
+    ],
+    "params": {
+      "fill": "cyan_500",
+      "w_in": 4.6,
+      "h_in": 0.6
+    },
+    "bindings": {
+      "number": "2",
+      "title": "추진 체계 및 조직"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분",
+      "목차 헤더"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-036",
+    "category": "HDR",
+    "name": "섹션 번호 pill · 추진 체계 (레드)",
+    "file": "decks/09_headers/HDR_bulk_section-pill_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-036",
+    "tags": [
+      "섹션헤더",
+      "pill",
+      "레드"
+    ],
+    "params": {
+      "fill": "red_500",
+      "w_in": 4.6,
+      "h_in": 0.6
+    },
+    "bindings": {
+      "number": "2",
+      "title": "추진 체계 및 조직"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분",
+      "목차 헤더"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-037",
+    "category": "HDR",
+    "name": "섹션 번호 pill · 기대효과 (네이비)",
+    "file": "decks/09_headers/HDR_bulk_section-pill_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:HDR-037",
+    "tags": [
+      "섹션헤더",
+      "pill",
+      "네이비"
+    ],
+    "params": {
+      "fill": "navy_800",
+      "w_in": 4.6,
+      "h_in": 0.6
+    },
+    "bindings": {
+      "number": "3",
+      "title": "기대효과 및 활용방안"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분",
+      "목차 헤더"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-038",
+    "category": "HDR",
+    "name": "섹션 번호 pill · 기대효과 (블루)",
+    "file": "decks/09_headers/HDR_bulk_section-pill_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:HDR-038",
+    "tags": [
+      "섹션헤더",
+      "pill",
+      "블루"
+    ],
+    "params": {
+      "fill": "blue_500",
+      "w_in": 4.6,
+      "h_in": 0.6
+    },
+    "bindings": {
+      "number": "3",
+      "title": "기대효과 및 활용방안"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분",
+      "목차 헤더"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-039",
+    "category": "HDR",
+    "name": "섹션 번호 pill · 기대효과 (틸)",
+    "file": "decks/09_headers/HDR_bulk_section-pill_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:HDR-039",
+    "tags": [
+      "섹션헤더",
+      "pill",
+      "틸"
+    ],
+    "params": {
+      "fill": "teal_500",
+      "w_in": 4.6,
+      "h_in": 0.6
+    },
+    "bindings": {
+      "number": "3",
+      "title": "기대효과 및 활용방안"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분",
+      "목차 헤더"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-040",
+    "category": "HDR",
+    "name": "섹션 번호 pill · 기대효과 (퍼플)",
+    "file": "decks/09_headers/HDR_bulk_section-pill_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:HDR-040",
+    "tags": [
+      "섹션헤더",
+      "pill",
+      "퍼플"
+    ],
+    "params": {
+      "fill": "purple_600",
+      "w_in": 4.6,
+      "h_in": 0.6
+    },
+    "bindings": {
+      "number": "3",
+      "title": "기대효과 및 활용방안"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분",
+      "목차 헤더"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-041",
+    "category": "HDR",
+    "name": "섹션 번호 pill · 기대효과 (시안)",
+    "file": "decks/09_headers/HDR_bulk_section-pill_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:HDR-041",
+    "tags": [
+      "섹션헤더",
+      "pill",
+      "시안"
+    ],
+    "params": {
+      "fill": "cyan_500",
+      "w_in": 4.6,
+      "h_in": 0.6
+    },
+    "bindings": {
+      "number": "3",
+      "title": "기대효과 및 활용방안"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분",
+      "목차 헤더"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-042",
+    "category": "HDR",
+    "name": "섹션 번호 pill · 기대효과 (레드)",
+    "file": "decks/09_headers/HDR_bulk_section-pill_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:HDR-042",
+    "tags": [
+      "섹션헤더",
+      "pill",
+      "레드"
+    ],
+    "params": {
+      "fill": "red_500",
+      "w_in": 4.6,
+      "h_in": 0.6
+    },
+    "bindings": {
+      "number": "3",
+      "title": "기대효과 및 활용방안"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분",
+      "목차 헤더"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-043",
+    "category": "HDR",
+    "name": "소제목 하이라이트 바 · 가. (네이비)",
+    "file": "decks/09_headers/HDR_bulk_subtitle-bar_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-043",
+    "tags": [
+      "소제목",
+      "하이라이트바",
+      "밑줄",
+      "네이비"
+    ],
+    "params": {
+      "accent": "navy_800",
+      "w_in": 4.6,
+      "h_in": 0.42
+    },
+    "bindings": {
+      "marker": "가.",
+      "title": "사업 추진 배경"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "소제목",
+      "단락 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-044",
+    "category": "HDR",
+    "name": "소제목 하이라이트 바 · 가. (블루)",
+    "file": "decks/09_headers/HDR_bulk_subtitle-bar_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-044",
+    "tags": [
+      "소제목",
+      "하이라이트바",
+      "밑줄",
+      "블루"
+    ],
+    "params": {
+      "accent": "blue_500",
+      "w_in": 4.6,
+      "h_in": 0.42
+    },
+    "bindings": {
+      "marker": "가.",
+      "title": "사업 추진 배경"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "소제목",
+      "단락 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-045",
+    "category": "HDR",
+    "name": "소제목 하이라이트 바 · 가. (틸)",
+    "file": "decks/09_headers/HDR_bulk_subtitle-bar_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-045",
+    "tags": [
+      "소제목",
+      "하이라이트바",
+      "밑줄",
+      "틸"
+    ],
+    "params": {
+      "accent": "teal_500",
+      "w_in": 4.6,
+      "h_in": 0.42
+    },
+    "bindings": {
+      "marker": "가.",
+      "title": "사업 추진 배경"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "소제목",
+      "단락 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-046",
+    "category": "HDR",
+    "name": "소제목 하이라이트 바 · 가. (퍼플)",
+    "file": "decks/09_headers/HDR_bulk_subtitle-bar_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-046",
+    "tags": [
+      "소제목",
+      "하이라이트바",
+      "밑줄",
+      "퍼플"
+    ],
+    "params": {
+      "accent": "purple_600",
+      "w_in": 4.6,
+      "h_in": 0.42
+    },
+    "bindings": {
+      "marker": "가.",
+      "title": "사업 추진 배경"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "소제목",
+      "단락 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-047",
+    "category": "HDR",
+    "name": "소제목 하이라이트 바 · 가. (시안)",
+    "file": "decks/09_headers/HDR_bulk_subtitle-bar_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-047",
+    "tags": [
+      "소제목",
+      "하이라이트바",
+      "밑줄",
+      "시안"
+    ],
+    "params": {
+      "accent": "cyan_500",
+      "w_in": 4.6,
+      "h_in": 0.42
+    },
+    "bindings": {
+      "marker": "가.",
+      "title": "사업 추진 배경"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "소제목",
+      "단락 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-048",
+    "category": "HDR",
+    "name": "소제목 하이라이트 바 · 가. (레드)",
+    "file": "decks/09_headers/HDR_bulk_subtitle-bar_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-048",
+    "tags": [
+      "소제목",
+      "하이라이트바",
+      "밑줄",
+      "레드"
+    ],
+    "params": {
+      "accent": "red_500",
+      "w_in": 4.6,
+      "h_in": 0.42
+    },
+    "bindings": {
+      "marker": "가.",
+      "title": "사업 추진 배경"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "소제목",
+      "단락 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-049",
+    "category": "HDR",
+    "name": "소제목 하이라이트 바 · 나. (네이비)",
+    "file": "decks/09_headers/HDR_bulk_subtitle-bar_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-049",
+    "tags": [
+      "소제목",
+      "하이라이트바",
+      "밑줄",
+      "네이비"
+    ],
+    "params": {
+      "accent": "navy_800",
+      "w_in": 4.6,
+      "h_in": 0.42
+    },
+    "bindings": {
+      "marker": "나.",
+      "title": "핵심 추진 전략"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "소제목",
+      "단락 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-050",
+    "category": "HDR",
+    "name": "소제목 하이라이트 바 · 나. (블루)",
+    "file": "decks/09_headers/HDR_bulk_subtitle-bar_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-050",
+    "tags": [
+      "소제목",
+      "하이라이트바",
+      "밑줄",
+      "블루"
+    ],
+    "params": {
+      "accent": "blue_500",
+      "w_in": 4.6,
+      "h_in": 0.42
+    },
+    "bindings": {
+      "marker": "나.",
+      "title": "핵심 추진 전략"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "소제목",
+      "단락 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-051",
+    "category": "HDR",
+    "name": "소제목 하이라이트 바 · 나. (틸)",
+    "file": "decks/09_headers/HDR_bulk_subtitle-bar_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-051",
+    "tags": [
+      "소제목",
+      "하이라이트바",
+      "밑줄",
+      "틸"
+    ],
+    "params": {
+      "accent": "teal_500",
+      "w_in": 4.6,
+      "h_in": 0.42
+    },
+    "bindings": {
+      "marker": "나.",
+      "title": "핵심 추진 전략"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "소제목",
+      "단락 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-052",
+    "category": "HDR",
+    "name": "소제목 하이라이트 바 · 나. (퍼플)",
+    "file": "decks/09_headers/HDR_bulk_subtitle-bar_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-052",
+    "tags": [
+      "소제목",
+      "하이라이트바",
+      "밑줄",
+      "퍼플"
+    ],
+    "params": {
+      "accent": "purple_600",
+      "w_in": 4.6,
+      "h_in": 0.42
+    },
+    "bindings": {
+      "marker": "나.",
+      "title": "핵심 추진 전략"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "소제목",
+      "단락 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-053",
+    "category": "HDR",
+    "name": "소제목 하이라이트 바 · 나. (시안)",
+    "file": "decks/09_headers/HDR_bulk_subtitle-bar_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-053",
+    "tags": [
+      "소제목",
+      "하이라이트바",
+      "밑줄",
+      "시안"
+    ],
+    "params": {
+      "accent": "cyan_500",
+      "w_in": 4.6,
+      "h_in": 0.42
+    },
+    "bindings": {
+      "marker": "나.",
+      "title": "핵심 추진 전략"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "소제목",
+      "단락 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-054",
+    "category": "HDR",
+    "name": "소제목 하이라이트 바 · 나. (레드)",
+    "file": "decks/09_headers/HDR_bulk_subtitle-bar_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-054",
+    "tags": [
+      "소제목",
+      "하이라이트바",
+      "밑줄",
+      "레드"
+    ],
+    "params": {
+      "accent": "red_500",
+      "w_in": 4.6,
+      "h_in": 0.42
+    },
+    "bindings": {
+      "marker": "나.",
+      "title": "핵심 추진 전략"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "소제목",
+      "단락 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-055",
+    "category": "HDR",
+    "name": "체크 헤드라인 바 · 전략 수립 (네이비)",
+    "file": "decks/09_headers/HDR_bulk_check-bar_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-055",
+    "tags": [
+      "체크바",
+      "헤드라인",
+      "라운드",
+      "네이비"
+    ],
+    "params": {
+      "fill": "navy_800",
+      "w_in": 5.0,
+      "h_in": 0.55
+    },
+    "bindings": {
+      "text": "차별화된 해외 진출 전략 수립"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 강조",
+      "헤드라인"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-056",
+    "category": "HDR",
+    "name": "체크 헤드라인 바 · 전략 수립 (블루)",
+    "file": "decks/09_headers/HDR_bulk_check-bar_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-056",
+    "tags": [
+      "체크바",
+      "헤드라인",
+      "라운드",
+      "블루"
+    ],
+    "params": {
+      "fill": "blue_500",
+      "w_in": 5.0,
+      "h_in": 0.55
+    },
+    "bindings": {
+      "text": "차별화된 해외 진출 전략 수립"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 강조",
+      "헤드라인"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-057",
+    "category": "HDR",
+    "name": "체크 헤드라인 바 · 전략 수립 (틸)",
+    "file": "decks/09_headers/HDR_bulk_check-bar_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-057",
+    "tags": [
+      "체크바",
+      "헤드라인",
+      "라운드",
+      "틸"
+    ],
+    "params": {
+      "fill": "teal_500",
+      "w_in": 5.0,
+      "h_in": 0.55
+    },
+    "bindings": {
+      "text": "차별화된 해외 진출 전략 수립"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 강조",
+      "헤드라인"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-058",
+    "category": "HDR",
+    "name": "체크 헤드라인 바 · 전략 수립 (퍼플)",
+    "file": "decks/09_headers/HDR_bulk_check-bar_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-058",
+    "tags": [
+      "체크바",
+      "헤드라인",
+      "라운드",
+      "퍼플"
+    ],
+    "params": {
+      "fill": "purple_600",
+      "w_in": 5.0,
+      "h_in": 0.55
+    },
+    "bindings": {
+      "text": "차별화된 해외 진출 전략 수립"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 강조",
+      "헤드라인"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-059",
+    "category": "HDR",
+    "name": "체크 헤드라인 바 · 전략 수립 (시안)",
+    "file": "decks/09_headers/HDR_bulk_check-bar_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-059",
+    "tags": [
+      "체크바",
+      "헤드라인",
+      "라운드",
+      "시안"
+    ],
+    "params": {
+      "fill": "cyan_500",
+      "w_in": 5.0,
+      "h_in": 0.55
+    },
+    "bindings": {
+      "text": "차별화된 해외 진출 전략 수립"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 강조",
+      "헤드라인"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-060",
+    "category": "HDR",
+    "name": "체크 헤드라인 바 · 전략 수립 (레드)",
+    "file": "decks/09_headers/HDR_bulk_check-bar_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-060",
+    "tags": [
+      "체크바",
+      "헤드라인",
+      "라운드",
+      "레드"
+    ],
+    "params": {
+      "fill": "red_500",
+      "w_in": 5.0,
+      "h_in": 0.55
+    },
+    "bindings": {
+      "text": "차별화된 해외 진출 전략 수립"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 강조",
+      "헤드라인"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-061",
+    "category": "HDR",
+    "name": "체크 헤드라인 바 · 실행력 확보 (네이비)",
+    "file": "decks/09_headers/HDR_bulk_check-bar_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-061",
+    "tags": [
+      "체크바",
+      "헤드라인",
+      "라운드",
+      "네이비"
+    ],
+    "params": {
+      "fill": "navy_800",
+      "w_in": 5.0,
+      "h_in": 0.55
+    },
+    "bindings": {
+      "text": "현지 파트너십 기반 실행력 확보"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 강조",
+      "헤드라인"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-062",
+    "category": "HDR",
+    "name": "체크 헤드라인 바 · 실행력 확보 (블루)",
+    "file": "decks/09_headers/HDR_bulk_check-bar_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-062",
+    "tags": [
+      "체크바",
+      "헤드라인",
+      "라운드",
+      "블루"
+    ],
+    "params": {
+      "fill": "blue_500",
+      "w_in": 5.0,
+      "h_in": 0.55
+    },
+    "bindings": {
+      "text": "현지 파트너십 기반 실행력 확보"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 강조",
+      "헤드라인"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-063",
+    "category": "HDR",
+    "name": "체크 헤드라인 바 · 실행력 확보 (틸)",
+    "file": "decks/09_headers/HDR_bulk_check-bar_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-063",
+    "tags": [
+      "체크바",
+      "헤드라인",
+      "라운드",
+      "틸"
+    ],
+    "params": {
+      "fill": "teal_500",
+      "w_in": 5.0,
+      "h_in": 0.55
+    },
+    "bindings": {
+      "text": "현지 파트너십 기반 실행력 확보"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 강조",
+      "헤드라인"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-064",
+    "category": "HDR",
+    "name": "체크 헤드라인 바 · 실행력 확보 (퍼플)",
+    "file": "decks/09_headers/HDR_bulk_check-bar_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-064",
+    "tags": [
+      "체크바",
+      "헤드라인",
+      "라운드",
+      "퍼플"
+    ],
+    "params": {
+      "fill": "purple_600",
+      "w_in": 5.0,
+      "h_in": 0.55
+    },
+    "bindings": {
+      "text": "현지 파트너십 기반 실행력 확보"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 강조",
+      "헤드라인"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-065",
+    "category": "HDR",
+    "name": "체크 헤드라인 바 · 실행력 확보 (시안)",
+    "file": "decks/09_headers/HDR_bulk_check-bar_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-065",
+    "tags": [
+      "체크바",
+      "헤드라인",
+      "라운드",
+      "시안"
+    ],
+    "params": {
+      "fill": "cyan_500",
+      "w_in": 5.0,
+      "h_in": 0.55
+    },
+    "bindings": {
+      "text": "현지 파트너십 기반 실행력 확보"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 강조",
+      "헤드라인"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-066",
+    "category": "HDR",
+    "name": "체크 헤드라인 바 · 실행력 확보 (레드)",
+    "file": "decks/09_headers/HDR_bulk_check-bar_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-066",
+    "tags": [
+      "체크바",
+      "헤드라인",
+      "라운드",
+      "레드"
+    ],
+    "params": {
+      "fill": "red_500",
+      "w_in": 5.0,
+      "h_in": 0.55
+    },
+    "bindings": {
+      "text": "현지 파트너십 기반 실행력 확보"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 강조",
+      "헤드라인"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-067",
+    "category": "HDR",
+    "name": "탭 스타일 라벨 · 핵심 제안 (네이비)",
+    "file": "decks/09_headers/HDR_bulk_tab-label_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-067",
+    "tags": [
+      "탭",
+      "라벨",
+      "섹션헤더",
+      "네이비"
+    ],
+    "params": {
+      "fill": "navy_800",
+      "w_in": 2.0,
+      "h_in": 0.5
+    },
+    "bindings": {
+      "text": "핵심 제안"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "탭 네비",
+      "카테고리 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-068",
+    "category": "HDR",
+    "name": "탭 스타일 라벨 · 핵심 제안 (블루)",
+    "file": "decks/09_headers/HDR_bulk_tab-label_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-068",
+    "tags": [
+      "탭",
+      "라벨",
+      "섹션헤더",
+      "블루"
+    ],
+    "params": {
+      "fill": "blue_500",
+      "w_in": 2.0,
+      "h_in": 0.5
+    },
+    "bindings": {
+      "text": "핵심 제안"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "탭 네비",
+      "카테고리 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-069",
+    "category": "HDR",
+    "name": "탭 스타일 라벨 · 핵심 제안 (틸)",
+    "file": "decks/09_headers/HDR_bulk_tab-label_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-069",
+    "tags": [
+      "탭",
+      "라벨",
+      "섹션헤더",
+      "틸"
+    ],
+    "params": {
+      "fill": "teal_500",
+      "w_in": 2.0,
+      "h_in": 0.5
+    },
+    "bindings": {
+      "text": "핵심 제안"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "탭 네비",
+      "카테고리 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-070",
+    "category": "HDR",
+    "name": "탭 스타일 라벨 · 핵심 제안 (퍼플)",
+    "file": "decks/09_headers/HDR_bulk_tab-label_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-070",
+    "tags": [
+      "탭",
+      "라벨",
+      "섹션헤더",
+      "퍼플"
+    ],
+    "params": {
+      "fill": "purple_600",
+      "w_in": 2.0,
+      "h_in": 0.5
+    },
+    "bindings": {
+      "text": "핵심 제안"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "탭 네비",
+      "카테고리 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-071",
+    "category": "HDR",
+    "name": "탭 스타일 라벨 · 핵심 제안 (시안)",
+    "file": "decks/09_headers/HDR_bulk_tab-label_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-071",
+    "tags": [
+      "탭",
+      "라벨",
+      "섹션헤더",
+      "시안"
+    ],
+    "params": {
+      "fill": "cyan_500",
+      "w_in": 2.0,
+      "h_in": 0.5
+    },
+    "bindings": {
+      "text": "핵심 제안"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "탭 네비",
+      "카테고리 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-072",
+    "category": "HDR",
+    "name": "탭 스타일 라벨 · 핵심 제안 (레드)",
+    "file": "decks/09_headers/HDR_bulk_tab-label_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-072",
+    "tags": [
+      "탭",
+      "라벨",
+      "섹션헤더",
+      "레드"
+    ],
+    "params": {
+      "fill": "red_500",
+      "w_in": 2.0,
+      "h_in": 0.5
+    },
+    "bindings": {
+      "text": "핵심 제안"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "탭 네비",
+      "카테고리 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-073",
+    "category": "HDR",
+    "name": "탭 스타일 라벨 · 추진 방향 (네이비)",
+    "file": "decks/09_headers/HDR_bulk_tab-label_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-073",
+    "tags": [
+      "탭",
+      "라벨",
+      "섹션헤더",
+      "네이비"
+    ],
+    "params": {
+      "fill": "navy_800",
+      "w_in": 2.0,
+      "h_in": 0.5
+    },
+    "bindings": {
+      "text": "추진 방향"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "탭 네비",
+      "카테고리 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-074",
+    "category": "HDR",
+    "name": "탭 스타일 라벨 · 추진 방향 (블루)",
+    "file": "decks/09_headers/HDR_bulk_tab-label_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-074",
+    "tags": [
+      "탭",
+      "라벨",
+      "섹션헤더",
+      "블루"
+    ],
+    "params": {
+      "fill": "blue_500",
+      "w_in": 2.0,
+      "h_in": 0.5
+    },
+    "bindings": {
+      "text": "추진 방향"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "탭 네비",
+      "카테고리 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-075",
+    "category": "HDR",
+    "name": "탭 스타일 라벨 · 추진 방향 (틸)",
+    "file": "decks/09_headers/HDR_bulk_tab-label_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-075",
+    "tags": [
+      "탭",
+      "라벨",
+      "섹션헤더",
+      "틸"
+    ],
+    "params": {
+      "fill": "teal_500",
+      "w_in": 2.0,
+      "h_in": 0.5
+    },
+    "bindings": {
+      "text": "추진 방향"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "탭 네비",
+      "카테고리 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-076",
+    "category": "HDR",
+    "name": "탭 스타일 라벨 · 추진 방향 (퍼플)",
+    "file": "decks/09_headers/HDR_bulk_tab-label_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-076",
+    "tags": [
+      "탭",
+      "라벨",
+      "섹션헤더",
+      "퍼플"
+    ],
+    "params": {
+      "fill": "purple_600",
+      "w_in": 2.0,
+      "h_in": 0.5
+    },
+    "bindings": {
+      "text": "추진 방향"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "탭 네비",
+      "카테고리 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-077",
+    "category": "HDR",
+    "name": "탭 스타일 라벨 · 추진 방향 (시안)",
+    "file": "decks/09_headers/HDR_bulk_tab-label_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-077",
+    "tags": [
+      "탭",
+      "라벨",
+      "섹션헤더",
+      "시안"
+    ],
+    "params": {
+      "fill": "cyan_500",
+      "w_in": 2.0,
+      "h_in": 0.5
+    },
+    "bindings": {
+      "text": "추진 방향"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "탭 네비",
+      "카테고리 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-078",
+    "category": "HDR",
+    "name": "탭 스타일 라벨 · 추진 방향 (레드)",
+    "file": "decks/09_headers/HDR_bulk_tab-label_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-078",
+    "tags": [
+      "탭",
+      "라벨",
+      "섹션헤더",
+      "레드"
+    ],
+    "params": {
+      "fill": "red_500",
+      "w_in": 2.0,
+      "h_in": 0.5
+    },
+    "bindings": {
+      "text": "추진 방향"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "탭 네비",
+      "카테고리 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-079",
+    "category": "HDR",
+    "name": "강조 콜아웃 박스 · 핵심 제안 (네이비)",
+    "file": "decks/09_headers/HDR_bulk_callout_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-079",
+    "tags": [
+      "강조박스",
+      "콜아웃",
+      "세로바",
+      "네이비"
+    ],
+    "params": {
+      "accent": "navy_800",
+      "w_in": 4.8,
+      "h_in": 1.1
+    },
+    "bindings": {
+      "title": "핵심 제안",
+      "body": "현지화 콘텐츠 재가공 및 채널별 최적 배급 전략으로\n해외 시장 진입 장벽을 최소화합니다."
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 강조",
+      "제안 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-080",
+    "category": "HDR",
+    "name": "강조 콜아웃 박스 · 핵심 제안 (블루)",
+    "file": "decks/09_headers/HDR_bulk_callout_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-080",
+    "tags": [
+      "강조박스",
+      "콜아웃",
+      "세로바",
+      "블루"
+    ],
+    "params": {
+      "accent": "blue_500",
+      "w_in": 4.8,
+      "h_in": 1.1
+    },
+    "bindings": {
+      "title": "핵심 제안",
+      "body": "현지화 콘텐츠 재가공 및 채널별 최적 배급 전략으로\n해외 시장 진입 장벽을 최소화합니다."
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 강조",
+      "제안 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-081",
+    "category": "HDR",
+    "name": "강조 콜아웃 박스 · 핵심 제안 (틸)",
+    "file": "decks/09_headers/HDR_bulk_callout_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-081",
+    "tags": [
+      "강조박스",
+      "콜아웃",
+      "세로바",
+      "틸"
+    ],
+    "params": {
+      "accent": "teal_500",
+      "w_in": 4.8,
+      "h_in": 1.1
+    },
+    "bindings": {
+      "title": "핵심 제안",
+      "body": "현지화 콘텐츠 재가공 및 채널별 최적 배급 전략으로\n해외 시장 진입 장벽을 최소화합니다."
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 강조",
+      "제안 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-082",
+    "category": "HDR",
+    "name": "강조 콜아웃 박스 · 핵심 제안 (퍼플)",
+    "file": "decks/09_headers/HDR_bulk_callout_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-082",
+    "tags": [
+      "강조박스",
+      "콜아웃",
+      "세로바",
+      "퍼플"
+    ],
+    "params": {
+      "accent": "purple_600",
+      "w_in": 4.8,
+      "h_in": 1.1
+    },
+    "bindings": {
+      "title": "핵심 제안",
+      "body": "현지화 콘텐츠 재가공 및 채널별 최적 배급 전략으로\n해외 시장 진입 장벽을 최소화합니다."
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 강조",
+      "제안 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-083",
+    "category": "HDR",
+    "name": "강조 콜아웃 박스 · 핵심 제안 (시안)",
+    "file": "decks/09_headers/HDR_bulk_callout_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-083",
+    "tags": [
+      "강조박스",
+      "콜아웃",
+      "세로바",
+      "시안"
+    ],
+    "params": {
+      "accent": "cyan_500",
+      "w_in": 4.8,
+      "h_in": 1.1
+    },
+    "bindings": {
+      "title": "핵심 제안",
+      "body": "현지화 콘텐츠 재가공 및 채널별 최적 배급 전략으로\n해외 시장 진입 장벽을 최소화합니다."
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 강조",
+      "제안 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-084",
+    "category": "HDR",
+    "name": "강조 콜아웃 박스 · 핵심 제안 (레드)",
+    "file": "decks/09_headers/HDR_bulk_callout_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-084",
+    "tags": [
+      "강조박스",
+      "콜아웃",
+      "세로바",
+      "레드"
+    ],
+    "params": {
+      "accent": "red_500",
+      "w_in": 4.8,
+      "h_in": 1.1
+    },
+    "bindings": {
+      "title": "핵심 제안",
+      "body": "현지화 콘텐츠 재가공 및 채널별 최적 배급 전략으로\n해외 시장 진입 장벽을 최소화합니다."
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 강조",
+      "제안 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-085",
+    "category": "HDR",
+    "name": "강조 콜아웃 박스 · 기대효과 (네이비)",
+    "file": "decks/09_headers/HDR_bulk_callout_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-085",
+    "tags": [
+      "강조박스",
+      "콜아웃",
+      "세로바",
+      "네이비"
+    ],
+    "params": {
+      "accent": "navy_800",
+      "w_in": 4.8,
+      "h_in": 1.1
+    },
+    "bindings": {
+      "title": "기대효과",
+      "body": "K-콘텐츠 IP의 글로벌 인지도 제고와\n신규 해외 매출 파이프라인을 확보합니다."
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 강조",
+      "제안 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-086",
+    "category": "HDR",
+    "name": "강조 콜아웃 박스 · 기대효과 (블루)",
+    "file": "decks/09_headers/HDR_bulk_callout_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-086",
+    "tags": [
+      "강조박스",
+      "콜아웃",
+      "세로바",
+      "블루"
+    ],
+    "params": {
+      "accent": "blue_500",
+      "w_in": 4.8,
+      "h_in": 1.1
+    },
+    "bindings": {
+      "title": "기대효과",
+      "body": "K-콘텐츠 IP의 글로벌 인지도 제고와\n신규 해외 매출 파이프라인을 확보합니다."
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 강조",
+      "제안 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-087",
+    "category": "HDR",
+    "name": "강조 콜아웃 박스 · 기대효과 (틸)",
+    "file": "decks/09_headers/HDR_bulk_callout_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-087",
+    "tags": [
+      "강조박스",
+      "콜아웃",
+      "세로바",
+      "틸"
+    ],
+    "params": {
+      "accent": "teal_500",
+      "w_in": 4.8,
+      "h_in": 1.1
+    },
+    "bindings": {
+      "title": "기대효과",
+      "body": "K-콘텐츠 IP의 글로벌 인지도 제고와\n신규 해외 매출 파이프라인을 확보합니다."
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 강조",
+      "제안 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-088",
+    "category": "HDR",
+    "name": "강조 콜아웃 박스 · 기대효과 (퍼플)",
+    "file": "decks/09_headers/HDR_bulk_callout_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-088",
+    "tags": [
+      "강조박스",
+      "콜아웃",
+      "세로바",
+      "퍼플"
+    ],
+    "params": {
+      "accent": "purple_600",
+      "w_in": 4.8,
+      "h_in": 1.1
+    },
+    "bindings": {
+      "title": "기대효과",
+      "body": "K-콘텐츠 IP의 글로벌 인지도 제고와\n신규 해외 매출 파이프라인을 확보합니다."
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 강조",
+      "제안 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-089",
+    "category": "HDR",
+    "name": "강조 콜아웃 박스 · 기대효과 (시안)",
+    "file": "decks/09_headers/HDR_bulk_callout_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-089",
+    "tags": [
+      "강조박스",
+      "콜아웃",
+      "세로바",
+      "시안"
+    ],
+    "params": {
+      "accent": "cyan_500",
+      "w_in": 4.8,
+      "h_in": 1.1
+    },
+    "bindings": {
+      "title": "기대효과",
+      "body": "K-콘텐츠 IP의 글로벌 인지도 제고와\n신규 해외 매출 파이프라인을 확보합니다."
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 강조",
+      "제안 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-090",
+    "category": "HDR",
+    "name": "강조 콜아웃 박스 · 기대효과 (레드)",
+    "file": "decks/09_headers/HDR_bulk_callout_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-090",
+    "tags": [
+      "강조박스",
+      "콜아웃",
+      "세로바",
+      "레드"
+    ],
+    "params": {
+      "accent": "red_500",
+      "w_in": 4.8,
+      "h_in": 1.1
+    },
+    "bindings": {
+      "title": "기대효과",
+      "body": "K-콘텐츠 IP의 글로벌 인지도 제고와\n신규 해외 매출 파이프라인을 확보합니다."
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 강조",
+      "제안 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-091",
+    "category": "HDR",
+    "name": "분석 요약 박스 · 시장 환경 (베이지) (네이비)",
+    "file": "decks/09_headers/HDR_bulk_analysis-box_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-091",
+    "tags": [
+      "분석박스",
+      "요약",
+      "불릿",
+      "네이비"
+    ],
+    "params": {
+      "bg": "beige_100",
+      "accent": "navy_800",
+      "w_in": 5.4,
+      "h_in": 2.2
+    },
+    "bindings": {
+      "title": "시장 환경 분석",
+      "bullets": [
+        "글로벌 OTT 수요 확대로 K-콘텐츠 진출 기회 증가",
+        "현지 언어·문화 장벽이 핵심 리스크로 상존",
+        "권역별 배급 파트너 확보가 성패 좌우"
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분석 요약",
+      "현황 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-092",
+    "category": "HDR",
+    "name": "분석 요약 박스 · 시장 환경 (베이지) (블루)",
+    "file": "decks/09_headers/HDR_bulk_analysis-box_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-092",
+    "tags": [
+      "분석박스",
+      "요약",
+      "불릿",
+      "블루"
+    ],
+    "params": {
+      "bg": "beige_100",
+      "accent": "blue_500",
+      "w_in": 5.4,
+      "h_in": 2.2
+    },
+    "bindings": {
+      "title": "시장 환경 분석",
+      "bullets": [
+        "글로벌 OTT 수요 확대로 K-콘텐츠 진출 기회 증가",
+        "현지 언어·문화 장벽이 핵심 리스크로 상존",
+        "권역별 배급 파트너 확보가 성패 좌우"
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분석 요약",
+      "현황 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-093",
+    "category": "HDR",
+    "name": "분석 요약 박스 · 시장 환경 (베이지) (틸)",
+    "file": "decks/09_headers/HDR_bulk_analysis-box_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-093",
+    "tags": [
+      "분석박스",
+      "요약",
+      "불릿",
+      "틸"
+    ],
+    "params": {
+      "bg": "beige_100",
+      "accent": "teal_500",
+      "w_in": 5.4,
+      "h_in": 2.2
+    },
+    "bindings": {
+      "title": "시장 환경 분석",
+      "bullets": [
+        "글로벌 OTT 수요 확대로 K-콘텐츠 진출 기회 증가",
+        "현지 언어·문화 장벽이 핵심 리스크로 상존",
+        "권역별 배급 파트너 확보가 성패 좌우"
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분석 요약",
+      "현황 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-094",
+    "category": "HDR",
+    "name": "분석 요약 박스 · 시장 환경 (베이지) (퍼플)",
+    "file": "decks/09_headers/HDR_bulk_analysis-box_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-094",
+    "tags": [
+      "분석박스",
+      "요약",
+      "불릿",
+      "퍼플"
+    ],
+    "params": {
+      "bg": "beige_100",
+      "accent": "purple_600",
+      "w_in": 5.4,
+      "h_in": 2.2
+    },
+    "bindings": {
+      "title": "시장 환경 분석",
+      "bullets": [
+        "글로벌 OTT 수요 확대로 K-콘텐츠 진출 기회 증가",
+        "현지 언어·문화 장벽이 핵심 리스크로 상존",
+        "권역별 배급 파트너 확보가 성패 좌우"
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분석 요약",
+      "현황 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-095",
+    "category": "HDR",
+    "name": "분석 요약 박스 · 시장 환경 (베이지) (시안)",
+    "file": "decks/09_headers/HDR_bulk_analysis-box_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-095",
+    "tags": [
+      "분석박스",
+      "요약",
+      "불릿",
+      "시안"
+    ],
+    "params": {
+      "bg": "beige_100",
+      "accent": "cyan_500",
+      "w_in": 5.4,
+      "h_in": 2.2
+    },
+    "bindings": {
+      "title": "시장 환경 분석",
+      "bullets": [
+        "글로벌 OTT 수요 확대로 K-콘텐츠 진출 기회 증가",
+        "현지 언어·문화 장벽이 핵심 리스크로 상존",
+        "권역별 배급 파트너 확보가 성패 좌우"
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분석 요약",
+      "현황 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-096",
+    "category": "HDR",
+    "name": "분석 요약 박스 · 시장 환경 (베이지) (레드)",
+    "file": "decks/09_headers/HDR_bulk_analysis-box_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-096",
+    "tags": [
+      "분석박스",
+      "요약",
+      "불릿",
+      "레드"
+    ],
+    "params": {
+      "bg": "beige_100",
+      "accent": "red_500",
+      "w_in": 5.4,
+      "h_in": 2.2
+    },
+    "bindings": {
+      "title": "시장 환경 분석",
+      "bullets": [
+        "글로벌 OTT 수요 확대로 K-콘텐츠 진출 기회 증가",
+        "현지 언어·문화 장벽이 핵심 리스크로 상존",
+        "권역별 배급 파트너 확보가 성패 좌우"
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분석 요약",
+      "현황 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-097",
+    "category": "HDR",
+    "name": "분석 요약 박스 · SWOT (그레이) (네이비)",
+    "file": "decks/09_headers/HDR_bulk_analysis-box_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-097",
+    "tags": [
+      "분석박스",
+      "요약",
+      "불릿",
+      "네이비"
+    ],
+    "params": {
+      "bg": "gray_100",
+      "accent": "navy_800",
+      "w_in": 5.4,
+      "h_in": 2.2
+    },
+    "bindings": {
+      "title": "SWOT 요약",
+      "bullets": [
+        "강점: 검증된 IP·제작 역량 보유",
+        "약점: 해외 유통망·현지 네트워크 부족",
+        "기회: 한류 확산 및 정책 지원 확대"
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분석 요약",
+      "현황 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-098",
+    "category": "HDR",
+    "name": "분석 요약 박스 · SWOT (그레이) (블루)",
+    "file": "decks/09_headers/HDR_bulk_analysis-box_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-098",
+    "tags": [
+      "분석박스",
+      "요약",
+      "불릿",
+      "블루"
+    ],
+    "params": {
+      "bg": "gray_100",
+      "accent": "blue_500",
+      "w_in": 5.4,
+      "h_in": 2.2
+    },
+    "bindings": {
+      "title": "SWOT 요약",
+      "bullets": [
+        "강점: 검증된 IP·제작 역량 보유",
+        "약점: 해외 유통망·현지 네트워크 부족",
+        "기회: 한류 확산 및 정책 지원 확대"
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분석 요약",
+      "현황 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-099",
+    "category": "HDR",
+    "name": "분석 요약 박스 · SWOT (그레이) (틸)",
+    "file": "decks/09_headers/HDR_bulk_analysis-box_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:HDR-099",
+    "tags": [
+      "분석박스",
+      "요약",
+      "불릿",
+      "틸"
+    ],
+    "params": {
+      "bg": "gray_100",
+      "accent": "teal_500",
+      "w_in": 5.4,
+      "h_in": 2.2
+    },
+    "bindings": {
+      "title": "SWOT 요약",
+      "bullets": [
+        "강점: 검증된 IP·제작 역량 보유",
+        "약점: 해외 유통망·현지 네트워크 부족",
+        "기회: 한류 확산 및 정책 지원 확대"
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분석 요약",
+      "현황 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-100",
+    "category": "HDR",
+    "name": "분석 요약 박스 · SWOT (그레이) (퍼플)",
+    "file": "decks/09_headers/HDR_bulk_analysis-box_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:HDR-100",
+    "tags": [
+      "분석박스",
+      "요약",
+      "불릿",
+      "퍼플"
+    ],
+    "params": {
+      "bg": "gray_100",
+      "accent": "purple_600",
+      "w_in": 5.4,
+      "h_in": 2.2
+    },
+    "bindings": {
+      "title": "SWOT 요약",
+      "bullets": [
+        "강점: 검증된 IP·제작 역량 보유",
+        "약점: 해외 유통망·현지 네트워크 부족",
+        "기회: 한류 확산 및 정책 지원 확대"
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분석 요약",
+      "현황 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-101",
+    "category": "HDR",
+    "name": "분석 요약 박스 · SWOT (그레이) (시안)",
+    "file": "decks/09_headers/HDR_bulk_analysis-box_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:HDR-101",
+    "tags": [
+      "분석박스",
+      "요약",
+      "불릿",
+      "시안"
+    ],
+    "params": {
+      "bg": "gray_100",
+      "accent": "cyan_500",
+      "w_in": 5.4,
+      "h_in": 2.2
+    },
+    "bindings": {
+      "title": "SWOT 요약",
+      "bullets": [
+        "강점: 검증된 IP·제작 역량 보유",
+        "약점: 해외 유통망·현지 네트워크 부족",
+        "기회: 한류 확산 및 정책 지원 확대"
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분석 요약",
+      "현황 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-102",
+    "category": "HDR",
+    "name": "분석 요약 박스 · SWOT (그레이) (레드)",
+    "file": "decks/09_headers/HDR_bulk_analysis-box_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:HDR-102",
+    "tags": [
+      "분석박스",
+      "요약",
+      "불릿",
+      "레드"
+    ],
+    "params": {
+      "bg": "gray_100",
+      "accent": "red_500",
+      "w_in": 5.4,
+      "h_in": 2.2
+    },
+    "bindings": {
+      "title": "SWOT 요약",
+      "bullets": [
+        "강점: 검증된 IP·제작 역량 보유",
+        "약점: 해외 유통망·현지 네트워크 부족",
+        "기회: 한류 확산 및 정책 지원 확대"
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분석 요약",
+      "현황 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-103",
+    "category": "HDR",
+    "name": "리본 배지 (네이비)",
+    "file": "decks/09_headers/HDR_bulk_ribbon_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-103",
+    "tags": [
+      "배지",
+      "리본",
+      "추천",
+      "네이비"
+    ],
+    "params": {
+      "fill": "navy_800",
+      "w_in": 1.7,
+      "h_in": 0.72
+    },
+    "bindings": {
+      "text": "추천"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 강조",
+      "우선순위 표시"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-104",
+    "category": "HDR",
+    "name": "리본 배지 (블루)",
+    "file": "decks/09_headers/HDR_bulk_ribbon_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-104",
+    "tags": [
+      "배지",
+      "리본",
+      "추천",
+      "블루"
+    ],
+    "params": {
+      "fill": "blue_500",
+      "w_in": 1.7,
+      "h_in": 0.72
+    },
+    "bindings": {
+      "text": "추천"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 강조",
+      "우선순위 표시"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-105",
+    "category": "HDR",
+    "name": "리본 배지 (틸)",
+    "file": "decks/09_headers/HDR_bulk_ribbon_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-105",
+    "tags": [
+      "배지",
+      "리본",
+      "추천",
+      "틸"
+    ],
+    "params": {
+      "fill": "teal_500",
+      "w_in": 1.7,
+      "h_in": 0.72
+    },
+    "bindings": {
+      "text": "추천"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 강조",
+      "우선순위 표시"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-106",
+    "category": "HDR",
+    "name": "리본 배지 (퍼플)",
+    "file": "decks/09_headers/HDR_bulk_ribbon_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-106",
+    "tags": [
+      "배지",
+      "리본",
+      "추천",
+      "퍼플"
+    ],
+    "params": {
+      "fill": "purple_600",
+      "w_in": 1.7,
+      "h_in": 0.72
+    },
+    "bindings": {
+      "text": "추천"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 강조",
+      "우선순위 표시"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-107",
+    "category": "HDR",
+    "name": "리본 배지 (시안)",
+    "file": "decks/09_headers/HDR_bulk_ribbon_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-107",
+    "tags": [
+      "배지",
+      "리본",
+      "추천",
+      "시안"
+    ],
+    "params": {
+      "fill": "cyan_500",
+      "w_in": 1.7,
+      "h_in": 0.72
+    },
+    "bindings": {
+      "text": "추천"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 강조",
+      "우선순위 표시"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-108",
+    "category": "HDR",
+    "name": "리본 배지 (레드)",
+    "file": "decks/09_headers/HDR_bulk_ribbon_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-108",
+    "tags": [
+      "배지",
+      "리본",
+      "추천",
+      "레드"
+    ],
+    "params": {
+      "fill": "red_500",
+      "w_in": 1.7,
+      "h_in": 0.72
+    },
+    "bindings": {
+      "text": "추천"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 강조",
+      "우선순위 표시"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-109",
+    "category": "HDR",
+    "name": "알약형 배지 (네이비)",
+    "file": "decks/09_headers/HDR_bulk_pill-badge_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-109",
+    "tags": [
+      "배지",
+      "알약",
+      "상태",
+      "네이비"
+    ],
+    "params": {
+      "fill": "navy_800",
+      "w_in": 1.3,
+      "h_in": 0.44
+    },
+    "bindings": {
+      "text": "NEW"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "신규 표시",
+      "상태 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-110",
+    "category": "HDR",
+    "name": "알약형 배지 (블루)",
+    "file": "decks/09_headers/HDR_bulk_pill-badge_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-110",
+    "tags": [
+      "배지",
+      "알약",
+      "상태",
+      "블루"
+    ],
+    "params": {
+      "fill": "blue_500",
+      "w_in": 1.3,
+      "h_in": 0.44
+    },
+    "bindings": {
+      "text": "NEW"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "신규 표시",
+      "상태 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-111",
+    "category": "HDR",
+    "name": "알약형 배지 (틸)",
+    "file": "decks/09_headers/HDR_bulk_pill-badge_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-111",
+    "tags": [
+      "배지",
+      "알약",
+      "상태",
+      "틸"
+    ],
+    "params": {
+      "fill": "teal_500",
+      "w_in": 1.3,
+      "h_in": 0.44
+    },
+    "bindings": {
+      "text": "NEW"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "신규 표시",
+      "상태 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-112",
+    "category": "HDR",
+    "name": "알약형 배지 (퍼플)",
+    "file": "decks/09_headers/HDR_bulk_pill-badge_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-112",
+    "tags": [
+      "배지",
+      "알약",
+      "상태",
+      "퍼플"
+    ],
+    "params": {
+      "fill": "purple_600",
+      "w_in": 1.3,
+      "h_in": 0.44
+    },
+    "bindings": {
+      "text": "NEW"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "신규 표시",
+      "상태 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-113",
+    "category": "HDR",
+    "name": "알약형 배지 (시안)",
+    "file": "decks/09_headers/HDR_bulk_pill-badge_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-113",
+    "tags": [
+      "배지",
+      "알약",
+      "상태",
+      "시안"
+    ],
+    "params": {
+      "fill": "cyan_500",
+      "w_in": 1.3,
+      "h_in": 0.44
+    },
+    "bindings": {
+      "text": "NEW"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "신규 표시",
+      "상태 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-114",
+    "category": "HDR",
+    "name": "알약형 배지 (레드)",
+    "file": "decks/09_headers/HDR_bulk_pill-badge_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-114",
+    "tags": [
+      "배지",
+      "알약",
+      "상태",
+      "레드"
+    ],
+    "params": {
+      "fill": "red_500",
+      "w_in": 1.3,
+      "h_in": 0.44
+    },
+    "bindings": {
+      "text": "NEW"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "신규 표시",
+      "상태 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-115",
+    "category": "HDR",
+    "name": "넘버링 라벨 세트 · 3단계 (네이비)",
+    "file": "decks/09_headers/HDR_bulk_number-labels_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-115",
+    "tags": [
+      "넘버링",
+      "라벨",
+      "원형",
+      "세트",
+      "네이비"
+    ],
+    "params": {
+      "accent": "navy_800",
+      "count": 3,
+      "w_in": 8.0
+    },
+    "bindings": {
+      "items": [
+        [
+          "01",
+          "기획"
+        ],
+        [
+          "02",
+          "제작"
+        ],
+        [
+          "03",
+          "배급"
+        ]
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계 표시",
+      "순서 나열"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-116",
+    "category": "HDR",
+    "name": "넘버링 라벨 세트 · 3단계 (블루)",
+    "file": "decks/09_headers/HDR_bulk_number-labels_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-116",
+    "tags": [
+      "넘버링",
+      "라벨",
+      "원형",
+      "세트",
+      "블루"
+    ],
+    "params": {
+      "accent": "blue_500",
+      "count": 3,
+      "w_in": 8.0
+    },
+    "bindings": {
+      "items": [
+        [
+          "01",
+          "기획"
+        ],
+        [
+          "02",
+          "제작"
+        ],
+        [
+          "03",
+          "배급"
+        ]
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계 표시",
+      "순서 나열"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-117",
+    "category": "HDR",
+    "name": "넘버링 라벨 세트 · 3단계 (틸)",
+    "file": "decks/09_headers/HDR_bulk_number-labels_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-117",
+    "tags": [
+      "넘버링",
+      "라벨",
+      "원형",
+      "세트",
+      "틸"
+    ],
+    "params": {
+      "accent": "teal_500",
+      "count": 3,
+      "w_in": 8.0
+    },
+    "bindings": {
+      "items": [
+        [
+          "01",
+          "기획"
+        ],
+        [
+          "02",
+          "제작"
+        ],
+        [
+          "03",
+          "배급"
+        ]
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계 표시",
+      "순서 나열"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-118",
+    "category": "HDR",
+    "name": "넘버링 라벨 세트 · 3단계 (퍼플)",
+    "file": "decks/09_headers/HDR_bulk_number-labels_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-118",
+    "tags": [
+      "넘버링",
+      "라벨",
+      "원형",
+      "세트",
+      "퍼플"
+    ],
+    "params": {
+      "accent": "purple_600",
+      "count": 3,
+      "w_in": 8.0
+    },
+    "bindings": {
+      "items": [
+        [
+          "01",
+          "기획"
+        ],
+        [
+          "02",
+          "제작"
+        ],
+        [
+          "03",
+          "배급"
+        ]
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계 표시",
+      "순서 나열"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-119",
+    "category": "HDR",
+    "name": "넘버링 라벨 세트 · 3단계 (시안)",
+    "file": "decks/09_headers/HDR_bulk_number-labels_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-119",
+    "tags": [
+      "넘버링",
+      "라벨",
+      "원형",
+      "세트",
+      "시안"
+    ],
+    "params": {
+      "accent": "cyan_500",
+      "count": 3,
+      "w_in": 8.0
+    },
+    "bindings": {
+      "items": [
+        [
+          "01",
+          "기획"
+        ],
+        [
+          "02",
+          "제작"
+        ],
+        [
+          "03",
+          "배급"
+        ]
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계 표시",
+      "순서 나열"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-120",
+    "category": "HDR",
+    "name": "넘버링 라벨 세트 · 3단계 (레드)",
+    "file": "decks/09_headers/HDR_bulk_number-labels_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-120",
+    "tags": [
+      "넘버링",
+      "라벨",
+      "원형",
+      "세트",
+      "레드"
+    ],
+    "params": {
+      "accent": "red_500",
+      "count": 3,
+      "w_in": 8.0
+    },
+    "bindings": {
+      "items": [
+        [
+          "01",
+          "기획"
+        ],
+        [
+          "02",
+          "제작"
+        ],
+        [
+          "03",
+          "배급"
+        ]
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계 표시",
+      "순서 나열"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-121",
+    "category": "HDR",
+    "name": "넘버링 라벨 세트 · 4단계 (네이비)",
+    "file": "decks/09_headers/HDR_bulk_number-labels_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-121",
+    "tags": [
+      "넘버링",
+      "라벨",
+      "원형",
+      "세트",
+      "네이비"
+    ],
+    "params": {
+      "accent": "navy_800",
+      "count": 4,
+      "w_in": 9.6
+    },
+    "bindings": {
+      "items": [
+        [
+          "01",
+          "발굴"
+        ],
+        [
+          "02",
+          "기획"
+        ],
+        [
+          "03",
+          "제작"
+        ],
+        [
+          "04",
+          "배급"
+        ]
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계 표시",
+      "순서 나열"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-122",
+    "category": "HDR",
+    "name": "넘버링 라벨 세트 · 4단계 (블루)",
+    "file": "decks/09_headers/HDR_bulk_number-labels_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-122",
+    "tags": [
+      "넘버링",
+      "라벨",
+      "원형",
+      "세트",
+      "블루"
+    ],
+    "params": {
+      "accent": "blue_500",
+      "count": 4,
+      "w_in": 9.6
+    },
+    "bindings": {
+      "items": [
+        [
+          "01",
+          "발굴"
+        ],
+        [
+          "02",
+          "기획"
+        ],
+        [
+          "03",
+          "제작"
+        ],
+        [
+          "04",
+          "배급"
+        ]
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계 표시",
+      "순서 나열"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-123",
+    "category": "HDR",
+    "name": "넘버링 라벨 세트 · 4단계 (틸)",
+    "file": "decks/09_headers/HDR_bulk_number-labels_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-123",
+    "tags": [
+      "넘버링",
+      "라벨",
+      "원형",
+      "세트",
+      "틸"
+    ],
+    "params": {
+      "accent": "teal_500",
+      "count": 4,
+      "w_in": 9.6
+    },
+    "bindings": {
+      "items": [
+        [
+          "01",
+          "발굴"
+        ],
+        [
+          "02",
+          "기획"
+        ],
+        [
+          "03",
+          "제작"
+        ],
+        [
+          "04",
+          "배급"
+        ]
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계 표시",
+      "순서 나열"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-124",
+    "category": "HDR",
+    "name": "넘버링 라벨 세트 · 4단계 (퍼플)",
+    "file": "decks/09_headers/HDR_bulk_number-labels_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-124",
+    "tags": [
+      "넘버링",
+      "라벨",
+      "원형",
+      "세트",
+      "퍼플"
+    ],
+    "params": {
+      "accent": "purple_600",
+      "count": 4,
+      "w_in": 9.6
+    },
+    "bindings": {
+      "items": [
+        [
+          "01",
+          "발굴"
+        ],
+        [
+          "02",
+          "기획"
+        ],
+        [
+          "03",
+          "제작"
+        ],
+        [
+          "04",
+          "배급"
+        ]
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계 표시",
+      "순서 나열"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-125",
+    "category": "HDR",
+    "name": "넘버링 라벨 세트 · 4단계 (시안)",
+    "file": "decks/09_headers/HDR_bulk_number-labels_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:HDR-125",
+    "tags": [
+      "넘버링",
+      "라벨",
+      "원형",
+      "세트",
+      "시안"
+    ],
+    "params": {
+      "accent": "cyan_500",
+      "count": 4,
+      "w_in": 9.6
+    },
+    "bindings": {
+      "items": [
+        [
+          "01",
+          "발굴"
+        ],
+        [
+          "02",
+          "기획"
+        ],
+        [
+          "03",
+          "제작"
+        ],
+        [
+          "04",
+          "배급"
+        ]
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계 표시",
+      "순서 나열"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-126",
+    "category": "HDR",
+    "name": "넘버링 라벨 세트 · 4단계 (레드)",
+    "file": "decks/09_headers/HDR_bulk_number-labels_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:HDR-126",
+    "tags": [
+      "넘버링",
+      "라벨",
+      "원형",
+      "세트",
+      "레드"
+    ],
+    "params": {
+      "accent": "red_500",
+      "count": 4,
+      "w_in": 9.6
+    },
+    "bindings": {
+      "items": [
+        [
+          "01",
+          "발굴"
+        ],
+        [
+          "02",
+          "기획"
+        ],
+        [
+          "03",
+          "제작"
+        ],
+        [
+          "04",
+          "배급"
+        ]
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계 표시",
+      "순서 나열"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-127",
+    "category": "HDR",
+    "name": "인용 블록 · 문화적 맥락 (네이비)",
+    "file": "decks/09_headers/HDR_bulk_quote-block_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-127",
+    "tags": [
+      "인용",
+      "쿼트",
+      "따옴표",
+      "블록",
+      "네이비"
+    ],
+    "params": {
+      "accent": "navy_800",
+      "w_in": 6.0,
+      "h_in": 1.9
+    },
+    "bindings": {
+      "quote": "현지 시청자의 문화적 맥락을 재해석한 콘텐츠만이\n글로벌 OTT에서 지속 가능한 경쟁력을 갖는다.",
+      "author": "한국콘텐츠진흥원, 2025 해외 콘텐츠시장 분석보고서"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "인용",
+      "핵심 문구 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-128",
+    "category": "HDR",
+    "name": "인용 블록 · 문화적 맥락 (블루)",
+    "file": "decks/09_headers/HDR_bulk_quote-block_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-128",
+    "tags": [
+      "인용",
+      "쿼트",
+      "따옴표",
+      "블록",
+      "블루"
+    ],
+    "params": {
+      "accent": "blue_500",
+      "w_in": 6.0,
+      "h_in": 1.9
+    },
+    "bindings": {
+      "quote": "현지 시청자의 문화적 맥락을 재해석한 콘텐츠만이\n글로벌 OTT에서 지속 가능한 경쟁력을 갖는다.",
+      "author": "한국콘텐츠진흥원, 2025 해외 콘텐츠시장 분석보고서"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "인용",
+      "핵심 문구 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-129",
+    "category": "HDR",
+    "name": "인용 블록 · 문화적 맥락 (틸)",
+    "file": "decks/09_headers/HDR_bulk_quote-block_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-129",
+    "tags": [
+      "인용",
+      "쿼트",
+      "따옴표",
+      "블록",
+      "틸"
+    ],
+    "params": {
+      "accent": "teal_500",
+      "w_in": 6.0,
+      "h_in": 1.9
+    },
+    "bindings": {
+      "quote": "현지 시청자의 문화적 맥락을 재해석한 콘텐츠만이\n글로벌 OTT에서 지속 가능한 경쟁력을 갖는다.",
+      "author": "한국콘텐츠진흥원, 2025 해외 콘텐츠시장 분석보고서"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "인용",
+      "핵심 문구 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-130",
+    "category": "HDR",
+    "name": "인용 블록 · 문화적 맥락 (퍼플)",
+    "file": "decks/09_headers/HDR_bulk_quote-block_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-130",
+    "tags": [
+      "인용",
+      "쿼트",
+      "따옴표",
+      "블록",
+      "퍼플"
+    ],
+    "params": {
+      "accent": "purple_600",
+      "w_in": 6.0,
+      "h_in": 1.9
+    },
+    "bindings": {
+      "quote": "현지 시청자의 문화적 맥락을 재해석한 콘텐츠만이\n글로벌 OTT에서 지속 가능한 경쟁력을 갖는다.",
+      "author": "한국콘텐츠진흥원, 2025 해외 콘텐츠시장 분석보고서"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "인용",
+      "핵심 문구 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-131",
+    "category": "HDR",
+    "name": "인용 블록 · 문화적 맥락 (시안)",
+    "file": "decks/09_headers/HDR_bulk_quote-block_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-131",
+    "tags": [
+      "인용",
+      "쿼트",
+      "따옴표",
+      "블록",
+      "시안"
+    ],
+    "params": {
+      "accent": "cyan_500",
+      "w_in": 6.0,
+      "h_in": 1.9
+    },
+    "bindings": {
+      "quote": "현지 시청자의 문화적 맥락을 재해석한 콘텐츠만이\n글로벌 OTT에서 지속 가능한 경쟁력을 갖는다.",
+      "author": "한국콘텐츠진흥원, 2025 해외 콘텐츠시장 분석보고서"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "인용",
+      "핵심 문구 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-132",
+    "category": "HDR",
+    "name": "인용 블록 · 문화적 맥락 (레드)",
+    "file": "decks/09_headers/HDR_bulk_quote-block_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-132",
+    "tags": [
+      "인용",
+      "쿼트",
+      "따옴표",
+      "블록",
+      "레드"
+    ],
+    "params": {
+      "accent": "red_500",
+      "w_in": 6.0,
+      "h_in": 1.9
+    },
+    "bindings": {
+      "quote": "현지 시청자의 문화적 맥락을 재해석한 콘텐츠만이\n글로벌 OTT에서 지속 가능한 경쟁력을 갖는다.",
+      "author": "한국콘텐츠진흥원, 2025 해외 콘텐츠시장 분석보고서"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "인용",
+      "핵심 문구 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-133",
+    "category": "HDR",
+    "name": "인용 블록 · IP·배급 결합 (네이비)",
+    "file": "decks/09_headers/HDR_bulk_quote-block_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-133",
+    "tags": [
+      "인용",
+      "쿼트",
+      "따옴표",
+      "블록",
+      "네이비"
+    ],
+    "params": {
+      "accent": "navy_800",
+      "w_in": 6.0,
+      "h_in": 1.9
+    },
+    "bindings": {
+      "quote": "검증된 IP와 현지 배급 네트워크의 결합이\n해외 진출 성패를 가르는 핵심 요인이다.",
+      "author": "글로벌 콘텐츠 진출 전략 세미나, 2025"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "인용",
+      "핵심 문구 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-134",
+    "category": "HDR",
+    "name": "인용 블록 · IP·배급 결합 (블루)",
+    "file": "decks/09_headers/HDR_bulk_quote-block_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-134",
+    "tags": [
+      "인용",
+      "쿼트",
+      "따옴표",
+      "블록",
+      "블루"
+    ],
+    "params": {
+      "accent": "blue_500",
+      "w_in": 6.0,
+      "h_in": 1.9
+    },
+    "bindings": {
+      "quote": "검증된 IP와 현지 배급 네트워크의 결합이\n해외 진출 성패를 가르는 핵심 요인이다.",
+      "author": "글로벌 콘텐츠 진출 전략 세미나, 2025"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "인용",
+      "핵심 문구 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-135",
+    "category": "HDR",
+    "name": "인용 블록 · IP·배급 결합 (틸)",
+    "file": "decks/09_headers/HDR_bulk_quote-block_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:HDR-135",
+    "tags": [
+      "인용",
+      "쿼트",
+      "따옴표",
+      "블록",
+      "틸"
+    ],
+    "params": {
+      "accent": "teal_500",
+      "w_in": 6.0,
+      "h_in": 1.9
+    },
+    "bindings": {
+      "quote": "검증된 IP와 현지 배급 네트워크의 결합이\n해외 진출 성패를 가르는 핵심 요인이다.",
+      "author": "글로벌 콘텐츠 진출 전략 세미나, 2025"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "인용",
+      "핵심 문구 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-136",
+    "category": "HDR",
+    "name": "인용 블록 · IP·배급 결합 (퍼플)",
+    "file": "decks/09_headers/HDR_bulk_quote-block_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:HDR-136",
+    "tags": [
+      "인용",
+      "쿼트",
+      "따옴표",
+      "블록",
+      "퍼플"
+    ],
+    "params": {
+      "accent": "purple_600",
+      "w_in": 6.0,
+      "h_in": 1.9
+    },
+    "bindings": {
+      "quote": "검증된 IP와 현지 배급 네트워크의 결합이\n해외 진출 성패를 가르는 핵심 요인이다.",
+      "author": "글로벌 콘텐츠 진출 전략 세미나, 2025"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "인용",
+      "핵심 문구 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-137",
+    "category": "HDR",
+    "name": "인용 블록 · IP·배급 결합 (시안)",
+    "file": "decks/09_headers/HDR_bulk_quote-block_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:HDR-137",
+    "tags": [
+      "인용",
+      "쿼트",
+      "따옴표",
+      "블록",
+      "시안"
+    ],
+    "params": {
+      "accent": "cyan_500",
+      "w_in": 6.0,
+      "h_in": 1.9
+    },
+    "bindings": {
+      "quote": "검증된 IP와 현지 배급 네트워크의 결합이\n해외 진출 성패를 가르는 핵심 요인이다.",
+      "author": "글로벌 콘텐츠 진출 전략 세미나, 2025"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "인용",
+      "핵심 문구 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-138",
+    "category": "HDR",
+    "name": "인용 블록 · IP·배급 결합 (레드)",
+    "file": "decks/09_headers/HDR_bulk_quote-block_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:HDR-138",
+    "tags": [
+      "인용",
+      "쿼트",
+      "따옴표",
+      "블록",
+      "레드"
+    ],
+    "params": {
+      "accent": "red_500",
+      "w_in": 6.0,
+      "h_in": 1.9
+    },
+    "bindings": {
+      "quote": "검증된 IP와 현지 배급 네트워크의 결합이\n해외 진출 성패를 가르는 핵심 요인이다.",
+      "author": "글로벌 콘텐츠 진출 전략 세미나, 2025"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "인용",
+      "핵심 문구 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-139",
+    "category": "HDR",
+    "name": "통계 콜아웃 밴드 · 성장률 (네이비)",
+    "file": "decks/09_headers/HDR_bulk_stat-band_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-139",
+    "tags": [
+      "통계",
+      "콜아웃",
+      "밴드",
+      "지표",
+      "네이비"
+    ],
+    "params": {
+      "fill": "navy_800",
+      "w_in": 7.2,
+      "h_in": 1.15
+    },
+    "bindings": {
+      "number": "127%",
+      "unit": "전년 대비",
+      "desc": "해외 콘텐츠 수출액 성장률"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 지표",
+      "성과 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-140",
+    "category": "HDR",
+    "name": "통계 콜아웃 밴드 · 성장률 (블루)",
+    "file": "decks/09_headers/HDR_bulk_stat-band_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-140",
+    "tags": [
+      "통계",
+      "콜아웃",
+      "밴드",
+      "지표",
+      "블루"
+    ],
+    "params": {
+      "fill": "blue_500",
+      "w_in": 7.2,
+      "h_in": 1.15
+    },
+    "bindings": {
+      "number": "127%",
+      "unit": "전년 대비",
+      "desc": "해외 콘텐츠 수출액 성장률"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 지표",
+      "성과 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-141",
+    "category": "HDR",
+    "name": "통계 콜아웃 밴드 · 성장률 (틸)",
+    "file": "decks/09_headers/HDR_bulk_stat-band_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-141",
+    "tags": [
+      "통계",
+      "콜아웃",
+      "밴드",
+      "지표",
+      "틸"
+    ],
+    "params": {
+      "fill": "teal_500",
+      "w_in": 7.2,
+      "h_in": 1.15
+    },
+    "bindings": {
+      "number": "127%",
+      "unit": "전년 대비",
+      "desc": "해외 콘텐츠 수출액 성장률"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 지표",
+      "성과 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-142",
+    "category": "HDR",
+    "name": "통계 콜아웃 밴드 · 성장률 (퍼플)",
+    "file": "decks/09_headers/HDR_bulk_stat-band_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-142",
+    "tags": [
+      "통계",
+      "콜아웃",
+      "밴드",
+      "지표",
+      "퍼플"
+    ],
+    "params": {
+      "fill": "purple_600",
+      "w_in": 7.2,
+      "h_in": 1.15
+    },
+    "bindings": {
+      "number": "127%",
+      "unit": "전년 대비",
+      "desc": "해외 콘텐츠 수출액 성장률"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 지표",
+      "성과 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-143",
+    "category": "HDR",
+    "name": "통계 콜아웃 밴드 · 성장률 (시안)",
+    "file": "decks/09_headers/HDR_bulk_stat-band_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-143",
+    "tags": [
+      "통계",
+      "콜아웃",
+      "밴드",
+      "지표",
+      "시안"
+    ],
+    "params": {
+      "fill": "cyan_500",
+      "w_in": 7.2,
+      "h_in": 1.15
+    },
+    "bindings": {
+      "number": "127%",
+      "unit": "전년 대비",
+      "desc": "해외 콘텐츠 수출액 성장률"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 지표",
+      "성과 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-144",
+    "category": "HDR",
+    "name": "통계 콜아웃 밴드 · 성장률 (레드)",
+    "file": "decks/09_headers/HDR_bulk_stat-band_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-144",
+    "tags": [
+      "통계",
+      "콜아웃",
+      "밴드",
+      "지표",
+      "레드"
+    ],
+    "params": {
+      "fill": "red_500",
+      "w_in": 7.2,
+      "h_in": 1.15
+    },
+    "bindings": {
+      "number": "127%",
+      "unit": "전년 대비",
+      "desc": "해외 콘텐츠 수출액 성장률"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 지표",
+      "성과 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-145",
+    "category": "HDR",
+    "name": "통계 콜아웃 밴드 · 매출 규모 (네이비)",
+    "file": "decks/09_headers/HDR_bulk_stat-band_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-145",
+    "tags": [
+      "통계",
+      "콜아웃",
+      "밴드",
+      "지표",
+      "네이비"
+    ],
+    "params": {
+      "fill": "navy_800",
+      "w_in": 7.2,
+      "h_in": 1.15
+    },
+    "bindings": {
+      "number": "84.2억",
+      "unit": "누적",
+      "desc": "해외 라이선싱 매출 규모"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 지표",
+      "성과 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-146",
+    "category": "HDR",
+    "name": "통계 콜아웃 밴드 · 매출 규모 (블루)",
+    "file": "decks/09_headers/HDR_bulk_stat-band_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-146",
+    "tags": [
+      "통계",
+      "콜아웃",
+      "밴드",
+      "지표",
+      "블루"
+    ],
+    "params": {
+      "fill": "blue_500",
+      "w_in": 7.2,
+      "h_in": 1.15
+    },
+    "bindings": {
+      "number": "84.2억",
+      "unit": "누적",
+      "desc": "해외 라이선싱 매출 규모"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 지표",
+      "성과 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-147",
+    "category": "HDR",
+    "name": "통계 콜아웃 밴드 · 매출 규모 (틸)",
+    "file": "decks/09_headers/HDR_bulk_stat-band_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:HDR-147",
+    "tags": [
+      "통계",
+      "콜아웃",
+      "밴드",
+      "지표",
+      "틸"
+    ],
+    "params": {
+      "fill": "teal_500",
+      "w_in": 7.2,
+      "h_in": 1.15
+    },
+    "bindings": {
+      "number": "84.2억",
+      "unit": "누적",
+      "desc": "해외 라이선싱 매출 규모"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 지표",
+      "성과 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-148",
+    "category": "HDR",
+    "name": "통계 콜아웃 밴드 · 매출 규모 (퍼플)",
+    "file": "decks/09_headers/HDR_bulk_stat-band_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:HDR-148",
+    "tags": [
+      "통계",
+      "콜아웃",
+      "밴드",
+      "지표",
+      "퍼플"
+    ],
+    "params": {
+      "fill": "purple_600",
+      "w_in": 7.2,
+      "h_in": 1.15
+    },
+    "bindings": {
+      "number": "84.2억",
+      "unit": "누적",
+      "desc": "해외 라이선싱 매출 규모"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 지표",
+      "성과 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-149",
+    "category": "HDR",
+    "name": "통계 콜아웃 밴드 · 매출 규모 (시안)",
+    "file": "decks/09_headers/HDR_bulk_stat-band_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:HDR-149",
+    "tags": [
+      "통계",
+      "콜아웃",
+      "밴드",
+      "지표",
+      "시안"
+    ],
+    "params": {
+      "fill": "cyan_500",
+      "w_in": 7.2,
+      "h_in": 1.15
+    },
+    "bindings": {
+      "number": "84.2억",
+      "unit": "누적",
+      "desc": "해외 라이선싱 매출 규모"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 지표",
+      "성과 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-150",
+    "category": "HDR",
+    "name": "통계 콜아웃 밴드 · 매출 규모 (레드)",
+    "file": "decks/09_headers/HDR_bulk_stat-band_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:HDR-150",
+    "tags": [
+      "통계",
+      "콜아웃",
+      "밴드",
+      "지표",
+      "레드"
+    ],
+    "params": {
+      "fill": "red_500",
+      "w_in": 7.2,
+      "h_in": 1.15
+    },
+    "bindings": {
+      "number": "84.2억",
+      "unit": "누적",
+      "desc": "해외 라이선싱 매출 규모"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 지표",
+      "성과 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-151",
+    "category": "HDR",
+    "name": "아젠다 항목 행 세트 (네이비)",
+    "file": "decks/09_headers/HDR_bulk_agenda-rows_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-151",
+    "tags": [
+      "아젠다",
+      "목차",
+      "행세트",
+      "번호원",
+      "네이비"
+    ],
+    "params": {
+      "accent": "navy_800",
+      "count": 3,
+      "row_h_in": 1.0
+    },
+    "bindings": {
+      "items": [
+        [
+          "01",
+          "사업 추진 배경 및 필요성",
+          "글로벌 콘텐츠 시장 환경 변화와 진출 기회 분석"
+        ],
+        [
+          "02",
+          "핵심 추진 전략 및 실행 방안",
+          "권역별 현지화·배급 파트너십 기반 단계별 실행"
+        ],
+        [
+          "03",
+          "기대효과 및 성과 활용 계획",
+          "신규 해외 매출 파이프라인 확보와 IP 가치 제고"
+        ]
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "아젠다",
+      "목차 본문"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-152",
+    "category": "HDR",
+    "name": "아젠다 항목 행 세트 (블루)",
+    "file": "decks/09_headers/HDR_bulk_agenda-rows_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-152",
+    "tags": [
+      "아젠다",
+      "목차",
+      "행세트",
+      "번호원",
+      "블루"
+    ],
+    "params": {
+      "accent": "blue_500",
+      "count": 3,
+      "row_h_in": 1.0
+    },
+    "bindings": {
+      "items": [
+        [
+          "01",
+          "사업 추진 배경 및 필요성",
+          "글로벌 콘텐츠 시장 환경 변화와 진출 기회 분석"
+        ],
+        [
+          "02",
+          "핵심 추진 전략 및 실행 방안",
+          "권역별 현지화·배급 파트너십 기반 단계별 실행"
+        ],
+        [
+          "03",
+          "기대효과 및 성과 활용 계획",
+          "신규 해외 매출 파이프라인 확보와 IP 가치 제고"
+        ]
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "아젠다",
+      "목차 본문"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-153",
+    "category": "HDR",
+    "name": "아젠다 항목 행 세트 (틸)",
+    "file": "decks/09_headers/HDR_bulk_agenda-rows_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-153",
+    "tags": [
+      "아젠다",
+      "목차",
+      "행세트",
+      "번호원",
+      "틸"
+    ],
+    "params": {
+      "accent": "teal_500",
+      "count": 3,
+      "row_h_in": 1.0
+    },
+    "bindings": {
+      "items": [
+        [
+          "01",
+          "사업 추진 배경 및 필요성",
+          "글로벌 콘텐츠 시장 환경 변화와 진출 기회 분석"
+        ],
+        [
+          "02",
+          "핵심 추진 전략 및 실행 방안",
+          "권역별 현지화·배급 파트너십 기반 단계별 실행"
+        ],
+        [
+          "03",
+          "기대효과 및 성과 활용 계획",
+          "신규 해외 매출 파이프라인 확보와 IP 가치 제고"
+        ]
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "아젠다",
+      "목차 본문"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-154",
+    "category": "HDR",
+    "name": "아젠다 항목 행 세트 (퍼플)",
+    "file": "decks/09_headers/HDR_bulk_agenda-rows_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-154",
+    "tags": [
+      "아젠다",
+      "목차",
+      "행세트",
+      "번호원",
+      "퍼플"
+    ],
+    "params": {
+      "accent": "purple_600",
+      "count": 3,
+      "row_h_in": 1.0
+    },
+    "bindings": {
+      "items": [
+        [
+          "01",
+          "사업 추진 배경 및 필요성",
+          "글로벌 콘텐츠 시장 환경 변화와 진출 기회 분석"
+        ],
+        [
+          "02",
+          "핵심 추진 전략 및 실행 방안",
+          "권역별 현지화·배급 파트너십 기반 단계별 실행"
+        ],
+        [
+          "03",
+          "기대효과 및 성과 활용 계획",
+          "신규 해외 매출 파이프라인 확보와 IP 가치 제고"
+        ]
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "아젠다",
+      "목차 본문"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-155",
+    "category": "HDR",
+    "name": "아젠다 항목 행 세트 (시안)",
+    "file": "decks/09_headers/HDR_bulk_agenda-rows_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:HDR-155",
+    "tags": [
+      "아젠다",
+      "목차",
+      "행세트",
+      "번호원",
+      "시안"
+    ],
+    "params": {
+      "accent": "cyan_500",
+      "count": 3,
+      "row_h_in": 1.0
+    },
+    "bindings": {
+      "items": [
+        [
+          "01",
+          "사업 추진 배경 및 필요성",
+          "글로벌 콘텐츠 시장 환경 변화와 진출 기회 분석"
+        ],
+        [
+          "02",
+          "핵심 추진 전략 및 실행 방안",
+          "권역별 현지화·배급 파트너십 기반 단계별 실행"
+        ],
+        [
+          "03",
+          "기대효과 및 성과 활용 계획",
+          "신규 해외 매출 파이프라인 확보와 IP 가치 제고"
+        ]
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "아젠다",
+      "목차 본문"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-156",
+    "category": "HDR",
+    "name": "아젠다 항목 행 세트 (레드)",
+    "file": "decks/09_headers/HDR_bulk_agenda-rows_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:HDR-156",
+    "tags": [
+      "아젠다",
+      "목차",
+      "행세트",
+      "번호원",
+      "레드"
+    ],
+    "params": {
+      "accent": "red_500",
+      "count": 3,
+      "row_h_in": 1.0
+    },
+    "bindings": {
+      "items": [
+        [
+          "01",
+          "사업 추진 배경 및 필요성",
+          "글로벌 콘텐츠 시장 환경 변화와 진출 기회 분석"
+        ],
+        [
+          "02",
+          "핵심 추진 전략 및 실행 방안",
+          "권역별 현지화·배급 파트너십 기반 단계별 실행"
+        ],
+        [
+          "03",
+          "기대효과 및 성과 활용 계획",
+          "신규 해외 매출 파이프라인 확보와 IP 가치 제고"
+        ]
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "아젠다",
+      "목차 본문"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-157",
+    "category": "HDR",
+    "name": "구분선 변형 · 와이드 (네이비)",
+    "file": "decks/09_headers/HDR_bulk_dividers_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-157",
+    "tags": [
+      "구분선",
+      "디바이더",
+      "그라데이션",
+      "도트",
+      "네이비"
+    ],
+    "params": {
+      "accent": "navy_800",
+      "w_in": 8.8,
+      "variants": [
+        "gradient",
+        "dot"
+      ]
+    },
+    "bindings": {},
+    "editable": [
+      "color",
+      "width"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분",
+      "단락 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-158",
+    "category": "HDR",
+    "name": "구분선 변형 · 와이드 (블루)",
+    "file": "decks/09_headers/HDR_bulk_dividers_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-158",
+    "tags": [
+      "구분선",
+      "디바이더",
+      "그라데이션",
+      "도트",
+      "블루"
+    ],
+    "params": {
+      "accent": "blue_500",
+      "w_in": 8.8,
+      "variants": [
+        "gradient",
+        "dot"
+      ]
+    },
+    "bindings": {},
+    "editable": [
+      "color",
+      "width"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분",
+      "단락 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-159",
+    "category": "HDR",
+    "name": "구분선 변형 · 와이드 (틸)",
+    "file": "decks/09_headers/HDR_bulk_dividers_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-159",
+    "tags": [
+      "구분선",
+      "디바이더",
+      "그라데이션",
+      "도트",
+      "틸"
+    ],
+    "params": {
+      "accent": "teal_500",
+      "w_in": 8.8,
+      "variants": [
+        "gradient",
+        "dot"
+      ]
+    },
+    "bindings": {},
+    "editable": [
+      "color",
+      "width"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분",
+      "단락 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-160",
+    "category": "HDR",
+    "name": "구분선 변형 · 와이드 (퍼플)",
+    "file": "decks/09_headers/HDR_bulk_dividers_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-160",
+    "tags": [
+      "구분선",
+      "디바이더",
+      "그라데이션",
+      "도트",
+      "퍼플"
+    ],
+    "params": {
+      "accent": "purple_600",
+      "w_in": 8.8,
+      "variants": [
+        "gradient",
+        "dot"
+      ]
+    },
+    "bindings": {},
+    "editable": [
+      "color",
+      "width"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분",
+      "단락 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-161",
+    "category": "HDR",
+    "name": "구분선 변형 · 와이드 (시안)",
+    "file": "decks/09_headers/HDR_bulk_dividers_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-161",
+    "tags": [
+      "구분선",
+      "디바이더",
+      "그라데이션",
+      "도트",
+      "시안"
+    ],
+    "params": {
+      "accent": "cyan_500",
+      "w_in": 8.8,
+      "variants": [
+        "gradient",
+        "dot"
+      ]
+    },
+    "bindings": {},
+    "editable": [
+      "color",
+      "width"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분",
+      "단락 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-162",
+    "category": "HDR",
+    "name": "구분선 변형 · 와이드 (레드)",
+    "file": "decks/09_headers/HDR_bulk_dividers_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-162",
+    "tags": [
+      "구분선",
+      "디바이더",
+      "그라데이션",
+      "도트",
+      "레드"
+    ],
+    "params": {
+      "accent": "red_500",
+      "w_in": 8.8,
+      "variants": [
+        "gradient",
+        "dot"
+      ]
+    },
+    "bindings": {},
+    "editable": [
+      "color",
+      "width"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분",
+      "단락 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-163",
+    "category": "HDR",
+    "name": "구분선 변형 · 컴팩트 (네이비)",
+    "file": "decks/09_headers/HDR_bulk_dividers_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-163",
+    "tags": [
+      "구분선",
+      "디바이더",
+      "그라데이션",
+      "도트",
+      "네이비"
+    ],
+    "params": {
+      "accent": "navy_800",
+      "w_in": 6.0,
+      "variants": [
+        "gradient",
+        "dot"
+      ]
+    },
+    "bindings": {},
+    "editable": [
+      "color",
+      "width"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분",
+      "단락 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-164",
+    "category": "HDR",
+    "name": "구분선 변형 · 컴팩트 (블루)",
+    "file": "decks/09_headers/HDR_bulk_dividers_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-164",
+    "tags": [
+      "구분선",
+      "디바이더",
+      "그라데이션",
+      "도트",
+      "블루"
+    ],
+    "params": {
+      "accent": "blue_500",
+      "w_in": 6.0,
+      "variants": [
+        "gradient",
+        "dot"
+      ]
+    },
+    "bindings": {},
+    "editable": [
+      "color",
+      "width"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분",
+      "단락 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-165",
+    "category": "HDR",
+    "name": "구분선 변형 · 컴팩트 (틸)",
+    "file": "decks/09_headers/HDR_bulk_dividers_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-165",
+    "tags": [
+      "구분선",
+      "디바이더",
+      "그라데이션",
+      "도트",
+      "틸"
+    ],
+    "params": {
+      "accent": "teal_500",
+      "w_in": 6.0,
+      "variants": [
+        "gradient",
+        "dot"
+      ]
+    },
+    "bindings": {},
+    "editable": [
+      "color",
+      "width"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분",
+      "단락 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-166",
+    "category": "HDR",
+    "name": "구분선 변형 · 컴팩트 (퍼플)",
+    "file": "decks/09_headers/HDR_bulk_dividers_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-166",
+    "tags": [
+      "구분선",
+      "디바이더",
+      "그라데이션",
+      "도트",
+      "퍼플"
+    ],
+    "params": {
+      "accent": "purple_600",
+      "w_in": 6.0,
+      "variants": [
+        "gradient",
+        "dot"
+      ]
+    },
+    "bindings": {},
+    "editable": [
+      "color",
+      "width"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분",
+      "단락 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-167",
+    "category": "HDR",
+    "name": "구분선 변형 · 컴팩트 (시안)",
+    "file": "decks/09_headers/HDR_bulk_dividers_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-167",
+    "tags": [
+      "구분선",
+      "디바이더",
+      "그라데이션",
+      "도트",
+      "시안"
+    ],
+    "params": {
+      "accent": "cyan_500",
+      "w_in": 6.0,
+      "variants": [
+        "gradient",
+        "dot"
+      ]
+    },
+    "bindings": {},
+    "editable": [
+      "color",
+      "width"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분",
+      "단락 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-168",
+    "category": "HDR",
+    "name": "구분선 변형 · 컴팩트 (레드)",
+    "file": "decks/09_headers/HDR_bulk_dividers_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-168",
+    "tags": [
+      "구분선",
+      "디바이더",
+      "그라데이션",
+      "도트",
+      "레드"
+    ],
+    "params": {
+      "accent": "red_500",
+      "w_in": 6.0,
+      "variants": [
+        "gradient",
+        "dot"
+      ]
+    },
+    "bindings": {},
+    "editable": [
+      "color",
+      "width"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분",
+      "단락 구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-169",
+    "category": "HDR",
+    "name": "스텝 라벨 · STEP 01 (네이비)",
+    "file": "decks/09_headers/HDR_bulk_step-label_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-169",
+    "tags": [
+      "스텝",
+      "단계",
+      "STEP",
+      "원형",
+      "네이비"
+    ],
+    "params": {
+      "accent": "navy_800",
+      "w_in": 5.4
+    },
+    "bindings": {
+      "step_no": "01",
+      "kicker": "STEP 01",
+      "title": "시장 조사 및 현황 진단"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계 표시",
+      "프로세스 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-170",
+    "category": "HDR",
+    "name": "스텝 라벨 · STEP 01 (블루)",
+    "file": "decks/09_headers/HDR_bulk_step-label_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-170",
+    "tags": [
+      "스텝",
+      "단계",
+      "STEP",
+      "원형",
+      "블루"
+    ],
+    "params": {
+      "accent": "blue_500",
+      "w_in": 5.4
+    },
+    "bindings": {
+      "step_no": "01",
+      "kicker": "STEP 01",
+      "title": "시장 조사 및 현황 진단"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계 표시",
+      "프로세스 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-171",
+    "category": "HDR",
+    "name": "스텝 라벨 · STEP 01 (틸)",
+    "file": "decks/09_headers/HDR_bulk_step-label_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-171",
+    "tags": [
+      "스텝",
+      "단계",
+      "STEP",
+      "원형",
+      "틸"
+    ],
+    "params": {
+      "accent": "teal_500",
+      "w_in": 5.4
+    },
+    "bindings": {
+      "step_no": "01",
+      "kicker": "STEP 01",
+      "title": "시장 조사 및 현황 진단"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계 표시",
+      "프로세스 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-172",
+    "category": "HDR",
+    "name": "스텝 라벨 · STEP 01 (퍼플)",
+    "file": "decks/09_headers/HDR_bulk_step-label_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-172",
+    "tags": [
+      "스텝",
+      "단계",
+      "STEP",
+      "원형",
+      "퍼플"
+    ],
+    "params": {
+      "accent": "purple_600",
+      "w_in": 5.4
+    },
+    "bindings": {
+      "step_no": "01",
+      "kicker": "STEP 01",
+      "title": "시장 조사 및 현황 진단"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계 표시",
+      "프로세스 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-173",
+    "category": "HDR",
+    "name": "스텝 라벨 · STEP 01 (시안)",
+    "file": "decks/09_headers/HDR_bulk_step-label_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-173",
+    "tags": [
+      "스텝",
+      "단계",
+      "STEP",
+      "원형",
+      "시안"
+    ],
+    "params": {
+      "accent": "cyan_500",
+      "w_in": 5.4
+    },
+    "bindings": {
+      "step_no": "01",
+      "kicker": "STEP 01",
+      "title": "시장 조사 및 현황 진단"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계 표시",
+      "프로세스 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-174",
+    "category": "HDR",
+    "name": "스텝 라벨 · STEP 01 (레드)",
+    "file": "decks/09_headers/HDR_bulk_step-label_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-174",
+    "tags": [
+      "스텝",
+      "단계",
+      "STEP",
+      "원형",
+      "레드"
+    ],
+    "params": {
+      "accent": "red_500",
+      "w_in": 5.4
+    },
+    "bindings": {
+      "step_no": "01",
+      "kicker": "STEP 01",
+      "title": "시장 조사 및 현황 진단"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계 표시",
+      "프로세스 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-175",
+    "category": "HDR",
+    "name": "스텝 라벨 · STEP 02 (네이비)",
+    "file": "decks/09_headers/HDR_bulk_step-label_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-175",
+    "tags": [
+      "스텝",
+      "단계",
+      "STEP",
+      "원형",
+      "네이비"
+    ],
+    "params": {
+      "accent": "navy_800",
+      "w_in": 5.4
+    },
+    "bindings": {
+      "step_no": "02",
+      "kicker": "STEP 02",
+      "title": "현지화 전략 수립 및 실행"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계 표시",
+      "프로세스 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-176",
+    "category": "HDR",
+    "name": "스텝 라벨 · STEP 02 (블루)",
+    "file": "decks/09_headers/HDR_bulk_step-label_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-176",
+    "tags": [
+      "스텝",
+      "단계",
+      "STEP",
+      "원형",
+      "블루"
+    ],
+    "params": {
+      "accent": "blue_500",
+      "w_in": 5.4
+    },
+    "bindings": {
+      "step_no": "02",
+      "kicker": "STEP 02",
+      "title": "현지화 전략 수립 및 실행"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계 표시",
+      "프로세스 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-177",
+    "category": "HDR",
+    "name": "스텝 라벨 · STEP 02 (틸)",
+    "file": "decks/09_headers/HDR_bulk_step-label_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-177",
+    "tags": [
+      "스텝",
+      "단계",
+      "STEP",
+      "원형",
+      "틸"
+    ],
+    "params": {
+      "accent": "teal_500",
+      "w_in": 5.4
+    },
+    "bindings": {
+      "step_no": "02",
+      "kicker": "STEP 02",
+      "title": "현지화 전략 수립 및 실행"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계 표시",
+      "프로세스 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-178",
+    "category": "HDR",
+    "name": "스텝 라벨 · STEP 02 (퍼플)",
+    "file": "decks/09_headers/HDR_bulk_step-label_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-178",
+    "tags": [
+      "스텝",
+      "단계",
+      "STEP",
+      "원형",
+      "퍼플"
+    ],
+    "params": {
+      "accent": "purple_600",
+      "w_in": 5.4
+    },
+    "bindings": {
+      "step_no": "02",
+      "kicker": "STEP 02",
+      "title": "현지화 전략 수립 및 실행"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계 표시",
+      "프로세스 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-179",
+    "category": "HDR",
+    "name": "스텝 라벨 · STEP 02 (시안)",
+    "file": "decks/09_headers/HDR_bulk_step-label_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-179",
+    "tags": [
+      "스텝",
+      "단계",
+      "STEP",
+      "원형",
+      "시안"
+    ],
+    "params": {
+      "accent": "cyan_500",
+      "w_in": 5.4
+    },
+    "bindings": {
+      "step_no": "02",
+      "kicker": "STEP 02",
+      "title": "현지화 전략 수립 및 실행"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계 표시",
+      "프로세스 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-180",
+    "category": "HDR",
+    "name": "스텝 라벨 · STEP 02 (레드)",
+    "file": "decks/09_headers/HDR_bulk_step-label_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-180",
+    "tags": [
+      "스텝",
+      "단계",
+      "STEP",
+      "원형",
+      "레드"
+    ],
+    "params": {
+      "accent": "red_500",
+      "w_in": 5.4
+    },
+    "bindings": {
+      "step_no": "02",
+      "kicker": "STEP 02",
+      "title": "현지화 전략 수립 및 실행"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계 표시",
+      "프로세스 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-181",
+    "category": "HDR",
+    "name": "인라인 KPI 헤더 · 성과 요약 (네이비)",
+    "file": "decks/09_headers/HDR_bulk_inline-kpi_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-181",
+    "tags": [
+      "KPI",
+      "헤더",
+      "인라인",
+      "지표",
+      "네이비"
+    ],
+    "params": {
+      "accent": "navy_800",
+      "w_in": 8.6,
+      "h_in": 0.9
+    },
+    "bindings": {
+      "title": "해외사업 성과 요약",
+      "metric": "84.2억 원",
+      "metric_label": "누적 수출 매출"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 헤더",
+      "지표 병기 제목"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-182",
+    "category": "HDR",
+    "name": "인라인 KPI 헤더 · 성과 요약 (블루)",
+    "file": "decks/09_headers/HDR_bulk_inline-kpi_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-182",
+    "tags": [
+      "KPI",
+      "헤더",
+      "인라인",
+      "지표",
+      "블루"
+    ],
+    "params": {
+      "accent": "blue_500",
+      "w_in": 8.6,
+      "h_in": 0.9
+    },
+    "bindings": {
+      "title": "해외사업 성과 요약",
+      "metric": "84.2억 원",
+      "metric_label": "누적 수출 매출"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 헤더",
+      "지표 병기 제목"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-183",
+    "category": "HDR",
+    "name": "인라인 KPI 헤더 · 성과 요약 (틸)",
+    "file": "decks/09_headers/HDR_bulk_inline-kpi_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-183",
+    "tags": [
+      "KPI",
+      "헤더",
+      "인라인",
+      "지표",
+      "틸"
+    ],
+    "params": {
+      "accent": "teal_500",
+      "w_in": 8.6,
+      "h_in": 0.9
+    },
+    "bindings": {
+      "title": "해외사업 성과 요약",
+      "metric": "84.2억 원",
+      "metric_label": "누적 수출 매출"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 헤더",
+      "지표 병기 제목"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-184",
+    "category": "HDR",
+    "name": "인라인 KPI 헤더 · 성과 요약 (퍼플)",
+    "file": "decks/09_headers/HDR_bulk_inline-kpi_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-184",
+    "tags": [
+      "KPI",
+      "헤더",
+      "인라인",
+      "지표",
+      "퍼플"
+    ],
+    "params": {
+      "accent": "purple_600",
+      "w_in": 8.6,
+      "h_in": 0.9
+    },
+    "bindings": {
+      "title": "해외사업 성과 요약",
+      "metric": "84.2억 원",
+      "metric_label": "누적 수출 매출"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 헤더",
+      "지표 병기 제목"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-185",
+    "category": "HDR",
+    "name": "인라인 KPI 헤더 · 성과 요약 (시안)",
+    "file": "decks/09_headers/HDR_bulk_inline-kpi_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-185",
+    "tags": [
+      "KPI",
+      "헤더",
+      "인라인",
+      "지표",
+      "시안"
+    ],
+    "params": {
+      "accent": "cyan_500",
+      "w_in": 8.6,
+      "h_in": 0.9
+    },
+    "bindings": {
+      "title": "해외사업 성과 요약",
+      "metric": "84.2억 원",
+      "metric_label": "누적 수출 매출"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 헤더",
+      "지표 병기 제목"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-186",
+    "category": "HDR",
+    "name": "인라인 KPI 헤더 · 성과 요약 (레드)",
+    "file": "decks/09_headers/HDR_bulk_inline-kpi_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-186",
+    "tags": [
+      "KPI",
+      "헤더",
+      "인라인",
+      "지표",
+      "레드"
+    ],
+    "params": {
+      "accent": "red_500",
+      "w_in": 8.6,
+      "h_in": 0.9
+    },
+    "bindings": {
+      "title": "해외사업 성과 요약",
+      "metric": "84.2억 원",
+      "metric_label": "누적 수출 매출"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 헤더",
+      "지표 병기 제목"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-187",
+    "category": "HDR",
+    "name": "인라인 KPI 헤더 · 수출 실적 (네이비)",
+    "file": "decks/09_headers/HDR_bulk_inline-kpi_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-187",
+    "tags": [
+      "KPI",
+      "헤더",
+      "인라인",
+      "지표",
+      "네이비"
+    ],
+    "params": {
+      "accent": "navy_800",
+      "w_in": 8.6,
+      "h_in": 0.9
+    },
+    "bindings": {
+      "title": "콘텐츠 수출 실적",
+      "metric": "127%",
+      "metric_label": "전년 대비 성장"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 헤더",
+      "지표 병기 제목"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-188",
+    "category": "HDR",
+    "name": "인라인 KPI 헤더 · 수출 실적 (블루)",
+    "file": "decks/09_headers/HDR_bulk_inline-kpi_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-188",
+    "tags": [
+      "KPI",
+      "헤더",
+      "인라인",
+      "지표",
+      "블루"
+    ],
+    "params": {
+      "accent": "blue_500",
+      "w_in": 8.6,
+      "h_in": 0.9
+    },
+    "bindings": {
+      "title": "콘텐츠 수출 실적",
+      "metric": "127%",
+      "metric_label": "전년 대비 성장"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 헤더",
+      "지표 병기 제목"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-189",
+    "category": "HDR",
+    "name": "인라인 KPI 헤더 · 수출 실적 (틸)",
+    "file": "decks/09_headers/HDR_bulk_inline-kpi_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-189",
+    "tags": [
+      "KPI",
+      "헤더",
+      "인라인",
+      "지표",
+      "틸"
+    ],
+    "params": {
+      "accent": "teal_500",
+      "w_in": 8.6,
+      "h_in": 0.9
+    },
+    "bindings": {
+      "title": "콘텐츠 수출 실적",
+      "metric": "127%",
+      "metric_label": "전년 대비 성장"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 헤더",
+      "지표 병기 제목"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-190",
+    "category": "HDR",
+    "name": "인라인 KPI 헤더 · 수출 실적 (퍼플)",
+    "file": "decks/09_headers/HDR_bulk_inline-kpi_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-190",
+    "tags": [
+      "KPI",
+      "헤더",
+      "인라인",
+      "지표",
+      "퍼플"
+    ],
+    "params": {
+      "accent": "purple_600",
+      "w_in": 8.6,
+      "h_in": 0.9
+    },
+    "bindings": {
+      "title": "콘텐츠 수출 실적",
+      "metric": "127%",
+      "metric_label": "전년 대비 성장"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 헤더",
+      "지표 병기 제목"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-191",
+    "category": "HDR",
+    "name": "인라인 KPI 헤더 · 수출 실적 (시안)",
+    "file": "decks/09_headers/HDR_bulk_inline-kpi_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:HDR-191",
+    "tags": [
+      "KPI",
+      "헤더",
+      "인라인",
+      "지표",
+      "시안"
+    ],
+    "params": {
+      "accent": "cyan_500",
+      "w_in": 8.6,
+      "h_in": 0.9
+    },
+    "bindings": {
+      "title": "콘텐츠 수출 실적",
+      "metric": "127%",
+      "metric_label": "전년 대비 성장"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 헤더",
+      "지표 병기 제목"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-192",
+    "category": "HDR",
+    "name": "인라인 KPI 헤더 · 수출 실적 (레드)",
+    "file": "decks/09_headers/HDR_bulk_inline-kpi_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:HDR-192",
+    "tags": [
+      "KPI",
+      "헤더",
+      "인라인",
+      "지표",
+      "레드"
+    ],
+    "params": {
+      "accent": "red_500",
+      "w_in": 8.6,
+      "h_in": 0.9
+    },
+    "bindings": {
+      "title": "콘텐츠 수출 실적",
+      "metric": "127%",
+      "metric_label": "전년 대비 성장"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 헤더",
+      "지표 병기 제목"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-193",
+    "category": "HDR",
+    "name": "리본 배지 세트 (네이비)",
+    "file": "decks/09_headers/HDR_bulk_ribbon-set_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-193",
+    "tags": [
+      "배지",
+      "리본",
+      "태그",
+      "세트",
+      "네이비"
+    ],
+    "params": {
+      "accent": "navy_800",
+      "count": 3,
+      "w_each_in": 1.55
+    },
+    "bindings": {
+      "texts": [
+        "핵심",
+        "전략",
+        "성과"
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분류 태그",
+      "상태 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-194",
+    "category": "HDR",
+    "name": "리본 배지 세트 (블루)",
+    "file": "decks/09_headers/HDR_bulk_ribbon-set_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-194",
+    "tags": [
+      "배지",
+      "리본",
+      "태그",
+      "세트",
+      "블루"
+    ],
+    "params": {
+      "accent": "blue_500",
+      "count": 3,
+      "w_each_in": 1.55
+    },
+    "bindings": {
+      "texts": [
+        "핵심",
+        "전략",
+        "성과"
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분류 태그",
+      "상태 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-195",
+    "category": "HDR",
+    "name": "리본 배지 세트 (틸)",
+    "file": "decks/09_headers/HDR_bulk_ribbon-set_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-195",
+    "tags": [
+      "배지",
+      "리본",
+      "태그",
+      "세트",
+      "틸"
+    ],
+    "params": {
+      "accent": "teal_500",
+      "count": 3,
+      "w_each_in": 1.55
+    },
+    "bindings": {
+      "texts": [
+        "핵심",
+        "전략",
+        "성과"
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분류 태그",
+      "상태 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-196",
+    "category": "HDR",
+    "name": "리본 배지 세트 (퍼플)",
+    "file": "decks/09_headers/HDR_bulk_ribbon-set_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-196",
+    "tags": [
+      "배지",
+      "리본",
+      "태그",
+      "세트",
+      "퍼플"
+    ],
+    "params": {
+      "accent": "purple_600",
+      "count": 3,
+      "w_each_in": 1.55
+    },
+    "bindings": {
+      "texts": [
+        "핵심",
+        "전략",
+        "성과"
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분류 태그",
+      "상태 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-197",
+    "category": "HDR",
+    "name": "리본 배지 세트 (시안)",
+    "file": "decks/09_headers/HDR_bulk_ribbon-set_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-197",
+    "tags": [
+      "배지",
+      "리본",
+      "태그",
+      "세트",
+      "시안"
+    ],
+    "params": {
+      "accent": "cyan_500",
+      "count": 3,
+      "w_each_in": 1.55
+    },
+    "bindings": {
+      "texts": [
+        "핵심",
+        "전략",
+        "성과"
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분류 태그",
+      "상태 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-198",
+    "category": "HDR",
+    "name": "리본 배지 세트 (레드)",
+    "file": "decks/09_headers/HDR_bulk_ribbon-set_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-198",
+    "tags": [
+      "배지",
+      "리본",
+      "태그",
+      "세트",
+      "레드"
+    ],
+    "params": {
+      "accent": "red_500",
+      "count": 3,
+      "w_each_in": 1.55
+    },
+    "bindings": {
+      "texts": [
+        "핵심",
+        "전략",
+        "성과"
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "분류 태그",
+      "상태 라벨"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-199",
+    "category": "HDR",
+    "name": "탭 헤더 세트 (네이비)",
+    "file": "decks/09_headers/HDR_bulk_tab-header_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-199",
+    "tags": [
+      "탭",
+      "헤더",
+      "네비",
+      "세트",
+      "네이비"
+    ],
+    "params": {
+      "accent": "navy_800",
+      "count": 3,
+      "active_idx": 0,
+      "tab_w_in": 2.1
+    },
+    "bindings": {
+      "tabs": [
+        "추진 전략",
+        "추진 체계",
+        "기대효과"
+      ],
+      "active": "추진 전략"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "탭 네비게이션",
+      "섹션 헤더"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-200",
+    "category": "HDR",
+    "name": "탭 헤더 세트 (블루)",
+    "file": "decks/09_headers/HDR_bulk_tab-header_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-200",
+    "tags": [
+      "탭",
+      "헤더",
+      "네비",
+      "세트",
+      "블루"
+    ],
+    "params": {
+      "accent": "blue_500",
+      "count": 3,
+      "active_idx": 0,
+      "tab_w_in": 2.1
+    },
+    "bindings": {
+      "tabs": [
+        "추진 전략",
+        "추진 체계",
+        "기대효과"
+      ],
+      "active": "추진 전략"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "탭 네비게이션",
+      "섹션 헤더"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  }
+]

@@ -1,0 +1,461 @@
+[
+  {
+    "id": "ORG-009",
+    "category": "ORG",
+    "name": "RACI 책임 배분표 (업무×역할, R/A/C/I)",
+    "file": "decks/06_org/ORG_matrix_v2.pptx",
+    "slide": 1,
+    "anchor": "asset:ORG-009",
+    "tags": [
+      "RACI",
+      "책임배분",
+      "역할분담",
+      "매트릭스",
+      "표"
+    ],
+    "params": {
+      "rows": 7,
+      "roles": 5,
+      "codes": [
+        "R",
+        "A",
+        "C",
+        "I"
+      ]
+    },
+    "bindings": {
+      "roles": [
+        "총괄PM",
+        "기획팀",
+        "개발팀",
+        "현지화팀",
+        "품질(QA)"
+      ],
+      "activities": [
+        {
+          "task": "사업 착수·킥오프",
+          "assign": {
+            "총괄PM": "A",
+            "기획팀": "R",
+            "개발팀": "C",
+            "현지화팀": "I",
+            "품질(QA)": "I"
+          }
+        },
+        {
+          "task": "요구사항 정의",
+          "assign": {
+            "총괄PM": "A",
+            "기획팀": "R",
+            "개발팀": "C",
+            "현지화팀": "C",
+            "품질(QA)": "I"
+          }
+        },
+        {
+          "task": "플랫폼 설계·개발",
+          "assign": {
+            "총괄PM": "A",
+            "기획팀": "C",
+            "개발팀": "R",
+            "현지화팀": "I",
+            "품질(QA)": "C"
+          }
+        },
+        {
+          "task": "콘텐츠 현지화",
+          "assign": {
+            "총괄PM": "A",
+            "기획팀": "I",
+            "개발팀": "C",
+            "현지화팀": "R",
+            "품질(QA)": "C"
+          }
+        },
+        {
+          "task": "통합 QA 테스트",
+          "assign": {
+            "총괄PM": "A",
+            "기획팀": "I",
+            "개발팀": "C",
+            "현지화팀": "C",
+            "품질(QA)": "R"
+          }
+        },
+        {
+          "task": "발주처 보고·검수",
+          "assign": {
+            "총괄PM": "A",
+            "기획팀": "R",
+            "개발팀": "I",
+            "현지화팀": "I",
+            "품질(QA)": "I"
+          }
+        },
+        {
+          "task": "안정화·운영 이관",
+          "assign": {
+            "총괄PM": "A",
+            "기획팀": "I",
+            "개발팀": "R",
+            "현지화팀": "C",
+            "품질(QA)": "R"
+          }
+        }
+      ],
+      "legend": {
+        "R": "실무 담당",
+        "A": "최종 책임",
+        "C": "자문",
+        "I": "결과 공유"
+      }
+    },
+    "editable": [
+      "cell-text",
+      "add-row",
+      "add-col",
+      "marker",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "RACI",
+      "책임배분(R&R)",
+      "역할 책임 정의"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ORG-010",
+    "category": "ORG",
+    "name": "기능별 매트릭스 조직 (기능축×사업축)",
+    "file": "decks/06_org/ORG_matrix_v2.pptx",
+    "slide": 2,
+    "anchor": "asset:ORG-010",
+    "tags": [
+      "조직도",
+      "매트릭스",
+      "이중보고",
+      "기능별",
+      "사업별"
+    ],
+    "params": {
+      "functions": 4,
+      "projects": 3,
+      "orient": "matrix-grid"
+    },
+    "bindings": {
+      "pmo": "총괄 PMO",
+      "functions": [
+        "기획본부",
+        "개발본부",
+        "현지화본부",
+        "품질본부"
+      ],
+      "projects": [
+        "사업 A",
+        "사업 B",
+        "사업 C"
+      ],
+      "cells": 12
+    },
+    "editable": [
+      "node-text",
+      "add-function",
+      "add-project",
+      "color",
+      "connector"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "매트릭스 조직",
+      "이중 보고 체계",
+      "수행조직"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ORG-013",
+    "category": "ORG",
+    "name": "컨소시엄 역할분담표 (주관/참여사×업무)",
+    "file": "decks/06_org/ORG_matrix_v2.pptx",
+    "slide": 3,
+    "anchor": "asset:ORG-013",
+    "tags": [
+      "컨소시엄",
+      "역할분담",
+      "업무분장",
+      "WBS",
+      "표"
+    ],
+    "params": {
+      "companies": 4,
+      "work_packages": 4,
+      "show_share": true
+    },
+    "bindings": {
+      "work_packages": [
+        "WP1 플랫폼 개발",
+        "WP2 현지화",
+        "WP3 마케팅·배급",
+        "WP4 운영·유지보수"
+      ],
+      "members": [
+        {
+          "name": "주관사 ㈜가",
+          "assign": {
+            "WP1": "◎",
+            "WP2": "●",
+            "WP3": "–",
+            "WP4": "◎"
+          },
+          "share": "40%"
+        },
+        {
+          "name": "참여사 ㈜나",
+          "assign": {
+            "WP1": "●",
+            "WP2": "◎",
+            "WP3": "–",
+            "WP4": "●"
+          },
+          "share": "25%"
+        },
+        {
+          "name": "참여사 ㈜다",
+          "assign": {
+            "WP1": "–",
+            "WP2": "●",
+            "WP3": "◎",
+            "WP4": "–"
+          },
+          "share": "20%"
+        },
+        {
+          "name": "참여사 ㈜라",
+          "assign": {
+            "WP1": "–",
+            "WP2": "–",
+            "WP3": "●",
+            "WP4": "●"
+          },
+          "share": "15%"
+        }
+      ],
+      "legend": {
+        "◎": "주관 담당",
+        "●": "공동 참여",
+        "–": "미참여"
+      }
+    },
+    "editable": [
+      "cell-text",
+      "add-row",
+      "add-col",
+      "marker",
+      "share",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "컨소시엄",
+      "역할분담",
+      "업무분장"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ORG-011",
+    "category": "ORG",
+    "name": "파트너 생태계 (중앙+계층별 파트너군)",
+    "file": "decks/06_org/ORG_ecosystem_v2.pptx",
+    "slide": 1,
+    "anchor": "asset:ORG-011",
+    "tags": [
+      "생태계",
+      "파트너",
+      "네트워크",
+      "계층",
+      "협업"
+    ],
+    "params": {
+      "hub": 1,
+      "tiers": 3,
+      "orient": "ecosystem"
+    },
+    "bindings": {
+      "hub": "K-콘텐츠 통합 플랫폼",
+      "tiers": [
+        {
+          "tier": "1계층 · 핵심 파트너",
+          "partners": [
+            "글로벌 OTT",
+            "현지 메이저 배급사"
+          ]
+        },
+        {
+          "tier": "2계층 · 전략 파트너",
+          "partners": [
+            "제작 스튜디오",
+            "마케팅 대행사",
+            "전문 번역사"
+          ]
+        },
+        {
+          "tier": "3계층 · 협력 파트너",
+          "partners": [
+            "법무·자문",
+            "결제 PG사",
+            "데이터 분석"
+          ]
+        }
+      ]
+    },
+    "editable": [
+      "node-text",
+      "add-partner",
+      "add-tier",
+      "color",
+      "connector"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "파트너 생태계",
+      "협업 네트워크",
+      "협력 구조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ORG-012",
+    "category": "ORG",
+    "name": "위원회 구조 (위원장-분과위 3)",
+    "file": "decks/06_org/ORG_ecosystem_v2.pptx",
+    "slide": 2,
+    "anchor": "asset:ORG-012",
+    "tags": [
+      "위원회",
+      "거버넌스",
+      "분과위",
+      "심의",
+      "조직도"
+    ],
+    "params": {
+      "chair": 1,
+      "secretariat": 1,
+      "subcommittees": 3
+    },
+    "bindings": {
+      "chair": "추진위원장",
+      "secretariat": "사무국(간사)",
+      "subcommittees": [
+        {
+          "name": "기술 분과위",
+          "duties": [
+            "시스템·인프라 심의",
+            "보안·품질 기준",
+            "기술 자문"
+          ]
+        },
+        {
+          "name": "콘텐츠 분과위",
+          "duties": [
+            "콘텐츠 기획 심의",
+            "현지화 방향",
+            "저작권 검토"
+          ]
+        },
+        {
+          "name": "운영 분과위",
+          "duties": [
+            "사업 운영 점검",
+            "예산·일정 조정",
+            "성과 평가"
+          ]
+        }
+      ]
+    },
+    "editable": [
+      "node-text",
+      "add-subcommittee",
+      "color",
+      "connector"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "위원회 구조",
+      "거버넌스",
+      "심의 체계"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "ORG-014",
+    "category": "ORG",
+    "name": "에스컬레이션 체계 (단계별 대응 상향)",
+    "file": "decks/06_org/ORG_ecosystem_v2.pptx",
+    "slide": 3,
+    "anchor": "asset:ORG-014",
+    "tags": [
+      "에스컬레이션",
+      "이슈대응",
+      "단계",
+      "상향",
+      "체계도"
+    ],
+    "params": {
+      "levels": 4,
+      "direction": "upward"
+    },
+    "bindings": {
+      "levels": [
+        {
+          "step": 1,
+          "owner": "담당자 대응",
+          "sla": "대응시간 4시간 이내 · 현장 1차 조치"
+        },
+        {
+          "step": 2,
+          "owner": "팀장 대응",
+          "sla": "4시간 초과 시 · 자원 재배치 결정"
+        },
+        {
+          "step": 3,
+          "owner": "총괄PM 대응",
+          "sla": "24시간 초과 시 · 범위·일정 조정"
+        },
+        {
+          "step": 4,
+          "owner": "운영위원회 대응",
+          "sla": "중대 이슈 · 계약·정책 의사결정"
+        }
+      ]
+    },
+    "editable": [
+      "node-text",
+      "add-level",
+      "sla-text",
+      "color",
+      "connector"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "에스컬레이션",
+      "이슈 대응 체계",
+      "리스크 관리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  }
+]

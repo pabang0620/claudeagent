@@ -1,0 +1,335 @@
+[
+  {
+    "id": "HDR-017",
+    "category": "HDR",
+    "name": "아젠다 항목 행 세트 (번호+제목+설명)",
+    "file": "decks/09_headers/HDR_agenda-quote_v2.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-017",
+    "tags": [
+      "아젠다",
+      "목차",
+      "행세트",
+      "번호원",
+      "리스트"
+    ],
+    "params": {
+      "accent": "blue_500",
+      "count": 3,
+      "row_h_in": 1.0
+    },
+    "bindings": {
+      "items": [
+        [
+          "01",
+          "사업 추진 배경 및 필요성",
+          "글로벌 콘텐츠 시장 환경..."
+        ],
+        [
+          "02",
+          "핵심 추진 전략 및 실행 방안",
+          "권역별 현지화·배급..."
+        ],
+        [
+          "03",
+          "기대효과 및 성과 활용 계획",
+          "신규 해외 매출..."
+        ]
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "아젠다",
+      "목차 본문",
+      "항목 나열"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-018",
+    "category": "HDR",
+    "name": "인용 블록 (따옴표+문구+출처)",
+    "file": "decks/09_headers/HDR_agenda-quote_v2.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-018",
+    "tags": [
+      "인용",
+      "쿼트",
+      "따옴표",
+      "블록",
+      "강조"
+    ],
+    "params": {
+      "accent": "purple_600",
+      "w_in": 6.6,
+      "h_in": 1.9
+    },
+    "bindings": {
+      "quote": "현지 시청자의 문화적 맥락을...",
+      "author": "한국콘텐츠진흥원, 2025..."
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "인용",
+      "전문가 코멘트",
+      "핵심 문구 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-019",
+    "category": "HDR",
+    "name": "통계 콜아웃 밴드 (가로 띠+큰 숫자)",
+    "file": "decks/09_headers/HDR_stat-divider_v2.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-019",
+    "tags": [
+      "통계",
+      "콜아웃",
+      "밴드",
+      "지표",
+      "강조띠"
+    ],
+    "params": {
+      "fill": "navy_800",
+      "w_in": 7.2,
+      "h_in": 1.15
+    },
+    "bindings": {
+      "number": "127%",
+      "unit": "전년 대비",
+      "desc": "해외 콘텐츠 수출액 성장률"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심 지표",
+      "성과 강조",
+      "수치 헤드라인"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-020",
+    "category": "HDR",
+    "name": "구분선 변형 2종 (그라데이션 라인+도트 라인)",
+    "file": "decks/09_headers/HDR_stat-divider_v2.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-020",
+    "tags": [
+      "구분선",
+      "디바이더",
+      "그라데이션",
+      "도트",
+      "세퍼레이터"
+    ],
+    "params": {
+      "accent": "blue_500",
+      "w_in": 8.8,
+      "variants": [
+        "gradient",
+        "dot"
+      ]
+    },
+    "bindings": {},
+    "editable": [
+      "color",
+      "width"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분",
+      "단락 구분",
+      "시각 분리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-021",
+    "category": "HDR",
+    "name": "리본 배지 세트 (핵심/필수/신규)",
+    "file": "decks/09_headers/HDR_ribbon-tab_v2.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-021",
+    "tags": [
+      "배지",
+      "리본",
+      "태그",
+      "핵심",
+      "필수",
+      "신규",
+      "세트"
+    ],
+    "params": {
+      "count": 3,
+      "w_each_in": 1.55,
+      "h_in": 0.56
+    },
+    "bindings": {
+      "items": [
+        [
+          "핵심",
+          "navy_800"
+        ],
+        [
+          "필수",
+          "red_500"
+        ],
+        [
+          "신규",
+          "cyan_500"
+        ]
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "우선순위 표시",
+      "상태 라벨",
+      "분류 태그"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-022",
+    "category": "HDR",
+    "name": "탭 헤더 세트 (활성/비활성)",
+    "file": "decks/09_headers/HDR_ribbon-tab_v2.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-022",
+    "tags": [
+      "탭",
+      "헤더",
+      "네비",
+      "활성",
+      "비활성",
+      "세트"
+    ],
+    "params": {
+      "accent": "navy_800",
+      "count": 3,
+      "active_idx": 0,
+      "tab_w_in": 2.1
+    },
+    "bindings": {
+      "tabs": [
+        "추진 전략",
+        "추진 체계",
+        "기대효과"
+      ],
+      "active": "추진 전략"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "탭 네비게이션",
+      "카테고리 전환",
+      "섹션 헤더"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-023",
+    "category": "HDR",
+    "name": "스텝 라벨 (STEP 01 원형+텍스트)",
+    "file": "decks/09_headers/HDR_step-kpi_v2.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-023",
+    "tags": [
+      "스텝",
+      "단계",
+      "STEP",
+      "원형",
+      "라벨"
+    ],
+    "params": {
+      "accent": "teal_500",
+      "w_in": 5.4
+    },
+    "bindings": {
+      "step_no": "01",
+      "kicker": "STEP 01",
+      "title": "시장 조사 및 현황 진단"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계 표시",
+      "프로세스 라벨",
+      "순서 헤더"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "HDR-024",
+    "category": "HDR",
+    "name": "인라인 KPI 헤더 (제목+우측 지표)",
+    "file": "decks/09_headers/HDR_step-kpi_v2.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-024",
+    "tags": [
+      "KPI",
+      "헤더",
+      "인라인",
+      "지표",
+      "제목"
+    ],
+    "params": {
+      "accent": "blue_500",
+      "w_in": 8.6,
+      "h_in": 0.9
+    },
+    "bindings": {
+      "title": "해외사업 성과 요약",
+      "metric": "84.2억 원",
+      "metric_label": "누적 수출 매출"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 헤더",
+      "성과 헤더",
+      "지표 병기 제목"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  }
+]

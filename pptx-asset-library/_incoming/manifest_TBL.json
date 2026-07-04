@@ -1,0 +1,582 @@
+[
+  {
+    "id": "TBL-001",
+    "category": "TBL",
+    "name": "네이비 헤더 줄무늬 표 (3열)",
+    "file": "decks/01_tables/TBL_header-styles_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:TBL-001",
+    "tags": [
+      "표",
+      "3열",
+      "네이비헤더",
+      "줄무늬",
+      "정량비교",
+      "연도비교"
+    ],
+    "params": {
+      "cols": 3,
+      "rows": 5,
+      "header": "navy",
+      "stripe": true
+    },
+    "bindings": {
+      "header": [
+        "h1",
+        "h2",
+        "h3"
+      ],
+      "cells": "rows×cols 텍스트 그리드",
+      "row_count": 4,
+      "first_col": "label"
+    },
+    "editable": [
+      "text",
+      "row-add",
+      "header-color",
+      "cell-fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "연도별 정량비교",
+      "항목별 실적표",
+      "지표 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-002",
+    "category": "TBL",
+    "name": "네이비 헤더 줄무늬 표 (4열)",
+    "file": "decks/01_tables/TBL_header-styles_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:TBL-002",
+    "tags": [
+      "표",
+      "4열",
+      "네이비헤더",
+      "줄무늬",
+      "목표대비실적",
+      "달성률"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 5,
+      "header": "navy",
+      "stripe": true
+    },
+    "bindings": {
+      "header": [
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "cells": "rows×cols 텍스트 그리드",
+      "row_count": 4,
+      "first_col": "label"
+    },
+    "editable": [
+      "text",
+      "row-add",
+      "header-color",
+      "cell-fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "목표대비실적표",
+      "성과지표표",
+      "항목별 비교"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-003",
+    "category": "TBL",
+    "name": "네이비 헤더 줄무늬 표 (5열)",
+    "file": "decks/01_tables/TBL_header-styles_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:TBL-003",
+    "tags": [
+      "표",
+      "5열",
+      "네이비헤더",
+      "줄무늬",
+      "추진계획",
+      "산출물"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 5,
+      "header": "navy",
+      "stripe": true
+    },
+    "bindings": {
+      "header": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5"
+      ],
+      "cells": "rows×cols 텍스트 그리드",
+      "row_count": 4,
+      "first_col": "label"
+    },
+    "editable": [
+      "text",
+      "row-add",
+      "header-color",
+      "cell-fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진계획표",
+      "산출물 목록",
+      "업무분장표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-004",
+    "category": "TBL",
+    "name": "레드 강조 헤더 표 (증감·경고)",
+    "file": "decks/01_tables/TBL_header-styles_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:TBL-004",
+    "tags": [
+      "표",
+      "4열",
+      "레드헤더",
+      "경고",
+      "증감",
+      "리스크"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 5,
+      "header": "red",
+      "accent_col": 3
+    },
+    "bindings": {
+      "header": [
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "cells": "rows×cols 텍스트 그리드",
+      "row_count": 4,
+      "accent_column": "마지막열(증감) 레드 강조"
+    },
+    "editable": [
+      "text",
+      "row-add",
+      "header-color",
+      "cell-fill",
+      "accent-column"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "증감표",
+      "리스크표",
+      "경고·주의 지표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-005",
+    "category": "TBL",
+    "name": "퍼플 보조 헤더 표",
+    "file": "decks/01_tables/TBL_header-styles_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:TBL-005",
+    "tags": [
+      "표",
+      "4열",
+      "퍼플헤더",
+      "보조강조",
+      "프로그램",
+      "비중"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 5,
+      "header": "purple",
+      "stripe": true
+    },
+    "bindings": {
+      "header": [
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "cells": "rows×cols 텍스트 그리드",
+      "row_count": 4
+    },
+    "editable": [
+      "text",
+      "row-add",
+      "header-color",
+      "cell-fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "프로그램 구성표",
+      "세부 항목표",
+      "비중 분배표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-006",
+    "category": "TBL",
+    "name": "블루 강조 헤더 표 (3열)",
+    "file": "decks/01_tables/TBL_header-styles_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:TBL-006",
+    "tags": [
+      "표",
+      "3열",
+      "블루헤더",
+      "줄무늬",
+      "추진전략",
+      "기대효과"
+    ],
+    "params": {
+      "cols": 3,
+      "rows": 6,
+      "header": "blue",
+      "stripe": true
+    },
+    "bindings": {
+      "header": [
+        "h1",
+        "h2",
+        "h3"
+      ],
+      "cells": "rows×cols 텍스트 그리드",
+      "row_count": 5,
+      "first_col": "label"
+    },
+    "editable": [
+      "text",
+      "row-add",
+      "header-color",
+      "cell-fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진전략표",
+      "전략-과제-효과 매핑",
+      "항목별 설명표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-007",
+    "category": "TBL",
+    "name": "2단(그룹) 헤더 병합 표",
+    "file": "decks/01_tables/TBL_special_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:TBL-007",
+    "tags": [
+      "표",
+      "2단헤더",
+      "그룹헤더",
+      "병합",
+      "연도비교",
+      "정량비교"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 6,
+      "header": "navy",
+      "group_header": true,
+      "header_rows": 2
+    },
+    "bindings": {
+      "group_header": [
+        "g1",
+        "g2"
+      ],
+      "sub_header": [
+        "2023",
+        "2024",
+        "2023",
+        "2024"
+      ],
+      "label_col": "세로병합 첫 열",
+      "cells": "body rows×cols 텍스트 그리드",
+      "row_count": 4
+    },
+    "editable": [
+      "text",
+      "row-add",
+      "header-color",
+      "merge-header",
+      "cell-fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "기업별 연도 수출액표",
+      "그룹지표 비교표",
+      "다년도 정량표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-008",
+    "category": "TBL",
+    "name": "좌측 라벨열 강조 표",
+    "file": "decks/01_tables/TBL_special_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:TBL-008",
+    "tags": [
+      "표",
+      "라벨열강조",
+      "네이비",
+      "항목설명",
+      "개요표"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 4,
+      "label_col": "navy",
+      "header_row": false
+    },
+    "bindings": {
+      "labels": [
+        "l1",
+        "l2",
+        "l3",
+        "l4"
+      ],
+      "cells": "rows×(cols-1) 텍스트 그리드",
+      "row_count": 4,
+      "label_column": "첫 열 네이비 강조"
+    },
+    "editable": [
+      "text",
+      "row-add",
+      "label-color",
+      "cell-fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "사업개요표",
+      "항목별 설명표",
+      "좌측 카테고리 표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-009",
+    "category": "TBL",
+    "name": "체크·기호 항목표",
+    "file": "decks/01_tables/TBL_special_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:TBL-009",
+    "tags": [
+      "표",
+      "체크표",
+      "기호",
+      "검증항목",
+      "적합여부"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 6,
+      "header": "navy",
+      "symbol_col": 1
+    },
+    "bindings": {
+      "header": [
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "symbols": "✓/△/✗ (열2)",
+      "cells": "rows×cols 텍스트 그리드",
+      "row_count": 5
+    },
+    "editable": [
+      "text",
+      "row-add",
+      "symbol",
+      "symbol-color",
+      "cell-fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "검증항목표",
+      "체크리스트",
+      "적합·부적합 판정표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-010",
+    "category": "TBL",
+    "name": "셀·행 하이라이트 표",
+    "file": "decks/01_tables/TBL_special_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:TBL-010",
+    "tags": [
+      "표",
+      "하이라이트",
+      "강조행",
+      "핵심성과",
+      "정량비교"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 6,
+      "header": "navy",
+      "highlight_row": 2
+    },
+    "bindings": {
+      "header": [
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "cells": "rows×cols 텍스트 그리드",
+      "row_count": 5,
+      "highlight_row_index": "강조 대상 body 행(0-based)"
+    },
+    "editable": [
+      "text",
+      "row-add",
+      "highlight-row",
+      "highlight-color",
+      "cell-fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심성과 강조표",
+      "목표 대비 표",
+      "주요지표 부각표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-011",
+    "category": "TBL",
+    "name": "미니멀 라인 표",
+    "file": "decks/01_tables/TBL_special_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:TBL-011",
+    "tags": [
+      "표",
+      "미니멀",
+      "라인",
+      "헤더밑줄",
+      "테두리최소",
+      "심플"
+    ],
+    "params": {
+      "cols": 3,
+      "rows": 6,
+      "header": "underline",
+      "borders": "minimal"
+    },
+    "bindings": {
+      "header": [
+        "h1",
+        "h2",
+        "h3"
+      ],
+      "cells": "rows×cols 텍스트 그리드",
+      "row_count": 5,
+      "first_col": "label"
+    },
+    "editable": [
+      "text",
+      "row-add",
+      "underline-color",
+      "row-line-color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "산출물 목록",
+      "심플 리스트표",
+      "문서 목록표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-012",
+    "category": "TBL",
+    "name": "요약 박스 + 표 결합형",
+    "file": "decks/01_tables/TBL_special_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:TBL-012",
+    "tags": [
+      "표",
+      "요약박스",
+      "결합형",
+      "예산표",
+      "패널",
+      "비중"
+    ],
+    "params": {
+      "cols": 3,
+      "rows": 5,
+      "header": "navy",
+      "summary_panel": true
+    },
+    "bindings": {
+      "summary_title": "text",
+      "summary_kv": "요약박스 라벨-값 나열",
+      "header": [
+        "h1",
+        "h2",
+        "h3"
+      ],
+      "cells": "rows×cols 텍스트 그리드",
+      "row_count": 4
+    },
+    "editable": [
+      "text",
+      "row-add",
+      "panel-color",
+      "header-color",
+      "cell-fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "예산 배분표",
+      "사업 요약+세부표",
+      "핵심수치+상세 결합"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  }
+]

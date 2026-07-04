@@ -1,0 +1,10058 @@
+[
+  {
+    "id": "PRC-021",
+    "category": "PRC",
+    "name": "셰브론 밴드 3단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_chevron_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:PRC-021",
+    "tags": [
+      "프로세스",
+      "셰브론",
+      "밴드",
+      "단계흐름",
+      "3단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 3,
+      "style": "chevron-band",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진단계",
+      "업무흐름",
+      "절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-022",
+    "category": "PRC",
+    "name": "셰브론 밴드 4단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_chevron_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:PRC-022",
+    "tags": [
+      "프로세스",
+      "셰브론",
+      "밴드",
+      "단계흐름",
+      "4단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 4,
+      "style": "chevron-band",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진단계",
+      "업무흐름",
+      "절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-023",
+    "category": "PRC",
+    "name": "셰브론 밴드 5단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_chevron_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:PRC-023",
+    "tags": [
+      "프로세스",
+      "셰브론",
+      "밴드",
+      "단계흐름",
+      "5단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 5,
+      "style": "chevron-band",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진단계",
+      "업무흐름",
+      "절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-024",
+    "category": "PRC",
+    "name": "셰브론 밴드 6단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_chevron_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:PRC-024",
+    "tags": [
+      "프로세스",
+      "셰브론",
+      "밴드",
+      "단계흐름",
+      "6단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 6,
+      "style": "chevron-band",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진단계",
+      "업무흐름",
+      "절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-025",
+    "category": "PRC",
+    "name": "셰브론 밴드 3단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_chevron_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:PRC-025",
+    "tags": [
+      "프로세스",
+      "셰브론",
+      "밴드",
+      "단계흐름",
+      "3단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 3,
+      "style": "chevron-band",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진단계",
+      "업무흐름",
+      "절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-026",
+    "category": "PRC",
+    "name": "셰브론 밴드 4단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_chevron_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:PRC-026",
+    "tags": [
+      "프로세스",
+      "셰브론",
+      "밴드",
+      "단계흐름",
+      "4단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 4,
+      "style": "chevron-band",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진단계",
+      "업무흐름",
+      "절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-027",
+    "category": "PRC",
+    "name": "셰브론 밴드 5단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_chevron_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:PRC-027",
+    "tags": [
+      "프로세스",
+      "셰브론",
+      "밴드",
+      "단계흐름",
+      "5단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 5,
+      "style": "chevron-band",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진단계",
+      "업무흐름",
+      "절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-028",
+    "category": "PRC",
+    "name": "셰브론 밴드 6단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_chevron_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:PRC-028",
+    "tags": [
+      "프로세스",
+      "셰브론",
+      "밴드",
+      "단계흐름",
+      "6단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 6,
+      "style": "chevron-band",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진단계",
+      "업무흐름",
+      "절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-029",
+    "category": "PRC",
+    "name": "셰브론 밴드 3단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_chevron_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:PRC-029",
+    "tags": [
+      "프로세스",
+      "셰브론",
+      "밴드",
+      "단계흐름",
+      "3단계",
+      "틸"
+    ],
+    "params": {
+      "count": 3,
+      "style": "chevron-band",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진단계",
+      "업무흐름",
+      "절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-030",
+    "category": "PRC",
+    "name": "셰브론 밴드 4단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_chevron_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:PRC-030",
+    "tags": [
+      "프로세스",
+      "셰브론",
+      "밴드",
+      "단계흐름",
+      "4단계",
+      "틸"
+    ],
+    "params": {
+      "count": 4,
+      "style": "chevron-band",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진단계",
+      "업무흐름",
+      "절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-031",
+    "category": "PRC",
+    "name": "셰브론 밴드 5단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_chevron_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:PRC-031",
+    "tags": [
+      "프로세스",
+      "셰브론",
+      "밴드",
+      "단계흐름",
+      "5단계",
+      "틸"
+    ],
+    "params": {
+      "count": 5,
+      "style": "chevron-band",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진단계",
+      "업무흐름",
+      "절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-032",
+    "category": "PRC",
+    "name": "셰브론 밴드 6단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_chevron_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:PRC-032",
+    "tags": [
+      "프로세스",
+      "셰브론",
+      "밴드",
+      "단계흐름",
+      "6단계",
+      "틸"
+    ],
+    "params": {
+      "count": 6,
+      "style": "chevron-band",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진단계",
+      "업무흐름",
+      "절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-033",
+    "category": "PRC",
+    "name": "셰브론 밴드 3단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_chevron_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:PRC-033",
+    "tags": [
+      "프로세스",
+      "셰브론",
+      "밴드",
+      "단계흐름",
+      "3단계",
+      "로열"
+    ],
+    "params": {
+      "count": 3,
+      "style": "chevron-band",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진단계",
+      "업무흐름",
+      "절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-034",
+    "category": "PRC",
+    "name": "셰브론 밴드 4단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_chevron_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:PRC-034",
+    "tags": [
+      "프로세스",
+      "셰브론",
+      "밴드",
+      "단계흐름",
+      "4단계",
+      "로열"
+    ],
+    "params": {
+      "count": 4,
+      "style": "chevron-band",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진단계",
+      "업무흐름",
+      "절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-035",
+    "category": "PRC",
+    "name": "셰브론 밴드 5단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_chevron_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:PRC-035",
+    "tags": [
+      "프로세스",
+      "셰브론",
+      "밴드",
+      "단계흐름",
+      "5단계",
+      "로열"
+    ],
+    "params": {
+      "count": 5,
+      "style": "chevron-band",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진단계",
+      "업무흐름",
+      "절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-036",
+    "category": "PRC",
+    "name": "셰브론 밴드 6단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_chevron_v1.pptx",
+    "slide": 16,
+    "anchor": "asset:PRC-036",
+    "tags": [
+      "프로세스",
+      "셰브론",
+      "밴드",
+      "단계흐름",
+      "6단계",
+      "로열"
+    ],
+    "params": {
+      "count": 6,
+      "style": "chevron-band",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진단계",
+      "업무흐름",
+      "절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-037",
+    "category": "PRC",
+    "name": "원형 번호 스텝 3단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_numbered_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:PRC-037",
+    "tags": [
+      "프로세스",
+      "번호스텝",
+      "원형번호",
+      "단계",
+      "3단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 3,
+      "style": "numbered-steps",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행절차",
+      "추진단계",
+      "방법론"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-038",
+    "category": "PRC",
+    "name": "원형 번호 스텝 4단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_numbered_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:PRC-038",
+    "tags": [
+      "프로세스",
+      "번호스텝",
+      "원형번호",
+      "단계",
+      "4단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 4,
+      "style": "numbered-steps",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행절차",
+      "추진단계",
+      "방법론"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-039",
+    "category": "PRC",
+    "name": "원형 번호 스텝 5단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_numbered_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:PRC-039",
+    "tags": [
+      "프로세스",
+      "번호스텝",
+      "원형번호",
+      "단계",
+      "5단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 5,
+      "style": "numbered-steps",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행절차",
+      "추진단계",
+      "방법론"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-040",
+    "category": "PRC",
+    "name": "원형 번호 스텝 6단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_numbered_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:PRC-040",
+    "tags": [
+      "프로세스",
+      "번호스텝",
+      "원형번호",
+      "단계",
+      "6단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 6,
+      "style": "numbered-steps",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행절차",
+      "추진단계",
+      "방법론"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-041",
+    "category": "PRC",
+    "name": "원형 번호 스텝 3단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_numbered_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:PRC-041",
+    "tags": [
+      "프로세스",
+      "번호스텝",
+      "원형번호",
+      "단계",
+      "3단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 3,
+      "style": "numbered-steps",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행절차",
+      "추진단계",
+      "방법론"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-042",
+    "category": "PRC",
+    "name": "원형 번호 스텝 4단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_numbered_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:PRC-042",
+    "tags": [
+      "프로세스",
+      "번호스텝",
+      "원형번호",
+      "단계",
+      "4단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 4,
+      "style": "numbered-steps",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행절차",
+      "추진단계",
+      "방법론"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-043",
+    "category": "PRC",
+    "name": "원형 번호 스텝 5단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_numbered_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:PRC-043",
+    "tags": [
+      "프로세스",
+      "번호스텝",
+      "원형번호",
+      "단계",
+      "5단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 5,
+      "style": "numbered-steps",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행절차",
+      "추진단계",
+      "방법론"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-044",
+    "category": "PRC",
+    "name": "원형 번호 스텝 6단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_numbered_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:PRC-044",
+    "tags": [
+      "프로세스",
+      "번호스텝",
+      "원형번호",
+      "단계",
+      "6단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 6,
+      "style": "numbered-steps",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행절차",
+      "추진단계",
+      "방법론"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-045",
+    "category": "PRC",
+    "name": "원형 번호 스텝 3단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_numbered_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:PRC-045",
+    "tags": [
+      "프로세스",
+      "번호스텝",
+      "원형번호",
+      "단계",
+      "3단계",
+      "틸"
+    ],
+    "params": {
+      "count": 3,
+      "style": "numbered-steps",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행절차",
+      "추진단계",
+      "방법론"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-046",
+    "category": "PRC",
+    "name": "원형 번호 스텝 4단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_numbered_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:PRC-046",
+    "tags": [
+      "프로세스",
+      "번호스텝",
+      "원형번호",
+      "단계",
+      "4단계",
+      "틸"
+    ],
+    "params": {
+      "count": 4,
+      "style": "numbered-steps",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행절차",
+      "추진단계",
+      "방법론"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-047",
+    "category": "PRC",
+    "name": "원형 번호 스텝 5단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_numbered_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:PRC-047",
+    "tags": [
+      "프로세스",
+      "번호스텝",
+      "원형번호",
+      "단계",
+      "5단계",
+      "틸"
+    ],
+    "params": {
+      "count": 5,
+      "style": "numbered-steps",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행절차",
+      "추진단계",
+      "방법론"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-048",
+    "category": "PRC",
+    "name": "원형 번호 스텝 6단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_numbered_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:PRC-048",
+    "tags": [
+      "프로세스",
+      "번호스텝",
+      "원형번호",
+      "단계",
+      "6단계",
+      "틸"
+    ],
+    "params": {
+      "count": 6,
+      "style": "numbered-steps",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행절차",
+      "추진단계",
+      "방법론"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-049",
+    "category": "PRC",
+    "name": "원형 번호 스텝 3단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_numbered_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:PRC-049",
+    "tags": [
+      "프로세스",
+      "번호스텝",
+      "원형번호",
+      "단계",
+      "3단계",
+      "로열"
+    ],
+    "params": {
+      "count": 3,
+      "style": "numbered-steps",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행절차",
+      "추진단계",
+      "방법론"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-050",
+    "category": "PRC",
+    "name": "원형 번호 스텝 4단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_numbered_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:PRC-050",
+    "tags": [
+      "프로세스",
+      "번호스텝",
+      "원형번호",
+      "단계",
+      "4단계",
+      "로열"
+    ],
+    "params": {
+      "count": 4,
+      "style": "numbered-steps",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행절차",
+      "추진단계",
+      "방법론"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-051",
+    "category": "PRC",
+    "name": "원형 번호 스텝 5단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_numbered_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:PRC-051",
+    "tags": [
+      "프로세스",
+      "번호스텝",
+      "원형번호",
+      "단계",
+      "5단계",
+      "로열"
+    ],
+    "params": {
+      "count": 5,
+      "style": "numbered-steps",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행절차",
+      "추진단계",
+      "방법론"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-052",
+    "category": "PRC",
+    "name": "원형 번호 스텝 6단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_numbered_v1.pptx",
+    "slide": 16,
+    "anchor": "asset:PRC-052",
+    "tags": [
+      "프로세스",
+      "번호스텝",
+      "원형번호",
+      "단계",
+      "6단계",
+      "로열"
+    ],
+    "params": {
+      "count": 6,
+      "style": "numbered-steps",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행절차",
+      "추진단계",
+      "방법론"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-053",
+    "category": "PRC",
+    "name": "박스+화살표 수평 3단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_boxarrow_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:PRC-053",
+    "tags": [
+      "프로세스",
+      "박스흐름",
+      "수평",
+      "화살표",
+      "3단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 3,
+      "style": "box-arrow",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "업무흐름",
+      "처리절차",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-054",
+    "category": "PRC",
+    "name": "박스+화살표 수평 4단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_boxarrow_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:PRC-054",
+    "tags": [
+      "프로세스",
+      "박스흐름",
+      "수평",
+      "화살표",
+      "4단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 4,
+      "style": "box-arrow",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "업무흐름",
+      "처리절차",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-055",
+    "category": "PRC",
+    "name": "박스+화살표 수평 5단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_boxarrow_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:PRC-055",
+    "tags": [
+      "프로세스",
+      "박스흐름",
+      "수평",
+      "화살표",
+      "5단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 5,
+      "style": "box-arrow",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "업무흐름",
+      "처리절차",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-056",
+    "category": "PRC",
+    "name": "박스+화살표 수평 6단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_boxarrow_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:PRC-056",
+    "tags": [
+      "프로세스",
+      "박스흐름",
+      "수평",
+      "화살표",
+      "6단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 6,
+      "style": "box-arrow",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "업무흐름",
+      "처리절차",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-057",
+    "category": "PRC",
+    "name": "박스+화살표 수평 3단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_boxarrow_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:PRC-057",
+    "tags": [
+      "프로세스",
+      "박스흐름",
+      "수평",
+      "화살표",
+      "3단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 3,
+      "style": "box-arrow",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "업무흐름",
+      "처리절차",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-058",
+    "category": "PRC",
+    "name": "박스+화살표 수평 4단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_boxarrow_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:PRC-058",
+    "tags": [
+      "프로세스",
+      "박스흐름",
+      "수평",
+      "화살표",
+      "4단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 4,
+      "style": "box-arrow",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "업무흐름",
+      "처리절차",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-059",
+    "category": "PRC",
+    "name": "박스+화살표 수평 5단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_boxarrow_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:PRC-059",
+    "tags": [
+      "프로세스",
+      "박스흐름",
+      "수평",
+      "화살표",
+      "5단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 5,
+      "style": "box-arrow",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "업무흐름",
+      "처리절차",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-060",
+    "category": "PRC",
+    "name": "박스+화살표 수평 6단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_boxarrow_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:PRC-060",
+    "tags": [
+      "프로세스",
+      "박스흐름",
+      "수평",
+      "화살표",
+      "6단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 6,
+      "style": "box-arrow",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "업무흐름",
+      "처리절차",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-061",
+    "category": "PRC",
+    "name": "박스+화살표 수평 3단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_boxarrow_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:PRC-061",
+    "tags": [
+      "프로세스",
+      "박스흐름",
+      "수평",
+      "화살표",
+      "3단계",
+      "틸"
+    ],
+    "params": {
+      "count": 3,
+      "style": "box-arrow",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "업무흐름",
+      "처리절차",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-062",
+    "category": "PRC",
+    "name": "박스+화살표 수평 4단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_boxarrow_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:PRC-062",
+    "tags": [
+      "프로세스",
+      "박스흐름",
+      "수평",
+      "화살표",
+      "4단계",
+      "틸"
+    ],
+    "params": {
+      "count": 4,
+      "style": "box-arrow",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "업무흐름",
+      "처리절차",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-063",
+    "category": "PRC",
+    "name": "박스+화살표 수평 5단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_boxarrow_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:PRC-063",
+    "tags": [
+      "프로세스",
+      "박스흐름",
+      "수평",
+      "화살표",
+      "5단계",
+      "틸"
+    ],
+    "params": {
+      "count": 5,
+      "style": "box-arrow",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "업무흐름",
+      "처리절차",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-064",
+    "category": "PRC",
+    "name": "박스+화살표 수평 6단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_boxarrow_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:PRC-064",
+    "tags": [
+      "프로세스",
+      "박스흐름",
+      "수평",
+      "화살표",
+      "6단계",
+      "틸"
+    ],
+    "params": {
+      "count": 6,
+      "style": "box-arrow",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "업무흐름",
+      "처리절차",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-065",
+    "category": "PRC",
+    "name": "박스+화살표 수평 3단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_boxarrow_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:PRC-065",
+    "tags": [
+      "프로세스",
+      "박스흐름",
+      "수평",
+      "화살표",
+      "3단계",
+      "로열"
+    ],
+    "params": {
+      "count": 3,
+      "style": "box-arrow",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "업무흐름",
+      "처리절차",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-066",
+    "category": "PRC",
+    "name": "박스+화살표 수평 4단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_boxarrow_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:PRC-066",
+    "tags": [
+      "프로세스",
+      "박스흐름",
+      "수평",
+      "화살표",
+      "4단계",
+      "로열"
+    ],
+    "params": {
+      "count": 4,
+      "style": "box-arrow",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "업무흐름",
+      "처리절차",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-067",
+    "category": "PRC",
+    "name": "박스+화살표 수평 5단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_boxarrow_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:PRC-067",
+    "tags": [
+      "프로세스",
+      "박스흐름",
+      "수평",
+      "화살표",
+      "5단계",
+      "로열"
+    ],
+    "params": {
+      "count": 5,
+      "style": "box-arrow",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "업무흐름",
+      "처리절차",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-068",
+    "category": "PRC",
+    "name": "박스+화살표 수평 6단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_boxarrow_v1.pptx",
+    "slide": 16,
+    "anchor": "asset:PRC-068",
+    "tags": [
+      "프로세스",
+      "박스흐름",
+      "수평",
+      "화살표",
+      "6단계",
+      "로열"
+    ],
+    "params": {
+      "count": 6,
+      "style": "box-arrow",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "업무흐름",
+      "처리절차",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-069",
+    "category": "PRC",
+    "name": "세로 프로세스 3단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_vertical_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:PRC-069",
+    "tags": [
+      "프로세스",
+      "세로",
+      "수직흐름",
+      "단계",
+      "3단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 3,
+      "style": "vertical-flow",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "vertical"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행절차",
+      "추진체계",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-070",
+    "category": "PRC",
+    "name": "세로 프로세스 4단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_vertical_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:PRC-070",
+    "tags": [
+      "프로세스",
+      "세로",
+      "수직흐름",
+      "단계",
+      "4단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 4,
+      "style": "vertical-flow",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "vertical"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행절차",
+      "추진체계",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-071",
+    "category": "PRC",
+    "name": "세로 프로세스 5단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_vertical_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:PRC-071",
+    "tags": [
+      "프로세스",
+      "세로",
+      "수직흐름",
+      "단계",
+      "5단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 5,
+      "style": "vertical-flow",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "vertical"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행절차",
+      "추진체계",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-072",
+    "category": "PRC",
+    "name": "세로 프로세스 6단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_vertical_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:PRC-072",
+    "tags": [
+      "프로세스",
+      "세로",
+      "수직흐름",
+      "단계",
+      "6단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 6,
+      "style": "vertical-flow",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "vertical"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행절차",
+      "추진체계",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-073",
+    "category": "PRC",
+    "name": "세로 프로세스 3단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_vertical_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:PRC-073",
+    "tags": [
+      "프로세스",
+      "세로",
+      "수직흐름",
+      "단계",
+      "3단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 3,
+      "style": "vertical-flow",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "vertical"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행절차",
+      "추진체계",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-074",
+    "category": "PRC",
+    "name": "세로 프로세스 4단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_vertical_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:PRC-074",
+    "tags": [
+      "프로세스",
+      "세로",
+      "수직흐름",
+      "단계",
+      "4단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 4,
+      "style": "vertical-flow",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "vertical"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행절차",
+      "추진체계",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-075",
+    "category": "PRC",
+    "name": "세로 프로세스 5단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_vertical_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:PRC-075",
+    "tags": [
+      "프로세스",
+      "세로",
+      "수직흐름",
+      "단계",
+      "5단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 5,
+      "style": "vertical-flow",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "vertical"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행절차",
+      "추진체계",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-076",
+    "category": "PRC",
+    "name": "세로 프로세스 6단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_vertical_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:PRC-076",
+    "tags": [
+      "프로세스",
+      "세로",
+      "수직흐름",
+      "단계",
+      "6단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 6,
+      "style": "vertical-flow",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "vertical"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행절차",
+      "추진체계",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-077",
+    "category": "PRC",
+    "name": "세로 프로세스 3단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_vertical_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:PRC-077",
+    "tags": [
+      "프로세스",
+      "세로",
+      "수직흐름",
+      "단계",
+      "3단계",
+      "틸"
+    ],
+    "params": {
+      "count": 3,
+      "style": "vertical-flow",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "vertical"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행절차",
+      "추진체계",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-078",
+    "category": "PRC",
+    "name": "세로 프로세스 4단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_vertical_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:PRC-078",
+    "tags": [
+      "프로세스",
+      "세로",
+      "수직흐름",
+      "단계",
+      "4단계",
+      "틸"
+    ],
+    "params": {
+      "count": 4,
+      "style": "vertical-flow",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "vertical"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행절차",
+      "추진체계",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-079",
+    "category": "PRC",
+    "name": "세로 프로세스 5단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_vertical_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:PRC-079",
+    "tags": [
+      "프로세스",
+      "세로",
+      "수직흐름",
+      "단계",
+      "5단계",
+      "틸"
+    ],
+    "params": {
+      "count": 5,
+      "style": "vertical-flow",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "vertical"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행절차",
+      "추진체계",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-080",
+    "category": "PRC",
+    "name": "세로 프로세스 6단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_vertical_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:PRC-080",
+    "tags": [
+      "프로세스",
+      "세로",
+      "수직흐름",
+      "단계",
+      "6단계",
+      "틸"
+    ],
+    "params": {
+      "count": 6,
+      "style": "vertical-flow",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "vertical"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행절차",
+      "추진체계",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-081",
+    "category": "PRC",
+    "name": "세로 프로세스 3단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_vertical_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:PRC-081",
+    "tags": [
+      "프로세스",
+      "세로",
+      "수직흐름",
+      "단계",
+      "3단계",
+      "로열"
+    ],
+    "params": {
+      "count": 3,
+      "style": "vertical-flow",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "vertical"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행절차",
+      "추진체계",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-082",
+    "category": "PRC",
+    "name": "세로 프로세스 4단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_vertical_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:PRC-082",
+    "tags": [
+      "프로세스",
+      "세로",
+      "수직흐름",
+      "단계",
+      "4단계",
+      "로열"
+    ],
+    "params": {
+      "count": 4,
+      "style": "vertical-flow",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "vertical"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행절차",
+      "추진체계",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-083",
+    "category": "PRC",
+    "name": "세로 프로세스 5단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_vertical_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:PRC-083",
+    "tags": [
+      "프로세스",
+      "세로",
+      "수직흐름",
+      "단계",
+      "5단계",
+      "로열"
+    ],
+    "params": {
+      "count": 5,
+      "style": "vertical-flow",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "vertical"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행절차",
+      "추진체계",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-084",
+    "category": "PRC",
+    "name": "세로 프로세스 6단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_vertical_v1.pptx",
+    "slide": 16,
+    "anchor": "asset:PRC-084",
+    "tags": [
+      "프로세스",
+      "세로",
+      "수직흐름",
+      "단계",
+      "6단계",
+      "로열"
+    ],
+    "params": {
+      "count": 6,
+      "style": "vertical-flow",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "vertical"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "수행절차",
+      "추진체계",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-085",
+    "category": "PRC",
+    "name": "원형 순환 3단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_circular_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:PRC-085",
+    "tags": [
+      "프로세스",
+      "순환",
+      "사이클",
+      "환류",
+      "3단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 3,
+      "style": "circular",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "cyclic"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "환류체계",
+      "지속개선",
+      "운영사이클"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-086",
+    "category": "PRC",
+    "name": "원형 순환 4단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_circular_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:PRC-086",
+    "tags": [
+      "프로세스",
+      "순환",
+      "사이클",
+      "환류",
+      "4단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 4,
+      "style": "circular",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "cyclic"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "환류체계",
+      "지속개선",
+      "운영사이클"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-087",
+    "category": "PRC",
+    "name": "원형 순환 5단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_circular_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:PRC-087",
+    "tags": [
+      "프로세스",
+      "순환",
+      "사이클",
+      "환류",
+      "5단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 5,
+      "style": "circular",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "cyclic"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "환류체계",
+      "지속개선",
+      "운영사이클"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-088",
+    "category": "PRC",
+    "name": "원형 순환 6단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_circular_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:PRC-088",
+    "tags": [
+      "프로세스",
+      "순환",
+      "사이클",
+      "환류",
+      "6단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 6,
+      "style": "circular",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "cyclic"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "환류체계",
+      "지속개선",
+      "운영사이클"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-089",
+    "category": "PRC",
+    "name": "원형 순환 3단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_circular_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:PRC-089",
+    "tags": [
+      "프로세스",
+      "순환",
+      "사이클",
+      "환류",
+      "3단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 3,
+      "style": "circular",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "cyclic"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "환류체계",
+      "지속개선",
+      "운영사이클"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-090",
+    "category": "PRC",
+    "name": "원형 순환 4단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_circular_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:PRC-090",
+    "tags": [
+      "프로세스",
+      "순환",
+      "사이클",
+      "환류",
+      "4단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 4,
+      "style": "circular",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "cyclic"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "환류체계",
+      "지속개선",
+      "운영사이클"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-091",
+    "category": "PRC",
+    "name": "원형 순환 5단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_circular_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:PRC-091",
+    "tags": [
+      "프로세스",
+      "순환",
+      "사이클",
+      "환류",
+      "5단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 5,
+      "style": "circular",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "cyclic"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "환류체계",
+      "지속개선",
+      "운영사이클"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-092",
+    "category": "PRC",
+    "name": "원형 순환 6단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_circular_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:PRC-092",
+    "tags": [
+      "프로세스",
+      "순환",
+      "사이클",
+      "환류",
+      "6단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 6,
+      "style": "circular",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "cyclic"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "환류체계",
+      "지속개선",
+      "운영사이클"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-093",
+    "category": "PRC",
+    "name": "원형 순환 3단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_circular_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:PRC-093",
+    "tags": [
+      "프로세스",
+      "순환",
+      "사이클",
+      "환류",
+      "3단계",
+      "틸"
+    ],
+    "params": {
+      "count": 3,
+      "style": "circular",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "cyclic"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "환류체계",
+      "지속개선",
+      "운영사이클"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-094",
+    "category": "PRC",
+    "name": "원형 순환 4단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_circular_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:PRC-094",
+    "tags": [
+      "프로세스",
+      "순환",
+      "사이클",
+      "환류",
+      "4단계",
+      "틸"
+    ],
+    "params": {
+      "count": 4,
+      "style": "circular",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "cyclic"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "환류체계",
+      "지속개선",
+      "운영사이클"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-095",
+    "category": "PRC",
+    "name": "원형 순환 5단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_circular_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:PRC-095",
+    "tags": [
+      "프로세스",
+      "순환",
+      "사이클",
+      "환류",
+      "5단계",
+      "틸"
+    ],
+    "params": {
+      "count": 5,
+      "style": "circular",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "cyclic"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "환류체계",
+      "지속개선",
+      "운영사이클"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-096",
+    "category": "PRC",
+    "name": "원형 순환 6단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_circular_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:PRC-096",
+    "tags": [
+      "프로세스",
+      "순환",
+      "사이클",
+      "환류",
+      "6단계",
+      "틸"
+    ],
+    "params": {
+      "count": 6,
+      "style": "circular",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "cyclic"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "환류체계",
+      "지속개선",
+      "운영사이클"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-097",
+    "category": "PRC",
+    "name": "원형 순환 3단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_circular_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:PRC-097",
+    "tags": [
+      "프로세스",
+      "순환",
+      "사이클",
+      "환류",
+      "3단계",
+      "로열"
+    ],
+    "params": {
+      "count": 3,
+      "style": "circular",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "cyclic"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "환류체계",
+      "지속개선",
+      "운영사이클"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-098",
+    "category": "PRC",
+    "name": "원형 순환 4단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_circular_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:PRC-098",
+    "tags": [
+      "프로세스",
+      "순환",
+      "사이클",
+      "환류",
+      "4단계",
+      "로열"
+    ],
+    "params": {
+      "count": 4,
+      "style": "circular",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "cyclic"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "환류체계",
+      "지속개선",
+      "운영사이클"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-099",
+    "category": "PRC",
+    "name": "원형 순환 5단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_circular_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:PRC-099",
+    "tags": [
+      "프로세스",
+      "순환",
+      "사이클",
+      "환류",
+      "5단계",
+      "로열"
+    ],
+    "params": {
+      "count": 5,
+      "style": "circular",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "cyclic"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "환류체계",
+      "지속개선",
+      "운영사이클"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-100",
+    "category": "PRC",
+    "name": "원형 순환 6단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_circular_v1.pptx",
+    "slide": 16,
+    "anchor": "asset:PRC-100",
+    "tags": [
+      "프로세스",
+      "순환",
+      "사이클",
+      "환류",
+      "6단계",
+      "로열"
+    ],
+    "params": {
+      "count": 6,
+      "style": "circular",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "cyclic"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "환류체계",
+      "지속개선",
+      "운영사이클"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-101",
+    "category": "PRC",
+    "name": "퍼널 깔때기 3단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_funnel_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:PRC-101",
+    "tags": [
+      "프로세스",
+      "퍼널",
+      "깔때기",
+      "전환",
+      "3단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 3,
+      "style": "funnel",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "top-down"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "전환흐름",
+      "고객여정",
+      "단계별축소"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-102",
+    "category": "PRC",
+    "name": "퍼널 깔때기 4단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_funnel_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:PRC-102",
+    "tags": [
+      "프로세스",
+      "퍼널",
+      "깔때기",
+      "전환",
+      "4단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 4,
+      "style": "funnel",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "top-down"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "전환흐름",
+      "고객여정",
+      "단계별축소"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-103",
+    "category": "PRC",
+    "name": "퍼널 깔때기 5단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_funnel_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:PRC-103",
+    "tags": [
+      "프로세스",
+      "퍼널",
+      "깔때기",
+      "전환",
+      "5단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 5,
+      "style": "funnel",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "top-down"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "전환흐름",
+      "고객여정",
+      "단계별축소"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-104",
+    "category": "PRC",
+    "name": "퍼널 깔때기 6단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_funnel_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:PRC-104",
+    "tags": [
+      "프로세스",
+      "퍼널",
+      "깔때기",
+      "전환",
+      "6단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 6,
+      "style": "funnel",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "top-down"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "전환흐름",
+      "고객여정",
+      "단계별축소"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-105",
+    "category": "PRC",
+    "name": "퍼널 깔때기 3단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_funnel_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:PRC-105",
+    "tags": [
+      "프로세스",
+      "퍼널",
+      "깔때기",
+      "전환",
+      "3단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 3,
+      "style": "funnel",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "top-down"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "전환흐름",
+      "고객여정",
+      "단계별축소"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-106",
+    "category": "PRC",
+    "name": "퍼널 깔때기 4단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_funnel_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:PRC-106",
+    "tags": [
+      "프로세스",
+      "퍼널",
+      "깔때기",
+      "전환",
+      "4단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 4,
+      "style": "funnel",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "top-down"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "전환흐름",
+      "고객여정",
+      "단계별축소"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-107",
+    "category": "PRC",
+    "name": "퍼널 깔때기 5단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_funnel_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:PRC-107",
+    "tags": [
+      "프로세스",
+      "퍼널",
+      "깔때기",
+      "전환",
+      "5단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 5,
+      "style": "funnel",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "top-down"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "전환흐름",
+      "고객여정",
+      "단계별축소"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-108",
+    "category": "PRC",
+    "name": "퍼널 깔때기 6단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_funnel_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:PRC-108",
+    "tags": [
+      "프로세스",
+      "퍼널",
+      "깔때기",
+      "전환",
+      "6단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 6,
+      "style": "funnel",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "top-down"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "전환흐름",
+      "고객여정",
+      "단계별축소"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-109",
+    "category": "PRC",
+    "name": "퍼널 깔때기 3단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_funnel_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:PRC-109",
+    "tags": [
+      "프로세스",
+      "퍼널",
+      "깔때기",
+      "전환",
+      "3단계",
+      "틸"
+    ],
+    "params": {
+      "count": 3,
+      "style": "funnel",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "top-down"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "전환흐름",
+      "고객여정",
+      "단계별축소"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-110",
+    "category": "PRC",
+    "name": "퍼널 깔때기 4단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_funnel_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:PRC-110",
+    "tags": [
+      "프로세스",
+      "퍼널",
+      "깔때기",
+      "전환",
+      "4단계",
+      "틸"
+    ],
+    "params": {
+      "count": 4,
+      "style": "funnel",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "top-down"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "전환흐름",
+      "고객여정",
+      "단계별축소"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-111",
+    "category": "PRC",
+    "name": "퍼널 깔때기 5단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_funnel_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:PRC-111",
+    "tags": [
+      "프로세스",
+      "퍼널",
+      "깔때기",
+      "전환",
+      "5단계",
+      "틸"
+    ],
+    "params": {
+      "count": 5,
+      "style": "funnel",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "top-down"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "전환흐름",
+      "고객여정",
+      "단계별축소"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-112",
+    "category": "PRC",
+    "name": "퍼널 깔때기 6단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_funnel_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:PRC-112",
+    "tags": [
+      "프로세스",
+      "퍼널",
+      "깔때기",
+      "전환",
+      "6단계",
+      "틸"
+    ],
+    "params": {
+      "count": 6,
+      "style": "funnel",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "top-down"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "전환흐름",
+      "고객여정",
+      "단계별축소"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-113",
+    "category": "PRC",
+    "name": "퍼널 깔때기 3단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_funnel_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:PRC-113",
+    "tags": [
+      "프로세스",
+      "퍼널",
+      "깔때기",
+      "전환",
+      "3단계",
+      "로열"
+    ],
+    "params": {
+      "count": 3,
+      "style": "funnel",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "top-down"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "전환흐름",
+      "고객여정",
+      "단계별축소"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-114",
+    "category": "PRC",
+    "name": "퍼널 깔때기 4단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_funnel_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:PRC-114",
+    "tags": [
+      "프로세스",
+      "퍼널",
+      "깔때기",
+      "전환",
+      "4단계",
+      "로열"
+    ],
+    "params": {
+      "count": 4,
+      "style": "funnel",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "top-down"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "전환흐름",
+      "고객여정",
+      "단계별축소"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-115",
+    "category": "PRC",
+    "name": "퍼널 깔때기 5단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_funnel_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:PRC-115",
+    "tags": [
+      "프로세스",
+      "퍼널",
+      "깔때기",
+      "전환",
+      "5단계",
+      "로열"
+    ],
+    "params": {
+      "count": 5,
+      "style": "funnel",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "top-down"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "전환흐름",
+      "고객여정",
+      "단계별축소"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-116",
+    "category": "PRC",
+    "name": "퍼널 깔때기 6단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_funnel_v1.pptx",
+    "slide": 16,
+    "anchor": "asset:PRC-116",
+    "tags": [
+      "프로세스",
+      "퍼널",
+      "깔때기",
+      "전환",
+      "6단계",
+      "로열"
+    ],
+    "params": {
+      "count": 6,
+      "style": "funnel",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "top-down"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "전환흐름",
+      "고객여정",
+      "단계별축소"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-117",
+    "category": "PRC",
+    "name": "지그재그 흐름 3단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_zigzag_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:PRC-117",
+    "tags": [
+      "프로세스",
+      "지그재그",
+      "S자",
+      "교차흐름",
+      "3단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 3,
+      "style": "zigzag",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "snake"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진절차",
+      "업무흐름",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-118",
+    "category": "PRC",
+    "name": "지그재그 흐름 4단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_zigzag_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:PRC-118",
+    "tags": [
+      "프로세스",
+      "지그재그",
+      "S자",
+      "교차흐름",
+      "4단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 4,
+      "style": "zigzag",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "snake"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진절차",
+      "업무흐름",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-119",
+    "category": "PRC",
+    "name": "지그재그 흐름 5단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_zigzag_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:PRC-119",
+    "tags": [
+      "프로세스",
+      "지그재그",
+      "S자",
+      "교차흐름",
+      "5단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 5,
+      "style": "zigzag",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "snake"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진절차",
+      "업무흐름",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-120",
+    "category": "PRC",
+    "name": "지그재그 흐름 6단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_zigzag_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:PRC-120",
+    "tags": [
+      "프로세스",
+      "지그재그",
+      "S자",
+      "교차흐름",
+      "6단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 6,
+      "style": "zigzag",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "snake"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진절차",
+      "업무흐름",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-121",
+    "category": "PRC",
+    "name": "지그재그 흐름 3단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_zigzag_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:PRC-121",
+    "tags": [
+      "프로세스",
+      "지그재그",
+      "S자",
+      "교차흐름",
+      "3단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 3,
+      "style": "zigzag",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "snake"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진절차",
+      "업무흐름",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-122",
+    "category": "PRC",
+    "name": "지그재그 흐름 4단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_zigzag_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:PRC-122",
+    "tags": [
+      "프로세스",
+      "지그재그",
+      "S자",
+      "교차흐름",
+      "4단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 4,
+      "style": "zigzag",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "snake"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진절차",
+      "업무흐름",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-123",
+    "category": "PRC",
+    "name": "지그재그 흐름 5단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_zigzag_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:PRC-123",
+    "tags": [
+      "프로세스",
+      "지그재그",
+      "S자",
+      "교차흐름",
+      "5단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 5,
+      "style": "zigzag",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "snake"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진절차",
+      "업무흐름",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-124",
+    "category": "PRC",
+    "name": "지그재그 흐름 6단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_zigzag_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:PRC-124",
+    "tags": [
+      "프로세스",
+      "지그재그",
+      "S자",
+      "교차흐름",
+      "6단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 6,
+      "style": "zigzag",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "snake"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진절차",
+      "업무흐름",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-125",
+    "category": "PRC",
+    "name": "지그재그 흐름 3단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_zigzag_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:PRC-125",
+    "tags": [
+      "프로세스",
+      "지그재그",
+      "S자",
+      "교차흐름",
+      "3단계",
+      "틸"
+    ],
+    "params": {
+      "count": 3,
+      "style": "zigzag",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "snake"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진절차",
+      "업무흐름",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-126",
+    "category": "PRC",
+    "name": "지그재그 흐름 4단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_zigzag_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:PRC-126",
+    "tags": [
+      "프로세스",
+      "지그재그",
+      "S자",
+      "교차흐름",
+      "4단계",
+      "틸"
+    ],
+    "params": {
+      "count": 4,
+      "style": "zigzag",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "snake"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진절차",
+      "업무흐름",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-127",
+    "category": "PRC",
+    "name": "지그재그 흐름 5단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_zigzag_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:PRC-127",
+    "tags": [
+      "프로세스",
+      "지그재그",
+      "S자",
+      "교차흐름",
+      "5단계",
+      "틸"
+    ],
+    "params": {
+      "count": 5,
+      "style": "zigzag",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "snake"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진절차",
+      "업무흐름",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-128",
+    "category": "PRC",
+    "name": "지그재그 흐름 6단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_zigzag_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:PRC-128",
+    "tags": [
+      "프로세스",
+      "지그재그",
+      "S자",
+      "교차흐름",
+      "6단계",
+      "틸"
+    ],
+    "params": {
+      "count": 6,
+      "style": "zigzag",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "snake"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진절차",
+      "업무흐름",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-129",
+    "category": "PRC",
+    "name": "지그재그 흐름 3단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_zigzag_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:PRC-129",
+    "tags": [
+      "프로세스",
+      "지그재그",
+      "S자",
+      "교차흐름",
+      "3단계",
+      "로열"
+    ],
+    "params": {
+      "count": 3,
+      "style": "zigzag",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "snake"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진절차",
+      "업무흐름",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-130",
+    "category": "PRC",
+    "name": "지그재그 흐름 4단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_zigzag_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:PRC-130",
+    "tags": [
+      "프로세스",
+      "지그재그",
+      "S자",
+      "교차흐름",
+      "4단계",
+      "로열"
+    ],
+    "params": {
+      "count": 4,
+      "style": "zigzag",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "snake"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진절차",
+      "업무흐름",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-131",
+    "category": "PRC",
+    "name": "지그재그 흐름 5단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_zigzag_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:PRC-131",
+    "tags": [
+      "프로세스",
+      "지그재그",
+      "S자",
+      "교차흐름",
+      "5단계",
+      "로열"
+    ],
+    "params": {
+      "count": 5,
+      "style": "zigzag",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "snake"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진절차",
+      "업무흐름",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-132",
+    "category": "PRC",
+    "name": "지그재그 흐름 6단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_zigzag_v1.pptx",
+    "slide": 16,
+    "anchor": "asset:PRC-132",
+    "tags": [
+      "프로세스",
+      "지그재그",
+      "S자",
+      "교차흐름",
+      "6단계",
+      "로열"
+    ],
+    "params": {
+      "count": 6,
+      "style": "zigzag",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "snake"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진절차",
+      "업무흐름",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-133",
+    "category": "PRC",
+    "name": "하강 계단 3단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_stairs_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:PRC-133",
+    "tags": [
+      "프로세스",
+      "계단식",
+      "하강",
+      "우하향",
+      "3단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 3,
+      "style": "descending-stairs",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "down-right"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계적축소",
+      "리스크저감",
+      "하향절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-134",
+    "category": "PRC",
+    "name": "하강 계단 4단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_stairs_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:PRC-134",
+    "tags": [
+      "프로세스",
+      "계단식",
+      "하강",
+      "우하향",
+      "4단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 4,
+      "style": "descending-stairs",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "down-right"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계적축소",
+      "리스크저감",
+      "하향절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-135",
+    "category": "PRC",
+    "name": "하강 계단 5단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_stairs_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:PRC-135",
+    "tags": [
+      "프로세스",
+      "계단식",
+      "하강",
+      "우하향",
+      "5단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 5,
+      "style": "descending-stairs",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "down-right"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계적축소",
+      "리스크저감",
+      "하향절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-136",
+    "category": "PRC",
+    "name": "하강 계단 6단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_stairs_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:PRC-136",
+    "tags": [
+      "프로세스",
+      "계단식",
+      "하강",
+      "우하향",
+      "6단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 6,
+      "style": "descending-stairs",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "down-right"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계적축소",
+      "리스크저감",
+      "하향절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-137",
+    "category": "PRC",
+    "name": "하강 계단 3단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_stairs_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:PRC-137",
+    "tags": [
+      "프로세스",
+      "계단식",
+      "하강",
+      "우하향",
+      "3단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 3,
+      "style": "descending-stairs",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "down-right"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계적축소",
+      "리스크저감",
+      "하향절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-138",
+    "category": "PRC",
+    "name": "하강 계단 4단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_stairs_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:PRC-138",
+    "tags": [
+      "프로세스",
+      "계단식",
+      "하강",
+      "우하향",
+      "4단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 4,
+      "style": "descending-stairs",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "down-right"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계적축소",
+      "리스크저감",
+      "하향절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-139",
+    "category": "PRC",
+    "name": "하강 계단 5단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_stairs_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:PRC-139",
+    "tags": [
+      "프로세스",
+      "계단식",
+      "하강",
+      "우하향",
+      "5단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 5,
+      "style": "descending-stairs",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "down-right"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계적축소",
+      "리스크저감",
+      "하향절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-140",
+    "category": "PRC",
+    "name": "하강 계단 6단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_stairs_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:PRC-140",
+    "tags": [
+      "프로세스",
+      "계단식",
+      "하강",
+      "우하향",
+      "6단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 6,
+      "style": "descending-stairs",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "down-right"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계적축소",
+      "리스크저감",
+      "하향절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-141",
+    "category": "PRC",
+    "name": "하강 계단 3단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_stairs_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:PRC-141",
+    "tags": [
+      "프로세스",
+      "계단식",
+      "하강",
+      "우하향",
+      "3단계",
+      "틸"
+    ],
+    "params": {
+      "count": 3,
+      "style": "descending-stairs",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "down-right"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계적축소",
+      "리스크저감",
+      "하향절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-142",
+    "category": "PRC",
+    "name": "하강 계단 4단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_stairs_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:PRC-142",
+    "tags": [
+      "프로세스",
+      "계단식",
+      "하강",
+      "우하향",
+      "4단계",
+      "틸"
+    ],
+    "params": {
+      "count": 4,
+      "style": "descending-stairs",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "down-right"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계적축소",
+      "리스크저감",
+      "하향절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-143",
+    "category": "PRC",
+    "name": "하강 계단 5단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_stairs_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:PRC-143",
+    "tags": [
+      "프로세스",
+      "계단식",
+      "하강",
+      "우하향",
+      "5단계",
+      "틸"
+    ],
+    "params": {
+      "count": 5,
+      "style": "descending-stairs",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "down-right"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계적축소",
+      "리스크저감",
+      "하향절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-144",
+    "category": "PRC",
+    "name": "하강 계단 6단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_stairs_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:PRC-144",
+    "tags": [
+      "프로세스",
+      "계단식",
+      "하강",
+      "우하향",
+      "6단계",
+      "틸"
+    ],
+    "params": {
+      "count": 6,
+      "style": "descending-stairs",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "down-right"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계적축소",
+      "리스크저감",
+      "하향절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-145",
+    "category": "PRC",
+    "name": "하강 계단 3단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_stairs_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:PRC-145",
+    "tags": [
+      "프로세스",
+      "계단식",
+      "하강",
+      "우하향",
+      "3단계",
+      "로열"
+    ],
+    "params": {
+      "count": 3,
+      "style": "descending-stairs",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "down-right"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계적축소",
+      "리스크저감",
+      "하향절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-146",
+    "category": "PRC",
+    "name": "하강 계단 4단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_stairs_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:PRC-146",
+    "tags": [
+      "프로세스",
+      "계단식",
+      "하강",
+      "우하향",
+      "4단계",
+      "로열"
+    ],
+    "params": {
+      "count": 4,
+      "style": "descending-stairs",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "down-right"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계적축소",
+      "리스크저감",
+      "하향절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-147",
+    "category": "PRC",
+    "name": "하강 계단 5단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_stairs_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:PRC-147",
+    "tags": [
+      "프로세스",
+      "계단식",
+      "하강",
+      "우하향",
+      "5단계",
+      "로열"
+    ],
+    "params": {
+      "count": 5,
+      "style": "descending-stairs",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "down-right"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계적축소",
+      "리스크저감",
+      "하향절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-148",
+    "category": "PRC",
+    "name": "하강 계단 6단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_stairs_v1.pptx",
+    "slide": 16,
+    "anchor": "asset:PRC-148",
+    "tags": [
+      "프로세스",
+      "계단식",
+      "하강",
+      "우하향",
+      "6단계",
+      "로열"
+    ],
+    "params": {
+      "count": 6,
+      "style": "descending-stairs",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "down-right"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계적축소",
+      "리스크저감",
+      "하향절차"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-149",
+    "category": "PRC",
+    "name": "컬러헤더 설명밴드 3단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_colorband_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:PRC-149",
+    "tags": [
+      "프로세스",
+      "컬러헤더",
+      "설명밴드",
+      "카드",
+      "3단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 3,
+      "style": "header-band",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계설명",
+      "추진체계",
+      "영역구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-150",
+    "category": "PRC",
+    "name": "컬러헤더 설명밴드 4단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_colorband_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:PRC-150",
+    "tags": [
+      "프로세스",
+      "컬러헤더",
+      "설명밴드",
+      "카드",
+      "4단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 4,
+      "style": "header-band",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계설명",
+      "추진체계",
+      "영역구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-151",
+    "category": "PRC",
+    "name": "컬러헤더 설명밴드 5단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_colorband_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:PRC-151",
+    "tags": [
+      "프로세스",
+      "컬러헤더",
+      "설명밴드",
+      "카드",
+      "5단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 5,
+      "style": "header-band",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계설명",
+      "추진체계",
+      "영역구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-152",
+    "category": "PRC",
+    "name": "컬러헤더 설명밴드 6단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_colorband_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:PRC-152",
+    "tags": [
+      "프로세스",
+      "컬러헤더",
+      "설명밴드",
+      "카드",
+      "6단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 6,
+      "style": "header-band",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계설명",
+      "추진체계",
+      "영역구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-153",
+    "category": "PRC",
+    "name": "컬러헤더 설명밴드 3단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_colorband_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:PRC-153",
+    "tags": [
+      "프로세스",
+      "컬러헤더",
+      "설명밴드",
+      "카드",
+      "3단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 3,
+      "style": "header-band",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계설명",
+      "추진체계",
+      "영역구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-154",
+    "category": "PRC",
+    "name": "컬러헤더 설명밴드 4단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_colorband_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:PRC-154",
+    "tags": [
+      "프로세스",
+      "컬러헤더",
+      "설명밴드",
+      "카드",
+      "4단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 4,
+      "style": "header-band",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계설명",
+      "추진체계",
+      "영역구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-155",
+    "category": "PRC",
+    "name": "컬러헤더 설명밴드 5단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_colorband_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:PRC-155",
+    "tags": [
+      "프로세스",
+      "컬러헤더",
+      "설명밴드",
+      "카드",
+      "5단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 5,
+      "style": "header-band",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계설명",
+      "추진체계",
+      "영역구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-156",
+    "category": "PRC",
+    "name": "컬러헤더 설명밴드 6단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_colorband_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:PRC-156",
+    "tags": [
+      "프로세스",
+      "컬러헤더",
+      "설명밴드",
+      "카드",
+      "6단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 6,
+      "style": "header-band",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계설명",
+      "추진체계",
+      "영역구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-157",
+    "category": "PRC",
+    "name": "컬러헤더 설명밴드 3단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_colorband_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:PRC-157",
+    "tags": [
+      "프로세스",
+      "컬러헤더",
+      "설명밴드",
+      "카드",
+      "3단계",
+      "틸"
+    ],
+    "params": {
+      "count": 3,
+      "style": "header-band",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계설명",
+      "추진체계",
+      "영역구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-158",
+    "category": "PRC",
+    "name": "컬러헤더 설명밴드 4단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_colorband_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:PRC-158",
+    "tags": [
+      "프로세스",
+      "컬러헤더",
+      "설명밴드",
+      "카드",
+      "4단계",
+      "틸"
+    ],
+    "params": {
+      "count": 4,
+      "style": "header-band",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계설명",
+      "추진체계",
+      "영역구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-159",
+    "category": "PRC",
+    "name": "컬러헤더 설명밴드 5단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_colorband_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:PRC-159",
+    "tags": [
+      "프로세스",
+      "컬러헤더",
+      "설명밴드",
+      "카드",
+      "5단계",
+      "틸"
+    ],
+    "params": {
+      "count": 5,
+      "style": "header-band",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계설명",
+      "추진체계",
+      "영역구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-160",
+    "category": "PRC",
+    "name": "컬러헤더 설명밴드 6단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_colorband_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:PRC-160",
+    "tags": [
+      "프로세스",
+      "컬러헤더",
+      "설명밴드",
+      "카드",
+      "6단계",
+      "틸"
+    ],
+    "params": {
+      "count": 6,
+      "style": "header-band",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계설명",
+      "추진체계",
+      "영역구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-161",
+    "category": "PRC",
+    "name": "컬러헤더 설명밴드 3단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_colorband_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:PRC-161",
+    "tags": [
+      "프로세스",
+      "컬러헤더",
+      "설명밴드",
+      "카드",
+      "3단계",
+      "로열"
+    ],
+    "params": {
+      "count": 3,
+      "style": "header-band",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계설명",
+      "추진체계",
+      "영역구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-162",
+    "category": "PRC",
+    "name": "컬러헤더 설명밴드 4단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_colorband_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:PRC-162",
+    "tags": [
+      "프로세스",
+      "컬러헤더",
+      "설명밴드",
+      "카드",
+      "4단계",
+      "로열"
+    ],
+    "params": {
+      "count": 4,
+      "style": "header-band",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계설명",
+      "추진체계",
+      "영역구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-163",
+    "category": "PRC",
+    "name": "컬러헤더 설명밴드 5단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_colorband_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:PRC-163",
+    "tags": [
+      "프로세스",
+      "컬러헤더",
+      "설명밴드",
+      "카드",
+      "5단계",
+      "로열"
+    ],
+    "params": {
+      "count": 5,
+      "style": "header-band",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계설명",
+      "추진체계",
+      "영역구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-164",
+    "category": "PRC",
+    "name": "컬러헤더 설명밴드 6단계 (로열)",
+    "file": "decks/03_process/PRC_bulk_colorband_v1.pptx",
+    "slide": 16,
+    "anchor": "asset:PRC-164",
+    "tags": [
+      "프로세스",
+      "컬러헤더",
+      "설명밴드",
+      "카드",
+      "6단계",
+      "로열"
+    ],
+    "params": {
+      "count": 6,
+      "style": "header-band",
+      "palette": "ROYAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계설명",
+      "추진체계",
+      "영역구분"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-165",
+    "category": "PRC",
+    "name": "게이트형 파이프라인 3단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_gated_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:PRC-165",
+    "tags": [
+      "프로세스",
+      "게이트",
+      "판단",
+      "반려",
+      "3단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 3,
+      "style": "gated-pipeline",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "품질게이트",
+      "검수절차",
+      "승인프로세스"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-166",
+    "category": "PRC",
+    "name": "게이트형 파이프라인 4단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_gated_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:PRC-166",
+    "tags": [
+      "프로세스",
+      "게이트",
+      "판단",
+      "반려",
+      "4단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 4,
+      "style": "gated-pipeline",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "품질게이트",
+      "검수절차",
+      "승인프로세스"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-167",
+    "category": "PRC",
+    "name": "게이트형 파이프라인 5단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_gated_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:PRC-167",
+    "tags": [
+      "프로세스",
+      "게이트",
+      "판단",
+      "반려",
+      "5단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 5,
+      "style": "gated-pipeline",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "품질게이트",
+      "검수절차",
+      "승인프로세스"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-168",
+    "category": "PRC",
+    "name": "게이트형 파이프라인 6단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_gated_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:PRC-168",
+    "tags": [
+      "프로세스",
+      "게이트",
+      "판단",
+      "반려",
+      "6단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 6,
+      "style": "gated-pipeline",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "품질게이트",
+      "검수절차",
+      "승인프로세스"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-169",
+    "category": "PRC",
+    "name": "게이트형 파이프라인 3단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_gated_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:PRC-169",
+    "tags": [
+      "프로세스",
+      "게이트",
+      "판단",
+      "반려",
+      "3단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 3,
+      "style": "gated-pipeline",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "품질게이트",
+      "검수절차",
+      "승인프로세스"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-170",
+    "category": "PRC",
+    "name": "게이트형 파이프라인 4단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_gated_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:PRC-170",
+    "tags": [
+      "프로세스",
+      "게이트",
+      "판단",
+      "반려",
+      "4단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 4,
+      "style": "gated-pipeline",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "품질게이트",
+      "검수절차",
+      "승인프로세스"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-171",
+    "category": "PRC",
+    "name": "게이트형 파이프라인 5단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_gated_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:PRC-171",
+    "tags": [
+      "프로세스",
+      "게이트",
+      "판단",
+      "반려",
+      "5단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 5,
+      "style": "gated-pipeline",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "품질게이트",
+      "검수절차",
+      "승인프로세스"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-172",
+    "category": "PRC",
+    "name": "게이트형 파이프라인 6단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_gated_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:PRC-172",
+    "tags": [
+      "프로세스",
+      "게이트",
+      "판단",
+      "반려",
+      "6단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 6,
+      "style": "gated-pipeline",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "품질게이트",
+      "검수절차",
+      "승인프로세스"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-173",
+    "category": "PRC",
+    "name": "게이트형 파이프라인 3단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_gated_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:PRC-173",
+    "tags": [
+      "프로세스",
+      "게이트",
+      "판단",
+      "반려",
+      "3단계",
+      "틸"
+    ],
+    "params": {
+      "count": 3,
+      "style": "gated-pipeline",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "품질게이트",
+      "검수절차",
+      "승인프로세스"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-174",
+    "category": "PRC",
+    "name": "게이트형 파이프라인 4단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_gated_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:PRC-174",
+    "tags": [
+      "프로세스",
+      "게이트",
+      "판단",
+      "반려",
+      "4단계",
+      "틸"
+    ],
+    "params": {
+      "count": 4,
+      "style": "gated-pipeline",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "품질게이트",
+      "검수절차",
+      "승인프로세스"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-175",
+    "category": "PRC",
+    "name": "게이트형 파이프라인 5단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_gated_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:PRC-175",
+    "tags": [
+      "프로세스",
+      "게이트",
+      "판단",
+      "반려",
+      "5단계",
+      "틸"
+    ],
+    "params": {
+      "count": 5,
+      "style": "gated-pipeline",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "품질게이트",
+      "검수절차",
+      "승인프로세스"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-176",
+    "category": "PRC",
+    "name": "게이트형 파이프라인 6단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_gated_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:PRC-176",
+    "tags": [
+      "프로세스",
+      "게이트",
+      "판단",
+      "반려",
+      "6단계",
+      "틸"
+    ],
+    "params": {
+      "count": 6,
+      "style": "gated-pipeline",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "품질게이트",
+      "검수절차",
+      "승인프로세스"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-177",
+    "category": "PRC",
+    "name": "허브앤스포크 3단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_hubspoke_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:PRC-177",
+    "tags": [
+      "프로세스",
+      "허브앤스포크",
+      "방사형",
+      "연계",
+      "3단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 3,
+      "style": "hub-spoke",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "hub": "통합 관리 플랫폼",
+      "spokes": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "radial"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "통합체계",
+      "연계구조",
+      "플랫폼중심"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-178",
+    "category": "PRC",
+    "name": "허브앤스포크 4단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_hubspoke_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:PRC-178",
+    "tags": [
+      "프로세스",
+      "허브앤스포크",
+      "방사형",
+      "연계",
+      "4단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 4,
+      "style": "hub-spoke",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "hub": "통합 관리 플랫폼",
+      "spokes": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "radial"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "통합체계",
+      "연계구조",
+      "플랫폼중심"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-179",
+    "category": "PRC",
+    "name": "허브앤스포크 5단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_hubspoke_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:PRC-179",
+    "tags": [
+      "프로세스",
+      "허브앤스포크",
+      "방사형",
+      "연계",
+      "5단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 5,
+      "style": "hub-spoke",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "hub": "통합 관리 플랫폼",
+      "spokes": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "radial"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "통합체계",
+      "연계구조",
+      "플랫폼중심"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-180",
+    "category": "PRC",
+    "name": "허브앤스포크 6단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_hubspoke_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:PRC-180",
+    "tags": [
+      "프로세스",
+      "허브앤스포크",
+      "방사형",
+      "연계",
+      "6단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 6,
+      "style": "hub-spoke",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "hub": "통합 관리 플랫폼",
+      "spokes": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "radial"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "통합체계",
+      "연계구조",
+      "플랫폼중심"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-181",
+    "category": "PRC",
+    "name": "허브앤스포크 3단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_hubspoke_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:PRC-181",
+    "tags": [
+      "프로세스",
+      "허브앤스포크",
+      "방사형",
+      "연계",
+      "3단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 3,
+      "style": "hub-spoke",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "hub": "통합 관리 플랫폼",
+      "spokes": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "radial"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "통합체계",
+      "연계구조",
+      "플랫폼중심"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-182",
+    "category": "PRC",
+    "name": "허브앤스포크 4단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_hubspoke_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:PRC-182",
+    "tags": [
+      "프로세스",
+      "허브앤스포크",
+      "방사형",
+      "연계",
+      "4단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 4,
+      "style": "hub-spoke",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "hub": "통합 관리 플랫폼",
+      "spokes": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "radial"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "통합체계",
+      "연계구조",
+      "플랫폼중심"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-183",
+    "category": "PRC",
+    "name": "허브앤스포크 5단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_hubspoke_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:PRC-183",
+    "tags": [
+      "프로세스",
+      "허브앤스포크",
+      "방사형",
+      "연계",
+      "5단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 5,
+      "style": "hub-spoke",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "hub": "통합 관리 플랫폼",
+      "spokes": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "radial"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "통합체계",
+      "연계구조",
+      "플랫폼중심"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-184",
+    "category": "PRC",
+    "name": "허브앤스포크 6단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_hubspoke_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:PRC-184",
+    "tags": [
+      "프로세스",
+      "허브앤스포크",
+      "방사형",
+      "연계",
+      "6단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 6,
+      "style": "hub-spoke",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "hub": "통합 관리 플랫폼",
+      "spokes": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "radial"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "통합체계",
+      "연계구조",
+      "플랫폼중심"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-185",
+    "category": "PRC",
+    "name": "허브앤스포크 3단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_hubspoke_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:PRC-185",
+    "tags": [
+      "프로세스",
+      "허브앤스포크",
+      "방사형",
+      "연계",
+      "3단계",
+      "틸"
+    ],
+    "params": {
+      "count": 3,
+      "style": "hub-spoke",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "hub": "통합 관리 플랫폼",
+      "spokes": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        }
+      ],
+      "count": 3,
+      "direction": "radial"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "통합체계",
+      "연계구조",
+      "플랫폼중심"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-186",
+    "category": "PRC",
+    "name": "허브앤스포크 4단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_hubspoke_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:PRC-186",
+    "tags": [
+      "프로세스",
+      "허브앤스포크",
+      "방사형",
+      "연계",
+      "4단계",
+      "틸"
+    ],
+    "params": {
+      "count": 4,
+      "style": "hub-spoke",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "hub": "통합 관리 플랫폼",
+      "spokes": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        }
+      ],
+      "count": 4,
+      "direction": "radial"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "통합체계",
+      "연계구조",
+      "플랫폼중심"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-187",
+    "category": "PRC",
+    "name": "허브앤스포크 5단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_hubspoke_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:PRC-187",
+    "tags": [
+      "프로세스",
+      "허브앤스포크",
+      "방사형",
+      "연계",
+      "5단계",
+      "틸"
+    ],
+    "params": {
+      "count": 5,
+      "style": "hub-spoke",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "hub": "통합 관리 플랫폼",
+      "spokes": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        }
+      ],
+      "count": 5,
+      "direction": "radial"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "통합체계",
+      "연계구조",
+      "플랫폼중심"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-188",
+    "category": "PRC",
+    "name": "허브앤스포크 6단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_hubspoke_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:PRC-188",
+    "tags": [
+      "프로세스",
+      "허브앤스포크",
+      "방사형",
+      "연계",
+      "6단계",
+      "틸"
+    ],
+    "params": {
+      "count": 6,
+      "style": "hub-spoke",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "hub": "통합 관리 플랫폼",
+      "spokes": [
+        {
+          "label": "현황 분석"
+        },
+        {
+          "label": "전략 수립"
+        },
+        {
+          "label": "체계 설계"
+        },
+        {
+          "label": "구축·개발"
+        },
+        {
+          "label": "검증·안정화"
+        },
+        {
+          "label": "운영·확산"
+        }
+      ],
+      "count": 6,
+      "direction": "radial"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "통합체계",
+      "연계구조",
+      "플랫폼중심"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-189",
+    "category": "PRC",
+    "name": "좌우대비 3단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_compare_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:PRC-189",
+    "tags": [
+      "프로세스",
+      "좌우대비",
+      "As-Is",
+      "To-Be",
+      "3단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 3,
+      "style": "as-is-to-be",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "as_is": "수작업 기반 처리",
+          "to_be": "자동화 파이프라인"
+        },
+        {
+          "as_is": "분절된 개별 시스템",
+          "to_be": "통합 관리 플랫폼"
+        },
+        {
+          "as_is": "사후 대응 중심",
+          "to_be": "선제적 예방 체계"
+        }
+      ],
+      "count": 3,
+      "direction": "left-right"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현재대비개선",
+      "전후비교",
+      "개선효과"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-190",
+    "category": "PRC",
+    "name": "좌우대비 4단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_compare_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:PRC-190",
+    "tags": [
+      "프로세스",
+      "좌우대비",
+      "As-Is",
+      "To-Be",
+      "4단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 4,
+      "style": "as-is-to-be",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "as_is": "수작업 기반 처리",
+          "to_be": "자동화 파이프라인"
+        },
+        {
+          "as_is": "분절된 개별 시스템",
+          "to_be": "통합 관리 플랫폼"
+        },
+        {
+          "as_is": "사후 대응 중심",
+          "to_be": "선제적 예방 체계"
+        },
+        {
+          "as_is": "경험 의존 의사결정",
+          "to_be": "데이터 기반 의사결정"
+        }
+      ],
+      "count": 4,
+      "direction": "left-right"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현재대비개선",
+      "전후비교",
+      "개선효과"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-191",
+    "category": "PRC",
+    "name": "좌우대비 5단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_compare_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:PRC-191",
+    "tags": [
+      "프로세스",
+      "좌우대비",
+      "As-Is",
+      "To-Be",
+      "5단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 5,
+      "style": "as-is-to-be",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "as_is": "수작업 기반 처리",
+          "to_be": "자동화 파이프라인"
+        },
+        {
+          "as_is": "분절된 개별 시스템",
+          "to_be": "통합 관리 플랫폼"
+        },
+        {
+          "as_is": "사후 대응 중심",
+          "to_be": "선제적 예방 체계"
+        },
+        {
+          "as_is": "경험 의존 의사결정",
+          "to_be": "데이터 기반 의사결정"
+        },
+        {
+          "as_is": "산발적 성과 관리",
+          "to_be": "지표 기반 성과 관리"
+        }
+      ],
+      "count": 5,
+      "direction": "left-right"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현재대비개선",
+      "전후비교",
+      "개선효과"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-192",
+    "category": "PRC",
+    "name": "좌우대비 6단계 (쿨블루)",
+    "file": "decks/03_process/PRC_bulk_compare_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:PRC-192",
+    "tags": [
+      "프로세스",
+      "좌우대비",
+      "As-Is",
+      "To-Be",
+      "6단계",
+      "쿨블루"
+    ],
+    "params": {
+      "count": 6,
+      "style": "as-is-to-be",
+      "palette": "COOL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "as_is": "수작업 기반 처리",
+          "to_be": "자동화 파이프라인"
+        },
+        {
+          "as_is": "분절된 개별 시스템",
+          "to_be": "통합 관리 플랫폼"
+        },
+        {
+          "as_is": "사후 대응 중심",
+          "to_be": "선제적 예방 체계"
+        },
+        {
+          "as_is": "경험 의존 의사결정",
+          "to_be": "데이터 기반 의사결정"
+        },
+        {
+          "as_is": "산발적 성과 관리",
+          "to_be": "지표 기반 성과 관리"
+        },
+        {
+          "as_is": "제한된 대외 연계",
+          "to_be": "개방형 협력 생태계"
+        }
+      ],
+      "count": 6,
+      "direction": "left-right"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현재대비개선",
+      "전후비교",
+      "개선효과"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-193",
+    "category": "PRC",
+    "name": "좌우대비 3단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_compare_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:PRC-193",
+    "tags": [
+      "프로세스",
+      "좌우대비",
+      "As-Is",
+      "To-Be",
+      "3단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 3,
+      "style": "as-is-to-be",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "as_is": "수작업 기반 처리",
+          "to_be": "자동화 파이프라인"
+        },
+        {
+          "as_is": "분절된 개별 시스템",
+          "to_be": "통합 관리 플랫폼"
+        },
+        {
+          "as_is": "사후 대응 중심",
+          "to_be": "선제적 예방 체계"
+        }
+      ],
+      "count": 3,
+      "direction": "left-right"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현재대비개선",
+      "전후비교",
+      "개선효과"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-194",
+    "category": "PRC",
+    "name": "좌우대비 4단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_compare_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:PRC-194",
+    "tags": [
+      "프로세스",
+      "좌우대비",
+      "As-Is",
+      "To-Be",
+      "4단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 4,
+      "style": "as-is-to-be",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "as_is": "수작업 기반 처리",
+          "to_be": "자동화 파이프라인"
+        },
+        {
+          "as_is": "분절된 개별 시스템",
+          "to_be": "통합 관리 플랫폼"
+        },
+        {
+          "as_is": "사후 대응 중심",
+          "to_be": "선제적 예방 체계"
+        },
+        {
+          "as_is": "경험 의존 의사결정",
+          "to_be": "데이터 기반 의사결정"
+        }
+      ],
+      "count": 4,
+      "direction": "left-right"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현재대비개선",
+      "전후비교",
+      "개선효과"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-195",
+    "category": "PRC",
+    "name": "좌우대비 5단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_compare_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:PRC-195",
+    "tags": [
+      "프로세스",
+      "좌우대비",
+      "As-Is",
+      "To-Be",
+      "5단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 5,
+      "style": "as-is-to-be",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "as_is": "수작업 기반 처리",
+          "to_be": "자동화 파이프라인"
+        },
+        {
+          "as_is": "분절된 개별 시스템",
+          "to_be": "통합 관리 플랫폼"
+        },
+        {
+          "as_is": "사후 대응 중심",
+          "to_be": "선제적 예방 체계"
+        },
+        {
+          "as_is": "경험 의존 의사결정",
+          "to_be": "데이터 기반 의사결정"
+        },
+        {
+          "as_is": "산발적 성과 관리",
+          "to_be": "지표 기반 성과 관리"
+        }
+      ],
+      "count": 5,
+      "direction": "left-right"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현재대비개선",
+      "전후비교",
+      "개선효과"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-196",
+    "category": "PRC",
+    "name": "좌우대비 6단계 (슬레이트)",
+    "file": "decks/03_process/PRC_bulk_compare_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:PRC-196",
+    "tags": [
+      "프로세스",
+      "좌우대비",
+      "As-Is",
+      "To-Be",
+      "6단계",
+      "슬레이트"
+    ],
+    "params": {
+      "count": 6,
+      "style": "as-is-to-be",
+      "palette": "SLATE"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "as_is": "수작업 기반 처리",
+          "to_be": "자동화 파이프라인"
+        },
+        {
+          "as_is": "분절된 개별 시스템",
+          "to_be": "통합 관리 플랫폼"
+        },
+        {
+          "as_is": "사후 대응 중심",
+          "to_be": "선제적 예방 체계"
+        },
+        {
+          "as_is": "경험 의존 의사결정",
+          "to_be": "데이터 기반 의사결정"
+        },
+        {
+          "as_is": "산발적 성과 관리",
+          "to_be": "지표 기반 성과 관리"
+        },
+        {
+          "as_is": "제한된 대외 연계",
+          "to_be": "개방형 협력 생태계"
+        }
+      ],
+      "count": 6,
+      "direction": "left-right"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현재대비개선",
+      "전후비교",
+      "개선효과"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-197",
+    "category": "PRC",
+    "name": "좌우대비 3단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_compare_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:PRC-197",
+    "tags": [
+      "프로세스",
+      "좌우대비",
+      "As-Is",
+      "To-Be",
+      "3단계",
+      "틸"
+    ],
+    "params": {
+      "count": 3,
+      "style": "as-is-to-be",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "as_is": "수작업 기반 처리",
+          "to_be": "자동화 파이프라인"
+        },
+        {
+          "as_is": "분절된 개별 시스템",
+          "to_be": "통합 관리 플랫폼"
+        },
+        {
+          "as_is": "사후 대응 중심",
+          "to_be": "선제적 예방 체계"
+        }
+      ],
+      "count": 3,
+      "direction": "left-right"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현재대비개선",
+      "전후비교",
+      "개선효과"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-198",
+    "category": "PRC",
+    "name": "좌우대비 4단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_compare_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:PRC-198",
+    "tags": [
+      "프로세스",
+      "좌우대비",
+      "As-Is",
+      "To-Be",
+      "4단계",
+      "틸"
+    ],
+    "params": {
+      "count": 4,
+      "style": "as-is-to-be",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "as_is": "수작업 기반 처리",
+          "to_be": "자동화 파이프라인"
+        },
+        {
+          "as_is": "분절된 개별 시스템",
+          "to_be": "통합 관리 플랫폼"
+        },
+        {
+          "as_is": "사후 대응 중심",
+          "to_be": "선제적 예방 체계"
+        },
+        {
+          "as_is": "경험 의존 의사결정",
+          "to_be": "데이터 기반 의사결정"
+        }
+      ],
+      "count": 4,
+      "direction": "left-right"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현재대비개선",
+      "전후비교",
+      "개선효과"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-199",
+    "category": "PRC",
+    "name": "좌우대비 5단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_compare_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:PRC-199",
+    "tags": [
+      "프로세스",
+      "좌우대비",
+      "As-Is",
+      "To-Be",
+      "5단계",
+      "틸"
+    ],
+    "params": {
+      "count": 5,
+      "style": "as-is-to-be",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "as_is": "수작업 기반 처리",
+          "to_be": "자동화 파이프라인"
+        },
+        {
+          "as_is": "분절된 개별 시스템",
+          "to_be": "통합 관리 플랫폼"
+        },
+        {
+          "as_is": "사후 대응 중심",
+          "to_be": "선제적 예방 체계"
+        },
+        {
+          "as_is": "경험 의존 의사결정",
+          "to_be": "데이터 기반 의사결정"
+        },
+        {
+          "as_is": "산발적 성과 관리",
+          "to_be": "지표 기반 성과 관리"
+        }
+      ],
+      "count": 5,
+      "direction": "left-right"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현재대비개선",
+      "전후비교",
+      "개선효과"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "PRC-200",
+    "category": "PRC",
+    "name": "좌우대비 6단계 (틸)",
+    "file": "decks/03_process/PRC_bulk_compare_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:PRC-200",
+    "tags": [
+      "프로세스",
+      "좌우대비",
+      "As-Is",
+      "To-Be",
+      "6단계",
+      "틸"
+    ],
+    "params": {
+      "count": 6,
+      "style": "as-is-to-be",
+      "palette": "TEAL"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "as_is": "수작업 기반 처리",
+          "to_be": "자동화 파이프라인"
+        },
+        {
+          "as_is": "분절된 개별 시스템",
+          "to_be": "통합 관리 플랫폼"
+        },
+        {
+          "as_is": "사후 대응 중심",
+          "to_be": "선제적 예방 체계"
+        },
+        {
+          "as_is": "경험 의존 의사결정",
+          "to_be": "데이터 기반 의사결정"
+        },
+        {
+          "as_is": "산발적 성과 관리",
+          "to_be": "지표 기반 성과 관리"
+        },
+        {
+          "as_is": "제한된 대외 연계",
+          "to_be": "개방형 협력 생태계"
+        }
+      ],
+      "count": 6,
+      "direction": "left-right"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현재대비개선",
+      "전후비교",
+      "개선효과"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  }
+]

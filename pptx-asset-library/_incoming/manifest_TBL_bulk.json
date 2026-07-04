@@ -1,0 +1,7262 @@
+[
+  {
+    "id": "TBL-023",
+    "category": "TBL",
+    "name": "에듀테크 플랫폼 줄무늬 헤더표 (navy_800·3열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:TBL-023",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "navy_800",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 3,
+      "rows": 4,
+      "header_color": "navy_800"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-024",
+    "category": "TBL",
+    "name": "제조 디지털전환 줄무늬 헤더표 (blue_500·3열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:TBL-024",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "blue_500",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 3,
+      "rows": 6,
+      "header_color": "blue_500"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-025",
+    "category": "TBL",
+    "name": "공공 데이터 개방 줄무늬 헤더표 (teal_500·4열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:TBL-025",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "teal_500",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 4,
+      "header_color": "teal_500"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-026",
+    "category": "TBL",
+    "name": "메타버스 전시 줄무늬 헤더표 (purple_600·4열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:TBL-026",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "purple_600",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 6,
+      "header_color": "purple_600"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-027",
+    "category": "TBL",
+    "name": "친환경 모빌리티 줄무늬 헤더표 (navy_600·5열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:TBL-027",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "navy_600",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 4,
+      "header_color": "navy_600"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-028",
+    "category": "TBL",
+    "name": "농식품 수출 줄무늬 헤더표 (red_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:TBL-028",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "red_500",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 6,
+      "header_color": "red_500"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-029",
+    "category": "TBL",
+    "name": "문화예술 지원 줄무늬 헤더표 (navy_800·6열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:TBL-029",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "navy_800",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 6,
+      "rows": 4,
+      "header_color": "navy_800"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-030",
+    "category": "TBL",
+    "name": "스마트시티 줄무늬 헤더표 (blue_500·6열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:TBL-030",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "blue_500",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 6,
+      "rows": 6,
+      "header_color": "blue_500"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-031",
+    "category": "TBL",
+    "name": "바이오 소재 줄무늬 헤더표 (teal_500·3열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:TBL-031",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "teal_500",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 3,
+      "rows": 4,
+      "header_color": "teal_500"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-032",
+    "category": "TBL",
+    "name": "콘텐츠 해외진출 줄무늬 헤더표 (purple_600·3열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:TBL-032",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "purple_600",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 3,
+      "rows": 6,
+      "header_color": "purple_600"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-033",
+    "category": "TBL",
+    "name": "스마트 물류 줄무늬 헤더표 (navy_600·4열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:TBL-033",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "navy_600",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 4,
+      "header_color": "navy_600"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-034",
+    "category": "TBL",
+    "name": "AI 통합 플랫폼 줄무늬 헤더표 (red_500·4열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:TBL-034",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "red_500",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 6,
+      "header_color": "red_500"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-035",
+    "category": "TBL",
+    "name": "지역 관광 활성화 줄무늬 헤더표 (navy_800·5열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:TBL-035",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "navy_800",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 4,
+      "header_color": "navy_800"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-036",
+    "category": "TBL",
+    "name": "디지털 헬스케어 줄무늬 헤더표 (blue_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:TBL-036",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "blue_500",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 6,
+      "header_color": "blue_500"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-037",
+    "category": "TBL",
+    "name": "그린 에너지 줄무늬 헤더표 (teal_500·6열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:TBL-037",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "teal_500",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 6,
+      "rows": 4,
+      "header_color": "teal_500"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-038",
+    "category": "TBL",
+    "name": "핀테크 서비스 줄무늬 헤더표 (purple_600·6열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v1.pptx",
+    "slide": 16,
+    "anchor": "asset:TBL-038",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "purple_600",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 6,
+      "rows": 6,
+      "header_color": "purple_600"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-039",
+    "category": "TBL",
+    "name": "에듀테크 플랫폼 줄무늬 헤더표 (navy_600·3열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v1.pptx",
+    "slide": 17,
+    "anchor": "asset:TBL-039",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "navy_600",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 3,
+      "rows": 4,
+      "header_color": "navy_600"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-040",
+    "category": "TBL",
+    "name": "제조 디지털전환 줄무늬 헤더표 (red_500·3열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v1.pptx",
+    "slide": 18,
+    "anchor": "asset:TBL-040",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "red_500",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 3,
+      "rows": 6,
+      "header_color": "red_500"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-041",
+    "category": "TBL",
+    "name": "공공 데이터 개방 줄무늬 헤더표 (navy_800·4열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v1.pptx",
+    "slide": 19,
+    "anchor": "asset:TBL-041",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "navy_800",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 4,
+      "header_color": "navy_800"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-042",
+    "category": "TBL",
+    "name": "메타버스 전시 줄무늬 헤더표 (blue_500·4열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v1.pptx",
+    "slide": 20,
+    "anchor": "asset:TBL-042",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "blue_500",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 6,
+      "header_color": "blue_500"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-043",
+    "category": "TBL",
+    "name": "친환경 모빌리티 줄무늬 헤더표 (teal_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v1.pptx",
+    "slide": 21,
+    "anchor": "asset:TBL-043",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "teal_500",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 4,
+      "header_color": "teal_500"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-044",
+    "category": "TBL",
+    "name": "농식품 수출 줄무늬 헤더표 (purple_600·5열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v1.pptx",
+    "slide": 22,
+    "anchor": "asset:TBL-044",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "purple_600",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 6,
+      "header_color": "purple_600"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-045",
+    "category": "TBL",
+    "name": "문화예술 지원 줄무늬 헤더표 (navy_600·6열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v1.pptx",
+    "slide": 23,
+    "anchor": "asset:TBL-045",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "navy_600",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 6,
+      "rows": 4,
+      "header_color": "navy_600"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-046",
+    "category": "TBL",
+    "name": "스마트시티 줄무늬 헤더표 (red_500·6열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v1.pptx",
+    "slide": 24,
+    "anchor": "asset:TBL-046",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "red_500",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 6,
+      "rows": 6,
+      "header_color": "red_500"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-047",
+    "category": "TBL",
+    "name": "바이오 소재 줄무늬 헤더표 (navy_800·3열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v2.pptx",
+    "slide": 1,
+    "anchor": "asset:TBL-047",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "navy_800",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 3,
+      "rows": 4,
+      "header_color": "navy_800"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-048",
+    "category": "TBL",
+    "name": "콘텐츠 해외진출 줄무늬 헤더표 (blue_500·3열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v2.pptx",
+    "slide": 2,
+    "anchor": "asset:TBL-048",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "blue_500",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 3,
+      "rows": 6,
+      "header_color": "blue_500"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-049",
+    "category": "TBL",
+    "name": "스마트 물류 줄무늬 헤더표 (teal_500·4열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v2.pptx",
+    "slide": 3,
+    "anchor": "asset:TBL-049",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "teal_500",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 4,
+      "header_color": "teal_500"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-050",
+    "category": "TBL",
+    "name": "AI 통합 플랫폼 줄무늬 헤더표 (purple_600·4열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v2.pptx",
+    "slide": 4,
+    "anchor": "asset:TBL-050",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "purple_600",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 6,
+      "header_color": "purple_600"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-051",
+    "category": "TBL",
+    "name": "지역 관광 활성화 줄무늬 헤더표 (navy_600·5열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v2.pptx",
+    "slide": 5,
+    "anchor": "asset:TBL-051",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "navy_600",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 4,
+      "header_color": "navy_600"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-052",
+    "category": "TBL",
+    "name": "디지털 헬스케어 줄무늬 헤더표 (red_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v2.pptx",
+    "slide": 6,
+    "anchor": "asset:TBL-052",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "red_500",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 6,
+      "header_color": "red_500"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-053",
+    "category": "TBL",
+    "name": "그린 에너지 줄무늬 헤더표 (navy_800·6열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v2.pptx",
+    "slide": 7,
+    "anchor": "asset:TBL-053",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "navy_800",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 6,
+      "rows": 4,
+      "header_color": "navy_800"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-054",
+    "category": "TBL",
+    "name": "핀테크 서비스 줄무늬 헤더표 (blue_500·6열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v2.pptx",
+    "slide": 8,
+    "anchor": "asset:TBL-054",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "blue_500",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 6,
+      "rows": 6,
+      "header_color": "blue_500"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-055",
+    "category": "TBL",
+    "name": "에듀테크 플랫폼 줄무늬 헤더표 (teal_500·3열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v2.pptx",
+    "slide": 9,
+    "anchor": "asset:TBL-055",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "teal_500",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 3,
+      "rows": 4,
+      "header_color": "teal_500"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-056",
+    "category": "TBL",
+    "name": "제조 디지털전환 줄무늬 헤더표 (purple_600·3열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v2.pptx",
+    "slide": 10,
+    "anchor": "asset:TBL-056",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "purple_600",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 3,
+      "rows": 6,
+      "header_color": "purple_600"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-057",
+    "category": "TBL",
+    "name": "공공 데이터 개방 줄무늬 헤더표 (navy_600·4열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v2.pptx",
+    "slide": 11,
+    "anchor": "asset:TBL-057",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "navy_600",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 4,
+      "header_color": "navy_600"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-058",
+    "category": "TBL",
+    "name": "메타버스 전시 줄무늬 헤더표 (red_500·4열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v2.pptx",
+    "slide": 12,
+    "anchor": "asset:TBL-058",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "red_500",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 6,
+      "header_color": "red_500"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-059",
+    "category": "TBL",
+    "name": "친환경 모빌리티 줄무늬 헤더표 (navy_800·5열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v2.pptx",
+    "slide": 13,
+    "anchor": "asset:TBL-059",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "navy_800",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 4,
+      "header_color": "navy_800"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-060",
+    "category": "TBL",
+    "name": "농식품 수출 줄무늬 헤더표 (blue_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v2.pptx",
+    "slide": 14,
+    "anchor": "asset:TBL-060",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "blue_500",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 6,
+      "header_color": "blue_500"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-061",
+    "category": "TBL",
+    "name": "문화예술 지원 줄무늬 헤더표 (teal_500·6열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v2.pptx",
+    "slide": 15,
+    "anchor": "asset:TBL-061",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "teal_500",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 6,
+      "rows": 4,
+      "header_color": "teal_500"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-062",
+    "category": "TBL",
+    "name": "스마트시티 줄무늬 헤더표 (purple_600·6열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v2.pptx",
+    "slide": 16,
+    "anchor": "asset:TBL-062",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "purple_600",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 6,
+      "rows": 6,
+      "header_color": "purple_600"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-063",
+    "category": "TBL",
+    "name": "바이오 소재 줄무늬 헤더표 (navy_600·3열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v2.pptx",
+    "slide": 17,
+    "anchor": "asset:TBL-063",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "navy_600",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 3,
+      "rows": 4,
+      "header_color": "navy_600"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-064",
+    "category": "TBL",
+    "name": "콘텐츠 해외진출 줄무늬 헤더표 (red_500·3열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v2.pptx",
+    "slide": 18,
+    "anchor": "asset:TBL-064",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "red_500",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 3,
+      "rows": 6,
+      "header_color": "red_500"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-065",
+    "category": "TBL",
+    "name": "스마트 물류 줄무늬 헤더표 (navy_800·4열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v2.pptx",
+    "slide": 19,
+    "anchor": "asset:TBL-065",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "navy_800",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 4,
+      "header_color": "navy_800"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-066",
+    "category": "TBL",
+    "name": "AI 통합 플랫폼 줄무늬 헤더표 (blue_500·4열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v2.pptx",
+    "slide": 20,
+    "anchor": "asset:TBL-066",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "blue_500",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 6,
+      "header_color": "blue_500"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-067",
+    "category": "TBL",
+    "name": "지역 관광 활성화 줄무늬 헤더표 (teal_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v2.pptx",
+    "slide": 21,
+    "anchor": "asset:TBL-067",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "teal_500",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 4,
+      "header_color": "teal_500"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-068",
+    "category": "TBL",
+    "name": "디지털 헬스케어 줄무늬 헤더표 (purple_600·5열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v2.pptx",
+    "slide": 22,
+    "anchor": "asset:TBL-068",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "purple_600",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 6,
+      "header_color": "purple_600"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-069",
+    "category": "TBL",
+    "name": "그린 에너지 줄무늬 헤더표 (navy_600·6열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v2.pptx",
+    "slide": 23,
+    "anchor": "asset:TBL-069",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "navy_600",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 6,
+      "rows": 4,
+      "header_color": "navy_600"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-070",
+    "category": "TBL",
+    "name": "핀테크 서비스 줄무늬 헤더표 (red_500·6열)",
+    "file": "decks/01_tables/TBL_bulk_striped_v2.pptx",
+    "slide": 24,
+    "anchor": "asset:TBL-070",
+    "tags": [
+      "table",
+      "striped",
+      "header",
+      "red_500",
+      "줄무늬",
+      "제안서"
+    ],
+    "params": {
+      "cols": 6,
+      "rows": 6,
+      "header_color": "red_500"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "현황요약",
+      "실적표",
+      "항목별 정리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-071",
+    "category": "TBL",
+    "name": "에듀테크 플랫폼 보더리스 미니멀표 (navy_800·3열)",
+    "file": "decks/01_tables/TBL_bulk_borderless_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:TBL-071",
+    "tags": [
+      "table",
+      "borderless",
+      "minimal",
+      "navy_800",
+      "미니멀"
+    ],
+    "params": {
+      "cols": 3,
+      "rows": 4,
+      "header_color": "navy_800",
+      "borderless": true
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "content"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "content"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "사업개요",
+      "깔끔한 요약",
+      "본문 삽입표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-072",
+    "category": "TBL",
+    "name": "제조 디지털전환 보더리스 미니멀표 (blue_500·4열)",
+    "file": "decks/01_tables/TBL_bulk_borderless_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:TBL-072",
+    "tags": [
+      "table",
+      "borderless",
+      "minimal",
+      "blue_500",
+      "미니멀"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 4,
+      "header_color": "blue_500",
+      "borderless": true
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "content"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "content"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "사업개요",
+      "깔끔한 요약",
+      "본문 삽입표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-073",
+    "category": "TBL",
+    "name": "공공 데이터 개방 보더리스 미니멀표 (teal_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_borderless_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:TBL-073",
+    "tags": [
+      "table",
+      "borderless",
+      "minimal",
+      "teal_500",
+      "미니멀"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 4,
+      "header_color": "teal_500",
+      "borderless": true
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "content"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "content"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "사업개요",
+      "깔끔한 요약",
+      "본문 삽입표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-074",
+    "category": "TBL",
+    "name": "메타버스 전시 보더리스 미니멀표 (purple_600·3열)",
+    "file": "decks/01_tables/TBL_bulk_borderless_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:TBL-074",
+    "tags": [
+      "table",
+      "borderless",
+      "minimal",
+      "purple_600",
+      "미니멀"
+    ],
+    "params": {
+      "cols": 3,
+      "rows": 5,
+      "header_color": "purple_600",
+      "borderless": true
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "content"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "content"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "사업개요",
+      "깔끔한 요약",
+      "본문 삽입표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-075",
+    "category": "TBL",
+    "name": "친환경 모빌리티 보더리스 미니멀표 (navy_600·4열)",
+    "file": "decks/01_tables/TBL_bulk_borderless_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:TBL-075",
+    "tags": [
+      "table",
+      "borderless",
+      "minimal",
+      "navy_600",
+      "미니멀"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 5,
+      "header_color": "navy_600",
+      "borderless": true
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "content"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "content"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "사업개요",
+      "깔끔한 요약",
+      "본문 삽입표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-076",
+    "category": "TBL",
+    "name": "농식품 수출 보더리스 미니멀표 (red_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_borderless_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:TBL-076",
+    "tags": [
+      "table",
+      "borderless",
+      "minimal",
+      "red_500",
+      "미니멀"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 5,
+      "header_color": "red_500",
+      "borderless": true
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "content"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "content"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "사업개요",
+      "깔끔한 요약",
+      "본문 삽입표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-077",
+    "category": "TBL",
+    "name": "문화예술 지원 보더리스 미니멀표 (navy_800·3열)",
+    "file": "decks/01_tables/TBL_bulk_borderless_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:TBL-077",
+    "tags": [
+      "table",
+      "borderless",
+      "minimal",
+      "navy_800",
+      "미니멀"
+    ],
+    "params": {
+      "cols": 3,
+      "rows": 4,
+      "header_color": "navy_800",
+      "borderless": true
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "content"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "content"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "사업개요",
+      "깔끔한 요약",
+      "본문 삽입표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-078",
+    "category": "TBL",
+    "name": "스마트시티 보더리스 미니멀표 (blue_500·4열)",
+    "file": "decks/01_tables/TBL_bulk_borderless_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:TBL-078",
+    "tags": [
+      "table",
+      "borderless",
+      "minimal",
+      "blue_500",
+      "미니멀"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 4,
+      "header_color": "blue_500",
+      "borderless": true
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "content"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "content"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "사업개요",
+      "깔끔한 요약",
+      "본문 삽입표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-079",
+    "category": "TBL",
+    "name": "바이오 소재 보더리스 미니멀표 (teal_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_borderless_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:TBL-079",
+    "tags": [
+      "table",
+      "borderless",
+      "minimal",
+      "teal_500",
+      "미니멀"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 4,
+      "header_color": "teal_500",
+      "borderless": true
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "content"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "content"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "사업개요",
+      "깔끔한 요약",
+      "본문 삽입표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-080",
+    "category": "TBL",
+    "name": "콘텐츠 해외진출 보더리스 미니멀표 (purple_600·3열)",
+    "file": "decks/01_tables/TBL_bulk_borderless_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:TBL-080",
+    "tags": [
+      "table",
+      "borderless",
+      "minimal",
+      "purple_600",
+      "미니멀"
+    ],
+    "params": {
+      "cols": 3,
+      "rows": 5,
+      "header_color": "purple_600",
+      "borderless": true
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "content"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "content"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "사업개요",
+      "깔끔한 요약",
+      "본문 삽입표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-081",
+    "category": "TBL",
+    "name": "스마트 물류 보더리스 미니멀표 (navy_600·4열)",
+    "file": "decks/01_tables/TBL_bulk_borderless_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:TBL-081",
+    "tags": [
+      "table",
+      "borderless",
+      "minimal",
+      "navy_600",
+      "미니멀"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 5,
+      "header_color": "navy_600",
+      "borderless": true
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "content"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "content"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "사업개요",
+      "깔끔한 요약",
+      "본문 삽입표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-082",
+    "category": "TBL",
+    "name": "AI 통합 플랫폼 보더리스 미니멀표 (red_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_borderless_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:TBL-082",
+    "tags": [
+      "table",
+      "borderless",
+      "minimal",
+      "red_500",
+      "미니멀"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 5,
+      "header_color": "red_500",
+      "borderless": true
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "content"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "content"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "사업개요",
+      "깔끔한 요약",
+      "본문 삽입표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-083",
+    "category": "TBL",
+    "name": "지역 관광 활성화 헤더밑줄표 (navy_800·3열)",
+    "file": "decks/01_tables/TBL_bulk_underline_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:TBL-083",
+    "tags": [
+      "table",
+      "underline",
+      "header-underline",
+      "navy_800",
+      "밑줄"
+    ],
+    "params": {
+      "cols": 3,
+      "rows": 4,
+      "header_color": "navy_800"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "세부내역",
+      "정갈한 표",
+      "본문 표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-084",
+    "category": "TBL",
+    "name": "디지털 헬스케어 헤더밑줄표 (blue_500·4열)",
+    "file": "decks/01_tables/TBL_bulk_underline_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:TBL-084",
+    "tags": [
+      "table",
+      "underline",
+      "header-underline",
+      "blue_500",
+      "밑줄"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 4,
+      "header_color": "blue_500"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "세부내역",
+      "정갈한 표",
+      "본문 표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-085",
+    "category": "TBL",
+    "name": "그린 에너지 헤더밑줄표 (teal_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_underline_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:TBL-085",
+    "tags": [
+      "table",
+      "underline",
+      "header-underline",
+      "teal_500",
+      "밑줄"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 4,
+      "header_color": "teal_500"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "세부내역",
+      "정갈한 표",
+      "본문 표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-086",
+    "category": "TBL",
+    "name": "핀테크 서비스 헤더밑줄표 (purple_600·3열)",
+    "file": "decks/01_tables/TBL_bulk_underline_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:TBL-086",
+    "tags": [
+      "table",
+      "underline",
+      "header-underline",
+      "purple_600",
+      "밑줄"
+    ],
+    "params": {
+      "cols": 3,
+      "rows": 5,
+      "header_color": "purple_600"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "세부내역",
+      "정갈한 표",
+      "본문 표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-087",
+    "category": "TBL",
+    "name": "에듀테크 플랫폼 헤더밑줄표 (navy_600·4열)",
+    "file": "decks/01_tables/TBL_bulk_underline_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:TBL-087",
+    "tags": [
+      "table",
+      "underline",
+      "header-underline",
+      "navy_600",
+      "밑줄"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 5,
+      "header_color": "navy_600"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "세부내역",
+      "정갈한 표",
+      "본문 표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-088",
+    "category": "TBL",
+    "name": "제조 디지털전환 헤더밑줄표 (red_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_underline_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:TBL-088",
+    "tags": [
+      "table",
+      "underline",
+      "header-underline",
+      "red_500",
+      "밑줄"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 5,
+      "header_color": "red_500"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "세부내역",
+      "정갈한 표",
+      "본문 표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-089",
+    "category": "TBL",
+    "name": "공공 데이터 개방 헤더밑줄표 (navy_800·3열)",
+    "file": "decks/01_tables/TBL_bulk_underline_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:TBL-089",
+    "tags": [
+      "table",
+      "underline",
+      "header-underline",
+      "navy_800",
+      "밑줄"
+    ],
+    "params": {
+      "cols": 3,
+      "rows": 4,
+      "header_color": "navy_800"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "세부내역",
+      "정갈한 표",
+      "본문 표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-090",
+    "category": "TBL",
+    "name": "메타버스 전시 헤더밑줄표 (blue_500·4열)",
+    "file": "decks/01_tables/TBL_bulk_underline_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:TBL-090",
+    "tags": [
+      "table",
+      "underline",
+      "header-underline",
+      "blue_500",
+      "밑줄"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 4,
+      "header_color": "blue_500"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "세부내역",
+      "정갈한 표",
+      "본문 표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-091",
+    "category": "TBL",
+    "name": "친환경 모빌리티 헤더밑줄표 (teal_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_underline_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:TBL-091",
+    "tags": [
+      "table",
+      "underline",
+      "header-underline",
+      "teal_500",
+      "밑줄"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 4,
+      "header_color": "teal_500"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "세부내역",
+      "정갈한 표",
+      "본문 표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-092",
+    "category": "TBL",
+    "name": "농식품 수출 헤더밑줄표 (purple_600·3열)",
+    "file": "decks/01_tables/TBL_bulk_underline_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:TBL-092",
+    "tags": [
+      "table",
+      "underline",
+      "header-underline",
+      "purple_600",
+      "밑줄"
+    ],
+    "params": {
+      "cols": 3,
+      "rows": 5,
+      "header_color": "purple_600"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "세부내역",
+      "정갈한 표",
+      "본문 표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-093",
+    "category": "TBL",
+    "name": "문화예술 지원 헤더밑줄표 (navy_600·4열)",
+    "file": "decks/01_tables/TBL_bulk_underline_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:TBL-093",
+    "tags": [
+      "table",
+      "underline",
+      "header-underline",
+      "navy_600",
+      "밑줄"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 5,
+      "header_color": "navy_600"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "세부내역",
+      "정갈한 표",
+      "본문 표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-094",
+    "category": "TBL",
+    "name": "스마트시티 헤더밑줄표 (red_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_underline_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:TBL-094",
+    "tags": [
+      "table",
+      "underline",
+      "header-underline",
+      "red_500",
+      "밑줄"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 5,
+      "header_color": "red_500"
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "세부내역",
+      "정갈한 표",
+      "본문 표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-095",
+    "category": "TBL",
+    "name": "바이오 소재 2단 그룹헤더표 (navy_800·5열)",
+    "file": "decks/01_tables/TBL_bulk_group2_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:TBL-095",
+    "tags": [
+      "table",
+      "group-header",
+      "two-tier",
+      "navy_800",
+      "그룹헤더"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 4,
+      "header_color": "navy_800",
+      "group_header": true
+    },
+    "bindings": [
+      "group_header",
+      "sub_header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "group_header",
+      "sub_header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "실적비교",
+      "부문별 대비",
+      "그룹 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-096",
+    "category": "TBL",
+    "name": "콘텐츠 해외진출 2단 그룹헤더표 (blue_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_group2_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:TBL-096",
+    "tags": [
+      "table",
+      "group-header",
+      "two-tier",
+      "blue_500",
+      "그룹헤더"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 5,
+      "header_color": "blue_500",
+      "group_header": true
+    },
+    "bindings": [
+      "group_header",
+      "sub_header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "group_header",
+      "sub_header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "실적비교",
+      "부문별 대비",
+      "그룹 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-097",
+    "category": "TBL",
+    "name": "스마트 물류 2단 그룹헤더표 (teal_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_group2_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:TBL-097",
+    "tags": [
+      "table",
+      "group-header",
+      "two-tier",
+      "teal_500",
+      "그룹헤더"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 6,
+      "header_color": "teal_500",
+      "group_header": true
+    },
+    "bindings": [
+      "group_header",
+      "sub_header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "group_header",
+      "sub_header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "실적비교",
+      "부문별 대비",
+      "그룹 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-098",
+    "category": "TBL",
+    "name": "AI 통합 플랫폼 2단 그룹헤더표 (purple_600·5열)",
+    "file": "decks/01_tables/TBL_bulk_group2_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:TBL-098",
+    "tags": [
+      "table",
+      "group-header",
+      "two-tier",
+      "purple_600",
+      "그룹헤더"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 4,
+      "header_color": "purple_600",
+      "group_header": true
+    },
+    "bindings": [
+      "group_header",
+      "sub_header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "group_header",
+      "sub_header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "실적비교",
+      "부문별 대비",
+      "그룹 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-099",
+    "category": "TBL",
+    "name": "지역 관광 활성화 2단 그룹헤더표 (navy_600·5열)",
+    "file": "decks/01_tables/TBL_bulk_group2_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:TBL-099",
+    "tags": [
+      "table",
+      "group-header",
+      "two-tier",
+      "navy_600",
+      "그룹헤더"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 5,
+      "header_color": "navy_600",
+      "group_header": true
+    },
+    "bindings": [
+      "group_header",
+      "sub_header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "group_header",
+      "sub_header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "실적비교",
+      "부문별 대비",
+      "그룹 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-100",
+    "category": "TBL",
+    "name": "디지털 헬스케어 2단 그룹헤더표 (red_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_group2_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:TBL-100",
+    "tags": [
+      "table",
+      "group-header",
+      "two-tier",
+      "red_500",
+      "그룹헤더"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 6,
+      "header_color": "red_500",
+      "group_header": true
+    },
+    "bindings": [
+      "group_header",
+      "sub_header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "group_header",
+      "sub_header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "실적비교",
+      "부문별 대비",
+      "그룹 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-101",
+    "category": "TBL",
+    "name": "그린 에너지 2단 그룹헤더표 (navy_800·5열)",
+    "file": "decks/01_tables/TBL_bulk_group2_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:TBL-101",
+    "tags": [
+      "table",
+      "group-header",
+      "two-tier",
+      "navy_800",
+      "그룹헤더"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 4,
+      "header_color": "navy_800",
+      "group_header": true
+    },
+    "bindings": [
+      "group_header",
+      "sub_header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "group_header",
+      "sub_header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "실적비교",
+      "부문별 대비",
+      "그룹 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-102",
+    "category": "TBL",
+    "name": "핀테크 서비스 2단 그룹헤더표 (blue_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_group2_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:TBL-102",
+    "tags": [
+      "table",
+      "group-header",
+      "two-tier",
+      "blue_500",
+      "그룹헤더"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 5,
+      "header_color": "blue_500",
+      "group_header": true
+    },
+    "bindings": [
+      "group_header",
+      "sub_header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "group_header",
+      "sub_header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "실적비교",
+      "부문별 대비",
+      "그룹 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-103",
+    "category": "TBL",
+    "name": "에듀테크 플랫폼 2단 그룹헤더표 (teal_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_group2_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:TBL-103",
+    "tags": [
+      "table",
+      "group-header",
+      "two-tier",
+      "teal_500",
+      "그룹헤더"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 6,
+      "header_color": "teal_500",
+      "group_header": true
+    },
+    "bindings": [
+      "group_header",
+      "sub_header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "group_header",
+      "sub_header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "실적비교",
+      "부문별 대비",
+      "그룹 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-104",
+    "category": "TBL",
+    "name": "제조 디지털전환 2단 그룹헤더표 (purple_600·5열)",
+    "file": "decks/01_tables/TBL_bulk_group2_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:TBL-104",
+    "tags": [
+      "table",
+      "group-header",
+      "two-tier",
+      "purple_600",
+      "그룹헤더"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 4,
+      "header_color": "purple_600",
+      "group_header": true
+    },
+    "bindings": [
+      "group_header",
+      "sub_header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "group_header",
+      "sub_header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "실적비교",
+      "부문별 대비",
+      "그룹 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-105",
+    "category": "TBL",
+    "name": "공공 데이터 개방 2단 그룹헤더표 (navy_600·5열)",
+    "file": "decks/01_tables/TBL_bulk_group2_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:TBL-105",
+    "tags": [
+      "table",
+      "group-header",
+      "two-tier",
+      "navy_600",
+      "그룹헤더"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 5,
+      "header_color": "navy_600",
+      "group_header": true
+    },
+    "bindings": [
+      "group_header",
+      "sub_header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "group_header",
+      "sub_header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "실적비교",
+      "부문별 대비",
+      "그룹 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-106",
+    "category": "TBL",
+    "name": "메타버스 전시 2단 그룹헤더표 (red_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_group2_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:TBL-106",
+    "tags": [
+      "table",
+      "group-header",
+      "two-tier",
+      "red_500",
+      "그룹헤더"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 6,
+      "header_color": "red_500",
+      "group_header": true
+    },
+    "bindings": [
+      "group_header",
+      "sub_header",
+      "row_label",
+      "cell_value"
+    ],
+    "editable": [
+      "group_header",
+      "sub_header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "실적비교",
+      "부문별 대비",
+      "그룹 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-107",
+    "category": "TBL",
+    "name": "친환경 모빌리티 좌측 라벨열강조표 (navy_800·4열)",
+    "file": "decks/01_tables/TBL_bulk_leftlabel_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:TBL-107",
+    "tags": [
+      "table",
+      "left-label",
+      "row-header",
+      "navy_800",
+      "라벨강조"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 4,
+      "header_color": "navy_800",
+      "left_label": true
+    },
+    "bindings": [
+      "header",
+      "row_label_emph",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목정리",
+      "속성표",
+      "좌측 헤더표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-108",
+    "category": "TBL",
+    "name": "농식품 수출 좌측 라벨열강조표 (blue_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_leftlabel_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:TBL-108",
+    "tags": [
+      "table",
+      "left-label",
+      "row-header",
+      "blue_500",
+      "라벨강조"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 4,
+      "header_color": "blue_500",
+      "left_label": true
+    },
+    "bindings": [
+      "header",
+      "row_label_emph",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목정리",
+      "속성표",
+      "좌측 헤더표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-109",
+    "category": "TBL",
+    "name": "문화예술 지원 좌측 라벨열강조표 (teal_500·6열)",
+    "file": "decks/01_tables/TBL_bulk_leftlabel_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:TBL-109",
+    "tags": [
+      "table",
+      "left-label",
+      "row-header",
+      "teal_500",
+      "라벨강조"
+    ],
+    "params": {
+      "cols": 6,
+      "rows": 4,
+      "header_color": "teal_500",
+      "left_label": true
+    },
+    "bindings": [
+      "header",
+      "row_label_emph",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목정리",
+      "속성표",
+      "좌측 헤더표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-110",
+    "category": "TBL",
+    "name": "스마트시티 좌측 라벨열강조표 (purple_600·4열)",
+    "file": "decks/01_tables/TBL_bulk_leftlabel_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:TBL-110",
+    "tags": [
+      "table",
+      "left-label",
+      "row-header",
+      "purple_600",
+      "라벨강조"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 5,
+      "header_color": "purple_600",
+      "left_label": true
+    },
+    "bindings": [
+      "header",
+      "row_label_emph",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목정리",
+      "속성표",
+      "좌측 헤더표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-111",
+    "category": "TBL",
+    "name": "바이오 소재 좌측 라벨열강조표 (navy_600·5열)",
+    "file": "decks/01_tables/TBL_bulk_leftlabel_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:TBL-111",
+    "tags": [
+      "table",
+      "left-label",
+      "row-header",
+      "navy_600",
+      "라벨강조"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 5,
+      "header_color": "navy_600",
+      "left_label": true
+    },
+    "bindings": [
+      "header",
+      "row_label_emph",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목정리",
+      "속성표",
+      "좌측 헤더표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-112",
+    "category": "TBL",
+    "name": "콘텐츠 해외진출 좌측 라벨열강조표 (red_500·6열)",
+    "file": "decks/01_tables/TBL_bulk_leftlabel_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:TBL-112",
+    "tags": [
+      "table",
+      "left-label",
+      "row-header",
+      "red_500",
+      "라벨강조"
+    ],
+    "params": {
+      "cols": 6,
+      "rows": 5,
+      "header_color": "red_500",
+      "left_label": true
+    },
+    "bindings": [
+      "header",
+      "row_label_emph",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목정리",
+      "속성표",
+      "좌측 헤더표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-113",
+    "category": "TBL",
+    "name": "스마트 물류 좌측 라벨열강조표 (navy_800·4열)",
+    "file": "decks/01_tables/TBL_bulk_leftlabel_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:TBL-113",
+    "tags": [
+      "table",
+      "left-label",
+      "row-header",
+      "navy_800",
+      "라벨강조"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 4,
+      "header_color": "navy_800",
+      "left_label": true
+    },
+    "bindings": [
+      "header",
+      "row_label_emph",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목정리",
+      "속성표",
+      "좌측 헤더표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-114",
+    "category": "TBL",
+    "name": "AI 통합 플랫폼 좌측 라벨열강조표 (blue_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_leftlabel_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:TBL-114",
+    "tags": [
+      "table",
+      "left-label",
+      "row-header",
+      "blue_500",
+      "라벨강조"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 4,
+      "header_color": "blue_500",
+      "left_label": true
+    },
+    "bindings": [
+      "header",
+      "row_label_emph",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목정리",
+      "속성표",
+      "좌측 헤더표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-115",
+    "category": "TBL",
+    "name": "지역 관광 활성화 좌측 라벨열강조표 (teal_500·6열)",
+    "file": "decks/01_tables/TBL_bulk_leftlabel_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:TBL-115",
+    "tags": [
+      "table",
+      "left-label",
+      "row-header",
+      "teal_500",
+      "라벨강조"
+    ],
+    "params": {
+      "cols": 6,
+      "rows": 4,
+      "header_color": "teal_500",
+      "left_label": true
+    },
+    "bindings": [
+      "header",
+      "row_label_emph",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목정리",
+      "속성표",
+      "좌측 헤더표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-116",
+    "category": "TBL",
+    "name": "디지털 헬스케어 좌측 라벨열강조표 (purple_600·4열)",
+    "file": "decks/01_tables/TBL_bulk_leftlabel_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:TBL-116",
+    "tags": [
+      "table",
+      "left-label",
+      "row-header",
+      "purple_600",
+      "라벨강조"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 5,
+      "header_color": "purple_600",
+      "left_label": true
+    },
+    "bindings": [
+      "header",
+      "row_label_emph",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목정리",
+      "속성표",
+      "좌측 헤더표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-117",
+    "category": "TBL",
+    "name": "그린 에너지 좌측 라벨열강조표 (navy_600·5열)",
+    "file": "decks/01_tables/TBL_bulk_leftlabel_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:TBL-117",
+    "tags": [
+      "table",
+      "left-label",
+      "row-header",
+      "navy_600",
+      "라벨강조"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 5,
+      "header_color": "navy_600",
+      "left_label": true
+    },
+    "bindings": [
+      "header",
+      "row_label_emph",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목정리",
+      "속성표",
+      "좌측 헤더표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-118",
+    "category": "TBL",
+    "name": "핀테크 서비스 좌측 라벨열강조표 (red_500·6열)",
+    "file": "decks/01_tables/TBL_bulk_leftlabel_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:TBL-118",
+    "tags": [
+      "table",
+      "left-label",
+      "row-header",
+      "red_500",
+      "라벨강조"
+    ],
+    "params": {
+      "cols": 6,
+      "rows": 5,
+      "header_color": "red_500",
+      "left_label": true
+    },
+    "bindings": [
+      "header",
+      "row_label_emph",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "항목정리",
+      "속성표",
+      "좌측 헤더표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-119",
+    "category": "TBL",
+    "name": "에듀테크 플랫폼 합계행 강조표 (navy_800·4열)",
+    "file": "decks/01_tables/TBL_bulk_totalrow_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:TBL-119",
+    "tags": [
+      "table",
+      "total-row",
+      "sum",
+      "navy_800",
+      "합계행"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 4,
+      "header_color": "navy_800",
+      "total_row": true
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "집계요약",
+      "합계표",
+      "금액 정산"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-120",
+    "category": "TBL",
+    "name": "제조 디지털전환 합계행 강조표 (blue_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_totalrow_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:TBL-120",
+    "tags": [
+      "table",
+      "total-row",
+      "sum",
+      "blue_500",
+      "합계행"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 4,
+      "header_color": "blue_500",
+      "total_row": true
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "집계요약",
+      "합계표",
+      "금액 정산"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-121",
+    "category": "TBL",
+    "name": "공공 데이터 개방 합계행 강조표 (teal_500·6열)",
+    "file": "decks/01_tables/TBL_bulk_totalrow_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:TBL-121",
+    "tags": [
+      "table",
+      "total-row",
+      "sum",
+      "teal_500",
+      "합계행"
+    ],
+    "params": {
+      "cols": 6,
+      "rows": 4,
+      "header_color": "teal_500",
+      "total_row": true
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "집계요약",
+      "합계표",
+      "금액 정산"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-122",
+    "category": "TBL",
+    "name": "메타버스 전시 합계행 강조표 (purple_600·4열)",
+    "file": "decks/01_tables/TBL_bulk_totalrow_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:TBL-122",
+    "tags": [
+      "table",
+      "total-row",
+      "sum",
+      "purple_600",
+      "합계행"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 5,
+      "header_color": "purple_600",
+      "total_row": true
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "집계요약",
+      "합계표",
+      "금액 정산"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-123",
+    "category": "TBL",
+    "name": "친환경 모빌리티 합계행 강조표 (navy_600·5열)",
+    "file": "decks/01_tables/TBL_bulk_totalrow_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:TBL-123",
+    "tags": [
+      "table",
+      "total-row",
+      "sum",
+      "navy_600",
+      "합계행"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 5,
+      "header_color": "navy_600",
+      "total_row": true
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "집계요약",
+      "합계표",
+      "금액 정산"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-124",
+    "category": "TBL",
+    "name": "농식품 수출 합계행 강조표 (red_500·6열)",
+    "file": "decks/01_tables/TBL_bulk_totalrow_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:TBL-124",
+    "tags": [
+      "table",
+      "total-row",
+      "sum",
+      "red_500",
+      "합계행"
+    ],
+    "params": {
+      "cols": 6,
+      "rows": 5,
+      "header_color": "red_500",
+      "total_row": true
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "집계요약",
+      "합계표",
+      "금액 정산"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-125",
+    "category": "TBL",
+    "name": "문화예술 지원 합계행 강조표 (navy_800·4열)",
+    "file": "decks/01_tables/TBL_bulk_totalrow_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:TBL-125",
+    "tags": [
+      "table",
+      "total-row",
+      "sum",
+      "navy_800",
+      "합계행"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 4,
+      "header_color": "navy_800",
+      "total_row": true
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "집계요약",
+      "합계표",
+      "금액 정산"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-126",
+    "category": "TBL",
+    "name": "스마트시티 합계행 강조표 (blue_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_totalrow_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:TBL-126",
+    "tags": [
+      "table",
+      "total-row",
+      "sum",
+      "blue_500",
+      "합계행"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 4,
+      "header_color": "blue_500",
+      "total_row": true
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "집계요약",
+      "합계표",
+      "금액 정산"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-127",
+    "category": "TBL",
+    "name": "바이오 소재 합계행 강조표 (teal_500·6열)",
+    "file": "decks/01_tables/TBL_bulk_totalrow_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:TBL-127",
+    "tags": [
+      "table",
+      "total-row",
+      "sum",
+      "teal_500",
+      "합계행"
+    ],
+    "params": {
+      "cols": 6,
+      "rows": 4,
+      "header_color": "teal_500",
+      "total_row": true
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "집계요약",
+      "합계표",
+      "금액 정산"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-128",
+    "category": "TBL",
+    "name": "콘텐츠 해외진출 합계행 강조표 (purple_600·4열)",
+    "file": "decks/01_tables/TBL_bulk_totalrow_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:TBL-128",
+    "tags": [
+      "table",
+      "total-row",
+      "sum",
+      "purple_600",
+      "합계행"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 5,
+      "header_color": "purple_600",
+      "total_row": true
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "집계요약",
+      "합계표",
+      "금액 정산"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-129",
+    "category": "TBL",
+    "name": "스마트 물류 합계행 강조표 (navy_600·5열)",
+    "file": "decks/01_tables/TBL_bulk_totalrow_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:TBL-129",
+    "tags": [
+      "table",
+      "total-row",
+      "sum",
+      "navy_600",
+      "합계행"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 5,
+      "header_color": "navy_600",
+      "total_row": true
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "집계요약",
+      "합계표",
+      "금액 정산"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-130",
+    "category": "TBL",
+    "name": "AI 통합 플랫폼 합계행 강조표 (red_500·6열)",
+    "file": "decks/01_tables/TBL_bulk_totalrow_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:TBL-130",
+    "tags": [
+      "table",
+      "total-row",
+      "sum",
+      "red_500",
+      "합계행"
+    ],
+    "params": {
+      "cols": 6,
+      "rows": 5,
+      "header_color": "red_500",
+      "total_row": true
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "집계요약",
+      "합계표",
+      "금액 정산"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-131",
+    "category": "TBL",
+    "name": "지역 관광 활성화 신호등 상태셀표 (navy_800·4열)",
+    "file": "decks/01_tables/TBL_bulk_signal_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:TBL-131",
+    "tags": [
+      "table",
+      "status",
+      "traffic-light",
+      "navy_800",
+      "신호등",
+      "상태"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 4,
+      "header_color": "navy_800",
+      "status_cell": true
+    },
+    "bindings": [
+      "header",
+      "item",
+      "status_cell",
+      "owner"
+    ],
+    "editable": [
+      "header",
+      "item",
+      "status_cell"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "진행상태",
+      "과업점검",
+      "RAG 상태"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-132",
+    "category": "TBL",
+    "name": "디지털 헬스케어 신호등 상태셀표 (blue_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_signal_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:TBL-132",
+    "tags": [
+      "table",
+      "status",
+      "traffic-light",
+      "blue_500",
+      "신호등",
+      "상태"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 4,
+      "header_color": "blue_500",
+      "status_cell": true
+    },
+    "bindings": [
+      "header",
+      "item",
+      "status_cell",
+      "owner"
+    ],
+    "editable": [
+      "header",
+      "item",
+      "status_cell"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "진행상태",
+      "과업점검",
+      "RAG 상태"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-133",
+    "category": "TBL",
+    "name": "그린 에너지 신호등 상태셀표 (teal_500·4열)",
+    "file": "decks/01_tables/TBL_bulk_signal_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:TBL-133",
+    "tags": [
+      "table",
+      "status",
+      "traffic-light",
+      "teal_500",
+      "신호등",
+      "상태"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 5,
+      "header_color": "teal_500",
+      "status_cell": true
+    },
+    "bindings": [
+      "header",
+      "item",
+      "status_cell",
+      "owner"
+    ],
+    "editable": [
+      "header",
+      "item",
+      "status_cell"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "진행상태",
+      "과업점검",
+      "RAG 상태"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-134",
+    "category": "TBL",
+    "name": "핀테크 서비스 신호등 상태셀표 (purple_600·5열)",
+    "file": "decks/01_tables/TBL_bulk_signal_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:TBL-134",
+    "tags": [
+      "table",
+      "status",
+      "traffic-light",
+      "purple_600",
+      "신호등",
+      "상태"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 5,
+      "header_color": "purple_600",
+      "status_cell": true
+    },
+    "bindings": [
+      "header",
+      "item",
+      "status_cell",
+      "owner"
+    ],
+    "editable": [
+      "header",
+      "item",
+      "status_cell"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "진행상태",
+      "과업점검",
+      "RAG 상태"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-135",
+    "category": "TBL",
+    "name": "에듀테크 플랫폼 신호등 상태셀표 (navy_600·4열)",
+    "file": "decks/01_tables/TBL_bulk_signal_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:TBL-135",
+    "tags": [
+      "table",
+      "status",
+      "traffic-light",
+      "navy_600",
+      "신호등",
+      "상태"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 6,
+      "header_color": "navy_600",
+      "status_cell": true
+    },
+    "bindings": [
+      "header",
+      "item",
+      "status_cell",
+      "owner"
+    ],
+    "editable": [
+      "header",
+      "item",
+      "status_cell"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "진행상태",
+      "과업점검",
+      "RAG 상태"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-136",
+    "category": "TBL",
+    "name": "제조 디지털전환 신호등 상태셀표 (red_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_signal_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:TBL-136",
+    "tags": [
+      "table",
+      "status",
+      "traffic-light",
+      "red_500",
+      "신호등",
+      "상태"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 6,
+      "header_color": "red_500",
+      "status_cell": true
+    },
+    "bindings": [
+      "header",
+      "item",
+      "status_cell",
+      "owner"
+    ],
+    "editable": [
+      "header",
+      "item",
+      "status_cell"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "진행상태",
+      "과업점검",
+      "RAG 상태"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-137",
+    "category": "TBL",
+    "name": "공공 데이터 개방 신호등 상태셀표 (navy_800·4열)",
+    "file": "decks/01_tables/TBL_bulk_signal_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:TBL-137",
+    "tags": [
+      "table",
+      "status",
+      "traffic-light",
+      "navy_800",
+      "신호등",
+      "상태"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 4,
+      "header_color": "navy_800",
+      "status_cell": true
+    },
+    "bindings": [
+      "header",
+      "item",
+      "status_cell",
+      "owner"
+    ],
+    "editable": [
+      "header",
+      "item",
+      "status_cell"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "진행상태",
+      "과업점검",
+      "RAG 상태"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-138",
+    "category": "TBL",
+    "name": "메타버스 전시 신호등 상태셀표 (blue_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_signal_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:TBL-138",
+    "tags": [
+      "table",
+      "status",
+      "traffic-light",
+      "blue_500",
+      "신호등",
+      "상태"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 4,
+      "header_color": "blue_500",
+      "status_cell": true
+    },
+    "bindings": [
+      "header",
+      "item",
+      "status_cell",
+      "owner"
+    ],
+    "editable": [
+      "header",
+      "item",
+      "status_cell"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "진행상태",
+      "과업점검",
+      "RAG 상태"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-139",
+    "category": "TBL",
+    "name": "친환경 모빌리티 신호등 상태셀표 (teal_500·4열)",
+    "file": "decks/01_tables/TBL_bulk_signal_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:TBL-139",
+    "tags": [
+      "table",
+      "status",
+      "traffic-light",
+      "teal_500",
+      "신호등",
+      "상태"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 5,
+      "header_color": "teal_500",
+      "status_cell": true
+    },
+    "bindings": [
+      "header",
+      "item",
+      "status_cell",
+      "owner"
+    ],
+    "editable": [
+      "header",
+      "item",
+      "status_cell"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "진행상태",
+      "과업점검",
+      "RAG 상태"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-140",
+    "category": "TBL",
+    "name": "농식품 수출 신호등 상태셀표 (purple_600·5열)",
+    "file": "decks/01_tables/TBL_bulk_signal_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:TBL-140",
+    "tags": [
+      "table",
+      "status",
+      "traffic-light",
+      "purple_600",
+      "신호등",
+      "상태"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 5,
+      "header_color": "purple_600",
+      "status_cell": true
+    },
+    "bindings": [
+      "header",
+      "item",
+      "status_cell",
+      "owner"
+    ],
+    "editable": [
+      "header",
+      "item",
+      "status_cell"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "진행상태",
+      "과업점검",
+      "RAG 상태"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-141",
+    "category": "TBL",
+    "name": "문화예술 지원 신호등 상태셀표 (navy_600·4열)",
+    "file": "decks/01_tables/TBL_bulk_signal_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:TBL-141",
+    "tags": [
+      "table",
+      "status",
+      "traffic-light",
+      "navy_600",
+      "신호등",
+      "상태"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 6,
+      "header_color": "navy_600",
+      "status_cell": true
+    },
+    "bindings": [
+      "header",
+      "item",
+      "status_cell",
+      "owner"
+    ],
+    "editable": [
+      "header",
+      "item",
+      "status_cell"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "진행상태",
+      "과업점검",
+      "RAG 상태"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-142",
+    "category": "TBL",
+    "name": "스마트시티 신호등 상태셀표 (red_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_signal_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:TBL-142",
+    "tags": [
+      "table",
+      "status",
+      "traffic-light",
+      "red_500",
+      "신호등",
+      "상태"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 6,
+      "header_color": "red_500",
+      "status_cell": true
+    },
+    "bindings": [
+      "header",
+      "item",
+      "status_cell",
+      "owner"
+    ],
+    "editable": [
+      "header",
+      "item",
+      "status_cell"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "진행상태",
+      "과업점검",
+      "RAG 상태"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-143",
+    "category": "TBL",
+    "name": "바이오 소재 체크(✓/△/✗)표 (navy_800·4열)",
+    "file": "decks/01_tables/TBL_bulk_check_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:TBL-143",
+    "tags": [
+      "table",
+      "check",
+      "checklist",
+      "navy_800",
+      "체크",
+      "글리프"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 4,
+      "header_color": "navy_800",
+      "check_glyph": true
+    },
+    "bindings": [
+      "header",
+      "item",
+      "check_glyph"
+    ],
+    "editable": [
+      "header",
+      "item",
+      "check_glyph"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "점검표",
+      "완료여부",
+      "체크리스트"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-144",
+    "category": "TBL",
+    "name": "콘텐츠 해외진출 체크(✓/△/✗)표 (blue_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_check_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:TBL-144",
+    "tags": [
+      "table",
+      "check",
+      "checklist",
+      "blue_500",
+      "체크",
+      "글리프"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 4,
+      "header_color": "blue_500",
+      "check_glyph": true
+    },
+    "bindings": [
+      "header",
+      "item",
+      "check_glyph"
+    ],
+    "editable": [
+      "header",
+      "item",
+      "check_glyph"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "점검표",
+      "완료여부",
+      "체크리스트"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-145",
+    "category": "TBL",
+    "name": "스마트 물류 체크(✓/△/✗)표 (teal_500·4열)",
+    "file": "decks/01_tables/TBL_bulk_check_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:TBL-145",
+    "tags": [
+      "table",
+      "check",
+      "checklist",
+      "teal_500",
+      "체크",
+      "글리프"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 5,
+      "header_color": "teal_500",
+      "check_glyph": true
+    },
+    "bindings": [
+      "header",
+      "item",
+      "check_glyph"
+    ],
+    "editable": [
+      "header",
+      "item",
+      "check_glyph"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "점검표",
+      "완료여부",
+      "체크리스트"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-146",
+    "category": "TBL",
+    "name": "AI 통합 플랫폼 체크(✓/△/✗)표 (purple_600·5열)",
+    "file": "decks/01_tables/TBL_bulk_check_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:TBL-146",
+    "tags": [
+      "table",
+      "check",
+      "checklist",
+      "purple_600",
+      "체크",
+      "글리프"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 5,
+      "header_color": "purple_600",
+      "check_glyph": true
+    },
+    "bindings": [
+      "header",
+      "item",
+      "check_glyph"
+    ],
+    "editable": [
+      "header",
+      "item",
+      "check_glyph"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "점검표",
+      "완료여부",
+      "체크리스트"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-147",
+    "category": "TBL",
+    "name": "지역 관광 활성화 체크(✓/△/✗)표 (navy_600·4열)",
+    "file": "decks/01_tables/TBL_bulk_check_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:TBL-147",
+    "tags": [
+      "table",
+      "check",
+      "checklist",
+      "navy_600",
+      "체크",
+      "글리프"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 4,
+      "header_color": "navy_600",
+      "check_glyph": true
+    },
+    "bindings": [
+      "header",
+      "item",
+      "check_glyph"
+    ],
+    "editable": [
+      "header",
+      "item",
+      "check_glyph"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "점검표",
+      "완료여부",
+      "체크리스트"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-148",
+    "category": "TBL",
+    "name": "디지털 헬스케어 체크(✓/△/✗)표 (red_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_check_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:TBL-148",
+    "tags": [
+      "table",
+      "check",
+      "checklist",
+      "red_500",
+      "체크",
+      "글리프"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 4,
+      "header_color": "red_500",
+      "check_glyph": true
+    },
+    "bindings": [
+      "header",
+      "item",
+      "check_glyph"
+    ],
+    "editable": [
+      "header",
+      "item",
+      "check_glyph"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "점검표",
+      "완료여부",
+      "체크리스트"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-149",
+    "category": "TBL",
+    "name": "그린 에너지 체크(✓/△/✗)표 (navy_800·4열)",
+    "file": "decks/01_tables/TBL_bulk_check_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:TBL-149",
+    "tags": [
+      "table",
+      "check",
+      "checklist",
+      "navy_800",
+      "체크",
+      "글리프"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 5,
+      "header_color": "navy_800",
+      "check_glyph": true
+    },
+    "bindings": [
+      "header",
+      "item",
+      "check_glyph"
+    ],
+    "editable": [
+      "header",
+      "item",
+      "check_glyph"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "점검표",
+      "완료여부",
+      "체크리스트"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-150",
+    "category": "TBL",
+    "name": "핀테크 서비스 체크(✓/△/✗)표 (blue_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_check_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:TBL-150",
+    "tags": [
+      "table",
+      "check",
+      "checklist",
+      "blue_500",
+      "체크",
+      "글리프"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 5,
+      "header_color": "blue_500",
+      "check_glyph": true
+    },
+    "bindings": [
+      "header",
+      "item",
+      "check_glyph"
+    ],
+    "editable": [
+      "header",
+      "item",
+      "check_glyph"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "점검표",
+      "완료여부",
+      "체크리스트"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-151",
+    "category": "TBL",
+    "name": "에듀테크 플랫폼 체크(✓/△/✗)표 (teal_500·4열)",
+    "file": "decks/01_tables/TBL_bulk_check_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:TBL-151",
+    "tags": [
+      "table",
+      "check",
+      "checklist",
+      "teal_500",
+      "체크",
+      "글리프"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 4,
+      "header_color": "teal_500",
+      "check_glyph": true
+    },
+    "bindings": [
+      "header",
+      "item",
+      "check_glyph"
+    ],
+    "editable": [
+      "header",
+      "item",
+      "check_glyph"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "점검표",
+      "완료여부",
+      "체크리스트"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-152",
+    "category": "TBL",
+    "name": "제조 디지털전환 체크(✓/△/✗)표 (purple_600·5열)",
+    "file": "decks/01_tables/TBL_bulk_check_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:TBL-152",
+    "tags": [
+      "table",
+      "check",
+      "checklist",
+      "purple_600",
+      "체크",
+      "글리프"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 4,
+      "header_color": "purple_600",
+      "check_glyph": true
+    },
+    "bindings": [
+      "header",
+      "item",
+      "check_glyph"
+    ],
+    "editable": [
+      "header",
+      "item",
+      "check_glyph"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "점검표",
+      "완료여부",
+      "체크리스트"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-153",
+    "category": "TBL",
+    "name": "공공 데이터 개방 셀내 KPI칩표 (navy_600·4열)",
+    "file": "decks/01_tables/TBL_bulk_kpichip_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:TBL-153",
+    "tags": [
+      "table",
+      "kpi",
+      "chip",
+      "delta",
+      "navy_600",
+      "증감칩",
+      "결합형"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 4,
+      "header_color": "navy_600",
+      "combined": true
+    },
+    "bindings": [
+      "header",
+      "kpi_value",
+      "delta_chip"
+    ],
+    "editable": [
+      "header",
+      "kpi_value",
+      "delta_chip"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "KPI 대시보드",
+      "성과요약",
+      "지표표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-154",
+    "category": "TBL",
+    "name": "메타버스 전시 셀내 KPI칩표 (red_500·4열)",
+    "file": "decks/01_tables/TBL_bulk_kpichip_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:TBL-154",
+    "tags": [
+      "table",
+      "kpi",
+      "chip",
+      "delta",
+      "red_500",
+      "증감칩",
+      "결합형"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 5,
+      "header_color": "red_500",
+      "combined": true
+    },
+    "bindings": [
+      "header",
+      "kpi_value",
+      "delta_chip"
+    ],
+    "editable": [
+      "header",
+      "kpi_value",
+      "delta_chip"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "KPI 대시보드",
+      "성과요약",
+      "지표표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-155",
+    "category": "TBL",
+    "name": "친환경 모빌리티 셀내 KPI칩표 (navy_800·4열)",
+    "file": "decks/01_tables/TBL_bulk_kpichip_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:TBL-155",
+    "tags": [
+      "table",
+      "kpi",
+      "chip",
+      "delta",
+      "navy_800",
+      "증감칩",
+      "결합형"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 4,
+      "header_color": "navy_800",
+      "combined": true
+    },
+    "bindings": [
+      "header",
+      "kpi_value",
+      "delta_chip"
+    ],
+    "editable": [
+      "header",
+      "kpi_value",
+      "delta_chip"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "KPI 대시보드",
+      "성과요약",
+      "지표표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-156",
+    "category": "TBL",
+    "name": "농식품 수출 셀내 KPI칩표 (blue_500·4열)",
+    "file": "decks/01_tables/TBL_bulk_kpichip_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:TBL-156",
+    "tags": [
+      "table",
+      "kpi",
+      "chip",
+      "delta",
+      "blue_500",
+      "증감칩",
+      "결합형"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 5,
+      "header_color": "blue_500",
+      "combined": true
+    },
+    "bindings": [
+      "header",
+      "kpi_value",
+      "delta_chip"
+    ],
+    "editable": [
+      "header",
+      "kpi_value",
+      "delta_chip"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "KPI 대시보드",
+      "성과요약",
+      "지표표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-157",
+    "category": "TBL",
+    "name": "문화예술 지원 셀내 KPI칩표 (teal_500·4열)",
+    "file": "decks/01_tables/TBL_bulk_kpichip_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:TBL-157",
+    "tags": [
+      "table",
+      "kpi",
+      "chip",
+      "delta",
+      "teal_500",
+      "증감칩",
+      "결합형"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 4,
+      "header_color": "teal_500",
+      "combined": true
+    },
+    "bindings": [
+      "header",
+      "kpi_value",
+      "delta_chip"
+    ],
+    "editable": [
+      "header",
+      "kpi_value",
+      "delta_chip"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "KPI 대시보드",
+      "성과요약",
+      "지표표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-158",
+    "category": "TBL",
+    "name": "스마트시티 셀내 KPI칩표 (purple_600·4열)",
+    "file": "decks/01_tables/TBL_bulk_kpichip_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:TBL-158",
+    "tags": [
+      "table",
+      "kpi",
+      "chip",
+      "delta",
+      "purple_600",
+      "증감칩",
+      "결합형"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 5,
+      "header_color": "purple_600",
+      "combined": true
+    },
+    "bindings": [
+      "header",
+      "kpi_value",
+      "delta_chip"
+    ],
+    "editable": [
+      "header",
+      "kpi_value",
+      "delta_chip"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "KPI 대시보드",
+      "성과요약",
+      "지표표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-159",
+    "category": "TBL",
+    "name": "바이오 소재 셀내 KPI칩표 (navy_600·4열)",
+    "file": "decks/01_tables/TBL_bulk_kpichip_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:TBL-159",
+    "tags": [
+      "table",
+      "kpi",
+      "chip",
+      "delta",
+      "navy_600",
+      "증감칩",
+      "결합형"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 4,
+      "header_color": "navy_600",
+      "combined": true
+    },
+    "bindings": [
+      "header",
+      "kpi_value",
+      "delta_chip"
+    ],
+    "editable": [
+      "header",
+      "kpi_value",
+      "delta_chip"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "KPI 대시보드",
+      "성과요약",
+      "지표표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-160",
+    "category": "TBL",
+    "name": "콘텐츠 해외진출 셀내 KPI칩표 (red_500·4열)",
+    "file": "decks/01_tables/TBL_bulk_kpichip_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:TBL-160",
+    "tags": [
+      "table",
+      "kpi",
+      "chip",
+      "delta",
+      "red_500",
+      "증감칩",
+      "결합형"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 5,
+      "header_color": "red_500",
+      "combined": true
+    },
+    "bindings": [
+      "header",
+      "kpi_value",
+      "delta_chip"
+    ],
+    "editable": [
+      "header",
+      "kpi_value",
+      "delta_chip"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "KPI 대시보드",
+      "성과요약",
+      "지표표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-161",
+    "category": "TBL",
+    "name": "스마트 물류 셀내 KPI칩표 (navy_800·4열)",
+    "file": "decks/01_tables/TBL_bulk_kpichip_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:TBL-161",
+    "tags": [
+      "table",
+      "kpi",
+      "chip",
+      "delta",
+      "navy_800",
+      "증감칩",
+      "결합형"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 4,
+      "header_color": "navy_800",
+      "combined": true
+    },
+    "bindings": [
+      "header",
+      "kpi_value",
+      "delta_chip"
+    ],
+    "editable": [
+      "header",
+      "kpi_value",
+      "delta_chip"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "KPI 대시보드",
+      "성과요약",
+      "지표표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-162",
+    "category": "TBL",
+    "name": "AI 통합 플랫폼 셀내 KPI칩표 (blue_500·4열)",
+    "file": "decks/01_tables/TBL_bulk_kpichip_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:TBL-162",
+    "tags": [
+      "table",
+      "kpi",
+      "chip",
+      "delta",
+      "blue_500",
+      "증감칩",
+      "결합형"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 5,
+      "header_color": "blue_500",
+      "combined": true
+    },
+    "bindings": [
+      "header",
+      "kpi_value",
+      "delta_chip"
+    ],
+    "editable": [
+      "header",
+      "kpi_value",
+      "delta_chip"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "KPI 대시보드",
+      "성과요약",
+      "지표표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-163",
+    "category": "TBL",
+    "name": "지역 관광 활성화 카드행형표 (teal_500·1열)",
+    "file": "decks/01_tables/TBL_bulk_cardrow_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:TBL-163",
+    "tags": [
+      "table",
+      "card",
+      "two-tone",
+      "teal_500",
+      "카드형",
+      "도형결합"
+    ],
+    "params": {
+      "rows": 3,
+      "header_color": "teal_500",
+      "shape_based": true,
+      "combined": true
+    },
+    "bindings": [
+      "label_panel",
+      "metric",
+      "detail"
+    ],
+    "editable": [
+      "label_panel",
+      "metric",
+      "detail"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "성과 하이라이트",
+      "카드형 요약",
+      "강조 표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-164",
+    "category": "TBL",
+    "name": "디지털 헬스케어 카드행형표 (purple_600·1열)",
+    "file": "decks/01_tables/TBL_bulk_cardrow_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:TBL-164",
+    "tags": [
+      "table",
+      "card",
+      "two-tone",
+      "purple_600",
+      "카드형",
+      "도형결합"
+    ],
+    "params": {
+      "rows": 4,
+      "header_color": "purple_600",
+      "shape_based": true,
+      "combined": true
+    },
+    "bindings": [
+      "label_panel",
+      "metric",
+      "detail"
+    ],
+    "editable": [
+      "label_panel",
+      "metric",
+      "detail"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "성과 하이라이트",
+      "카드형 요약",
+      "강조 표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-165",
+    "category": "TBL",
+    "name": "그린 에너지 카드행형표 (navy_600·1열)",
+    "file": "decks/01_tables/TBL_bulk_cardrow_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:TBL-165",
+    "tags": [
+      "table",
+      "card",
+      "two-tone",
+      "navy_600",
+      "카드형",
+      "도형결합"
+    ],
+    "params": {
+      "rows": 3,
+      "header_color": "navy_600",
+      "shape_based": true,
+      "combined": true
+    },
+    "bindings": [
+      "label_panel",
+      "metric",
+      "detail"
+    ],
+    "editable": [
+      "label_panel",
+      "metric",
+      "detail"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "성과 하이라이트",
+      "카드형 요약",
+      "강조 표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-166",
+    "category": "TBL",
+    "name": "핀테크 서비스 카드행형표 (red_500·1열)",
+    "file": "decks/01_tables/TBL_bulk_cardrow_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:TBL-166",
+    "tags": [
+      "table",
+      "card",
+      "two-tone",
+      "red_500",
+      "카드형",
+      "도형결합"
+    ],
+    "params": {
+      "rows": 4,
+      "header_color": "red_500",
+      "shape_based": true,
+      "combined": true
+    },
+    "bindings": [
+      "label_panel",
+      "metric",
+      "detail"
+    ],
+    "editable": [
+      "label_panel",
+      "metric",
+      "detail"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "성과 하이라이트",
+      "카드형 요약",
+      "강조 표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-167",
+    "category": "TBL",
+    "name": "에듀테크 플랫폼 카드행형표 (navy_800·1열)",
+    "file": "decks/01_tables/TBL_bulk_cardrow_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:TBL-167",
+    "tags": [
+      "table",
+      "card",
+      "two-tone",
+      "navy_800",
+      "카드형",
+      "도형결합"
+    ],
+    "params": {
+      "rows": 3,
+      "header_color": "navy_800",
+      "shape_based": true,
+      "combined": true
+    },
+    "bindings": [
+      "label_panel",
+      "metric",
+      "detail"
+    ],
+    "editable": [
+      "label_panel",
+      "metric",
+      "detail"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "성과 하이라이트",
+      "카드형 요약",
+      "강조 표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-168",
+    "category": "TBL",
+    "name": "제조 디지털전환 카드행형표 (blue_500·1열)",
+    "file": "decks/01_tables/TBL_bulk_cardrow_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:TBL-168",
+    "tags": [
+      "table",
+      "card",
+      "two-tone",
+      "blue_500",
+      "카드형",
+      "도형결합"
+    ],
+    "params": {
+      "rows": 4,
+      "header_color": "blue_500",
+      "shape_based": true,
+      "combined": true
+    },
+    "bindings": [
+      "label_panel",
+      "metric",
+      "detail"
+    ],
+    "editable": [
+      "label_panel",
+      "metric",
+      "detail"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "성과 하이라이트",
+      "카드형 요약",
+      "강조 표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-169",
+    "category": "TBL",
+    "name": "공공 데이터 개방 카드행형표 (teal_500·1열)",
+    "file": "decks/01_tables/TBL_bulk_cardrow_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:TBL-169",
+    "tags": [
+      "table",
+      "card",
+      "two-tone",
+      "teal_500",
+      "카드형",
+      "도형결합"
+    ],
+    "params": {
+      "rows": 3,
+      "header_color": "teal_500",
+      "shape_based": true,
+      "combined": true
+    },
+    "bindings": [
+      "label_panel",
+      "metric",
+      "detail"
+    ],
+    "editable": [
+      "label_panel",
+      "metric",
+      "detail"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "성과 하이라이트",
+      "카드형 요약",
+      "강조 표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-170",
+    "category": "TBL",
+    "name": "메타버스 전시 카드행형표 (purple_600·1열)",
+    "file": "decks/01_tables/TBL_bulk_cardrow_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:TBL-170",
+    "tags": [
+      "table",
+      "card",
+      "two-tone",
+      "purple_600",
+      "카드형",
+      "도형결합"
+    ],
+    "params": {
+      "rows": 4,
+      "header_color": "purple_600",
+      "shape_based": true,
+      "combined": true
+    },
+    "bindings": [
+      "label_panel",
+      "metric",
+      "detail"
+    ],
+    "editable": [
+      "label_panel",
+      "metric",
+      "detail"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "성과 하이라이트",
+      "카드형 요약",
+      "강조 표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-171",
+    "category": "TBL",
+    "name": "친환경 모빌리티 카드행형표 (navy_600·1열)",
+    "file": "decks/01_tables/TBL_bulk_cardrow_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:TBL-171",
+    "tags": [
+      "table",
+      "card",
+      "two-tone",
+      "navy_600",
+      "카드형",
+      "도형결합"
+    ],
+    "params": {
+      "rows": 3,
+      "header_color": "navy_600",
+      "shape_based": true,
+      "combined": true
+    },
+    "bindings": [
+      "label_panel",
+      "metric",
+      "detail"
+    ],
+    "editable": [
+      "label_panel",
+      "metric",
+      "detail"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "성과 하이라이트",
+      "카드형 요약",
+      "강조 표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-172",
+    "category": "TBL",
+    "name": "농식품 수출 카드행형표 (red_500·1열)",
+    "file": "decks/01_tables/TBL_bulk_cardrow_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:TBL-172",
+    "tags": [
+      "table",
+      "card",
+      "two-tone",
+      "red_500",
+      "카드형",
+      "도형결합"
+    ],
+    "params": {
+      "rows": 4,
+      "header_color": "red_500",
+      "shape_based": true,
+      "combined": true
+    },
+    "bindings": [
+      "label_panel",
+      "metric",
+      "detail"
+    ],
+    "editable": [
+      "label_panel",
+      "metric",
+      "detail"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "성과 하이라이트",
+      "카드형 요약",
+      "강조 표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-173",
+    "category": "TBL",
+    "name": "문화예술 지원 예산집행표 (navy_800·5열)",
+    "file": "decks/01_tables/TBL_bulk_budget_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:TBL-173",
+    "tags": [
+      "table",
+      "budget",
+      "execution",
+      "navy_800",
+      "예산",
+      "집행"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 4,
+      "header_color": "navy_800",
+      "total_row": true
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "예산집행",
+      "사업비 현황",
+      "정산표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-174",
+    "category": "TBL",
+    "name": "스마트시티 예산집행표 (blue_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_budget_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:TBL-174",
+    "tags": [
+      "table",
+      "budget",
+      "execution",
+      "blue_500",
+      "예산",
+      "집행"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 5,
+      "header_color": "blue_500",
+      "total_row": true
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "예산집행",
+      "사업비 현황",
+      "정산표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-175",
+    "category": "TBL",
+    "name": "바이오 소재 예산집행표 (teal_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_budget_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:TBL-175",
+    "tags": [
+      "table",
+      "budget",
+      "execution",
+      "teal_500",
+      "예산",
+      "집행"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 4,
+      "header_color": "teal_500",
+      "total_row": true
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "예산집행",
+      "사업비 현황",
+      "정산표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-176",
+    "category": "TBL",
+    "name": "콘텐츠 해외진출 예산집행표 (purple_600·5열)",
+    "file": "decks/01_tables/TBL_bulk_budget_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:TBL-176",
+    "tags": [
+      "table",
+      "budget",
+      "execution",
+      "purple_600",
+      "예산",
+      "집행"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 5,
+      "header_color": "purple_600",
+      "total_row": true
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "예산집행",
+      "사업비 현황",
+      "정산표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-177",
+    "category": "TBL",
+    "name": "스마트 물류 예산집행표 (navy_600·5열)",
+    "file": "decks/01_tables/TBL_bulk_budget_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:TBL-177",
+    "tags": [
+      "table",
+      "budget",
+      "execution",
+      "navy_600",
+      "예산",
+      "집행"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 4,
+      "header_color": "navy_600",
+      "total_row": true
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "예산집행",
+      "사업비 현황",
+      "정산표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-178",
+    "category": "TBL",
+    "name": "AI 통합 플랫폼 예산집행표 (red_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_budget_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:TBL-178",
+    "tags": [
+      "table",
+      "budget",
+      "execution",
+      "red_500",
+      "예산",
+      "집행"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 5,
+      "header_color": "red_500",
+      "total_row": true
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "예산집행",
+      "사업비 현황",
+      "정산표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-179",
+    "category": "TBL",
+    "name": "지역 관광 활성화 예산집행표 (navy_800·5열)",
+    "file": "decks/01_tables/TBL_bulk_budget_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:TBL-179",
+    "tags": [
+      "table",
+      "budget",
+      "execution",
+      "navy_800",
+      "예산",
+      "집행"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 4,
+      "header_color": "navy_800",
+      "total_row": true
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "예산집행",
+      "사업비 현황",
+      "정산표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-180",
+    "category": "TBL",
+    "name": "디지털 헬스케어 예산집행표 (blue_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_budget_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:TBL-180",
+    "tags": [
+      "table",
+      "budget",
+      "execution",
+      "blue_500",
+      "예산",
+      "집행"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 5,
+      "header_color": "blue_500",
+      "total_row": true
+    },
+    "bindings": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "예산집행",
+      "사업비 현황",
+      "정산표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-181",
+    "category": "TBL",
+    "name": "그린 에너지 추진일정표 (teal_500·4열)",
+    "file": "decks/01_tables/TBL_bulk_schedule_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:TBL-181",
+    "tags": [
+      "table",
+      "schedule",
+      "phase",
+      "teal_500",
+      "추진일정",
+      "산출물"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 4,
+      "header_color": "teal_500"
+    },
+    "bindings": [
+      "header",
+      "phase",
+      "activity",
+      "deliverable"
+    ],
+    "editable": [
+      "header",
+      "phase",
+      "activity",
+      "deliverable"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "단계별 계획",
+      "WBS 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-182",
+    "category": "TBL",
+    "name": "핀테크 서비스 추진일정표 (purple_600·4열)",
+    "file": "decks/01_tables/TBL_bulk_schedule_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:TBL-182",
+    "tags": [
+      "table",
+      "schedule",
+      "phase",
+      "purple_600",
+      "추진일정",
+      "산출물"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 5,
+      "header_color": "purple_600"
+    },
+    "bindings": [
+      "header",
+      "phase",
+      "activity",
+      "deliverable"
+    ],
+    "editable": [
+      "header",
+      "phase",
+      "activity",
+      "deliverable"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "단계별 계획",
+      "WBS 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-183",
+    "category": "TBL",
+    "name": "에듀테크 플랫폼 추진일정표 (navy_600·4열)",
+    "file": "decks/01_tables/TBL_bulk_schedule_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:TBL-183",
+    "tags": [
+      "table",
+      "schedule",
+      "phase",
+      "navy_600",
+      "추진일정",
+      "산출물"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 4,
+      "header_color": "navy_600"
+    },
+    "bindings": [
+      "header",
+      "phase",
+      "activity",
+      "deliverable"
+    ],
+    "editable": [
+      "header",
+      "phase",
+      "activity",
+      "deliverable"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "단계별 계획",
+      "WBS 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-184",
+    "category": "TBL",
+    "name": "제조 디지털전환 추진일정표 (red_500·4열)",
+    "file": "decks/01_tables/TBL_bulk_schedule_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:TBL-184",
+    "tags": [
+      "table",
+      "schedule",
+      "phase",
+      "red_500",
+      "추진일정",
+      "산출물"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 5,
+      "header_color": "red_500"
+    },
+    "bindings": [
+      "header",
+      "phase",
+      "activity",
+      "deliverable"
+    ],
+    "editable": [
+      "header",
+      "phase",
+      "activity",
+      "deliverable"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "단계별 계획",
+      "WBS 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-185",
+    "category": "TBL",
+    "name": "공공 데이터 개방 추진일정표 (navy_800·4열)",
+    "file": "decks/01_tables/TBL_bulk_schedule_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:TBL-185",
+    "tags": [
+      "table",
+      "schedule",
+      "phase",
+      "navy_800",
+      "추진일정",
+      "산출물"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 4,
+      "header_color": "navy_800"
+    },
+    "bindings": [
+      "header",
+      "phase",
+      "activity",
+      "deliverable"
+    ],
+    "editable": [
+      "header",
+      "phase",
+      "activity",
+      "deliverable"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "단계별 계획",
+      "WBS 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-186",
+    "category": "TBL",
+    "name": "메타버스 전시 추진일정표 (blue_500·4열)",
+    "file": "decks/01_tables/TBL_bulk_schedule_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:TBL-186",
+    "tags": [
+      "table",
+      "schedule",
+      "phase",
+      "blue_500",
+      "추진일정",
+      "산출물"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 5,
+      "header_color": "blue_500"
+    },
+    "bindings": [
+      "header",
+      "phase",
+      "activity",
+      "deliverable"
+    ],
+    "editable": [
+      "header",
+      "phase",
+      "activity",
+      "deliverable"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "단계별 계획",
+      "WBS 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-187",
+    "category": "TBL",
+    "name": "친환경 모빌리티 추진일정표 (teal_500·4열)",
+    "file": "decks/01_tables/TBL_bulk_schedule_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:TBL-187",
+    "tags": [
+      "table",
+      "schedule",
+      "phase",
+      "teal_500",
+      "추진일정",
+      "산출물"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 4,
+      "header_color": "teal_500"
+    },
+    "bindings": [
+      "header",
+      "phase",
+      "activity",
+      "deliverable"
+    ],
+    "editable": [
+      "header",
+      "phase",
+      "activity",
+      "deliverable"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "단계별 계획",
+      "WBS 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-188",
+    "category": "TBL",
+    "name": "농식품 수출 추진일정표 (purple_600·4열)",
+    "file": "decks/01_tables/TBL_bulk_schedule_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:TBL-188",
+    "tags": [
+      "table",
+      "schedule",
+      "phase",
+      "purple_600",
+      "추진일정",
+      "산출물"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 5,
+      "header_color": "purple_600"
+    },
+    "bindings": [
+      "header",
+      "phase",
+      "activity",
+      "deliverable"
+    ],
+    "editable": [
+      "header",
+      "phase",
+      "activity",
+      "deliverable"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "단계별 계획",
+      "WBS 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-189",
+    "category": "TBL",
+    "name": "문화예술 지원 고밀도 컴팩트표 (navy_600·6열)",
+    "file": "decks/01_tables/TBL_bulk_compact_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:TBL-189",
+    "tags": [
+      "table",
+      "compact",
+      "dense",
+      "navy_600",
+      "고밀도",
+      "다열"
+    ],
+    "params": {
+      "cols": 6,
+      "rows": 6,
+      "header_color": "navy_600",
+      "font_pt": 9
+    },
+    "bindings": [
+      "header",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "KPI 상세",
+      "분기실적",
+      "다지표 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-190",
+    "category": "TBL",
+    "name": "스마트시티 고밀도 컴팩트표 (red_500·7열)",
+    "file": "decks/01_tables/TBL_bulk_compact_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:TBL-190",
+    "tags": [
+      "table",
+      "compact",
+      "dense",
+      "red_500",
+      "고밀도",
+      "다열"
+    ],
+    "params": {
+      "cols": 7,
+      "rows": 6,
+      "header_color": "red_500",
+      "font_pt": 9
+    },
+    "bindings": [
+      "header",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "KPI 상세",
+      "분기실적",
+      "다지표 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-191",
+    "category": "TBL",
+    "name": "바이오 소재 고밀도 컴팩트표 (navy_800·8열)",
+    "file": "decks/01_tables/TBL_bulk_compact_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:TBL-191",
+    "tags": [
+      "table",
+      "compact",
+      "dense",
+      "navy_800",
+      "고밀도",
+      "다열"
+    ],
+    "params": {
+      "cols": 8,
+      "rows": 6,
+      "header_color": "navy_800",
+      "font_pt": 9
+    },
+    "bindings": [
+      "header",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "KPI 상세",
+      "분기실적",
+      "다지표 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-192",
+    "category": "TBL",
+    "name": "콘텐츠 해외진출 고밀도 컴팩트표 (blue_500·6열)",
+    "file": "decks/01_tables/TBL_bulk_compact_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:TBL-192",
+    "tags": [
+      "table",
+      "compact",
+      "dense",
+      "blue_500",
+      "고밀도",
+      "다열"
+    ],
+    "params": {
+      "cols": 6,
+      "rows": 7,
+      "header_color": "blue_500",
+      "font_pt": 9
+    },
+    "bindings": [
+      "header",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "KPI 상세",
+      "분기실적",
+      "다지표 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-193",
+    "category": "TBL",
+    "name": "스마트 물류 고밀도 컴팩트표 (teal_500·7열)",
+    "file": "decks/01_tables/TBL_bulk_compact_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:TBL-193",
+    "tags": [
+      "table",
+      "compact",
+      "dense",
+      "teal_500",
+      "고밀도",
+      "다열"
+    ],
+    "params": {
+      "cols": 7,
+      "rows": 7,
+      "header_color": "teal_500",
+      "font_pt": 9
+    },
+    "bindings": [
+      "header",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "KPI 상세",
+      "분기실적",
+      "다지표 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-194",
+    "category": "TBL",
+    "name": "AI 통합 플랫폼 고밀도 컴팩트표 (purple_600·8열)",
+    "file": "decks/01_tables/TBL_bulk_compact_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:TBL-194",
+    "tags": [
+      "table",
+      "compact",
+      "dense",
+      "purple_600",
+      "고밀도",
+      "다열"
+    ],
+    "params": {
+      "cols": 8,
+      "rows": 7,
+      "header_color": "purple_600",
+      "font_pt": 9
+    },
+    "bindings": [
+      "header",
+      "cell_value"
+    ],
+    "editable": [
+      "header",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "KPI 상세",
+      "분기실적",
+      "다지표 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-195",
+    "category": "TBL",
+    "name": "지역 관광 활성화 우측정렬 수치표 (navy_600·4열)",
+    "file": "decks/01_tables/TBL_bulk_numeric_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:TBL-195",
+    "tags": [
+      "table",
+      "numeric",
+      "right-align",
+      "navy_600",
+      "재무정렬",
+      "수치"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 5,
+      "header_color": "navy_600",
+      "align": "right"
+    },
+    "bindings": [
+      "header",
+      "account",
+      "figure"
+    ],
+    "editable": [
+      "header",
+      "account",
+      "figure"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "재무상태표",
+      "회계 요약",
+      "수치정렬"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-196",
+    "category": "TBL",
+    "name": "디지털 헬스케어 우측정렬 수치표 (red_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_numeric_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:TBL-196",
+    "tags": [
+      "table",
+      "numeric",
+      "right-align",
+      "red_500",
+      "재무정렬",
+      "수치"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 5,
+      "header_color": "red_500",
+      "align": "right"
+    },
+    "bindings": [
+      "header",
+      "account",
+      "figure"
+    ],
+    "editable": [
+      "header",
+      "account",
+      "figure"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "재무상태표",
+      "회계 요약",
+      "수치정렬"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-197",
+    "category": "TBL",
+    "name": "그린 에너지 우측정렬 수치표 (navy_800·4열)",
+    "file": "decks/01_tables/TBL_bulk_numeric_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:TBL-197",
+    "tags": [
+      "table",
+      "numeric",
+      "right-align",
+      "navy_800",
+      "재무정렬",
+      "수치"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 6,
+      "header_color": "navy_800",
+      "align": "right"
+    },
+    "bindings": [
+      "header",
+      "account",
+      "figure"
+    ],
+    "editable": [
+      "header",
+      "account",
+      "figure"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "재무상태표",
+      "회계 요약",
+      "수치정렬"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-198",
+    "category": "TBL",
+    "name": "핀테크 서비스 우측정렬 수치표 (blue_500·5열)",
+    "file": "decks/01_tables/TBL_bulk_numeric_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:TBL-198",
+    "tags": [
+      "table",
+      "numeric",
+      "right-align",
+      "blue_500",
+      "재무정렬",
+      "수치"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 6,
+      "header_color": "blue_500",
+      "align": "right"
+    },
+    "bindings": [
+      "header",
+      "account",
+      "figure"
+    ],
+    "editable": [
+      "header",
+      "account",
+      "figure"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "재무상태표",
+      "회계 요약",
+      "수치정렬"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-199",
+    "category": "TBL",
+    "name": "에듀테크 플랫폼 우측정렬 수치표 (teal_500·4열)",
+    "file": "decks/01_tables/TBL_bulk_numeric_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:TBL-199",
+    "tags": [
+      "table",
+      "numeric",
+      "right-align",
+      "teal_500",
+      "재무정렬",
+      "수치"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 5,
+      "header_color": "teal_500",
+      "align": "right"
+    },
+    "bindings": [
+      "header",
+      "account",
+      "figure"
+    ],
+    "editable": [
+      "header",
+      "account",
+      "figure"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "재무상태표",
+      "회계 요약",
+      "수치정렬"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-200",
+    "category": "TBL",
+    "name": "제조 디지털전환 우측정렬 수치표 (purple_600·5열)",
+    "file": "decks/01_tables/TBL_bulk_numeric_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:TBL-200",
+    "tags": [
+      "table",
+      "numeric",
+      "right-align",
+      "purple_600",
+      "재무정렬",
+      "수치"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 5,
+      "header_color": "purple_600",
+      "align": "right"
+    },
+    "bindings": [
+      "header",
+      "account",
+      "figure"
+    ],
+    "editable": [
+      "header",
+      "account",
+      "figure"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "재무상태표",
+      "회계 요약",
+      "수치정렬"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  }
+]

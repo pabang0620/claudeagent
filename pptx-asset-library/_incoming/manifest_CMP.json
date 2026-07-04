@@ -1,0 +1,491 @@
+[
+  {
+    "id": "CMP-001",
+    "category": "CMP",
+    "name": "2x2 전략 포지셔닝 매트릭스",
+    "file": "decks/04_compare/CMP_matrix_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:CMP-001",
+    "tags": [
+      "비교표",
+      "매트릭스",
+      "2x2",
+      "사분면",
+      "포지셔닝"
+    ],
+    "params": {
+      "variant": "A",
+      "quadrants": 4,
+      "axis": 2
+    },
+    "bindings": {
+      "quadrants": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ],
+      "axis": [
+        "x",
+        "y"
+      ]
+    },
+    "editable": [
+      "quad_titles",
+      "quad_desc",
+      "axis_labels",
+      "quad_fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "경쟁력 비교",
+      "전략 포지셔닝",
+      "우선순위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-002",
+    "category": "CMP",
+    "name": "2x2 우선순위 매트릭스 (색 변형)",
+    "file": "decks/04_compare/CMP_matrix_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:CMP-002",
+    "tags": [
+      "비교표",
+      "매트릭스",
+      "2x2",
+      "사분면",
+      "색변형"
+    ],
+    "params": {
+      "variant": "B",
+      "quadrants": 4,
+      "axis": 2
+    },
+    "bindings": {
+      "quadrants": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ],
+      "axis": [
+        "x",
+        "y"
+      ]
+    },
+    "editable": [
+      "quad_titles",
+      "quad_desc",
+      "axis_labels",
+      "quad_fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "경쟁력 비교",
+      "투자 우선순위",
+      "포지셔닝"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-003",
+    "category": "CMP",
+    "name": "3열 평가표 (현행 vs 개선)",
+    "file": "decks/04_compare/CMP_eval-table_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:CMP-003",
+    "tags": [
+      "평가표",
+      "비교표",
+      "현행개선",
+      "기호평가"
+    ],
+    "params": {
+      "cols": 3,
+      "rows": 5,
+      "symbols": [
+        "○",
+        "△",
+        "✕"
+      ]
+    },
+    "bindings": {
+      "rows": [
+        "글로벌 역량",
+        "협업 역량",
+        "AI 활용도",
+        "품질 관리",
+        "대응 속도"
+      ],
+      "cols": [
+        "평가 항목",
+        "현행",
+        "개선"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_symbols",
+      "cell_color",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "평가기준",
+      "개선 효과 제시",
+      "현황 진단"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-004",
+    "category": "CMP",
+    "name": "우열 비교표 (자사 vs 경쟁사)",
+    "file": "decks/04_compare/CMP_versus-card_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:CMP-004",
+    "tags": [
+      "비교표",
+      "우열비교",
+      "자사강조",
+      "경쟁분석"
+    ],
+    "params": {
+      "cols": 3,
+      "rows": 6,
+      "highlight_col": "자사",
+      "symbols": [
+        "○",
+        "△",
+        "✕"
+      ]
+    },
+    "bindings": {
+      "rows": [
+        "글로벌 역량",
+        "협업 역량",
+        "AI 활용도",
+        "품질 관리",
+        "가격 경쟁력",
+        "납기 대응"
+      ],
+      "cols": [
+        "항목",
+        "자사",
+        "경쟁"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_symbols",
+      "highlight_col",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "경쟁력 비교",
+      "차별성 강조",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-005",
+    "category": "CMP",
+    "name": "우열 비교표 (3사 비교 변형)",
+    "file": "decks/04_compare/CMP_versus-card_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:CMP-005",
+    "tags": [
+      "비교표",
+      "우열비교",
+      "자사강조",
+      "3사비교"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 6,
+      "highlight_col": "자사",
+      "symbols": [
+        "○",
+        "△",
+        "✕"
+      ]
+    },
+    "bindings": {
+      "rows": [
+        "글로벌 역량",
+        "협업 역량",
+        "AI 활용도",
+        "품질 관리",
+        "가격 경쟁력",
+        "납기 대응"
+      ],
+      "cols": [
+        "항목",
+        "자사",
+        "경쟁사 A",
+        "경쟁사 B"
+      ]
+    },
+    "editable": [
+      "rows",
+      "cell_symbols",
+      "highlight_col",
+      "headers"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "경쟁력 비교",
+      "다자 비교",
+      "제안 우위"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-006",
+    "category": "CMP",
+    "name": "가중치 평가표 (배점 · 평가)",
+    "file": "decks/04_compare/CMP_eval-table_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:CMP-006",
+    "tags": [
+      "평가표",
+      "가중치",
+      "배점",
+      "점수합산"
+    ],
+    "params": {
+      "cols": 3,
+      "rows": 5,
+      "total_row": true
+    },
+    "bindings": {
+      "rows": [
+        "글로벌 역량",
+        "협업 역량",
+        "AI 활용도",
+        "사업 이해도",
+        "실행 가능성"
+      ],
+      "cols": [
+        "항목",
+        "배점",
+        "평가"
+      ]
+    },
+    "editable": [
+      "rows",
+      "points",
+      "scores",
+      "total"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "평가기준",
+      "정량 평가",
+      "심사 대응"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-007",
+    "category": "CMP",
+    "name": "체크리스트 표 (점검 항목)",
+    "file": "decks/04_compare/CMP_eval-table_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:CMP-007",
+    "tags": [
+      "평가표",
+      "체크리스트",
+      "체크박스",
+      "점검"
+    ],
+    "params": {
+      "cols": 3,
+      "rows": 6,
+      "checkbox_shape": true
+    },
+    "bindings": {
+      "rows": [
+        "사업 목표 정합성 검토",
+        "글로벌 역량 자료 확보",
+        "협업 파트너 확정",
+        "AI 활용 방안 수립",
+        "리스크 대응 계획",
+        "최종 산출물 검수"
+      ],
+      "cols": [
+        "확인",
+        "점검 항목",
+        "상태"
+      ]
+    },
+    "editable": [
+      "rows",
+      "checked_state",
+      "note",
+      "checkbox_fill"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "평가기준",
+      "진행 점검",
+      "완료 관리"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-008",
+    "category": "CMP",
+    "name": "Before / After 대비 카드",
+    "file": "decks/04_compare/CMP_versus-card_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:CMP-008",
+    "tags": [
+      "비교표",
+      "전후비교",
+      "대비카드",
+      "개선효과"
+    ],
+    "params": {
+      "columns": 2,
+      "before_items": 4,
+      "after_items": 4
+    },
+    "bindings": {
+      "quadrants": [
+        "before",
+        "after"
+      ],
+      "axis": [
+        "state"
+      ]
+    },
+    "editable": [
+      "before_head",
+      "before_items",
+      "after_head",
+      "after_items",
+      "card_color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "개선 효과 제시",
+      "전후 대비",
+      "성과 강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-009",
+    "category": "CMP",
+    "name": "우선순위 매트릭스 (중요도 x 긴급도)",
+    "file": "decks/04_compare/CMP_matrix_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:CMP-009",
+    "tags": [
+      "매트릭스",
+      "2x2",
+      "우선순위",
+      "중요도긴급도"
+    ],
+    "params": {
+      "quadrants": 4,
+      "axis": 2,
+      "items": 6
+    },
+    "bindings": {
+      "quadrants": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ],
+      "axis": [
+        "x",
+        "y"
+      ]
+    },
+    "editable": [
+      "quad_titles",
+      "axis_labels",
+      "items",
+      "item_placement"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "우선순위",
+      "과제 분류",
+      "실행 계획"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "CMP-010",
+    "category": "CMP",
+    "name": "선택지 비교 카드 (플랜 A/B/C)",
+    "file": "decks/04_compare/CMP_versus-card_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:CMP-010",
+    "tags": [
+      "비교표",
+      "선택지비교",
+      "플랜카드",
+      "추천뱃지"
+    ],
+    "params": {
+      "columns": 3,
+      "recommended": "플랜 B",
+      "items_per_card": 4
+    },
+    "bindings": {
+      "rows": [
+        "플랜 A",
+        "플랜 B",
+        "플랜 C"
+      ],
+      "cols": [
+        "기본형",
+        "표준형",
+        "확장형"
+      ]
+    },
+    "editable": [
+      "plan_names",
+      "tiers",
+      "items",
+      "header_color",
+      "recommended_badge"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "선택지 비교",
+      "제안 옵션",
+      "가격 정책"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  }
+]

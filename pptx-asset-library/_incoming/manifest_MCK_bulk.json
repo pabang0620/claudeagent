@@ -1,0 +1,8118 @@
+[
+  {
+    "id": "MCK-011",
+    "category": "MCK",
+    "name": "브라우저 창 목업 [16:9/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g01_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:MCK-011",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "브라우저",
+      "웹",
+      "탭바",
+      "주소창",
+      "다크그레이",
+      "16:9"
+    ],
+    "params": {
+      "device": "browser",
+      "screen_ratio": "16:9",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "웹 화면 예시",
+      "시스템 UI 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-012",
+    "category": "MCK",
+    "name": "노트북 목업 [16:9/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g01_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:MCK-012",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "노트북",
+      "랩탑",
+      "다크그레이",
+      "16:9"
+    ],
+    "params": {
+      "device": "laptop",
+      "screen_ratio": "16:9",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "제품 화면 예시",
+      "웹 서비스 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-013",
+    "category": "MCK",
+    "name": "데스크톱 모니터 목업 [16:9/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g01_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:MCK-013",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모니터",
+      "데스크톱",
+      "다크그레이",
+      "16:9"
+    ],
+    "params": {
+      "device": "desktop",
+      "screen_ratio": "16:9",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "관리자 화면",
+      "대시보드 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-014",
+    "category": "MCK",
+    "name": "와이드 모니터 목업 [21:9/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g01_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:MCK-014",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "와이드",
+      "울트라와이드",
+      "모니터",
+      "다크그레이",
+      "21:9"
+    ],
+    "params": {
+      "device": "wide-monitor",
+      "screen_ratio": "21:9",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대형 대시보드",
+      "관제 화면",
+      "가로 산출물"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-015",
+    "category": "MCK",
+    "name": "모바일 폰 목업(세로) [9:19/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g01_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:MCK-015",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모바일",
+      "폰",
+      "세로",
+      "반응형",
+      "다크그레이",
+      "9:19"
+    ],
+    "params": {
+      "device": "mobile",
+      "screen_ratio": "9:19",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "모바일 앱 화면",
+      "반응형 소개",
+      "앱 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-016",
+    "category": "MCK",
+    "name": "모바일 폰 목업(가로) [16:9/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g01_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:MCK-016",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모바일",
+      "폰",
+      "가로",
+      "반응형",
+      "다크그레이",
+      "16:9"
+    ],
+    "params": {
+      "device": "mobile-landscape",
+      "screen_ratio": "16:9",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "가로 모드 화면",
+      "동영상 앱",
+      "게임 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-017",
+    "category": "MCK",
+    "name": "태블릿 목업 [4:3/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g01_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:MCK-017",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "태블릿",
+      "패드",
+      "다크그레이",
+      "4:3"
+    ],
+    "params": {
+      "device": "tablet",
+      "screen_ratio": "4:3",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "태블릿 화면",
+      "산출물 미리보기",
+      "카탈로그"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-018",
+    "category": "MCK",
+    "name": "스마트워치 목업 [1:1/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g01_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:MCK-018",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "스마트워치",
+      "웨어러블",
+      "다크그레이",
+      "1:1"
+    ],
+    "params": {
+      "device": "smartwatch",
+      "screen_ratio": "1:1",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "워치 앱 화면",
+      "알림 UI",
+      "헬스 지표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-019",
+    "category": "MCK",
+    "name": "대시보드 카드 목업 [grid3/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g01_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:MCK-019",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "대시보드",
+      "위젯",
+      "카드",
+      "KPI",
+      "다크그레이",
+      "16:9"
+    ],
+    "params": {
+      "device": "dashboard",
+      "screen_ratio": "16:9",
+      "frame_color": "gray_700",
+      "composition": "grid3"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대시보드 소개",
+      "KPI·차트 배치",
+      "관리 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-020",
+    "category": "MCK",
+    "name": "멀티 윈도우 목업 [2win/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g01_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:MCK-020",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "멀티윈도우",
+      "창겹침",
+      "비교",
+      "다크그레이",
+      "16:9"
+    ],
+    "params": {
+      "device": "multi-window",
+      "screen_ratio": "16:9",
+      "frame_color": "gray_700",
+      "composition": "2win"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "다중 화면 비교",
+      "워크플로우 소개",
+      "전후 비교"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-021",
+    "category": "MCK",
+    "name": "지도·맵 뷰 목업 [16:9/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g01_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:MCK-021",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "지도",
+      "맵",
+      "핀",
+      "위치",
+      "다크그레이",
+      "16:9"
+    ],
+    "params": {
+      "device": "map",
+      "screen_ratio": "16:9",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "지도 화면",
+      "위치 기반 서비스",
+      "권역 소개"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-022",
+    "category": "MCK",
+    "name": "폴더·파일 뷰 목업 [grid/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g01_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:MCK-022",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "폴더",
+      "파일",
+      "탐색기",
+      "산출물",
+      "다크그레이",
+      "16:9"
+    ],
+    "params": {
+      "device": "folder",
+      "screen_ratio": "16:9",
+      "frame_color": "gray_700",
+      "composition": "grid"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "산출물 목록",
+      "파일 구조 소개",
+      "자료 배치"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-023",
+    "category": "MCK",
+    "name": "프레젠테이션 화면 목업 [16:9/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g01_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:MCK-023",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "프레젠테이션",
+      "발표",
+      "스크린",
+      "다크그레이",
+      "16:9"
+    ],
+    "params": {
+      "device": "presentation",
+      "screen_ratio": "16:9",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "발표 슬라이드",
+      "산출물 미리보기",
+      "화면 예시"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-024",
+    "category": "MCK",
+    "name": "키오스크 목업 [9:16/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g01_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:MCK-024",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "키오스크",
+      "터치",
+      "세로",
+      "무인기기",
+      "다크그레이",
+      "9:16"
+    ],
+    "params": {
+      "device": "kiosk",
+      "screen_ratio": "9:16",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "키오스크 UI",
+      "무인 안내",
+      "터치 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-025",
+    "category": "MCK",
+    "name": "브라우저 창 목업 [16:9/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g01_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:MCK-025",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "브라우저",
+      "웹",
+      "탭바",
+      "주소창",
+      "네이비",
+      "16:9"
+    ],
+    "params": {
+      "device": "browser",
+      "screen_ratio": "16:9",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "웹 화면 예시",
+      "시스템 UI 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-026",
+    "category": "MCK",
+    "name": "노트북 목업 [16:9/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g01_v1.pptx",
+    "slide": 16,
+    "anchor": "asset:MCK-026",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "노트북",
+      "랩탑",
+      "네이비",
+      "16:9"
+    ],
+    "params": {
+      "device": "laptop",
+      "screen_ratio": "16:9",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "제품 화면 예시",
+      "웹 서비스 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-027",
+    "category": "MCK",
+    "name": "데스크톱 모니터 목업 [16:9/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g01_v1.pptx",
+    "slide": 17,
+    "anchor": "asset:MCK-027",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모니터",
+      "데스크톱",
+      "네이비",
+      "16:9"
+    ],
+    "params": {
+      "device": "desktop",
+      "screen_ratio": "16:9",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "관리자 화면",
+      "대시보드 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-028",
+    "category": "MCK",
+    "name": "와이드 모니터 목업 [21:9/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g01_v1.pptx",
+    "slide": 18,
+    "anchor": "asset:MCK-028",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "와이드",
+      "울트라와이드",
+      "모니터",
+      "네이비",
+      "21:9"
+    ],
+    "params": {
+      "device": "wide-monitor",
+      "screen_ratio": "21:9",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대형 대시보드",
+      "관제 화면",
+      "가로 산출물"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-029",
+    "category": "MCK",
+    "name": "모바일 폰 목업(세로) [9:19/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g01_v1.pptx",
+    "slide": 19,
+    "anchor": "asset:MCK-029",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모바일",
+      "폰",
+      "세로",
+      "반응형",
+      "네이비",
+      "9:19"
+    ],
+    "params": {
+      "device": "mobile",
+      "screen_ratio": "9:19",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "모바일 앱 화면",
+      "반응형 소개",
+      "앱 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-030",
+    "category": "MCK",
+    "name": "모바일 폰 목업(가로) [16:9/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g01_v1.pptx",
+    "slide": 20,
+    "anchor": "asset:MCK-030",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모바일",
+      "폰",
+      "가로",
+      "반응형",
+      "네이비",
+      "16:9"
+    ],
+    "params": {
+      "device": "mobile-landscape",
+      "screen_ratio": "16:9",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "가로 모드 화면",
+      "동영상 앱",
+      "게임 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-031",
+    "category": "MCK",
+    "name": "태블릿 목업 [4:3/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g01_v1.pptx",
+    "slide": 21,
+    "anchor": "asset:MCK-031",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "태블릿",
+      "패드",
+      "네이비",
+      "4:3"
+    ],
+    "params": {
+      "device": "tablet",
+      "screen_ratio": "4:3",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "태블릿 화면",
+      "산출물 미리보기",
+      "카탈로그"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-032",
+    "category": "MCK",
+    "name": "스마트워치 목업 [1:1/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g01_v1.pptx",
+    "slide": 22,
+    "anchor": "asset:MCK-032",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "스마트워치",
+      "웨어러블",
+      "네이비",
+      "1:1"
+    ],
+    "params": {
+      "device": "smartwatch",
+      "screen_ratio": "1:1",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "워치 앱 화면",
+      "알림 UI",
+      "헬스 지표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-033",
+    "category": "MCK",
+    "name": "대시보드 카드 목업 [grid3/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g01_v1.pptx",
+    "slide": 23,
+    "anchor": "asset:MCK-033",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "대시보드",
+      "위젯",
+      "카드",
+      "KPI",
+      "네이비",
+      "16:9"
+    ],
+    "params": {
+      "device": "dashboard",
+      "screen_ratio": "16:9",
+      "frame_color": "navy_800",
+      "composition": "grid3"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대시보드 소개",
+      "KPI·차트 배치",
+      "관리 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-034",
+    "category": "MCK",
+    "name": "멀티 윈도우 목업 [2win/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g01_v1.pptx",
+    "slide": 24,
+    "anchor": "asset:MCK-034",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "멀티윈도우",
+      "창겹침",
+      "비교",
+      "네이비",
+      "16:9"
+    ],
+    "params": {
+      "device": "multi-window",
+      "screen_ratio": "16:9",
+      "frame_color": "navy_800",
+      "composition": "2win"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "다중 화면 비교",
+      "워크플로우 소개",
+      "전후 비교"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-035",
+    "category": "MCK",
+    "name": "지도·맵 뷰 목업 [16:9/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g02_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:MCK-035",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "지도",
+      "맵",
+      "핀",
+      "위치",
+      "네이비",
+      "16:9"
+    ],
+    "params": {
+      "device": "map",
+      "screen_ratio": "16:9",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "지도 화면",
+      "위치 기반 서비스",
+      "권역 소개"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-036",
+    "category": "MCK",
+    "name": "폴더·파일 뷰 목업 [grid/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g02_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:MCK-036",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "폴더",
+      "파일",
+      "탐색기",
+      "산출물",
+      "네이비",
+      "16:9"
+    ],
+    "params": {
+      "device": "folder",
+      "screen_ratio": "16:9",
+      "frame_color": "navy_800",
+      "composition": "grid"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "산출물 목록",
+      "파일 구조 소개",
+      "자료 배치"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-037",
+    "category": "MCK",
+    "name": "프레젠테이션 화면 목업 [16:9/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g02_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:MCK-037",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "프레젠테이션",
+      "발표",
+      "스크린",
+      "네이비",
+      "16:9"
+    ],
+    "params": {
+      "device": "presentation",
+      "screen_ratio": "16:9",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "발표 슬라이드",
+      "산출물 미리보기",
+      "화면 예시"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-038",
+    "category": "MCK",
+    "name": "키오스크 목업 [9:16/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g02_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:MCK-038",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "키오스크",
+      "터치",
+      "세로",
+      "무인기기",
+      "네이비",
+      "9:16"
+    ],
+    "params": {
+      "device": "kiosk",
+      "screen_ratio": "9:16",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "키오스크 UI",
+      "무인 안내",
+      "터치 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-039",
+    "category": "MCK",
+    "name": "브라우저 창 목업 [16:9/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g02_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:MCK-039",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "브라우저",
+      "웹",
+      "탭바",
+      "주소창",
+      "그레이",
+      "16:9"
+    ],
+    "params": {
+      "device": "browser",
+      "screen_ratio": "16:9",
+      "frame_color": "gray_500",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "웹 화면 예시",
+      "시스템 UI 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-040",
+    "category": "MCK",
+    "name": "노트북 목업 [16:9/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g02_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:MCK-040",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "노트북",
+      "랩탑",
+      "그레이",
+      "16:9"
+    ],
+    "params": {
+      "device": "laptop",
+      "screen_ratio": "16:9",
+      "frame_color": "gray_500",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "제품 화면 예시",
+      "웹 서비스 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-041",
+    "category": "MCK",
+    "name": "데스크톱 모니터 목업 [16:9/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g02_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:MCK-041",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모니터",
+      "데스크톱",
+      "그레이",
+      "16:9"
+    ],
+    "params": {
+      "device": "desktop",
+      "screen_ratio": "16:9",
+      "frame_color": "gray_500",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "관리자 화면",
+      "대시보드 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-042",
+    "category": "MCK",
+    "name": "와이드 모니터 목업 [21:9/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g02_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:MCK-042",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "와이드",
+      "울트라와이드",
+      "모니터",
+      "그레이",
+      "21:9"
+    ],
+    "params": {
+      "device": "wide-monitor",
+      "screen_ratio": "21:9",
+      "frame_color": "gray_500",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대형 대시보드",
+      "관제 화면",
+      "가로 산출물"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-043",
+    "category": "MCK",
+    "name": "모바일 폰 목업(세로) [9:19/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g02_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:MCK-043",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모바일",
+      "폰",
+      "세로",
+      "반응형",
+      "그레이",
+      "9:19"
+    ],
+    "params": {
+      "device": "mobile",
+      "screen_ratio": "9:19",
+      "frame_color": "gray_500",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "모바일 앱 화면",
+      "반응형 소개",
+      "앱 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-044",
+    "category": "MCK",
+    "name": "모바일 폰 목업(가로) [16:9/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g02_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:MCK-044",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모바일",
+      "폰",
+      "가로",
+      "반응형",
+      "그레이",
+      "16:9"
+    ],
+    "params": {
+      "device": "mobile-landscape",
+      "screen_ratio": "16:9",
+      "frame_color": "gray_500",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "가로 모드 화면",
+      "동영상 앱",
+      "게임 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-045",
+    "category": "MCK",
+    "name": "태블릿 목업 [4:3/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g02_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:MCK-045",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "태블릿",
+      "패드",
+      "그레이",
+      "4:3"
+    ],
+    "params": {
+      "device": "tablet",
+      "screen_ratio": "4:3",
+      "frame_color": "gray_500",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "태블릿 화면",
+      "산출물 미리보기",
+      "카탈로그"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-046",
+    "category": "MCK",
+    "name": "스마트워치 목업 [1:1/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g02_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:MCK-046",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "스마트워치",
+      "웨어러블",
+      "그레이",
+      "1:1"
+    ],
+    "params": {
+      "device": "smartwatch",
+      "screen_ratio": "1:1",
+      "frame_color": "gray_500",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "워치 앱 화면",
+      "알림 UI",
+      "헬스 지표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-047",
+    "category": "MCK",
+    "name": "대시보드 카드 목업 [grid3/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g02_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:MCK-047",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "대시보드",
+      "위젯",
+      "카드",
+      "KPI",
+      "그레이",
+      "16:9"
+    ],
+    "params": {
+      "device": "dashboard",
+      "screen_ratio": "16:9",
+      "frame_color": "gray_500",
+      "composition": "grid3"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대시보드 소개",
+      "KPI·차트 배치",
+      "관리 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-048",
+    "category": "MCK",
+    "name": "멀티 윈도우 목업 [2win/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g02_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:MCK-048",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "멀티윈도우",
+      "창겹침",
+      "비교",
+      "그레이",
+      "16:9"
+    ],
+    "params": {
+      "device": "multi-window",
+      "screen_ratio": "16:9",
+      "frame_color": "gray_500",
+      "composition": "2win"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "다중 화면 비교",
+      "워크플로우 소개",
+      "전후 비교"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-049",
+    "category": "MCK",
+    "name": "지도·맵 뷰 목업 [16:9/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g02_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:MCK-049",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "지도",
+      "맵",
+      "핀",
+      "위치",
+      "그레이",
+      "16:9"
+    ],
+    "params": {
+      "device": "map",
+      "screen_ratio": "16:9",
+      "frame_color": "gray_500",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "지도 화면",
+      "위치 기반 서비스",
+      "권역 소개"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-050",
+    "category": "MCK",
+    "name": "폴더·파일 뷰 목업 [grid/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g02_v1.pptx",
+    "slide": 16,
+    "anchor": "asset:MCK-050",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "폴더",
+      "파일",
+      "탐색기",
+      "산출물",
+      "그레이",
+      "16:9"
+    ],
+    "params": {
+      "device": "folder",
+      "screen_ratio": "16:9",
+      "frame_color": "gray_500",
+      "composition": "grid"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "산출물 목록",
+      "파일 구조 소개",
+      "자료 배치"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-051",
+    "category": "MCK",
+    "name": "프레젠테이션 화면 목업 [16:9/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g02_v1.pptx",
+    "slide": 17,
+    "anchor": "asset:MCK-051",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "프레젠테이션",
+      "발표",
+      "스크린",
+      "그레이",
+      "16:9"
+    ],
+    "params": {
+      "device": "presentation",
+      "screen_ratio": "16:9",
+      "frame_color": "gray_500",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "발표 슬라이드",
+      "산출물 미리보기",
+      "화면 예시"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-052",
+    "category": "MCK",
+    "name": "키오스크 목업 [9:16/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g02_v1.pptx",
+    "slide": 18,
+    "anchor": "asset:MCK-052",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "키오스크",
+      "터치",
+      "세로",
+      "무인기기",
+      "그레이",
+      "9:16"
+    ],
+    "params": {
+      "device": "kiosk",
+      "screen_ratio": "9:16",
+      "frame_color": "gray_500",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "키오스크 UI",
+      "무인 안내",
+      "터치 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-053",
+    "category": "MCK",
+    "name": "브라우저 창 목업 [16:9/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g02_v1.pptx",
+    "slide": 19,
+    "anchor": "asset:MCK-053",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "브라우저",
+      "웹",
+      "탭바",
+      "주소창",
+      "블루네이비",
+      "16:9"
+    ],
+    "params": {
+      "device": "browser",
+      "screen_ratio": "16:9",
+      "frame_color": "navy_600",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "웹 화면 예시",
+      "시스템 UI 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-054",
+    "category": "MCK",
+    "name": "노트북 목업 [16:9/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g02_v1.pptx",
+    "slide": 20,
+    "anchor": "asset:MCK-054",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "노트북",
+      "랩탑",
+      "블루네이비",
+      "16:9"
+    ],
+    "params": {
+      "device": "laptop",
+      "screen_ratio": "16:9",
+      "frame_color": "navy_600",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "제품 화면 예시",
+      "웹 서비스 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-055",
+    "category": "MCK",
+    "name": "데스크톱 모니터 목업 [16:9/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g02_v1.pptx",
+    "slide": 21,
+    "anchor": "asset:MCK-055",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모니터",
+      "데스크톱",
+      "블루네이비",
+      "16:9"
+    ],
+    "params": {
+      "device": "desktop",
+      "screen_ratio": "16:9",
+      "frame_color": "navy_600",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "관리자 화면",
+      "대시보드 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-056",
+    "category": "MCK",
+    "name": "와이드 모니터 목업 [21:9/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g02_v1.pptx",
+    "slide": 22,
+    "anchor": "asset:MCK-056",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "와이드",
+      "울트라와이드",
+      "모니터",
+      "블루네이비",
+      "21:9"
+    ],
+    "params": {
+      "device": "wide-monitor",
+      "screen_ratio": "21:9",
+      "frame_color": "navy_600",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대형 대시보드",
+      "관제 화면",
+      "가로 산출물"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-057",
+    "category": "MCK",
+    "name": "모바일 폰 목업(세로) [9:19/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g02_v1.pptx",
+    "slide": 23,
+    "anchor": "asset:MCK-057",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모바일",
+      "폰",
+      "세로",
+      "반응형",
+      "블루네이비",
+      "9:19"
+    ],
+    "params": {
+      "device": "mobile",
+      "screen_ratio": "9:19",
+      "frame_color": "navy_600",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "모바일 앱 화면",
+      "반응형 소개",
+      "앱 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-058",
+    "category": "MCK",
+    "name": "모바일 폰 목업(가로) [16:9/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g02_v1.pptx",
+    "slide": 24,
+    "anchor": "asset:MCK-058",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모바일",
+      "폰",
+      "가로",
+      "반응형",
+      "블루네이비",
+      "16:9"
+    ],
+    "params": {
+      "device": "mobile-landscape",
+      "screen_ratio": "16:9",
+      "frame_color": "navy_600",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "가로 모드 화면",
+      "동영상 앱",
+      "게임 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-059",
+    "category": "MCK",
+    "name": "태블릿 목업 [4:3/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g03_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:MCK-059",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "태블릿",
+      "패드",
+      "블루네이비",
+      "4:3"
+    ],
+    "params": {
+      "device": "tablet",
+      "screen_ratio": "4:3",
+      "frame_color": "navy_600",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "태블릿 화면",
+      "산출물 미리보기",
+      "카탈로그"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-060",
+    "category": "MCK",
+    "name": "스마트워치 목업 [1:1/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g03_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:MCK-060",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "스마트워치",
+      "웨어러블",
+      "블루네이비",
+      "1:1"
+    ],
+    "params": {
+      "device": "smartwatch",
+      "screen_ratio": "1:1",
+      "frame_color": "navy_600",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "워치 앱 화면",
+      "알림 UI",
+      "헬스 지표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-061",
+    "category": "MCK",
+    "name": "대시보드 카드 목업 [grid3/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g03_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:MCK-061",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "대시보드",
+      "위젯",
+      "카드",
+      "KPI",
+      "블루네이비",
+      "16:9"
+    ],
+    "params": {
+      "device": "dashboard",
+      "screen_ratio": "16:9",
+      "frame_color": "navy_600",
+      "composition": "grid3"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대시보드 소개",
+      "KPI·차트 배치",
+      "관리 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-062",
+    "category": "MCK",
+    "name": "멀티 윈도우 목업 [2win/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g03_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:MCK-062",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "멀티윈도우",
+      "창겹침",
+      "비교",
+      "블루네이비",
+      "16:9"
+    ],
+    "params": {
+      "device": "multi-window",
+      "screen_ratio": "16:9",
+      "frame_color": "navy_600",
+      "composition": "2win"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "다중 화면 비교",
+      "워크플로우 소개",
+      "전후 비교"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-063",
+    "category": "MCK",
+    "name": "지도·맵 뷰 목업 [16:9/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g03_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:MCK-063",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "지도",
+      "맵",
+      "핀",
+      "위치",
+      "블루네이비",
+      "16:9"
+    ],
+    "params": {
+      "device": "map",
+      "screen_ratio": "16:9",
+      "frame_color": "navy_600",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "지도 화면",
+      "위치 기반 서비스",
+      "권역 소개"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-064",
+    "category": "MCK",
+    "name": "폴더·파일 뷰 목업 [grid/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g03_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:MCK-064",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "폴더",
+      "파일",
+      "탐색기",
+      "산출물",
+      "블루네이비",
+      "16:9"
+    ],
+    "params": {
+      "device": "folder",
+      "screen_ratio": "16:9",
+      "frame_color": "navy_600",
+      "composition": "grid"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "산출물 목록",
+      "파일 구조 소개",
+      "자료 배치"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-065",
+    "category": "MCK",
+    "name": "프레젠테이션 화면 목업 [16:9/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g03_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:MCK-065",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "프레젠테이션",
+      "발표",
+      "스크린",
+      "블루네이비",
+      "16:9"
+    ],
+    "params": {
+      "device": "presentation",
+      "screen_ratio": "16:9",
+      "frame_color": "navy_600",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "발표 슬라이드",
+      "산출물 미리보기",
+      "화면 예시"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-066",
+    "category": "MCK",
+    "name": "키오스크 목업 [9:16/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g03_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:MCK-066",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "키오스크",
+      "터치",
+      "세로",
+      "무인기기",
+      "블루네이비",
+      "9:16"
+    ],
+    "params": {
+      "device": "kiosk",
+      "screen_ratio": "9:16",
+      "frame_color": "navy_600",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "키오스크 UI",
+      "무인 안내",
+      "터치 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-067",
+    "category": "MCK",
+    "name": "브라우저 창 목업 [4:3/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g03_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:MCK-067",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "브라우저",
+      "웹",
+      "탭바",
+      "주소창",
+      "다크그레이",
+      "4:3"
+    ],
+    "params": {
+      "device": "browser",
+      "screen_ratio": "4:3",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "웹 화면 예시",
+      "시스템 UI 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-068",
+    "category": "MCK",
+    "name": "노트북 목업 [16:10/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g03_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:MCK-068",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "노트북",
+      "랩탑",
+      "다크그레이",
+      "16:10"
+    ],
+    "params": {
+      "device": "laptop",
+      "screen_ratio": "16:10",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "제품 화면 예시",
+      "웹 서비스 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-069",
+    "category": "MCK",
+    "name": "데스크톱 모니터 목업 [4:3/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g03_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:MCK-069",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모니터",
+      "데스크톱",
+      "다크그레이",
+      "4:3"
+    ],
+    "params": {
+      "device": "desktop",
+      "screen_ratio": "4:3",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "관리자 화면",
+      "대시보드 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-070",
+    "category": "MCK",
+    "name": "와이드 모니터 목업 [32:9/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g03_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:MCK-070",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "와이드",
+      "울트라와이드",
+      "모니터",
+      "다크그레이",
+      "32:9"
+    ],
+    "params": {
+      "device": "wide-monitor",
+      "screen_ratio": "32:9",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대형 대시보드",
+      "관제 화면",
+      "가로 산출물"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-071",
+    "category": "MCK",
+    "name": "모바일 폰 목업(세로) [9:18/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g03_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:MCK-071",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모바일",
+      "폰",
+      "세로",
+      "반응형",
+      "다크그레이",
+      "9:18"
+    ],
+    "params": {
+      "device": "mobile",
+      "screen_ratio": "9:18",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "모바일 앱 화면",
+      "반응형 소개",
+      "앱 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-072",
+    "category": "MCK",
+    "name": "모바일 폰 목업(가로) [18:9/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g03_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:MCK-072",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모바일",
+      "폰",
+      "가로",
+      "반응형",
+      "다크그레이",
+      "18:9"
+    ],
+    "params": {
+      "device": "mobile-landscape",
+      "screen_ratio": "18:9",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "가로 모드 화면",
+      "동영상 앱",
+      "게임 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-073",
+    "category": "MCK",
+    "name": "태블릿 목업 [3:4/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g03_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:MCK-073",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "태블릿",
+      "패드",
+      "다크그레이",
+      "3:4"
+    ],
+    "params": {
+      "device": "tablet",
+      "screen_ratio": "3:4",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "태블릿 화면",
+      "산출물 미리보기",
+      "카탈로그"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-074",
+    "category": "MCK",
+    "name": "스마트워치 목업 [5:6/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g03_v1.pptx",
+    "slide": 16,
+    "anchor": "asset:MCK-074",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "스마트워치",
+      "웨어러블",
+      "다크그레이",
+      "5:6"
+    ],
+    "params": {
+      "device": "smartwatch",
+      "screen_ratio": "5:6",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "워치 앱 화면",
+      "알림 UI",
+      "헬스 지표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-075",
+    "category": "MCK",
+    "name": "대시보드 카드 목업 [grid4/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g03_v1.pptx",
+    "slide": 17,
+    "anchor": "asset:MCK-075",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "대시보드",
+      "위젯",
+      "카드",
+      "KPI",
+      "다크그레이",
+      "16:9"
+    ],
+    "params": {
+      "device": "dashboard",
+      "screen_ratio": "16:9",
+      "frame_color": "gray_700",
+      "composition": "grid4"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대시보드 소개",
+      "KPI·차트 배치",
+      "관리 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-076",
+    "category": "MCK",
+    "name": "멀티 윈도우 목업 [3win/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g03_v1.pptx",
+    "slide": 18,
+    "anchor": "asset:MCK-076",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "멀티윈도우",
+      "창겹침",
+      "비교",
+      "다크그레이",
+      "16:9"
+    ],
+    "params": {
+      "device": "multi-window",
+      "screen_ratio": "16:9",
+      "frame_color": "gray_700",
+      "composition": "3win"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "다중 화면 비교",
+      "워크플로우 소개",
+      "전후 비교"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-077",
+    "category": "MCK",
+    "name": "지도·맵 뷰 목업 [4:3/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g03_v1.pptx",
+    "slide": 19,
+    "anchor": "asset:MCK-077",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "지도",
+      "맵",
+      "핀",
+      "위치",
+      "다크그레이",
+      "4:3"
+    ],
+    "params": {
+      "device": "map",
+      "screen_ratio": "4:3",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "지도 화면",
+      "위치 기반 서비스",
+      "권역 소개"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-078",
+    "category": "MCK",
+    "name": "폴더·파일 뷰 목업 [list/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g03_v1.pptx",
+    "slide": 20,
+    "anchor": "asset:MCK-078",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "폴더",
+      "파일",
+      "탐색기",
+      "산출물",
+      "다크그레이",
+      "16:9"
+    ],
+    "params": {
+      "device": "folder",
+      "screen_ratio": "16:9",
+      "frame_color": "gray_700",
+      "composition": "list"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "산출물 목록",
+      "파일 구조 소개",
+      "자료 배치"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-079",
+    "category": "MCK",
+    "name": "프레젠테이션 화면 목업 [4:3/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g03_v1.pptx",
+    "slide": 21,
+    "anchor": "asset:MCK-079",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "프레젠테이션",
+      "발표",
+      "스크린",
+      "다크그레이",
+      "4:3"
+    ],
+    "params": {
+      "device": "presentation",
+      "screen_ratio": "4:3",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "발표 슬라이드",
+      "산출물 미리보기",
+      "화면 예시"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-080",
+    "category": "MCK",
+    "name": "키오스크 목업 [10:16/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g03_v1.pptx",
+    "slide": 22,
+    "anchor": "asset:MCK-080",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "키오스크",
+      "터치",
+      "세로",
+      "무인기기",
+      "다크그레이",
+      "10:16"
+    ],
+    "params": {
+      "device": "kiosk",
+      "screen_ratio": "10:16",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "키오스크 UI",
+      "무인 안내",
+      "터치 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-081",
+    "category": "MCK",
+    "name": "브라우저 창 목업 [4:3/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g03_v1.pptx",
+    "slide": 23,
+    "anchor": "asset:MCK-081",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "브라우저",
+      "웹",
+      "탭바",
+      "주소창",
+      "네이비",
+      "4:3"
+    ],
+    "params": {
+      "device": "browser",
+      "screen_ratio": "4:3",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "웹 화면 예시",
+      "시스템 UI 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-082",
+    "category": "MCK",
+    "name": "노트북 목업 [16:10/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g03_v1.pptx",
+    "slide": 24,
+    "anchor": "asset:MCK-082",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "노트북",
+      "랩탑",
+      "네이비",
+      "16:10"
+    ],
+    "params": {
+      "device": "laptop",
+      "screen_ratio": "16:10",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "제품 화면 예시",
+      "웹 서비스 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-083",
+    "category": "MCK",
+    "name": "데스크톱 모니터 목업 [4:3/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g04_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:MCK-083",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모니터",
+      "데스크톱",
+      "네이비",
+      "4:3"
+    ],
+    "params": {
+      "device": "desktop",
+      "screen_ratio": "4:3",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "관리자 화면",
+      "대시보드 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-084",
+    "category": "MCK",
+    "name": "와이드 모니터 목업 [32:9/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g04_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:MCK-084",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "와이드",
+      "울트라와이드",
+      "모니터",
+      "네이비",
+      "32:9"
+    ],
+    "params": {
+      "device": "wide-monitor",
+      "screen_ratio": "32:9",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대형 대시보드",
+      "관제 화면",
+      "가로 산출물"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-085",
+    "category": "MCK",
+    "name": "모바일 폰 목업(세로) [9:18/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g04_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:MCK-085",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모바일",
+      "폰",
+      "세로",
+      "반응형",
+      "네이비",
+      "9:18"
+    ],
+    "params": {
+      "device": "mobile",
+      "screen_ratio": "9:18",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "모바일 앱 화면",
+      "반응형 소개",
+      "앱 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-086",
+    "category": "MCK",
+    "name": "모바일 폰 목업(가로) [18:9/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g04_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:MCK-086",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모바일",
+      "폰",
+      "가로",
+      "반응형",
+      "네이비",
+      "18:9"
+    ],
+    "params": {
+      "device": "mobile-landscape",
+      "screen_ratio": "18:9",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "가로 모드 화면",
+      "동영상 앱",
+      "게임 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-087",
+    "category": "MCK",
+    "name": "태블릿 목업 [3:4/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g04_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:MCK-087",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "태블릿",
+      "패드",
+      "네이비",
+      "3:4"
+    ],
+    "params": {
+      "device": "tablet",
+      "screen_ratio": "3:4",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "태블릿 화면",
+      "산출물 미리보기",
+      "카탈로그"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-088",
+    "category": "MCK",
+    "name": "스마트워치 목업 [5:6/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g04_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:MCK-088",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "스마트워치",
+      "웨어러블",
+      "네이비",
+      "5:6"
+    ],
+    "params": {
+      "device": "smartwatch",
+      "screen_ratio": "5:6",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "워치 앱 화면",
+      "알림 UI",
+      "헬스 지표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-089",
+    "category": "MCK",
+    "name": "대시보드 카드 목업 [grid4/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g04_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:MCK-089",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "대시보드",
+      "위젯",
+      "카드",
+      "KPI",
+      "네이비",
+      "16:9"
+    ],
+    "params": {
+      "device": "dashboard",
+      "screen_ratio": "16:9",
+      "frame_color": "navy_800",
+      "composition": "grid4"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대시보드 소개",
+      "KPI·차트 배치",
+      "관리 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-090",
+    "category": "MCK",
+    "name": "멀티 윈도우 목업 [3win/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g04_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:MCK-090",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "멀티윈도우",
+      "창겹침",
+      "비교",
+      "네이비",
+      "16:9"
+    ],
+    "params": {
+      "device": "multi-window",
+      "screen_ratio": "16:9",
+      "frame_color": "navy_800",
+      "composition": "3win"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "다중 화면 비교",
+      "워크플로우 소개",
+      "전후 비교"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-091",
+    "category": "MCK",
+    "name": "지도·맵 뷰 목업 [4:3/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g04_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:MCK-091",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "지도",
+      "맵",
+      "핀",
+      "위치",
+      "네이비",
+      "4:3"
+    ],
+    "params": {
+      "device": "map",
+      "screen_ratio": "4:3",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "지도 화면",
+      "위치 기반 서비스",
+      "권역 소개"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-092",
+    "category": "MCK",
+    "name": "폴더·파일 뷰 목업 [list/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g04_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:MCK-092",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "폴더",
+      "파일",
+      "탐색기",
+      "산출물",
+      "네이비",
+      "16:9"
+    ],
+    "params": {
+      "device": "folder",
+      "screen_ratio": "16:9",
+      "frame_color": "navy_800",
+      "composition": "list"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "산출물 목록",
+      "파일 구조 소개",
+      "자료 배치"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-093",
+    "category": "MCK",
+    "name": "프레젠테이션 화면 목업 [4:3/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g04_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:MCK-093",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "프레젠테이션",
+      "발표",
+      "스크린",
+      "네이비",
+      "4:3"
+    ],
+    "params": {
+      "device": "presentation",
+      "screen_ratio": "4:3",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "발표 슬라이드",
+      "산출물 미리보기",
+      "화면 예시"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-094",
+    "category": "MCK",
+    "name": "키오스크 목업 [10:16/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g04_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:MCK-094",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "키오스크",
+      "터치",
+      "세로",
+      "무인기기",
+      "네이비",
+      "10:16"
+    ],
+    "params": {
+      "device": "kiosk",
+      "screen_ratio": "10:16",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "키오스크 UI",
+      "무인 안내",
+      "터치 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-095",
+    "category": "MCK",
+    "name": "브라우저 창 목업 [4:3/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g04_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:MCK-095",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "브라우저",
+      "웹",
+      "탭바",
+      "주소창",
+      "그레이",
+      "4:3"
+    ],
+    "params": {
+      "device": "browser",
+      "screen_ratio": "4:3",
+      "frame_color": "gray_500",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "웹 화면 예시",
+      "시스템 UI 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-096",
+    "category": "MCK",
+    "name": "노트북 목업 [16:10/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g04_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:MCK-096",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "노트북",
+      "랩탑",
+      "그레이",
+      "16:10"
+    ],
+    "params": {
+      "device": "laptop",
+      "screen_ratio": "16:10",
+      "frame_color": "gray_500",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "제품 화면 예시",
+      "웹 서비스 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-097",
+    "category": "MCK",
+    "name": "데스크톱 모니터 목업 [4:3/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g04_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:MCK-097",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모니터",
+      "데스크톱",
+      "그레이",
+      "4:3"
+    ],
+    "params": {
+      "device": "desktop",
+      "screen_ratio": "4:3",
+      "frame_color": "gray_500",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "관리자 화면",
+      "대시보드 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-098",
+    "category": "MCK",
+    "name": "와이드 모니터 목업 [32:9/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g04_v1.pptx",
+    "slide": 16,
+    "anchor": "asset:MCK-098",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "와이드",
+      "울트라와이드",
+      "모니터",
+      "그레이",
+      "32:9"
+    ],
+    "params": {
+      "device": "wide-monitor",
+      "screen_ratio": "32:9",
+      "frame_color": "gray_500",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대형 대시보드",
+      "관제 화면",
+      "가로 산출물"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-099",
+    "category": "MCK",
+    "name": "모바일 폰 목업(세로) [9:18/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g04_v1.pptx",
+    "slide": 17,
+    "anchor": "asset:MCK-099",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모바일",
+      "폰",
+      "세로",
+      "반응형",
+      "그레이",
+      "9:18"
+    ],
+    "params": {
+      "device": "mobile",
+      "screen_ratio": "9:18",
+      "frame_color": "gray_500",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "모바일 앱 화면",
+      "반응형 소개",
+      "앱 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-100",
+    "category": "MCK",
+    "name": "모바일 폰 목업(가로) [18:9/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g04_v1.pptx",
+    "slide": 18,
+    "anchor": "asset:MCK-100",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모바일",
+      "폰",
+      "가로",
+      "반응형",
+      "그레이",
+      "18:9"
+    ],
+    "params": {
+      "device": "mobile-landscape",
+      "screen_ratio": "18:9",
+      "frame_color": "gray_500",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "가로 모드 화면",
+      "동영상 앱",
+      "게임 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-101",
+    "category": "MCK",
+    "name": "태블릿 목업 [3:4/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g04_v1.pptx",
+    "slide": 19,
+    "anchor": "asset:MCK-101",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "태블릿",
+      "패드",
+      "그레이",
+      "3:4"
+    ],
+    "params": {
+      "device": "tablet",
+      "screen_ratio": "3:4",
+      "frame_color": "gray_500",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "태블릿 화면",
+      "산출물 미리보기",
+      "카탈로그"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-102",
+    "category": "MCK",
+    "name": "스마트워치 목업 [5:6/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g04_v1.pptx",
+    "slide": 20,
+    "anchor": "asset:MCK-102",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "스마트워치",
+      "웨어러블",
+      "그레이",
+      "5:6"
+    ],
+    "params": {
+      "device": "smartwatch",
+      "screen_ratio": "5:6",
+      "frame_color": "gray_500",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "워치 앱 화면",
+      "알림 UI",
+      "헬스 지표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-103",
+    "category": "MCK",
+    "name": "대시보드 카드 목업 [grid4/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g04_v1.pptx",
+    "slide": 21,
+    "anchor": "asset:MCK-103",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "대시보드",
+      "위젯",
+      "카드",
+      "KPI",
+      "그레이",
+      "16:9"
+    ],
+    "params": {
+      "device": "dashboard",
+      "screen_ratio": "16:9",
+      "frame_color": "gray_500",
+      "composition": "grid4"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대시보드 소개",
+      "KPI·차트 배치",
+      "관리 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-104",
+    "category": "MCK",
+    "name": "멀티 윈도우 목업 [3win/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g04_v1.pptx",
+    "slide": 22,
+    "anchor": "asset:MCK-104",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "멀티윈도우",
+      "창겹침",
+      "비교",
+      "그레이",
+      "16:9"
+    ],
+    "params": {
+      "device": "multi-window",
+      "screen_ratio": "16:9",
+      "frame_color": "gray_500",
+      "composition": "3win"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "다중 화면 비교",
+      "워크플로우 소개",
+      "전후 비교"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-105",
+    "category": "MCK",
+    "name": "지도·맵 뷰 목업 [4:3/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g04_v1.pptx",
+    "slide": 23,
+    "anchor": "asset:MCK-105",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "지도",
+      "맵",
+      "핀",
+      "위치",
+      "그레이",
+      "4:3"
+    ],
+    "params": {
+      "device": "map",
+      "screen_ratio": "4:3",
+      "frame_color": "gray_500",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "지도 화면",
+      "위치 기반 서비스",
+      "권역 소개"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-106",
+    "category": "MCK",
+    "name": "폴더·파일 뷰 목업 [list/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g04_v1.pptx",
+    "slide": 24,
+    "anchor": "asset:MCK-106",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "폴더",
+      "파일",
+      "탐색기",
+      "산출물",
+      "그레이",
+      "16:9"
+    ],
+    "params": {
+      "device": "folder",
+      "screen_ratio": "16:9",
+      "frame_color": "gray_500",
+      "composition": "list"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "산출물 목록",
+      "파일 구조 소개",
+      "자료 배치"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-107",
+    "category": "MCK",
+    "name": "프레젠테이션 화면 목업 [4:3/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g05_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:MCK-107",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "프레젠테이션",
+      "발표",
+      "스크린",
+      "그레이",
+      "4:3"
+    ],
+    "params": {
+      "device": "presentation",
+      "screen_ratio": "4:3",
+      "frame_color": "gray_500",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "발표 슬라이드",
+      "산출물 미리보기",
+      "화면 예시"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-108",
+    "category": "MCK",
+    "name": "키오스크 목업 [10:16/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g05_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:MCK-108",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "키오스크",
+      "터치",
+      "세로",
+      "무인기기",
+      "그레이",
+      "10:16"
+    ],
+    "params": {
+      "device": "kiosk",
+      "screen_ratio": "10:16",
+      "frame_color": "gray_500",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "키오스크 UI",
+      "무인 안내",
+      "터치 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-109",
+    "category": "MCK",
+    "name": "브라우저 창 목업 [4:3/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g05_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:MCK-109",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "브라우저",
+      "웹",
+      "탭바",
+      "주소창",
+      "블루네이비",
+      "4:3"
+    ],
+    "params": {
+      "device": "browser",
+      "screen_ratio": "4:3",
+      "frame_color": "navy_600",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "웹 화면 예시",
+      "시스템 UI 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-110",
+    "category": "MCK",
+    "name": "노트북 목업 [16:10/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g05_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:MCK-110",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "노트북",
+      "랩탑",
+      "블루네이비",
+      "16:10"
+    ],
+    "params": {
+      "device": "laptop",
+      "screen_ratio": "16:10",
+      "frame_color": "navy_600",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "제품 화면 예시",
+      "웹 서비스 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-111",
+    "category": "MCK",
+    "name": "데스크톱 모니터 목업 [4:3/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g05_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:MCK-111",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모니터",
+      "데스크톱",
+      "블루네이비",
+      "4:3"
+    ],
+    "params": {
+      "device": "desktop",
+      "screen_ratio": "4:3",
+      "frame_color": "navy_600",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "관리자 화면",
+      "대시보드 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-112",
+    "category": "MCK",
+    "name": "와이드 모니터 목업 [32:9/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g05_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:MCK-112",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "와이드",
+      "울트라와이드",
+      "모니터",
+      "블루네이비",
+      "32:9"
+    ],
+    "params": {
+      "device": "wide-monitor",
+      "screen_ratio": "32:9",
+      "frame_color": "navy_600",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대형 대시보드",
+      "관제 화면",
+      "가로 산출물"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-113",
+    "category": "MCK",
+    "name": "모바일 폰 목업(세로) [9:18/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g05_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:MCK-113",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모바일",
+      "폰",
+      "세로",
+      "반응형",
+      "블루네이비",
+      "9:18"
+    ],
+    "params": {
+      "device": "mobile",
+      "screen_ratio": "9:18",
+      "frame_color": "navy_600",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "모바일 앱 화면",
+      "반응형 소개",
+      "앱 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-114",
+    "category": "MCK",
+    "name": "모바일 폰 목업(가로) [18:9/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g05_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:MCK-114",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모바일",
+      "폰",
+      "가로",
+      "반응형",
+      "블루네이비",
+      "18:9"
+    ],
+    "params": {
+      "device": "mobile-landscape",
+      "screen_ratio": "18:9",
+      "frame_color": "navy_600",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "가로 모드 화면",
+      "동영상 앱",
+      "게임 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-115",
+    "category": "MCK",
+    "name": "태블릿 목업 [3:4/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g05_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:MCK-115",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "태블릿",
+      "패드",
+      "블루네이비",
+      "3:4"
+    ],
+    "params": {
+      "device": "tablet",
+      "screen_ratio": "3:4",
+      "frame_color": "navy_600",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "태블릿 화면",
+      "산출물 미리보기",
+      "카탈로그"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-116",
+    "category": "MCK",
+    "name": "스마트워치 목업 [5:6/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g05_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:MCK-116",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "스마트워치",
+      "웨어러블",
+      "블루네이비",
+      "5:6"
+    ],
+    "params": {
+      "device": "smartwatch",
+      "screen_ratio": "5:6",
+      "frame_color": "navy_600",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "워치 앱 화면",
+      "알림 UI",
+      "헬스 지표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-117",
+    "category": "MCK",
+    "name": "대시보드 카드 목업 [grid4/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g05_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:MCK-117",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "대시보드",
+      "위젯",
+      "카드",
+      "KPI",
+      "블루네이비",
+      "16:9"
+    ],
+    "params": {
+      "device": "dashboard",
+      "screen_ratio": "16:9",
+      "frame_color": "navy_600",
+      "composition": "grid4"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대시보드 소개",
+      "KPI·차트 배치",
+      "관리 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-118",
+    "category": "MCK",
+    "name": "멀티 윈도우 목업 [3win/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g05_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:MCK-118",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "멀티윈도우",
+      "창겹침",
+      "비교",
+      "블루네이비",
+      "16:9"
+    ],
+    "params": {
+      "device": "multi-window",
+      "screen_ratio": "16:9",
+      "frame_color": "navy_600",
+      "composition": "3win"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "다중 화면 비교",
+      "워크플로우 소개",
+      "전후 비교"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-119",
+    "category": "MCK",
+    "name": "지도·맵 뷰 목업 [4:3/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g05_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:MCK-119",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "지도",
+      "맵",
+      "핀",
+      "위치",
+      "블루네이비",
+      "4:3"
+    ],
+    "params": {
+      "device": "map",
+      "screen_ratio": "4:3",
+      "frame_color": "navy_600",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "지도 화면",
+      "위치 기반 서비스",
+      "권역 소개"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-120",
+    "category": "MCK",
+    "name": "폴더·파일 뷰 목업 [list/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g05_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:MCK-120",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "폴더",
+      "파일",
+      "탐색기",
+      "산출물",
+      "블루네이비",
+      "16:9"
+    ],
+    "params": {
+      "device": "folder",
+      "screen_ratio": "16:9",
+      "frame_color": "navy_600",
+      "composition": "list"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "산출물 목록",
+      "파일 구조 소개",
+      "자료 배치"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-121",
+    "category": "MCK",
+    "name": "프레젠테이션 화면 목업 [4:3/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g05_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:MCK-121",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "프레젠테이션",
+      "발표",
+      "스크린",
+      "블루네이비",
+      "4:3"
+    ],
+    "params": {
+      "device": "presentation",
+      "screen_ratio": "4:3",
+      "frame_color": "navy_600",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "발표 슬라이드",
+      "산출물 미리보기",
+      "화면 예시"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-122",
+    "category": "MCK",
+    "name": "키오스크 목업 [10:16/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g05_v1.pptx",
+    "slide": 16,
+    "anchor": "asset:MCK-122",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "키오스크",
+      "터치",
+      "세로",
+      "무인기기",
+      "블루네이비",
+      "10:16"
+    ],
+    "params": {
+      "device": "kiosk",
+      "screen_ratio": "10:16",
+      "frame_color": "navy_600",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "키오스크 UI",
+      "무인 안내",
+      "터치 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-123",
+    "category": "MCK",
+    "name": "브라우저 창 목업 [3:2/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g05_v1.pptx",
+    "slide": 17,
+    "anchor": "asset:MCK-123",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "브라우저",
+      "웹",
+      "탭바",
+      "주소창",
+      "다크그레이",
+      "3:2"
+    ],
+    "params": {
+      "device": "browser",
+      "screen_ratio": "3:2",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "웹 화면 예시",
+      "시스템 UI 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-124",
+    "category": "MCK",
+    "name": "노트북 목업 [3:2/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g05_v1.pptx",
+    "slide": 18,
+    "anchor": "asset:MCK-124",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "노트북",
+      "랩탑",
+      "다크그레이",
+      "3:2"
+    ],
+    "params": {
+      "device": "laptop",
+      "screen_ratio": "3:2",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "제품 화면 예시",
+      "웹 서비스 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-125",
+    "category": "MCK",
+    "name": "데스크톱 모니터 목업 [16:10/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g05_v1.pptx",
+    "slide": 19,
+    "anchor": "asset:MCK-125",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모니터",
+      "데스크톱",
+      "다크그레이",
+      "16:10"
+    ],
+    "params": {
+      "device": "desktop",
+      "screen_ratio": "16:10",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "관리자 화면",
+      "대시보드 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-126",
+    "category": "MCK",
+    "name": "와이드 모니터 목업 [24:10/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g05_v1.pptx",
+    "slide": 20,
+    "anchor": "asset:MCK-126",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "와이드",
+      "울트라와이드",
+      "모니터",
+      "다크그레이",
+      "24:10"
+    ],
+    "params": {
+      "device": "wide-monitor",
+      "screen_ratio": "24:10",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대형 대시보드",
+      "관제 화면",
+      "가로 산출물"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-127",
+    "category": "MCK",
+    "name": "모바일 폰 목업(세로) [9:20/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g05_v1.pptx",
+    "slide": 21,
+    "anchor": "asset:MCK-127",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모바일",
+      "폰",
+      "세로",
+      "반응형",
+      "다크그레이",
+      "9:20"
+    ],
+    "params": {
+      "device": "mobile",
+      "screen_ratio": "9:20",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "모바일 앱 화면",
+      "반응형 소개",
+      "앱 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-128",
+    "category": "MCK",
+    "name": "모바일 폰 목업(가로) [20:9/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g05_v1.pptx",
+    "slide": 22,
+    "anchor": "asset:MCK-128",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모바일",
+      "폰",
+      "가로",
+      "반응형",
+      "다크그레이",
+      "20:9"
+    ],
+    "params": {
+      "device": "mobile-landscape",
+      "screen_ratio": "20:9",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "가로 모드 화면",
+      "동영상 앱",
+      "게임 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-129",
+    "category": "MCK",
+    "name": "태블릿 목업 [16:10/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g05_v1.pptx",
+    "slide": 23,
+    "anchor": "asset:MCK-129",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "태블릿",
+      "패드",
+      "다크그레이",
+      "16:10"
+    ],
+    "params": {
+      "device": "tablet",
+      "screen_ratio": "16:10",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "태블릿 화면",
+      "산출물 미리보기",
+      "카탈로그"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-130",
+    "category": "MCK",
+    "name": "스마트워치 목업 [6:5/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g05_v1.pptx",
+    "slide": 24,
+    "anchor": "asset:MCK-130",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "스마트워치",
+      "웨어러블",
+      "다크그레이",
+      "6:5"
+    ],
+    "params": {
+      "device": "smartwatch",
+      "screen_ratio": "6:5",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "워치 앱 화면",
+      "알림 UI",
+      "헬스 지표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-131",
+    "category": "MCK",
+    "name": "대시보드 카드 목업 [sidebar/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g06_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:MCK-131",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "대시보드",
+      "위젯",
+      "카드",
+      "KPI",
+      "다크그레이",
+      "16:9"
+    ],
+    "params": {
+      "device": "dashboard",
+      "screen_ratio": "16:9",
+      "frame_color": "gray_700",
+      "composition": "sidebar"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대시보드 소개",
+      "KPI·차트 배치",
+      "관리 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-132",
+    "category": "MCK",
+    "name": "멀티 윈도우 목업 [cascade/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g06_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:MCK-132",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "멀티윈도우",
+      "창겹침",
+      "비교",
+      "다크그레이",
+      "16:9"
+    ],
+    "params": {
+      "device": "multi-window",
+      "screen_ratio": "16:9",
+      "frame_color": "gray_700",
+      "composition": "cascade"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "다중 화면 비교",
+      "워크플로우 소개",
+      "전후 비교"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-133",
+    "category": "MCK",
+    "name": "지도·맵 뷰 목업 [3:2/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g06_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:MCK-133",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "지도",
+      "맵",
+      "핀",
+      "위치",
+      "다크그레이",
+      "3:2"
+    ],
+    "params": {
+      "device": "map",
+      "screen_ratio": "3:2",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "지도 화면",
+      "위치 기반 서비스",
+      "권역 소개"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-134",
+    "category": "MCK",
+    "name": "폴더·파일 뷰 목업 [tiles/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g06_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:MCK-134",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "폴더",
+      "파일",
+      "탐색기",
+      "산출물",
+      "다크그레이",
+      "16:9"
+    ],
+    "params": {
+      "device": "folder",
+      "screen_ratio": "16:9",
+      "frame_color": "gray_700",
+      "composition": "tiles"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "산출물 목록",
+      "파일 구조 소개",
+      "자료 배치"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-135",
+    "category": "MCK",
+    "name": "프레젠테이션 화면 목업 [16:10/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g06_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:MCK-135",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "프레젠테이션",
+      "발표",
+      "스크린",
+      "다크그레이",
+      "16:10"
+    ],
+    "params": {
+      "device": "presentation",
+      "screen_ratio": "16:10",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "발표 슬라이드",
+      "산출물 미리보기",
+      "화면 예시"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-136",
+    "category": "MCK",
+    "name": "키오스크 목업 [9:18/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g06_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:MCK-136",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "키오스크",
+      "터치",
+      "세로",
+      "무인기기",
+      "다크그레이",
+      "9:18"
+    ],
+    "params": {
+      "device": "kiosk",
+      "screen_ratio": "9:18",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "키오스크 UI",
+      "무인 안내",
+      "터치 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-137",
+    "category": "MCK",
+    "name": "브라우저 창 목업 [3:2/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g06_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:MCK-137",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "브라우저",
+      "웹",
+      "탭바",
+      "주소창",
+      "네이비",
+      "3:2"
+    ],
+    "params": {
+      "device": "browser",
+      "screen_ratio": "3:2",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "웹 화면 예시",
+      "시스템 UI 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-138",
+    "category": "MCK",
+    "name": "노트북 목업 [3:2/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g06_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:MCK-138",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "노트북",
+      "랩탑",
+      "네이비",
+      "3:2"
+    ],
+    "params": {
+      "device": "laptop",
+      "screen_ratio": "3:2",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "제품 화면 예시",
+      "웹 서비스 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-139",
+    "category": "MCK",
+    "name": "데스크톱 모니터 목업 [16:10/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g06_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:MCK-139",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모니터",
+      "데스크톱",
+      "네이비",
+      "16:10"
+    ],
+    "params": {
+      "device": "desktop",
+      "screen_ratio": "16:10",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "관리자 화면",
+      "대시보드 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-140",
+    "category": "MCK",
+    "name": "와이드 모니터 목업 [24:10/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g06_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:MCK-140",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "와이드",
+      "울트라와이드",
+      "모니터",
+      "네이비",
+      "24:10"
+    ],
+    "params": {
+      "device": "wide-monitor",
+      "screen_ratio": "24:10",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대형 대시보드",
+      "관제 화면",
+      "가로 산출물"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-141",
+    "category": "MCK",
+    "name": "모바일 폰 목업(세로) [9:20/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g06_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:MCK-141",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모바일",
+      "폰",
+      "세로",
+      "반응형",
+      "네이비",
+      "9:20"
+    ],
+    "params": {
+      "device": "mobile",
+      "screen_ratio": "9:20",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "모바일 앱 화면",
+      "반응형 소개",
+      "앱 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-142",
+    "category": "MCK",
+    "name": "모바일 폰 목업(가로) [20:9/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g06_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:MCK-142",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모바일",
+      "폰",
+      "가로",
+      "반응형",
+      "네이비",
+      "20:9"
+    ],
+    "params": {
+      "device": "mobile-landscape",
+      "screen_ratio": "20:9",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "가로 모드 화면",
+      "동영상 앱",
+      "게임 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-143",
+    "category": "MCK",
+    "name": "태블릿 목업 [16:10/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g06_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:MCK-143",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "태블릿",
+      "패드",
+      "네이비",
+      "16:10"
+    ],
+    "params": {
+      "device": "tablet",
+      "screen_ratio": "16:10",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "태블릿 화면",
+      "산출물 미리보기",
+      "카탈로그"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-144",
+    "category": "MCK",
+    "name": "스마트워치 목업 [6:5/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g06_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:MCK-144",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "스마트워치",
+      "웨어러블",
+      "네이비",
+      "6:5"
+    ],
+    "params": {
+      "device": "smartwatch",
+      "screen_ratio": "6:5",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "워치 앱 화면",
+      "알림 UI",
+      "헬스 지표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-145",
+    "category": "MCK",
+    "name": "대시보드 카드 목업 [sidebar/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g06_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:MCK-145",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "대시보드",
+      "위젯",
+      "카드",
+      "KPI",
+      "네이비",
+      "16:9"
+    ],
+    "params": {
+      "device": "dashboard",
+      "screen_ratio": "16:9",
+      "frame_color": "navy_800",
+      "composition": "sidebar"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대시보드 소개",
+      "KPI·차트 배치",
+      "관리 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-146",
+    "category": "MCK",
+    "name": "멀티 윈도우 목업 [cascade/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g06_v1.pptx",
+    "slide": 16,
+    "anchor": "asset:MCK-146",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "멀티윈도우",
+      "창겹침",
+      "비교",
+      "네이비",
+      "16:9"
+    ],
+    "params": {
+      "device": "multi-window",
+      "screen_ratio": "16:9",
+      "frame_color": "navy_800",
+      "composition": "cascade"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "다중 화면 비교",
+      "워크플로우 소개",
+      "전후 비교"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-147",
+    "category": "MCK",
+    "name": "지도·맵 뷰 목업 [3:2/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g06_v1.pptx",
+    "slide": 17,
+    "anchor": "asset:MCK-147",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "지도",
+      "맵",
+      "핀",
+      "위치",
+      "네이비",
+      "3:2"
+    ],
+    "params": {
+      "device": "map",
+      "screen_ratio": "3:2",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "지도 화면",
+      "위치 기반 서비스",
+      "권역 소개"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-148",
+    "category": "MCK",
+    "name": "폴더·파일 뷰 목업 [tiles/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g06_v1.pptx",
+    "slide": 18,
+    "anchor": "asset:MCK-148",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "폴더",
+      "파일",
+      "탐색기",
+      "산출물",
+      "네이비",
+      "16:9"
+    ],
+    "params": {
+      "device": "folder",
+      "screen_ratio": "16:9",
+      "frame_color": "navy_800",
+      "composition": "tiles"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "산출물 목록",
+      "파일 구조 소개",
+      "자료 배치"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-149",
+    "category": "MCK",
+    "name": "프레젠테이션 화면 목업 [16:10/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g06_v1.pptx",
+    "slide": 19,
+    "anchor": "asset:MCK-149",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "프레젠테이션",
+      "발표",
+      "스크린",
+      "네이비",
+      "16:10"
+    ],
+    "params": {
+      "device": "presentation",
+      "screen_ratio": "16:10",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "발표 슬라이드",
+      "산출물 미리보기",
+      "화면 예시"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-150",
+    "category": "MCK",
+    "name": "키오스크 목업 [9:18/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g06_v1.pptx",
+    "slide": 20,
+    "anchor": "asset:MCK-150",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "키오스크",
+      "터치",
+      "세로",
+      "무인기기",
+      "네이비",
+      "9:18"
+    ],
+    "params": {
+      "device": "kiosk",
+      "screen_ratio": "9:18",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "키오스크 UI",
+      "무인 안내",
+      "터치 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-151",
+    "category": "MCK",
+    "name": "브라우저 창 목업 [3:2/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g06_v1.pptx",
+    "slide": 21,
+    "anchor": "asset:MCK-151",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "브라우저",
+      "웹",
+      "탭바",
+      "주소창",
+      "그레이",
+      "3:2"
+    ],
+    "params": {
+      "device": "browser",
+      "screen_ratio": "3:2",
+      "frame_color": "gray_500",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "웹 화면 예시",
+      "시스템 UI 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-152",
+    "category": "MCK",
+    "name": "노트북 목업 [3:2/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g06_v1.pptx",
+    "slide": 22,
+    "anchor": "asset:MCK-152",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "노트북",
+      "랩탑",
+      "그레이",
+      "3:2"
+    ],
+    "params": {
+      "device": "laptop",
+      "screen_ratio": "3:2",
+      "frame_color": "gray_500",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "제품 화면 예시",
+      "웹 서비스 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-153",
+    "category": "MCK",
+    "name": "데스크톱 모니터 목업 [16:10/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g06_v1.pptx",
+    "slide": 23,
+    "anchor": "asset:MCK-153",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모니터",
+      "데스크톱",
+      "그레이",
+      "16:10"
+    ],
+    "params": {
+      "device": "desktop",
+      "screen_ratio": "16:10",
+      "frame_color": "gray_500",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "관리자 화면",
+      "대시보드 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-154",
+    "category": "MCK",
+    "name": "와이드 모니터 목업 [24:10/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g06_v1.pptx",
+    "slide": 24,
+    "anchor": "asset:MCK-154",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "와이드",
+      "울트라와이드",
+      "모니터",
+      "그레이",
+      "24:10"
+    ],
+    "params": {
+      "device": "wide-monitor",
+      "screen_ratio": "24:10",
+      "frame_color": "gray_500",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대형 대시보드",
+      "관제 화면",
+      "가로 산출물"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-155",
+    "category": "MCK",
+    "name": "모바일 폰 목업(세로) [9:20/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g07_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:MCK-155",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모바일",
+      "폰",
+      "세로",
+      "반응형",
+      "그레이",
+      "9:20"
+    ],
+    "params": {
+      "device": "mobile",
+      "screen_ratio": "9:20",
+      "frame_color": "gray_500",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "모바일 앱 화면",
+      "반응형 소개",
+      "앱 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-156",
+    "category": "MCK",
+    "name": "모바일 폰 목업(가로) [20:9/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g07_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:MCK-156",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모바일",
+      "폰",
+      "가로",
+      "반응형",
+      "그레이",
+      "20:9"
+    ],
+    "params": {
+      "device": "mobile-landscape",
+      "screen_ratio": "20:9",
+      "frame_color": "gray_500",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "가로 모드 화면",
+      "동영상 앱",
+      "게임 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-157",
+    "category": "MCK",
+    "name": "태블릿 목업 [16:10/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g07_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:MCK-157",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "태블릿",
+      "패드",
+      "그레이",
+      "16:10"
+    ],
+    "params": {
+      "device": "tablet",
+      "screen_ratio": "16:10",
+      "frame_color": "gray_500",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "태블릿 화면",
+      "산출물 미리보기",
+      "카탈로그"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-158",
+    "category": "MCK",
+    "name": "스마트워치 목업 [6:5/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g07_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:MCK-158",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "스마트워치",
+      "웨어러블",
+      "그레이",
+      "6:5"
+    ],
+    "params": {
+      "device": "smartwatch",
+      "screen_ratio": "6:5",
+      "frame_color": "gray_500",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "워치 앱 화면",
+      "알림 UI",
+      "헬스 지표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-159",
+    "category": "MCK",
+    "name": "대시보드 카드 목업 [sidebar/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g07_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:MCK-159",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "대시보드",
+      "위젯",
+      "카드",
+      "KPI",
+      "그레이",
+      "16:9"
+    ],
+    "params": {
+      "device": "dashboard",
+      "screen_ratio": "16:9",
+      "frame_color": "gray_500",
+      "composition": "sidebar"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대시보드 소개",
+      "KPI·차트 배치",
+      "관리 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-160",
+    "category": "MCK",
+    "name": "멀티 윈도우 목업 [cascade/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g07_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:MCK-160",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "멀티윈도우",
+      "창겹침",
+      "비교",
+      "그레이",
+      "16:9"
+    ],
+    "params": {
+      "device": "multi-window",
+      "screen_ratio": "16:9",
+      "frame_color": "gray_500",
+      "composition": "cascade"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "다중 화면 비교",
+      "워크플로우 소개",
+      "전후 비교"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-161",
+    "category": "MCK",
+    "name": "지도·맵 뷰 목업 [3:2/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g07_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:MCK-161",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "지도",
+      "맵",
+      "핀",
+      "위치",
+      "그레이",
+      "3:2"
+    ],
+    "params": {
+      "device": "map",
+      "screen_ratio": "3:2",
+      "frame_color": "gray_500",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "지도 화면",
+      "위치 기반 서비스",
+      "권역 소개"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-162",
+    "category": "MCK",
+    "name": "폴더·파일 뷰 목업 [tiles/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g07_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:MCK-162",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "폴더",
+      "파일",
+      "탐색기",
+      "산출물",
+      "그레이",
+      "16:9"
+    ],
+    "params": {
+      "device": "folder",
+      "screen_ratio": "16:9",
+      "frame_color": "gray_500",
+      "composition": "tiles"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "산출물 목록",
+      "파일 구조 소개",
+      "자료 배치"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-163",
+    "category": "MCK",
+    "name": "프레젠테이션 화면 목업 [16:10/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g07_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:MCK-163",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "프레젠테이션",
+      "발표",
+      "스크린",
+      "그레이",
+      "16:10"
+    ],
+    "params": {
+      "device": "presentation",
+      "screen_ratio": "16:10",
+      "frame_color": "gray_500",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "발표 슬라이드",
+      "산출물 미리보기",
+      "화면 예시"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-164",
+    "category": "MCK",
+    "name": "키오스크 목업 [9:18/그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g07_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:MCK-164",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "키오스크",
+      "터치",
+      "세로",
+      "무인기기",
+      "그레이",
+      "9:18"
+    ],
+    "params": {
+      "device": "kiosk",
+      "screen_ratio": "9:18",
+      "frame_color": "gray_500",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "키오스크 UI",
+      "무인 안내",
+      "터치 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-165",
+    "category": "MCK",
+    "name": "브라우저 창 목업 [3:2/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g07_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:MCK-165",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "브라우저",
+      "웹",
+      "탭바",
+      "주소창",
+      "블루네이비",
+      "3:2"
+    ],
+    "params": {
+      "device": "browser",
+      "screen_ratio": "3:2",
+      "frame_color": "navy_600",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "웹 화면 예시",
+      "시스템 UI 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-166",
+    "category": "MCK",
+    "name": "노트북 목업 [3:2/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g07_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:MCK-166",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "노트북",
+      "랩탑",
+      "블루네이비",
+      "3:2"
+    ],
+    "params": {
+      "device": "laptop",
+      "screen_ratio": "3:2",
+      "frame_color": "navy_600",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "제품 화면 예시",
+      "웹 서비스 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-167",
+    "category": "MCK",
+    "name": "데스크톱 모니터 목업 [16:10/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g07_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:MCK-167",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모니터",
+      "데스크톱",
+      "블루네이비",
+      "16:10"
+    ],
+    "params": {
+      "device": "desktop",
+      "screen_ratio": "16:10",
+      "frame_color": "navy_600",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "관리자 화면",
+      "대시보드 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-168",
+    "category": "MCK",
+    "name": "와이드 모니터 목업 [24:10/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g07_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:MCK-168",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "와이드",
+      "울트라와이드",
+      "모니터",
+      "블루네이비",
+      "24:10"
+    ],
+    "params": {
+      "device": "wide-monitor",
+      "screen_ratio": "24:10",
+      "frame_color": "navy_600",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대형 대시보드",
+      "관제 화면",
+      "가로 산출물"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-169",
+    "category": "MCK",
+    "name": "모바일 폰 목업(세로) [9:20/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g07_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:MCK-169",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모바일",
+      "폰",
+      "세로",
+      "반응형",
+      "블루네이비",
+      "9:20"
+    ],
+    "params": {
+      "device": "mobile",
+      "screen_ratio": "9:20",
+      "frame_color": "navy_600",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "모바일 앱 화면",
+      "반응형 소개",
+      "앱 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-170",
+    "category": "MCK",
+    "name": "모바일 폰 목업(가로) [20:9/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g07_v1.pptx",
+    "slide": 16,
+    "anchor": "asset:MCK-170",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모바일",
+      "폰",
+      "가로",
+      "반응형",
+      "블루네이비",
+      "20:9"
+    ],
+    "params": {
+      "device": "mobile-landscape",
+      "screen_ratio": "20:9",
+      "frame_color": "navy_600",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "가로 모드 화면",
+      "동영상 앱",
+      "게임 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-171",
+    "category": "MCK",
+    "name": "태블릿 목업 [16:10/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g07_v1.pptx",
+    "slide": 17,
+    "anchor": "asset:MCK-171",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "태블릿",
+      "패드",
+      "블루네이비",
+      "16:10"
+    ],
+    "params": {
+      "device": "tablet",
+      "screen_ratio": "16:10",
+      "frame_color": "navy_600",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "태블릿 화면",
+      "산출물 미리보기",
+      "카탈로그"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-172",
+    "category": "MCK",
+    "name": "스마트워치 목업 [6:5/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g07_v1.pptx",
+    "slide": 18,
+    "anchor": "asset:MCK-172",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "스마트워치",
+      "웨어러블",
+      "블루네이비",
+      "6:5"
+    ],
+    "params": {
+      "device": "smartwatch",
+      "screen_ratio": "6:5",
+      "frame_color": "navy_600",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "워치 앱 화면",
+      "알림 UI",
+      "헬스 지표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-173",
+    "category": "MCK",
+    "name": "대시보드 카드 목업 [sidebar/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g07_v1.pptx",
+    "slide": 19,
+    "anchor": "asset:MCK-173",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "대시보드",
+      "위젯",
+      "카드",
+      "KPI",
+      "블루네이비",
+      "16:9"
+    ],
+    "params": {
+      "device": "dashboard",
+      "screen_ratio": "16:9",
+      "frame_color": "navy_600",
+      "composition": "sidebar"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대시보드 소개",
+      "KPI·차트 배치",
+      "관리 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-174",
+    "category": "MCK",
+    "name": "멀티 윈도우 목업 [cascade/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g07_v1.pptx",
+    "slide": 20,
+    "anchor": "asset:MCK-174",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "멀티윈도우",
+      "창겹침",
+      "비교",
+      "블루네이비",
+      "16:9"
+    ],
+    "params": {
+      "device": "multi-window",
+      "screen_ratio": "16:9",
+      "frame_color": "navy_600",
+      "composition": "cascade"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "다중 화면 비교",
+      "워크플로우 소개",
+      "전후 비교"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-175",
+    "category": "MCK",
+    "name": "지도·맵 뷰 목업 [3:2/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g07_v1.pptx",
+    "slide": 21,
+    "anchor": "asset:MCK-175",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "지도",
+      "맵",
+      "핀",
+      "위치",
+      "블루네이비",
+      "3:2"
+    ],
+    "params": {
+      "device": "map",
+      "screen_ratio": "3:2",
+      "frame_color": "navy_600",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "지도 화면",
+      "위치 기반 서비스",
+      "권역 소개"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-176",
+    "category": "MCK",
+    "name": "폴더·파일 뷰 목업 [tiles/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g07_v1.pptx",
+    "slide": 22,
+    "anchor": "asset:MCK-176",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "폴더",
+      "파일",
+      "탐색기",
+      "산출물",
+      "블루네이비",
+      "16:9"
+    ],
+    "params": {
+      "device": "folder",
+      "screen_ratio": "16:9",
+      "frame_color": "navy_600",
+      "composition": "tiles"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "산출물 목록",
+      "파일 구조 소개",
+      "자료 배치"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-177",
+    "category": "MCK",
+    "name": "프레젠테이션 화면 목업 [16:10/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g07_v1.pptx",
+    "slide": 23,
+    "anchor": "asset:MCK-177",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "프레젠테이션",
+      "발표",
+      "스크린",
+      "블루네이비",
+      "16:10"
+    ],
+    "params": {
+      "device": "presentation",
+      "screen_ratio": "16:10",
+      "frame_color": "navy_600",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "발표 슬라이드",
+      "산출물 미리보기",
+      "화면 예시"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-178",
+    "category": "MCK",
+    "name": "키오스크 목업 [9:18/블루네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g07_v1.pptx",
+    "slide": 24,
+    "anchor": "asset:MCK-178",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "키오스크",
+      "터치",
+      "세로",
+      "무인기기",
+      "블루네이비",
+      "9:18"
+    ],
+    "params": {
+      "device": "kiosk",
+      "screen_ratio": "9:18",
+      "frame_color": "navy_600",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "키오스크 UI",
+      "무인 안내",
+      "터치 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-179",
+    "category": "MCK",
+    "name": "브라우저 창 목업 [16:10/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g08_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:MCK-179",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "브라우저",
+      "웹",
+      "탭바",
+      "주소창",
+      "다크그레이",
+      "16:10"
+    ],
+    "params": {
+      "device": "browser",
+      "screen_ratio": "16:10",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "웹 화면 예시",
+      "시스템 UI 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-180",
+    "category": "MCK",
+    "name": "노트북 목업 [4:3/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g08_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:MCK-180",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "노트북",
+      "랩탑",
+      "다크그레이",
+      "4:3"
+    ],
+    "params": {
+      "device": "laptop",
+      "screen_ratio": "4:3",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "제품 화면 예시",
+      "웹 서비스 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-181",
+    "category": "MCK",
+    "name": "데스크톱 모니터 목업 [5:4/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g08_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:MCK-181",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모니터",
+      "데스크톱",
+      "다크그레이",
+      "5:4"
+    ],
+    "params": {
+      "device": "desktop",
+      "screen_ratio": "5:4",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "관리자 화면",
+      "대시보드 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-182",
+    "category": "MCK",
+    "name": "와이드 모니터 목업 [21:10/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g08_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:MCK-182",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "와이드",
+      "울트라와이드",
+      "모니터",
+      "다크그레이",
+      "21:10"
+    ],
+    "params": {
+      "device": "wide-monitor",
+      "screen_ratio": "21:10",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대형 대시보드",
+      "관제 화면",
+      "가로 산출물"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-183",
+    "category": "MCK",
+    "name": "모바일 폰 목업(세로) [9:16/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g08_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:MCK-183",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모바일",
+      "폰",
+      "세로",
+      "반응형",
+      "다크그레이",
+      "9:16"
+    ],
+    "params": {
+      "device": "mobile",
+      "screen_ratio": "9:16",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "모바일 앱 화면",
+      "반응형 소개",
+      "앱 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-184",
+    "category": "MCK",
+    "name": "모바일 폰 목업(가로) [4:3/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g08_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:MCK-184",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모바일",
+      "폰",
+      "가로",
+      "반응형",
+      "다크그레이",
+      "4:3"
+    ],
+    "params": {
+      "device": "mobile-landscape",
+      "screen_ratio": "4:3",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "가로 모드 화면",
+      "동영상 앱",
+      "게임 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-185",
+    "category": "MCK",
+    "name": "태블릿 목업 [10:16/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g08_v1.pptx",
+    "slide": 7,
+    "anchor": "asset:MCK-185",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "태블릿",
+      "패드",
+      "다크그레이",
+      "10:16"
+    ],
+    "params": {
+      "device": "tablet",
+      "screen_ratio": "10:16",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "태블릿 화면",
+      "산출물 미리보기",
+      "카탈로그"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-186",
+    "category": "MCK",
+    "name": "스마트워치 목업 [4:5/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g08_v1.pptx",
+    "slide": 8,
+    "anchor": "asset:MCK-186",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "스마트워치",
+      "웨어러블",
+      "다크그레이",
+      "4:5"
+    ],
+    "params": {
+      "device": "smartwatch",
+      "screen_ratio": "4:5",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "워치 앱 화면",
+      "알림 UI",
+      "헬스 지표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-187",
+    "category": "MCK",
+    "name": "대시보드 카드 목업 [kanban/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g08_v1.pptx",
+    "slide": 9,
+    "anchor": "asset:MCK-187",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "대시보드",
+      "위젯",
+      "카드",
+      "KPI",
+      "다크그레이",
+      "16:9"
+    ],
+    "params": {
+      "device": "dashboard",
+      "screen_ratio": "16:9",
+      "frame_color": "gray_700",
+      "composition": "kanban"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대시보드 소개",
+      "KPI·차트 배치",
+      "관리 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-188",
+    "category": "MCK",
+    "name": "멀티 윈도우 목업 [split/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g08_v1.pptx",
+    "slide": 10,
+    "anchor": "asset:MCK-188",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "멀티윈도우",
+      "창겹침",
+      "비교",
+      "다크그레이",
+      "16:9"
+    ],
+    "params": {
+      "device": "multi-window",
+      "screen_ratio": "16:9",
+      "frame_color": "gray_700",
+      "composition": "split"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "다중 화면 비교",
+      "워크플로우 소개",
+      "전후 비교"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-189",
+    "category": "MCK",
+    "name": "지도·맵 뷰 목업 [9:12/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g08_v1.pptx",
+    "slide": 11,
+    "anchor": "asset:MCK-189",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "지도",
+      "맵",
+      "핀",
+      "위치",
+      "다크그레이",
+      "9:12"
+    ],
+    "params": {
+      "device": "map",
+      "screen_ratio": "9:12",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "지도 화면",
+      "위치 기반 서비스",
+      "권역 소개"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-190",
+    "category": "MCK",
+    "name": "폴더·파일 뷰 목업 [columns/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g08_v1.pptx",
+    "slide": 12,
+    "anchor": "asset:MCK-190",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "폴더",
+      "파일",
+      "탐색기",
+      "산출물",
+      "다크그레이",
+      "16:9"
+    ],
+    "params": {
+      "device": "folder",
+      "screen_ratio": "16:9",
+      "frame_color": "gray_700",
+      "composition": "columns"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "산출물 목록",
+      "파일 구조 소개",
+      "자료 배치"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-191",
+    "category": "MCK",
+    "name": "프레젠테이션 화면 목업 [3:2/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g08_v1.pptx",
+    "slide": 13,
+    "anchor": "asset:MCK-191",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "프레젠테이션",
+      "발표",
+      "스크린",
+      "다크그레이",
+      "3:2"
+    ],
+    "params": {
+      "device": "presentation",
+      "screen_ratio": "3:2",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "발표 슬라이드",
+      "산출물 미리보기",
+      "화면 예시"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-192",
+    "category": "MCK",
+    "name": "키오스크 목업 [3:4/다크그레이]",
+    "file": "decks/12_mockups/MCK_bulk_g08_v1.pptx",
+    "slide": 14,
+    "anchor": "asset:MCK-192",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "키오스크",
+      "터치",
+      "세로",
+      "무인기기",
+      "다크그레이",
+      "3:4"
+    ],
+    "params": {
+      "device": "kiosk",
+      "screen_ratio": "3:4",
+      "frame_color": "gray_700",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "키오스크 UI",
+      "무인 안내",
+      "터치 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-193",
+    "category": "MCK",
+    "name": "브라우저 창 목업 [16:10/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g08_v1.pptx",
+    "slide": 15,
+    "anchor": "asset:MCK-193",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "브라우저",
+      "웹",
+      "탭바",
+      "주소창",
+      "네이비",
+      "16:10"
+    ],
+    "params": {
+      "device": "browser",
+      "screen_ratio": "16:10",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "웹 화면 예시",
+      "시스템 UI 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-194",
+    "category": "MCK",
+    "name": "노트북 목업 [4:3/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g08_v1.pptx",
+    "slide": 16,
+    "anchor": "asset:MCK-194",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "노트북",
+      "랩탑",
+      "네이비",
+      "4:3"
+    ],
+    "params": {
+      "device": "laptop",
+      "screen_ratio": "4:3",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "제품 화면 예시",
+      "웹 서비스 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-195",
+    "category": "MCK",
+    "name": "데스크톱 모니터 목업 [5:4/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g08_v1.pptx",
+    "slide": 17,
+    "anchor": "asset:MCK-195",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모니터",
+      "데스크톱",
+      "네이비",
+      "5:4"
+    ],
+    "params": {
+      "device": "desktop",
+      "screen_ratio": "5:4",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "관리자 화면",
+      "대시보드 소개",
+      "산출물 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-196",
+    "category": "MCK",
+    "name": "와이드 모니터 목업 [21:10/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g08_v1.pptx",
+    "slide": 18,
+    "anchor": "asset:MCK-196",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "와이드",
+      "울트라와이드",
+      "모니터",
+      "네이비",
+      "21:10"
+    ],
+    "params": {
+      "device": "wide-monitor",
+      "screen_ratio": "21:10",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대형 대시보드",
+      "관제 화면",
+      "가로 산출물"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-197",
+    "category": "MCK",
+    "name": "모바일 폰 목업(세로) [9:16/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g08_v1.pptx",
+    "slide": 19,
+    "anchor": "asset:MCK-197",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모바일",
+      "폰",
+      "세로",
+      "반응형",
+      "네이비",
+      "9:16"
+    ],
+    "params": {
+      "device": "mobile",
+      "screen_ratio": "9:16",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "모바일 앱 화면",
+      "반응형 소개",
+      "앱 미리보기"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-198",
+    "category": "MCK",
+    "name": "모바일 폰 목업(가로) [4:3/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g08_v1.pptx",
+    "slide": 20,
+    "anchor": "asset:MCK-198",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "모바일",
+      "폰",
+      "가로",
+      "반응형",
+      "네이비",
+      "4:3"
+    ],
+    "params": {
+      "device": "mobile-landscape",
+      "screen_ratio": "4:3",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "가로 모드 화면",
+      "동영상 앱",
+      "게임 화면"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-199",
+    "category": "MCK",
+    "name": "태블릿 목업 [10:16/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g08_v1.pptx",
+    "slide": 21,
+    "anchor": "asset:MCK-199",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "태블릿",
+      "패드",
+      "네이비",
+      "10:16"
+    ],
+    "params": {
+      "device": "tablet",
+      "screen_ratio": "10:16",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "태블릿 화면",
+      "산출물 미리보기",
+      "카탈로그"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "MCK-200",
+    "category": "MCK",
+    "name": "스마트워치 목업 [4:5/네이비]",
+    "file": "decks/12_mockups/MCK_bulk_g08_v1.pptx",
+    "slide": 22,
+    "anchor": "asset:MCK-200",
+    "tags": [
+      "목업",
+      "화면삽입",
+      "프레임",
+      "디바이스",
+      "스마트워치",
+      "웨어러블",
+      "네이비",
+      "4:5"
+    ],
+    "params": {
+      "device": "smartwatch",
+      "screen_ratio": "4:5",
+      "frame_color": "navy_800",
+      "composition": "default"
+    },
+    "bindings": {
+      "screen": "이미지 자리",
+      "caption": "화면 스크린샷 삽입"
+    },
+    "editable": [
+      "screen-image",
+      "frame-color",
+      "caption"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "워치 앱 화면",
+      "알림 UI",
+      "헬스 지표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  }
+]

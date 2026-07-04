@@ -1,0 +1,391 @@
+[
+  {
+    "id": "TBL-013",
+    "category": "TBL",
+    "name": "재무 손익 요약표 (소계·합계행 강조)",
+    "file": "decks/01_tables/TBL_finance_v2.pptx",
+    "slide": 1,
+    "anchor": "asset:TBL-013",
+    "tags": [
+      "table",
+      "finance",
+      "subtotal",
+      "total",
+      "재무",
+      "합계표"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 8
+    },
+    "bindings": [
+      "구분",
+      "연도값",
+      "증감률"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "손익요약",
+      "재무보고",
+      "연도별 실적"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-015",
+    "category": "TBL",
+    "name": "고밀도 컴팩트표 (8열 소폰트)",
+    "file": "decks/01_tables/TBL_finance_v2.pptx",
+    "slide": 2,
+    "anchor": "asset:TBL-015",
+    "tags": [
+      "table",
+      "compact",
+      "dense",
+      "고밀도",
+      "다열"
+    ],
+    "params": {
+      "cols": 8,
+      "rows": 8,
+      "font_pt": 9
+    },
+    "bindings": [
+      "지표",
+      "분기값",
+      "달성률"
+    ],
+    "editable": [
+      "header",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "KPI 상세",
+      "분기실적",
+      "다지표 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-016",
+    "category": "TBL",
+    "name": "셀내 KPI 표 (값+증감칩)",
+    "file": "decks/01_tables/TBL_finance_v2.pptx",
+    "slide": 3,
+    "anchor": "asset:TBL-016",
+    "tags": [
+      "table",
+      "kpi",
+      "chip",
+      "delta",
+      "증감칩",
+      "결합형"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 5,
+      "combined": true
+    },
+    "bindings": [
+      "지표",
+      "값",
+      "증감칩"
+    ],
+    "editable": [
+      "header",
+      "kpi_value",
+      "delta_chip"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "KPI 대시보드",
+      "성과요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-019",
+    "category": "TBL",
+    "name": "예산집행표 (예산·집행·잔액·합계강조)",
+    "file": "decks/01_tables/TBL_finance_v2.pptx",
+    "slide": 4,
+    "anchor": "asset:TBL-019",
+    "tags": [
+      "table",
+      "budget",
+      "execution",
+      "예산",
+      "집행",
+      "합계"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 6
+    },
+    "bindings": [
+      "항목",
+      "금액",
+      "집행률"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "amount",
+      "total_row"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "예산집행",
+      "사업비 현황"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-022",
+    "category": "TBL",
+    "name": "우측정렬 수치표 (재무·음수적색)",
+    "file": "decks/01_tables/TBL_finance_v2.pptx",
+    "slide": 5,
+    "anchor": "asset:TBL-022",
+    "tags": [
+      "table",
+      "numeric",
+      "right-align",
+      "finance",
+      "재무정렬"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 6,
+      "align": "right"
+    },
+    "bindings": [
+      "계정",
+      "수치",
+      "증감"
+    ],
+    "editable": [
+      "header",
+      "account",
+      "figure"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "재무상태표",
+      "회계 요약",
+      "수치정렬"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-014",
+    "category": "TBL",
+    "name": "보더리스 미니멀표 (헤더 밑줄만)",
+    "file": "decks/01_tables/TBL_layout_v2.pptx",
+    "slide": 1,
+    "anchor": "asset:TBL-014",
+    "tags": [
+      "table",
+      "borderless",
+      "minimal",
+      "미니멀",
+      "밑줄"
+    ],
+    "params": {
+      "cols": 3,
+      "rows": 5,
+      "borderless": true
+    },
+    "bindings": [
+      "구분",
+      "내용",
+      "담당"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "content"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "사업개요",
+      "깔끔한 요약",
+      "본문 삽입표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-017",
+    "category": "TBL",
+    "name": "상태표 (신호등 색 셀)",
+    "file": "decks/01_tables/TBL_layout_v2.pptx",
+    "slide": 2,
+    "anchor": "asset:TBL-017",
+    "tags": [
+      "table",
+      "status",
+      "traffic-light",
+      "상태",
+      "신호등"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 6
+    },
+    "bindings": [
+      "항목",
+      "상태",
+      "담당"
+    ],
+    "editable": [
+      "header",
+      "item",
+      "status_cell"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "진행상태",
+      "과업점검",
+      "RAG 상태"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-018",
+    "category": "TBL",
+    "name": "추진일정표 (단계·활동·산출물)",
+    "file": "decks/01_tables/TBL_layout_v2.pptx",
+    "slide": 3,
+    "anchor": "asset:TBL-018",
+    "tags": [
+      "table",
+      "schedule",
+      "phase",
+      "추진일정",
+      "산출물"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 5
+    },
+    "bindings": [
+      "단계",
+      "활동",
+      "산출물",
+      "일정"
+    ],
+    "editable": [
+      "header",
+      "phase",
+      "activity",
+      "deliverable"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진일정",
+      "단계별 계획",
+      "WBS 요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-020",
+    "category": "TBL",
+    "name": "체크리스트표 (✓ 도형)",
+    "file": "decks/01_tables/TBL_layout_v2.pptx",
+    "slide": 4,
+    "anchor": "asset:TBL-020",
+    "tags": [
+      "table",
+      "checklist",
+      "check",
+      "체크리스트",
+      "결합형"
+    ],
+    "params": {
+      "cols": 3,
+      "rows": 5,
+      "combined": true
+    },
+    "bindings": [
+      "점검항목",
+      "체크",
+      "상태"
+    ],
+    "editable": [
+      "header",
+      "check_shape",
+      "item",
+      "status"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "점검표",
+      "오픈 체크리스트",
+      "완료여부"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "TBL-021",
+    "category": "TBL",
+    "name": "2톤 카드형 표 (행=카드)",
+    "file": "decks/01_tables/TBL_layout_v2.pptx",
+    "slide": 5,
+    "anchor": "asset:TBL-021",
+    "tags": [
+      "table",
+      "card",
+      "two-tone",
+      "카드형",
+      "도형결합"
+    ],
+    "params": {
+      "rows": 4,
+      "shape_based": true
+    },
+    "bindings": [
+      "라벨",
+      "값",
+      "상세"
+    ],
+    "editable": [
+      "label_panel",
+      "metric",
+      "detail"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "성과 하이라이트",
+      "카드형 요약",
+      "강조 표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  }
+]

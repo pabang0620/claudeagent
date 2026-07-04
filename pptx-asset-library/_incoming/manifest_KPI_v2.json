@@ -1,0 +1,470 @@
+[
+  {
+    "id": "KPI-011",
+    "category": "KPI",
+    "name": "링 프로그레스 세트 3종",
+    "file": "decks/02_kpi/KPI_gauge_v2.pptx",
+    "slide": 1,
+    "anchor": "asset:KPI-011",
+    "tags": [
+      "KPI",
+      "성과지표",
+      "링",
+      "프로그레스",
+      "도넛",
+      "비율강조"
+    ],
+    "params": {
+      "rings": 3,
+      "style": "ring-progress",
+      "shape": "native-pie",
+      "num_size": 30
+    },
+    "bindings": {
+      "cards": [
+        {
+          "value": "95",
+          "unit": "%",
+          "label": "목표 달성률"
+        },
+        {
+          "value": "82",
+          "unit": "%",
+          "label": "고객 만족도"
+        },
+        {
+          "value": "68",
+          "unit": "%",
+          "label": "수출 전환율"
+        }
+      ],
+      "count": 3
+    },
+    "editable": [
+      "value",
+      "label",
+      "ring-color",
+      "pct"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "달성률",
+      "목표대비",
+      "진행률"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "KPI-015",
+    "category": "KPI",
+    "name": "배지형 지표 4종",
+    "file": "decks/02_kpi/KPI_gauge_v2.pptx",
+    "slide": 2,
+    "anchor": "asset:KPI-015",
+    "tags": [
+      "KPI",
+      "성과지표",
+      "배지",
+      "원형",
+      "핵심수치"
+    ],
+    "params": {
+      "badges": 4,
+      "style": "circle-badge",
+      "num_size": 30
+    },
+    "bindings": {
+      "cards": [
+        {
+          "value": "98%",
+          "label": "정시 납품률"
+        },
+        {
+          "value": "4.8",
+          "label": "이용자 만족도"
+        },
+        {
+          "value": "120",
+          "label": "협력 기업수"
+        },
+        {
+          "value": "32",
+          "label": "수출 대상국"
+        }
+      ],
+      "count": 4
+    },
+    "editable": [
+      "value",
+      "label",
+      "badge-color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심지표",
+      "실적강조",
+      "한눈요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "KPI-016",
+    "category": "KPI",
+    "name": "반원 게이지 3종",
+    "file": "decks/02_kpi/KPI_gauge_v2.pptx",
+    "slide": 3,
+    "anchor": "asset:KPI-016",
+    "tags": [
+      "KPI",
+      "성과지표",
+      "게이지",
+      "반원",
+      "semicircle",
+      "달성률"
+    ],
+    "params": {
+      "gauges": 3,
+      "style": "semicircle-gauge",
+      "shape": "native-pie",
+      "num_size": 28
+    },
+    "bindings": {
+      "cards": [
+        {
+          "value": "88",
+          "unit": "%",
+          "label": "예산 집행률"
+        },
+        {
+          "value": "73",
+          "unit": "%",
+          "label": "사업 목표 달성"
+        },
+        {
+          "value": "95",
+          "unit": "%",
+          "label": "시스템 가동률"
+        }
+      ],
+      "count": 3
+    },
+    "editable": [
+      "value",
+      "label",
+      "gauge-color",
+      "pct"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "달성률",
+      "목표대비",
+      "가동률"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "KPI-017",
+    "category": "KPI",
+    "name": "비교 KPI 전년vs올해 3종",
+    "file": "decks/02_kpi/KPI_gauge_v2.pptx",
+    "slide": 4,
+    "anchor": "asset:KPI-017",
+    "tags": [
+      "KPI",
+      "성과지표",
+      "비교",
+      "전년대비",
+      "2숫자대비"
+    ],
+    "params": {
+      "cards": 3,
+      "style": "compare-prev-cur",
+      "num_size": 34
+    },
+    "bindings": {
+      "cards": [
+        {
+          "value": "42",
+          "unit": "만$",
+          "label": "수출상담액",
+          "prev": "33"
+        },
+        {
+          "value": "40",
+          "unit": "개사",
+          "label": "참여기업",
+          "prev": "28"
+        },
+        {
+          "value": "4.6",
+          "unit": "점",
+          "label": "이용자 만족도",
+          "prev": "4.2"
+        }
+      ],
+      "count": 3
+    },
+    "editable": [
+      "value",
+      "prev",
+      "unit",
+      "label",
+      "accent-color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "증감비교",
+      "전년대비",
+      "성과대비"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "KPI-012",
+    "category": "KPI",
+    "name": "아이콘+지표 가로 스트립 4행",
+    "file": "decks/02_kpi/KPI_cards_v2.pptx",
+    "slide": 1,
+    "anchor": "asset:KPI-012",
+    "tags": [
+      "KPI",
+      "성과지표",
+      "가로스트립",
+      "아이콘",
+      "4행",
+      "리스트"
+    ],
+    "params": {
+      "rows": 4,
+      "style": "icon-strip",
+      "icon_placeholder": true,
+      "num_size": 28
+    },
+    "bindings": {
+      "cards": [
+        {
+          "value": "1,000",
+          "unit": "건",
+          "label": "검증완료 기업정보"
+        },
+        {
+          "value": "40",
+          "unit": "개사",
+          "label": "참여기업"
+        },
+        {
+          "value": "42",
+          "unit": "만$",
+          "label": "수출상담액"
+        },
+        {
+          "value": "4.6",
+          "unit": "점",
+          "label": "이용자 만족도"
+        }
+      ],
+      "count": 4
+    },
+    "editable": [
+      "value",
+      "unit",
+      "label",
+      "icon",
+      "icon-color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "성과목표",
+      "실적강조",
+      "서비스지표"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "KPI-013",
+    "category": "KPI",
+    "name": "큰숫자 좌·라벨 우 카드 3행",
+    "file": "decks/02_kpi/KPI_cards_v2.pptx",
+    "slide": 2,
+    "anchor": "asset:KPI-013",
+    "tags": [
+      "KPI",
+      "성과지표",
+      "빅넘버",
+      "라벨우측",
+      "가로카드"
+    ],
+    "params": {
+      "rows": 3,
+      "style": "bignum-left-label-right",
+      "num_size": 40
+    },
+    "bindings": {
+      "cards": [
+        {
+          "value": "1,000",
+          "unit": "건",
+          "label": "검증완료 기업정보 DB 구축"
+        },
+        {
+          "value": "42",
+          "unit": "만$",
+          "label": "누적 수출상담 성사액"
+        },
+        {
+          "value": "95",
+          "unit": "%",
+          "label": "연간 목표 대비 달성률"
+        }
+      ],
+      "count": 3
+    },
+    "editable": [
+      "value",
+      "unit",
+      "label",
+      "accent-color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "대표성과",
+      "핵심지표",
+      "실적강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "KPI-014",
+    "category": "KPI",
+    "name": "트렌드 카드 3종 (미니막대)",
+    "file": "decks/02_kpi/KPI_cards_v2.pptx",
+    "slide": 3,
+    "anchor": "asset:KPI-014",
+    "tags": [
+      "KPI",
+      "성과지표",
+      "트렌드",
+      "스파크라인",
+      "미니막대",
+      "증감"
+    ],
+    "params": {
+      "cards": 3,
+      "style": "trend-sparkbar",
+      "bars": 5,
+      "num_size": 36
+    },
+    "bindings": {
+      "cards": [
+        {
+          "value": "1,000",
+          "unit": "건",
+          "label": "기업정보",
+          "delta": "+18%"
+        },
+        {
+          "value": "42",
+          "unit": "만$",
+          "label": "수출상담액",
+          "delta": "+27%"
+        },
+        {
+          "value": "4.6",
+          "unit": "점",
+          "label": "이용자 만족도",
+          "delta": "+5%"
+        }
+      ],
+      "count": 3
+    },
+    "editable": [
+      "value",
+      "unit",
+      "label",
+      "delta",
+      "trend-color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "성과추이",
+      "증감비교",
+      "성장강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  },
+  {
+    "id": "KPI-018",
+    "category": "KPI",
+    "name": "통계 밴드 가로띠 4지표",
+    "file": "decks/02_kpi/KPI_cards_v2.pptx",
+    "slide": 4,
+    "anchor": "asset:KPI-018",
+    "tags": [
+      "KPI",
+      "성과지표",
+      "통계밴드",
+      "가로띠",
+      "4지표",
+      "구분선"
+    ],
+    "params": {
+      "segments": 4,
+      "style": "stat-band",
+      "num_size": 34
+    },
+    "bindings": {
+      "cards": [
+        {
+          "value": "1,000",
+          "unit": "건",
+          "label": "검증 기업정보"
+        },
+        {
+          "value": "40",
+          "unit": "개사",
+          "label": "참여기업"
+        },
+        {
+          "value": "42",
+          "unit": "만$",
+          "label": "수출상담액"
+        },
+        {
+          "value": "4.6",
+          "unit": "점",
+          "label": "이용자 만족도"
+        }
+      ],
+      "count": 4
+    },
+    "editable": [
+      "value",
+      "unit",
+      "label",
+      "band-color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "종합성과",
+      "핵심지표",
+      "한눈요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null
+  }
+]
