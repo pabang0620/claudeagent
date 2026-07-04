@@ -102,9 +102,19 @@ def id_caption(slide, asset_id):
     add_text(slide, 0.15, 0.08, 4.0, 0.3, asset_id, size=9, bold=True,
              color=C["gray_500"], align=PP_ALIGN.LEFT)
 
+def _normalize_table_styles(prs):
+    """표스타일 GUID를 tableStyles.xml에 실존하는 No-Style로 통일.
+    python-pptx 기본 표스타일 GUID는 tableStyles.xml에 정의가 없어, 한컴독스 등
+    엄격한 렌더러가 상속 해석 중 크래시한다(우리 표는 수동 테두리라 스타일 불필요)."""
+    for slide in prs.slides:
+        for sid in slide.shapes._spTree.iter(qn("a:tableStyleId")):
+            sid.text = "{5C22544A-7EE6-4342-B048-85BDC9FD1C3A}"
+
+
 def save_deck(prs, rel_path):
     out = os.path.join(ROOT, rel_path)
     os.makedirs(os.path.dirname(out), exist_ok=True)
+    _normalize_table_styles(prs)
     prs.save(out)
     return out
 
@@ -139,7 +149,16 @@ def group_asset(slide, shapes, asset_id):
     """여러 도형을 asset:<ID> 이름의 <p:grpSp>(그룹)로 묶는다.
     조합 파이프라인(pptx-automizer addElement)이 에셋당 1콜로 통째 복사하게 하는 핵심.
     chOff/chExt를 off/ext와 동일하게 둬서 자식 좌표를 1:1 유지(이동/스케일 없음).
-    id_caption 등 라이브러리 라벨은 shapes에 포함하지 말 것."""
+    id_caption 등 라이브러리 라벨은 shapes에 포함하지 말 것.
+
+    ※ 표/차트(graphicFrame)가 shapes에 있으면 그룹으로 묶지 않는다 — 한컴독스 등 엄격
+      렌더러가 그룹 내 표스타일 상속을 해석하다 크래시하기 때문. 이 경우 graphicFrame을
+      앵커로 삼고 나머지 도형은 top-level로 둔다."""
+    gf = next((s for s in shapes
+               if getattr(s, "has_table", False) or getattr(s, "has_chart", False)), None)
+    if gf is not None:
+        gf.name = "asset:%s" % asset_id
+        return gf._element
     from lxml import etree
     spTree = slide.shapes._spTree
     xs=[s.left for s in shapes]; ys=[s.top for s in shapes]
