@@ -9,7 +9,7 @@ description: >
   Searches the codebase, researches industry cases, and analyzes from user, business,
   and technical perspectives. Always use before committing to new feature development.
 context: fork
-model: opus
+model: sonnet
 allowed-tools:
   - WebSearch
   - Read

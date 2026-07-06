@@ -7,7 +7,7 @@ description: >
   Prioritizes direct handling and skill references over expensive agent calls.
   Always suggests the cheapest effective option first.
 context: fork
-model: haiku
+model: sonnet
 allowed-tools:
   - Read
   - Grep
