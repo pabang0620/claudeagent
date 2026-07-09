@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>무채색 보고서 템플릿</title>
+<!--
+  ┌─────────────────────────────────────────────────────────────────────┐
+  │  무채색(그레이스케일) 보고서 템플릿  ·  report-monochrome.html          │
+  ├─────────────────────────────────────────────────────────────────────┤
+  │  용도 : 시장조사·리서치·현황보고 등 "수치+출처" 중심 정적 보고서.        │
+  │  특징 : 회색조 + 얇은 괘선 + 세리프 제목 + 모노 라벨/숫자(관공서 톤),     │
+  │         라이트/다크 테마 자동 대응, 그레이스케일 랭킹 미터, 인라인 출처.  │
+  │                                                                        │
+  │  재사용 방법                                                            │
+  │   1) 아래 4개 블록(마스트헤드 / 랭킹 / 카드 / 표)을 필요에 맞게 채운다.   │
+  │   2) 색은 :root 토큰만 바꾸면 전체가 따라온다(개별 색상 직접 지정 금지).  │
+  │   3) 모든 수치에는 출처 링크를 인라인으로 붙인다(.srcline / 표 근거열).   │
+  │   4) 미검증·추정치는 <span style="opacity:.6">(민간추정)</span> 식 표기. │
+  │                                                                        │
+  │  Artifact로 발행 시 : <!doctype>·<html>·<head> 제거하고 <style>부터 body │
+  │         내용만 남긴다(발행 시 스켈레톤이 자동 감싸짐).                    │
+  │  치환 토큰 : {{TITLE}} {{SUBTITLE}} {{EYEBROW}} {{DATE}} {{BASIS}} 등.    │
+  └─────────────────────────────────────────────────────────────────────┘
+-->
+<style>
+  :root{
+    --paper:#ffffff; --paper-2:#f6f6f5; --ink:#191a1c; --ink-2:#4a4d52;
+    --ink-3:#767a80; --line:#d9d9d6; --line-2:#e9e9e6;
+    --bar-1:#26282b; --bar-2:#6f7378; --bar-3:#b6b8b6;
+    --chip:#f0f0ee; --link:#191a1c; --star:#0f1011;
+    --serif:ui-serif,Georgia,"Times New Roman",serif;
+    --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;
+    --mono:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --paper:#141517; --paper-2:#1b1c1f; --ink:#ececea; --ink-2:#b4b6b9;
+      --ink-3:#83868b; --line:#33353a; --line-2:#26282b;
+      --bar-1:#e6e7e5; --bar-2:#8b8f95; --bar-3:#4c4f54;
+      --chip:#232427; --link:#ececea; --star:#f2f2f0;
+    }
+  }
+  :root[data-theme="light"]{
+    --paper:#ffffff; --paper-2:#f6f6f5; --ink:#191a1c; --ink-2:#4a4d52;
+    --ink-3:#767a80; --line:#d9d9d6; --line-2:#e9e9e6;
+    --bar-1:#26282b; --bar-2:#6f7378; --bar-3:#b6b8b6;
+    --chip:#f0f0ee; --link:#191a1c; --star:#0f1011;
+  }
+  :root[data-theme="dark"]{
+    --paper:#141517; --paper-2:#1b1c1f; --ink:#ececea; --ink-2:#b4b6b9;
+    --ink-3:#83868b; --line:#33353a; --line-2:#26282b;
+    --bar-1:#e6e7e5; --bar-2:#8b8f95; --bar-3:#4c4f54;
+    --chip:#232427; --link:#ececea; --star:#f2f2f0;
+  }
+
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+    line-height:1.6;-webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums}
+  .wrap{max-width:860px;margin:0 auto;padding:clamp(28px,5vw,64px) clamp(18px,4vw,40px)}
+
+  /* Masthead */
+  .mast{border-top:3px solid var(--ink);padding-top:20px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ink-3);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(30px,6vw,46px);line-height:1.1;
+    letter-spacing:-.01em;margin:14px 0 6px;text-wrap:balance}
+  .sub{font-size:clamp(16px,2.6vw,19px);color:var(--ink-2);margin:0}
+  .basis{margin-top:16px;padding:10px 14px;background:var(--paper-2);border:1px solid var(--line-2);
+    font-size:13px;color:var(--ink-2)}
+  .basis b{color:var(--ink)}
+
+  section{margin-top:52px}
+  .sec-head{display:flex;align-items:baseline;gap:12px;border-bottom:1px solid var(--ink);
+    padding-bottom:8px;margin-bottom:22px}
+  .sec-no{font-family:var(--mono);font-size:13px;color:var(--ink-3)}
+  h2{font-family:var(--serif);font-weight:600;font-size:clamp(20px,3.4vw,25px);margin:0;letter-spacing:-.01em}
+
+  /* Ranking rows (그레이스케일 미터) */
+  .grow{display:grid;grid-template-columns:110px 1fr;gap:14px;align-items:center;
+    padding:14px 0;border-bottom:1px solid var(--line-2)}
+  .grow:last-child{border-bottom:none}
+  .gname{font-weight:650;font-size:15px}
+  .ranks{display:flex;flex-direction:column;gap:7px}
+  .rk{display:grid;grid-template-columns:16px 92px 1fr 52px;gap:9px;align-items:center;font-size:13px}
+  .rk .pos{font-family:var(--mono);color:var(--ink-3)}
+  .rk .reg{color:var(--ink-2)}
+  .meter{height:9px;background:var(--line-2);border-radius:1px;overflow:hidden}
+  .meter i{display:block;height:100%}
+  .r1 .meter i{background:var(--bar-1)} .r2 .meter i{background:var(--bar-2)} .r3 .meter i{background:var(--bar-3)}
+  .rk .pct{text-align:right;font-family:var(--mono);color:var(--ink)}
+
+  /* Cards (항목별 상세 블록) */
+  .country{padding:22px 0;border-bottom:1px solid var(--line)}
+  .country:last-child{border-bottom:none}
+  .c-top{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .mono-badge{font-family:var(--mono);font-weight:600;font-size:12px;letter-spacing:.08em;
+    border:1.5px solid var(--ink);padding:5px 8px;color:var(--ink)}
+  .c-name{font-family:var(--serif);font-size:22px;font-weight:600}
+  .c-tag{color:var(--ink-2);font-size:15px;margin-left:auto;text-align:right}
+  .c-body{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:16px}
+  @media (max-width:620px){.c-body{grid-template-columns:1fr}}
+  .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--ink-3);margin-bottom:8px}
+  .top3{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+  .top3 li{display:flex;justify-content:space-between;gap:10px;font-size:14px;
+    border-bottom:1px dotted var(--line);padding-bottom:5px}
+  .top3 .amt{font-family:var(--mono);color:var(--ink-2)}
+  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{background:var(--chip);border:1px solid var(--line-2);border-radius:999px;
+    padding:4px 10px;font-size:12.5px;color:var(--ink-2)}
+  .adv{font-size:13.5px;color:var(--ink-2);margin-top:4px}
+  .adv b{color:var(--ink)}
+  .empty{font-style:italic;color:var(--ink-3)}
+  .srcline{grid-column:1 / -1;margin:14px 0 0;padding-top:10px;border-top:1px dotted var(--line);
+    font-size:12px;color:var(--ink-3);font-family:var(--mono);line-height:1.9}
+  .srcline a{text-decoration-color:var(--line)}
+
+  /* Tables (근거열 = 인라인 출처) */
+  .tscroll{overflow-x:auto}
+  table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:520px}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line-2);vertical-align:top}
+  thead th{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--ink-3);border-bottom:1px solid var(--ink)}
+  td .reg-strong{font-weight:650}
+  .star{color:var(--star);font-weight:700}
+  .callout{margin-top:16px;padding:14px 16px;background:var(--paper-2);border:1px solid var(--line-2);
+    font-size:13px;color:var(--ink-2)}
+  .callout b{color:var(--ink)}
+
+  /* Sources / links */
+  a{color:var(--link);text-decoration:underline;text-underline-offset:2px;text-decoration-color:var(--ink-3)}
+  a:hover{text-decoration-color:var(--ink)}
+  a:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+
+  footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);
+    font-size:12px;color:var(--ink-3);font-family:var(--mono)}
+  .note{font-size:12px;color:var(--ink-3);margin-top:10px}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ═══ 1. 마스트헤드 (제목/부제/근거원칙) ═══ -->
+  <header class="mast">
+    <div class="eyebrow"><span>{{EYEBROW · 예: 부서·사업명}}</span><span>{{DATE · 예: 2026 · 07 · 06}}</span></div>
+    <h1>{{TITLE · 보고서 제목}}</h1>
+    <p class="sub">{{SUBTITLE · 한 줄 부제}}</p>
+    <div class="basis"><b>근거 원칙</b> · {{자료 기준·출처 범위·주의사항을 한 문장으로}}</div>
+    <!-- 검증 상태 등 부가 배너가 필요하면 .basis 블록을 하나 더 추가 -->
+  </header>
+
+  <!-- ═══ 2. 랭킹 섹션 (그레이스케일 미터로 1·2·3위 시각화) ═══ -->
+  <!-- 미터 width(%) = 값 / 척도상한 × 100. 1위=r1(진함), 2위=r2, 3위=r3(옅음). -->
+  <section>
+    <div class="sec-head"><span class="sec-no">01</span><h2>{{섹션 제목 · 예: 항목별 순위}}</h2></div>
+    <div class="grow">
+      <div class="gname">{{행 이름}}</div>
+      <div class="ranks">
+        <div class="rk r1"><span class="pos">1</span><span class="reg">{{1위}}</span><span class="meter"><i style="width:67%"></i></span><span class="pct">33.3%</span></div>
+        <div class="rk r2"><span class="pos">2</span><span class="reg">{{2위}}</span><span class="meter"><i style="width:52%"></i></span><span class="pct">26.0%</span></div>
+        <div class="rk r3"><span class="pos">3</span><span class="reg">{{3위}}</span><span class="meter"><i style="width:36%"></i></span><span class="pct">18.2%</span></div>
+      </div>
+    </div>
+    <!-- .grow 블록을 행 수만큼 반복 -->
+    <p class="note">출처: <a href="{{URL}}" target="_blank" rel="noopener">{{출처명}}</a> · {{주석·검증상태}}</p>
+  </section>
+
+  <!-- ═══ 3. 카드 섹션 (항목별 상세: 좌=수치리스트, 우=태그/코멘트, 하단=인라인 출처) ═══ -->
+  <section>
+    <div class="sec-head"><span class="sec-no">02</span><h2>{{섹션 제목 · 예: 대상별 상세}}</h2></div>
+    <div class="country">
+      <div class="c-top">
+        <span class="mono-badge">{{2~3자 코드}}</span><span class="c-name">{{대상명}}</span>
+        <span class="c-tag">{{한 줄 요약 · <b>핵심</b> 강조}}</span>
+      </div>
+      <div class="c-body">
+        <div>
+          <div class="lbl">{{좌측 라벨 · 예: TOP 3}}</div>
+          <ul class="top3">
+            <li><span>1. {{항목}}</span><span class="amt">{{값}}</span></li>
+            <li><span>2. {{항목}}</span><span class="amt">{{값}}</span></li>
+            <li><span>3. {{항목}}</span><span class="amt">{{값}}</span></li>
+          </ul>
+          <p class="adv"><b>{{강조 포인트}}</b> {{설명}}</p>
+        </div>
+        <div>
+          <div class="lbl">{{우측 라벨 · 예: 특징}}</div>
+          <div class="chips"><span class="chip">{{태그1}}</span><span class="chip">{{태그2 <span style="opacity:.6">(추정)</span>}}</span></div>
+          <div class="lbl" style="margin-top:14px">{{보조 라벨}}</div>
+          <p class="adv">{{보조 설명}} <span class="empty">— 없으면 empty 클래스로 흐리게</span></p>
+        </div>
+        <p class="srcline">출처 · <a href="{{URL}}" target="_blank" rel="noopener">{{출처1}}</a> · <a href="{{URL}}" target="_blank" rel="noopener">{{출처2}}</a></p>
+      </div>
+    </div>
+    <!-- .country 카드를 대상 수만큼 반복 -->
+  </section>
+
+  <!-- ═══ 4. 표 섹션 (마지막 열 = 근거/출처 링크) ═══ -->
+  <section>
+    <div class="sec-head"><span class="sec-no">03</span><h2>{{섹션 제목 · 예: 상세 표}}</h2></div>
+    <div class="tscroll">
+      <table>
+        <thead><tr><th>{{열1}}</th><th>{{열2}}</th><th>{{판정/값}}</th><th>근거</th></tr></thead>
+        <tbody>
+          <tr><td>{{v}}</td><td>{{v}}</td><td class="reg-strong">{{값}} <span class="star">★</span></td><td>{{근거}} — <a href="{{URL}}" target="_blank" rel="noopener">{{출처}}</a></td></tr>
+          <tr><td>{{v}}</td><td>{{v}}</td><td>{{값}} <span style="color:var(--ink-3)">(미확인)</span></td><td>{{근거 부족 사유}}</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note"><span class="star">★</span> = {{범례}}. {{요약·주석}}</p>
+    <div class="callout"><b>{{강조 박스 제목}}</b> {{부연 설명·목록}}</div>
+  </section>
+
+  <footer>{{푸터 · 작성주체 · 날짜 · 근거기준 · 세부출처 위치}}</footer>
+
+</div>
+</body>
+</html>

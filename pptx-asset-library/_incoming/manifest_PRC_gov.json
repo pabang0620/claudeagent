@@ -1,0 +1,346 @@
+[
+  {
+    "id": "PRC-201",
+    "category": "PRC",
+    "name": "[gov] 단계 박스+화살표 수평흐름 5단",
+    "file": "decks/03_process/PRC_gov_flow_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:PRC-201",
+    "tags": [
+      "프로세스",
+      "gov",
+      "수평흐름",
+      "박스화살표",
+      "5단계"
+    ],
+    "params": {
+      "count": 5,
+      "style": "box-arrow-horizontal",
+      "canvas": "gov"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "과제 발굴"
+        },
+        {
+          "label": "현황 조사"
+        },
+        {
+          "label": "계획 수립"
+        },
+        {
+          "label": "사업 추진"
+        },
+        {
+          "label": "성과 관리"
+        }
+      ],
+      "count": 5,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진절차",
+      "업무흐름",
+      "단계흐름"
+    ],
+    "quality": "approved",
+    "thumbnail": null,
+    "master": "gov"
+  },
+  {
+    "id": "PRC-202",
+    "category": "PRC",
+    "name": "[gov] 세로 스텝 계단형 4단(상승)",
+    "file": "decks/03_process/PRC_gov_flow_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:PRC-202",
+    "tags": [
+      "프로세스",
+      "gov",
+      "계단형",
+      "세로스텝",
+      "상승",
+      "4단계"
+    ],
+    "params": {
+      "count": 4,
+      "style": "vertical-stairs-ascending",
+      "canvas": "gov"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "기반 조성"
+        },
+        {
+          "label": "시범 운영"
+        },
+        {
+          "label": "본격 확산"
+        },
+        {
+          "label": "고도화·정착"
+        }
+      ],
+      "count": 4,
+      "direction": "up-right"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "단계적확산",
+      "추진로드맵",
+      "점진고도화"
+    ],
+    "quality": "approved",
+    "thumbnail": null,
+    "master": "gov"
+  },
+  {
+    "id": "PRC-203",
+    "category": "PRC",
+    "name": "[gov] 갈매기(chevron) 흐름 5단",
+    "file": "decks/03_process/PRC_gov_flow_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:PRC-203",
+    "tags": [
+      "프로세스",
+      "gov",
+      "chevron",
+      "갈매기",
+      "5단계",
+      "절차"
+    ],
+    "params": {
+      "count": 5,
+      "style": "chevron",
+      "canvas": "gov"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "접수"
+        },
+        {
+          "label": "검토"
+        },
+        {
+          "label": "심사"
+        },
+        {
+          "label": "승인"
+        },
+        {
+          "label": "집행"
+        }
+      ],
+      "count": 5,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "민원처리절차",
+      "심사절차",
+      "표준프로세스"
+    ],
+    "quality": "approved",
+    "thumbnail": null,
+    "master": "gov"
+  },
+  {
+    "id": "PRC-204",
+    "category": "PRC",
+    "name": "[gov] 순환(cycle) 4단계 PDCA형",
+    "file": "decks/03_process/PRC_gov_flow_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:PRC-204",
+    "tags": [
+      "프로세스",
+      "gov",
+      "순환",
+      "사이클",
+      "PDCA",
+      "4단계"
+    ],
+    "params": {
+      "count": 4,
+      "style": "circular",
+      "canvas": "gov"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "계획(Plan)"
+        },
+        {
+          "label": "실행(Do)"
+        },
+        {
+          "label": "점검(Check)"
+        },
+        {
+          "label": "개선(Act)"
+        }
+      ],
+      "count": 4,
+      "direction": "cyclic"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "환류체계",
+      "지속개선",
+      "운영사이클"
+    ],
+    "quality": "approved",
+    "thumbnail": null,
+    "master": "gov"
+  },
+  {
+    "id": "PRC-205",
+    "category": "PRC",
+    "name": "[gov] 허브-스포크 5방사",
+    "file": "decks/03_process/PRC_gov_flow_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:PRC-205",
+    "tags": [
+      "프로세스",
+      "gov",
+      "허브앤스포크",
+      "방사형",
+      "중앙집중",
+      "5개"
+    ],
+    "params": {
+      "count": 5,
+      "style": "hub-spoke",
+      "canvas": "gov"
+    },
+    "bindings": {
+      "hub": "통합 추진 체계",
+      "spokes": [
+        {
+          "label": "정책 기획"
+        },
+        {
+          "label": "예산 편성"
+        },
+        {
+          "label": "사업 집행"
+        },
+        {
+          "label": "성과 평가"
+        },
+        {
+          "label": "환류·개선"
+        }
+      ],
+      "count": 5,
+      "direction": "radial"
+    },
+    "editable": [
+      "hub-text",
+      "spoke-text",
+      "spoke-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진체계",
+      "통합운영",
+      "연계구조"
+    ],
+    "quality": "approved",
+    "thumbnail": null,
+    "master": "gov"
+  },
+  {
+    "id": "PRC-206",
+    "category": "PRC",
+    "name": "[gov] 게이트형 파이프라인 (판단+반려경로)",
+    "file": "decks/03_process/PRC_gov_flow_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:PRC-206",
+    "tags": [
+      "프로세스",
+      "gov",
+      "파이프라인",
+      "게이트",
+      "판단",
+      "반려"
+    ],
+    "params": {
+      "count": 5,
+      "style": "gated-pipeline",
+      "canvas": "gov"
+    },
+    "bindings": {
+      "steps": [
+        {
+          "label": "신청 접수"
+        },
+        {
+          "label": "요건 검토",
+          "type": "gate"
+        },
+        {
+          "label": "사업 수행"
+        },
+        {
+          "label": "실적 검증",
+          "type": "gate"
+        },
+        {
+          "label": "정산·종료"
+        }
+      ],
+      "count": 5,
+      "direction": "horizontal"
+    },
+    "editable": [
+      "step-text",
+      "step-desc",
+      "step-count",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "품질게이트",
+      "검수절차",
+      "승인프로세스"
+    ],
+    "quality": "approved",
+    "thumbnail": null,
+    "master": "gov"
+  }
+]

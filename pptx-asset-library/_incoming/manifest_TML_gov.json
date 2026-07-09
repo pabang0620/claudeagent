@@ -1,0 +1,101 @@
+[
+  {
+    "id": "TML-201",
+    "category": "TML",
+    "name": "gov 대형 실행 스케줄 그리드 (7개월 비균등×27컬럼, 주차 단위, 비고열 포함)",
+    "file": "decks/05_timeline/TML_gov_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:TML-201",
+    "tags": [
+      "timeline",
+      "gov",
+      "gantt",
+      "grid",
+      "정부",
+      "실행계획",
+      "대형그리드",
+      "주단위",
+      "비고열"
+    ],
+    "params": {
+      "rows": 24,
+      "leaf_cols": 27,
+      "phase_groups": 7,
+      "shape_based": true,
+      "leaf_unit": "week",
+      "leaf_unit_note": "정답지 slide4.xml 실측 그대로 정밀 재현: 월 카테고리 gridSpan 6월(1)/7월(5)/8월(4)/9월(4)/10월(5)/11월(4)/12월(4)=27, 리프 라벨은 ISO 주차번호 26~52 실측값 그대로. 좌측 '구분' + 우측 '비고' 컬럼 포함, 작업행 24개(마일스톤 1행 + 세부행 5/4/2/4/8=23행, 정답지 그룹핑 패턴 반영). 행 라벨 텍스트는 재사용 가능한 일반화 표현으로 대체(원문 그대로 아님)"
+    },
+    "bindings": [
+      "phase_header",
+      "leaf_header",
+      "task_label",
+      "gantt_bar",
+      "remark_col"
+    ],
+    "editable": [
+      "phase_header",
+      "leaf_header",
+      "task_label",
+      "gantt_bar",
+      "remark_col"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "실행계획서",
+      "대형 스케줄표",
+      "정부보고서"
+    ],
+    "quality": "approved",
+    "thumbnail": null,
+    "master": "gov"
+  },
+  {
+    "id": "TML-202",
+    "category": "TML",
+    "name": "gov 초대형 열 스케줄 그리드 (3개월 비균등×51컬럼, 영업일 단위)",
+    "file": "decks/05_timeline/TML_gov_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:TML-202",
+    "tags": [
+      "timeline",
+      "gov",
+      "gantt",
+      "grid",
+      "정부",
+      "초대형열",
+      "세로라벨",
+      "일단위"
+    ],
+    "params": {
+      "rows": 5,
+      "leaf_cols": 51,
+      "phase_groups": 3,
+      "shape_based": true,
+      "leaf_unit": "day",
+      "leaf_unit_note": "정답지 slide6.xml 실측 그대로 정밀 재현: 월 카테고리 gridSpan 6월(7)/7월(23)/8월(21)=51, 리프 라벨은 영업일 날짜(주말 스킵) 실측값 그대로(월별 재사용되는 일자값 포함, 유일성은 상단 월 헤더가 보장). 좌측 '구분' 컬럼만(비고 없음), 작업행 5개(정답지 1-1~1-5 세부행 개수 반영). 행 라벨 텍스트는 재사용 가능한 일반화 표현으로 대체(원문 그대로 아님)"
+    },
+    "bindings": [
+      "phase_header",
+      "leaf_header",
+      "task_label",
+      "gantt_bar"
+    ],
+    "editable": [
+      "phase_header",
+      "leaf_header",
+      "task_label",
+      "gantt_bar"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "초대형 스케줄표",
+      "세부일정 그리드",
+      "정부보고서"
+    ],
+    "quality": "approved",
+    "thumbnail": null,
+    "master": "gov"
+  }
+]

@@ -3,3 +3,6 @@ __pycache__/
 settings.local.json
 jasoseo-data/
 scheduled_tasks.lock
+
+# 클라이언트 정답지 원본 사본 (원격 업로드 금지)
+pptx-asset-library/reference/_refdoc/

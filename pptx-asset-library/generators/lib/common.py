@@ -182,13 +182,16 @@ def group_asset(slide, shapes, asset_id):
 
 def entry(asset_id, category, name, file_rel, slide_idx, tags, params,
           bindings, editable, source="generated:python-pptx", license="self",
-          recommended_use=None, quality="approved"):
-    """표준 매니페스트 엔트리 생성."""
+          recommended_use=None, quality="approved", master="standard"):
+    """표준 매니페스트 엔트리 생성.
+    master: "standard"(16:9 base.pptx, 기본값) | "gov"(정부비율 base_gov.pptx).
+    기본값이 standard라 기존 호출부(신규 파라미터 미지정)는 전부 standard로 간주되어
+    무영향(additive) — HIGH-2 마스터 호환성 가드(compose.mjs)가 참조."""
     return {
         "id": asset_id, "category": category, "name": name,
         "file": file_rel, "slide": slide_idx, "anchor": "asset:%s" % asset_id,
         "tags": tags, "params": params, "bindings": bindings, "editable": editable,
         "source": source, "license": license,
         "recommended_use": recommended_use or [], "quality": quality,
-        "thumbnail": None
+        "thumbnail": None, "master": master
     }

@@ -1,0 +1,352 @@
+[
+  {
+    "id": "KPI-201",
+    "category": "KPI",
+    "name": "[gov] 배지형 지표 4종(Paperlogy)",
+    "file": "decks/02_kpi/KPI_gov_callout_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:KPI-201",
+    "tags": [
+      "KPI",
+      "gov",
+      "배지",
+      "원형",
+      "핵심수치",
+      "Paperlogy"
+    ],
+    "params": {
+      "badges": 4,
+      "style": "circle-badge",
+      "canvas": "gov",
+      "num_font": "paperlogy"
+    },
+    "bindings": {
+      "cards": [
+        {
+          "value": "98%",
+          "label": "정시 집행률"
+        },
+        {
+          "value": "4.8",
+          "label": "주민 만족도"
+        },
+        {
+          "value": "120",
+          "label": "참여 기관수"
+        },
+        {
+          "value": "32",
+          "label": "연계 지자체"
+        }
+      ],
+      "count": 4
+    },
+    "editable": [
+      "value",
+      "label",
+      "badge-color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심지표",
+      "실적강조",
+      "한눈요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null,
+    "master": "gov"
+  },
+  {
+    "id": "KPI-202",
+    "category": "KPI",
+    "name": "[gov] 후프(ring) 프로그레스 3종",
+    "file": "decks/02_kpi/KPI_gov_callout_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:KPI-202",
+    "tags": [
+      "KPI",
+      "gov",
+      "후프",
+      "링",
+      "도넛",
+      "달성률"
+    ],
+    "params": {
+      "rings": 3,
+      "style": "ring-progress",
+      "shape": "native-pie",
+      "canvas": "gov"
+    },
+    "bindings": {
+      "cards": [
+        {
+          "value": "95",
+          "unit": "%",
+          "label": "사업 목표 달성률"
+        },
+        {
+          "value": "82",
+          "unit": "%",
+          "label": "주민 만족도"
+        },
+        {
+          "value": "68",
+          "unit": "%",
+          "label": "예산 집행률"
+        }
+      ],
+      "count": 3
+    },
+    "editable": [
+      "value",
+      "label",
+      "ring-color",
+      "pct"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "달성률",
+      "목표대비",
+      "진행률"
+    ],
+    "quality": "approved",
+    "thumbnail": null,
+    "master": "gov"
+  },
+  {
+    "id": "KPI-203",
+    "category": "KPI",
+    "name": "[gov] hero 대형 숫자강조 콜아웃",
+    "file": "decks/02_kpi/KPI_gov_callout_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:KPI-203",
+    "tags": [
+      "KPI",
+      "gov",
+      "hero",
+      "대형숫자",
+      "단일강조",
+      "Paperlogy"
+    ],
+    "params": {
+      "style": "hero-callout",
+      "canvas": "gov",
+      "num_font": "paperlogy",
+      "num_size": 96
+    },
+    "bindings": {
+      "cards": [
+        {
+          "value": "12,500",
+          "unit": "건",
+          "label": "누적 민원 처리건수"
+        }
+      ],
+      "count": 1
+    },
+    "editable": [
+      "value",
+      "unit",
+      "label",
+      "subtitle",
+      "progress-bar"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "핵심성과대표",
+      "표지강조",
+      "메인지표"
+    ],
+    "quality": "approved",
+    "thumbnail": null,
+    "master": "gov"
+  },
+  {
+    "id": "KPI-204",
+    "category": "KPI",
+    "name": "[gov] quad 2x2 그리드 4지표",
+    "file": "decks/02_kpi/KPI_gov_callout_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:KPI-204",
+    "tags": [
+      "KPI",
+      "gov",
+      "quad",
+      "2x2",
+      "그리드",
+      "4지표"
+    ],
+    "params": {
+      "cells": 4,
+      "style": "quad-grid",
+      "canvas": "gov"
+    },
+    "bindings": {
+      "cards": [
+        {
+          "value": "1,000",
+          "unit": "건",
+          "label": "검증완료 사업 DB"
+        },
+        {
+          "value": "40",
+          "unit": "개소",
+          "label": "참여 지역기관"
+        },
+        {
+          "value": "42",
+          "unit": "억",
+          "label": "연계 예산 규모"
+        },
+        {
+          "value": "95",
+          "unit": "%",
+          "label": "사업 목표 달성률"
+        }
+      ],
+      "count": 4
+    },
+    "editable": [
+      "value",
+      "unit",
+      "label",
+      "accent-color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "종합성과",
+      "핵심지표",
+      "한눈요약"
+    ],
+    "quality": "approved",
+    "thumbnail": null,
+    "master": "gov"
+  },
+  {
+    "id": "KPI-205",
+    "category": "KPI",
+    "name": "[gov] 트렌드 콜아웃 3종 (증감+스파크라인)",
+    "file": "decks/02_kpi/KPI_gov_callout_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:KPI-205",
+    "tags": [
+      "KPI",
+      "gov",
+      "트렌드",
+      "스파크라인",
+      "증감",
+      "콜아웃"
+    ],
+    "params": {
+      "cards": 3,
+      "style": "trend-sparkbar",
+      "bars": 5,
+      "canvas": "gov"
+    },
+    "bindings": {
+      "cards": [
+        {
+          "value": "1,000",
+          "unit": "건",
+          "label": "민원 처리건수",
+          "delta": "+18%"
+        },
+        {
+          "value": "42",
+          "unit": "억",
+          "label": "예산 집행액",
+          "delta": "+27%"
+        },
+        {
+          "value": "4.6",
+          "unit": "점",
+          "label": "주민 만족도",
+          "delta": "+5%"
+        }
+      ],
+      "count": 3
+    },
+    "editable": [
+      "value",
+      "unit",
+      "label",
+      "delta",
+      "trend-color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "성과추이",
+      "증감비교",
+      "성장강조"
+    ],
+    "quality": "approved",
+    "thumbnail": null,
+    "master": "gov"
+  },
+  {
+    "id": "KPI-206",
+    "category": "KPI",
+    "name": "[gov] 카드 로우 가로 4카드",
+    "file": "decks/02_kpi/KPI_gov_callout_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:KPI-206",
+    "tags": [
+      "KPI",
+      "gov",
+      "카드로우",
+      "가로반복",
+      "카드형"
+    ],
+    "params": {
+      "cards": 4,
+      "style": "card-row",
+      "canvas": "gov"
+    },
+    "bindings": {
+      "cards": [
+        {
+          "value": "1,000",
+          "unit": "건",
+          "label": "검증 사업 DB"
+        },
+        {
+          "value": "40",
+          "unit": "개소",
+          "label": "참여기관"
+        },
+        {
+          "value": "42",
+          "unit": "억",
+          "label": "연계 예산"
+        },
+        {
+          "value": "4.6",
+          "unit": "점",
+          "label": "만족도"
+        }
+      ],
+      "count": 4
+    },
+    "editable": [
+      "value",
+      "unit",
+      "label",
+      "accent-color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "성과요약",
+      "지표나열",
+      "반복레이아웃"
+    ],
+    "quality": "approved",
+    "thumbnail": null,
+    "master": "gov"
+  }
+]

@@ -7,17 +7,17 @@
     "TBL": {
       "name": "표 디자인",
       "dir": "decks/01_tables",
-      "count": 200
+      "count": 206
     },
     "KPI": {
       "name": "KPI 카드/숫자 강조",
       "dir": "decks/02_kpi",
-      "count": 200
+      "count": 206
     },
     "PRC": {
       "name": "프로세스 화살표/단계 흐름",
       "dir": "decks/03_process",
-      "count": 200
+      "count": 206
     },
     "CMP": {
       "name": "비교표/평가표/매트릭스",
@@ -27,7 +27,7 @@
     "TML": {
       "name": "타임라인/로드맵",
       "dir": "decks/05_timeline",
-      "count": 200
+      "count": 202
     },
     "ORG": {
       "name": "조직도/추진체계도",
@@ -47,12 +47,12 @@
     "HDR": {
       "name": "섹션 헤더/배지/라벨/강조 박스",
       "dir": "decks/09_headers",
-      "count": 200
+      "count": 205
     },
     "BGP": {
       "name": "표지/섹션 배경·패널",
       "dir": "decks/10_backgrounds",
-      "count": 200
+      "count": 205
     },
     "ICN": {
       "name": "아이콘형 도식",
@@ -7325,6 +7325,198 @@
       ],
       "quality": "approved",
       "thumbnail": null
+    },
+    {
+      "id": "BGP-201",
+      "category": "BGP",
+      "name": "gov 표지A · 네이비 풀블리드 + 하단 사진 플레이스홀더",
+      "file": "decks/10_backgrounds/BGP_gov_cover_v1.pptx",
+      "slide": 1,
+      "anchor": "asset:BGP-201",
+      "tags": [
+        "표지",
+        "gov",
+        "네이비풀블리드",
+        "사진플레이스홀더"
+      ],
+      "params": {
+        "style": "gov-cover-navy-bottom-photo",
+        "canvas": "gov"
+      },
+      "bindings": {
+        "title": "사업명을 입력하세요",
+        "subtitle": "제안서 부제목을 입력하세요",
+        "year": "2026",
+        "agency": "기관명을 입력하세요",
+        "part": "00"
+      },
+      "editable": [
+        "color",
+        "text"
+      ],
+      "source": "generated:python-pptx",
+      "license": "self",
+      "recommended_use": [
+        "표지"
+      ],
+      "quality": "approved",
+      "thumbnail": null,
+      "master": "gov"
+    },
+    {
+      "id": "BGP-202",
+      "category": "BGP",
+      "name": "gov 표지B · 대각 그라데이션(네이비→퍼플) + 우 세로 사진 플레이스홀더",
+      "file": "decks/10_backgrounds/BGP_gov_cover_v1.pptx",
+      "slide": 2,
+      "anchor": "asset:BGP-202",
+      "tags": [
+        "표지",
+        "gov",
+        "그라데이션",
+        "사진플레이스홀더"
+      ],
+      "params": {
+        "style": "gov-cover-diagonal-gradient-right-photo",
+        "canvas": "gov",
+        "gradient": true
+      },
+      "bindings": {
+        "title": "사업명을 입력하세요",
+        "subtitle": "제안서 부제목을 입력하세요",
+        "year": "2026",
+        "agency": "기관명을 입력하세요",
+        "part": "00"
+      },
+      "editable": [
+        "color",
+        "text",
+        "gradient"
+      ],
+      "source": "generated:python-pptx",
+      "license": "self",
+      "recommended_use": [
+        "표지"
+      ],
+      "quality": "approved",
+      "thumbnail": null,
+      "master": "gov"
+    },
+    {
+      "id": "BGP-203",
+      "category": "BGP",
+      "name": "gov 표지C · 상단 네이비 밴드 + 코너브래킷 사진 프레임",
+      "file": "decks/10_backgrounds/BGP_gov_cover_v1.pptx",
+      "slide": 3,
+      "anchor": "asset:BGP-203",
+      "tags": [
+        "표지",
+        "gov",
+        "상단밴드",
+        "코너브래킷",
+        "사진플레이스홀더"
+      ],
+      "params": {
+        "style": "gov-cover-top-band-corner-frame",
+        "canvas": "gov"
+      },
+      "bindings": {
+        "title": "사업명을 입력하세요",
+        "subtitle": "제안서 부제목을 입력하세요",
+        "year": "2026",
+        "agency": "기관명을 입력하세요",
+        "part": "00"
+      },
+      "editable": [
+        "color",
+        "text"
+      ],
+      "source": "generated:python-pptx",
+      "license": "self",
+      "recommended_use": [
+        "표지"
+      ],
+      "quality": "approved",
+      "thumbnail": null,
+      "master": "gov"
+    },
+    {
+      "id": "BGP-204",
+      "category": "BGP",
+      "name": "gov 섹션 간지A · 네이비 풀블리드 + 대형 번호 + 섹션 대제목",
+      "file": "decks/10_backgrounds/BGP_gov_interstitial_v1.pptx",
+      "slide": 1,
+      "anchor": "asset:BGP-204",
+      "tags": [
+        "섹션간지",
+        "gov",
+        "네이비풀블리드",
+        "대형번호"
+      ],
+      "params": {
+        "style": "gov-interstitial-navy-bignum",
+        "canvas": "gov"
+      },
+      "bindings": {
+        "part": "01",
+        "number": "01",
+        "title": "제목을 입력하세요",
+        "desc": "본 섹션의 개요를 입력하세요.",
+        "year": "2026",
+        "program": "사업명을 입력하세요"
+      },
+      "editable": [
+        "color",
+        "text"
+      ],
+      "source": "generated:python-pptx",
+      "license": "self",
+      "recommended_use": [
+        "섹션 구분",
+        "간지"
+      ],
+      "quality": "approved",
+      "thumbnail": null,
+      "master": "gov"
+    },
+    {
+      "id": "BGP-205",
+      "category": "BGP",
+      "name": "gov 섹션 간지B · 라이트 패널 + 퍼플 번호 배지 + 섹션 대제목",
+      "file": "decks/10_backgrounds/BGP_gov_interstitial_v1.pptx",
+      "slide": 2,
+      "anchor": "asset:BGP-205",
+      "tags": [
+        "섹션간지",
+        "gov",
+        "라이트패널",
+        "퍼플배지"
+      ],
+      "params": {
+        "style": "gov-interstitial-panel-badge",
+        "canvas": "gov"
+      },
+      "bindings": {
+        "part": "02",
+        "number": "02",
+        "title": "제목을 입력하세요",
+        "desc": "본 섹션의 개요를 입력하세요.",
+        "year": "2026",
+        "program": "사업명을 입력하세요"
+      },
+      "editable": [
+        "color",
+        "text"
+      ],
+      "source": "generated:python-pptx",
+      "license": "self",
+      "recommended_use": [
+        "섹션 구분",
+        "간지"
+      ],
+      "quality": "approved",
+      "thumbnail": null,
+      "master": "gov"
     },
     {
       "id": "CHT-001",
@@ -39324,6 +39516,246 @@
       "thumbnail": null
     },
     {
+      "id": "HDR-201",
+      "category": "HDR",
+      "name": "gov 챕터 브레드크럼A · 알약형 + 셰브론 구분자",
+      "file": "decks/09_headers/HDR_gov_breadcrumb_v1.pptx",
+      "slide": 1,
+      "anchor": "asset:HDR-201",
+      "tags": [
+        "브레드크럼",
+        "gov",
+        "챕터",
+        "내비게이션",
+        "알약형"
+      ],
+      "params": {
+        "count": 5,
+        "current_idx": 1,
+        "w_each_in": 2.05
+      },
+      "bindings": {
+        "chapters": [
+          "사업 개요",
+          "추진 전략",
+          "추진 체계",
+          "세부 추진계획",
+          "기대효과"
+        ],
+        "current": "추진 전략"
+      },
+      "editable": [
+        "text",
+        "color"
+      ],
+      "source": "generated:python-pptx",
+      "license": "self",
+      "recommended_use": [
+        "챕터 반복 내비게이션",
+        "목차 대체 헤더"
+      ],
+      "quality": "approved",
+      "thumbnail": null,
+      "master": "gov"
+    },
+    {
+      "id": "HDR-202",
+      "category": "HDR",
+      "name": "gov 챕터 브레드크럼B · 번호원 + 연결선(완료/현재/예정 구분)",
+      "file": "decks/09_headers/HDR_gov_breadcrumb_v1.pptx",
+      "slide": 2,
+      "anchor": "asset:HDR-202",
+      "tags": [
+        "브레드크럼",
+        "gov",
+        "챕터",
+        "내비게이션",
+        "번호원"
+      ],
+      "params": {
+        "count": 5,
+        "current_idx": 2,
+        "d_in": 0.62
+      },
+      "bindings": {
+        "chapters": [
+          "사업 개요",
+          "추진 전략",
+          "추진 체계",
+          "세부 추진계획",
+          "기대효과"
+        ],
+        "current": "추진 체계"
+      },
+      "editable": [
+        "text",
+        "color"
+      ],
+      "source": "generated:python-pptx",
+      "license": "self",
+      "recommended_use": [
+        "챕터 반복 내비게이션",
+        "진행 단계 표시"
+      ],
+      "quality": "approved",
+      "thumbnail": null,
+      "master": "gov"
+    },
+    {
+      "id": "HDR-203",
+      "category": "HDR",
+      "name": "gov 챕터 브레드크럼C · 상단 컴팩트 스트립(반복 배치형)",
+      "file": "decks/09_headers/HDR_gov_breadcrumb_v1.pptx",
+      "slide": 3,
+      "anchor": "asset:HDR-203",
+      "tags": [
+        "브레드크럼",
+        "gov",
+        "챕터",
+        "내비게이션",
+        "상단스트립"
+      ],
+      "params": {
+        "count": 5,
+        "current_idx": 3,
+        "w_in": 10.7
+      },
+      "bindings": {
+        "chapters": [
+          "사업 개요",
+          "추진 전략",
+          "추진 체계",
+          "세부 추진계획",
+          "기대효과"
+        ],
+        "current": "세부 추진계획"
+      },
+      "editable": [
+        "text",
+        "color"
+      ],
+      "source": "generated:python-pptx",
+      "license": "self",
+      "recommended_use": [
+        "콘텐츠 슬라이드 상단 반복 헤더",
+        "챕터 위치 안내"
+      ],
+      "quality": "approved",
+      "thumbnail": null,
+      "master": "gov"
+    },
+    {
+      "id": "HDR-204",
+      "category": "HDR",
+      "name": "gov 진행률 숫자 트래커A · 뱃지 5개(1/0) + 챕터 라벨 + 범례",
+      "file": "decks/09_headers/HDR_gov_progress-tracker_v1.pptx",
+      "slide": 1,
+      "anchor": "asset:HDR-204",
+      "tags": [
+        "진행률",
+        "gov",
+        "트래커",
+        "숫자뱃지",
+        "위젯"
+      ],
+      "params": {
+        "count": 5,
+        "statuses": [
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "font": "number_emphasis"
+      },
+      "bindings": {
+        "chapters": [
+          "사업 개요",
+          "추진 전략",
+          "추진 체계",
+          "세부 추진계획",
+          "기대효과"
+        ],
+        "statuses": [
+          1,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "editable": [
+        "text",
+        "color"
+      ],
+      "source": "generated:python-pptx",
+      "license": "self",
+      "recommended_use": [
+        "진행 현황 위젯",
+        "소형 재사용 컴포넌트"
+      ],
+      "quality": "approved",
+      "thumbnail": null,
+      "master": "gov"
+    },
+    {
+      "id": "HDR-205",
+      "category": "HDR",
+      "name": "gov 진행률 숫자 트래커B · 인라인 컴팩트(푸터 반복 배치용)",
+      "file": "decks/09_headers/HDR_gov_progress-tracker_v1.pptx",
+      "slide": 2,
+      "anchor": "asset:HDR-205",
+      "tags": [
+        "진행률",
+        "gov",
+        "트래커",
+        "숫자뱃지",
+        "인라인",
+        "푸터"
+      ],
+      "params": {
+        "count": 5,
+        "statuses": [
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "font": "number_emphasis"
+      },
+      "bindings": {
+        "chapters": [
+          "사업 개요",
+          "추진 전략",
+          "추진 체계",
+          "세부 추진계획",
+          "기대효과"
+        ],
+        "statuses": [
+          1,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "editable": [
+        "text",
+        "color"
+      ],
+      "source": "generated:python-pptx",
+      "license": "self",
+      "recommended_use": [
+        "푸터 반복 배치",
+        "소형 재사용 컴포넌트"
+      ],
+      "quality": "approved",
+      "thumbnail": null,
+      "master": "gov"
+    },
+    {
       "id": "ICN-001",
       "category": "ICN",
       "name": "아이콘 · 문서",
@@ -59310,6 +59742,356 @@
       ],
       "quality": "approved",
       "thumbnail": null
+    },
+    {
+      "id": "KPI-201",
+      "category": "KPI",
+      "name": "[gov] 배지형 지표 4종(Paperlogy)",
+      "file": "decks/02_kpi/KPI_gov_callout_v1.pptx",
+      "slide": 1,
+      "anchor": "asset:KPI-201",
+      "tags": [
+        "KPI",
+        "gov",
+        "배지",
+        "원형",
+        "핵심수치",
+        "Paperlogy"
+      ],
+      "params": {
+        "badges": 4,
+        "style": "circle-badge",
+        "canvas": "gov",
+        "num_font": "paperlogy"
+      },
+      "bindings": {
+        "cards": [
+          {
+            "value": "98%",
+            "label": "정시 집행률"
+          },
+          {
+            "value": "4.8",
+            "label": "주민 만족도"
+          },
+          {
+            "value": "120",
+            "label": "참여 기관수"
+          },
+          {
+            "value": "32",
+            "label": "연계 지자체"
+          }
+        ],
+        "count": 4
+      },
+      "editable": [
+        "value",
+        "label",
+        "badge-color"
+      ],
+      "source": "generated:python-pptx",
+      "license": "self",
+      "recommended_use": [
+        "핵심지표",
+        "실적강조",
+        "한눈요약"
+      ],
+      "quality": "approved",
+      "thumbnail": null,
+      "master": "gov"
+    },
+    {
+      "id": "KPI-202",
+      "category": "KPI",
+      "name": "[gov] 후프(ring) 프로그레스 3종",
+      "file": "decks/02_kpi/KPI_gov_callout_v1.pptx",
+      "slide": 2,
+      "anchor": "asset:KPI-202",
+      "tags": [
+        "KPI",
+        "gov",
+        "후프",
+        "링",
+        "도넛",
+        "달성률"
+      ],
+      "params": {
+        "rings": 3,
+        "style": "ring-progress",
+        "shape": "native-pie",
+        "canvas": "gov"
+      },
+      "bindings": {
+        "cards": [
+          {
+            "value": "95",
+            "unit": "%",
+            "label": "사업 목표 달성률"
+          },
+          {
+            "value": "82",
+            "unit": "%",
+            "label": "주민 만족도"
+          },
+          {
+            "value": "68",
+            "unit": "%",
+            "label": "예산 집행률"
+          }
+        ],
+        "count": 3
+      },
+      "editable": [
+        "value",
+        "label",
+        "ring-color",
+        "pct"
+      ],
+      "source": "generated:python-pptx",
+      "license": "self",
+      "recommended_use": [
+        "달성률",
+        "목표대비",
+        "진행률"
+      ],
+      "quality": "approved",
+      "thumbnail": null,
+      "master": "gov"
+    },
+    {
+      "id": "KPI-203",
+      "category": "KPI",
+      "name": "[gov] hero 대형 숫자강조 콜아웃",
+      "file": "decks/02_kpi/KPI_gov_callout_v1.pptx",
+      "slide": 3,
+      "anchor": "asset:KPI-203",
+      "tags": [
+        "KPI",
+        "gov",
+        "hero",
+        "대형숫자",
+        "단일강조",
+        "Paperlogy"
+      ],
+      "params": {
+        "style": "hero-callout",
+        "canvas": "gov",
+        "num_font": "paperlogy",
+        "num_size": 96
+      },
+      "bindings": {
+        "cards": [
+          {
+            "value": "12,500",
+            "unit": "건",
+            "label": "누적 민원 처리건수"
+          }
+        ],
+        "count": 1
+      },
+      "editable": [
+        "value",
+        "unit",
+        "label",
+        "subtitle",
+        "progress-bar"
+      ],
+      "source": "generated:python-pptx",
+      "license": "self",
+      "recommended_use": [
+        "핵심성과대표",
+        "표지강조",
+        "메인지표"
+      ],
+      "quality": "approved",
+      "thumbnail": null,
+      "master": "gov"
+    },
+    {
+      "id": "KPI-204",
+      "category": "KPI",
+      "name": "[gov] quad 2x2 그리드 4지표",
+      "file": "decks/02_kpi/KPI_gov_callout_v1.pptx",
+      "slide": 4,
+      "anchor": "asset:KPI-204",
+      "tags": [
+        "KPI",
+        "gov",
+        "quad",
+        "2x2",
+        "그리드",
+        "4지표"
+      ],
+      "params": {
+        "cells": 4,
+        "style": "quad-grid",
+        "canvas": "gov"
+      },
+      "bindings": {
+        "cards": [
+          {
+            "value": "1,000",
+            "unit": "건",
+            "label": "검증완료 사업 DB"
+          },
+          {
+            "value": "40",
+            "unit": "개소",
+            "label": "참여 지역기관"
+          },
+          {
+            "value": "42",
+            "unit": "억",
+            "label": "연계 예산 규모"
+          },
+          {
+            "value": "95",
+            "unit": "%",
+            "label": "사업 목표 달성률"
+          }
+        ],
+        "count": 4
+      },
+      "editable": [
+        "value",
+        "unit",
+        "label",
+        "accent-color"
+      ],
+      "source": "generated:python-pptx",
+      "license": "self",
+      "recommended_use": [
+        "종합성과",
+        "핵심지표",
+        "한눈요약"
+      ],
+      "quality": "approved",
+      "thumbnail": null,
+      "master": "gov"
+    },
+    {
+      "id": "KPI-205",
+      "category": "KPI",
+      "name": "[gov] 트렌드 콜아웃 3종 (증감+스파크라인)",
+      "file": "decks/02_kpi/KPI_gov_callout_v1.pptx",
+      "slide": 5,
+      "anchor": "asset:KPI-205",
+      "tags": [
+        "KPI",
+        "gov",
+        "트렌드",
+        "스파크라인",
+        "증감",
+        "콜아웃"
+      ],
+      "params": {
+        "cards": 3,
+        "style": "trend-sparkbar",
+        "bars": 5,
+        "canvas": "gov"
+      },
+      "bindings": {
+        "cards": [
+          {
+            "value": "1,000",
+            "unit": "건",
+            "label": "민원 처리건수",
+            "delta": "+18%"
+          },
+          {
+            "value": "42",
+            "unit": "억",
+            "label": "예산 집행액",
+            "delta": "+27%"
+          },
+          {
+            "value": "4.6",
+            "unit": "점",
+            "label": "주민 만족도",
+            "delta": "+5%"
+          }
+        ],
+        "count": 3
+      },
+      "editable": [
+        "value",
+        "unit",
+        "label",
+        "delta",
+        "trend-color"
+      ],
+      "source": "generated:python-pptx",
+      "license": "self",
+      "recommended_use": [
+        "성과추이",
+        "증감비교",
+        "성장강조"
+      ],
+      "quality": "approved",
+      "thumbnail": null,
+      "master": "gov"
+    },
+    {
+      "id": "KPI-206",
+      "category": "KPI",
+      "name": "[gov] 카드 로우 가로 4카드",
+      "file": "decks/02_kpi/KPI_gov_callout_v1.pptx",
+      "slide": 6,
+      "anchor": "asset:KPI-206",
+      "tags": [
+        "KPI",
+        "gov",
+        "카드로우",
+        "가로반복",
+        "카드형"
+      ],
+      "params": {
+        "cards": 4,
+        "style": "card-row",
+        "canvas": "gov"
+      },
+      "bindings": {
+        "cards": [
+          {
+            "value": "1,000",
+            "unit": "건",
+            "label": "검증 사업 DB"
+          },
+          {
+            "value": "40",
+            "unit": "개소",
+            "label": "참여기관"
+          },
+          {
+            "value": "42",
+            "unit": "억",
+            "label": "연계 예산"
+          },
+          {
+            "value": "4.6",
+            "unit": "점",
+            "label": "만족도"
+          }
+        ],
+        "count": 4
+      },
+      "editable": [
+        "value",
+        "unit",
+        "label",
+        "accent-color"
+      ],
+      "source": "generated:python-pptx",
+      "license": "self",
+      "recommended_use": [
+        "성과요약",
+        "지표나열",
+        "반복레이아웃"
+      ],
+      "quality": "approved",
+      "thumbnail": null,
+      "master": "gov"
     },
     {
       "id": "MCK-001",
@@ -94409,6 +95191,350 @@
       "thumbnail": null
     },
     {
+      "id": "PRC-201",
+      "category": "PRC",
+      "name": "[gov] 단계 박스+화살표 수평흐름 5단",
+      "file": "decks/03_process/PRC_gov_flow_v1.pptx",
+      "slide": 1,
+      "anchor": "asset:PRC-201",
+      "tags": [
+        "프로세스",
+        "gov",
+        "수평흐름",
+        "박스화살표",
+        "5단계"
+      ],
+      "params": {
+        "count": 5,
+        "style": "box-arrow-horizontal",
+        "canvas": "gov"
+      },
+      "bindings": {
+        "steps": [
+          {
+            "label": "과제 발굴"
+          },
+          {
+            "label": "현황 조사"
+          },
+          {
+            "label": "계획 수립"
+          },
+          {
+            "label": "사업 추진"
+          },
+          {
+            "label": "성과 관리"
+          }
+        ],
+        "count": 5,
+        "direction": "horizontal"
+      },
+      "editable": [
+        "step-text",
+        "step-desc",
+        "step-count",
+        "color"
+      ],
+      "source": "generated:python-pptx",
+      "license": "self",
+      "recommended_use": [
+        "추진절차",
+        "업무흐름",
+        "단계흐름"
+      ],
+      "quality": "approved",
+      "thumbnail": null,
+      "master": "gov"
+    },
+    {
+      "id": "PRC-202",
+      "category": "PRC",
+      "name": "[gov] 세로 스텝 계단형 4단(상승)",
+      "file": "decks/03_process/PRC_gov_flow_v1.pptx",
+      "slide": 2,
+      "anchor": "asset:PRC-202",
+      "tags": [
+        "프로세스",
+        "gov",
+        "계단형",
+        "세로스텝",
+        "상승",
+        "4단계"
+      ],
+      "params": {
+        "count": 4,
+        "style": "vertical-stairs-ascending",
+        "canvas": "gov"
+      },
+      "bindings": {
+        "steps": [
+          {
+            "label": "기반 조성"
+          },
+          {
+            "label": "시범 운영"
+          },
+          {
+            "label": "본격 확산"
+          },
+          {
+            "label": "고도화·정착"
+          }
+        ],
+        "count": 4,
+        "direction": "up-right"
+      },
+      "editable": [
+        "step-text",
+        "step-desc",
+        "step-count",
+        "color"
+      ],
+      "source": "generated:python-pptx",
+      "license": "self",
+      "recommended_use": [
+        "단계적확산",
+        "추진로드맵",
+        "점진고도화"
+      ],
+      "quality": "approved",
+      "thumbnail": null,
+      "master": "gov"
+    },
+    {
+      "id": "PRC-203",
+      "category": "PRC",
+      "name": "[gov] 갈매기(chevron) 흐름 5단",
+      "file": "decks/03_process/PRC_gov_flow_v1.pptx",
+      "slide": 3,
+      "anchor": "asset:PRC-203",
+      "tags": [
+        "프로세스",
+        "gov",
+        "chevron",
+        "갈매기",
+        "5단계",
+        "절차"
+      ],
+      "params": {
+        "count": 5,
+        "style": "chevron",
+        "canvas": "gov"
+      },
+      "bindings": {
+        "steps": [
+          {
+            "label": "접수"
+          },
+          {
+            "label": "검토"
+          },
+          {
+            "label": "심사"
+          },
+          {
+            "label": "승인"
+          },
+          {
+            "label": "집행"
+          }
+        ],
+        "count": 5,
+        "direction": "horizontal"
+      },
+      "editable": [
+        "step-text",
+        "step-desc",
+        "step-count",
+        "color"
+      ],
+      "source": "generated:python-pptx",
+      "license": "self",
+      "recommended_use": [
+        "민원처리절차",
+        "심사절차",
+        "표준프로세스"
+      ],
+      "quality": "approved",
+      "thumbnail": null,
+      "master": "gov"
+    },
+    {
+      "id": "PRC-204",
+      "category": "PRC",
+      "name": "[gov] 순환(cycle) 4단계 PDCA형",
+      "file": "decks/03_process/PRC_gov_flow_v1.pptx",
+      "slide": 4,
+      "anchor": "asset:PRC-204",
+      "tags": [
+        "프로세스",
+        "gov",
+        "순환",
+        "사이클",
+        "PDCA",
+        "4단계"
+      ],
+      "params": {
+        "count": 4,
+        "style": "circular",
+        "canvas": "gov"
+      },
+      "bindings": {
+        "steps": [
+          {
+            "label": "계획(Plan)"
+          },
+          {
+            "label": "실행(Do)"
+          },
+          {
+            "label": "점검(Check)"
+          },
+          {
+            "label": "개선(Act)"
+          }
+        ],
+        "count": 4,
+        "direction": "cyclic"
+      },
+      "editable": [
+        "step-text",
+        "step-desc",
+        "step-count",
+        "color"
+      ],
+      "source": "generated:python-pptx",
+      "license": "self",
+      "recommended_use": [
+        "환류체계",
+        "지속개선",
+        "운영사이클"
+      ],
+      "quality": "approved",
+      "thumbnail": null,
+      "master": "gov"
+    },
+    {
+      "id": "PRC-205",
+      "category": "PRC",
+      "name": "[gov] 허브-스포크 5방사",
+      "file": "decks/03_process/PRC_gov_flow_v1.pptx",
+      "slide": 5,
+      "anchor": "asset:PRC-205",
+      "tags": [
+        "프로세스",
+        "gov",
+        "허브앤스포크",
+        "방사형",
+        "중앙집중",
+        "5개"
+      ],
+      "params": {
+        "count": 5,
+        "style": "hub-spoke",
+        "canvas": "gov"
+      },
+      "bindings": {
+        "hub": "통합 추진 체계",
+        "spokes": [
+          {
+            "label": "정책 기획"
+          },
+          {
+            "label": "예산 편성"
+          },
+          {
+            "label": "사업 집행"
+          },
+          {
+            "label": "성과 평가"
+          },
+          {
+            "label": "환류·개선"
+          }
+        ],
+        "count": 5,
+        "direction": "radial"
+      },
+      "editable": [
+        "hub-text",
+        "spoke-text",
+        "spoke-count",
+        "color"
+      ],
+      "source": "generated:python-pptx",
+      "license": "self",
+      "recommended_use": [
+        "추진체계",
+        "통합운영",
+        "연계구조"
+      ],
+      "quality": "approved",
+      "thumbnail": null,
+      "master": "gov"
+    },
+    {
+      "id": "PRC-206",
+      "category": "PRC",
+      "name": "[gov] 게이트형 파이프라인 (판단+반려경로)",
+      "file": "decks/03_process/PRC_gov_flow_v1.pptx",
+      "slide": 6,
+      "anchor": "asset:PRC-206",
+      "tags": [
+        "프로세스",
+        "gov",
+        "파이프라인",
+        "게이트",
+        "판단",
+        "반려"
+      ],
+      "params": {
+        "count": 5,
+        "style": "gated-pipeline",
+        "canvas": "gov"
+      },
+      "bindings": {
+        "steps": [
+          {
+            "label": "신청 접수"
+          },
+          {
+            "label": "요건 검토",
+            "type": "gate"
+          },
+          {
+            "label": "사업 수행"
+          },
+          {
+            "label": "실적 검증",
+            "type": "gate"
+          },
+          {
+            "label": "정산·종료"
+          }
+        ],
+        "count": 5,
+        "direction": "horizontal"
+      },
+      "editable": [
+        "step-text",
+        "step-desc",
+        "step-count",
+        "color"
+      ],
+      "source": "generated:python-pptx",
+      "license": "self",
+      "recommended_use": [
+        "품질게이트",
+        "검수절차",
+        "승인프로세스"
+      ],
+      "quality": "approved",
+      "thumbnail": null,
+      "master": "gov"
+    },
+    {
       "id": "SVC-001",
       "category": "SVC",
       "name": "시스템 구성도 (4계층 아키텍처)",
@@ -116753,6 +117879,266 @@
       "thumbnail": null
     },
     {
+      "id": "TBL-201",
+      "category": "TBL",
+      "name": "gov 연도별 실행성과 비교표 (색코딩 병합헤더)",
+      "file": "decks/01_tables/TBL_gov_v1.pptx",
+      "slide": 1,
+      "anchor": "asset:TBL-201",
+      "tags": [
+        "table",
+        "gov",
+        "merged-header",
+        "comparison",
+        "정부",
+        "병합헤더",
+        "비교"
+      ],
+      "params": {
+        "cols": 6,
+        "rows": 6,
+        "merged": true
+      },
+      "bindings": [
+        "구분",
+        "연도값",
+        "증감"
+      ],
+      "editable": [
+        "header",
+        "row_label",
+        "cell_value"
+      ],
+      "source": "generated:python-pptx",
+      "license": "self",
+      "recommended_use": [
+        "실행계획서",
+        "연도별 성과비교",
+        "정부보고서"
+      ],
+      "quality": "approved",
+      "thumbnail": null,
+      "master": "gov"
+    },
+    {
+      "id": "TBL-202",
+      "category": "TBL",
+      "name": "gov 추진체계 카테고리 구분표 (보라 2단헤더)",
+      "file": "decks/01_tables/TBL_gov_v1.pptx",
+      "slide": 2,
+      "anchor": "asset:TBL-202",
+      "tags": [
+        "table",
+        "gov",
+        "category",
+        "purple",
+        "정부",
+        "카테고리",
+        "2단헤더"
+      ],
+      "params": {
+        "cols": 7,
+        "rows": 6,
+        "merged": true
+      },
+      "bindings": [
+        "구분",
+        "카테고리",
+        "세부지표"
+      ],
+      "editable": [
+        "header",
+        "category_header",
+        "sub_header",
+        "cell_value"
+      ],
+      "source": "generated:python-pptx",
+      "license": "self",
+      "recommended_use": [
+        "추진체계",
+        "역할분담",
+        "정부보고서"
+      ],
+      "quality": "approved",
+      "thumbnail": null,
+      "master": "gov"
+    },
+    {
+      "id": "TBL-203",
+      "category": "TBL",
+      "name": "gov 과제 진행상태 신호등표",
+      "file": "decks/01_tables/TBL_gov_v1.pptx",
+      "slide": 3,
+      "anchor": "asset:TBL-203",
+      "tags": [
+        "table",
+        "gov",
+        "status",
+        "traffic-light",
+        "정부",
+        "신호등",
+        "진행상태"
+      ],
+      "params": {
+        "cols": 5,
+        "rows": 7
+      },
+      "bindings": [
+        "과제명",
+        "담당",
+        "상태"
+      ],
+      "editable": [
+        "header",
+        "item",
+        "status_cell"
+      ],
+      "source": "generated:python-pptx",
+      "license": "self",
+      "recommended_use": [
+        "진행상태 점검",
+        "과제관리",
+        "정부보고서"
+      ],
+      "quality": "approved",
+      "thumbnail": null,
+      "master": "gov"
+    },
+    {
+      "id": "TBL-204",
+      "category": "TBL",
+      "name": "gov 정성·정량 평가 배점표 (행병합+합계행)",
+      "file": "decks/01_tables/TBL_gov_v1.pptx",
+      "slide": 4,
+      "anchor": "asset:TBL-204",
+      "tags": [
+        "table",
+        "gov",
+        "evaluation",
+        "score",
+        "정부",
+        "평가",
+        "배점"
+      ],
+      "params": {
+        "cols": 4,
+        "rows": 8,
+        "merged": true
+      },
+      "bindings": [
+        "평가영역",
+        "세부지표",
+        "배점",
+        "획득점수"
+      ],
+      "editable": [
+        "header",
+        "eval_group",
+        "criteria",
+        "score",
+        "total_row"
+      ],
+      "source": "generated:python-pptx",
+      "license": "self",
+      "recommended_use": [
+        "평가배점표",
+        "심사기준",
+        "정부보고서"
+      ],
+      "quality": "approved",
+      "thumbnail": null,
+      "master": "gov"
+    },
+    {
+      "id": "TBL-205",
+      "category": "TBL",
+      "name": "gov 예산·집행 현황표 (행병합+합계행)",
+      "file": "decks/01_tables/TBL_gov_v1.pptx",
+      "slide": 5,
+      "anchor": "asset:TBL-205",
+      "tags": [
+        "table",
+        "gov",
+        "budget",
+        "execution",
+        "정부",
+        "예산",
+        "집행"
+      ],
+      "params": {
+        "cols": 6,
+        "rows": 7,
+        "merged": true
+      },
+      "bindings": [
+        "구분",
+        "세부항목",
+        "예산액",
+        "집행액",
+        "집행률"
+      ],
+      "editable": [
+        "header",
+        "budget_group",
+        "item",
+        "amount",
+        "total_row"
+      ],
+      "source": "generated:python-pptx",
+      "license": "self",
+      "recommended_use": [
+        "예산집행현황",
+        "사업비 보고",
+        "정부보고서"
+      ],
+      "quality": "approved",
+      "thumbnail": null,
+      "master": "gov"
+    },
+    {
+      "id": "TBL-206",
+      "category": "TBL",
+      "name": "gov 분야별 점검 체크리스트표 (행병합+체크칩)",
+      "file": "decks/01_tables/TBL_gov_v1.pptx",
+      "slide": 6,
+      "anchor": "asset:TBL-206",
+      "tags": [
+        "table",
+        "gov",
+        "checklist",
+        "check",
+        "정부",
+        "체크리스트",
+        "점검"
+      ],
+      "params": {
+        "cols": 4,
+        "rows": 7,
+        "merged": true
+      },
+      "bindings": [
+        "구분",
+        "점검항목",
+        "확인여부"
+      ],
+      "editable": [
+        "header",
+        "check_group",
+        "item",
+        "status_chip"
+      ],
+      "source": "generated:python-pptx",
+      "license": "self",
+      "recommended_use": [
+        "점검표",
+        "완료여부 확인",
+        "정부보고서"
+      ],
+      "quality": "approved",
+      "thumbnail": null,
+      "master": "gov"
+    },
+    {
       "id": "TML-001",
       "category": "TML",
       "name": "수평 타임라인 (마일스톤 5개)",
@@ -125448,6 +126834,105 @@
       ],
       "quality": "approved",
       "thumbnail": null
+    },
+    {
+      "id": "TML-201",
+      "category": "TML",
+      "name": "gov 대형 실행 스케줄 그리드 (7개월 비균등×27컬럼, 주차 단위, 비고열 포함)",
+      "file": "decks/05_timeline/TML_gov_v1.pptx",
+      "slide": 1,
+      "anchor": "asset:TML-201",
+      "tags": [
+        "timeline",
+        "gov",
+        "gantt",
+        "grid",
+        "정부",
+        "실행계획",
+        "대형그리드",
+        "주단위",
+        "비고열"
+      ],
+      "params": {
+        "rows": 24,
+        "leaf_cols": 27,
+        "phase_groups": 7,
+        "shape_based": true,
+        "leaf_unit": "week",
+        "leaf_unit_note": "정답지 slide4.xml 실측 그대로 정밀 재현: 월 카테고리 gridSpan 6월(1)/7월(5)/8월(4)/9월(4)/10월(5)/11월(4)/12월(4)=27, 리프 라벨은 ISO 주차번호 26~52 실측값 그대로. 좌측 '구분' + 우측 '비고' 컬럼 포함, 작업행 24개(마일스톤 1행 + 세부행 5/4/2/4/8=23행, 정답지 그룹핑 패턴 반영). 행 라벨 텍스트는 재사용 가능한 일반화 표현으로 대체(원문 그대로 아님)"
+      },
+      "bindings": [
+        "phase_header",
+        "leaf_header",
+        "task_label",
+        "gantt_bar",
+        "remark_col"
+      ],
+      "editable": [
+        "phase_header",
+        "leaf_header",
+        "task_label",
+        "gantt_bar",
+        "remark_col"
+      ],
+      "source": "generated:python-pptx",
+      "license": "self",
+      "recommended_use": [
+        "실행계획서",
+        "대형 스케줄표",
+        "정부보고서"
+      ],
+      "quality": "approved",
+      "thumbnail": null,
+      "master": "gov"
+    },
+    {
+      "id": "TML-202",
+      "category": "TML",
+      "name": "gov 초대형 열 스케줄 그리드 (3개월 비균등×51컬럼, 영업일 단위)",
+      "file": "decks/05_timeline/TML_gov_v1.pptx",
+      "slide": 2,
+      "anchor": "asset:TML-202",
+      "tags": [
+        "timeline",
+        "gov",
+        "gantt",
+        "grid",
+        "정부",
+        "초대형열",
+        "세로라벨",
+        "일단위"
+      ],
+      "params": {
+        "rows": 5,
+        "leaf_cols": 51,
+        "phase_groups": 3,
+        "shape_based": true,
+        "leaf_unit": "day",
+        "leaf_unit_note": "정답지 slide6.xml 실측 그대로 정밀 재현: 월 카테고리 gridSpan 6월(7)/7월(23)/8월(21)=51, 리프 라벨은 영업일 날짜(주말 스킵) 실측값 그대로(월별 재사용되는 일자값 포함, 유일성은 상단 월 헤더가 보장). 좌측 '구분' 컬럼만(비고 없음), 작업행 5개(정답지 1-1~1-5 세부행 개수 반영). 행 라벨 텍스트는 재사용 가능한 일반화 표현으로 대체(원문 그대로 아님)"
+      },
+      "bindings": [
+        "phase_header",
+        "leaf_header",
+        "task_label",
+        "gantt_bar"
+      ],
+      "editable": [
+        "phase_header",
+        "leaf_header",
+        "task_label",
+        "gantt_bar"
+      ],
+      "source": "generated:python-pptx",
+      "license": "self",
+      "recommended_use": [
+        "초대형 스케줄표",
+        "세부일정 그리드",
+        "정부보고서"
+      ],
+      "quality": "approved",
+      "thumbnail": null,
+      "master": "gov"
     }
   ]
 }

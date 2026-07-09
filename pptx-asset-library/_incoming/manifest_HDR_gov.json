@@ -1,0 +1,242 @@
+[
+  {
+    "id": "HDR-201",
+    "category": "HDR",
+    "name": "gov 챕터 브레드크럼A · 알약형 + 셰브론 구분자",
+    "file": "decks/09_headers/HDR_gov_breadcrumb_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-201",
+    "tags": [
+      "브레드크럼",
+      "gov",
+      "챕터",
+      "내비게이션",
+      "알약형"
+    ],
+    "params": {
+      "count": 5,
+      "current_idx": 1,
+      "w_each_in": 2.05
+    },
+    "bindings": {
+      "chapters": [
+        "사업 개요",
+        "추진 전략",
+        "추진 체계",
+        "세부 추진계획",
+        "기대효과"
+      ],
+      "current": "추진 전략"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "챕터 반복 내비게이션",
+      "목차 대체 헤더"
+    ],
+    "quality": "approved",
+    "thumbnail": null,
+    "master": "gov"
+  },
+  {
+    "id": "HDR-202",
+    "category": "HDR",
+    "name": "gov 챕터 브레드크럼B · 번호원 + 연결선(완료/현재/예정 구분)",
+    "file": "decks/09_headers/HDR_gov_breadcrumb_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-202",
+    "tags": [
+      "브레드크럼",
+      "gov",
+      "챕터",
+      "내비게이션",
+      "번호원"
+    ],
+    "params": {
+      "count": 5,
+      "current_idx": 2,
+      "d_in": 0.62
+    },
+    "bindings": {
+      "chapters": [
+        "사업 개요",
+        "추진 전략",
+        "추진 체계",
+        "세부 추진계획",
+        "기대효과"
+      ],
+      "current": "추진 체계"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "챕터 반복 내비게이션",
+      "진행 단계 표시"
+    ],
+    "quality": "approved",
+    "thumbnail": null,
+    "master": "gov"
+  },
+  {
+    "id": "HDR-203",
+    "category": "HDR",
+    "name": "gov 챕터 브레드크럼C · 상단 컴팩트 스트립(반복 배치형)",
+    "file": "decks/09_headers/HDR_gov_breadcrumb_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:HDR-203",
+    "tags": [
+      "브레드크럼",
+      "gov",
+      "챕터",
+      "내비게이션",
+      "상단스트립"
+    ],
+    "params": {
+      "count": 5,
+      "current_idx": 3,
+      "w_in": 10.7
+    },
+    "bindings": {
+      "chapters": [
+        "사업 개요",
+        "추진 전략",
+        "추진 체계",
+        "세부 추진계획",
+        "기대효과"
+      ],
+      "current": "세부 추진계획"
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "콘텐츠 슬라이드 상단 반복 헤더",
+      "챕터 위치 안내"
+    ],
+    "quality": "approved",
+    "thumbnail": null,
+    "master": "gov"
+  },
+  {
+    "id": "HDR-204",
+    "category": "HDR",
+    "name": "gov 진행률 숫자 트래커A · 뱃지 5개(1/0) + 챕터 라벨 + 범례",
+    "file": "decks/09_headers/HDR_gov_progress-tracker_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:HDR-204",
+    "tags": [
+      "진행률",
+      "gov",
+      "트래커",
+      "숫자뱃지",
+      "위젯"
+    ],
+    "params": {
+      "count": 5,
+      "statuses": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "font": "number_emphasis"
+    },
+    "bindings": {
+      "chapters": [
+        "사업 개요",
+        "추진 전략",
+        "추진 체계",
+        "세부 추진계획",
+        "기대효과"
+      ],
+      "statuses": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "진행 현황 위젯",
+      "소형 재사용 컴포넌트"
+    ],
+    "quality": "approved",
+    "thumbnail": null,
+    "master": "gov"
+  },
+  {
+    "id": "HDR-205",
+    "category": "HDR",
+    "name": "gov 진행률 숫자 트래커B · 인라인 컴팩트(푸터 반복 배치용)",
+    "file": "decks/09_headers/HDR_gov_progress-tracker_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:HDR-205",
+    "tags": [
+      "진행률",
+      "gov",
+      "트래커",
+      "숫자뱃지",
+      "인라인",
+      "푸터"
+    ],
+    "params": {
+      "count": 5,
+      "statuses": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "font": "number_emphasis"
+    },
+    "bindings": {
+      "chapters": [
+        "사업 개요",
+        "추진 전략",
+        "추진 체계",
+        "세부 추진계획",
+        "기대효과"
+      ],
+      "statuses": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "editable": [
+      "text",
+      "color"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "푸터 반복 배치",
+      "소형 재사용 컴포넌트"
+    ],
+    "quality": "approved",
+    "thumbnail": null,
+    "master": "gov"
+  }
+]

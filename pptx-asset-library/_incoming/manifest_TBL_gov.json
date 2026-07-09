@@ -1,0 +1,262 @@
+[
+  {
+    "id": "TBL-201",
+    "category": "TBL",
+    "name": "gov 연도별 실행성과 비교표 (색코딩 병합헤더)",
+    "file": "decks/01_tables/TBL_gov_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:TBL-201",
+    "tags": [
+      "table",
+      "gov",
+      "merged-header",
+      "comparison",
+      "정부",
+      "병합헤더",
+      "비교"
+    ],
+    "params": {
+      "cols": 6,
+      "rows": 6,
+      "merged": true
+    },
+    "bindings": [
+      "구분",
+      "연도값",
+      "증감"
+    ],
+    "editable": [
+      "header",
+      "row_label",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "실행계획서",
+      "연도별 성과비교",
+      "정부보고서"
+    ],
+    "quality": "approved",
+    "thumbnail": null,
+    "master": "gov"
+  },
+  {
+    "id": "TBL-202",
+    "category": "TBL",
+    "name": "gov 추진체계 카테고리 구분표 (보라 2단헤더)",
+    "file": "decks/01_tables/TBL_gov_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:TBL-202",
+    "tags": [
+      "table",
+      "gov",
+      "category",
+      "purple",
+      "정부",
+      "카테고리",
+      "2단헤더"
+    ],
+    "params": {
+      "cols": 7,
+      "rows": 6,
+      "merged": true
+    },
+    "bindings": [
+      "구분",
+      "카테고리",
+      "세부지표"
+    ],
+    "editable": [
+      "header",
+      "category_header",
+      "sub_header",
+      "cell_value"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "추진체계",
+      "역할분담",
+      "정부보고서"
+    ],
+    "quality": "approved",
+    "thumbnail": null,
+    "master": "gov"
+  },
+  {
+    "id": "TBL-203",
+    "category": "TBL",
+    "name": "gov 과제 진행상태 신호등표",
+    "file": "decks/01_tables/TBL_gov_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:TBL-203",
+    "tags": [
+      "table",
+      "gov",
+      "status",
+      "traffic-light",
+      "정부",
+      "신호등",
+      "진행상태"
+    ],
+    "params": {
+      "cols": 5,
+      "rows": 7
+    },
+    "bindings": [
+      "과제명",
+      "담당",
+      "상태"
+    ],
+    "editable": [
+      "header",
+      "item",
+      "status_cell"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "진행상태 점검",
+      "과제관리",
+      "정부보고서"
+    ],
+    "quality": "approved",
+    "thumbnail": null,
+    "master": "gov"
+  },
+  {
+    "id": "TBL-204",
+    "category": "TBL",
+    "name": "gov 정성·정량 평가 배점표 (행병합+합계행)",
+    "file": "decks/01_tables/TBL_gov_v1.pptx",
+    "slide": 4,
+    "anchor": "asset:TBL-204",
+    "tags": [
+      "table",
+      "gov",
+      "evaluation",
+      "score",
+      "정부",
+      "평가",
+      "배점"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 8,
+      "merged": true
+    },
+    "bindings": [
+      "평가영역",
+      "세부지표",
+      "배점",
+      "획득점수"
+    ],
+    "editable": [
+      "header",
+      "eval_group",
+      "criteria",
+      "score",
+      "total_row"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "평가배점표",
+      "심사기준",
+      "정부보고서"
+    ],
+    "quality": "approved",
+    "thumbnail": null,
+    "master": "gov"
+  },
+  {
+    "id": "TBL-205",
+    "category": "TBL",
+    "name": "gov 예산·집행 현황표 (행병합+합계행)",
+    "file": "decks/01_tables/TBL_gov_v1.pptx",
+    "slide": 5,
+    "anchor": "asset:TBL-205",
+    "tags": [
+      "table",
+      "gov",
+      "budget",
+      "execution",
+      "정부",
+      "예산",
+      "집행"
+    ],
+    "params": {
+      "cols": 6,
+      "rows": 7,
+      "merged": true
+    },
+    "bindings": [
+      "구분",
+      "세부항목",
+      "예산액",
+      "집행액",
+      "집행률"
+    ],
+    "editable": [
+      "header",
+      "budget_group",
+      "item",
+      "amount",
+      "total_row"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "예산집행현황",
+      "사업비 보고",
+      "정부보고서"
+    ],
+    "quality": "approved",
+    "thumbnail": null,
+    "master": "gov"
+  },
+  {
+    "id": "TBL-206",
+    "category": "TBL",
+    "name": "gov 분야별 점검 체크리스트표 (행병합+체크칩)",
+    "file": "decks/01_tables/TBL_gov_v1.pptx",
+    "slide": 6,
+    "anchor": "asset:TBL-206",
+    "tags": [
+      "table",
+      "gov",
+      "checklist",
+      "check",
+      "정부",
+      "체크리스트",
+      "점검"
+    ],
+    "params": {
+      "cols": 4,
+      "rows": 7,
+      "merged": true
+    },
+    "bindings": [
+      "구분",
+      "점검항목",
+      "확인여부"
+    ],
+    "editable": [
+      "header",
+      "check_group",
+      "item",
+      "status_chip"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "점검표",
+      "완료여부 확인",
+      "정부보고서"
+    ],
+    "quality": "approved",
+    "thumbnail": null,
+    "master": "gov"
+  }
+]

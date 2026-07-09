@@ -1,26 +1,26 @@
 # 에셋 라이브러리 인덱스
 
-> 자동 생성(merge_manifest.py). 총 **2400개** 에셋 / 32조각 병합.
+> 자동 생성(merge_manifest.py). 총 **2430개** 에셋 / 38조각 병합.
 
 ## 카테고리별 현황
 
 | 코드 | 카테고리 | 개수 |
 |---|---|---|
-| TBL | 표 디자인 | 200 |
-| KPI | KPI 카드/숫자 강조 | 200 |
-| PRC | 프로세스 화살표/단계 흐름 | 200 |
+| TBL | 표 디자인 | 206 |
+| KPI | KPI 카드/숫자 강조 | 206 |
+| PRC | 프로세스 화살표/단계 흐름 | 206 |
 | CMP | 비교표/평가표/매트릭스 | 200 |
-| TML | 타임라인/로드맵 | 200 |
+| TML | 타임라인/로드맵 | 202 |
 | ORG | 조직도/추진체계도 | 200 |
 | SVC | 서비스 구조도/사업 흐름/운영 프로세스 | 200 |
 | CHT | 차트 스타일 | 200 |
-| HDR | 섹션 헤더/배지/라벨/강조 박스 | 200 |
-| BGP | 표지/섹션 배경·패널 | 200 |
+| HDR | 섹션 헤더/배지/라벨/강조 박스 | 205 |
+| BGP | 표지/섹션 배경·패널 | 205 |
 | ICN | 아이콘형 도식 | 200 |
 | MCK | 목업/디바이스 프레임 | 200 |
-| **합계** | | **2400** |
+| **합계** | | **2430** |
 
-## TBL — 표 디자인 (200)
+## TBL — 표 디자인 (206)
 
 | ID | 이름 | 파일 | S | 태그 | 추천용도 | 라이선스 |
 |---|---|---|---|---|---|---|
@@ -224,8 +224,14 @@
 | TBL-198 | 핀테크 서비스 우측정렬 수치표 (blue_500·5열) | TBL_bulk_numeric_v1.pptx | 4 | table,numeric,right-align,blue_500,재무정렬 | 재무상태표,회계 요약,수치정렬 | self |
 | TBL-199 | 에듀테크 플랫폼 우측정렬 수치표 (teal_500·4열) | TBL_bulk_numeric_v1.pptx | 5 | table,numeric,right-align,teal_500,재무정렬 | 재무상태표,회계 요약,수치정렬 | self |
 | TBL-200 | 제조 디지털전환 우측정렬 수치표 (purple_600·5열) | TBL_bulk_numeric_v1.pptx | 6 | table,numeric,right-align,purple_600,재무정렬 | 재무상태표,회계 요약,수치정렬 | self |
+| TBL-201 | gov 연도별 실행성과 비교표 (색코딩 병합헤더) | TBL_gov_v1.pptx | 1 | table,gov,merged-header,comparison,정부 | 실행계획서,연도별 성과비교,정부보고서 | self |
+| TBL-202 | gov 추진체계 카테고리 구분표 (보라 2단헤더) | TBL_gov_v1.pptx | 2 | table,gov,category,purple,정부 | 추진체계,역할분담,정부보고서 | self |
+| TBL-203 | gov 과제 진행상태 신호등표 | TBL_gov_v1.pptx | 3 | table,gov,status,traffic-light,정부 | 진행상태 점검,과제관리,정부보고서 | self |
+| TBL-204 | gov 정성·정량 평가 배점표 (행병합+합계행) | TBL_gov_v1.pptx | 4 | table,gov,evaluation,score,정부 | 평가배점표,심사기준,정부보고서 | self |
+| TBL-205 | gov 예산·집행 현황표 (행병합+합계행) | TBL_gov_v1.pptx | 5 | table,gov,budget,execution,정부 | 예산집행현황,사업비 보고,정부보고서 | self |
+| TBL-206 | gov 분야별 점검 체크리스트표 (행병합+체크칩) | TBL_gov_v1.pptx | 6 | table,gov,checklist,check,정부 | 점검표,완료여부 확인,정부보고서 | self |
 
-## KPI — KPI 카드/숫자 강조 (200)
+## KPI — KPI 카드/숫자 강조 (206)
 
 | ID | 이름 | 파일 | S | 태그 | 추천용도 | 라이선스 |
 |---|---|---|---|---|---|---|
@@ -429,8 +435,14 @@
 | KPI-198 | 통계 밴드 4종 (navy_600) | KPI_bulk_band_v1.pptx | 11 | KPI,성과지표,통계 밴드,통계밴드,가로띠 | 종합성과,핵심지표,한눈요약 | self |
 | KPI-199 | 통계 밴드 5종 (navy_800) | KPI_bulk_band_v1.pptx | 12 | KPI,성과지표,통계 밴드,통계밴드,가로띠 | 종합성과,핵심지표,한눈요약 | self |
 | KPI-200 | 통계 밴드 2종 (blue_500) | KPI_bulk_band_v1.pptx | 13 | KPI,성과지표,통계 밴드,통계밴드,가로띠 | 종합성과,핵심지표,한눈요약 | self |
+| KPI-201 | [gov] 배지형 지표 4종(Paperlogy) | KPI_gov_callout_v1.pptx | 1 | KPI,gov,배지,원형,핵심수치 | 핵심지표,실적강조,한눈요약 | self |
+| KPI-202 | [gov] 후프(ring) 프로그레스 3종 | KPI_gov_callout_v1.pptx | 2 | KPI,gov,후프,링,도넛 | 달성률,목표대비,진행률 | self |
+| KPI-203 | [gov] hero 대형 숫자강조 콜아웃 | KPI_gov_callout_v1.pptx | 3 | KPI,gov,hero,대형숫자,단일강조 | 핵심성과대표,표지강조,메인지표 | self |
+| KPI-204 | [gov] quad 2x2 그리드 4지표 | KPI_gov_callout_v1.pptx | 4 | KPI,gov,quad,2x2,그리드 | 종합성과,핵심지표,한눈요약 | self |
+| KPI-205 | [gov] 트렌드 콜아웃 3종 (증감+스파크라인) | KPI_gov_callout_v1.pptx | 5 | KPI,gov,트렌드,스파크라인,증감 | 성과추이,증감비교,성장강조 | self |
+| KPI-206 | [gov] 카드 로우 가로 4카드 | KPI_gov_callout_v1.pptx | 6 | KPI,gov,카드로우,가로반복,카드형 | 성과요약,지표나열,반복레이아웃 | self |
 
-## PRC — 프로세스 화살표/단계 흐름 (200)
+## PRC — 프로세스 화살표/단계 흐름 (206)
 
 | ID | 이름 | 파일 | S | 태그 | 추천용도 | 라이선스 |
 |---|---|---|---|---|---|---|
@@ -634,6 +646,12 @@
 | PRC-198 | 좌우대비 4단계 (틸) | PRC_bulk_compare_v1.pptx | 10 | 프로세스,좌우대비,As-Is,To-Be,4단계 | 현재대비개선,전후비교,개선효과 | self |
 | PRC-199 | 좌우대비 5단계 (틸) | PRC_bulk_compare_v1.pptx | 11 | 프로세스,좌우대비,As-Is,To-Be,5단계 | 현재대비개선,전후비교,개선효과 | self |
 | PRC-200 | 좌우대비 6단계 (틸) | PRC_bulk_compare_v1.pptx | 12 | 프로세스,좌우대비,As-Is,To-Be,6단계 | 현재대비개선,전후비교,개선효과 | self |
+| PRC-201 | [gov] 단계 박스+화살표 수평흐름 5단 | PRC_gov_flow_v1.pptx | 1 | 프로세스,gov,수평흐름,박스화살표,5단계 | 추진절차,업무흐름,단계흐름 | self |
+| PRC-202 | [gov] 세로 스텝 계단형 4단(상승) | PRC_gov_flow_v1.pptx | 2 | 프로세스,gov,계단형,세로스텝,상승 | 단계적확산,추진로드맵,점진고도화 | self |
+| PRC-203 | [gov] 갈매기(chevron) 흐름 5단 | PRC_gov_flow_v1.pptx | 3 | 프로세스,gov,chevron,갈매기,5단계 | 민원처리절차,심사절차,표준프로세스 | self |
+| PRC-204 | [gov] 순환(cycle) 4단계 PDCA형 | PRC_gov_flow_v1.pptx | 4 | 프로세스,gov,순환,사이클,PDCA | 환류체계,지속개선,운영사이클 | self |
+| PRC-205 | [gov] 허브-스포크 5방사 | PRC_gov_flow_v1.pptx | 5 | 프로세스,gov,허브앤스포크,방사형,중앙집중 | 추진체계,통합운영,연계구조 | self |
+| PRC-206 | [gov] 게이트형 파이프라인 (판단+반려경로) | PRC_gov_flow_v1.pptx | 6 | 프로세스,gov,파이프라인,게이트,판단 | 품질게이트,검수절차,승인프로세스 | self |
 
 ## CMP — 비교표/평가표/매트릭스 (200)
 
@@ -840,7 +858,7 @@
 | CMP-199 | 텍스트 제안서 블록 (2섹션) | CMP_bulk_textprop_v1.pptx | 13 | 제안서,텍스트블록,불릿,요약패널,cyan | 제안 요약,본문 채움,설명 슬라이드 | self |
 | CMP-200 | 텍스트 제안서 블록 (3섹션) | CMP_bulk_textprop_v1.pptx | 14 | 제안서,텍스트블록,불릿,요약패널,purple | 제안 요약,본문 채움,설명 슬라이드 | self |
 
-## TML — 타임라인/로드맵 (200)
+## TML — 타임라인/로드맵 (202)
 
 | ID | 이름 | 파일 | S | 태그 | 추천용도 | 라이선스 |
 |---|---|---|---|---|---|---|
@@ -1044,6 +1062,8 @@
 | TML-198 | 마일스톤 카드 로우 (6카드) | TML_bulk_mcardrow_v1.pptx | 16 | 타임라인,마일스톤,카드,점연결,추진일정 | 추진일정,주요 마일스톤,로드맵 | self |
 | TML-199 | 간트 (도형막대) (6트랙) | TML_bulk_gantt_v1.pptx | 16 | 타임라인,간트,다중트랙,막대,추진일정 | 추진일정,병행 작업 일정,로드맵 | self |
 | TML-200 | 단계 셰브론 로드맵 (6단계) | TML_bulk_stagechevron_v1.pptx | 16 | 로드맵,단계별,셰브론,산출물,추진일정 | 단계별 계획,산출물 매핑,로드맵 | self |
+| TML-201 | gov 대형 실행 스케줄 그리드 (7개월 비균등×27컬럼, 주차 단위, 비고열 포함) | TML_gov_v1.pptx | 1 | timeline,gov,gantt,grid,정부 | 실행계획서,대형 스케줄표,정부보고서 | self |
+| TML-202 | gov 초대형 열 스케줄 그리드 (3개월 비균등×51컬럼, 영업일 단위) | TML_gov_v1.pptx | 2 | timeline,gov,gantt,grid,정부 | 초대형 스케줄표,세부일정 그리드,정부보고서 | self |
 
 ## ORG — 조직도/추진체계도 (200)
 
@@ -1660,7 +1680,7 @@
 | CHT-199 | 레이더 RADAR (3계열·5항목) | CHT_bulk_radar_v2.pptx | 4 | 차트,radar,radar,3계열,5항목 | 역량 진단,다축 비교,gap 분석 | self |
 | CHT-200 | 레이더 RADAR_MARKERS (2계열·4항목) | CHT_bulk_radar_v2.pptx | 5 | 차트,radar,radar_markers,2계열,4항목 | 역량 진단,다축 비교,gap 분석 | self |
 
-## HDR — 섹션 헤더/배지/라벨/강조 박스 (200)
+## HDR — 섹션 헤더/배지/라벨/강조 박스 (205)
 
 | ID | 이름 | 파일 | S | 태그 | 추천용도 | 라이선스 |
 |---|---|---|---|---|---|---|
@@ -1864,8 +1884,13 @@
 | HDR-198 | 리본 배지 세트 (레드) | HDR_bulk_ribbon-set_v1.pptx | 1 | 배지,리본,태그,세트,레드 | 분류 태그,상태 라벨 | self |
 | HDR-199 | 탭 헤더 세트 (네이비) | HDR_bulk_tab-header_v1.pptx | 1 | 탭,헤더,네비,세트,네이비 | 탭 네비게이션,섹션 헤더 | self |
 | HDR-200 | 탭 헤더 세트 (블루) | HDR_bulk_tab-header_v1.pptx | 1 | 탭,헤더,네비,세트,블루 | 탭 네비게이션,섹션 헤더 | self |
+| HDR-201 | gov 챕터 브레드크럼A · 알약형 + 셰브론 구분자 | HDR_gov_breadcrumb_v1.pptx | 1 | 브레드크럼,gov,챕터,내비게이션,알약형 | 챕터 반복 내비게이션,목차 대체 헤더 | self |
+| HDR-202 | gov 챕터 브레드크럼B · 번호원 + 연결선(완료/현재/예정 구분) | HDR_gov_breadcrumb_v1.pptx | 2 | 브레드크럼,gov,챕터,내비게이션,번호원 | 챕터 반복 내비게이션,진행 단계 표시 | self |
+| HDR-203 | gov 챕터 브레드크럼C · 상단 컴팩트 스트립(반복 배치형) | HDR_gov_breadcrumb_v1.pptx | 3 | 브레드크럼,gov,챕터,내비게이션,상단스트립 | 콘텐츠 슬라이드 상단 반복 헤더,챕터 위치 안내 | self |
+| HDR-204 | gov 진행률 숫자 트래커A · 뱃지 5개(1/0) + 챕터 라벨 + 범례 | HDR_gov_progress-tracker_v1.pptx | 1 | 진행률,gov,트래커,숫자뱃지,위젯 | 진행 현황 위젯,소형 재사용 컴포넌트 | self |
+| HDR-205 | gov 진행률 숫자 트래커B · 인라인 컴팩트(푸터 반복 배치용) | HDR_gov_progress-tracker_v1.pptx | 2 | 진행률,gov,트래커,숫자뱃지,인라인 | 푸터 반복 배치,소형 재사용 컴포넌트 | self |
 
-## BGP — 표지/섹션 배경·패널 (200)
+## BGP — 표지/섹션 배경·패널 (205)
 
 | ID | 이름 | 파일 | S | 태그 | 추천용도 | 라이선스 |
 |---|---|---|---|---|---|---|
@@ -2069,6 +2094,11 @@
 | BGP-198 | 대각 그라데이션 표지 · navy/a90 | BGP_bulk_diaggrad_v1.pptx | 13 | 표지,배경,그라데이션,기하,navy | 표지 | self |
 | BGP-199 | 대각 그라데이션 표지 · blue/a90 | BGP_bulk_diaggrad_v1.pptx | 14 | 표지,배경,그라데이션,기하,blue | 표지 | self |
 | BGP-200 | 대각 그라데이션 표지 · teal/a90 | BGP_bulk_diaggrad_v1.pptx | 15 | 표지,배경,그라데이션,기하,teal | 표지 | self |
+| BGP-201 | gov 표지A · 네이비 풀블리드 + 하단 사진 플레이스홀더 | BGP_gov_cover_v1.pptx | 1 | 표지,gov,네이비풀블리드,사진플레이스홀더 | 표지 | self |
+| BGP-202 | gov 표지B · 대각 그라데이션(네이비→퍼플) + 우 세로 사진 플레이스홀더 | BGP_gov_cover_v1.pptx | 2 | 표지,gov,그라데이션,사진플레이스홀더 | 표지 | self |
+| BGP-203 | gov 표지C · 상단 네이비 밴드 + 코너브래킷 사진 프레임 | BGP_gov_cover_v1.pptx | 3 | 표지,gov,상단밴드,코너브래킷,사진플레이스홀더 | 표지 | self |
+| BGP-204 | gov 섹션 간지A · 네이비 풀블리드 + 대형 번호 + 섹션 대제목 | BGP_gov_interstitial_v1.pptx | 1 | 섹션간지,gov,네이비풀블리드,대형번호 | 섹션 구분,간지 | self |
+| BGP-205 | gov 섹션 간지B · 라이트 패널 + 퍼플 번호 배지 + 섹션 대제목 | BGP_gov_interstitial_v1.pptx | 2 | 섹션간지,gov,라이트패널,퍼플배지 | 섹션 구분,간지 | self |
 
 ## ICN — 아이콘형 도식 (200)
 

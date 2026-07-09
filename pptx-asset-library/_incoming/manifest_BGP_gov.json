@@ -1,0 +1,194 @@
+[
+  {
+    "id": "BGP-201",
+    "category": "BGP",
+    "name": "gov 표지A · 네이비 풀블리드 + 하단 사진 플레이스홀더",
+    "file": "decks/10_backgrounds/BGP_gov_cover_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:BGP-201",
+    "tags": [
+      "표지",
+      "gov",
+      "네이비풀블리드",
+      "사진플레이스홀더"
+    ],
+    "params": {
+      "style": "gov-cover-navy-bottom-photo",
+      "canvas": "gov"
+    },
+    "bindings": {
+      "title": "사업명을 입력하세요",
+      "subtitle": "제안서 부제목을 입력하세요",
+      "year": "2026",
+      "agency": "기관명을 입력하세요",
+      "part": "00"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null,
+    "master": "gov"
+  },
+  {
+    "id": "BGP-202",
+    "category": "BGP",
+    "name": "gov 표지B · 대각 그라데이션(네이비→퍼플) + 우 세로 사진 플레이스홀더",
+    "file": "decks/10_backgrounds/BGP_gov_cover_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:BGP-202",
+    "tags": [
+      "표지",
+      "gov",
+      "그라데이션",
+      "사진플레이스홀더"
+    ],
+    "params": {
+      "style": "gov-cover-diagonal-gradient-right-photo",
+      "canvas": "gov",
+      "gradient": true
+    },
+    "bindings": {
+      "title": "사업명을 입력하세요",
+      "subtitle": "제안서 부제목을 입력하세요",
+      "year": "2026",
+      "agency": "기관명을 입력하세요",
+      "part": "00"
+    },
+    "editable": [
+      "color",
+      "text",
+      "gradient"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null,
+    "master": "gov"
+  },
+  {
+    "id": "BGP-203",
+    "category": "BGP",
+    "name": "gov 표지C · 상단 네이비 밴드 + 코너브래킷 사진 프레임",
+    "file": "decks/10_backgrounds/BGP_gov_cover_v1.pptx",
+    "slide": 3,
+    "anchor": "asset:BGP-203",
+    "tags": [
+      "표지",
+      "gov",
+      "상단밴드",
+      "코너브래킷",
+      "사진플레이스홀더"
+    ],
+    "params": {
+      "style": "gov-cover-top-band-corner-frame",
+      "canvas": "gov"
+    },
+    "bindings": {
+      "title": "사업명을 입력하세요",
+      "subtitle": "제안서 부제목을 입력하세요",
+      "year": "2026",
+      "agency": "기관명을 입력하세요",
+      "part": "00"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "표지"
+    ],
+    "quality": "approved",
+    "thumbnail": null,
+    "master": "gov"
+  },
+  {
+    "id": "BGP-204",
+    "category": "BGP",
+    "name": "gov 섹션 간지A · 네이비 풀블리드 + 대형 번호 + 섹션 대제목",
+    "file": "decks/10_backgrounds/BGP_gov_interstitial_v1.pptx",
+    "slide": 1,
+    "anchor": "asset:BGP-204",
+    "tags": [
+      "섹션간지",
+      "gov",
+      "네이비풀블리드",
+      "대형번호"
+    ],
+    "params": {
+      "style": "gov-interstitial-navy-bignum",
+      "canvas": "gov"
+    },
+    "bindings": {
+      "part": "01",
+      "number": "01",
+      "title": "제목을 입력하세요",
+      "desc": "본 섹션의 개요를 입력하세요.",
+      "year": "2026",
+      "program": "사업명을 입력하세요"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분",
+      "간지"
+    ],
+    "quality": "approved",
+    "thumbnail": null,
+    "master": "gov"
+  },
+  {
+    "id": "BGP-205",
+    "category": "BGP",
+    "name": "gov 섹션 간지B · 라이트 패널 + 퍼플 번호 배지 + 섹션 대제목",
+    "file": "decks/10_backgrounds/BGP_gov_interstitial_v1.pptx",
+    "slide": 2,
+    "anchor": "asset:BGP-205",
+    "tags": [
+      "섹션간지",
+      "gov",
+      "라이트패널",
+      "퍼플배지"
+    ],
+    "params": {
+      "style": "gov-interstitial-panel-badge",
+      "canvas": "gov"
+    },
+    "bindings": {
+      "part": "02",
+      "number": "02",
+      "title": "제목을 입력하세요",
+      "desc": "본 섹션의 개요를 입력하세요.",
+      "year": "2026",
+      "program": "사업명을 입력하세요"
+    },
+    "editable": [
+      "color",
+      "text"
+    ],
+    "source": "generated:python-pptx",
+    "license": "self",
+    "recommended_use": [
+      "섹션 구분",
+      "간지"
+    ],
+    "quality": "approved",
+    "thumbnail": null,
+    "master": "gov"
+  }
+]
