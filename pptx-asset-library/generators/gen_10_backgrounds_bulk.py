@@ -10,7 +10,8 @@
 - 색은 c.C[토큰]/c.role만. 그라데이션은 gbox()로 같은 계열 2~3 stop.
 """
 import sys
-sys.path.insert(0, '/home/pabang/myapp/.claude/pptx-asset-library/generators/lib')
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'lib'))
 import common as c
 from pptx.util import Inches, Pt
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR

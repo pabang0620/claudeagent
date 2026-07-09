@@ -5,7 +5,8 @@ v1(KPI-001~010)과 형태를 달리한 8개 KPI 에셋. 네이티브 도형+텍�
 다중도형 에셋은 c.group_asset 으로 asset:<ID> 그룹 1개로 묶는다(id_caption/제목 제외).
 """
 import sys
-sys.path.insert(0, '/home/pabang/myapp/.claude/pptx-asset-library/generators/lib')
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'lib'))
 import common as c
 from pptx.util import Inches, Pt
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR

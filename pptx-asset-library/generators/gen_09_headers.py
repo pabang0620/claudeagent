@@ -10,7 +10,8 @@ c.group_asset(slide, shapes, ID)로 <p:grpSp>(asset:<ID>)로 묶는다.
 속 빈 배경 앵커(과거 결함) 제거. id_caption은 그룹에 넣지 않는다(좌상단 라벨).
 """
 import sys
-sys.path.insert(0, '/home/pabang/myapp/.claude/pptx-asset-library/generators/lib')
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'lib'))
 import common as c
 from pptx.util import Inches, Pt
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR

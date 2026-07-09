@@ -8,7 +8,8 @@
 네이티브 도형(사각/원/화살표/오각/계단)+커넥터만 사용. SmartArt·이미지 금지.
 """
 import sys
-sys.path.insert(0, '/home/pabang/myapp/.claude/pptx-asset-library/generators/lib')
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'lib'))
 import common as c
 from pptx.util import Inches, Pt, Emu
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR

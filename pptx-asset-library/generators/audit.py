@@ -7,7 +7,7 @@
 import json, os, zipfile, re, collections
 from pptx import Presentation
 
-ROOT = "/home/pabang/myapp/.claude/pptx-asset-library"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ALLOW_PIC = {"BGP", "ICN", "MCK"}  # 이미지 정당 카테고리(배경/아이콘/목업)
 
 def slide_xml(path, idx):

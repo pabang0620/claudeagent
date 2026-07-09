@@ -1,0 +1,5 @@
+python-pptx==1.0.2
+lxml==6.1.1
+# 아래는 선택 의존성 — LibreOffice(soffice)가 설치된 경우에만 common.try_thumbnail()이 사용.
+# soffice 미설치 시 try_thumbnail은 None을 반환하며 이는 정상 동작(에셋 생성 자체에는 불필요).
+pymupdf

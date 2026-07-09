@@ -10,7 +10,8 @@
 - 파일당 ≤25 슬라이드. 1슬라이드 1에셋. 마지막에 c.write_fragment('TBL_bulk', entries) 1회.
 """
 import sys
-sys.path.insert(0, '/home/pabang/myapp/.claude/pptx-asset-library/generators/lib')
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'lib'))
 import common as c
 from pptx.util import Inches, Pt
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR

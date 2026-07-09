@@ -9,7 +9,8 @@ BGP-001 ~ BGP-012. 전부 python-pptx 네이티브 도형(그라데이션 포함
 - 텍스트 자리는 더미("2026","사업명","PART 01","제목을 입력하세요").
 """
 import sys
-sys.path.insert(0, '/home/pabang/myapp/.claude/pptx-asset-library/generators/lib')
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'lib'))
 import common as c
 from pptx.util import Inches, Pt
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR

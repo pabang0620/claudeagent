@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 """CMP 카테고리(비교표/평가표/매트릭스) 에셋 생성 — CMP-001~CMP-010."""
 import sys
-sys.path.insert(0, '/home/pabang/myapp/.claude/pptx-asset-library/generators/lib')
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'lib'))
 import common as c
 from pptx.util import Inches, Pt, Emu
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR

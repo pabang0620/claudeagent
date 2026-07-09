@@ -7,7 +7,8 @@ KPI 대량 확충 생성기 (KPI-019 ~ KPI-200, +182)
 - 색은 c.role / c.C 명명키만. 페이지이미지·SmartArt 금지, 네이티브 도형+텍스트만.
 """
 import sys, math
-sys.path.insert(0, '/home/pabang/myapp/.claude/pptx-asset-library/generators/lib')
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'lib'))
 import common as c
 from pptx.util import Inches, Pt
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR

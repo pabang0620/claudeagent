@@ -8,7 +8,8 @@
 출력: decks/01_tables/TBL_gov_v1.pptx (신규 파일). 매니페스트: _incoming/manifest_TBL_gov.json (고유 프래그먼트).
 """
 import sys
-sys.path.insert(0, '/home/pabang/myapp/.claude/pptx-asset-library/generators/lib')
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'lib'))
 import common as c
 from pptx.util import Inches, Pt, Emu
 from pptx.dml.color import RGBColor

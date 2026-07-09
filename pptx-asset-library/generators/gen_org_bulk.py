@@ -16,7 +16,8 @@
 - MSO_SHAPE 는 사전 조회 상수화. 리터럴 중복 금지(라벨/색 풀 상수화).
 """
 import sys
-sys.path.insert(0, '/home/pabang/myapp/.claude/pptx-asset-library/generators/lib')
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'lib'))
 import common as c
 from pptx.util import Inches, Pt
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR

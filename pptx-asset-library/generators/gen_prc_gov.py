@@ -14,7 +14,8 @@ ID: PRC-201 ~ PRC-206 (기존 PRC-001~200 다음 free 대역, manifest.json 확�
 매니페스트 조각: _incoming/manifest_PRC_gov.json (기존 manifest_PRC*.json 미변경)
 """
 import sys, math
-sys.path.insert(0, '/home/pabang/myapp/.claude/pptx-asset-library/generators/lib')
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'lib'))
 import common as c
 from pptx import Presentation
 from pptx.util import Inches, Pt, Emu

@@ -14,8 +14,8 @@
 - 파일당 ≤25 슬라이드. 1슬라이드 1에셋. 마지막에 c.write_fragment('TBL_bulk2', entries) 1회.
 """
 import sys, os
-sys.path.insert(0, '/home/pabang/myapp/.claude/pptx-asset-library/generators/lib')
-sys.path.insert(0, '/home/pabang/myapp/.claude/pptx-asset-library/generators')
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'lib'))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import common as c
 import gen_tbl_bulk as g  # 14개 패밀리 렌더러 + 헬퍼 재사용
 

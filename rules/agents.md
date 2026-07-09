@@ -20,6 +20,7 @@
 | **HWPX 문서 생성** | 계약서, 용역계약서, 제안요청서, 보고서, 공문, 기안문, 계획서, 회의록 → .hwpx 파일 생성 | hwp-generator |
 | **DOCX 문서 생성** | 계약서, 보고서, 제안서, 공문서 → .docx 파일 생성 (md/README/마크다운은 해당 없음) | doc-generator |
 | **PT/발표자료** | "PT 만들어", "제안서 슬라이드", "발표자료", RFP 제안 발표자료, PPTX | proposal-pt-builder |
+| **PPTX 에셋 조각 생성** | "pptx 에셋 생성", "슬라이드 조각 만들어줘", "python-pptx로 생성", "compose.mjs 수정/디버깅", "매니페스트 등록", "audit.py 실패 수정" → 에셋 라이브러리 조각 생성·병합·검증 (최종 PT 조립은 proposal-pt-builder) | pptx-asset-generator |
 | **Playwright 검증** | "playwright", "검증", "기능 눌러봐", "개발자모드 켜고", "브라우저 운전", "기능 전체 검증" | playwright-verify-loop |
 | **E2E 테스트 코드** | "E2E 테스트 작성", "playwright test 스위트", "테스트 코드 만들어" | e2e-runner |
 | **에이전트 평가** | 에이전트 정의파일 품질 점검·개선 | agent-evaluator-v2 |
@@ -88,7 +89,8 @@ Located in `~/.claude/agents/`:
 | flutter-game-builder | Flutter 게임 APK·웹 빌드 | Flutter 빌드 요청 |
 | agent-evaluator-v2 | 에이전트 정의파일 3계층 100점 평가 (정적 린트·트리거 F1 → 9 judge 병렬 → 근거잠금 채점·회귀 비교). v1은 agents-archive/로 퇴역 | 에이전트 생성·수정 후 (표준) |
 | skill-evaluator | 스킬(.md) 품질 평가·개선 (100점 척도) | 스킬 생성·수정 후 |
-| proposal-pt-builder | 정부사업 RFP 제안 PT → Marp+PPTX | PT/발표자료 요청 시 |
+| proposal-pt-builder | 정부사업 RFP 제안 PT → 에셋 라이브러리 조합 네이티브 PPTX (standard/gov 듀얼 트랙 자동 인지) | PT/발표자료 요청 시 |
+| pptx-asset-generator | PPT 에셋 "조각"(표·KPI·프로세스·비교표·타임라인·조직도·차트·헤더) python-pptx/OOXML 생성·병합·검증, compose.mjs 파이프라인 확장. 최종 PT 조립은 담당 아님(→ proposal-pt-builder) | "pptx 에셋 생성", "슬라이드 조각 만들어줘", "compose.mjs 수정/디버깅", "매니페스트 등록" |
 | hwp-generator | HWPX 공문서 생성 (계약서·제안요청서·보고서·공문·계획서·회의록) | "hwp 만들어", "계약서", "제안요청서", ".hwpx" 요청 시 |
 | review-plan-builder | 리뷰 결과 재검토 → 수정 플랜 수립 → 병렬 검증 루프(2회 연속 클린) → FINAL_PLAN.md → 실행 직전 중단 | "검증해줘", "플랜 만들어줘", "수정 계획 세워줘" |
 | meeting-report-writer | 【보고용】 요점메모(1차)+녹취록(보조)으로 발주처 보고용 정식 업무회의록 작성. 발주처 반응·승인·지시 중심, 우리 발표는 축소, 화자 매핑(콘진원팀장님↔참석자N) | "보고용 회의록", "정식 회의록", "업무회의록 만들어줘" |

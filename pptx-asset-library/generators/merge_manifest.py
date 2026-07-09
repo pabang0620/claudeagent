@@ -5,7 +5,7 @@ INDEX.md(사람용 인덱스)를 재생성한다. 매 웨이브 종료 후 실�
 """
 import json, os, glob, collections
 
-ROOT = "/home/pabang/myapp/.claude/pptx-asset-library"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 def main():
     man = json.load(open(os.path.join(ROOT, "manifest.json"), encoding="utf-8"))

@@ -8,7 +8,8 @@ python-pptx 네이티브 차트(add_chart)만 사용. 파라미터화 스윕:
 파일당 ≤20 슬라이드로 분산 저장. 매니페스트 조각 1회 기록(c.write_fragment).
 """
 import sys, random, itertools
-sys.path.insert(0, '/home/pabang/myapp/.claude/pptx-asset-library/generators/lib')
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'lib'))
 import common as c
 from pptx.util import Inches, Pt
 from pptx.oxml.ns import qn

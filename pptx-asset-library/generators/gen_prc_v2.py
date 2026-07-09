@@ -17,7 +17,8 @@ v1(셰브론/박스흐름/원형·세로)과 구조가 겹치지 않는 8개 프
   PRC-020 원형 5단계 순환    decks/03_process/PRC_circular5_v2.pptx
 """
 import sys, math
-sys.path.insert(0, '/home/pabang/myapp/.claude/pptx-asset-library/generators/lib')
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'lib'))
 import common as c
 from pptx.util import Inches, Pt
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR

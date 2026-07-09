@@ -10,7 +10,8 @@ v1과 다른 형태로 8종 신규:
 색은 c.role / c.C 만 사용. 날짜견적 금지(M1/1단계/Q1 상대표기). 라벨은 제안서 더미.
 """
 import sys, math
-sys.path.insert(0, '/home/pabang/myapp/.claude/pptx-asset-library/generators/lib')
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'lib'))
 import common as c
 from pptx.util import Inches, Pt
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR

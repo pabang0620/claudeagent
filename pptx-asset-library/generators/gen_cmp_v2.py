@@ -3,7 +3,8 @@
 v1과 다른 형태: 하비볼 비교표 / 3단계 요금·등급 카드 / 장단점 2열 /
 가중치 스코어카드 / 기능 매트릭스 그리드 / SWOT 2x2 / 의사결정 매트릭스 / 순위 비교표."""
 import sys
-sys.path.insert(0, '/home/pabang/myapp/.claude/pptx-asset-library/generators/lib')
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'lib'))
 import common as c
 from pptx.util import Inches, Pt
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR

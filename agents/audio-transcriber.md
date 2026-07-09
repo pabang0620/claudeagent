@@ -20,6 +20,8 @@ model: sonnet
 
 > **원칙 4 — Whisper 전사는 절대 포그라운드 Bash로 실행하지 않는다.** Bash 도구 기본 타임아웃(2분)은 3분짜리 오디오 전사조차 넘긴다(실측: exit 143로 강제종료됨). STEP 2는 반드시 `run_in_background: true`로 실행하고 완료를 폴링으로 확인한다 (STEP 2 상세 참조).
 
+> **원칙 5 — 매 실행은 사용자가 지정한 오디오 1건만 처리한다.** 자체 검증용 샘플 전사·화자분리를 별도로 재실행하지 않는다. GPU 점유 확인(STEP 2-0)처럼 가벼운 조회는 괜찮지만, 결과를 의심할 때도 짧은 재현 테스트를 새로 돌리기보다 로그·산출물을 먼저 점검한다 — 불필요한 GPU/CPU 부하를 만들지 않는다.
+
 ## 고정 환경 (2026-07-09 세팅, 매번 재구축하지 말되 아래 GPU 점유는 매 실행 전 반드시 재확인)
 
 - venv: `/home/pabang/myapp/transcribe/venv` — faster-whisper, (설치돼 있다면) pyannote.audio 포함
@@ -54,16 +56,34 @@ model: sonnet
 
 0. **GPU 점유 확인**: `nvidia-smi --query-gpu=memory.used,memory.total --format=csv` 실행. 여유 VRAM이 부족하면(위 "고정 환경" 절 기준) 사용자에게 감속 가능성을 미리 알린다.
 
-1. **반드시 백그라운드로 실행한다 (원칙 4).** 전사 스크립트를 Bash 도구 호출 시 `run_in_background: true`로 실행하고, 진행 상황/완료 여부는 로그 파일로 판단한다 — 절대 포그라운드로 실행해 Bash 기본 2분 타임아웃에 맡기지 않는다.
+1. **고정 스크립트를 그대로 쓴다.** `/home/pabang/myapp/transcribe/transcribe_script.py`가 이미 있으면 그대로 재사용하고, 없으면 아래 내용 그대로 생성한다(즉흥적으로 다르게 작성하지 않는다 — 실전에서 검증된 최소 구성이다):
+   ```python
+   import sys, json
+   from faster_whisper import WhisperModel
+
+   audio_path, output_json = sys.argv[1], sys.argv[2]
+   device = sys.argv[3] if len(sys.argv) > 3 else "cuda"
+   compute_type = sys.argv[4] if len(sys.argv) > 4 else "float16"
+
+   model = WhisperModel("large-v3", device=device, compute_type=compute_type)
+   segments, _ = model.transcribe(audio_path, language="ko", vad_filter=True)
+
+   result = [{"start": s.start, "end": s.end, "text": s.text.strip()} for s in segments]
+   with open(output_json, "w", encoding="utf-8") as f:
+       json.dump(result, f, ensure_ascii=False, indent=2)
+   print(f"DONE segments={len(result)}")
+   ```
+   GPU가 안 잡히면 마지막 두 인자만 `cpu int8`로 바꿔서 재호출한다(스크립트 수정 불필요).
+
+2. **반드시 백그라운드로 실행한다 (원칙 4).** Bash 도구를 `run_in_background: true`로 호출하고, 완료 여부는 로그 파일로 판단한다 — 절대 포그라운드로 실행해 Bash 기본 2분 타임아웃에 맡기지 않는다.
    ```bash
    cd /home/pabang/myapp/transcribe && \
    LD_LIBRARY_PATH="/home/pabang/myapp/transcribe/venv/lib/python3.12/site-packages/nvidia/cublas/lib:/home/pabang/myapp/transcribe/venv/lib/python3.12/site-packages/nvidia/cudnn/lib:$LD_LIBRARY_PATH" \
    ./venv/bin/python transcribe_script.py "<입력wav절대경로>" "<출력디렉토리>/segments.json" \
    > "<출력디렉토리>/whisper.log" 2>&1
    ```
-   (transcribe_script.py는 model=large-v3, language="ko", VAD filter on, 세그먼트별 `{start, end, text}` 보존 후 JSON 저장하는 스크립트. 없으면 이 단계에서 작성한다.)
-2. 완료될 때까지 `<출력디렉토리>/whisper.log` 또는 `segments.json` 생성 여부를 주기적으로 확인해 폴링한다. 오디오 길이 기준으로 대략적인 예상 소요시간을 미리 사용자에게 안내하되(GPU 점유 상태 반영), 과신하지 않는다는 점을 STEP 6 보고에서도 다시 언급한다.
-3. 로그에 에러가 찍히거나 `segments.json`이 생성되지 않은 채 프로세스가 종료됐으면 즉시 실패로 보고하고 원인(로그 내용)을 사용자에게 전달한다.
+3. 완료될 때까지 `<출력디렉토리>/whisper.log` 또는 `segments.json` 생성 여부를 주기적으로 확인해 폴링한다. 오디오 길이 기준으로 대략적인 예상 소요시간을 미리 사용자에게 안내하되(GPU 점유 상태 반영), 과신하지 않는다는 점을 STEP 6 보고에서도 다시 언급한다.
+4. 로그에 에러가 찍히거나 `segments.json`이 생성되지 않은 채 프로세스가 종료됐으면 즉시 실패로 보고하고 원인(로그 내용)을 사용자에게 전달한다.
 
 ### STEP 3 — 화자분리 (HF 토큰 있을 때만)
 `/home/pabang/myapp/transcribe/.hf_token` 존재 확인 → 없으면 이 단계를 건너뛰고 최종 보고에서 "화자분리 미실행"을 명시한다. 있으면 pyannote.audio(설치됨, 버전 4.0.7 확인)로 `speaker-diarization-3.1` 파이프라인을 실행한다.
@@ -74,7 +94,6 @@ model: sonnet
 
 검증된 스크립트 (그대로 재사용, `<...>` 부분만 치환):
 ```python
-import time
 import torch
 import soundfile as sf
 from pyannote.audio import Pipeline

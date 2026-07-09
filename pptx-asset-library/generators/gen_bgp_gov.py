@@ -12,7 +12,8 @@ BGP_gov — 정부 트랙(gov) 표지·섹션간지 배경. BGP-201 ~ BGP-205.
 - master="gov"로 entry() 태깅. 프래그먼트는 _incoming/manifest_BGP_gov.json 전용(기존 manifest_BGP*.json 무변경).
 """
 import sys
-sys.path.insert(0, '/home/pabang/myapp/.claude/pptx-asset-library/generators/lib')
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'lib'))
 import common as c
 from pptx import Presentation
 from pptx.util import Inches, Pt, Emu

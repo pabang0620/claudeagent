@@ -4,7 +4,7 @@
 멱등: 이미 그룹된 슬라이드는 건너뜀. 사용: python3 generators/regroup.py
 """
 import sys, os, json, collections
-sys.path.insert(0, "/home/pabang/myapp/.claude/pptx-asset-library/generators/lib")
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "lib"))
 import common as c
 from pptx import Presentation
 from pptx.oxml.ns import qn

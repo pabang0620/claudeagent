@@ -10,7 +10,8 @@ ORG-001 ~ ORG-008. 복잡 대형 에셋이므로 1슬라이드 1에셋.
   ORG_governance-network_v1.pptx  : 추진체계(003)/자문(004)/네트워크(007)/컨소시엄(008)
 """
 import sys
-sys.path.insert(0, '/home/pabang/myapp/.claude/pptx-asset-library/generators/lib')
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'lib'))
 import common as c
 from pptx.util import Inches, Pt
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR

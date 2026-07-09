@@ -4,7 +4,8 @@ KPI 카드/숫자 강조 카테고리 생성기 (KPI-001 ~ KPI-010)
 공공기관 제안서 성과지표/실적 강조용. 네이티브 도형+텍스트만 사용.
 """
 import sys
-sys.path.insert(0, '/home/pabang/myapp/.claude/pptx-asset-library/generators/lib')
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'lib'))
 import common as c
 from pptx.util import Inches, Pt
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR

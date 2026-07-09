@@ -11,7 +11,8 @@ HDR_gov — 정부 트랙(gov) 챕터 브레드크럼 내비게이션 + 진행�
 - master="gov"로 entry() 태깅. 프래그먼트는 _incoming/manifest_HDR_gov.json 전용(기존 manifest_HDR*.json 무변경).
 """
 import sys
-sys.path.insert(0, '/home/pabang/myapp/.claude/pptx-asset-library/generators/lib')
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'lib'))
 import common as c
 from pptx import Presentation
 from pptx.util import Inches, Pt, Emu

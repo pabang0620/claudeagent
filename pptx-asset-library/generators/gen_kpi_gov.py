@@ -13,7 +13,8 @@ ID: KPI-201 ~ KPI-206 (기존 KPI-001~200 다음 free 대역, manifest.json 확�
 매니페스트 조각: _incoming/manifest_KPI_gov.json (기존 manifest_KPI*.json 미변경)
 """
 import sys
-sys.path.insert(0, '/home/pabang/myapp/.claude/pptx-asset-library/generators/lib')
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'lib'))
 import common as c
 from pptx import Presentation
 from pptx.util import Inches, Pt, Emu

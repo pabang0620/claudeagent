@@ -9,7 +9,8 @@
 - 매니페스트 조각 1회: c.write_fragment('SVC_bulk', entries).
 """
 import sys
-sys.path.insert(0, '/home/pabang/myapp/.claude/pptx-asset-library/generators/lib')
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'lib'))
 import common as c
 from pptx.enum.text import PP_ALIGN
 from pptx.enum.shapes import MSO_SHAPE

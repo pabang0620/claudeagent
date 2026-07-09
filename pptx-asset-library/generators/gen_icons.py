@@ -9,7 +9,8 @@
 - 아이콘 시트: 슬라이드당 6~8개 배치(개별 ID 캡션은 그룹 밖 + 하단 한글 라벨은 그룹 안).
 """
 import sys
-sys.path.insert(0, '/home/pabang/myapp/.claude/pptx-asset-library/generators/lib')
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'lib'))
 import common as c
 from pptx.util import Inches, Pt
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR

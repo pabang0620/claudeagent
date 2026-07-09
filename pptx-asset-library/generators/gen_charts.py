@@ -6,7 +6,8 @@ python-pptx 네이티브 차트(add_chart)만 사용 — 페이지 이미지/도
 차트 오브젝트(GraphicFrame + c:chart 관계 + ppt/charts/ 파트)를 생성한다.
 """
 import sys
-sys.path.insert(0, '/home/pabang/myapp/.claude/pptx-asset-library/generators/lib')
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'lib'))
 import common as c
 from pptx.util import Inches, Pt
 from pptx.oxml.ns import qn

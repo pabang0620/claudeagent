@@ -14,7 +14,8 @@ gen_kpi_bulk.py 의 14개 구조 패밀리를 재사용하되 파라미터 공�
 파일당 ≤25슬라이드, 패밀리별 1파일 분산. 마지막에 c.write_fragment('KPI_bulk2') 1회.
 """
 import sys, math
-sys.path.insert(0, '/home/pabang/myapp/.claude/pptx-asset-library/generators/lib')
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'lib'))
 import common as c
 from pptx.util import Inches, Pt
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR

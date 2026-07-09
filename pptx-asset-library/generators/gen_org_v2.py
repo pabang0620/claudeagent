@@ -15,7 +15,8 @@ v1(위계/네트워크)과 다른 축: RACI · 기능별 매트릭스조직 · �
   ORG_ecosystem_v2.pptx  : 파트너생태계(011) / 위원회구조(012) / 에스컬레이션(014)
 """
 import sys
-sys.path.insert(0, '/home/pabang/myapp/.claude/pptx-asset-library/generators/lib')
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'lib'))
 import common as c
 from pptx.util import Inches, Pt
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
