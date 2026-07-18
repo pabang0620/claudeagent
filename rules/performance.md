@@ -7,7 +7,7 @@
 > - 에이전트 평가·생성 시 다른 모델(opus/haiku/fable) 권장 금지
 > - 비용 절감은 모델 다운그레이드가 아니라 **에이전트 위임(컨텍스트 격리) + 병렬 실행 + 프롬프트 슬림화**로 달성한다
 
-**Sonnet (`claude-sonnet-4-6`)** — 유일 사용 모델:
+**Sonnet (`claude-sonnet-5`)** — 유일 사용 모델:
 - Main development work
 - Orchestrating multi-agent workflows
 - All agents (workers, reviewers, evaluators)

@@ -1,6 +1,6 @@
 ---
 name: backend-patterns
-description: Node.js/Express 백엔드 아키텍처 패턴. API 설계, 레이어 분리, DB 접근(pg 기본/Prisma 요청 시), 보안, 캐싱, 에러 처리 베스트 프랙티스
+description: Node.js/Express 백엔드 아키텍처 패턴. API 설계, 레이어 분리, DB 접근(pg raw SQL 기본), 보안, 캐싱, 에러 처리 베스트 프랙티스
 ---
 
 # 백엔드 개발 패턴 (Node.js + Express)
@@ -114,14 +114,23 @@ export const findById = async (id) => {
 }
 ```
 
-### Prisma — 요청 시에만 사용
+### 페이지네이션 조회 (pg raw SQL)
 ```javascript
-// 사용자가 명시적으로 Prisma를 요청한 경우에만
-import { prisma } from '../config/prisma.js'
+import { pool } from '../config/database.js'
 
-export const findAll = async ({ skip, take }) =>
-  prisma.user.findMany({ skip, take, where: { deletedAt: null } })
+export const findPage = async ({ offset = 0, limit = 20 }) => {
+  const { rows } = await pool.query(
+    `SELECT id, email, name, created_at FROM users
+     WHERE deleted_at IS NULL
+     ORDER BY created_at DESC
+     LIMIT $1 OFFSET $2`,
+    [limit, offset]
+  )
+  return rows
+}
 ```
+
+> Prisma는 이 프로젝트에서 미지향입니다. 명시적으로 요청된 경우에만 `prisma.user.findMany(...)` 형태를 사용하세요.
 
 ---
 

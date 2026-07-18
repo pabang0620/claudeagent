@@ -1,6 +1,6 @@
 ---
 name: postgres-patterns
-description: PostgreSQL 데이터베이스 패턴, 쿼리 최적화, 스키마 설계, 인덱싱, Prisma ORM 활용법
+description: PostgreSQL 데이터베이스 패턴, 쿼리 최적화, 스키마 설계, 인덱싱 — raw SQL(node-postgres/pg) 기본, Prisma는 요청 시에만
 ---
 
 # PostgreSQL 패턴
@@ -12,8 +12,9 @@ PostgreSQL 베스트 프랙티스 빠른 참조 가이드
 - SQL 쿼리 또는 마이그레이션 작성 시
 - 데이터베이스 스키마 설계 시
 - 느린 쿼리 트러블슈팅 시
-- Prisma ORM 사용 시
 - 커넥션 풀링 설정 시
+
+> **기본은 raw SQL (node-postgres/pg)입니다.** 아래 예시는 모두 parameterized pg 쿼리를 1순위로 제시합니다. Prisma는 이 프로젝트에서 미지향이며, 명시적으로 요청된 경우에만 문서 하단의 "Prisma (미지향)" 섹션을 참고하세요.
 
 ## 빠른 참조
 
@@ -38,58 +39,59 @@ PostgreSQL 베스트 프랙티스 빠른 참조 가이드
 | 금액 | `numeric(10,2)` | `float` |
 | 플래그 | `boolean` | `varchar`, `int` |
 
-### Prisma 패턴
+### raw SQL 패턴 (node-postgres/pg — 기본)
 
-**모델 정의:**
-```prisma
-model Market {
-  id          String   @id @default(uuid())
-  name        String   @db.Text
-  status      String   @db.VarChar(20)
-  volume      Decimal  @db.Decimal(10, 2)
-  createdAt   DateTime @default(now()) @db.Timestamptz
-  creatorId   String
-  creator     User     @relation(fields: [creatorId], references: [id])
+**테이블 정의 (DDL):**
+```sql
+CREATE TABLE markets (
+  id          uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  name        text NOT NULL,
+  status      varchar(20) NOT NULL,
+  volume      numeric(10, 2) NOT NULL,
+  created_at  timestamptz NOT NULL DEFAULT now(),
+  creator_id  uuid NOT NULL REFERENCES users (id)
+);
 
-  @@index([status])
-  @@index([createdAt])
-  @@index([creatorId])
-}
+CREATE INDEX idx_markets_status ON markets (status);
+CREATE INDEX idx_markets_created_at ON markets (created_at);
+CREATE INDEX idx_markets_creator_id ON markets (creator_id);
 ```
 
-**쿼리 최적화:**
+**쿼리 최적화 (필요한 컬럼만 선택):**
 ```javascript
-// ✅ 좋은 예: 필요한 필드만 선택
-const markets = await prisma.market.findMany({
-  select: {
-    id: true,
-    name: true,
-    status: true
-  },
-  where: { status: 'active' },
-  orderBy: { createdAt: 'desc' },
-  take: 10
-});
+import { pool } from '../config/database.js'
 
-// ❌ 나쁜 예: 모든 필드 선택
-const markets = await prisma.market.findMany();
+// ✅ 좋은 예: 필요한 컬럼만 + 파라미터 바인딩 + LIMIT/OFFSET
+const { rows: markets } = await pool.query(
+  `SELECT id, name, status
+   FROM markets
+   WHERE status = $1
+   ORDER BY created_at DESC
+   LIMIT $2 OFFSET $3`,
+  ['active', take, skip]
+)
+
+// ❌ 나쁜 예: 모든 컬럼 선택 + LIMIT 없음
+const { rows: all } = await pool.query('SELECT * FROM markets')
 ```
 
-**관계 로딩:**
+**관계 로딩 (JOIN으로 N+1 방지):**
 ```javascript
-// ✅ include로 한 번에 조회 (JOIN)
-const markets = await prisma.market.findMany({
-  include: {
-    creator: true
-  }
-});
+// ✅ JOIN 한 번으로 조회
+const { rows } = await pool.query(
+  `SELECT m.id, m.name, m.status,
+          u.id AS creator_id, u.name AS creator_name
+   FROM markets m
+   JOIN users u ON u.id = m.creator_id
+   WHERE m.status = $1`,
+  ['active']
+)
 
-// ❌ N+1 쿼리 문제
-const markets = await prisma.market.findMany();
+// ❌ N+1 쿼리 문제 (루프 안에서 매번 조회)
+const { rows: markets } = await pool.query('SELECT id, name, creator_id FROM markets')
 for (const market of markets) {
-  market.creator = await prisma.user.findUnique({
-    where: { id: market.creatorId }
-  });
+  const { rows } = await pool.query('SELECT id, name FROM users WHERE id = $1', [market.creator_id])
+  market.creator = rows[0]
 }
 ```
 
@@ -114,52 +116,56 @@ CREATE INDEX idx ON users (email) WHERE deleted_at IS NULL;
 -- 더 작은 인덱스, 활성 사용자만 포함
 ```
 
-**UPSERT (Prisma):**
+**UPSERT (INSERT ... ON CONFLICT):**
 ```javascript
-await prisma.settings.upsert({
-  where: {
-    userId_key: {
-      userId: 123,
-      key: 'theme'
-    }
-  },
-  update: {
-    value: 'dark'
-  },
-  create: {
-    userId: 123,
-    key: 'theme',
-    value: 'dark'
-  }
-});
+await pool.query(
+  `INSERT INTO settings (user_id, key, value)
+   VALUES ($1, $2, $3)
+   ON CONFLICT (user_id, key)
+   DO UPDATE SET value = EXCLUDED.value`,
+  [123, 'theme', 'dark']
+)
+// 전제: UNIQUE (user_id, key) 제약이 있어야 ON CONFLICT가 동작
 ```
 
 **커서 페이지네이션:**
 ```javascript
-// ✅ O(1) - OFFSET보다 빠름
-const products = await prisma.product.findMany({
-  where: {
-    id: { gt: lastId }
-  },
-  orderBy: { id: 'asc' },
-  take: 20
-});
+// ✅ O(1) - OFFSET보다 빠름 (인덱스된 컬럼 기준 커서)
+const { rows: products } = await pool.query(
+  `SELECT id, name FROM products
+   WHERE id > $1
+   ORDER BY id ASC
+   LIMIT $2`,
+  [lastId, 20]
+)
 
-// ❌ O(n) - 느림
-const products = await prisma.product.findMany({
-  skip: offset,
-  take: 20
-});
+// ❌ O(n) - OFFSET이 커질수록 느림
+const { rows: slow } = await pool.query(
+  'SELECT id, name FROM products ORDER BY id ASC LIMIT $1 OFFSET $2',
+  [20, offset]
+)
 ```
 
-**트랜잭션:**
+**트랜잭션 (BEGIN / COMMIT / ROLLBACK):**
 ```javascript
-await prisma.$transaction(async (tx) => {
-  const market = await tx.market.create({ data: marketData });
-  await tx.position.create({
-    data: { ...positionData, marketId: market.id }
-  });
-});
+const client = await pool.connect()
+try {
+  await client.query('BEGIN')
+  const { rows } = await client.query(
+    'INSERT INTO markets (name, status) VALUES ($1, $2) RETURNING id',
+    [marketData.name, marketData.status]
+  )
+  await client.query(
+    'INSERT INTO positions (market_id, side, size) VALUES ($1, $2, $3)',
+    [rows[0].id, positionData.side, positionData.size]
+  )
+  await client.query('COMMIT')
+} catch (err) {
+  await client.query('ROLLBACK')
+  throw err
+} finally {
+  client.release()
+}
 ```
 
 ### 안티패턴 감지
@@ -192,8 +198,62 @@ WHERE n_dead_tup > 1000
 ORDER BY n_dead_tup DESC;
 ```
 
-### Prisma 마이그레이션
+### Prisma (미지향 — 요청 시에만 참고)
 
+> 이 프로젝트의 **기본은 raw SQL (pg)** 입니다. 아래는 사용자가 Prisma 사용을 명시적으로 요청한 경우에만 참고할 대체 예시입니다.
+
+**모델 정의:**
+```prisma
+model Market {
+  id          String   @id @default(uuid())
+  name        String   @db.Text
+  status      String   @db.VarChar(20)
+  volume      Decimal  @db.Decimal(10, 2)
+  createdAt   DateTime @default(now()) @db.Timestamptz
+  creatorId   String
+  creator     User     @relation(fields: [creatorId], references: [id])
+
+  @@index([status])
+  @@index([createdAt])
+  @@index([creatorId])
+}
+```
+
+**쿼리 최적화 / 관계 로딩:**
+```javascript
+// 필요한 필드만 선택
+const markets = await prisma.market.findMany({
+  select: { id: true, name: true, status: true },
+  where: { status: 'active' },
+  orderBy: { createdAt: 'desc' },
+  take: 10
+});
+
+// include로 한 번에 조회 (JOIN) — N+1 방지
+const withCreator = await prisma.market.findMany({ include: { creator: true } });
+```
+
+**UPSERT / 커서 페이지네이션 / 트랜잭션:**
+```javascript
+await prisma.settings.upsert({
+  where: { userId_key: { userId: 123, key: 'theme' } },
+  update: { value: 'dark' },
+  create: { userId: 123, key: 'theme', value: 'dark' }
+});
+
+const products = await prisma.product.findMany({
+  where: { id: { gt: lastId } },
+  orderBy: { id: 'asc' },
+  take: 20
+});
+
+await prisma.$transaction(async (tx) => {
+  const market = await tx.market.create({ data: marketData });
+  await tx.position.create({ data: { ...positionData, marketId: market.id } });
+});
+```
+
+**마이그레이션:**
 ```bash
 # 마이그레이션 생성
 npx prisma migrate dev --name add_market_index
@@ -233,7 +293,7 @@ SELECT pg_reload_conf();
 - [ ] 필요한 컬럼만 SELECT
 - [ ] WHERE 절에 사용되는 컬럼에 인덱스
 - [ ] JOIN 전에 데이터 필터링
-- [ ] N+1 쿼리 방지 (include/select 사용)
+- [ ] N+1 쿼리 방지 (JOIN 또는 배치 IN 조회 사용)
 - [ ] LIMIT으로 결과 수 제한
 - [ ] 커서 페이지네이션 사용 (OFFSET 대신)
 - [ ] 트랜잭션으로 관련 작업 묶기

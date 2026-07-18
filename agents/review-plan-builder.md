@@ -142,7 +142,7 @@ PLAN_CHECKLIST.md 삭제 후 종료합니다.
 ### 기술스택 (항상 준수)
 - **프론트엔드**: React 19, Vite 7
 - **백엔드**: Node.js, Express
-- **DB**: PostgreSQL (pg/raw SQL 기본), MySQL 8.0 (WeCom), Prisma ORM (요청 시에만)
+- **DB**: PostgreSQL (pg/raw SQL), MySQL 8.0 (WeCom)
 - **검증**: Zod 스키마
 - **테스트**: Jest, Playwright
 

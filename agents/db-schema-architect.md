@@ -265,6 +265,8 @@ shared/constants/enums.ts의 NOTIFICATION_TARGET_TYPE 상수도 동시 갱신 �
 
 ### REVIEW 모드 — 기존 스키마 감사
 
+> 이 모드는 설계·마이그레이션 직전의 자체 사전점검용이다. 설계 맥락 없는 독립 스키마·쿼리 감사 요청은 database-reviewer 로 위임한다.
+
 ```bash
 # 0. 스키마 파일 동적 탐색
 SCHEMA_FILE=$(find . -name "*.sql" -path "*schema*" | head -1)

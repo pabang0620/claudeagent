@@ -1,5 +1,7 @@
 # Agent Orchestration
 
+> **이 파일이 에이전트 라우팅·목록의 SSOT다.** 에이전트 추가/변경 시 여기(STEP1 표 + Available Agents 표)부터 갱신하고, 다른 문서는 이 파일을 참조한다.
+
 ## ORCHESTRATOR MANDATORY CHECKLIST (매 요청마다 반드시 실행)
 
 > 오케스트레이터는 절대 코드를 직접 작성하지 않는다. 아래 체크리스트를 순서대로 확인하고 해당 에이전트를 호출한다.
@@ -28,6 +30,11 @@
 | **리뷰 플랜 수립** | "검증해줘", "플랜 만들어줘", "수정 계획 세워줘", "리뷰 결과 반영", "이슈 플랜" | review-plan-builder |
 | **회의록(보고용)** | "보고용 회의록", "정식 회의록", "업무회의록 만들어줘", "회의록 정리해서 보고" → 발주처·상급자 보고용 정선 회의록 | meeting-report-writer |
 | **회의 전체정리(확인용)** | "회의 전체 정리", "빠짐없이 정리", "내가 확인용", "검토용 회의 정리", "녹취록 전체 요약" → 우리 발표까지 포함한 종합정리 | meeting-full-summarizer |
+| **외부 웹 리서치** | "크롤링", "조사해줘", "긁어와", "회사/경쟁사 조사", "자료 수집", "있는지 확인" → 외부 사이트·SNS·뉴스·공공기관·학술 정보 수집 (앱 검증 아님) | web-crawler |
+| **음성/녹취 전사** | "음성 파일 텍스트로 변환", "녹취록 변환", "전사해줘", ".m4a/.mp3 텍스트로" → 오디오 전사 + 화자분리 | audio-transcriber |
+| **타입·문법 검증** | TypeScript 타입 오류·문법·임포트·async/await·데코레이터 정적 검증 (발견·보고만, 수정 안 함) | syntax-validator |
+| **함수 로직 검증** | 특정 함수 비즈니스 로직·엣지케이스·에러 처리·부작용 정적 검증 (발견·보고만) | function-validator |
+| **LINKER HTML→Vue 변환** | "linker 변환", "html to vue", "linker 컴파일", "vue로 변환" → HTML 1개를 Vue 3 SFC로 1:1 변환 | linker-html-to-vue |
 
 ### STEP 2: 코드 변경 후 필수 (예외 없음)
 
@@ -95,6 +102,11 @@ Located in `~/.claude/agents/`:
 | review-plan-builder | 리뷰 결과 재검토 → 수정 플랜 수립 → 병렬 검증 루프(2회 연속 클린) → FINAL_PLAN.md → 실행 직전 중단 | "검증해줘", "플랜 만들어줘", "수정 계획 세워줘" |
 | meeting-report-writer | 【보고용】 요점메모(1차)+녹취록(보조)으로 발주처 보고용 정식 업무회의록 작성. 발주처 반응·승인·지시 중심, 우리 발표는 축소, 화자 매핑(콘진원팀장님↔참석자N) | "보고용 회의록", "정식 회의록", "업무회의록 만들어줘" |
 | meeting-full-summarizer | 【확인용】 녹취록(1차) 전체 통독으로 우리 발표까지 포함한 회의 전체를 주제별 종합정리. 사용자 본인 검토·대조용, 누락 방지 최우선 | "회의 전체 정리", "빠짐없이 정리", "내가 확인용", "검토용 회의 정리" |
+| web-crawler | 외부 웹 리서치 크롤러 (기업 사이트·SNS·뉴스·공공기관·학술, WebSearch→WebFetch→Playwright, 단일타겟 병렬). 앱 검증 playwright-verify-loop·E2E e2e-runner와 구별 | "크롤링", "조사해줘", "경쟁사 분석", "자료 수집", "있는지 확인" |
+| audio-transcriber | 음성/녹취 파일(m4a·mp3·wav) 한국어 전사 + 화자분리 (faster-whisper large-v3 GPU + pyannote) → 회의록 포맷 병합 | "전사해줘", "녹취록 변환", ".m4a/.mp3 텍스트로" |
+| syntax-validator | TypeScript 타입·문법·임포트·async/await·데코레이터 정적 검증 (발견·보고 전용, 수정 안 함) | 코드 리뷰 전 사전 검증, 병렬 함수 단위 검증 |
+| function-validator | 함수 비즈니스 로직 정확성·엣지케이스·에러 처리·부작용 정적 분석 (발견·보고 전용, 수정 안 함) | 병렬 파일·함수 단위 기능 검증 |
+| linker-html-to-vue | LINKER 프로젝트 HTML 1개 → Vue 3 Composition API SFC 1:1 변환 (CSS 무변경, 클래스 기반 표시제어) | "linker 변환", "html to vue", "vue로 변환" |
 | **code-reviewer** | **스킬** (에이전트 아님) | `code-reviewer` 스킬로 호출 |
 
 ---

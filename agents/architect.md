@@ -274,7 +274,7 @@ planner 에이전트에 전달하여 SSE 구현 계획 수립
 - **DB WeCom**: MySQL 8.0 (이벤트 수집 전용, WeCom 전용 컨벤션)
 - **실시간**: WebSocket(ws/socket.io) 또는 SSE — Supabase 사용 안 함
   - 실시간 방식 선택 기준: 단방향 서버→클라이언트면 SSE(ADR-001 예시 참조), 양방향 필요 시 WebSocket. 선택 근거를 ADR에 명시.
-- **ORM**: Prisma (요청 시에만, 기본은 raw SQL)
+- **ORM**: 미사용 지향 (raw SQL 기본; Prisma는 명시 요청 시에만)
 - **테스트**: Jest, Playwright
 - **인프라**: 단일 VPS 기준 (마이크로서비스 불필요)
 

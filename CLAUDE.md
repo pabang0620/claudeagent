@@ -54,7 +54,7 @@
 ## 기술 스택
 - **프론트엔드**: React 19, Vite 7
 - **백엔드**: Node.js, Express
-- **DB**: PostgreSQL (pg/raw SQL 기본), MySQL 8.0 (WeCom), Prisma ORM (요청 시에만)
+- **DB**: PostgreSQL (pg/raw SQL), MySQL 8.0 (WeCom)
 - **테스트**: Jest, Playwright
 - **기타**: Python
 
@@ -78,6 +78,10 @@ myapp/
 | `/e2e` | E2E 테스트 |
 | `/refactor-clean` | 리팩토링 |
 | `/update-docs` | 문서 업데이트 |
+| `/orchestrate` | 복잡한 작업을 위한 순차적 에이전트 워크플로우 |
+| `/update-codemaps` | 코드베이스 구조 분석 → 아키텍처 코드맵 문서 업데이트 |
+| `/skill-create` | 로컬 git 히스토리 분석 → 코딩 패턴 추출 → SKILL.md 생성 |
+| `/setup-pm` | 선호 패키지 매니저 설정 (npm/pnpm/yarn/bun) |
 
 ## 스킬
 | 스킬 | 역할 | 호출 방식 |
@@ -90,6 +94,14 @@ myapp/
 | `checkpoint` | 체크포인트 생성/검증 | `/checkpoint` (사용자만) |
 | `test-coverage` | 테스트 커버리지 분석 | 자동 + `/test-coverage` |
 | `deep-research` | 공공기관·논문 PDF 심층 리서치 | `/deep-research` |
+| `backend-patterns` | Node.js/Express 백엔드 아키텍처 패턴 (API 설계·레이어 분리·DB 접근·보안·캐싱·에러 처리) | 자동 적용 |
+| `frontend-patterns` | React 19 + Vite 7 프론트엔드 개발 패턴 (신규 API·컴포넌트·상태관리·성능·접근성) | 자동 적용 |
+| `coding-standards` | JS/TS/React/Node 범용 코딩 표준·베스트 프랙티스 | 자동 적용 |
+| `postgres-patterns` | PostgreSQL 패턴·쿼리 최적화·스키마 설계·인덱싱 (raw SQL/pg) | 자동 적용 |
+| `convention-enforcer` | 네이밍·라우팅·권한·상태관리·파일구조 컨벤션 정적 강제 (저장·pre-commit·부팅 시점) | 자동 적용 |
+| `error-prevention-rules` | React 런타임 에러(무한 렌더·race condition·cleanup 누락 등) 사전 차단 정적 검사 14개 룰 | 자동 (.jsx/.tsx 저장 시) |
+| `mobile-first-checker` | 모바일 안티패턴 사전 차단 정적 검사 12개 룰 (드래그·스크롤락·필터·모달 등) | 자동 (.jsx/.tsx/.css/.scss 저장 시) |
+| `video-use` | 대화형 영상 편집 (전사·컷·색보정·오버레이 애니메이션·자막 번인) | 자동 + `/video-use` |
 
 ## 주요 에이전트 (자동 트리거, 스킬 아님)
 | 에이전트 | 역할 | 호출 방식 |
@@ -97,7 +109,7 @@ myapp/
 | `proposal-pt-builder` | 정부사업 RFP 제안 PT 생성 (에셋 라이브러리 조합 PPTX, standard/gov 듀얼 트랙) | 자동 트리거("PT 만들어", "제안서 슬라이드" 등) |
 | `pptx-asset-generator` | PPT 에셋 조각(표·차트·프로세스 등) 생성·병합·검증, compose.mjs 확장 (최종 PT 조립은 proposal-pt-builder) | 자동 트리거("pptx 에셋 생성", "compose.mjs 수정" 등) |
 
-세부 라우팅: `rules/agents.md` STEP1 표 참고
+전체 에이전트 목록·라우팅 SSOT: `rules/agents.md` (에이전트 추가/변경은 그 파일부터)
 
 ## Context7 MCP
 외부 라이브러리 사용 시 요청 끝에 `use context7` 추가 → 최신 API 문서 자동 조회
@@ -110,7 +122,7 @@ myapp/
 - 기능 보존: 수정 시 기존 기능 변경 금지
 - 들여쓰기: 2 spaces
 - 네이밍: 컴포넌트 PascalCase / 함수·변수 camelCase / 상수 UPPER_SNAKE_CASE
-- DB ID: UUID, 마이그레이션: Prisma
+- DB ID: UUID, 마이그레이션: raw SQL 스크립트 (MySQL 스키마·마이그레이션은 db-schema-architect 에이전트 담당)
 - 환경변수: `.env` 사용, 커밋 금지
 - 테스트 커버리지: 핵심 기능 80% 이상
 

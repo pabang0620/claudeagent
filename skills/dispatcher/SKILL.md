@@ -120,7 +120,7 @@ LOW-COST choices:
 | `coding-standards` | coding rules, naming, style | Coding standards |
 | `tdd-workflow` | TDD, test-first | TDD workflow |
 | `security-review` | security check, OWASP | Security checklist |
-| `postgres-patterns` | PostgreSQL, Prisma | DB patterns |
+| `postgres-patterns` | PostgreSQL (raw SQL/pg) | DB patterns |
 | `verification-loop` | verify, QA | Verification checklist |
 | `continuous-learning` | learn, pattern extraction | Auto-learning |
 

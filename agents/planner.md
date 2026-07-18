@@ -154,7 +154,7 @@ tdd-guide는 구현 완료 후에만 실행 가능하므로 항상 순차.
 
 **DB 스키마 계획 시**: 구체적 컬럼/PK 설계는 db-schema-architect에 위임한다. 계획서에 스키마를 언급할 경우 프로젝트 컨벤션(UUID 단일 PK, CLAUDE.md "DB ID: UUID")을 따르며, BIGINT AUTO_INCREMENT + uuid 이중 ID 구조를 임의로 제안하지 않는다.
 
-**DB 스택 확인 우선**: 계획 수립 시 대상 DB 스택을 먼저 확인한다 — PostgreSQL(pg/Prisma)이면 UUID 단일 PK, MySQL(WeCom/db-schema-architect 위임)이면 해당 에이전트의 이중 ID(AUTO_INCREMENT+UUID) 컨벤션을 따른다. 스택 미확정 시 명확화 질문.
+**DB 스택 확인 우선**: 계획 수립 시 대상 DB 스택을 먼저 확인한다 — PostgreSQL(pg/raw SQL)이면 UUID 단일 PK, MySQL(WeCom/db-schema-architect 위임)이면 해당 에이전트의 이중 ID(AUTO_INCREMENT+UUID) 컨벤션을 따른다. 스택 미확정 시 명확화 질문.
 
 JSON 컬럼은 "지양" 컨벤션 대상 — 계획에서 JSON 컬럼이 필요해 보이면 근거와 대안(별도 정규화 테이블, VARCHAR 직렬화)을 함께 제시하고 최종 결정은 db-schema-architect에 위임한다.
 

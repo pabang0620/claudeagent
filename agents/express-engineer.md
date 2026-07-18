@@ -494,7 +494,7 @@ const result = await withTransaction(mysqlPool, async (conn) => {
 })
 ```
 
-### Prisma — 요청 시에만 사용
+### Prisma — 미지향 (명시 요청 시에만)
 ```javascript
 // 사용자가 명시적으로 Prisma 사용을 요청한 경우에만
 import { PrismaClient } from '@prisma/client'

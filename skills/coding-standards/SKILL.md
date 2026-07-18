@@ -396,18 +396,14 @@ function Dashboard() {
 ### 데이터베이스 쿼리
 
 ```javascript
-// ✅ 좋은 예: 필요한 컬럼만 선택 (Prisma)
-const markets = await prisma.market.findMany({
-  select: {
-    id: true,
-    name: true,
-    status: true
-  },
-  take: 10
-});
+// ✅ 좋은 예: 필요한 컬럼만 선택 (pg raw SQL, 파라미터 바인딩)
+const { rows: markets } = await pool.query(
+  'SELECT id, name, status FROM markets WHERE deleted_at IS NULL LIMIT $1',
+  [10]
+);
 
-// ❌ 나쁜 예: 모든 것 선택
-const markets = await prisma.market.findMany();
+// ❌ 나쁜 예: 모든 컬럼 선택 + LIMIT 없음
+const { rows: all } = await pool.query('SELECT * FROM markets');
 ```
 
 ## 테스트 표준

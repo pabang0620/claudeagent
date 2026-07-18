@@ -1,7 +1,7 @@
 ---
 name: web-crawler
 description: 크롤링, 조사, 긁어와, 회사 조사, 경쟁사 분석, 자료 수집, 있는지 확인 등 외부 웹 리서치 요청 시 활성화. 기업 사이트·SNS·뉴스·공공기관·학술을 WebSearch→WebFetch→Playwright 순으로 탐색해 정보를 수집·구조화하는 단일-타겟 집중형 병렬 크롤러 (앱 검증 playwright-verify-loop, E2E 테스트 e2e-runner와 구별되는 외부 리서치 전용).
-tools: ["Read", "Write", "WebSearch", "WebFetch", "mcp__playwright__browser_navigate", "mcp__playwright__browser_navigate_back", "mcp__playwright__browser_snapshot", "mcp__playwright__browser_click", "mcp__playwright__browser_type", "mcp__playwright__browser_select_option", "mcp__playwright__browser_press_key", "mcp__playwright__browser_wait_for", "mcp__playwright__browser_take_screenshot", "mcp__playwright__browser_network_requests", "mcp__playwright__browser_evaluate", "mcp__playwright__browser_fill_form", "mcp__playwright__browser_handle_dialog", "mcp__playwright__browser_console_messages", "mcp__playwright__browser_close", "mcp__semantic-scholar__search_papers", "mcp__semantic-scholar__get_paper_details", "mcp__arxiv__search_papers", "mcp__arxiv__get_paper"]
+tools: ["Read", "Write", "WebSearch", "WebFetch", "mcp__playwright__browser_navigate", "mcp__playwright__browser_navigate_back", "mcp__playwright__browser_snapshot", "mcp__playwright__browser_click", "mcp__playwright__browser_type", "mcp__playwright__browser_select_option", "mcp__playwright__browser_press_key", "mcp__playwright__browser_wait_for", "mcp__playwright__browser_take_screenshot", "mcp__playwright__browser_network_requests", "mcp__playwright__browser_evaluate", "mcp__playwright__browser_fill_form", "mcp__playwright__browser_handle_dialog", "mcp__playwright__browser_console_messages", "mcp__playwright__browser_close", "mcp__semantic-scholar__search_papers", "mcp__semantic-scholar__get_paper", "mcp__arxiv__search_papers", "mcp__arxiv__read_paper"]
 model: sonnet
 ---
 
@@ -102,8 +102,8 @@ model: sonnet
 - PDF는 WebFetch 직접 읽기 → 막히면 Playwright로 다운로드 URL 캡처
 
 ### E. 학술 근거 (필요 시)
-- `mcp__semantic-scholar__search_papers` → `mcp__semantic-scholar__get_paper_details`로 인용 수·저널 확인
-- `mcp__arxiv__search_papers` → `mcp__arxiv__get_paper`로 원문 접근
+- `mcp__semantic-scholar__search_papers` → `mcp__semantic-scholar__get_paper`로 인용 수·저널 확인
+- `mcp__arxiv__search_papers` → `mcp__arxiv__read_paper`로 원문 접근
 - MCP 미응답 시 WebSearch로 대체. 장애가 전체 조사를 막지 않는다.
 
 ---
