@@ -17,7 +17,7 @@
     "PRC": {
       "name": "프로세스 화살표/단계 흐름",
       "dir": "decks/03_process",
-      "count": 206
+      "count": 207
     },
     "CMP": {
       "name": "비교표/평가표/매트릭스",
@@ -95533,6 +95533,87 @@
       "quality": "approved",
       "thumbnail": null,
       "master": "gov"
+    },
+    {
+      "id": "PRC-207",
+      "category": "PRC",
+      "name": "복합 분기/병합 흐름 (세로형 · 공통트렁크 + 결과산출 단일분기점 + 외부연동)",
+      "file": "decks/03_process/PRC_branch-merge-loop_v3.pptx",
+      "slide": 1,
+      "anchor": "asset:PRC-207",
+      "tags": [
+        "프로세스",
+        "분기",
+        "병합",
+        "루프백",
+        "외부연동",
+        "단일분기점",
+        "판단다이아몬드",
+        "세로형",
+        "수직흐름"
+      ],
+      "params": {
+        "nodes": 14,
+        "style": "branch-merge-loop-vertical",
+        "orientation": "vertical",
+        "branches": 2,
+        "asymmetric": true,
+        "branch_point_count": 1,
+        "note": "분기(다이아몬드)는 결과산출/결과통합 두 곳뿐 — 회원구분 인지는 사각형 단일 트렁크로 처리, 실제 분기 아님"
+      },
+      "bindings": {
+        "start": "로그인",
+        "recognition_title": "회원 구분 인지",
+        "recognition_sub": "(기업회원 · 개인회원 자동 인식)",
+        "info_title": "필수 정보 입력",
+        "info_bullets": [
+          "관심 콘텐츠 및 국가(각 3개)",
+          "최근 3년간 수출액",
+          "주요 수출국 Top3"
+        ],
+        "info_side_note_1": "사업자등록번호와 연동",
+        "info_side_note_2": "국가 및 콘텐츠 보고서 압축 다운",
+        "selfcheck": "역량 진단(자가진단 설문)",
+        "decision_label": "결과 산출",
+        "branch_a_external": "나이스(NICE·DNB) 연계",
+        "branch_a_external_step": "기업 신용등급 조회",
+        "branch_a_combine": "자가진단 점수 결합",
+        "branch_a_result": "기업 회원 결과",
+        "branch_b_result": "개인 회원 결과",
+        "merge_label": "결과 통합",
+        "final_title": "완료",
+        "final_sub": "(지원 사업 추천 등 결과 제공)"
+      },
+      "editable": [
+        "start",
+        "recognition_title",
+        "recognition_sub",
+        "info_title",
+        "info_bullets[3]",
+        "info_side_note_1",
+        "info_side_note_2",
+        "selfcheck",
+        "decision_label",
+        "branch_a_external",
+        "branch_a_external_step",
+        "branch_a_combine",
+        "branch_a_result",
+        "branch_b_result",
+        "merge_label",
+        "final_title",
+        "final_sub"
+      ],
+      "source": "generated:python-pptx",
+      "license": "self",
+      "recommended_use": [
+        "공통 절차 후 단일 분기점만 있는 진단·심사 플로우",
+        "회원유형 인지(비분기) + 결과산출 단계 실제분기",
+        "외부기관(신용평가 등) 연동 프로세스",
+        "비대칭 분기(한쪽만 외부호출)"
+      ],
+      "quality": "approved",
+      "thumbnail": null,
+      "master": "standard"
     },
     {
       "id": "SVC-001",
