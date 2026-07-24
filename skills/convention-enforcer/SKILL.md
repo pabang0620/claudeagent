@@ -1,6 +1,6 @@
 ---
 name: convention-enforcer
-description: React + Express 프로젝트의 네이밍·라우팅·권한·상태관리·파일구조 컨벤션을 파일 저장 시점·pre-commit·부팅 시점에 강제하는 정적 검사 스킬. 라우팅 상수(ROUTES) 강제, admin 라우트 requireAdmin 강제, Zustand 셀렉터 단일 필드 구독, useParams 네이밍 일치, 파일명 prefix 규칙, 경로 문자열 리터럴 금지. WeCom 회고 근거 — admin 권한 누락 7+회, 경로 리터럴 10+회, Zustand 무한 렌더, useParams 불일치 등 50+건 fix 반복 차단.
+description: React + Express 프로젝트의 네이밍·라우팅·권한·상태관리·파일구조·백엔드 3계층 배치·CSS BEM 구조 컨벤션을 파일 저장 시점·pre-commit·부팅 시점에 강제하는 정적 검사 스킬. 라우팅 상수(ROUTES) 강제, admin 라우트 requireAdmin 강제, Zustand 셀렉터 단일 필드 구독, useParams 네이밍 일치, 파일명 prefix 규칙, 경로 문자열 리터럴 금지, Controller/Service SQL 직접 호출 금지(도메인 드리븐 3계층 프로젝트 한정), CSS 태그/ID 선택자·`__` 혼용 금지(파일별 BEM 프로젝트 한정). WeCom 회고 근거 — admin 권한 누락 7+회, 경로 리터럴 10+회, Zustand 무한 렌더, useParams 불일치 등 50+건 fix 반복 차단. CSS BEM 준수율 86%(90/105) 측정 근거로 ce-013 추가.
 ---
 
 # convention-enforcer
@@ -9,7 +9,7 @@ description: React + Express 프로젝트의 네이밍·라우팅·권한·상�
 
 ## 적용 트리거
 
-1. **자동** — `.jsx/.tsx/.js/.ts` 저장 직후 (파일 경로와 내용 기준으로 룰 적용)
+1. **자동** — `.jsx/.tsx/.js/.ts` 저장 직후 (파일 경로와 내용 기준으로 룰 적용), `.css` 저장 직후 (ce-013, BEM 대상 프로젝트에 한함)
 2. **pre-commit** — `git commit` 직전 staged 파일 검사, 위반 시 커밋 거부
 3. **서버 부팅** — Express 앱 부팅 시 `admin*Routes.js` 파일 정적 검증. `requireAdmin` 누락 시 `process.exit(1)`
 4. **수동** — `/convention-check <경로>` 또는 "컨벤션 검사해줘"
@@ -415,6 +415,136 @@ return res.json({ success: true, data: row })   // 전체 리소스
 
 ---
 
+### ce-012 — 백엔드 3계층 배치 (error, autofix: hint)
+
+**적용 조건**: 도메인 드리븐 3계층 구조(`backend/src/domains/{domain}/{Domain}Controller.js` + `{Domain}Service.js` + `{Domain}Repository.js`)를 쓰는 Express 프로젝트에 한정. 평면 `routes/controllers` 구조 등 이 레이아웃이 없는 프로젝트에는 적용하지 않음 — `find backend/src/domains -name "*Repository.js"` 결과가 0건이면 이 룰 스킵.
+
+**match**: `backend/src/domains/**/*Controller.js`, `*Service.js`, `*Repository.js`
+
+**antipattern**:
+```javascript
+// backend/src/domains/webtoon/webtoonController.js — SQL이 Controller에 직접 있음
+export const getWebtoons = async (req, res, next) => {
+  try {
+    const [rows] = await pool.query('SELECT * FROM webtoons WHERE deleted_at IS NULL')
+    return res.json({ success: true, data: rows })
+  } catch (err) { next(err) }
+}
+```
+```javascript
+// backend/src/domains/webtoon/webtoonService.js — SQL이 Service에 직접 있음
+export const getWebtoon = async (uuid) => {
+  const [rows] = await pool.query('SELECT * FROM webtoons WHERE webtoon_id = ?', [uuid])
+  return rows[0]
+}
+```
+
+**correct** (실제 파일 구조 — `backend/src/domains/webtoon/`):
+```javascript
+// webtoonRepository.js — SQL은 이 레이어만
+export const findWebtoonByUUID = async (uuid) => {
+  const [rows] = await pool.query('SELECT * FROM webtoons WHERE webtoon_id = ?', [uuid])
+  return rows[0]
+}
+
+// webtoonService.js — 비즈니스 로직 + Repository 호출만
+export const getWebtoon = async (uuid, requesterType, requesterUuid) => {
+  const webtoon = await webtoonRepository.findWebtoonByUUID(uuid)
+  if (!webtoon) throw Object.assign(new Error('작품을 찾을 수 없습니다'), { status: 404 })
+  return webtoon
+}
+
+// webtoonController.js — 얇은 HTTP 글루만 (try/catch + next(err))
+export const getWebtoon = async (req, res, next) => {
+  try {
+    const webtoon = await webtoonService.getWebtoon(req.params.uuid, req.user?.user_type, req.user?.uuid)
+    return successResponse(res, webtoon)
+  } catch (err) { next(err) }
+}
+```
+
+**검사 방법 (grep)**:
+```bash
+# Controller/Service에 SQL 직접 호출 있으면 위반 → Repository로 이동
+grep -rnE "pool\.query\(|conn\.query\(" backend/src/domains/**/*Controller.js backend/src/domains/**/*Service.js
+
+# Repository에 HTTP 관심사(req./res.)가 있으면 위반 → 계층 역전
+grep -rnE "\bres\.(json|status|send)\(|\breq\.(body|params|query|user)\b" backend/src/domains/**/*Repository.js
+```
+
+**검사 한계 (명시)**:
+- Service의 트랜잭션 조율(`pool.getConnection()`, `conn.beginTransaction()`, `conn.commit()`) 자체는 위반 아님 — `conn.query(`/`pool.query(` 호출부만 위반으로 잡는다 (createWebtoon처럼 여러 Repository 호출을 하나의 트랜잭션으로 묶는 패턴은 Service의 정상 책임).
+- aggregation 전용 엔드포인트(`common/` 등)가 여러 Repository를 직접 조합하는 것은 이 룰과 무관 — SQL 자체가 Repository에 있기만 하면 통과.
+- 쿼리 문법·성능·인덱스 적정성은 이 룰의 범위 밖 (`database-reviewer` 담당). ce-012는 **배치 위치**만 본다.
+
+**근거**: `wecom-convention-checker` Domain 1 (backend 3-layer)을 일반화. SQL이 여러 레이어에 흩어지면 재사용·테스트가 어려워지고 필드명 drift(WeCom 필드명 미스매치 15+회의 근본 원인 중 하나)로 이어짐.
+
+---
+
+### ce-013 — CSS BEM 구조 (warn, autofix: hint)
+
+**적용 조건**: 파일별 CSS(BEM) 방법론을 쓰는 프로젝트 한정 — 컴포넌트/페이지 파일 옆에 동명 `.css` 파일이 있고(`Component.jsx` + `Component.css`), 해당 jsx 상단에 `import './Component.css'`가 있는 구조일 때만 적용. **Tailwind 유틸리티 클래스 위주 프로젝트, CSS Modules(`*.module.css`), styled-components/emotion 프로젝트에는 적용하지 않음.**
+- **감지 방법**: 대상 `.css`와 동일 폴더에 동명 `.jsx`/`.tsx`가 있고 그 안에 해당 CSS import가 있으면 적용 대상. `*.module.css` 확장자거나 `package.json`에 `styled-components`/`@emotion/*` 의존성이 있으면 이 룰 전체를 스킵.
+
+**match**: `pages/**/*.css`, `components/**/*.css` (위 조건으로 BEM 대상 판단된 파일)
+
+**antipattern**:
+```css
+/* frontend/src/pages/home/HomePage.css — __ 없이 평평한 kebab-case만 사용 */
+.home-loading { display: flex; justify-content: center; padding: 80px 0; }
+.home-banner-section { position: relative; overflow: hidden; }
+```
+```css
+/* frontend/src/components/webtoon/WebtoonCard.css — 같은 파일에 __ 사용/미사용이 혼재 */
+.webtoon-card-thumbnail { position: relative; aspect-ratio: 3/4; }
+.webtoon-card-thumbnail__img { position: absolute; inset: 0; }  /* __ 사용 */
+.webtoon-card-info { margin-top: 6px; }                          /* __ 미사용 — 혼재 위반 */
+```
+```css
+div { margin: 0; }             /* 태그 선택자 금지 */
+#popup-banner { z-index: 10; } /* ID 선택자 금지 */
+```
+
+**correct** (실제 파일 — `WebtoonDetailPage.css` 패턴):
+```css
+.webtoon-detail-page { min-height: 100vh; background: #ffffff; }
+.webtoon-detail-page__loading { display: flex; justify-content: center; padding: 80px 0; }
+.webtoon-detail-page__error { text-align: center; padding: 64px 0; color: #6b7280; }
+```
+```css
+/* WebtoonCard.css라면 전체를 __ 로 통일 */
+.webtoon-card__thumbnail { position: relative; aspect-ratio: 3/4; }
+.webtoon-card__thumbnail-img { position: absolute; inset: 0; }
+.webtoon-card__info { margin-top: 6px; }
+```
+
+**검사 방법 (grep)**:
+```bash
+# 태그 선택자 금지 (컴포넌트 CSS 파일 내부, 클래스 자손 결합자 뒤 태그 포함)
+grep -nE "^\s*\.?[\w-]*\s*(div|span|p|img|a|ul|li|button|h[1-6]|input|form|table|td|tr)\s*\{" *.css
+
+# ID 선택자 금지 (앵커 스코프 `#section-x .class {}` 는 예외 — 뒤에 자손 클래스가 있으면 허용)
+grep -nE "^\s*#[\w-]+\s*\{" *.css
+
+# 파일 내 최상위 클래스 목록 추출 (__ 혼재 판정용 1차 자료)
+grep -oE "^\.[a-zA-Z0-9_-]+" FILE.css | sort -u
+```
+
+**`__` 혼재 판정 로직** (grep은 후보만 추출, 최종 판단은 Claude가 파일을 읽고 수행):
+1. 파일 내 최상위 클래스 셀렉터를 전부 추출한다.
+2. `__` 포함 클래스에서 블록명(`__` 앞부분, 예: `webtoon-card-thumbnail`)을 뽑는다.
+3. `__` 미포함 클래스 중 위 블록명과 동일 prefix를 공유하는 것이 있으면(`webtoon-card-info`가 `webtoon-card-thumbnail__img`와 같은 컴포넌트 소속인데 `__`를 안 씀) 혼재 위반으로 보고한다.
+4. 파일 전체가 `__`를 전혀 안 쓰는 순수 flat 파일은 이 룰만으로는 위반 아님(hyphen-only 통일도 허용된 스타일). 단 프로젝트 CLAUDE.md/dev-style.md가 BEM(`__`)을 명시적 표준으로 선언한 경우 flat 전체 파일도 위반으로 격상해 보고.
+
+**검사 한계 (명시)**:
+- 자손 결합자 뒤 태그 선택자(`.webtoonCard img`)는 회색지대 — 아이콘 라이브러리 삽입(`.icon svg`) 등 실무상 예외가 있어 자동 error가 아닌 warn으로 보고, Claude가 케이스별 확인.
+- Tailwind arbitrary value(`className="[&>div]:flex"`)는 JSX 내부 문자열이라 이 룰(CSS 파일 대상) 범위 밖.
+- 파일 크기 400줄 초과는 ce-007과 중복 감지 — ce-013에서는 별도 보고하지 않고 ce-007에 위임.
+
+**근거**: 측정된 실사례 — flagship 프로젝트 BEM 준수율 90/105(86%). "BEM이 문서화된 표준"이라는 사실만으로는 준수가 강제되지 않음을 보여주는 수치. `wecom-convention-checker` Domain 4 (CSS BEM)를 일반화.
+
+---
+
 ## 실행 프로토콜
 
 ### Phase 0: 사전 확인
@@ -436,6 +566,8 @@ return res.json({ success: true, data: row })   // 전체 리소스
    - `.jsx/.tsx` → ce-001, ce-003, ce-004, ce-005, ce-007
    - `hooks/*.js` → ce-006
    - `.js/.ts` 전반 → ce-001 (네비게이션 패턴)
+   - `backend/src/domains/**/*Controller.js`, `*Service.js`, `*Repository.js` → ce-012 (3계층 배치, 도메인 드리븐 구조 있는 프로젝트에 한함)
+   - `pages/**/*.css`, `components/**/*.css` → ce-013 (BEM 구조, 파일별 CSS 방법론 쓰는 프로젝트에 한함)
 
 3. **룰 적용 순서**: 심각도 error 먼저 → warn 나중
 
@@ -498,8 +630,8 @@ app.listen(env.PORT)
 ## 충돌 회피 (다른 스킬과의 경계)
 
 - **mobile-first-checker (mf-000)** — 모바일 복제 파일 감지. convention-enforcer ce-008 폴더 구조와 중복이나 심각도가 다름: mf-000 error, ce-008 warn.
-- **ui-design-system** — 디자인 토큰/컴포넌트 생성 담당. convention-enforcer는 네이밍/권한/라우팅만. CSS 값 규칙은 ui-design-system 의 stylelint가 담당.
-- **database-reviewer** — DB 스키마·쿼리. convention-enforcer는 admin 테이블 접두사 일관성만 체크 (ce-009).
+- **ui-design-system** — 디자인 토큰/컴포넌트 생성 담당. convention-enforcer는 네이밍/권한/라우팅/3계층/CSS **구조**(BEM)만 담당. CSS **값** 규칙(하드코딩 색상/radius/shadow)은 ui-design-system 의 stylelint가 담당 — ce-013은 선택자 구조·`__` 일관성만 보고 값은 다루지 않음.
+- **database-reviewer** — DB 스키마·쿼리. convention-enforcer는 admin 테이블 접두사 일관성만 체크 (ce-009). SQL이 어느 레이어에 있는지(배치 위치)는 ce-012가 체크하되, 쿼리 자체의 문법·성능·인덱스 적정성은 database-reviewer 담당.
 - **security-reviewer** — 권한·취약점 전반. convention-enforcer 는 `requireAdmin` 미사용만 한정 (ce-002).
 
 ---
@@ -554,8 +686,8 @@ ce-002 (admin 권한) 와 ce-004 (useParams) 는 AST 만으로 검증 불가 →
 ## 이 스킬이 하지 않는 것
 
 - 동작 버그 감지 (stale closure, race condition) — `error-prevention-rules` 담당
-- SQL/API 계약 검증 — `api-contract-designer`, `database-reviewer` 담당
-- CSS 토큰 강제 — `ui-design-system` stylelint 담당
+- SQL 문법·성능·인덱스 검증 (SQL 자체의 정확성) — `api-contract-designer`, `database-reviewer` 담당. ce-012는 SQL이 어느 레이어(Controller/Service/Repository)에 있는지 배치만 검사
+- CSS 토큰(색상/radius/shadow 등 값) 강제 — `ui-design-system` stylelint 담당. ce-013은 CSS 구조(BEM 선택자·`__` 일관성)만 검사
 - 타입 검증 — TypeScript 컴파일러 위임
 
 ## 성공 지표
@@ -564,6 +696,8 @@ ce-002 (admin 권한) 와 ce-004 (useParams) 는 AST 만으로 검증 불가 →
 - **경로 리터럴**: 10+건 → 0건 (pre-commit 차단)
 - **Zustand 무한 렌더**: 5+건 → 0건
 - **useParams 불일치**: 3건 → 0건
+- **CSS BEM 준수율**: flagship 프로젝트 86%(90/105 파일) → ce-013 강제 적용 후 신규/수정 파일 100% 목표
+- **백엔드 3계층 위반(Controller/Service 내 SQL)**: ce-012 pre-commit 차단으로 신규 커밋 0건 목표
 - **pre-commit 차단율**: 컨벤션 위반 커밋 100% 차단
 
 ## 참고 커밋 (WeCom 회고)
