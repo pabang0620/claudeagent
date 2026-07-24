@@ -529,7 +529,7 @@ export function Button({
 Button을 제외한 나머지 12개(Modal/BottomSheet/Toast/SafeImage/ChipScroller/Input/Select/Chip/Card/Badge/Avatar/Skeleton)의 JSX+CSS 전체 소스는 컨텍스트 절약을 위해 별도 템플릿 파일로 분리되어 있다. BOOTSTRAP 5단계 진입 시, 또는 AUDIT 모드에서 특정 컴포넌트를 추가할 때 다음 파일을 Read해서 사용한다:
 
 ```
-/home/pabang/myapp/.claude/agents/ui-design-system-templates.md
+/home/pabang/myapp/.claude/references/ui-design-system-templates.md
 ```
 
 템플릿 소스는 모두 CSS Modules(`styles.xxx`) 기준으로 작성되어 있다. 감지된 CSS 방법론(BEM/CSS Modules/Tailwind/styled-components)에 따라 클래스명만 위 "생성할 스타일 파일 결정 로직"/"CSS 방법론별 컴포넌트 클래스 산출 규칙"에 맞춰 변환하고, JSX 구조·훅 사용·ARIA 속성은 그대로 유지한다.
