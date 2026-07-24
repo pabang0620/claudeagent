@@ -1090,6 +1090,58 @@ router.delete('/:id', productController.remove)
 router.delete('/:id', authenticate, verifyOwnership(ProductRepository), productController.remove)
 ```
 
+### API 워터폴 탐지 및 aggregation 엔드포인트
+
+**탐지 기준**
+페이지/커스텀훅이 마운트 시점(`useEffect(..., [])`)에 **3개 이상**의 독립적인 API를 호출하면 워터폴 후보다.
+- 패턴 A — `useEffect` 안에 개별 fetch 3개 이상 나열
+- 패턴 B — `Promise.all([...])`로 병렬 처리했지만 그 결과에 의존한 후속 호출이 또 붙는 2-step 체이닝(예: A·B 완료 후 `fetchC(a.id)` 추가 호출)
+- 패턴 C — 순차 `await` 체인(`await fetchA(); await fetchB(); await fetchC()`)으로 직렬 실행되는 경우
+
+```bash
+grep -rln "useEffect" frontend/src/pages/ --include="*.jsx" --include="*.js"      # 후보 페이지/훅 나열
+grep -rn "Promise.all(\[" frontend/src/pages/ --include="*.jsx" --include="*.js"  # 병렬 묶음 후보
+```
+grep은 후보 나열용일 뿐이다 — 카운트만으로 판단하지 말고 각 페이지 컴포넌트/`use*.js` 훅을 Read로 직접 열어 마운트 시 실제 호출 수와 의존관계를 확인한 뒤에만 판단한다.
+
+**합칠지 판단 기준**
+| 합쳐도 됨 | 합치면 안 됨 |
+|---|---|
+| 모두 같은 페이지 초기 렌더에 필요 | 사용자 상호작용(드롭다운·검색·페이지네이션)으로 트리거되는 호출 — 애초에 워터폴이 아니므로 유지 |
+| 전부 동일 인증 수준(전부 공개 또는 전부 인증) | 인증 필요 데이터 + 공개 데이터 혼합 (아래 금지 규칙) |
+| 응답이 작아 페이로드 합산 부담이 없음 | 캐싱 전략이 서로 달라야 하는 경우(한쪽만 실시간성이 중요) |
+
+**금지 규칙 — 인증 데이터 ↔ 공개 데이터 혼합 금지 (CRITICAL)**
+인증이 필요한 데이터와 공개 데이터를 하나의 aggregation 엔드포인트에 섞지 않는다.
+- 토큰 만료 시 공개 데이터까지 함께 실패 → 공개 페이지 전체가 깨짐
+- 반대로 미들웨어를 느슨하게 걸면 비인증 사용자에게 보호 데이터가 그대로 노출됨
+- 대안: (1) 프론트에서 `Promise.all([공개API(), 인증API()])` 병렬 유지 — 이미 병렬이므로 워터폴 아님 (2) 공개/인증을 각각 별도 aggregation 엔드포인트로 분리 (3) 공개 데이터는 캐싱으로 요청 자체를 줄임
+
+**집계 엔드포인트 골격**
+```javascript
+// controllers 위치는 프로젝트 구조 컨벤션을 따름
+export const getPageData = async (req, res, next) => {
+  try {
+    const [itemsA, itemsB, itemsC] = await Promise.all([
+      ServiceA.getAll().catch(() => []),      // 부분 실패를 기본값으로 흡수
+      ServiceB.getList().catch(() => []),
+      ServiceC.getItems().catch(() => []),
+    ])
+    // 응답 shape은 위 "응답 포맷 통일" 규칙(프로젝트 감지)을 그대로 따른다 — 여기서 새 shape을 만들지 않음
+    return successResponse(res, { itemsA, itemsB, itemsC })
+  } catch (err) {
+    next(err)
+  }
+}
+```
+- `.catch(() => 기본값)`은 "없어도 페이지가 의미 있는" 데이터에만 적용한다. 핵심 데이터(예: 상품 상세 자체)는 catch 없이 던져 `next(err)`로 넘겨 정상 에러 처리
+- 라우터 등록은 위 "신규 라우터 등록 규칙" 섹션과 동일 — `routes/index.js` 등록 누락 금지
+
+**프론트 교체**
+- 기존 `useEffect` 내 다중 fetch / `Promise.all` 호출을 단일 aggregation API 함수 1개 호출로 교체
+- 부분 실패 처리: 단일 호출이 실패해도 페이지 전체가 깨지지 않도록 `.catch(() => {})` + 각 state는 빈 배열/null 기본값 유지, 로딩 종료는 `.finally()`
+- 완료 기준: 마운트 시 HTTP 요청 수 ≤ 2개(aggregation 1개 + 필요 시 인증 확인 1개), 사용자 상호작용으로 트리거되는 호출은 그대로 유지되는지 확인
+
 ---
 
 **기억하세요**: Express는 unopinionated입니다. 구조는 당신이 만듭니다. 처음부터 레이어를 분리하면 나중에 리팩토링 비용이 없습니다.

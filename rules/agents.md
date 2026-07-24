@@ -142,6 +142,22 @@ playwright-verify-loop 에이전트 사용 (e2e-runner 금지)
 - npx playwright test 실행이 아님
 ```
 
+### 필드명 전면 변경 (DB+백엔드+프론트)
+```
+1. 영향범위 스캔 — schema-drift-auditor 또는 grep으로 필드명 등장 지점 전수 수집
+   (DB 스키마/마이그레이션, Repository SQL, Service, Controller, Zod 스키마,
+    프론트 API 함수·폼·store·라벨·CSS 클래스명) + 동명이인 필드(타 테이블 동일명) 충돌 확인
+   → [승인 게이트] 스캔 결과 사용자 확인
+2. db-schema-architect MIGRATE 모드로 UP/DOWN(롤백) SQL 파일만 생성 — 실행하지 않음
+   → [승인 게이트] 마이그레이션 SQL 검토
+3. 사용자가 직접 마이그레이션 실행 (백업 확인 후) — 에이전트는 ALTER TABLE 실행 금지
+   → [승인 게이트] 실행 완료 확인
+4. 코드 반영 — 백엔드(Repository→Service→Controller→Zod) → 프론트(API 함수→폼→store→표시 라벨)
+5. schema-drift-auditor로 3축 정합성 재확인 + 앱 기동 확인 → code-reviewer
+```
+> 전용 에이전트를 만들지 않은 이유: ALTER TABLE 실행 권한을 가진 자율 에이전트는
+> "파괴적 작업 절대 금지" 승인 규칙과 구조적으로 충돌한다.
+
 ---
 
 ## Parallel Task Execution
