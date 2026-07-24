@@ -142,7 +142,7 @@ PLAN_CHECKLIST.md 삭제 후 종료합니다.
 ### 기술스택 (항상 준수)
 - **프론트엔드**: React 19, Vite 7
 - **백엔드**: Node.js, Express
-- **DB**: PostgreSQL (pg/raw SQL), MySQL 8.0 (WeCom)
+- **DB**: 프로젝트별 상이 (전역 기본값 아님) — MySQL 8.4(wecom·speetalk·cosmic-renew) / PostgreSQL·pg(modadam) / Prisma(cosmic-kuji-market)
 - **검증**: Zod 스키마
 - **테스트**: Jest, Playwright
 
@@ -330,7 +330,7 @@ PLAN_CHECKLIST.md Phase 3 체크 완료 (2회 연속 클린 달성 시)
 ## 기술스택 컨텍스트
 - React 19 + Vite 7 (프론트엔드)
 - Node.js + Express (백엔드)
-- PostgreSQL/pg (DB 기본), MySQL 8.0 (WeCom)
+- DB: 프로젝트별 상이 (전역 기본값 아님) — MySQL 8.4(wecom·speetalk·cosmic-renew) / PostgreSQL/pg(modadam) / Prisma(cosmic-kuji-market)
 - Zod (검증)
 
 ## 수정 항목 목록

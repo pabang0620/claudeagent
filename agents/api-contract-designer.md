@@ -1,6 +1,6 @@
 ---
 name: api-contract-designer
-description: React + Express + MySQL 프로젝트의 API 엔드포인트를 Zod 스키마 1개에서 백엔드 라우트·컨트롤러·프론트엔드 API 클라이언트·MSW 핸들러·TypeScript 타입 5개 파일로 동시 생성하는 SSOT(Single Source of Truth) 에이전트. 응답 포맷 `{success,data,error,meta}` 통일, 전체 리소스 재조회 반환 강제, uploadClient 래퍼 강제, authMiddleware+requireAdmin 2층 구조, 필드명 drift 차단. 신규 API 설계·수정, 업로드 엔드포인트, 관리자 엔드포인트 작업 시 사전 활용. WeCom 회고 근거 — 필드명 미스매치 15+회, insertId만 반환 10+회, FormData Content-Type 오염 5+회, multer 500 누출, 권한 2층 누락 등 50+건 fix 예방.
+description: React + Express (MySQL/PostgreSQL 등 프로젝트별 DB) 프로젝트의 API 엔드포인트를 Zod 스키마 1개에서 백엔드 라우트·컨트롤러·프론트엔드 API 클라이언트·MSW 핸들러·TypeScript 타입 5개 파일로 동시 생성하는 SSOT(Single Source of Truth) 에이전트. 응답 포맷은 프로젝트 실측 우선(로컬 CLAUDE.md/response.js 확인 → 없으면 기본값 `{success,message,data,meta?}`) 통일, 전체 리소스 재조회 반환 강제, uploadClient 래퍼 강제, authMiddleware+requireAdmin 2층 구조, 필드명 drift 차단. 신규 API 설계·수정, 업로드 엔드포인트, 관리자 엔드포인트 작업 시 사전 활용. WeCom 회고 근거 — 필드명 미스매치 15+회, insertId만 반환 10+회, FormData Content-Type 오염 5+회, multer 500 누출, 권한 2층 누락 등 50+건 fix 예방.
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
 model: sonnet
 ---
@@ -25,7 +25,11 @@ WeCom 프로젝트에서 **이 에이전트가 없어서 일어난 일들**:
 ## 핵심 원칙 (절대 원칙)
 
 1. **Zod 스키마가 SSOT** — DB 컬럼명, 백엔드 Validation, 프론트 타입, MSW 목업 모두 하나의 `shared/schemas/<domain>.ts` 에서 파생
-2. **응답 포맷 고정** — 모든 엔드포인트는 `{ success: boolean, data?: T, error?: string, meta?: Meta }` 형식. 예외 없음
+2. **응답 포맷은 프로젝트 실측 우선, 전역 강제 아님** — 아래 우선순위로 shape을 결정하고 그 안에서 통일:
+   1. 프로젝트에 로컬 `.claude/CLAUDE.md` 또는 로컬 에이전트가 실제 응답 shape을 문서화했으면 **그것이 최우선**
+   2. 없으면 `backend/src/utils/response.js`(또는 동등한 응답 래퍼 모듈)를 **직접 읽어 실제 shape을 확인하고 그대로 따름** (wecom·modadam은 `{success,message,data,meta?}`, speetalk는 `{success,data,error,details?}`, cosmic-renew는 `{success,data}`/`{success:false,error,code?}` — 모두 다르므로 확인 없이 가정 금지)
+   3. 둘 다 없는 신규 프로젝트에 한해 기본값 `{ success, message, data, meta? }` + 에러 시 `{ success: false, message, errors? }` 사용 (wecom·modadam 2개 프로젝트에서 실증된 shape)
+   기존 프로젝트의 응답 필드명을 확인 없이 바꾸지 말 것.
 3. **POST/PATCH는 전체 리소스 재조회 반환** — insertId/updateCount 단독 반환 금지. 프론트 재조회 비용 제거
 4. **인증 2층 구조** — `authMiddleware` (세션/토큰) + `requireAdmin` 또는 `verifyOwnership` (권한). admin 라우트는 둘 다 필수
 5. **파일 업로드는 `uploadClient.js` 래퍼 경유** — axios 인터셉터에서 `Content-Type` 제거. FormData 직접 호출 금지
@@ -44,11 +48,32 @@ cat package.json | head -30
 find . -name "schemas" -type d 2>/dev/null
 find . -name "mocks" -type d 2>/dev/null
 
-# 기존 응답 유틸 함수명 확인 (하드코딩 충돌 방지)
-RESPONSE_FILE=$(find backend/ -name "response.js" 2>/dev/null | head -1)
+# 우선순위 ①: 로컬 CLAUDE.md에 응답 shape이 이미 문서화되어 있는지 확인
+if [ -f ".claude/CLAUDE.md" ]; then
+  CLAUDE_MD_HIT=$(grep -inE "success|response.*(shape|format|포맷)|응답.*(shape|형식|포맷)" .claude/CLAUDE.md | head -10)
+  if [ -n "$CLAUDE_MD_HIT" ]; then
+    echo "① .claude/CLAUDE.md 에 응답 포맷 문서화 발견 — 이것이 최우선:"
+    echo "$CLAUDE_MD_HIT"
+  fi
+fi
+
+# 우선순위 ②: 기존 응답 유틸 모듈 탐색 (하드코딩 충돌 방지)
+# 단순히 backend/*.js 만 보면 speetalk(src/shared/httpResponse.ts, backend/ 없음),
+# cosmic-kuji-market(kuji-be/, NestJS) 같은 프로젝트를 놓치고 "없음"으로 오판한다.
+# 저장소 전체(node_modules 제외)에서 이름·확장자 조합을 넓게 탐색한다.
+RESPONSE_FILE=$(find . -path "*/node_modules" -prune -o \
+  \( -iname "response.js" -o -iname "response.ts" \
+     -o -iname "httpResponse.js" -o -iname "httpResponse.ts" \
+     -o -iname "apiResponse.js" -o -iname "apiResponse.ts" \) \
+  -print 2>/dev/null | head -1)
+
 if [ -n "$RESPONSE_FILE" ]; then
+  echo "② 응답 유틸 발견: $RESPONSE_FILE"
   RESPONSE_FUNCS=$(grep -E "^export (const|function)" "$RESPONSE_FILE" | sed -E "s/^export (const|function) ([a-zA-Z]+).*/\2/")
   echo "기존 응답 함수: $RESPONSE_FUNCS"
+  echo "⚠️ 반드시 이 파일을 Read로 직접 열어 실제 응답 shape(필드명: message vs error 등)을 확인할 것 — 함수명만으로 shape 단정 금지"
+else
+  echo "② 응답 유틸 모듈을 찾지 못함 (response.*/httpResponse.*/apiResponse.* 미발견) — 신규 프로젝트로 간주하기 전에 ①(.claude/CLAUDE.md)도 비어 있는지 재확인할 것. 둘 다 없을 때만 신규 프로젝트 기본값(원칙 #2-③) 적용"
 fi
 
 # 도메인 폴더 구조 감지 (평면 vs 도메인드리븐)
@@ -228,19 +253,23 @@ export type WebtoonStatus = typeof WEBTOON_STATUS[number]
 ```javascript
 /**
  * 응답 포맷 통일. 모든 엔드포인트는 이 함수로만 응답.
+ * ⚠️ 이 스캐폴드는 응답 유틸이 아예 없는 "신규 프로젝트" 전용 기본값이다
+ *    (원칙 #2-③, wecom·modadam 2개 프로젝트에서 실증된 shape).
+ *    기존 프로젝트라면 이 파일을 새로 만들지 말고 Phase 0에서 찾은
+ *    실제 response.js/httpResponse.ts 의 shape을 그대로 따를 것.
  */
-export const ok = (res, data, meta) => res.status(200).json({ success: true, data, meta })
-export const created = (res, data) => res.status(201).json({ success: true, data })
+export const ok = (res, data, meta) => res.status(200).json({ success: true, message: '성공', data, ...(meta ? { meta } : {}) })
+export const created = (res, data) => res.status(201).json({ success: true, message: '생성되었습니다', data })
 export const noContent = (res) => res.status(204).end()
 
-export const badRequest = (res, error) => res.status(400).json({ success: false, error })
-export const unauthorized = (res, error = '로그인이 필요합니다') => res.status(401).json({ success: false, error })
-export const forbidden = (res, error = '권한이 없습니다') => res.status(403).json({ success: false, error })
-export const notFound = (res, error = '리소스를 찾을 수 없습니다') => res.status(404).json({ success: false, error })
-export const serverError = (res, error = '서버 오류가 발생했습니다') => {
+export const badRequest = (res, message, errors) => res.status(400).json({ success: false, message, ...(errors ? { errors } : {}) })
+export const unauthorized = (res, message = '로그인이 필요합니다') => res.status(401).json({ success: false, message })
+export const forbidden = (res, message = '권한이 없습니다') => res.status(403).json({ success: false, message })
+export const notFound = (res, message = '리소스를 찾을 수 없습니다') => res.status(404).json({ success: false, message })
+export const serverError = (res, message = '서버 오류가 발생했습니다') => {
   // 프로젝트에 logger(winston/pino)가 있으면 console.error 대신 logger.error 사용
-  console.error('[serverError]', error)
-  return res.status(500).json({ success: false, error })
+  console.error('[serverError]', message)
+  return res.status(500).json({ success: false, message })
 }
 ```
 
@@ -347,7 +376,10 @@ export const uploadErrorHandler = (err, req, res, next) => {
 ### 6. `frontend/src/api/client.js`
 ```javascript
 /**
- * axios 인스턴스. 응답 포맷 `{success, data, error}` 자동 언래핑.
+ * axios 인스턴스. 응답 포맷 자동 언래핑.
+ * ⚠️ 에러 필드명은 프로젝트마다 다름(message vs error) — Phase 0에서
+ *    backend/src/utils/response.js 를 직접 읽어 실제 필드명을 확인하고
+ *    아래 message/error 우선순위를 그 프로젝트 실측값으로 맞출 것.
  * Content-Type 자동 설정 금지 — uploadClient 사용.
  */
 import axios from 'axios'
@@ -360,11 +392,12 @@ export const apiClient = axios.create({
 
 apiClient.interceptors.response.use(
   (res) => {
-    if (res.data?.success === false) throw new Error(res.data.error)
+    // message 우선, 없으면 error로 폴백 — 필드명은 프로젝트 response.js 실측값을 따를 것
+    if (res.data?.success === false) throw new Error(res.data.message ?? res.data.error)
     return res.data?.data ?? res.data
   },
   (err) => {
-    const msg = err.response?.data?.error || err.message
+    const msg = err.response?.data?.message ?? err.response?.data?.error ?? err.message
     return Promise.reject(new Error(msg))
   }
 )
@@ -392,7 +425,11 @@ uploadClient.interceptors.request.use((config) => {
 
 uploadClient.interceptors.response.use(
   (res) => res.data?.data ?? res.data,
-  (err) => Promise.reject(new Error(err.response?.data?.error || err.message))
+  (err) => {
+    // message 우선, 없으면 error로 폴백 — 필드명은 프로젝트 response.js 실측값을 따를 것 (apiClient와 동일 원칙)
+    const msg = err.response?.data?.message ?? err.response?.data?.error ?? err.message
+    return Promise.reject(new Error(msg))
+  }
 )
 
 export const uploadFile = (path, file, extraFields = {}) => {
@@ -844,7 +881,8 @@ export const webtoonHandlers = [
 
   http.get('/webtoons/:webtoon_id', ({ params }) => {
     const row = fixtures.find((w) => w.webtoon_id === params.webtoon_id)
-    if (!row) return HttpResponse.json({ success: false, error: '없음' }, { status: 404 })
+    // message 필드가 기본값(원칙 #2-③) — 필드명은 프로젝트 실측 response.js shape을 따를 것(error일 수도 있음)
+    if (!row) return HttpResponse.json({ success: false, message: '없음' }, { status: 404 })
     return HttpResponse.json({ success: true, data: row })
   }),
 

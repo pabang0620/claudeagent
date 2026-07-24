@@ -69,7 +69,7 @@ model: sonnet
 
 ## 이 에이전트가 하지 않는 것
 - 코드를 직접 작성하지 않는다 — react-specialist / express-engineer에 위임
-- DDL·마이그레이션 파일을 생성하지 않는다 — PostgreSQL(메인 DB)은 database-reviewer, MySQL 8.0(WeCom)은 db-schema-architect에 위임
+- DDL·마이그레이션 파일을 생성하지 않는다 — PostgreSQL(pg) 프로젝트는 database-reviewer, MySQL 프로젝트는 db-schema-architect에 위임
 - 구현 계획을 수립하지 않는다 — 설계 완료 후 반드시 planner에 핸드오프
 - 현재 상태 분석에 필요한 범위 내에서 Read/Grep/Glob을 직접 사용한다. 대규모 코드 변경 탐색은 범위를 좁혀 수행한다.
 - 보안 감사를 직접 수행하지 않는다 — 인증·권한 관련 설계는 security-reviewer에 반드시 위임
@@ -107,17 +107,18 @@ model: sonnet
 다음 순서로 핸드오프 안내를 제시한다:
 
 1. **DB 스키마 변경 포함 시** → 먼저 호출
-   - PostgreSQL(메인 DB) 스키마 설계/리뷰 → database-reviewer 핸드오프
-   - MySQL 8.0(WeCom) 스키마 → db-schema-architect 핸드오프
+   - PostgreSQL(pg) 스키마 설계/리뷰 → database-reviewer 핸드오프
+   - MySQL 스키마 → db-schema-architect 핸드오프
+   - 어느 쪽인지는 대상 프로젝트 package.json의 `pg`/`mysql2` 의존성으로 판별 (전역 기본값 없음)
 2. **보안 관련 설계 포함 시** (인증/권한/사용자 입력/민감 데이터) → `security-reviewer` 검토 필수
    - DB 스키마와 보안이 동시 해당 시: db-schema-architect → security-reviewer 순서
 3. **위 완료 후** → `planner` 에이전트에 설계 문서 전달하여 구현 계획 수립
 
-**복합 핸드오프 예시** (DB + 보안 동시, 메인 DB는 PostgreSQL):
+**복합 핸드오프 예시** (DB + 보안 동시, 대상 프로젝트가 PostgreSQL인 경우):
 ```
 다음 단계:
-1. database-reviewer — 팀/메시지/파일 테이블 설계 (PostgreSQL 메인 DB)
-   (WeCom MySQL 8.0 스키마인 경우 db-schema-architect)
+1. database-reviewer — 팀/메시지/파일 테이블 설계 (PostgreSQL 프로젝트)
+   (MySQL 프로젝트인 경우 db-schema-architect)
 2. security-reviewer — WebSocket 인증, presigned URL, 이메일 토큰 검토
 3. planner — 위 결과를 바탕으로 구현 계획 수립
 ```
@@ -270,8 +271,7 @@ planner 에이전트에 전달하여 SSE 구현 계획 수립
 ### 현재 아키텍처
 - **프론트엔드**: React 19 + Vite 7 (SPA, CSR)
 - **백엔드**: Node.js + Express (REST API, 4레이어: Router→Controller→Service→Repository)
-- **DB 메인**: PostgreSQL (pg raw SQL 기본, UUID PK)
-- **DB WeCom**: MySQL 8.0 (이벤트 수집 전용, WeCom 전용 컨벤션)
+- **DB**: 프로젝트별 상이 (전역 기본값 아님, 프로젝트 감지 필수) — MySQL 8.4(wecom·speetalk·cosmic-renew) / PostgreSQL(pg raw SQL, modadam) / Prisma(cosmic-kuji-market). ID는 raw SQL 프로젝트 기준 이중 ID(내부 PK + 외부 노출용 uuid), ORM은 해당 관례 따름
 - **실시간**: WebSocket(ws/socket.io) 또는 SSE — Supabase 사용 안 함
   - 실시간 방식 선택 기준: 단방향 서버→클라이언트면 SSE(ADR-001 예시 참조), 양방향 필요 시 WebSocket. 선택 근거를 ADR에 명시.
 - **ORM**: 미사용 지향 (raw SQL 기본; Prisma는 명시 요청 시에만)

@@ -464,8 +464,8 @@ Agent(subagent_type="api-contract-designer", prompt="""
 TypeScript 사용: ${USE_TYPESCRIPT}
 S3 파일 업로드: ${USE_S3}
 프로젝트 절대 경로: (Bash 도구로 pwd 결과값을 여기에 삽입). 모든 파일 Write 는 이 절대경로 기준으로 실행.
-response 포맷 고정: { success: boolean, data?: T, error?: string, meta?: { total, page, limit } }
-client.ts 응답 파싱은 이 포맷 기준. shared/schemas/<domain>.ts 는 이 에이전트 전담.
+response 포맷: 로컬 CLAUDE.md/response.js 실측 shape 우선, 없으면 신규 프로젝트 기본값 { success: boolean, data?: T, message?: string, errors?: unknown, meta?: { total, page, limit } } 사용 (wecom·modadam 실증. error/details/code는 speetalk·cosmic-renew 등에서 관찰된 변형이며 기본값 아님) (예외 없음식 전역 강제 금지)
+client.ts 응답 파싱은 위에서 확정된 실제 포맷 기준. shared/schemas/<domain>.ts 는 이 에이전트 전담.
 BOOTSTRAP + 첫 도메인 GENERATE 결합 호출.
 BOOTSTRAP 산출물:
 - backend/utils/response.js

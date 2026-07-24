@@ -54,7 +54,7 @@
 ## 기술 스택
 - **프론트엔드**: React 19, Vite 7
 - **백엔드**: Node.js, Express
-- **DB**: PostgreSQL (pg/raw SQL), MySQL 8.4
+- **DB**: 프로젝트별 상이 (전역 기본값 아님, 프로젝트 감지 필수) — MySQL 8.4: wecom·speetalk·cosmic-renew / PostgreSQL(pg): modadam / Prisma: cosmic-kuji-market
 - **테스트**: Jest, Playwright
 - **기타**: Python
 
@@ -97,7 +97,7 @@ myapp/
 | `backend-patterns` | Node.js/Express 백엔드 아키텍처 패턴 (API 설계·레이어 분리·DB 접근·보안·캐싱·에러 처리) | 자동 적용 |
 | `frontend-patterns` | React 19 + Vite 7 프론트엔드 개발 패턴 (신규 API·컴포넌트·상태관리·성능·접근성) | 자동 적용 |
 | `coding-standards` | JS/TS/React/Node 범용 코딩 표준·베스트 프랙티스 | 자동 적용 |
-| `postgres-patterns` | PostgreSQL 패턴·쿼리 최적화·스키마 설계·인덱싱 (raw SQL/pg) | 자동 적용 |
+| `postgres-patterns` | PostgreSQL 패턴·쿼리 최적화·스키마 설계·인덱싱 (raw SQL/pg) | pg 감지 시 적용 (package.json에 `pg` 의존성 존재하는 프로젝트 한정, 예: modadam) |
 | `convention-enforcer` | 네이밍·라우팅·권한·상태관리·파일구조 컨벤션 정적 강제 (저장·pre-commit·부팅 시점) | 자동 적용 |
 | `error-prevention-rules` | React 런타임 에러(무한 렌더·race condition·cleanup 누락 등) 사전 차단 정적 검사 14개 룰 | 자동 (.jsx/.tsx 저장 시) |
 | `mobile-first-checker` | 모바일 안티패턴 사전 차단 정적 검사 12개 룰 (드래그·스크롤락·필터·모달 등) | 자동 (.jsx/.tsx/.css/.scss 저장 시) |
@@ -122,7 +122,7 @@ myapp/
 - 기능 보존: 수정 시 기존 기능 변경 금지
 - 들여쓰기: 2 spaces
 - 네이밍: 컴포넌트 PascalCase / 함수·변수 camelCase / 상수 UPPER_SNAKE_CASE
-- DB ID: UUID, 마이그레이션: raw SQL 스크립트 (MySQL 스키마·마이그레이션은 db-schema-architect 에이전트 담당)
+- DB ID: raw SQL 프로젝트는 이중 ID 패턴 — 내부 PK(`id AUTO_INCREMENT`/`BIGSERIAL`) + 외부 노출용 `uuid`/`{table}_id` 컬럼 분리 (IDOR 방지, AUTO_INCREMENT id 직접 노출 금지). ORM(Prisma 등) 프로젝트는 해당 ORM 관례를 따름(예: cosmic-kuji-market은 단일 `id String @id @default(cuid())`). 마이그레이션: raw SQL 스크립트 (MySQL 스키마·마이그레이션은 db-schema-architect 에이전트 담당)
 - 환경변수: `.env` 사용, 커밋 금지
 - 테스트 커버리지: 핵심 기능 80% 이상
 

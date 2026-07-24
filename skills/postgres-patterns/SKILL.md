@@ -1,6 +1,6 @@
 ---
 name: postgres-patterns
-description: PostgreSQL 데이터베이스 패턴, 쿼리 최적화, 스키마 설계, 인덱싱 — raw SQL(node-postgres/pg) 기본, Prisma는 요청 시에만
+description: PostgreSQL 데이터베이스 패턴, 쿼리 최적화, 스키마 설계, 인덱싱 — raw SQL(node-postgres/pg) 기본, Prisma는 요청 시에만. 적용 조건 — package.json에 `pg` 의존성이 있는 프로젝트 한정(예: modadam). MySQL 프로젝트(wecom·speetalk·cosmic-renew)에는 적용하지 않음
 ---
 
 # PostgreSQL 패턴

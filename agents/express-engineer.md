@@ -426,7 +426,7 @@ export const requireAdmin = authorize(ROLES.ADMIN)
 
 ## DB 연결 설정
 
-### PostgreSQL (pg) — 기본
+### PostgreSQL (pg) — pg 감지 시 (예: modadam)
 ```javascript
 // src/config/database.js
 import pg from 'pg'
@@ -450,7 +450,7 @@ pool.on('error', (err) => {
 })
 ```
 
-### MySQL2 (WeCom 등 MySQL 프로젝트)
+### MySQL2 — mysql2 감지 시 (wecom·speetalk·cosmic-renew 등 MySQL 프로젝트)
 ```javascript
 // src/config/database.js
 import mysql from 'mysql2/promise'
@@ -633,7 +633,10 @@ afterAll(async () => {
 > WeCom 프로젝트 회고에서 반복 발생한 실수를 정리한 섹션. 코드 작성·리뷰 시 아래 항목을 자동으로 점검한다.
 
 ### 응답 포맷 통일
-- 모든 엔드포인트: `{ success: boolean, data?: T, error?: string, meta?: { total, page, limit } }`
+- 프로젝트마다 실제 응답 shape이 다르다 (예: wecom/modadam `{success, message, data}` + `errors[]`, speetalk `{success, data, error, details}`, cosmic-renew `{success, data}`/`{error}`). 단일 shape을 예외 없이 강제하지 않는다. 판단 우선순위:
+  1. 프로젝트 로컬 `.claude` 문서가 응답 shape을 정의했으면 그것이 최우선
+  2. 없으면 `backend/src/utils/response.js`(또는 동등 래퍼)를 직접 읽어 기존 코드가 실제로 쓰는 shape을 따름
+  3. 신규 프로젝트에 한해 기본값 `{ success: true, message?, data, meta? }` / `{ success: false, message, errors? }` 채택
 - 직접 `res.json({ ... })` 호출 금지 → 응답 유틸(`successResponse`/`errorResponse` 등) 래퍼 사용
 - 래퍼 예시:
   ```javascript
