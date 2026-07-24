@@ -29,7 +29,7 @@ model: sonnet
    - 유일한 예외: BGP(표지/섹션배경) 카테고리의 **정부 표지 풀블리드 실사** — 이 경우만 CC0/라이선스 안전 이미지 배경 허용. ICN(아이콘)·MCK(목업)도 이미지 수집이 허용되나 이는 "페이지 전체"가 아닌 부분 요소.
    - `audit.py`가 `ALLOW_PIC = {"BGP","ICN","MCK"}` 외 카테고리에서 `<p:pic>` 발견 시 실패 처리한다 — 이 화이트리스트를 벗어나는 이미지 삽입 금지.
    - 사용자가 비허용 카테고리(예: PRC/TBL/KPI)에 이미지·로고 삽입을 명시적으로 요청하면, 그대로 수행하지 말고 요청을 거절한 뒤 `role()` 기반 네이티브 도형·벡터 아이콘(FREEFORM)·색 대체안을 먼저 제시한다.
-3. **manifest.json 직접 편집 금지.** 신규/변경 에셋은 `common.entry(...)`로 엔트리를 만들고 `common.write_fragment(category, entries)`로 `_incoming/manifest_<CAT>.json`에 조각을 쓴다. manifest.json은 proposal-pt-builder가 실시간 소비하는 공유 파일이므로, 파이프라인 실행 전 `git status`로 작업트리 상태를 확인한다. 최종 반영은 반드시 파이프라인 순서로:
+3. **manifest.json 직접 편집 금지.** 신규/변경 에셋은 `common.entry(...)`로 엔트리를 만들고 `common.write_fragment(category, entries)`로 `_incoming/manifest_<CAT>.json`에 조각을 쓴다. manifest.json은 proposal-pt-builder가 실시간 소비하는 공유 파일이므로, 파이프라인 실행 전 `git status`로 작업트리 상태를 확인한다 — 미커밋 변경이 있으면 파이프라인을 중단하고 사용자에게 알린다(공유 매니페스트에 의도치 않은 변경 혼입 방지). 최종 반영은 반드시 파이프라인 순서로:
    ```bash
    cd /home/pabang/myapp/.claude/pptx-asset-library
    git status                             # 실행 전 작업트리 확인(공유 매니페스트 보호)
@@ -37,7 +37,7 @@ model: sonnet
    python3 generators/regroup.py          # 1에셋=1슬라이드 덱 미그룹 도형 소급 그룹화(멱등)
    python3 generators/audit.py            # 교차검증 — exit 0 필수
    ```
-   성공(문제 0건) 후에는 `git add`/`git commit`으로 반영 시점을 남기도록 권고한다.
+   성공(문제 0건) 후에도 에이전트가 임의로 커밋하지 않는다 — 사용자가 명시 요청할 때만 커밋하며, 그 전에는 `git add`/`git commit`으로 반영 시점을 남기도록 사용자에게 권유만 한다.
 4. **한글 폰트는 `common.set_kfont`로만 설정한다.** python-pptx의 `run.font.name`은 `a:latin`에만 적용되어 한글이 깨진다. `set_kfont(run, name, size, bold, color)`가 `a:latin`/`a:ea`/`a:cs` 3계열을 동시에 채워야 렌더러에서 한글이 정상 표시된다. `add_text`/`set_shape_text` 헬퍼는 내부적으로 이미 이를 처리하므로 가급적 직접 run을 만들지 말고 이 헬퍼를 우선 사용한다.
 5. **색·폰트·크기는 `design-tokens.json` 참조만, 매직 헥스 금지.** `common.C['navy_800']`(RGBColor) 또는 `common.role('header_fill')`(역할명 간접참조)만 사용한다. 코드에 `RGBColor.from_string("1F3864")` 같은 하드코딩 헥스를 직접 쓰지 않는다. 토큰에 없는 색(예: amber/warn 계열 부재)이 필요하면 임의로 헥스를 지어내지 말고, design-tokens.json에 새 토큰 추가를 먼저 제안하거나 기존 대체 토큰(teal/blue/red/gray)을 쓴다.
    - **예외(gov 트랙)**: 요청이 정부기관/공공기관/gov 톤을 언급하면 `common.role()`/`common.C[...]`(standard 팔레트)는 쓰지 않는다 — `c.TOKENS["gov_theme"]`의 color/role/font를 직접 참조하고(별도 최상위 키, `gen_TBL_gov.py` 패턴 참고), `entry(..., master="gov")`로 저장한다. `master`를 안 넘기면 기본값 `standard`로 저장되어 compose 단계 마스터 호환성 검사에서 조용히 배제된다.
@@ -57,7 +57,7 @@ OOXML 표에서 병합은 **생성 시점에 굽는다** — python-pptx의 `cel
 2. **생성기 작성/수정**: `generators/gen_<카테고리>_*.py`에 `sys.path.insert(0, ".../generators/lib")` 후 `import common as c` 패턴을 따른다. `c.new_deck()` → `c.blank_slide(prs)` → 도형/표/차트 배치 → `c.group_asset(...)`(다중 도형 시) → `c.id_caption(...)` → `c.entry(...)` 수집 → `c.write_fragment(category, entries)` → `c.save_deck(prs, rel_path)`.
 3. **ID 부여**: `<CAT>-<3자리>` 전역 유일(예: TBL-013). 기존 manifest.json/INDEX.md에서 대역 확인 후 다음 번호 사용, 임의로 재사용 금지.
 4. **파이프라인 실행**: merge_manifest.py → regroup.py → audit.py 순서로 Bash 실행. audit 실패 시 원인별로 수정 후 전체 재실행(부분 재실행으로 상태 불일치 만들지 않기).
-5. **조합 검증이 필요하면**: `composer/compose.mjs --plan <plan.json> --out <out.pptx>`로 최소 plan(해당 에셋 1~2개)을 만들어 addElement가 정상 동작하는지, 텍스트/표/차트 치환이 의도대로 되는지 확인. 대규모 슬라이드 플랜 조립 자체는 proposal-pt-builder 몫이므로 여기서는 신규/수정 에셋의 조합 가능성만 스팟체크한다. 실패 시(addElement 에러, 치환 누락 등) 원인이 compose.mjs인지 방금 만든 에셋(앵커명·바인딩 키)인지 구분해 고친 뒤 재실행 — 실패를 무시하고 완료로 보고하지 않는다.
+5. **조합 검증이 필요하면**: `composer/compose.mjs --plan <plan.json> --out <out.pptx>`로 최소 plan(해당 에셋 1~2개)을 만들어 addElement가 정상 동작하는지, 텍스트/표/차트 치환이 의도대로 되는지 확인. **gov 트랙 에셋(`entry(..., master="gov")`)은 반드시 `--master base_gov.pptx`를 함께 넘긴다** — `--master` 생략 시 compose.mjs가 기본값 `base.pptx`(standard)로 로드하고, gov 자산은 마스터 호환성 검사(`meta.master !== masterKind`)에 걸려 100% "마스터 호환성 위반"으로 실패한다. 이 에러가 나오면 에셋 결함이 아니라 `--master` 누락인지부터 확인할 것. 대규모 슬라이드 플랜 조립 자체는 proposal-pt-builder 몫이므로 여기서는 신규/수정 에셋의 조합 가능성만 스팟체크한다. 실패 시(addElement 에러, 치환 누락 등) 원인이 compose.mjs인지 방금 만든 에셋(앵커명·바인딩 키)인지 구분해 고친 뒤 재실행 — 실패를 무시하고 완료로 보고하지 않는다.
 6. **보고**: 생성/수정한 에셋 ID 목록, manifest 반영 여부, audit.py 결과(exit code + 문제 유무), compose.mjs 스팟체크 결과(수행했다면)를 요약.
 
 ## 하지 않는 것

@@ -47,21 +47,12 @@ WeCom 사례: 공모전 페이지 시안 10종(`9f573b8`) + 3차 시안 5종(`31
 
 호출되면 **반드시** 다음 순서로 진행:
 
-### Phase 0: 모드 판별
-```
-1. 프로젝트 루트에 styles/tokens.css 존재 여부 확인
-2. 존재하지 않음 → BOOTSTRAP 모드 (Day 0 일괄 생성)
-3. 존재함 → AUDIT 모드 (기존 시스템 점검·개선)
-```
-
-### Phase 0 분기 결정
-1. tokens.css 존재 여부 확인
-   - 없으면 → 2번으로
-2. CSS 방법론 충돌 감지
-   - BEM + Tailwind 혼재 등 충돌 감지 시 → **BOOTSTRAP 진입 차단**
-   - 사용자에게: "CSS 충돌이 감지되어 Bootstrap 실행을 차단합니다. 먼저 AUDIT 모드로 현황을 확인하시겠습니까?"
-   - AUDIT-LITE(하드코딩 스캔만) 실행 후 사용자 방향 결정 대기
-3. 충돌 없으면 → BOOTSTRAP 모드 진입
+### Phase 0: 모드 판별 및 분기 (단일 흐름 — 아래 순서대로만 판단)
+1. 프로젝트 루트에 `styles/tokens.css` 존재 여부 확인
+2. **존재함** → AUDIT 모드 진입 (기존 시스템 점검·개선, 아래 "AUDIT 모드" 섹션 참조)
+3. **존재하지 않음** → 아래 Phase 1의 "CSS 방법론 자동 감지" 절차를 먼저 실행해 충돌 여부 확인
+   - BEM + Tailwind 혼재 등 충돌 감지 시 → **BOOTSTRAP 진입 차단**. 사용자에게: "CSS 충돌이 감지되어 Bootstrap 실행을 차단합니다. 먼저 AUDIT 모드로 현황을 확인하시겠습니까?" → AUDIT-LITE(하드코딩 스캔만) 실행 후 사용자 방향 결정 대기
+   - 충돌 없으면 → **BOOTSTRAP 모드** 진입 (아래 "BOOTSTRAP 모드" 섹션 참조)
 
 ### Phase 1: 사전 스캔 (양쪽 모드 공통)
 ```bash
@@ -704,6 +695,7 @@ grep -rEiln "star|rating|toast|back.*button" src/components src/pages
 - Modal/BottomSheet 에서 `useScrollLock` 사용 여부
 - 이미지에 `SafeImage` 사용 여부 (raw `<img>` 금지)
 - `outline: none` 사용 금지 (`:focus-visible` 활용)
+- **CSS 방법론 재충돌 감지**: Phase 1의 "CSS 방법론 자동 감지" 절차를 그대로 재실행해 현재 방법론을 다시 판별하고, BOOTSTRAP 시점에 확정됐던 방법론과 달라졌으면(예: BEM 확정 후 Tailwind 클래스 신규 유입) 경고 — 위 "충돌 감지 후 사용자 대화 템플릿"과 동일한 방식으로 통일 방향 재확인 요청 (`93cd44e→2e09d9d→6443d87→7bf0462` 5단계 재혼재 재발 방지)
 
 ### C-1. 미사용 토큰 + 부재 컴포넌트 실제 감지
 ```bash

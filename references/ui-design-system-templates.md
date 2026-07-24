@@ -211,6 +211,7 @@ export const _subscribe = (fn) => { listeners.add(fn); return () => listeners.de
 import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { _subscribe, dismiss } from '../../utils/toast'
+import styles from './Toast.module.css'
 
 export function ToastContainer() {
   const [items, setItems] = useState([])
@@ -218,31 +219,36 @@ export function ToastContainer() {
     if (e.type === 'add') setItems((s) => [...s, e.item])
     else setItems((s) => s.filter((i) => i.id !== e.id))
   }), [])
+  const renderItems = (list) => list.map((i) => (
+    <div key={i.id} data-variant={i.type} className={styles.toast}>
+      {i.msg}
+      <button aria-label="닫기" onClick={() => dismiss(i.id)} className={styles.close}>×</button>
+    </div>
+  ))
   // danger/error 는 assertive (스크린리더 즉시 중단), 나머지는 polite
   const polite = items.filter((i) => !['danger', 'error'].includes(i.type))
   const assertive = items.filter((i) => ['danger', 'error'].includes(i.type))
   return createPortal(
-    <>
-      <div role="status" aria-live="polite">
-        {polite.map((i) => (
-          <div key={i.id} data-variant={i.type}>
-            {i.msg}
-            <button aria-label="닫기" onClick={() => dismiss(i.id)}>×</button>
-          </div>
-        ))}
-      </div>
-      <div role="alert" aria-live="assertive">
-        {assertive.map((i) => (
-          <div key={i.id} data-variant={i.type}>
-            {i.msg}
-            <button aria-label="닫기" onClick={() => dismiss(i.id)}>×</button>
-          </div>
-        ))}
-      </div>
-    </>,
+    <div className={styles.viewport}>
+      <div role="status" aria-live="polite" className={styles.group}>{renderItems(polite)}</div>
+      <div role="alert" aria-live="assertive" className={styles.group}>{renderItems(assertive)}</div>
+    </div>,
     document.body
   )
 }
+```
+
+**`Toast.module.css`**:
+```css
+/* Toast.module.css — position: fixed 뷰포트, z-index는 tokens.css의 --z-toast 재사용 */
+.viewport { position: fixed; bottom: var(--space-6); right: var(--space-6); z-index: var(--z-toast); display: flex; flex-direction: column; gap: var(--space-2); pointer-events: none; }
+.group { display: flex; flex-direction: column; gap: var(--space-2); }
+.toast { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3) var(--space-4); border-radius: var(--radius-md); box-shadow: var(--shadow-lg); background: var(--color-bg); color: var(--color-text); pointer-events: auto; }
+.toast[data-variant='info'] { background: var(--color-info); color: var(--color-text-inverse); }
+.toast[data-variant='success'] { background: var(--color-success); color: var(--color-text-inverse); }
+.toast[data-variant='warning'] { background: var(--color-warning); color: var(--color-text-inverse); }
+.toast[data-variant='danger'] { background: var(--color-danger); color: var(--color-text-inverse); }
+.close { margin-left: auto; flex-shrink: 0; color: inherit; }
 ```
 
 #### `SafeImage.jsx` (onerror 자기 해제 — 무한 루프 방지, `fa3dc46` 재발 방지)
