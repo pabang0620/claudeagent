@@ -54,7 +54,7 @@
 ## 기술 스택
 - **프론트엔드**: React 19, Vite 7
 - **백엔드**: Node.js, Express
-- **DB**: PostgreSQL (pg/raw SQL), MySQL 8.0 (WeCom)
+- **DB**: PostgreSQL (pg/raw SQL), MySQL 8.4
 - **테스트**: Jest, Playwright
 - **기타**: Python
 
