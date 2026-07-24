@@ -945,6 +945,30 @@ router.put('/:id', authenticate, validate(uuidParamSchema, 'params'), verifyOwne
   }
   ```
 
+### 대량 알림 팬아웃 (PK 커서 배치, LIMIT/OFFSET 금지)
+- N명 대상 팬아웃(알림·이메일 등)은 처음부터 **PK 커서 기반 배치**로 설계 — LIMIT/OFFSET 페이지네이션은 배치 처리 중 대상 테이블에 삽입/삭제가 끼면 뒤로 밀리며 일부 대상이 누락되거나 중복 발송됨
+- 카운트 API(안읽음 수 등)는 부분합 캐시 조합이 아니라 **단일 집계 쿼리**로 계산 (캐시-실측 drift 방지)
+- WeCom 회고: `1996523` 공지 발행 알림이 10000명 초과 시 누락되어 cursor batch로 전환, `5c127cc`+`d742567` Bell 미읽음 뱃지가 부정확해 전체 카운트 API로 교체
+- 패턴:
+  ```javascript
+  // ❌ LIMIT/OFFSET — 배치 중간 삽입/삭제 시 누락·중복
+  for (let offset = 0; offset < total; offset += 500) {
+    const [users] = await pool.query('SELECT id FROM users LIMIT 500 OFFSET ?', [offset])
+    await sendNotifications(users)
+  }
+
+  // ✅ PK 커서 기반 배치 — 삽입/삭제에 안전
+  let cursor = 0
+  while (true) {
+    const [users] = await pool.query(
+      'SELECT id FROM users WHERE id > ? ORDER BY id LIMIT 500', [cursor]
+    )
+    if (users.length === 0) break
+    await sendNotifications(users)
+    cursor = users[users.length - 1].id
+  }
+  ```
+
 ### Zod 검증
 - 요청 `body`/`query`/`params` 모두 Zod 스키마로 검증 → `validate` 미들웨어
 - Zod 에러 시 **400** + 구체적 필드별 메시지
@@ -1036,6 +1060,34 @@ router.use('/users', userRoutes)
 router.use('/products', productRoutes)  // 등록 없으면 API 응답 안 함
 
 export default router
+```
+
+라우터 파일 자체를 작성·수정할 때는 등록 여부 외에 아래 두 가지도 함께 점검한다.
+
+#### 선언 순서 — 와일드카드/파라미터 라우트가 정적 라우트보다 먼저 오면 안 됨
+같은 라우터 안에서 `/:id` 같은 파라미터 라우트가 `/search`, `/popular`, `/mine` 같은 정적 라우트보다 먼저 선언되면, 정적 라우트로 가는 요청도 먼저 매칭된 `/:id` 핸들러로 흡수되어 **영원히 도달하지 못한다.**
+
+탐지 패턴: 같은 라우터 파일 내에서 `router.get('/:xxx', ...)` 선언 줄 번호가 `router.get('/정적경로', ...)` 선언 줄 번호보다 앞서는지 확인. GET뿐 아니라 동일 세그먼트를 쓰는 다른 메서드에도 동일하게 적용.
+
+```javascript
+// ❌ 나쁨 — /popular 요청이 /:id 핸들러로 잘못 라우팅됨
+router.get('/:id', productController.getById)
+router.get('/popular', productController.getPopular)  // 영원히 도달 불가
+
+// ✅ 좋음 — 정적 라우트를 파라미터 라우트보다 먼저 선언
+router.get('/popular', productController.getPopular)
+router.get('/:id', productController.getById)
+```
+
+#### 변경계열 라우트(POST/PUT/PATCH/DELETE) 인증 미들웨어 누락
+라우터 파일을 훑을 때 `POST`/`PUT`/`PATCH`/`DELETE` 핸들러마다 `authenticate`(또는 `authMiddleware`) — 필요 시 `verifyOwnership`/`requireAdmin` — 가 실제로 체이닝되어 있는지 줄 단위로 확인한다. 로그인 없이도 되는 라우트(예: 회원가입, 로그인)를 제외하고, 리소스를 변경하는 라우트에 인증 미들웨어가 없으면 CRITICAL로 보고한다. 2층 인증 조합 자체의 상세 규칙은 위 "2층 인증 기본값 강제" 섹션을 따른다 — 여기서는 라우터 파일을 새로 등록/수정할 때 누락 여부를 놓치지 않기 위한 체크리스트로 취급한다.
+
+```javascript
+// ❌ 나쁨 — DELETE인데 인증 미들웨어 없음
+router.delete('/:id', productController.remove)
+
+// ✅ 좋음
+router.delete('/:id', authenticate, verifyOwnership(ProductRepository), productController.remove)
 ```
 
 ---

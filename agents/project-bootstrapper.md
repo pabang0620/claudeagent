@@ -410,6 +410,23 @@ export default app
 
 **이유**: `npm run dev` 첫 시도 성공을 위해 Express 앱 초기화 파일이 반드시 필요. Phase 4 에이전트가 생성하는 라우트를 여기에 import 하게 된다.
 
+#### 3.8. rate limit·timeout 기본값 근거 주석 (필수)
+
+WeCom 회고: `43c9a79`(authLimiter 5→10) `7f27bba`(apiClient timeout 10s→30s 등 3건 조정) `c449bac`(communityLimiter 20→50 등 4건 조정) — 근거 없는 임의값을 잡았다가 실사용 중 3회에 걸쳐 반응적으로 재조정한 사례.
+
+rate limit·timeout 기본값을 잡을 때는 값 옆에 산출 근거를 주석으로 남긴다. 근거 없는 임의값 금지:
+```javascript
+// authLimiter: 예상 동시 로그인 20명 × 재시도 여유 2배 = 10회/15분 (안전계수 포함)
+const authLimiter = rateLimit({ windowMs: 15 * 60 * 1000, max: 10 })
+
+// apiClient timeout: p95 응답 1.2s × 안전계수 25배(느린 네트워크 대비) ≈ 30s
+const apiClient = axios.create({ timeout: 30_000 })
+```
+
+배포 전 rate limit·timeout 값 전체를 부하 시나리오 체크리스트로 **일괄** 점검한다 (발견될 때마다 개별 땜질 금지):
+- [ ] 예상 동시 사용자 수 × 페이지당 API 호출 수 × 안전계수로 각 limiter 산출 근거 기록
+- [ ] DB/외부 API connectTimeout이 네트워크 왕복 실측치 기반인지 확인
+
 ### Phase 4: 하위 에이전트·스킬 병렬 호출
 
 **중요**: 이 에이전트는 직접 구현하지 않고 각 전문 에이전트에 위임한다. 단, convention-enforcer / mobile-first-checker / error-prevention-rules 는 **에이전트가 아닌 스킬**(Claude 배경 룰북)이므로 직접 호출하지 않고 Phase 5 이후 자동 적용됨.

@@ -555,6 +555,13 @@ WeCom은 FK 미사용이므로 CASCADE는 애플리케이션 레이어 책임:
 - ALGORITHM 명시 (INSTANT/INPLACE/COPY) + LOCK 레벨
 - ENUM 변경 시 enums.ts 동시 수정 안내 주석 포함
 - DOWN 섹션에 데이터 파괴 경고 포함 (해당 시)
+- **컬럼 추가 시 해당 테이블의 모든 INSERT/UPDATE 호출부를 grep해 컬럼 목록에 포함시켰는지 확인** — SELECT만 확인하고 넘어가면, 신규 레코드가 DB 기본값으로 조용히 저장되고 에러가 나지 않아 발견이 늦어진다.
+  ```bash
+  # 컬럼명으로 INSERT/UPDATE 호출부 전수 탐색 (Repository 계층)
+  grep -rn "INSERT INTO webtoons\|UPDATE webtoons" backend/repositories/ | grep -v "is_public"
+  # → is_public 을 포함하지 않는 INSERT/UPDATE 문이 나오면 누락 의심, 해당 파일 직접 확인
+  ```
+  WeCom 회고: `1b64853`(createWebtoon INSERT에서 is_public 누락 → 비공개 설정이 무시됨), `a562ea2`(comments_enabled 동일 패턴)
 
 ---
 
