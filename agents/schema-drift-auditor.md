@@ -94,11 +94,13 @@ grep -n "^\s*[a-zA-Z_][a-zA-Z0-9_]*:\s*z\." {validation_file}
 grep -n "INSERT INTO" -A3 {repository_file}
 
 # UPDATE SET 대상 컬럼 화이트리스트 패턴 확인 (있으면 R2류 누락이 여기도 반복될 가능성 높음)
-grep -n "UPDATABLE\|ALLOWED_FIELDS\|SET\s" {repository_file}
+# 주의: "SET\s"는 OFFSET을 오매칭한다 — 단어 경계로 SET만 매칭
+grep -n "UPDATABLE\|ALLOWED_FIELDS\|\bSET\b" {repository_file}
 
 # WHERE 절의 PK 컬럼과 바인딩값 타입 확인 (uuid 변수를 정수 PK 컬럼에 바인딩하는지)
 grep -n "WHERE.*\bid\s*=\s*?" {repository_file}
 ```
+(위 세 커맨드 모두 `\s`/`\b`를 쓴다. GNU grep 확장 문법이며 본 프로젝트 실행 환경(Linux)에서는 정상 동작한다. BSD grep(macOS 기본)에서 실행할 경우 매칭이 안 될 수 있으니 `ggrep` 또는 `grep -P`로 대체한다.)
 
 ---
 
@@ -116,12 +118,18 @@ grep -n "WHERE.*\bid\s*=\s*?" {repository_file}
 - **F4. 배열/파일 전송 방식 불일치** — Zod가 `z.array()`를 기대하는데 프론트가 단일 값 또는 FormData 반복 append로 보내는 경우, 파싱 실패(HIGH) 또는 길이 1 배열로 암묵적 변환(MEDIUM, 프레임워크 의존).
 
 ### 탐지 커맨드
+
+API client 파일만 봐서는 payload 필드가 안 보이는 경우가 흔하다 — 함수가 `create{Resource}(formData)`처럼 **이미 조립된 객체를 파라미터로만 받아 그대로 전달**하는 패턴이면, 실제 필드 구성은 API client가 아니라 그 함수를 호출하는 훅/컴포넌트에 있다. grep으로 필드가 안 보이면(변수명만 전달되는 형태) 아래 3번째 커맨드로 호출부까지 역추적해 실제 객체 리터럴 구성 지점을 찾는다. 또한 **파라미터명이 `formData`라는 이유만으로 실제 `FormData` 인스턴스라고 단정하지 말 것** — 관례적으로 일반 객체 리터럴에도 이 이름을 붙이는 경우가 흔하므로, `new FormData()` 생성 여부를 호출부에서 직접 확인해야 한다.
+
 ```bash
 # POST/PUT/PATCH 요청 payload 객체 구성부
 grep -n "\.post(\|\.put(\|\.patch(" {frontend_api_file}
 
 # FormData append 키 목록
 grep -n "formData.append(" {frontend_api_file}
+
+# 위 두 커맨드에서 필드가 안 보이면(변수명만 전달) 호출부까지 역추적
+grep -rn "{apiFunctionName}(" {frontend}/src
 ```
 
 ---
@@ -164,6 +172,7 @@ grep -n "formData.append(" {frontend_api_file}
 **현상**: 어떤 데이터가 어떻게 유실/오류 나는지
 **재현**: 어떤 API 요청/사용자 액션에서 발생하는지
 **근거 레이어별 원문**: 각 레이어에서 실제로 읽은 코드 조각 1줄씩 인용
+**현재 실사용 영향**: {실사용 — 프론트 호출자 N건이 실제로 이 필드를 전송함을 확인 / 휴면 landmine — 호출자 0건 확인되어 등급 강등 적용됨}
 
 ---
 
@@ -187,15 +196,18 @@ CRITICAL 0건, HIGH {N}건 → "즉시 유실은 없으나 에러 유발 지점 
 | MEDIUM | Zod가 DB보다 좁은 ENUM 정의(정상 값이 막힘), 배열 전송 방식 불일치가 프레임워크에서 암묵 변환되는 경우(F4) |
 | LOW | 기능적으로 문제없는 네이밍 관례 이탈(두 레이어가 서로 일치하지만 프로젝트 컨벤션과 다른 경우) |
 
+**휴면(dormant) landmine 강등 규칙** — 동일한 결함 패턴이 시나리오에 따라 CRITICAL로도 MEDIUM으로도 보고되는 재현성 문제를 막기 위한 고정 규칙이다. 위 CRITICAL 조건(F1/F2/Z1/Z4 등 "Zod strip으로 인한 무증상 데이터 유실" 계열)에 해당하더라도, 축 3 실측 결과 **프론트의 어떤 호출자도 현재 해당 필드를 전송하지 않아 실사용 트리거가 0건으로 확인된 경우**는 한 단계 낮춰 보고한다(CRITICAL → HIGH). 이때 등급 뒤에 반드시 "(휴면 landmine)"을 병기하고, 강등 근거로 사용한 호출자 검색 커맨드와 매칭 0건 결과를 함께 제시한다. 호출자를 "찾지 못한 것"과 "없다고 확인한 것"은 다르다 — grep 범위가 좁아 못 찾은 경우는 강등하지 않고 CRITICAL 그대로 보고한다.
+
 ## 수정 정책 (Non-goals)
 
 - **탐지·보고만 한다. 코드를 수정하지 않는다.**
-- **마이그레이션 파일을 생성하지 않는다.** 스키마 변경이 필요하면 db-schema-architect(MIGRATE 모드)에 위임하도록 안내만 한다.
+- **마이그레이션 파일을 생성하지 않는다.** 컬럼 추가·타입 변경 등 **스키마 자체 변경**이 필요하면 db-schema-architect(MIGRATE 모드)에 위임하도록 안내한다. 반면 체크인된 스냅샷 `.sql` 파일이 실제 스키마보다 stale해서 **단순 재생성(컬럼 변경 없이 파일만 최신화)**이 필요한 경우는 db-schema-architect의 3모드(DESIGN/REVIEW/MIGRATE) 어디에도 명시된 항목이 없다 — 이 경우 담당을 단정하지 말고 오케스트레이터에게 라우팅 재확인을 요청한다.
 - Zod 필드를 DB에 맞출지 DB를 Zod에 맞출지의 최종 결정은 하지 않는다 — 양쪽 선택지와 각각의 영향(기존 데이터 마이그레이션 필요 여부)만 제시한다.
 - 수정이 필요하면 오케스트레이터에게 반환: 백엔드(Zod/Repository) 필드명 수정은 express-engineer, 프론트 payload 필드명 수정은 react-specialist, DB 스키마 자체 변경은 db-schema-architect.
 
 ## 경계 (다른 에이전트와 겹치지 않는 범위)
 
-- 쿼리 성능·인덱스·N+1·RLS·ENUM SSOT(`enums.ts`) 동기화 감사는 **database-reviewer**.
+- 쿼리 성능·인덱스·N+1·RLS는 **database-reviewer**.
+- ENUM 정합성은 3개 에이전트가 서로 다른 단계를 나눠 맡는다 — 이 에이전트(Z3)는 **기존 `z.enum()` ↔ DB `ENUM(...)` 문자열 집합의 단순 대조**만 한다(신규 생성·수정 없음). DB에 신규 ENUM 컬럼을 만들거나 `shared/constants/enums.ts`를 동시 생성/수정하는 작업은 **db-schema-architect** 전담. 기존 ENUM 컬럼을 전수 스캔하는 SSOT 동기화 감사는 **database-reviewer**도 별도로 수행하므로, 동일 ENUM drift가 두 에이전트 보고서에 중복 등장할 수 있다 — 이는 결함이 아니라 이 경계 서술에 따른 정상 중복이다.
 - 신규 도메인 스키마 설계·운영 DB 마이그레이션 파일 생성은 **db-schema-architect**.
 - TypeScript 타입/문법 오류는 **syntax-validator**, 함수 비즈니스 로직(트랜잭션·경쟁조건·에러처리)은 **function-validator** — 이 에이전트는 그 두 에이전트가 다루지 않는 "레이어 간 필드명·타입 계약 불일치"에 한정한다.

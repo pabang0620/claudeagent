@@ -1,6 +1,6 @@
 ---
 name: ui-design-system
-description: React 프로젝트의 디자인 시스템 전문 에이전트. Day 0에 디자인 토큰(color/spacing/radius/shadow/typography/breakpoint/z-index/transition — 8개 카테고리) + 전역 reset + 공용 컴포넌트 13종 + 커스텀 훅 3종을 일괄 생성. 호스트 프로젝트의 CSS 방법론(BEM / CSS Modules / styled-components / Tailwind)을 자동 감지하여 충돌 방지. 이후 스타일 PR에서 하드코딩 컬러/radius/shadow 감지 및 토큰 치환 감사. 신규 프로젝트 bootstrap, 디자인 토큰 부재, 컴포넌트 재사용 부재, 스타일 일관성 이슈, sed 일괄 수정 위험 시 사전에 적극적으로 활용. WeCom 회고 근거 — 하드코딩 컬러/radius/shadow 전역 sed 일괄 수정 30+회 반복 차단.
+description: React 프로젝트의 **디자인 토큰·CSS 스타일 일관성** 전문 에이전트 (project-bootstrapper가 Day 0 오케스트레이션 중 하위 실행 대상으로 호출하는 전문 에이전트 — DB/라우팅/인증 등 프로젝트 전체 셋업은 project-bootstrapper 담당, 이 에이전트는 토큰·컴포넌트·CSS 방법론 감지에 한정). Day 0에 디자인 토큰(color/spacing/radius/shadow/typography/breakpoint/z-index/transition — 8개 카테고리) + 전역 reset + 공용 컴포넌트 13종 + 커스텀 훅 3종을 일괄 생성. 호스트 프로젝트의 CSS 방법론(BEM / CSS Modules / styled-components / Tailwind)을 자동 감지하여 충돌 방지 — styled-components/@emotion 기존 프로젝트도 감지 대상. 이후 스타일 PR에서 하드코딩 컬러/radius/shadow 감지 및 토큰 치환 감사. 디자인 토큰 부재, 컴포넌트 재사용 부재, 스타일 일관성 이슈, 하드코딩 컬러/CSS 방법론 충돌, sed 일괄 수정 위험 시 사전에 적극적으로 활용. WeCom 회고 근거 — 하드코딩 컬러/radius/shadow 전역 sed 일괄 수정 30+회 반복 차단.
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
 model: sonnet
 ---
@@ -71,6 +71,10 @@ ls src/                         # 프로젝트 구조
 ls src/styles/ 2>/dev/null      # 기존 스타일 파일
 ls src/components/common/ 2>/dev/null
 ls src/hooks/ 2>/dev/null
+
+# styled-components / emotion 의존성 확인 (CSS 방법론 자동 감지용)
+grep -E '"(styled-components|@emotion/(styled|react))"' package.json
+grep -rEl 'styled\.\w+`|styled\(' src/ --include="*.jsx" --include="*.tsx" --include="*.js" --include="*.ts" | head -5
 ```
 
 확인 항목:
@@ -78,6 +82,7 @@ ls src/hooks/ 2>/dev/null
   - `*.module.css` 파일 존재 → **CSS Modules** 방식
   - `Component.css` (모듈 아님) + BEM 클래스명(`.block__element--modifier`) → **BEM** 방식
   - `tailwind.config.*` 또는 `@tailwind` 지시자 → **Tailwind**
+  - `package.json`에 `styled-components` 또는 `@emotion/styled`·`@emotion/react` 의존성이 있거나, 소스에서 `` styled.\w+` `` / `styled(...)` 패턴이 grep으로 발견됨 → **styled-components** 방식(런타임 CSS-in-JS)
   - 아무것도 없음 → 사용자에게 선택 요청 (기본값: CSS Modules)
 - **WeCom 프로젝트 감지**: `wecom/.claude/CLAUDE.md` 또는 `wecom_schema.sql` 존재 시 → **BEM 강제**, CSS Modules 생성 금지, `Component.css` 네이밍 사용
 - **선택적 연계 (mobile-first-checker / error-prevention-rules)**: 해당 스킬이 있으면 활용, 없으면 건너뜀. 본 에이전트는 이 스킬들에 의존하지 않으며 단독으로 동작한다.
@@ -93,42 +98,10 @@ ls src/hooks/ 2>/dev/null
   - `useScrollLock(locked: boolean): void`
 - tsconfig.json 없으면 생성 제안 (strict: true 기본)
 
-```tsx
-// Button.tsx — TypeScript 버전 예시
-import styles from './Button.module.css'
-
-interface ButtonProps {
-  variant?: 'primary' | 'secondary' | 'ghost' | 'danger'
-  size?: 'sm' | 'md' | 'lg'
-  loading?: boolean
-  disabled?: boolean
-  className?: string
-  children: React.ReactNode
-  onClick?: React.MouseEventHandler<HTMLButtonElement>
-}
-
-export function Button({
-  variant = 'primary',
-  size = 'md',
-  loading = false,
-  disabled = false,
-  className = '',
-  children,
-  ...props
-}: ButtonProps) {
-  return (
-    <button
-      className={[styles.btn, styles[variant], styles[size], loading ? styles.loading : '', className].filter(Boolean).join(' ')}
-      disabled={disabled || loading}
-      {...props}
-    >
-      {loading ? <span className={styles.spinner} aria-hidden="true" /> : null}
-      {children}
-    </button>
-  )
-}
-// 나머지 컴포넌트도 동일 패턴 적용 (Props 인터페이스 + export function)
-```
+TS 변환은 별도 구현을 만들지 않는다 — 아래 "5. `components/common/` 13개 컴포넌트 생성"의 JS 버전(`Button.jsx` 등)을 기준 구현으로 삼고, 다음 규칙만 적용해 `.tsx`로 변환한다:
+1. JSDoc `@param {...}` 주석 블록 → `interface {Component}Props { ... }` 선언으로 대체 (타입은 JSDoc 타입을 그대로 옮김)
+2. 함수 시그니처에 `: {Component}Props` 타입 어노테이션 추가
+3. 클래스명(`styles.button` 등)은 JS 버전과 동일하게 유지 — 아래 "CSS 방법론별 컴포넌트 클래스 산출 규칙"에 따라 BEM/Tailwind/styled-components가 감지되면 JS·TS 버전 모두 동일하게 변환한다 (TS라고 해서 CSS Modules를 강제하지 않음 — 예: WeCom BEM 감지 시 TS 버전도 `Button.css` + BEM 클래스명 사용)
 
 **충돌 시**:
 - Tailwind + BEM 혼재: `93cd44e` 재앙을 언급하고 하나로 통일할 것을 요구.
@@ -143,14 +116,16 @@ export function Button({
   - 감지된 방법론이 BEM → `Button.jsx` + `Button.css` (일반 CSS, BEM 클래스명)
   - 감지된 방법론이 CSS Modules → `Button.jsx` + `Button.module.css`
   - Tailwind → `Button.jsx` (className 인라인), CSS 파일 없음, tokens.css를 `@theme`로 통합 제안
+  - styled-components/@emotion 기존 프로젝트 감지 → **새 방법론을 도입하지 않고 기존 styled-components를 그대로 따른다.** `Button.jsx` + `Button.js`(또는 `.styles.js`, 프로젝트 기존 관례를 따름) 안에 `styled.button` 템플릿 리터럴로 정의, CSS 파일 생성 없음. tokens.css의 `var(--토큰)`은 styled-components 템플릿 리터럴 안에서도 그대로 참조 가능(`background: var(--color-primary);`)하므로 토큰 자체는 동일하게 사용
 
 CSS 방법론별 컴포넌트 클래스 산출 규칙:
 - CSS Modules: styles.button (기본)
 - BEM: block__element--modifier (예: .btn .btn__icon .btn--primary)
 - Tailwind: @apply 또는 유틸 클래스 직접 + cva/clsx 변형
+- styled-components: `const StyledButton = styled.button` 템플릿 리터럴 형태로 변환, `data-variant`/`data-size` 등 상태 속성은 `props`로 받아 템플릿 리터럴 내 조건부 스타일로 처리 (신규 도입이 아니라 **기존 프로젝트에 이미 styled-components가 있을 때만** 이 규칙을 쓴다 — 없는 프로젝트에 새로 들여오지 않는다. 아래 "에이전트가 하지 말아야 할 것" 참조)
 감지된 방법론에 맞춰 13개 컴포넌트 클래스명을 변환한다.
 
-> 본 문서의 13개 컴포넌트 예시는 모두 CSS Modules(`styles.button`) 기준으로 작성되어 있다. BEM 또는 Tailwind가 감지되면 위 규칙에 따라 13개 컴포넌트 전체의 클래스명을 일괄 변환하여 생성한다.
+> 본 문서의 13개 컴포넌트 예시는 모두 CSS Modules(`styles.button`) 기준으로 작성되어 있다. BEM/Tailwind/styled-components가 감지되면 위 규칙에 따라 13개 컴포넌트 전체의 클래스명(또는 styled 정의)을 일괄 변환하여 생성한다.
 
 ---
 
@@ -547,787 +522,26 @@ export function Button({
 .button:disabled { opacity: 0.5; cursor: not-allowed; }
 ```
 
-회고에서 4~5회 재발명된 **핵심 5개 컴포넌트는 반드시 아래 구현을 기본으로 사용**. 나머지 7개(Input/Select/Chip/Card/Badge/Avatar/Skeleton)는 동일한 토큰 기반 패턴으로 작성.
+회고에서 4~5회 재발명된 **핵심 5개 컴포넌트는 반드시 템플릿 파일의 구현을 기본으로 사용**. 나머지 7개(Input/Select/Chip/Card/Badge/Avatar/Skeleton)도 템플릿 파일에 동일한 토큰 기반 패턴으로 포함되어 있다.
 
-#### `Modal.jsx` (scrollLock + ESC + 외부 클릭 + 포털 + focus trap + return focus + aria-labelledby, `f247671` 재발 방지)
-```jsx
-import { useEffect, useRef, useId } from 'react'
-import { createPortal } from 'react-dom'
-import { useScrollLock } from '../../hooks/useScrollLock'
-import styles from './Modal.module.css'
+### 12개 컴포넌트 전체 구현 — 템플릿 파일 참조
 
-export function Modal({ isOpen, onClose, title, children, className = '' }) {
-  useScrollLock(isOpen)
-  const overlayRef = useRef(null)
-  const dialogRef = useRef(null)
-  const previousFocusRef = useRef(null)
-  const titleId = useId()
+Button을 제외한 나머지 12개(Modal/BottomSheet/Toast/SafeImage/ChipScroller/Input/Select/Chip/Card/Badge/Avatar/Skeleton)의 JSX+CSS 전체 소스는 컨텍스트 절약을 위해 별도 템플릿 파일로 분리되어 있다. BOOTSTRAP 5단계 진입 시, 또는 AUDIT 모드에서 특정 컴포넌트를 추가할 때 다음 파일을 Read해서 사용한다:
 
-  useEffect(() => {
-    if (isOpen) {
-      previousFocusRef.current = document.activeElement
-    } else if (previousFocusRef.current) {
-      previousFocusRef.current.focus()  // return focus
-      previousFocusRef.current = null
-    }
-  }, [isOpen])
-
-  useEffect(() => {
-    if (!isOpen) return
-    const FOCUSABLE = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    const trap = (e) => {
-      if (e.key === 'Escape') { onClose?.(); return }
-      if (e.key !== 'Tab') return
-      const els = [...(dialogRef.current?.querySelectorAll(FOCUSABLE) ?? [])]
-      if (!els.length) { e.preventDefault(); return }
-      const first = els[0], last = els[els.length - 1]
-      if (e.shiftKey ? document.activeElement === first : document.activeElement === last) {
-        e.preventDefault()
-        ;(e.shiftKey ? last : first).focus()
-      }
-    }
-    document.addEventListener('keydown', trap)
-    dialogRef.current?.querySelector(FOCUSABLE)?.focus()
-    return () => document.removeEventListener('keydown', trap)
-  }, [isOpen, onClose])
-
-  if (!isOpen) return null
-  return createPortal(
-    <div ref={overlayRef}
-      className={styles.overlay}
-      onClick={(e) => { if (e.target === overlayRef.current) onClose?.() }}>
-      {/* role="dialog" 는 대화상자 내부 컨테이너에 (WAI-ARIA APG 표준) */}
-      <div ref={dialogRef}
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby={title ? titleId : undefined}
-        className={`${styles.dialog} ${className}`}>
-        {title && (
-          <header>
-            <h2 id={titleId}>{title}</h2>
-            <button aria-label="닫기" onClick={onClose}>×</button>
-          </header>
-        )}
-        <div>{children}</div>
-      </div>
-    </div>,
-    document.body
-  )
-}
+```
+/home/pabang/myapp/.claude/agents/ui-design-system-templates.md
 ```
 
-```css
-/* Modal.module.css */
-.overlay {
-  position: fixed;
-  inset: 0;
-  background: var(--color-overlay, rgba(0,0,0,0.5));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: var(--z-modal-backdrop, 100);
-}
-.dialog {
-  position: relative;
-  background: var(--color-bg, #fff);
-  border-radius: var(--radius-xl, 16px);
-  padding: var(--space-6, 24px);
-  box-shadow: var(--shadow-xl);
-  max-width: 90vw;
-  max-height: 85vh;
-  overflow-y: auto;
-  z-index: var(--z-modal, 101);
-}
-```
+템플릿 소스는 모두 CSS Modules(`styles.xxx`) 기준으로 작성되어 있다. 감지된 CSS 방법론(BEM/CSS Modules/Tailwind/styled-components)에 따라 클래스명만 위 "생성할 스타일 파일 결정 로직"/"CSS 방법론별 컴포넌트 클래스 산출 규칙"에 맞춰 변환하고, JSX 구조·훅 사용·ARIA 속성은 그대로 유지한다.
 
-#### `BottomSheet.jsx` (모바일 바텀시트, scrollLock + focus trap + ESC + return focus + touchmove passive:false)
-```jsx
-import { useEffect, useRef, useId } from 'react'
-import { createPortal } from 'react-dom'
-import { useScrollLock } from '../../hooks/useScrollLock'
-import styles from './BottomSheet.module.css'
+각 컴포넌트의 필수 핵심(전체 코드는 템플릿 파일 참조):
+- **Modal/BottomSheet**: `useScrollLock` + ESC + 포커스 트랩 + return focus + `f247671` 재발 방지
+- **Toast**: 포털 + 큐(`utils/toast.js`) + polite/assertive `aria-live` 분리
+- **SafeImage**: `onerror` 자기 해제로 무한 루프 방지 (`fa3dc46` 재발 방지)
+- **ChipScroller**: `useDragScroll` + 좌우 화살표 + fade mask
+- **Input/Select**: `forwardRef` + `aria-invalid` + `aria-describedby`
+- **Chip/Card/Badge/Avatar/Skeleton**: 토큰 기반 상태별 `data-*` 속성 스타일링, 무한 루프 방지(Avatar `onerror` 자기 해제), `prefers-reduced-motion` 대응(Skeleton)
 
-export function BottomSheet({ isOpen, onClose, title, children, className = '' }) {
-  useScrollLock(isOpen)
-  const sheetRef = useRef(null)
-  const previousFocusRef = useRef(null)
-  const titleId = useId()
-
-  useEffect(() => {
-    if (isOpen) previousFocusRef.current = document.activeElement
-    else if (previousFocusRef.current) {
-      previousFocusRef.current.focus()
-      previousFocusRef.current = null
-    }
-  }, [isOpen])
-
-  useEffect(() => {
-    if (!isOpen) return
-    const FOCUSABLE = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    const trap = (e) => {
-      if (e.key === 'Escape') { onClose?.(); return }
-      if (e.key !== 'Tab') return
-      const els = [...(sheetRef.current?.querySelectorAll(FOCUSABLE) ?? [])]
-      if (!els.length) { e.preventDefault(); return }
-      const first = els[0], last = els[els.length - 1]
-      if (e.shiftKey ? document.activeElement === first : document.activeElement === last) {
-        e.preventDefault()
-        ;(e.shiftKey ? last : first).focus()
-      }
-    }
-    // React 합성 onTouchMove 는 passive:true 고정이므로 네이티브 리스너로 부착 (mobile-first-checker가 있으면 mf-006으로 검증)
-    const el = sheetRef.current
-    const onTouch = (e) => {
-      if (e.target.closest('[data-scroll]')) return
-      e.preventDefault()
-    }
-    document.addEventListener('keydown', trap)
-    el?.addEventListener('touchmove', onTouch, { passive: false })
-    sheetRef.current?.querySelector(FOCUSABLE)?.focus()
-    return () => {
-      document.removeEventListener('keydown', trap)
-      el?.removeEventListener('touchmove', onTouch)
-    }
-  }, [isOpen, onClose])
-
-  if (!isOpen) return null
-  return createPortal(
-    <div className={styles.overlay} onClick={(e) => { if (e.target === e.currentTarget) onClose?.() }}>
-      <div ref={sheetRef}
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby={title ? titleId : undefined}
-        className={`${styles.sheet} ${className}`}>
-        {children}
-      </div>
-    </div>,
-    document.body
-  )
-}
-```
-
-```css
-/* BottomSheet.module.css */
-.overlay {
-  position: fixed;
-  inset: 0;
-  background: var(--color-overlay, rgba(0,0,0,0.5));
-  z-index: var(--z-modal-backdrop, 100);
-}
-.sheet {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: var(--color-bg, #fff);
-  border-radius: var(--radius-2xl, 24px) var(--radius-2xl, 24px) 0 0;
-  padding: var(--space-6, 24px);
-  max-height: 90vh;
-  overflow-y: auto;
-  z-index: var(--z-modal, 101);
-}
-```
-
-#### `Toast.jsx` + `toast.js` (포털 + 큐 + 자동 dismiss)
-
-다음 두 파일을 각각 생성:
-
-**`utils/toast.js`**:
-```js
-// utils/toast.js
-const listeners = new Set()
-let seq = 0
-export const toast = (msg, type = 'info', duration = 3000) => {
-  const id = ++seq
-  listeners.forEach((fn) => fn({ type: 'add', item: { id, msg, type, duration } }))
-  if (duration > 0) setTimeout(() => dismiss(id), duration)
-}
-export const dismiss = (id) => listeners.forEach((fn) => fn({ type: 'remove', id }))
-export const _subscribe = (fn) => { listeners.add(fn); return () => listeners.delete(fn) }
-```
-
-**`components/common/Toast.jsx`**:
-```jsx
-// components/common/Toast.jsx
-import { useEffect, useState } from 'react'
-import { createPortal } from 'react-dom'
-import { _subscribe, dismiss } from '../../utils/toast'
-
-export function ToastContainer() {
-  const [items, setItems] = useState([])
-  useEffect(() => _subscribe((e) => {
-    if (e.type === 'add') setItems((s) => [...s, e.item])
-    else setItems((s) => s.filter((i) => i.id !== e.id))
-  }), [])
-  // danger/error 는 assertive (스크린리더 즉시 중단), 나머지는 polite
-  const polite = items.filter((i) => !['danger', 'error'].includes(i.type))
-  const assertive = items.filter((i) => ['danger', 'error'].includes(i.type))
-  return createPortal(
-    <>
-      <div role="status" aria-live="polite">
-        {polite.map((i) => (
-          <div key={i.id} data-variant={i.type}>
-            {i.msg}
-            <button aria-label="닫기" onClick={() => dismiss(i.id)}>×</button>
-          </div>
-        ))}
-      </div>
-      <div role="alert" aria-live="assertive">
-        {assertive.map((i) => (
-          <div key={i.id} data-variant={i.type}>
-            {i.msg}
-            <button aria-label="닫기" onClick={() => dismiss(i.id)}>×</button>
-          </div>
-        ))}
-      </div>
-    </>,
-    document.body
-  )
-}
-```
-
-#### `SafeImage.jsx` (onerror 자기 해제 — 무한 루프 방지, `fa3dc46` 재발 방지)
-```jsx
-export function SafeImage({ src, fallback = '/images/placeholder.png', alt = '', ...props }) {
-  const onError = (e) => {
-    if (e.target.src === fallback) return  // 이미 fallback이면 중단 (무한 루프 방지)
-    e.target.onerror = null                // 자기 해제
-    e.target.src = fallback
-  }
-  return <img src={src || fallback} alt={alt} loading="lazy" onError={onError} {...props} />
-}
-```
-
-#### `ChipScroller.jsx` (가로 드래그 + 좌우 화살표 + useDragScroll 사용)
-```jsx
-import styles from './ChipScroller.module.css'
-import { useDragScroll } from '../../hooks/useDragScroll'
-
-export function ChipScroller({ children, className = '' }) {
-  const { ref, onPointerDown } = useDragScroll()
-  const scrollBy = (dx) => ref.current?.scrollBy({ left: dx, behavior: 'smooth' })
-  return (
-    <div className={`${styles.wrapper} ${className}`}>
-      <button type="button" onClick={() => scrollBy(-200)} aria-label="이전" className={styles.arrow}>‹</button>
-      <div
-        ref={ref}
-        onPointerDown={onPointerDown}
-        className={styles.track}
-        data-scroll
-      >
-        {children}
-      </div>
-      <button type="button" onClick={() => scrollBy(200)} aria-label="다음" className={styles.arrow}>›</button>
-    </div>
-  )
-}
-```
-
-**`ChipScroller.module.css`**:
-```css
-/* ChipScroller.module.css */
-.wrapper { position: relative; display: flex; align-items: center; gap: var(--space-2); }
-.track { flex: 1; overflow-x: auto; display: flex; gap: var(--space-2); scrollbar-width: none; }
-.track::-webkit-scrollbar { display: none; }
-.arrow { flex-shrink: 0; }
-.wrapper::before, .wrapper::after {
-  content: ''; position: absolute; top: 0; bottom: 0; width: var(--space-6);
-  pointer-events: none; z-index: 1;
-}
-.wrapper::before { left: 32px; background: linear-gradient(to right, var(--color-bg), transparent); }
-.wrapper::after { right: 32px; background: linear-gradient(to left, var(--color-bg), transparent); }
-```
-
-#### `Input.jsx` (accessible, aria-invalid, error/disabled/readonly)
-```jsx
-// components/common/Input.jsx
-import { forwardRef, useId } from 'react'
-import styles from './Input.module.css'
-
-/**
- * 접근성 표준: aria-invalid + aria-describedby (에러 메시지 연결)
- * Radix/shadcn 패턴 준수.
- */
-export const Input = forwardRef(function Input(
-  { label, error, hint, id, className = '', type = 'text', ...props },
-  ref
-) {
-  const autoId = useId()
-  const inputId = id || autoId
-  const errorId = `${inputId}-error`
-  const hintId = `${inputId}-hint`
-  const describedBy = [error && errorId, hint && hintId].filter(Boolean).join(' ') || undefined
-
-  return (
-    <div className={`${styles.field} ${className}`} data-invalid={!!error || undefined}>
-      {label && (
-        <label htmlFor={inputId} className={styles.label}>
-          {label}
-        </label>
-      )}
-      <input
-        ref={ref}
-        id={inputId}
-        type={type}
-        className={styles.input}
-        aria-invalid={!!error || undefined}
-        aria-describedby={describedBy}
-        {...props}
-      />
-      {hint && !error && <small id={hintId} className={styles.hint}>{hint}</small>}
-      {error && <small id={errorId} className={styles.error}>{error}</small>}
-    </div>
-  )
-})
-```
-
-#### `Input.module.css`
-```css
-.field { display: flex; flex-direction: column; gap: var(--space-1); }
-.label { font-size: var(--text-sm); font-weight: var(--font-weight-medium); color: var(--color-text); }
-.input {
-  width: 100%;
-  padding: var(--space-2) var(--space-3);
-  font-size: var(--text-base);
-  color: var(--color-text);
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
-}
-.input:focus { outline: none; border-color: var(--color-primary); box-shadow: 0 0 0 3px var(--color-primary-subtle); }
-.input:disabled { background: var(--color-bg-muted); color: var(--color-text-muted); cursor: not-allowed; }
-.input[readonly] { background: var(--color-bg-subtle); }
-.field[data-invalid='true'] .input { border-color: var(--color-danger); }
-.field[data-invalid='true'] .input:focus { box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-danger) 20%, transparent); }
-.hint { color: var(--color-text-muted); font-size: var(--text-xs); }
-.error { color: var(--color-danger); font-size: var(--text-xs); }
-```
-
----
-
-#### `Select.jsx` (네이티브 select 기반 + 토큰 스타일, accessible by default)
-```jsx
-// components/common/Select.jsx
-// 고급 드롭다운 필요 시 Radix Select 기반으로 교체 권장 (키보드 네비게이션·typeahead 완전 지원)
-// 본 컴포넌트는 네이티브 <select> 기반 = 기본 접근성·모바일 네이티브 피커 제공
-import { forwardRef, useId } from 'react'
-import styles from './Select.module.css'
-
-export const Select = forwardRef(function Select(
-  { label, options = [], error, hint, id, placeholder, className = '', ...props },
-  ref
-) {
-  const autoId = useId()
-  const selectId = id || autoId
-  const errorId = `${selectId}-error`
-  const hintId = `${selectId}-hint`
-  const describedBy = [error && errorId, hint && hintId].filter(Boolean).join(' ') || undefined
-
-  return (
-    <div className={`${styles.field} ${className}`} data-invalid={!!error || undefined}>
-      {label && <label htmlFor={selectId} className={styles.label}>{label}</label>}
-      <div className={styles.wrapper}>
-        <select
-          ref={ref}
-          id={selectId}
-          className={styles.select}
-          aria-invalid={!!error || undefined}
-          aria-describedby={describedBy}
-          {...props}
-        >
-          {placeholder && <option value="">{placeholder}</option>}
-          {options.map((opt) =>
-            typeof opt === 'object'
-              ? <option key={opt.value} value={opt.value} disabled={opt.disabled}>{opt.label}</option>
-              : <option key={opt} value={opt}>{opt}</option>
-          )}
-        </select>
-        <span className={styles.caret} aria-hidden="true">▾</span>
-      </div>
-      {hint && !error && <small id={hintId} className={styles.hint}>{hint}</small>}
-      {error && <small id={errorId} className={styles.error} role="alert">{error}</small>}
-    </div>
-  )
-})
-```
-
-#### `Select.module.css`
-```css
-.field { display: flex; flex-direction: column; gap: var(--space-1); }
-.label { font-size: var(--text-sm); font-weight: var(--font-weight-medium); color: var(--color-text); }
-.wrapper { position: relative; }
-.select {
-  width: 100%;
-  padding: var(--space-2) var(--space-8) var(--space-2) var(--space-3);
-  font-size: var(--text-base);
-  color: var(--color-text);
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  appearance: none;
-  cursor: pointer;
-}
-.select:focus { outline: none; border-color: var(--color-primary); box-shadow: 0 0 0 3px var(--color-primary-subtle); }
-.select:disabled { background: var(--color-bg-muted); cursor: not-allowed; }
-.caret { position: absolute; right: var(--space-3); top: 50%; transform: translateY(-50%); color: var(--color-text-muted); pointer-events: none; }
-.field[data-invalid='true'] .select { border-color: var(--color-danger); }
-.hint { color: var(--color-text-muted); font-size: var(--text-xs); }
-.error { color: var(--color-danger); font-size: var(--text-xs); }
-```
-
----
-
-#### `Chip.jsx` (toggle / active / removable / disabled)
-```jsx
-// components/common/Chip.jsx
-import styles from './Chip.module.css'
-
-/**
- * 필터/태그/카테고리 칩. active 토글 또는 removable 두 모드.
- * mf-007 "전체" 센티넬 사용 시 value={ALL} 전달.
- */
-export function Chip({
-  children,
-  active = false,
-  disabled = false,
-  onClick,
-  onRemove,
-  variant = 'default',   // default | outlined
-  className = '',
-  ...props
-}) {
-  // onRemove 가 있으면 내부에 <button> 이 중첩되므로 HTML5 위반 방지를 위해 div 로 강제
-  const Tag = onClick && !onRemove ? 'button' : onRemove ? 'div' : 'span'
-  return (
-    <Tag
-      type={Tag === 'button' ? 'button' : undefined}
-      role={Tag === 'div' && onClick ? 'button' : undefined}
-      tabIndex={Tag === 'div' && onClick ? 0 : undefined}
-      onKeyDown={Tag === 'div' && onClick
-        ? (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onClick(e) } }
-        : undefined}
-      className={`${styles.chip} ${className}`}
-      data-variant={variant}
-      data-active={active || undefined}
-      disabled={Tag === 'button' ? (disabled || undefined) : undefined}
-      aria-disabled={Tag !== 'button' && disabled ? true : undefined}
-      aria-pressed={onClick ? active : undefined}
-      onClick={onClick}
-      {...props}
-    >
-      <span className={styles.label}>{children}</span>
-      {onRemove && (
-        <button
-          type="button"
-          className={styles.remove}
-          aria-label="제거"
-          onClick={(e) => { e.stopPropagation(); onRemove() }}
-        >×</button>
-      )}
-    </Tag>
-  )
-}
-```
-
-#### `Chip.module.css`
-```css
-.chip {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-1);
-  padding: var(--space-1) var(--space-3);
-  font-size: var(--text-sm);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-text);
-  background: var(--color-bg-muted);
-  border: 1px solid transparent;
-  border-radius: var(--radius-full);
-  white-space: nowrap;
-  transition: background var(--transition-fast), border-color var(--transition-fast);
-  cursor: pointer;
-}
-.chip[data-variant='outlined'] { background: transparent; border-color: var(--color-border); }
-.chip:hover:not(:disabled) { background: var(--color-bg-subtle); }
-.chip[data-active] { background: var(--color-primary); color: var(--color-text-inverse); border-color: var(--color-primary); }
-.chip:disabled { opacity: 0.5; cursor: not-allowed; }
-.label { }
-.remove {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 18px; height: 18px;
-  margin-left: var(--space-1);
-  font-size: var(--text-sm);
-  line-height: 1;
-  color: inherit;
-  background: transparent;
-  border: none;
-  border-radius: var(--radius-full);
-  cursor: pointer;
-}
-.remove:hover { background: var(--color-shimmer); }
-```
-
----
-
-#### `Card.jsx` (default / elevated / outlined + clickable variant)
-```jsx
-// components/common/Card.jsx
-import styles from './Card.module.css'
-
-export function Card({
-  variant = 'default',   // default | elevated | outlined
-  interactive = false,   // hover 시 그림자 강조
-  as: Component = 'div',
-  className = '',
-  children,
-  ...props
-}) {
-  return (
-    <Component
-      className={`${styles.card} ${className}`}
-      data-variant={variant}
-      data-interactive={interactive || undefined}
-      {...props}
-    >
-      {children}
-    </Component>
-  )
-}
-
-Card.Header = function CardHeader({ children, className = '' }) {
-  return <div className={`${styles.header} ${className}`}>{children}</div>
-}
-Card.Body = function CardBody({ children, className = '' }) {
-  return <div className={`${styles.body} ${className}`}>{children}</div>
-}
-Card.Footer = function CardFooter({ children, className = '' }) {
-  return <div className={`${styles.footer} ${className}`}>{children}</div>
-}
-```
-
-#### `Card.module.css`
-```css
-.card {
-  display: flex;
-  flex-direction: column;
-  background: var(--color-bg);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-}
-.card[data-variant='default'] { box-shadow: var(--shadow-sm); }
-.card[data-variant='elevated'] { box-shadow: var(--shadow-md); }
-.card[data-variant='outlined'] { border: 1px solid var(--color-border); }
-.card[data-interactive] { cursor: pointer; transition: box-shadow var(--transition-base), transform var(--transition-base); }
-.card[data-interactive]:hover { box-shadow: var(--shadow-lg); transform: translateY(-1px); }
-.card[data-interactive]:active { transform: translateY(0); }
-.header { padding: var(--space-4); border-bottom: 1px solid var(--color-border); }
-.body { padding: var(--space-4); flex: 1; }
-.footer { padding: var(--space-3) var(--space-4); border-top: 1px solid var(--color-border); background: var(--color-bg-subtle); }
-```
-
----
-
-#### `Badge.jsx` (info/success/warning/danger/neutral + dot variant)
-```jsx
-// components/common/Badge.jsx
-import styles from './Badge.module.css'
-
-export function Badge({
-  variant = 'neutral',   // info | success | warning | danger | neutral
-  size = 'md',           // sm | md
-  dot = false,           // 점 표시 + 텍스트
-  className = '',
-  children,
-  ...props
-}) {
-  return (
-    <span
-      className={`${styles.badge} ${className}`}
-      data-variant={variant}
-      data-size={size}
-      data-dot={dot || undefined}
-      {...props}
-    >
-      {dot && <span className={styles.dotMark} aria-hidden="true" />}
-      {children}
-    </span>
-  )
-}
-```
-
-#### `Badge.module.css`
-```css
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-1);
-  padding: 2px var(--space-2);
-  font-size: var(--text-xs);
-  font-weight: var(--font-weight-semibold);
-  line-height: 1.4;
-  border-radius: var(--radius-full);
-  white-space: nowrap;
-}
-.badge[data-size='sm'] { font-size: 10px; padding: 1px var(--space-1); }
-.badge[data-variant='neutral'] { background: var(--color-bg-muted); color: var(--color-text); }
-.badge[data-variant='info'] { background: color-mix(in srgb, var(--color-info) 15%, transparent); color: var(--color-info); }
-.badge[data-variant='success'] { background: color-mix(in srgb, var(--color-success) 15%, transparent); color: var(--color-success); }
-.badge[data-variant='warning'] { background: color-mix(in srgb, var(--color-warning) 15%, transparent); color: var(--color-warning); }
-.badge[data-variant='danger'] { background: color-mix(in srgb, var(--color-danger) 15%, transparent); color: var(--color-danger); }
-.dotMark {
-  display: inline-block;
-  width: 6px; height: 6px;
-  border-radius: var(--radius-full);
-  background: currentColor;
-}
-```
-
----
-
-#### `Avatar.jsx` (이미지 + initials fallback + SafeImage 내장)
-```jsx
-// components/common/Avatar.jsx
-import { useState } from 'react'
-import styles from './Avatar.module.css'
-
-/**
- * 이미지 로드 실패 시 자동으로 initials 표시. SafeImage 패턴 내장.
- * src 없으면 initials 바로 표시.
- */
-export function Avatar({
-  src,
-  name = '',
-  size = 'md',          // sm | md | lg | xl
-  className = '',
-  ...props
-}) {
-  const [errored, setErrored] = useState(false)
-  const initials = getInitials(name)
-  const showImage = src && !errored
-
-  return (
-    <div
-      className={`${styles.avatar} ${className}`}
-      data-size={size}
-      role="img"
-      aria-label={name || 'avatar'}
-      {...props}
-    >
-      {showImage ? (
-        <img
-          src={src}
-          alt=""
-          className={styles.image}
-          onError={(e) => {
-            e.target.onerror = null  // 자기 해제 (무한 루프 방지; error-prevention-rules가 있으면 ep-002로 검증)
-            setErrored(true)
-          }}
-          loading="lazy"
-        />
-      ) : (
-        <span className={styles.initials}>{initials || '?'}</span>
-      )}
-    </div>
-  )
-}
-
-function getInitials(name) {
-  if (!name) return ''
-  const parts = name.trim().split(/\s+/)
-  if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase()
-  return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase()
-}
-```
-
-#### `Avatar.module.css`
-```css
-.avatar {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background: var(--color-bg-muted);
-  color: var(--color-text-muted);
-  border-radius: var(--radius-full);
-  font-weight: var(--font-weight-semibold);
-  user-select: none;
-  flex-shrink: 0;
-}
-.avatar[data-size='sm'] { width: 24px; height: 24px; font-size: var(--text-xs); }
-.avatar[data-size='md'] { width: 40px; height: 40px; font-size: var(--text-sm); }
-.avatar[data-size='lg'] { width: 56px; height: 56px; font-size: var(--text-lg); }
-.avatar[data-size='xl'] { width: 80px; height: 80px; font-size: var(--text-2xl); }
-.image { width: 100%; height: 100%; object-fit: cover; }
-.initials { text-transform: uppercase; letter-spacing: 0.02em; }
-```
-
----
-
-#### `Skeleton.jsx` (animated shimmer, text/rect/circle variants)
-```jsx
-// components/common/Skeleton.jsx
-import styles from './Skeleton.module.css'
-
-/**
- * 주의: aria-busy 는 Skeleton 자체가 아닌 로딩 컨테이너에 적용하는 것이 WAI-ARIA 표준.
- * Skeleton 스스로는 aria-hidden="true" 로 숨기고,
- * 컨테이너에서 <div role="status" aria-busy="true" aria-label="로딩 중"> 관리 권장.
- *
- * 로딩 플레이스홀더. React 19 Suspense 와 함께 사용 가능.
- * variant: text(한 줄) / rect(상자) / circle(원)
- */
-export function Skeleton({
-  variant = 'rect',       // text | rect | circle
-  width,
-  height,
-  count = 1,
-  className = '',
-  ...props
-}) {
-  const items = Array.from({ length: count })
-  return (
-    <>
-      {items.map((_, i) => (
-        <span
-          key={i}
-          className={`${styles.skeleton} ${className}`}
-          data-variant={variant}
-          style={{ width, height }}
-          aria-hidden="true"
-          {...props}
-        />
-      ))}
-    </>
-  )
-}
-```
-
-#### `Skeleton.module.css`
-```css
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-.skeleton {
-  display: block;
-  background: linear-gradient(90deg,
-    var(--color-bg-muted) 25%,
-    var(--color-bg-subtle) 50%,
-    var(--color-bg-muted) 75%);
-  background-size: 200% 100%;
-  animation: shimmer 1.5s ease-in-out infinite;
-  border-radius: var(--radius-md);
-}
-.skeleton[data-variant='text'] { height: var(--text-base); width: 100%; border-radius: var(--radius-sm); }
-.skeleton[data-variant='rect'] { width: 100%; height: 120px; }
-.skeleton[data-variant='circle'] { width: 40px; height: 40px; border-radius: var(--radius-full); }
-
-@media (prefers-reduced-motion: reduce) {
-  .skeleton { animation: none; }
-}
-```
 
 ---
 
@@ -1365,6 +579,11 @@ module.exports = {
 ```
 
 ### 7. `index.css` 진입점 생성/수정
+
+**덮어쓰기 금지 — Write로 전체 교체 절대 금지.** `index.css`는 신규 프로젝트가 아닌 이상 거의 항상 이미 존재하며 기존 import(폰트, 서드파티 CSS 등)를 담고 있다.
+1. 먼저 파일 존재 여부를 확인한다.
+2. **존재하지 않으면** → 아래 2줄로 새로 생성 (Write 가능, 신규 파일이므로 덮어쓰기 아님).
+3. **이미 존재하면** → 전체 내용을 읽고 기존 import 목록을 사용자에게 보여준 뒤, 다음 2줄이 없을 때만 파일 **최상단에 추가**하는 형태로 **Edit(append)** 한다. Write로 전체 교체 금지 (프로젝트 최상위 규칙 — 새 산출물 저장 시 기존 동명 파일이 있으면 자동 덮어쓰기 금지).
 
 ```css
 @import './styles/tokens.css';
@@ -1427,7 +646,7 @@ grep -n "export const ALL" src/utils/sentinels.js
 
 ### 하드코딩 grep gate를 husky pre-commit에 배선 (필수)
 
-위 자기검증 1번의 하드코딩 컬러/shadow grep gate(라인 ~1392)는 CI 뿐 아니라 **husky pre-commit 훅에도 반드시 배선**한다. 그래야 위반이 커밋 단계에서 차단되고, CI까지 도달하지 않는다. `.husky/pre-commit` 에 다음 게이트를 추가:
+위 "Bootstrap 자기검증" 1번(하드코딩 컬러 잔존 여부 grep)은 CI 뿐 아니라 **husky pre-commit 훅에도 반드시 배선**한다. 그래야 위반이 커밋 단계에서 차단되고, CI까지 도달하지 않는다. `.husky/pre-commit` 에 다음 게이트를 추가:
 
 ```bash
 # .husky/pre-commit — 하드코딩 컬러/shadow 차단 게이트
@@ -1488,11 +707,14 @@ grep -rEiln "star|rating|toast|back.*button" src/components src/pages
 
 ### C-1. 미사용 토큰 + 부재 컴포넌트 실제 감지
 ```bash
-# 미사용 토큰 감지
-grep -oE -- '--[a-z][a-z0-9-]+' src/styles/tokens.css | sort -u > /tmp/defined_tokens.txt
+# 미사용 토큰 감지 (mktemp — 병렬 실행 시 경합 방지, 고정 경로 금지)
+DEFINED_TOKENS=$(mktemp)
+USED_TOKENS=$(mktemp)
+grep -oE -- '--[a-z][a-z0-9-]+' src/styles/tokens.css | sort -u > "$DEFINED_TOKENS"
 grep -roE -- 'var\(--[a-z][a-z0-9-]+\)' src/ --include="*.css" --include="*.jsx" --include="*.tsx" \
-  | grep -oE -- '--[a-z][a-z0-9-]+' | sort -u > /tmp/used_tokens.txt
-echo "미사용 토큰:" && comm -23 /tmp/defined_tokens.txt /tmp/used_tokens.txt
+  | grep -oE -- '--[a-z][a-z0-9-]+' | sort -u > "$USED_TOKENS"
+echo "미사용 토큰:" && comm -23 "$DEFINED_TOKENS" "$USED_TOKENS"
+rm -f "$DEFINED_TOKENS" "$USED_TOKENS"
 
 # 부재한 컴포넌트 감지 (13종 목록 대비)
 EXPECTED="Button Input Select Modal BottomSheet Chip ChipScroller Card Badge Toast SafeImage Avatar Skeleton"
@@ -1560,7 +782,7 @@ done
 - 다른 에이전트 영역 침범 (DB, API 로직, 보안)
 - 기능 요구사항 판단 (해당 UI가 필요한지 판단은 사용자·planner 담당)
 - 사용자 확인 없는 전역 파일 치환
-- `styled-components` 같은 런타임 스타일 라이브러리 추가 (번들 크기 이유)
+- `styled-components`/`@emotion` 같은 런타임 스타일 라이브러리를 **신규로 도입** (번들 크기 이유) — 단, Phase 1에서 이미 styled-components/@emotion이 감지된 **기존** 프로젝트라면 이 금지는 적용되지 않는다. 그 경우 새 방법론을 얹지 말고 기존 styled-components를 그대로 따른다 (위 "생성할 스타일 파일 결정 로직" 참조)
 
 ---
 
