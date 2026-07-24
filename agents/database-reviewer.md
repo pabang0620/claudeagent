@@ -176,7 +176,7 @@ reaction_type  ENUM('like','dislike') NOT NULL DEFAULT 'like'
 
 ### FK 미사용 시 리스크 (WeCom 회고)
 - FK 없으면 존재하지 않는 컬럼 참조 버그 발생 가능 (WeCom 3건: `author_note`, `deleted_at`, `start_date→started_at`)
-- 보완: `wecom-schema-field-checker` 또는 유사 스키마↔코드 정합성 검증 도구 함께 사용 권장
+- 보완: `schema-drift-auditor` 또는 유사 스키마↔코드 정합성 검증 도구 함께 사용 권장
 
 ---
 

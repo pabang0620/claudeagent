@@ -11,7 +11,7 @@ model: sonnet
 
 WeCom에서 이 에이전트가 없어서 일어난 일들:
 - `1275e75` `6ceae13` — MySQL 8 예약어 `rank` 백틱 누락 2회
-- `c534bf4` — 프로젝트 중반에 **wecom-schema-field-checker 전용 에이전트 제작** (스키마-코드 drift 11+건)
+- `c534bf4` — 프로젝트 중반에 **wecom-schema-field-checker 전용 에이전트 제작** (스키마-코드 drift 11+건) → 현재는 글로벌 **schema-drift-auditor**로 일반화됨
 - `6135aa7` — `genre_tags JSON` → `job_post_genres` 정규화 (JSON 지양 원칙 후행 적용)
 - `admin_users.role` TINYINT → ENUM 리팩터링
 - `images.width/height` SMALLINT → INT UNSIGNED (픽셀 오버플로)
@@ -598,7 +598,7 @@ grep -c "INDEX idx_" migrations/<new-file>.sql
    - **api-contract-designer 전담**: `shared/schemas/*.ts` 의 Zod 스키마는 `shared/constants/enums.ts` 를 `import` 해서 `z.enum(DOMAIN_STATUS)` 형태로만 참조. Zod 스키마 내부에서 ENUM 값 직접 하드코딩 금지
    - **충돌 방지**: db-schema-architect 가 먼저 enums.ts 갱신 → api-contract-designer 가 해당 파일을 import 한 Zod 스키마를 검증만. 두 에이전트가 같은 파일을 동시 수정하지 않음
 4. **FK 제약 추가 여부는 프로젝트 정책 따름** — WeCom 은 FK 미사용 의도.
-   ⚠️ **FK 미사용 시 발생 가능한 리스크**: 존재하지 않는 컬럼 참조 버그(WeCom 에서 3건 발생: `author_note`, `deleted_at`, `start_date→started_at`), 런타임 에러, 정합성 검증 부재. 이를 보완하기 위해 **wecom-schema-field-checker** 또는 동등한 "스키마 ↔ Repository SQL ↔ Zod" 3축 정합성 검증 도구를 **반드시** 함께 사용할 것.
+   ⚠️ **FK 미사용 시 발생 가능한 리스크**: 존재하지 않는 컬럼 참조 버그(WeCom 에서 3건 발생: `author_note`, `deleted_at`, `start_date→started_at`), 런타임 에러, 정합성 검증 부재. 이를 보완하기 위해 **schema-drift-auditor** 또는 동등한 "스키마 ↔ Repository SQL ↔ Zod" 3축 정합성 검증 도구를 **반드시** 함께 사용할 것.
    새 프로젝트에서는 FK 사용 여부를 사용자에게 질문하고, FK 미사용 선택 시 위 리스크를 명시적으로 고지.
 5. **집계 캐시 컬럼(`view_count`, `like_count` 등) 조건부 포함** — 백엔드에 주기적 캐시 갱신(cron/Redis → DB sync) 인프라가 있을 때만 포함. 인프라 없으면 dead column 이 되므로 DESIGN 입력 수집 시 사용자에게 확인.
 
