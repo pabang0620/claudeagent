@@ -1,7 +1,7 @@
 # 제안서 PPT 에셋 라이브러리 — 구축 명세 (BUILD_SPEC)
 
 목적: 사용자가 PPT를 요청하면 이 라이브러리의 **편집 가능한 네이티브 에셋**을 조합해 제안서 PPTX를 자동 생성한다.
-루트: `/home/pabang/myapp/.claude/pptx-asset-library/` · 하드스톱: 2026-07-04 05:00 KST
+루트: `/home/lee/project/.claude/pptx-asset-library/` · 하드스톱: 2026-07-04 05:00 KST
 
 ## 1. 아키텍처 원칙
 - 최종 에셋은 전부 PowerPoint 네이티브(도형·표·차트·텍스트). **페이지 전체 이미지 금지, SmartArt 금지.**

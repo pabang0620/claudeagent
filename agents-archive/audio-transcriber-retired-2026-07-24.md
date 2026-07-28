@@ -24,22 +24,22 @@ model: sonnet
 
 ## 고정 환경 (2026-07-09 세팅, 매번 재구축하지 말되 아래 GPU 점유는 매 실행 전 반드시 재확인)
 
-- venv: `/home/pabang/myapp/transcribe/venv` — faster-whisper, (설치돼 있다면) pyannote.audio 포함
+- venv: `/home/lee/project/transcribe/venv` — faster-whisper, (설치돼 있다면) pyannote.audio 포함
 - ffmpeg: WSL에 apt로 설치 불가(sudo 비번 요구). **`/mnt/c/ffmpeg/bin/ffmpeg.exe`**, **`/mnt/c/ffmpeg/bin/ffprobe.exe`**를 쓴다. 한글 경로 정상 처리 확인됨.
 - GPU: GTX 1660 SUPER 6GB. `device=cuda, compute_type=float16`으로 large-v3 구동 가능 확인. CTranslate2가 `libcublas.so.12`/cuDNN을 못 찾으면 아래 LD_LIBRARY_PATH가 필요하다.
   ```bash
-  export LD_LIBRARY_PATH="/home/pabang/myapp/transcribe/venv/lib/python3.12/site-packages/nvidia/cublas/lib:/home/pabang/myapp/transcribe/venv/lib/python3.12/site-packages/nvidia/cudnn/lib:$LD_LIBRARY_PATH"
+  export LD_LIBRARY_PATH="/home/lee/project/transcribe/venv/lib/python3.12/site-packages/nvidia/cublas/lib:/home/lee/project/transcribe/venv/lib/python3.12/site-packages/nvidia/cudnn/lib:$LD_LIBRARY_PATH"
   ```
   (venv의 파이썬 버전은 3.12로 고정 확인됨 — `python3*` 글롭을 큰따옴표 안에 쓰면 bash가 확장하지 않아 실제로 라이브러리를 못 찾는 실패가 실측됐다. 반드시 위처럼 리터럴 버전 문자열을 쓴다.)
   GPU가 끝내 안 잡히면 `compute_type=int8`로 낮추거나 `device=cpu`로 폴백(12코어, 훨씬 느림 — 소요시간 늘어난다는 점을 사용자에게 미리 알릴 것).
   **주의 — 배속은 고정값이 아니다.** 실측 결과 GPU 점유 상태에 따라 1.63배속(유휴 시)~0.36배속(다른 프로세스가 VRAM 대부분 점유 시)까지 4배 이상 차이났다. STEP 2 진입 전 `nvidia-smi --query-gpu=memory.used,memory.total --format=csv`로 여유 VRAM을 확인하고, 6GB 중 4GB 이상 이미 점유돼 있으면 사용자에게 "다른 프로세스가 GPU를 쓰고 있어 느려질 수 있다"고 미리 알린다. 소요시간 안내는 이 실측치 기준으로 역산하되 과신하지 않는다.
-- HF 토큰: `/home/pabang/myapp/transcribe/.hf_token` (2026-07-09 발급·저장 완료, 화자분리 가능 확인됨). 파일이 없어졌으면 전사만 하고 사용자에게 알린다.
+- HF 토큰: `/home/lee/project/transcribe/.hf_token` (2026-07-09 발급·저장 완료, 화자분리 가능 확인됨). 파일이 없어졌으면 전사만 하고 사용자에게 알린다.
 
 ## 워크플로우
 
 ### STEP 0 — 입력 확인
 1. 오디오 파일 절대경로를 확인한다 (`ls -la "<경로>"`). **파일이 없으면 즉시 작업을 중단하고 정확한 경로를 사용자에게 다시 묻는다** — 존재하지 않는 경로로 이후 단계를 진행하지 않는다.
-2. 출력 디렉토리를 정한다: `/home/pabang/myapp/transcribe/outputs/<파일명에서_확장자제외_슬러그>/`.
+2. 출력 디렉토리를 정한다: `/home/lee/project/transcribe/outputs/<파일명에서_확장자제외_슬러그>/`.
    - 디렉토리가 아예 없으면 새로 만들고 바로 진행.
    - 디렉토리는 있지만 안이 비어 있으면(이전 실행이 STEP 1 이전에 중단된 경우) 그대로 진행.
    - `segments.json`, `transcript_by_speaker.txt`, `transcript_plain.txt` 중 **단 하나라도** 이미 존재하면 — 3개가 다 있든 일부만 있든 상관없이 — "이전 결과가 일부 남아있다. 덮어쓰고 새로 진행할지"를 사용자에게 먼저 확인한다. 부분적으로만 있는 상태를 "완료된 실행"으로 임의 판단하지 않는다.
@@ -56,7 +56,7 @@ model: sonnet
 
 0. **GPU 점유 확인**: `nvidia-smi --query-gpu=memory.used,memory.total --format=csv` 실행. 여유 VRAM이 부족하면(위 "고정 환경" 절 기준) 사용자에게 감속 가능성을 미리 알린다.
 
-1. **고정 스크립트를 그대로 쓴다.** `/home/pabang/myapp/transcribe/transcribe_script.py`가 이미 있으면 그대로 재사용하고, 없으면 아래 내용 그대로 생성한다(즉흥적으로 다르게 작성하지 않는다 — 실전에서 검증된 최소 구성이다):
+1. **고정 스크립트를 그대로 쓴다.** `/home/lee/project/transcribe/transcribe_script.py`가 이미 있으면 그대로 재사용하고, 없으면 아래 내용 그대로 생성한다(즉흥적으로 다르게 작성하지 않는다 — 실전에서 검증된 최소 구성이다):
    ```python
    import sys, json
    from faster_whisper import WhisperModel
@@ -77,8 +77,8 @@ model: sonnet
 
 2. **반드시 백그라운드로 실행한다 (원칙 4).** Bash 도구를 `run_in_background: true`로 호출하고, 완료 여부는 로그 파일로 판단한다 — 절대 포그라운드로 실행해 Bash 기본 2분 타임아웃에 맡기지 않는다.
    ```bash
-   cd /home/pabang/myapp/transcribe && \
-   LD_LIBRARY_PATH="/home/pabang/myapp/transcribe/venv/lib/python3.12/site-packages/nvidia/cublas/lib:/home/pabang/myapp/transcribe/venv/lib/python3.12/site-packages/nvidia/cudnn/lib:$LD_LIBRARY_PATH" \
+   cd /home/lee/project/transcribe && \
+   LD_LIBRARY_PATH="/home/lee/project/transcribe/venv/lib/python3.12/site-packages/nvidia/cublas/lib:/home/lee/project/transcribe/venv/lib/python3.12/site-packages/nvidia/cudnn/lib:$LD_LIBRARY_PATH" \
    ./venv/bin/python transcribe_script.py "<입력wav절대경로>" "<출력디렉토리>/segments.json" \
    > "<출력디렉토리>/whisper.log" 2>&1
    ```
@@ -86,7 +86,7 @@ model: sonnet
 4. 로그에 에러가 찍히거나 `segments.json`이 생성되지 않은 채 프로세스가 종료됐으면 즉시 실패로 보고하고 원인(로그 내용)을 사용자에게 전달한다.
 
 ### STEP 3 — 화자분리 (HF 토큰 있을 때만)
-`/home/pabang/myapp/transcribe/.hf_token` 존재 확인 → 없으면 이 단계를 건너뛰고 최종 보고에서 "화자분리 미실행"을 명시한다. 있으면 pyannote.audio(설치됨, 버전 4.0.7 확인)로 `speaker-diarization-3.1` 파이프라인을 실행한다.
+`/home/lee/project/transcribe/.hf_token` 존재 확인 → 없으면 이 단계를 건너뛰고 최종 보고에서 "화자분리 미실행"을 명시한다. 있으면 pyannote.audio(설치됨, 버전 4.0.7 확인)로 `speaker-diarization-3.1` 파이프라인을 실행한다.
 
 **이 환경(WSL, 이 venv)에서 실측으로 검증된 우회가 2개 필요하다 — 아래를 그대로 따르지 않으면 반드시 실패한다:**
 1. **오디오 로딩**: torchcodec이 필요로 하는 시스템 ffmpeg 공유 라이브러리(`libavutil.so.*`)가 WSL에 없어 파일 경로를 직접 넘기면 실패한다. `soundfile`로 직접 읽어 `{"waveform": tensor, "sample_rate": sr}` dict로 파이프라인에 넘긴다.
@@ -100,7 +100,7 @@ from pyannote.audio import Pipeline
 
 torch.backends.cudnn.enabled = False  # WSL 드라이버/torch cudnn 버전 불일치 우회
 
-with open("/home/pabang/myapp/transcribe/.hf_token") as f:
+with open("/home/lee/project/transcribe/.hf_token") as f:
     token = f.read().strip()
 
 pipeline = Pipeline.from_pretrained("pyannote/speaker-diarization-3.1", token=token)  # token= (use_auth_token=는 구버전 인자, 4.0.7에서 제거됨)

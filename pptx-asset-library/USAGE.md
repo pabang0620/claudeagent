@@ -17,7 +17,7 @@
 
 ## 도구 (generators/)
 ```bash
-cd /home/pabang/myapp/.claude/pptx-asset-library
+cd /home/lee/project/.claude/pptx-asset-library
 python3 generators/merge_manifest.py   # 조각 → manifest.json + INDEX.md 재생성(카테고리 자동교정)
 python3 generators/regroup.py          # 1에셋=1슬라이드 덱의 도형을 asset:<ID> 그룹으로 묶음(멱등)
 python3 generators/audit.py            # 독립 교차감사(앵커·네이티브·이미지부재·중복ID)

@@ -35,6 +35,7 @@
 | **함수 로직 검증** | 특정 함수 비즈니스 로직·엣지케이스·에러 처리·부작용 정적 검증 (발견·보고만) | function-validator |
 | **스키마 필드명 정합성 검증** | "필드가 저장이 안 됨", "값이 null로 들어감", "API로 보냈는데 DB에 반영 안 됨", Zod 스키마 검증, 필드명 정합성, 스키마 drift → Zod↔Repository SQL↔프론트 전송필드 3축 대조 (발견·보고만, Zod+raw SQL 스택 한정) | schema-drift-auditor |
 | **LINKER HTML→Vue 변환** | "linker 변환", "html to vue", "linker 컴파일", "vue로 변환" → HTML 1개를 Vue 3 SFC로 1:1 변환 | linker-html-to-vue |
+| **판정 대리 (사용자에게 물어보기 직전)** | Claude가 사용자에게 선택·승인·확인을 요청하려는 모든 순간. "이렇게 할까요", "A와 B 중 어느 쪽", "이것도 할까요", 완료 보고 직전, 스코프 확장 검토 시 | lee-wonho |
 
 ### STEP 2: 코드 변경 후 필수 (예외 없음)
 
@@ -71,7 +72,7 @@
 
 ## Available Agents
 
-Located in `~/.claude/agents/`:
+Located in `.claude/agents/` (project-local, not `~/.claude/agents/`):
 
 | Agent | Purpose | Specific Triggers |
 |-------|---------|-----------------|
@@ -107,6 +108,7 @@ Located in `~/.claude/agents/`:
 | function-validator | 함수 비즈니스 로직 정확성·엣지케이스·에러 처리·부작용 정적 분석 (발견·보고 전용, 수정 안 함) | 병렬 파일·함수 단위 기능 검증 |
 | schema-drift-auditor | Zod 스키마 ↔ Repository SQL ↔ 프론트 전송 필드 3축 정합성 정적 검증, Zod strip으로 인한 silent 데이터 유실 탐지 (발견·보고 전용, 수정 안 함, Zod+raw SQL 스택 한정) | "필드가 저장이 안 됨", "값이 null로 들어감", "API로 보냈는데 DB에 반영 안 됨", "필드명 정합성", "스키마 drift" |
 | linker-html-to-vue | LINKER 프로젝트 HTML 1개 → Vue 3 Composition API SFC 1:1 변환 (CSS 무변경, 클래스 기반 표시제어) | "linker 변환", "html to vue", "vue로 변환" |
+| lee-wonho | 이원호 의사결정 대리 판정 (아이디어 생성 안 함, 판정만). ADOPT / REJECT / CLAUDE_DISCRETION / ESCALATE 4종 출력, 규칙 ID 71개 | 사용자에게 질문하려는 순간, 선택지 앞에서 멈출 때, 완료 보고 직전, 자발적 확장 검토 시 |
 | **code-reviewer** | **스킬** (에이전트 아님) | `code-reviewer` 스킬로 호출 |
 
 ---

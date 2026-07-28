@@ -41,24 +41,24 @@ powershell.exe -Command "cd 'C:\FlutterBuild\<CODE>'; & 'C:\flutter\bin\flutter.
 
 | 코드 | 프로젝트 | 소스 경로 | 웹 포트 | 웹서빙 디렉토리 |
 |------|---------|----------|---------|----------------|
-| `pnono` | pixel_nonogram | `/mnt/c/Users/이워노/Desktop/myproject/pixel_nonogram/` | 5602 | `/home/pabang/webserve/pnono` |
-| `blk` | block_blast_game | `/mnt/c/Users/이워노/Desktop/myproject/block_blast_game/` | 5501 | `/home/pabang/webserve/blk` |
-| `hrush` | hospital_rush | `/mnt/c/Users/이워노/Desktop/myproject/hospital_rush/` | 5601 | `/home/pabang/webserve/hrush` |
+| `pnono` | pixel_nonogram | `/mnt/c/Users/이워노/Desktop/myproject/pixel_nonogram/` | 5602 | `/home/lee/webserve/pnono` |
+| `blk` | block_blast_game | `/mnt/c/Users/이워노/Desktop/myproject/block_blast_game/` | 5501 | `/home/lee/webserve/blk` |
+| `hrush` | hospital_rush | `/mnt/c/Users/이워노/Desktop/myproject/hospital_rush/` | 5601 | `/home/lee/webserve/hrush` |
 
 ## 자동화 스크립트
 
 ```bash
 # 자동화 스크립트 실행 (존재 시)
-if [ -f /home/pabang/flutter_build.sh ]; then
-  bash /home/pabang/flutter_build.sh <코드> [apk|web|all|analyze]
+if [ -f /home/lee/flutter_build.sh ]; then
+  bash /home/lee/flutter_build.sh <코드> [apk|web|all|analyze]
 else
   # 스크립트 없을 시 직접 빌드 명령어 섹션 사용
   echo "flutter_build.sh 없음 — 직접 빌드 명령어 사용"
 fi
 # 예시
-bash /home/pabang/flutter_build.sh pnono all
-bash /home/pabang/flutter_build.sh blk apk
-bash /home/pabang/flutter_build.sh hrush web
+bash /home/lee/flutter_build.sh pnono all
+bash /home/lee/flutter_build.sh blk apk
+bash /home/lee/flutter_build.sh hrush web
 ```
 
 ## 직접 빌드 명령어
@@ -130,13 +130,13 @@ fi
 
 ### 웹 서버 시작
 > `<WEB_DIR>`은 위 프로젝트 코드 매핑 테이블의 "웹서빙 디렉토리" 컬럼 값을 사용한다.
-> 예) `pnono` → `/home/pabang/webserve/pnono`, `blk` → `/home/pabang/webserve/blk`, `hrush` → `/home/pabang/webserve/hrush`
+> 예) `pnono` → `/home/lee/webserve/pnono`, `blk` → `/home/lee/webserve/blk`, `hrush` → `/home/lee/webserve/hrush`
 
 ```bash
 pkill -f "http.server <PORT>" 2>/dev/null
 mkdir -p <WEB_DIR>
 WEB_DIR="<WEB_DIR>"
-[ -n "$WEB_DIR" ] && [[ "$WEB_DIR" == /home/pabang/webserve/* ]] && rm -rf "$WEB_DIR"/*
+[ -n "$WEB_DIR" ] && [[ "$WEB_DIR" == /home/lee/webserve/* ]] && rm -rf "$WEB_DIR"/*
 cp -r /mnt/c/FlutterBuild/<CODE>/build/web/. <WEB_DIR>/
 python3 -m http.server <PORT> --directory <WEB_DIR> > /tmp/<CODE>_server.log 2>&1 &
 sleep 2 && curl -s -o /dev/null -w "HTTP %{http_code}" http://localhost:<PORT>/

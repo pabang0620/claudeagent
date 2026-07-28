@@ -10,8 +10,8 @@ proposal-pt-builder 에이전트가 PT를 만들 때 **이 폴더의 `*.plan.jso
 2. **plan.json 편집** — `proposal-standard.plan.json`을 복사해(예: `proposal-mycompany.plan.json`) 각 슬라이드의 `"id"`를 고른 ID로 바꾼다. 슬라이드를 더하거나 빼도 된다.
 3. **테스트** — 아래로 실제 pptx를 뽑아 파워포인트로 열어 확인:
    ```bash
-   node /home/pabang/myapp/.claude/pptx-asset-library/composer/compose.mjs \
-     --plan /home/pabang/myapp/.claude/pptx-asset-library/reference/proposal-mycompany.plan.json \
+   node /home/lee/project/.claude/pptx-asset-library/composer/compose.mjs \
+     --plan /home/lee/project/.claude/pptx-asset-library/reference/proposal-mycompany.plan.json \
      --out /tmp/my-template-test.pptx
    ```
 4. 만족스러우면 그대로 둔다. 에이전트가 다음 PT부터 이 골격을 따른다.

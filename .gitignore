@@ -6,3 +6,6 @@ scheduled_tasks.lock
 
 # 클라이언트 정답지 원본 사본 (원격 업로드 금지)
 pptx-asset-library/reference/_refdoc/
+
+# 페르소나 디스틸 중간 작업파일 (대화 원문 덤프, 리포에 올리지 않음)
+persona-distill/tmp/

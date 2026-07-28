@@ -93,7 +93,7 @@ Step 0에서 확인한 **역할 수만큼**, 단일 메시지로 서브에이전
 
 ## 입력
 
-호출 시 **검증 대상 프로젝트 경로**를 받는다 (예: `myapp/frontend`, `cosmic-kuji-market`). 지정이 없으면 사용자에게 먼저 묻는다. 항상 `myapp`에서 Claude가 기동되므로 상대경로는 `myapp` 기준으로 해석한다.
+호출 시 **검증 대상 프로젝트 경로**를 받는다 (예: `frontend`, `cosmic-kuji-market`). 지정이 없으면 사용자에게 먼저 묻는다. 항상 `project`(작업 루트)에서 Claude가 기동되므로 상대경로는 작업 루트 기준으로 해석한다.
 
 필수 확인 항목이 하나라도 없으면 **한 번에 모두 묻는다** (왕복 최소화):
 1. 검증 대상 프로젝트 경로
@@ -114,8 +114,8 @@ Step 0에서 확인한 **역할 수만큼**, 단일 메시지로 서브에이전
    - 서버가 여러 개(frontend/backend 등)이면 각 디렉토리에서 별도로 기동한다:
      ```bash
      # 경로·명령은 사용자 입력으로 대체
-     cd myapp/frontend && npm run dev >> docs/playwright-verify/server-fe.log 2>&1 &
-     cd myapp/backend && node server.js >> docs/playwright-verify/server-be.log 2>&1 &
+     cd frontend && npm run dev >> docs/playwright-verify/server-fe.log 2>&1 &
+     cd backend && node server.js >> docs/playwright-verify/server-be.log 2>&1 &
      ```
    - 기동 후 **포트 대기 (health check)**: 기동한 모든 포트 각각에 대해 `timeout`으로 30초 상한을 걸고 폴링한다 (서버가 영영 안 뜰 때 무한대기 방지).
      ```bash
