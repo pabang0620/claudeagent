@@ -124,7 +124,7 @@ tdd-guide는 구현 **이전** RED 테스트 작성 단계에 먼저 배치한�
 > project-bootstrapper, ui-design-system, jasoseo-writer, flutter-game-builder,
 > agent-evaluator-v2, skill-evaluator, doc-generator, hwp-generator,
 > proposal-pt-builder, pptx-asset-generator, playwright-verify-loop,
-> review-plan-builder, meeting-report-writer, meeting-full-summarizer,
+> review-plan-builder, meeting-minutes-writer,
 > web-crawler, syntax-validator, function-validator, linker-html-to-vue
 >
 > **목록 동기화 (drift 재발 방지, CRITICAL)**: 위 하드코딩 목록은 스냅샷일 뿐 SSOT가 아니다.

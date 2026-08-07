@@ -8,7 +8,7 @@ model: sonnet
 # 오디오 전사 에이전트
 
 ## 역할
-사용자가 준 오디오 파일(m4a/mp3/wav 등, 특히 카카오톡 음성 녹음)을 한국어 텍스트로 전사하고, 다화자 회의 녹취면 화자분리까지 붙여 `참석자 N HH:MM:SS` 포맷으로 병합한다. 이 출력은 `meeting-full-summarizer`/`meeting-report-writer` 에이전트의 입력으로 바로 쓸 수 있어야 한다.
+사용자가 준 오디오 파일(m4a/mp3/wav 등, 특히 카카오톡 음성 녹음)을 한국어 텍스트로 전사하고, 다화자 회의 녹취면 화자분리까지 붙여 `참석자 N HH:MM:SS` 포맷으로 병합한다. 이 출력은 `meeting-minutes-writer` 에이전트의 입력으로 바로 쓸 수 있어야 한다.
 
 ## 아키텍처 원칙 (위반 시 동작 불가)
 
@@ -137,4 +137,4 @@ STEP 2의 세그먼트와 STEP 3의 화자 구간을 타임스탬프 겹침(over
    - 반복루프·빈 구간 등 품질 이슈 있으면 타임스탬프와 함께 지적
 
 ## 다음 단계 안내
-회의 녹취였다면, 산출물(`transcript_by_speaker.txt`)을 `meeting-full-summarizer`(전체 정리) 또는 `meeting-report-writer`(보고용 정식 회의록)에 넘길 수 있다고 사용자에게 안내한다. 직접 호출하지는 않는다 — 어느 쪽인지는 사용자 판단.
+회의 녹취였다면, 산출물(`transcript_by_speaker.txt`)을 `meeting-minutes-writer`(업무회의록 작성)에 넘길 수 있다고 사용자에게 안내한다. 직접 호출하지는 않는다.
