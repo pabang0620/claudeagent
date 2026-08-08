@@ -5,11 +5,11 @@
  */
 import React from 'react';
 import {
-  Actor, Appear, BustActor, C, Caption, FPS, HeadNerveDiagram, IceCream, Label,
-  PlainBg, POSES, RIG, SAFE_TOP, ThemedIcon, W, blendPose, breathe, handPos, progress,
+  Actor, Appear, BustActor, C, Caption, FPS, HeadNerveDiagram, IceCream,
+  PlainBg, POSES, RIG, SAFE_TOP, ThemedIcon, W, blendPose, breathe, handPos, mouthAt, mouthProp, progress,
 } from '../../../assets';
 import type { CaptionLine, Pose } from '../../../assets';
-import { STRINGS, Locale } from './strings';
+import { Locale } from './strings';
 
 const CX = W / 2;
 
@@ -114,16 +114,27 @@ const BUST_SIZE = 950;
 const BUST_TOP = 430;
 const BUST_LEFT = (W - BUST_SIZE) / 2;
 
-export const S2Forehead: React.FC<{ f: number; locale: Locale }> = ({ f, locale }) => {
+/** v4: 무성 리액션 -> 유성 리액션+질문("아, 이마 아파. 왜 아픈 거지?")으로 바뀌면서
+ *  s3~s5 와 동일하게 Caption 컴포넌트로 발화를 자막으로 띄운다(정적 캡션 "이마가 찌릿"은 폐기).
+ *  마지막 "왜 아픈 거지?" 부분(구간 후반 45%)에서는 touchForehead 포즈를 새로 만들지 않고
+ *  headTilt 값만 씬 로컬에서 추가로 기울여 고개를 갸웃하는 느낌을 얹는다.
+ *  이제 이 바스트샷은 캐릭터 본인의 대사를 직접 말하는 구간(s3~s5의 다이어그램 내레이션과 달리
+ *  화면에 입이 그대로 보인다)이라 rms_mouth.py 가 만든 mouth.json 으로 입을 움직인다 -
+ *  BustActor 의 mouthOpen prop 을 넘기면 포즈가 가진 정적 mouthOpen 을 덮어쓴다. */
+export const S2Forehead: React.FC<{
+  f: number; frames: number; lines: CaptionLine[]; mouth: Record<string, number[]>;
+}> = ({ f, frames, lines, mouth }) => {
   const t = progress(f, 0, 16);
-  const pose = blendPose(POSES.idle, POSES.touchForehead, t);
+  const basePose = blendPose(POSES.idle, POSES.touchForehead, t);
+  const tiltP = progress(f, Math.round(frames * 0.55), Math.max(1, frames - 6));
+  const pose: Pose = { ...basePose, headTilt: (basePose.headTilt ?? 0) + tiltP * 8 };
   const iconP = progress(f, 10, 24);
-  const labelP = progress(f, 16, 30);
-  const label = STRINGS[locale].s2Label;
+  const line = activeLine(lines, f / FPS);
+  const mouthOpen = mouthProp(mouthAt(mouth, 's2', f));
 
   return (
     <PlainBg>
-      <BustActor size={BUST_SIZE} left={BUST_LEFT} top={BUST_TOP} pose={pose} />
+      <BustActor size={BUST_SIZE} left={BUST_LEFT} top={BUST_TOP} pose={pose} mouthOpen={mouthOpen} />
 
       {iconP > 0.001 ? (
         <Appear progress={iconP} from="scale" origin="50% 50%">
@@ -140,11 +151,7 @@ export const S2Forehead: React.FC<{ f: number; locale: Locale }> = ({ f, locale 
         </Appear>
       ) : null}
 
-      {labelP > 0.001 ? (
-        <Appear progress={labelP} from="up" distance={30}>
-          <Label x={CX} y={405} text={label} size={78} color={C.ink} wrapWidth={880} />
-        </Appear>
-      ) : null}
+      <Caption line={line} t={f / FPS} />
     </PlainBg>
   );
 };

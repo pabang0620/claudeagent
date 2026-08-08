@@ -4,6 +4,40 @@
  "pitch": "+15Hz",
  "segments": [
   {
+   "id": "s2",
+   "text": "Ow, my forehead! Wait, why?",
+   "duration": 3.288,
+   "words": [
+    {
+     "w": "Ow",
+     "s": 0.088,
+     "e": 0.3
+    },
+    {
+     "w": "my",
+     "s": 0.463,
+     "e": 0.608
+    },
+    {
+     "w": "forehead",
+     "s": 0.617,
+     "e": 1.165
+    },
+    {
+     "w": "Wait",
+     "s": 1.827,
+     "e": 2.125
+    },
+    {
+     "w": "why",
+     "s": 2.317,
+     "e": 2.615
+    }
+   ],
+   "rate": "+30%",
+   "pitch": "+35Hz"
+  },
+  {
    "id": "s3",
    "text": "But the cold part is your mouth, your palate's blood vessels clamp shut, then flood back open, and that sudden squeeze is the pain.",
    "duration": 7.992,
@@ -128,7 +162,9 @@
      "s": 6.894,
      "e": 7.269
     }
-   ]
+   ],
+   "rate": "+20%",
+   "pitch": "+15Hz"
   },
   {
    "id": "s4",
@@ -170,7 +206,9 @@
      "s": 1.946,
      "e": 2.342
     }
-   ]
+   ],
+   "rate": "+20%",
+   "pitch": "+15Hz"
   },
   {
    "id": "s5",
@@ -232,7 +270,9 @@
      "s": 2.602,
      "e": 3.133
     }
-   ]
+   ],
+   "rate": "+20%",
+   "pitch": "+15Hz"
   }
  ]
 }

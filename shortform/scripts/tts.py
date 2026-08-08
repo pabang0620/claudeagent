@@ -74,8 +74,11 @@ async def one(sid, text, out_dir, prefix, voice, rate, pitch):
                     'e': round((chunk['offset'] + chunk['duration']) / 1e7, 3),
                 })
     dur = probe(path)
-    print(f'{sid}: {dur:.3f}s / {len(words)} words', flush=True)
-    return {'id': sid, 'text': text, 'duration': round(dur, 3), 'words': words}
+    print(f'{sid}: {dur:.3f}s / {len(words)} words / rate={rate} pitch={pitch}', flush=True)
+    # rate/pitch 를 결과에도 남긴다 - 구간별 오버라이드가 실제로 어떤 값으로 호출됐는지
+    # words.json 만 보고도 감사(audit)할 수 있게 한다.
+    return {'id': sid, 'text': text, 'duration': round(dur, 3), 'words': words,
+            'rate': rate, 'pitch': pitch}
 
 
 async def run(args):
@@ -92,9 +95,14 @@ async def run(args):
     out = []
     for seg in segments:
         sid, text = seg['id'], seg['text']
+        # 구간별 rate/pitch 오버라이드. seg 에 "rate"/"pitch" 키가 있으면 그 구간만 다른
+        # 톤으로 합성한다(예: 리액션 대사는 급박하게, 설명 대사는 프로필 기본값 그대로).
+        # 키가 없으면 기존과 동일하게 전역 rate/pitch 를 쓴다 - 기본 동작은 그대로 유지된다.
+        seg_rate = seg.get('rate') or rate
+        seg_pitch = seg.get('pitch') or pitch
         for attempt in range(3):
             try:
-                out.append(await one(sid, text, args.out, args.prefix, voice, rate, pitch))
+                out.append(await one(sid, text, args.out, args.prefix, voice, seg_rate, seg_pitch))
                 break
             except Exception as exc:  # 네트워크 일시 실패 재시도
                 print(f'  retry {sid} ({attempt + 1}): {exc}', file=sys.stderr, flush=True)
