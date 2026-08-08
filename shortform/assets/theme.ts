@@ -117,14 +117,25 @@ export const CAPTION_STYLE = {
 } as const;
 
 /* ================= 채널 브랜드 =================
- * 채널명이 확정되면 CHANNEL_NAME 한 줄만 바꾸면 인트로·아웃트로·워터마크에 전부 반영된다.
- * 다른 파일에 채널명 문자열을 직접 쓰지 말 것.
+ * 한국어 채널과 영어 채널을 별도로 운영한다(2026-08-08 확정). 채널명은 언어별로 다르다.
+ * 다른 파일에 채널명 문자열을 직접 쓰지 말 것. CHANNEL_NAME_BY_LANG['ko'|'en'] 로 조회한다.
  */
-export const CHANNEL_NAME = '굼구미';
-/** 로고 뱃지 안에 들어가는 짧은 기호(1~2자). 채널명 확정 시 함께 정한다 */
-export const CHANNEL_MARK = '?';
-/** 아웃트로 기본 구독 문구 */
-export const SUBSCRIBE_TEXT = '구독하고 다음 편 보기';
+export const CHANNEL_NAME_KO = '굼구미';
+export const CHANNEL_NAME_EN = 'Whymo';
+export const CHANNEL_MARK_KO = '?';
+export const CHANNEL_MARK_EN = '?';
+export const SUBSCRIBE_TEXT_KO = '구독하고 다음 편 보기';
+export const SUBSCRIBE_TEXT_EN = 'Subscribe for more';
+
+export const CHANNEL_NAME_BY_LANG = { ko: CHANNEL_NAME_KO, en: CHANNEL_NAME_EN } as const;
+export const CHANNEL_MARK_BY_LANG = { ko: CHANNEL_MARK_KO, en: CHANNEL_MARK_EN } as const;
+export const SUBSCRIBE_TEXT_BY_LANG = { ko: SUBSCRIBE_TEXT_KO, en: SUBSCRIBE_TEXT_EN } as const;
+
+/** 하위 호환: 기존에 CHANNEL_NAME 을 참조하는 코드(Intro/Outro 기본값 등)가 깨지지 않도록 유지.
+ *  새 코드는 CHANNEL_NAME_BY_LANG[lang] 을 쓴다. */
+export const CHANNEL_NAME = CHANNEL_NAME_KO;
+export const CHANNEL_MARK = CHANNEL_MARK_KO;
+export const SUBSCRIBE_TEXT = SUBSCRIBE_TEXT_KO;
 
 /* ================= 하위 호환 별칭 =================
  * 1화 코드가 쓰던 이름. 새 코드에서는 위의 토큰을 직접 쓸 것.
