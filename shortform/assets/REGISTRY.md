@@ -114,7 +114,7 @@ import { Actor, POSES, Caption, SavannaBg, Intro, Outro, C, SW, FontLoader } fro
 | ThemedIcon | `props/ThemedIcon.tsx` | 소품 | Tabler Icons(MIT)를 우리 선굵기·색으로 렌더 | `name` `size` `color` `strokePx` `bg` `bgPad` `style` | 신규 |
 | IconBrowser | `props/ThemedIcon.tsx` | 소품 | **Studio 전용** 아이콘 탐색기 (@iconify/react API 조회). 렌더에 넣지 말 것 | `names[]` `size` | 신규 |
 | IceCream | `props/IceCream.tsx` | 소품 | 아이스크림콘 (스쿱 1~2단 + 콘 와플격자). 음식류 소재 재사용 | `width` `scoopColor` `coneColor` `stroke` `strokeWidth` `doubleScoop` `style` | general-ep01 |
-| HeadNerveDiagram | `props/HeadNerveDiagram.tsx` | 소품 | 머리 옆모습 다이어그램. 입천장·이마 두 지점을 신경선으로 잇는 설명에 재사용 (냉기·통증·신경 공유류) | `f` `width` `x` `y` `highlightMouth`(냉기+혈관펄스) `highlightForehead`(통증) `showNerve`(0~1 신경선 진행도) `signalT`(0~1 이동신호) `stroke` `fill` `style` | general-ep01 |
+| HeadNerveDiagram | `props/HeadNerveDiagram.tsx` | 소품 | 캐릭터 얼굴 오버레이 방식으로 전면 재설계, 2026-08-08. 새 얼굴 형태를 그리지 않고 BustActor + 하이라이트 오버레이로 구성 | `f` `width` `x` `y` `highlightMouth`(냉기+혈관펄스) `highlightForehead`(통증) `showNerve`(0~1 신경선 진행도) `signalT`(0~1 이동신호) `stroke` `fill` `style` | general-ep01 |
 
 ---
 

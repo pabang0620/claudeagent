@@ -133,9 +133,14 @@ export const S2Forehead: React.FC<{ f: number; locale: Locale }> = ({ f, locale 
 
 /* ---------------- S3/S4/S5 공용: 다이어그램 레이아웃 ---------------- */
 
-const DIAG_W = 780;
-const DIAG_X = (W - DIAG_W) / 2;
-const DIAG_Y = 350;
+// v3 검수에서 발견: HeadNerveDiagram 이 이제 캐릭터 얼굴을 그대로 그리기 때문에, S2 의
+// BustActor(BUST_SIZE/BUST_LEFT/BUST_TOP)와 크기·위치가 다르면 s2->s3 SceneSwitcher
+// 크로스페이드(6프레임) 동안 "같은 얼굴이 갑자기 커지거나 작아지는" 점프가 보인다.
+// 예전 옆모습 다이어그램은 캐릭터와 다른 그림이라 이 문제가 없었지만, 지금은 같은 얼굴이라
+// S2 와 완전히 같은 크기·위치로 맞춰 전환이 매끄럽게 이어지게 한다.
+const DIAG_W = BUST_SIZE;
+const DIAG_X = BUST_LEFT;
+const DIAG_Y = BUST_TOP;
 
 const DiagramScene: React.FC<{
   f: number;
@@ -175,26 +180,35 @@ export const S4Nerve: React.FC<{ f: number; lines: CaptionLine[]; frames: number
   return <DiagramScene f={f} lines={lines} highlightMouth showNerve={nerveP} />;
 };
 
-/** s5: 신호가 입천장 -> 뇌 -> 이마로 튀어 이마 통증으로 착각. 마지막에 캐릭터 컷으로 돌아온다 */
+/** s5: 신호가 입천장 -> 뇌 -> 이마로 튀어 이마 통증으로 착각. 마지막에 캐릭터 컷으로 돌아온다.
+ *
+ *  v3 검수에서 발견한 결함: 다이어그램(HeadNerveDiagram)이 이제 내부에 얼굴(BustActor idle)을
+ *  직접 그리기 때문에, 예전처럼 두 BustActor 를 겹쳐서(opacity 0~1 동시에) 크로스페이드하면
+ *  서로 다른 포즈(idle vs touchForehead)의 팔·입이 반투명 상태로 겹쳐 유령처럼 두 겹으로
+ *  보이는 결함이 생긴다. 그래서 두 레이어가 동시에 보이는 구간이 없도록 순차 전환한다 -
+ *  다이어그램이 완전히 사라진(opacity 0) 다음에야 캐릭터가 나타나기 시작한다. */
 export const S5Signal: React.FC<{ f: number; lines: CaptionLine[]; frames: number }> = ({ f, lines, frames }) => {
   const holdFrames = Math.min(34, Math.round(frames * 0.28));
   const diagramEnd = frames - holdFrames;
   const signalT = progress(f, 4, Math.max(5, diagramEnd - 8));
   const foreheadOn = signalT > 0.88;
 
-  // 캐릭터 컷으로 크로스페이드 (마지막 holdFrames 구간)
-  const charP = progress(f, diagramEnd - 10, diagramEnd + 6);
+  // 순차 전환: 다이어그램이 다 사라진 뒤에 캐릭터가 나타난다 (동시에 겹치는 구간 없음)
+  const diagramOpacity = 1 - progress(f, diagramEnd - 8, diagramEnd);
+  const charOpacity = progress(f, diagramEnd, diagramEnd + 8);
 
   return (
     <PlainBg>
-      <div style={{ opacity: 1 - charP }}>
-        <HeadNerveDiagram
-          f={f} width={DIAG_W} x={DIAG_X} y={DIAG_Y}
-          highlightMouth showNerve={1} signalT={signalT} highlightForehead={foreheadOn}
-        />
-      </div>
-      {charP > 0.001 ? (
-        <div style={{ opacity: charP }}>
+      {diagramOpacity > 0.001 ? (
+        <div style={{ opacity: diagramOpacity }}>
+          <HeadNerveDiagram
+            f={f} width={DIAG_W} x={DIAG_X} y={DIAG_Y}
+            highlightMouth showNerve={1} signalT={signalT} highlightForehead={foreheadOn}
+          />
+        </div>
+      ) : null}
+      {charOpacity > 0.001 ? (
+        <div style={{ opacity: charOpacity }}>
           <BustActor size={BUST_SIZE} left={BUST_LEFT} top={BUST_TOP} pose={POSES.touchForehead} />
         </div>
       ) : null}
