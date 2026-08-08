@@ -18,19 +18,24 @@ import { WAVE } from '../character/poses';
 import { blendPose, progress } from '../anim';
 import { Appear, Sparkles } from '../scenes/Effects';
 import { ThemedIcon } from '../props/ThemedIcon';
-import { C, CHANNEL_NAME, FONT, RADIUS, SUBSCRIBE_TEXT, SW, W } from '../theme';
+import { C, CHANNEL_NAME_BY_LANG, FONT, RADIUS, SUBSCRIBE_TEXT_BY_LANG, SW, W } from '../theme';
 
 export interface OutroProps {
   /** 다음 편 예고 문구. 매 화 바꾼다 */
   nextHint?: string;
   /** 예고 카드 위 작은 라벨 */
   nextTitle?: string;
+  /** 명시적으로 안 넘기면 lang에 따라 SUBSCRIBE_TEXT_BY_LANG에서 자동 결정 */
   subscribeText?: string;
+  /** 명시적으로 안 넘기면 lang에 따라 CHANNEL_NAME_BY_LANG에서 자동 결정 */
   channelName?: string;
   durationInFrames?: number;
   /** 어두운 배경 버전 */
   dark?: boolean;
   accent?: string;
+  /** 언어. subscribeText/channelName을 명시적으로 안 받았을 때 이 값으로 자동 전환한다.
+   *  기본값 'ko' (하위 호환 - lang을 안 넘기는 기존 호출부는 지금과 동일하게 동작) */
+  lang?: 'ko' | 'en';
 }
 
 export const OUTRO_FRAMES = 90;
@@ -38,12 +43,18 @@ export const OUTRO_FRAMES = 90;
 export const Outro: React.FC<OutroProps> = ({
   nextHint = '다음 편에서 알려줄게!',
   nextTitle = '다음 편',
-  subscribeText = SUBSCRIBE_TEXT,
-  channelName = CHANNEL_NAME,
+  subscribeText,
+  channelName,
   durationInFrames = OUTRO_FRAMES,
   dark = false,
   accent = C.coral,
+  lang = 'ko',
 }) => {
+  // destructuring 기본값은 다른 prop(lang)을 참조하지 못하므로 본문에서 resolve 한다.
+  // subscribeText/channelName을 명시적으로 넘긴 호출부는 여전히 그 값이 우선한다.
+  const resolvedSubscribeText = subscribeText ?? SUBSCRIBE_TEXT_BY_LANG[lang];
+  const resolvedChannelName = channelName ?? CHANNEL_NAME_BY_LANG[lang];
+
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
 
@@ -83,7 +94,7 @@ export const Outro: React.FC<OutroProps> = ({
           color: dark ? C.nightSoft : C.inkSoft, opacity: nameP,
         }}
       >
-        {channelName}
+        {resolvedChannelName}
       </div>
 
       {/* 다음 편 예고 카드 */}
@@ -139,7 +150,7 @@ export const Outro: React.FC<OutroProps> = ({
             <ThemedIcon name="bell" size={96} color={C.ink} strokePx={11} />
           </div>
           <div style={{ fontFamily: FONT, fontWeight: 700, fontSize: 56, color: subText }}>
-            {subscribeText}
+            {resolvedSubscribeText}
           </div>
         </div>
       ) : null}

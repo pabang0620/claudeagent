@@ -124,8 +124,12 @@ export const CHANNEL_NAME_KO = '굼구미';
 export const CHANNEL_NAME_EN = 'Whymo';
 export const CHANNEL_MARK_KO = '?';
 export const CHANNEL_MARK_EN = '?';
-export const SUBSCRIBE_TEXT_KO = '구독하고 다음 편 보기';
-export const SUBSCRIBE_TEXT_EN = 'Subscribe for more';
+/** 유튜브 쇼츠뿐 아니라 인스타 릴스에도 같은 영상을 올리므로, "구독"(유튜브 전용 용어) 단독 문구는
+ *  릴스에서 어색하다. 두 플랫폼 모두에 자연스럽게 통하는 표현을 쓴다.
+ *  ko: "구독"과 "팔로우"를 가운뎃점으로 병기(이 코드베이스가 "말투·난이도·TTS"처럼
+ *      가운뎃점 나열을 쓰는 관례를 따름). en: "follow"는 인스타·유튜브 양쪽에서 자연스러워 통일. */
+export const SUBSCRIBE_TEXT_KO = '구독·팔로우하고 다음 편 보기';
+export const SUBSCRIBE_TEXT_EN = 'Follow for more';
 
 export const CHANNEL_NAME_BY_LANG = { ko: CHANNEL_NAME_KO, en: CHANNEL_NAME_EN } as const;
 export const CHANNEL_MARK_BY_LANG = { ko: CHANNEL_MARK_KO, en: CHANNEL_MARK_EN } as const;

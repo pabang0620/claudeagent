@@ -10,6 +10,9 @@
   프로필별 톤 규칙은 `/home/lee/project/.claude/shortform/profiles/<프로필>.md` 에 있다.
   프로필이 "어두운 단색 배경"을 요구하면 새 배경을 만들지 말고 `PlainBg` 의 `top`/`bottom` 을
   어두운 토큰으로 넘긴다.
+- **현재 운영 채널(굼구미/Whymo)의 기본 프로필은 `profiles/general.md` 다.** 이 채널은 아동용/성인용으로
+  톤을 나누지 않고 프로필 하나로 한/영 양쪽 대본을 낸다(2026-08-08 확정). `kids.md`/`science.md`는
+  이 채널용이 아니라 향후 다른 톤의 채널을 만들 때 쓰는 템플릿으로 보존한다.
 
 import 는 항상 배럴에서 한다. 하위 파일 경로를 직접 쓰지 않는다.
 
@@ -131,14 +134,19 @@ import { Actor, POSES, Caption, SavannaBg, Intro, Outro, C, SW, FontLoader } fro
 
 | 자산 | 경로 | 종류 | 설명 | props | 최초 |
 |---|---|---|---|---|---|
-| Intro | `brand/Intro.tsx` | 브랜드 | 인트로 54프레임(1.8초). 캐릭터가 튀어오르며 링·반짝임, 로고 뱃지 -> 채널명 -> 밑줄 | `channelName` `mark` `tagline` `durationInFrames` `bgTop` `bgBottom` `accent` | 신규 |
-| Outro | `brand/Outro.tsx` | 브랜드 | 아웃트로 75프레임(2.5초). 다음 편 예고 카드 + 구독 유도(종) + 손 흔드는 캐릭터 | `nextHint` `nextTitle` `subscribeText` `channelName` `durationInFrames` `dark` `accent` | 신규 |
+| Intro | `brand/Intro.tsx` | 브랜드 | 인트로 54프레임(1.8초). 캐릭터가 튀어오르며 링·반짝임, 로고 뱃지 -> 채널명 -> 밑줄. `lang`으로 언어별 채널명·로고기호 자동 전환 | `channelName` `mark` `tagline` `durationInFrames` `bgTop` `bgBottom` `accent` `lang` | 신규 |
+| Outro | `brand/Outro.tsx` | 브랜드 | 아웃트로 75프레임(2.5초). 다음 편 예고 카드 + 구독 유도(종) + 손 흔드는 캐릭터. `lang`으로 언어별 채널명·구독문구 자동 전환 | `nextHint` `nextTitle` `subscribeText` `channelName` `durationInFrames` `dark` `accent` `lang` | 신규 |
 
 - `INTRO_FRAMES = 54`, `OUTRO_FRAMES = 75` 상수를 함께 export 한다. 타임라인 계산에 쓸 것.
 - **채널명은 미정이다.** `theme.ts` 의 `CHANNEL_NAME = '채널명'` 이 플레이스홀더다.
   확정되면 그 한 줄만 바꾸면 인트로·아웃트로에 동시에 반영된다. 다른 파일에 채널명 문자열을
   직접 쓰지 말 것. 로고 기호는 `CHANNEL_MARK`(현재 `?`).
 - 인트로는 2초를 넘기지 않는다. 숏폼에서 인트로가 길면 그 자리에서 이탈한다.
+- **`lang?: 'ko' | 'en'` prop (기본값 `'ko'`, 하위호환).** `channelName`/`mark`/`subscribeText`를
+  명시적으로 안 넘기면 `theme.ts`의 `CHANNEL_NAME_BY_LANG[lang]` / `CHANNEL_MARK_BY_LANG[lang]` /
+  `SUBSCRIBE_TEXT_BY_LANG[lang]`에서 자동으로 그 언어 값을 쓴다. 명시적으로 넘긴 값은 여전히 우선한다.
+  builder가 언어별 렌더 시 `lang`을 안 넘기면 영어 영상에도 한국어 채널명이 나오므로,
+  두 언어를 각각 렌더할 때 반드시 `lang="ko"` / `lang="en"`을 명시해서 넘긴다.
 - 아웃트로의 `nextHint` 는 매 화 바뀌는 값이므로 반드시 props 로 넘긴다.
 
 ---

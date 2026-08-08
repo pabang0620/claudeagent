@@ -21,17 +21,20 @@ const Gap: React.FC = () => (
   </AbsoluteFill>
 );
 
-export const BrandTest: React.FC<{ nextHint?: string }> = ({ nextHint = '다음 편엔 이 친구 이야기!' }) => (
+export const BrandTest: React.FC<{ nextHint?: string; lang?: 'ko' | 'en' }> = ({
+  nextHint = '다음 편엔 이 친구 이야기!',
+  lang = 'ko',
+}) => (
   <AbsoluteFill>
     <FontLoader />
     <Sequence from={0} durationInFrames={INTRO_FRAMES} layout="none">
-      <Intro />
+      <Intro lang={lang} />
     </Sequence>
     <Sequence from={INTRO_FRAMES} durationInFrames={GAP_FRAMES} layout="none">
       <Gap />
     </Sequence>
     <Sequence from={INTRO_FRAMES + GAP_FRAMES} durationInFrames={OUTRO_FRAMES} layout="none">
-      <Outro nextHint={nextHint} />
+      <Outro nextHint={nextHint} lang={lang} />
     </Sequence>
   </AbsoluteFill>
 );

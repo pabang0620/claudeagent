@@ -7,7 +7,7 @@
  *  끝부분이 통째로 정지 화면이 된다. 상수를 바꾸면 링/뱃지/채널명/밑줄/태그라인
  *  타이밍과 마지막 반짝임(shineT) 구간을 같이 재배치할 것.
  *
- *  채널명은 theme.CHANNEL_NAME 에서 온다. 확정되면 그 한 줄만 바꾸면 된다.
+ *  채널명은 theme.CHANNEL_NAME_BY_LANG[lang] 에서 온다. 언어별 채널명을 바꾸려면 theme.ts 한 곳만 고치면 된다.
  *  (여기에 채널명 문자열을 직접 쓰지 말 것)
  */
 import React from 'react';
@@ -17,11 +17,12 @@ import { Actor } from '../character/Actor';
 import { CHEER, IDLE } from '../character/poses';
 import { blendPose, progress } from '../anim';
 import { Sparkles } from '../scenes/Effects';
-import { C, CHANNEL_MARK, CHANNEL_NAME, FONT, SW, W } from '../theme';
+import { C, CHANNEL_MARK_BY_LANG, CHANNEL_NAME_BY_LANG, FONT, SW, W } from '../theme';
 
 export interface IntroProps {
+  /** 명시적으로 안 넘기면 lang에 따라 CHANNEL_NAME_BY_LANG에서 자동 결정 */
   channelName?: string;
-  /** 로고 뱃지 안 기호 */
+  /** 로고 뱃지 안 기호. 명시적으로 안 넘기면 lang에 따라 CHANNEL_MARK_BY_LANG에서 자동 결정 */
   mark?: string;
   /** 채널명 아래 한 줄 (없으면 표시 안 함) */
   tagline?: string;
@@ -29,15 +30,24 @@ export interface IntroProps {
   bgTop?: string;
   bgBottom?: string;
   accent?: string;
+  /** 언어. channelName/mark를 명시적으로 안 받았을 때 이 값으로 자동 전환한다.
+   *  기본값 'ko' (하위 호환 - lang을 안 넘기는 기존 호출부는 지금과 동일하게 동작) */
+  lang?: 'ko' | 'en';
 }
 
 export const INTRO_FRAMES = 69;
 
 export const Intro: React.FC<IntroProps> = ({
-  channelName = CHANNEL_NAME, mark = CHANNEL_MARK, tagline,
+  channelName, mark, tagline,
   durationInFrames = INTRO_FRAMES,
   bgTop = C.sky, bgBottom = C.paper, accent = C.coral,
+  lang = 'ko',
 }) => {
+  // destructuring 기본값은 다른 prop(lang)을 참조하지 못하므로 본문에서 resolve 한다.
+  // channelName/mark를 명시적으로 넘긴 호출부는 여전히 그 값이 우선한다.
+  const resolvedChannelName = channelName ?? CHANNEL_NAME_BY_LANG[lang];
+  const resolvedMark = mark ?? CHANNEL_MARK_BY_LANG[lang];
+
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
 
@@ -119,7 +129,7 @@ export const Intro: React.FC<IntroProps> = ({
             transform: `scale(${badgeP * badgeIdle}) rotate(${(1 - badgeP) * -24}deg)`,
           }}
         >
-          {mark}
+          {resolvedMark}
         </div>
       ) : null}
 
@@ -134,7 +144,7 @@ export const Intro: React.FC<IntroProps> = ({
             opacity: Math.min(1, nameP * 1.6),
           }}
         >
-          {channelName}
+          {resolvedChannelName}
         </div>
       ) : null}
 

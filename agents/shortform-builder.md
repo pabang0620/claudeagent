@@ -169,6 +169,8 @@ const eyeClosed = t < BLINK_FRAMES ? Math.sin((t / BLINK_FRAMES) * Math.PI) : 0;
 
 인트로·아웃트로(`assets/brand/`)는 본편 앞뒤에 자동으로 붙인다. 범퍼 길이는 위 상한 계산에서 제외한다.
 
+**`Intro`/`Outro`를 붙일 때 반드시 `lang` prop을 그 언어로 명시해서 넘긴다** (`<Intro lang={locale} />`, `<Outro lang={locale} ... />`). `channelName`/`mark`/`subscribeText`를 직접 안 넘기면 이 값들이 `lang`에 따라 `theme.ts`의 `CHANNEL_NAME_BY_LANG`/`CHANNEL_MARK_BY_LANG`/`SUBSCRIBE_TEXT_BY_LANG`에서 자동으로 정해진다. `lang` 기본값은 `'ko'`이므로, 영어판 렌더에서 `lang="en"`을 빠뜨리면 영어 영상에 한국어 채널명("굼구미")이 그대로 나오는 결함이 재현된다.
+
 ---
 
 ## 원칙 5: 렌더 후 육안 검수 (생략 금지, 체크박스만 채우고 끝내지 않는다)
@@ -292,6 +294,7 @@ episodes/<profile>-<slug>/
     index.ts                 registerRoot
     Root.tsx                 Composition 등록 (locale prop으로 ko/en 두 개 등록)
     Episode.tsx               본편 조립 (Intro + 장면들 + Outro). locale prop을 받는다
+                              (Intro/Outro에는 locale을 그대로 lang prop으로 넘긴다 - 원칙 4 참고)
     scenes.tsx                이 화 전용 장면 (재사용 가능한 것은 assets/로 승격 후 여기서는 import만)
     strings.ts                 언어별 화면 문구 테이블 { ko, en } + 자막 줄 나누기 규칙
   package.json / remotion.config.ts
