@@ -137,10 +137,10 @@ import { Actor, POSES, Caption, SavannaBg, Intro, Outro, C, SW, FontLoader } fro
 
 | 자산 | 경로 | 종류 | 설명 | props | 최초 |
 |---|---|---|---|---|---|
-| Intro | `brand/Intro.tsx` | 브랜드 | 인트로 54프레임(1.8초). 캐릭터가 튀어오르며 링·반짝임, 로고 뱃지 -> 채널명 -> 밑줄. `lang`으로 언어별 채널명·로고기호 자동 전환 | `channelName` `mark` `tagline` `durationInFrames` `bgTop` `bgBottom` `accent` `lang` | 신규 |
-| Outro | `brand/Outro.tsx` | 브랜드 | 아웃트로 75프레임(2.5초). 다음 편 예고 카드 + 구독 유도(종) + 손 흔드는 캐릭터. `lang`으로 언어별 채널명·구독문구 자동 전환 | `nextHint` `nextTitle` `subscribeText` `channelName` `durationInFrames` `dark` `accent` `lang` | 신규 |
+| Intro | `brand/Intro.tsx` | 브랜드 | 인트로 69프레임(2.3초). 캐릭터가 튀어오르며 링·반짝임, 로고 뱃지 -> 채널명 -> 밑줄. `lang`으로 언어별 채널명·로고기호 자동 전환. 로고 뱃지가 팝인하는 프레임(12)에 맞춰 `audio/intro_ding.mp3` 재생(2026-08-08 추가, 코드에 내장돼 있어 별도 props 없음) | `channelName` `mark` `tagline` `durationInFrames` `bgTop` `bgBottom` `accent` `lang` | 신규 |
+| Outro | `brand/Outro.tsx` | 브랜드 | 아웃트로 90프레임(3.0초). 다음 편 예고 카드 + 구독 유도(종) + 손 흔드는 캐릭터. `lang`으로 언어별 채널명·구독문구 자동 전환. 구독 벨이 팝인하는 프레임(21)에 맞춰 `audio/outro_ding.mp3` 재생(2026-08-08 추가, 코드에 내장돼 있어 별도 props 없음) | `nextHint` `nextTitle` `subscribeText` `channelName` `durationInFrames` `dark` `accent` `lang` | 신규 |
 
-- `INTRO_FRAMES = 54`, `OUTRO_FRAMES = 75` 상수를 함께 export 한다. 타임라인 계산에 쓸 것.
+- `INTRO_FRAMES = 69`, `OUTRO_FRAMES = 90` 상수를 함께 export 한다. 타임라인 계산에 쓸 것.
 - **채널명은 미정이다.** `theme.ts` 의 `CHANNEL_NAME = '채널명'` 이 플레이스홀더다.
   확정되면 그 한 줄만 바꾸면 인트로·아웃트로에 동시에 반영된다. 다른 파일에 채널명 문자열을
   직접 쓰지 말 것. 로고 기호는 `CHANNEL_MARK`(현재 `?`).
@@ -154,7 +154,33 @@ import { Actor, POSES, Caption, SavannaBg, Intro, Outro, C, SW, FontLoader } fro
 
 ---
 
-## 7. 공용 스크립트 (`scripts/`)
+## 7. 오디오 (`assets/audio/`) - 코드 합성 효과음, 모든 프로필 공용
+
+전부 **ffmpeg lavfi 필터(`anoisesrc`/`aevalsrc`)로 코드 합성**했다. 외부 음원(Freesound 등)은
+상업 이용 라이선스 제약이 있어 쓰지 않는다(2026-08-08 조사 완결). 새 효과음이 필요하면 이 방식을
+그대로 따른다 - 노이즈 버스트 계열(씹기·타격·마찰)은 `anoisesrc` + `highpass`/`lowpass` + `afade`,
+톤 계열(딩·삑·스윕)은 `aevalsrc` 의 `sin()` 표현식으로 만든다. 전부 mono 44.1kHz mp3, 피크
+-1~-3dBFS 대(클리핑 방지, 기존 딩 사운드 실측 피크 -3.1dB 기준에 맞춤), 길이 0.2~0.5초 내외로
+짧게 유지한다 - 내레이션·자막을 방해하면 안 된다.
+
+**렌더 시 주의**: `staticFile()` 은 각 에피소드의 `public/audio/` 를 기준으로 찾는다. 이 표의
+`assets/audio/` 는 원본(레지스트리) 보관 위치이고, 실제 렌더가 파일을 찾으려면 에피소드별
+`public/audio/` 에 **복사본**을 넣어야 한다(폰트가 `public/fonts/` 에 복사되는 것과 같은 패턴).
+
+| 자산 | 경로(원본) | 종류 | 설명 | 길이 | 합성 방식 | 재사용 | 최초 |
+|---|---|---|---|---|---|---|---|
+| intro_ding | `audio/intro_ding.mp3` | 효과음 | 인트로 로고 뱃지 팝인 사운드. 후보 4종(a~d) 중 사용자가 b 선택, 정식 채택 | 0.28초 | ffmpeg `sine` 계열 신스(제작 스크립트는 보존 안 됨, encoder 메타데이터로 ffmpeg lavfi 합성 확인) | 모든 화 공용 브랜드 자산(Intro.tsx 에 내장) | ep01(후보 제작) / 2026-08-08 확정 반영 |
+| outro_ding | `audio/outro_ding.mp3` | 효과음 | 아웃트로 구독 벨 팝인 사운드. 후보 3종(a~c) 중 사용자가 b 선택, 정식 채택 | 0.32초 | 위와 동일 | 모든 화 공용 브랜드 자산(Outro.tsx 에 내장) | ep01(후보 제작) / 2026-08-08 확정 반영 |
+| bite | `audio/bite.mp3` | 효과음 | "아삭" 크런치. 흰 노이즈 버스트 2개를 90ms 간격으로 겹쳐 "씹는" 느낌을 냄 | 0.23초 | `anoisesrc=color=white` 2개(대역 1000~6500Hz, 1400~7500Hz) + `afade` 짧은 어택/디케이 + `adelay` 90ms 오프셋 + `amix` | **음식·씹기 소재 전반 재사용 가능** (과자·사과 등 다른 화에서도 그대로 쓸 수 있다) | general-ep01 |
+| cold_zing | `audio/cold_zing.mp3` | 효과음 | 날카로운 "찌릿"한 시린/통증 느낌. 하이피치 상승 스윕 2겹(크리스탈 느낌) | 0.30초 | `aevalsrc` 선형 처프(chirp) `sin(2*PI*(f0*t+k*t^2))*exp(-decay*t)` 2개(3200->16200Hz, 4700->19700Hz 근사) 를 `amix`, 끝에 `afade` out | **순간적 통증·놀람 리액션 전반 재사용 가능** (감전·따끔거림 등 다른 화 리액션 연출에도 적용 가능) | general-ep01 |
+
+효과음 볼륨은 내레이션(narration `volume=1.6`)보다 낮게(`volume=0.7~0.9`)두어 보조적인 느낌을
+유지한다. 정확한 청취 판단(듣기 좋은지)은 사용자 몫이다 - Claude 는 ffprobe/volumedetect 로
+"의도한 프레임에 정확히 재생되는지", "피크가 내레이션을 넘지 않는지"만 객관적으로 확인한다.
+
+---
+
+## 8. 공용 스크립트 (`scripts/`)
 
 | 스크립트 | 설명 | 사용 |
 |---|---|---|

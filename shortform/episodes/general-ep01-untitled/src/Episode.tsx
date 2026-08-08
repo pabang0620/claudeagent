@@ -24,6 +24,17 @@ const WORDS_BY_LANG: Record<Locale, WordsFile> = {
 const SILENT_DURATIONS: Record<string, number> = { s1: 2.0, s2: 2.5 };
 const NARRATED_PAD = 0.2;
 
+/** 효과음 타이밍. s1/s2 는 언어 무관 고정 길이(SILENT_DURATIONS)라 starts[0]/starts[1] 이
+ *  ko/en 두 로케일 모두 항상 같은 값(0, 60)이 되므로 이 상수도 언어 공용으로 고정할 수 있다.
+ *
+ *  - BITE_PEAK_LOCAL: scenes.tsx 의 S1Bite `bite = sin(min(1,progress(f,12,34))*PI)` 가
+ *    최고점(진폭 1)을 찍는 로컬 프레임. progress(f,12,34) 의 중간값 0.5 지점 = 12+(34-12)*0.5 = 23.
+ *    입이 가장 크게 벌어져 "베어 무는" 순간과 정확히 맞춘다.
+ *  - COLD_ZING_AT_S2_START: s2(이마 짚는 리액션) 로컬 프레임 0, 즉 그 장면이 시작하는 순간. */
+const BITE_PEAK_LOCAL = 23;
+const BITE_SFX_FRAMES = 10; // bite.mp3 실측 0.23초(30fps 약 6.9프레임) + 여유
+const COLD_ZING_SFX_FRAMES = 12; // cold_zing.mp3 실측 0.30초(30fps 9프레임) + 여유
+
 export interface EpisodeProps {
   locale: Locale;
 }
@@ -87,6 +98,18 @@ export const Episode: React.FC<EpisodeProps> = ({ locale }) => {
             <Audio src={staticFile(`audio/${locale}_${id}.mp3`)} volume={1.6} />
           </Sequence>
         ))}
+
+        {/* s1: 아이스크림을 크게 베어 무는 순간(bite 애니메이션 피크) - "아삭" 효과음.
+         *  언어 무관 공용 자산(assets/audio/bite.mp3). */}
+        <Sequence from={starts[0] + BITE_PEAK_LOCAL} durationInFrames={BITE_SFX_FRAMES} layout="none">
+          <Audio src={staticFile('audio/bite.mp3')} volume={0.9} />
+        </Sequence>
+
+        {/* s2 시작: 이마를 짚으며 놀라는 리액션 - "찌릿"한 시린 느낌 효과음.
+         *  언어 무관 공용 자산(assets/audio/cold_zing.mp3). */}
+        <Sequence from={starts[1]} durationInFrames={COLD_ZING_SFX_FRAMES} layout="none">
+          <Audio src={staticFile('audio/cold_zing.mp3')} volume={0.9} />
+        </Sequence>
       </Sequence>
 
       <Sequence from={INTRO_FRAMES + mainTotal} durationInFrames={OUTRO_FRAMES} layout="none">

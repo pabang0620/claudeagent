@@ -178,3 +178,121 @@ forehead") 1개 키. 나머지 화면 텍스트는 자막(어절 타임스탬프
 - 신규 자산: `assets/props/IceCream.tsx`, `assets/props/HeadNerveDiagram.tsx`,
   `assets/character/poses.ts`(`touchForehead` 추가) — 전부 `assets/REGISTRY.md` 등록 완료
 - 소스: `episodes/general-ep01-untitled/src/{index.ts,Root.tsx,Episode.tsx,scenes.tsx,strings.ts}`
+
+---
+
+## 6. 사운드 추가 (v6, 2026-08-08) - 영상·자막·대본은 v5와 동일, 소리만 추가
+
+기존 v5까지는 내레이션 음성만 있고 효과음이 전혀 없었다("아이스크림 먹는 소리·시린 소리가
+없으니 소리를 꺼두면 뭘 하는지 모르겠다"는 피드백). 이번 작업은 화면 애니메이션·자막 타이밍·
+대본 문장을 전혀 건드리지 않고 사운드만 추가했다.
+
+### 6-1. 인트로/아웃트로 딩 사운드 확정
+
+- 사용자가 후보 7개 중 `intro_ding_b.mp3` / `outro_ding_b.mp3` 를 최종 선택.
+- `assets/audio/candidates/` 에서 `assets/audio/intro_ding.mp3` / `assets/audio/outro_ding.mp3` 로
+  이동(정식 자산 위치 승격). 나머지 후보 5개(intro a/c/d, outro a/c)는 `candidates/` 에 그대로 보존.
+- `assets/brand/Intro.tsx`: 로고 뱃지가 팝인하는 spring 원점 프레임(`badgeP`, `frame: f - 12`)과
+  정확히 같은 프레임(12)에 `<Audio src={staticFile('audio/intro_ding.mp3')} volume={0.7} />` 를
+  `Sequence from={12} durationInFrames={15}` 로 삽입.
+- `assets/brand/Outro.tsx`: 구독 벨이 팝인하는 spring 원점 프레임(`subP`, `frame: f - 21`)과 같은
+  프레임(21)에 `<Audio src={staticFile('audio/outro_ding.mp3')} volume={0.7} />` 를
+  `Sequence from={21} durationInFrames={16}` 로 삽입.
+- REGISTRY 표의 Intro/Outro 행도 실제 프레임 수(69F/2.3초, 90F/3.0초 - 기존 표는 54F/75F로 낡아
+  있었다)로 같이 바로잡았다.
+
+### 6-2. 신규 효과음 2종 - 코드 합성(ffmpeg lavfi), 외부 소스 미사용
+
+기존 딩 사운드의 mp3 메타데이터(`encoder: Lavf62.3.100`, mono 44.1kHz)로 미루어 ffmpeg lavfi
+신스로 만들어진 것으로 판단하고 같은 방식을 그대로 따랐다. 제작에 쓴 원본 생성 스크립트는
+보존되어 있지 않아(후보만 남아 있었음), 이번엔 아래 필터 체인을 새로 구성해 톤을 맞췄다.
+
+- **`bite.mp3`** ("아삭" 크런치, 0.23초): `anoisesrc=color=white` 로 만든 흰 노이즈 버스트 2개를
+  각각 다른 대역(1000~6500Hz / 1400~7500Hz)으로 필터링하고 90ms 간격(`adelay`)으로 겹쳐(`amix`)
+  "씹는" 느낌의 이중 타격음을 만들었다. 각 버스트는 `afade` 로 짧은 어택(4ms)·빠른 디케이
+  (70~90ms)를 줘 타격감을 냈다.
+- **`cold_zing.mp3`** ("찌릿"한 시린 느낌, 0.30초): `aevalsrc` 표현식으로 선형 처프(chirp) 2개
+  (약 3200->16200Hz, 4700->19700Hz)를 만들고 `exp(-decay*t)` 로 빠르게 감쇠시켜 "크리스탈이
+  튕기는" 듯한 하이피치 스윕을 얻었다. 두 스윕을 `amix` 로 겹쳐 배음처럼 들리게 하고 끝에
+  `afade` out.
+- 게인은 기존 딩 사운드의 실측 피크(-3.1dB)에 맞춰 조정했다. 최종 피크: bite -2.4dB, cold_zing
+  -1.2dB (클리핑 없음, 볼륨 검증은 6-4 참고).
+- 저장 위치: `assets/audio/bite.mp3`, `assets/audio/cold_zing.mp3`.
+
+### 6-3. Episode.tsx 배치 (언어 무관 공용 타이밍)
+
+s1(아이스크림 한입)·s2(이마 찌릿)는 `SILENT_DURATIONS`(각 2.0초/2.5초)로 고정된 무성 연출
+구간이라 `starts[0]`/`starts[1]` 이 ko/en 두 로케일 모두 항상 0/60프레임으로 동일하다. 따라서
+이 두 효과음의 배치 프레임도 언어와 무관하게 하나의 상수로 고정할 수 있었다.
+
+- **bite.mp3**: `scenes.tsx` 의 `S1Bite` 애니메이션 `bite = sin(min(1,progress(f,12,34))*PI)` 가
+  최고점(진폭 1)을 찍는 로컬 프레임 23(`progress(f,12,34)` 의 중간값 0.5 지점 = 12+(34-12)*0.5)에
+  맞춰 재생. 절대 프레임 = `INTRO_FRAMES(69) + starts[0](0) + 23 = 92` (2.9~3.4초 구간에서 재생,
+  ko/en 공통).
+- **cold_zing.mp3**: s2 장면 시작 프레임(`starts[1]`)에 맞춰 재생. 절대 프레임 =
+  `INTRO_FRAMES(69) + starts[1](60) = 129` (4.15~4.55초 구간, ko/en 공통).
+- 두 `<Audio>` 를 `Sequence`(from/durationInFrames)로 감싸 narratedIds(s3~s5) 오디오 옆에 추가.
+  볼륨 0.9(내레이션 1.6보다 낮게 - 보조적인 느낌 유지).
+
+### 6-4. 렌더 이슈: staticFile() 이 에피소드 public/ 을 찾지 못함 (해결)
+
+`assets/audio/*.mp3` 에만 파일을 두고 렌더했더니 `Error while downloading .../public/audio/
+intro_ding.mp3: 404` 로 실패했다. 원인: Remotion 의 `staticFile()` 은 **렌더 시점의
+public 디렉토리**(기본값은 Remotion root의 `public/`, 이번 경우 `--public-dir` 로 명시한
+`episodes/general-ep01-untitled/public/`)를 기준으로 찾지, `assets/audio/`(레지스트리 원본
+보관 위치)를 보지 않는다. 폰트가 `public/fonts/` 에 복사돼야 하는 것과 같은 패턴이다.
+`assets/audio/{intro_ding,outro_ding,bite,cold_zing}.mp3` 4개를
+`episodes/general-ep01-untitled/public/audio/` 에 복사한 뒤 재렌더해 해결했다. 이 규칙을
+REGISTRY.md 7절(오디오)에 명시해뒀다.
+
+또한 이번 렌더는 `npx remotion render --public-dir=episodes/general-ep01-untitled/public
+episodes/general-ep01-untitled/src/index.ts <CompositionId> <출력경로>` 형태로
+`shortform` 루트(`package.json`/`remotion.config.ts` 위치)에서 실행했다 - Remotion 은 entry
+파일 경로와 무관하게 "Remotion root"를 package.json 이 있는 디렉토리로 고정하고, 그 root 의
+`public/` 을 기본 public 디렉토리로 삼기 때문에 `--public-dir` 명시가 필요했다.
+
+### 6-5. 오디오 트랙 객관적 검증 (ko/en 동일 결과 - 언어 무관 타이밍이므로)
+
+**Claude 는 소리를 들을 수 없으므로 "잘 들린다"는 청취 판단을 하지 않았다.** 아래는 ffprobe/
+ffmpeg 로 확인 가능한 객관적 수치만이다.
+
+- **오디오 트랙 존재**: `ffprobe` 로 ko/en v6 mp4 모두 `Stream #0:1: Audio: aac (LC), 48000 Hz,
+  stereo` 확인. v2(사운드 없음) 대비 오디오 트랙 자체는 이전에도 있었지만(내레이션), 이번엔
+  효과음 4개가 추가로 섞여 들어간 트랙이다.
+- **타이밍 정확도**: `ffmpeg ... -af volumedetect` 로 각 효과음 예상 구간(±0.15~0.2초 창)과
+  아무 소리도 없어야 할 기준 구간(s1 중간, 1.3~1.6초)을 대조했다.
+  - 기준(무음) 구간: mean/max **-91.0dB** (사실상 디지털 무음)
+  - 인트로 딩(0.30~0.65초): mean -22.5dB / max **-9.2dB**
+  - bite(2.95~3.30초): mean -22.5dB / max **-6.9dB**
+  - cold_zing(4.15~4.50초): mean -21.0dB / max **-4.9dB**
+  - 아웃트로 딩(ko 21.75~22.10초 / en 22.85~23.20초, `INTRO_FRAMES+mainTotal+21` 프레임 기준
+    언어별로 절대시각만 다름): mean -21.9~-22.0dB / max **-9.2dB**
+  - ko/en 두 mp4 모두 동일한 패턴(수치까지 거의 동일) - 효과음이 언어 무관 공용 타이밍이라는
+    설계가 그대로 반영됐음을 확인.
+- **내레이션 대비 볼륨**: 전체 트랙 `loudnorm=print_format=summary` 로 Input True Peak 확인 -
+  ko v6 **-2.6dBTP**, en v6 **-2.6dBTP** (v2 문서상 나레이션 True Peak 값과 동일). 효과음 4개의
+  개별 피크(-9.2~-4.9dB)가 이 True Peak 보다 전부 낮으므로, 효과음이 내레이션 피크를 넘어서지
+  않는다 - 효과음이 내레이션을 덮지 않는다는 뜻이다.
+- Input Integrated(전체 평균 라우드니스): ko v6 -14.3 LUFS(참고: v2 -13.7 LUFS), en v6 -16.6
+  LUFS(참고: v2 -16.3 LUFS). 0.3~0.6 LU 수준의 미세한 변화로, 효과음 4개(전부 합쳐 1초 남짓)가
+  24~25초 트랙 평균에 주는 영향은 크지 않다고 판단했다.
+- **정확한 청취 판단(소리가 자연스러운지·거슬리지 않는지)은 사용자 몫으로 남긴다.**
+
+### 6-6. 화면(영상) 검수 - v5와 동일해야 하므로 가볍게만 확인
+
+Episode.tsx/Intro.tsx/Outro.tsx 변경분은 전부 `<Audio>` `<Sequence>` 추가뿐이고 기존 시각 요소의
+좌표·타이밍·JSX 는 하나도 건드리지 않았다. `npx tsc --noEmit` 클린 통과 확인 후, 대표 프레임
+4장(인트로 뱃지 등장 직후 f020, s1 bite 피크 f092, s2 시작 f129, 아웃트로 벨 등장 직후 f679(ko))
+을 ko/en 각각 뽑아 육안 확인 - 인트로 로고·"이마가 찌릿" 라벨·아이스크림 콘·아웃트로 다음편
+카드가 전부 정상 렌더됐고 깨짐·잔상 없음. s2 시작 프레임(f129)에서 S1의 아이스크림이 여전히
+보이는 것은 v2 검수에서 이미 "오탐 배제"로 확인된 `SceneSwitcher` 6프레임 크로스페이드의
+의도된 동작(나가는 장면이 조금 더 그려짐)이라 재확인만 하고 결함으로 잡지 않았다.
+
+### 6-7. 최종 산출물 (v6)
+
+- **한국어 mp4**: `/home/lee/project/.claude/shortform/episodes/general-ep01-untitled/out/episode-ko-v6.mp4` (24.28초)
+- **영어 mp4**: `/home/lee/project/.claude/shortform/episodes/general-ep01-untitled/out/episode-en-v6.mp4` (25.39초)
+- 신규 공용 자산: `assets/audio/{intro_ding,outro_ding,bite,cold_zing}.mp3` - `assets/REGISTRY.md`
+  7절에 등록 완료.
+- **`shorts/ko`·`shorts/en` 배포함은 이번엔 갱신하지 않았다.** 사용자가 v6 사운드를 직접 듣고
+  확인한 뒤 승인하면 그때 배포 사본을 갱신한다.

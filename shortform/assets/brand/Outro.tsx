@@ -10,7 +10,7 @@
  *  기본은 밝은 배경이다. 본편 마지막 장면이 어두우면 dark 를 켜서 이어 붙인다.
  */
 import React from 'react';
-import { AbsoluteFill, spring, useCurrentFrame, useVideoConfig } from 'remotion';
+import { AbsoluteFill, Audio, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig } from 'remotion';
 import { PlainBg } from '../backgrounds/PlainBg';
 import { NightSkyBg } from '../backgrounds/NightSkyBg';
 import { Actor } from '../character/Actor';
@@ -19,6 +19,12 @@ import { blendPose, progress } from '../anim';
 import { Appear, Sparkles } from '../scenes/Effects';
 import { ThemedIcon } from '../props/ThemedIcon';
 import { C, CHANNEL_NAME_BY_LANG, FONT, RADIUS, SUBSCRIBE_TEXT_BY_LANG, SW, W } from '../theme';
+
+// 구독 벨(로고 역할) 팝인 사운드. 아래 subFadeOpacity 가 시작하는 프레임(progress(f, 21, 33))과
+// 정확히 같은 지점에서 울리도록 이 상수를 그 시작 프레임과 함께 맞춘다.
+const DING_AT = 21;
+// 원본(assets/audio/outro_ding.mp3) 실측 0.32초(30fps 기준 약 9.6프레임)에 여유를 더했다.
+const DING_FRAMES = 16;
 
 export interface OutroProps {
   /** 다음 편 예고 문구. 매 화 바꾼다 */
@@ -64,7 +70,12 @@ export const Outro: React.FC<OutroProps> = ({
 
   const charP = spring({ frame: f, fps, config: { damping: 13, mass: 0.7, stiffness: 150 } });
   const cardP = spring({ frame: f - 7, fps, config: { damping: 14, mass: 0.7, stiffness: 130 } });
-  const subP = spring({ frame: f - 21, fps, config: { damping: 10, mass: 0.5, stiffness: 170 } });
+  // 구독 벨 등장은 스프링 팝인(오버슈트) 대신 opacity + 아주 미세한 위치 이동만 쓴다
+  // (인트로 로고 뱃지와 같은 fade_minimal 톤 - out/intro-style-compare/ 참고).
+  // 종이 딸랑거리며 흔들리는 rotate(아래 bell div 의 transform)는 여기에 영향받지 않는다 -
+  // 그건 물리적으로 종이 울리는 표현이라 별도 프레임 함수로 유지한다.
+  const subFadeOpacity = progress(f, 21, 33);
+  const subFadeSlide = (1 - progress(f, 21, 35)) * 14; // 14px 위에서 살짝 내려앉는다
   const nameP = progress(f, 34, 50);
   // 반짝임을 뒤까지 길게 끌어 페이드 직전까지 화면이 멈추지 않게 한다
   const sparkT = progress(f, 22, 74);
@@ -85,6 +96,11 @@ export const Outro: React.FC<OutroProps> = ({
       {dark
         ? <NightSkyBg stars={46} frame={f} moon={null} horizon={null} />
         : <PlainBg top={C.sky} bottom={C.paper} ground={null} />}
+
+      {/* 구독 벨이 fade-in 을 시작하는 프레임(subFadeOpacity 의 시작점, DING_AT)에 맞춰 "딩" 사운드 */}
+      <Sequence from={DING_AT} durationInFrames={DING_FRAMES} layout="none">
+        <Audio src={staticFile('audio/outro_ding.mp3')} volume={0.7} />
+      </Sequence>
 
       {/* 채널명 (작게, 위쪽) */}
       <div
@@ -126,14 +142,14 @@ export const Outro: React.FC<OutroProps> = ({
         </div>
       </Appear>
 
-      {/* 구독 유도 */}
-      {subP > 0.001 ? (
+      {/* 구독 유도 - fade_minimal: opacity + 미세한 하강만, 스프링 팝인 없음 */}
+      {subFadeOpacity > 0.001 ? (
         <div
           style={{
             position: 'absolute', left: 0, right: 0, top: 840,
             display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 24,
-            opacity: Math.min(1, subP * 1.6),
-            transform: `translateY(${(1 - subP) * 40}px) scale(${0.84 + 0.16 * subP})`,
+            opacity: subFadeOpacity,
+            transform: `translateY(${subFadeSlide}px)`,
           }}
         >
           <div

@@ -11,13 +11,19 @@
  *  (여기에 채널명 문자열을 직접 쓰지 말 것)
  */
 import React from 'react';
-import { AbsoluteFill, spring, useCurrentFrame, useVideoConfig } from 'remotion';
+import { AbsoluteFill, Audio, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig } from 'remotion';
 import { PlainBg } from '../backgrounds/PlainBg';
 import { Actor } from '../character/Actor';
 import { CHEER, IDLE } from '../character/poses';
 import { blendPose, progress } from '../anim';
 import { Sparkles } from '../scenes/Effects';
 import { C, CHANNEL_MARK_BY_LANG, CHANNEL_NAME_BY_LANG, FONT, SW, W } from '../theme';
+
+// 로고 뱃지 팝인 사운드. 뱃지 fade 가 시작하는 프레임(아래 fadeOpacity, progress(f, 12, 24))과
+// 정확히 같은 지점에서 울리도록 이 상수를 fadeOpacity 의 시작 프레임과 함께 맞춘다.
+const DING_AT = 12;
+// 원본(assets/audio/intro_ding.mp3) 실측 0.28초(30fps 기준 약 8.4프레임)에 여유를 더했다.
+const DING_FRAMES = 15;
 
 export interface IntroProps {
   /** 명시적으로 안 넘기면 lang에 따라 CHANNEL_NAME_BY_LANG에서 자동 결정 */
@@ -61,7 +67,10 @@ export const Intro: React.FC<IntroProps> = ({
   const burst2 = progress(f, 6, 28);
 
   // 로고 뱃지 -> 채널명 -> 밑줄 -> 태그라인 순서로 들어온다
-  const badgeP = spring({ frame: f - 12, fps, config: { damping: 10, mass: 0.5, stiffness: 190 } });
+  // 뱃지 등장은 스프링 팝인(회전+오버슈트) 대신 opacity + 아주 미세한 위치 이동만 쓴다
+  // (fade_minimal, 4후보 비교 확정 - out/intro-style-compare/ 참고)
+  const fadeOpacity = progress(f, 12, 24);
+  const fadeSlide = (1 - progress(f, 12, 26)) * 14; // 14px 위에서 살짝 내려앉는다
   const nameP = spring({ frame: f - 19, fps, config: { damping: 13, mass: 0.6, stiffness: 150 } });
   const barP = progress(f, 27, 41);
   const tagP = progress(f, 34, 46);
@@ -91,6 +100,11 @@ export const Intro: React.FC<IntroProps> = ({
     <AbsoluteFill>
       <PlainBg top={bgTop} bottom={bgBottom} ground={null} />
 
+      {/* 로고 뱃지가 fade-in 을 시작하는 프레임(fadeOpacity 의 시작점, DING_AT)에 맞춰 "딩" 사운드 */}
+      <Sequence from={DING_AT} durationInFrames={DING_FRAMES} layout="none">
+        <Audio src={staticFile('audio/intro_ding.mp3')} volume={0.7} />
+      </Sequence>
+
       <svg width={W} height={1920} style={{ position: 'absolute', left: 0, top: 0 }}>
         {ring(burst, 60, accent, 26)}
         {ring(burst2, 40, C.gold, 20)}
@@ -117,8 +131,8 @@ export const Intro: React.FC<IntroProps> = ({
         <Sparkles box={{ x: CX - 380, y: 420, w: 760, h: 560 }} t={burst} scale={1.15} />
       ) : null}
 
-      {/* 로고 뱃지 */}
-      {badgeP > 0.001 ? (
+      {/* 로고 뱃지 - fade_minimal: opacity + 미세한 하강만, 스프링 팝인/회전 없음 */}
+      {fadeOpacity > 0.001 ? (
         <div
           style={{
             position: 'absolute', left: CX - 84, top: 1150,
@@ -126,7 +140,8 @@ export const Intro: React.FC<IntroProps> = ({
             background: C.gold, border: `${SW}px solid ${C.ink}`,
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             fontFamily: FONT, fontWeight: 700, fontSize: 104, color: C.ink,
-            transform: `scale(${badgeP * badgeIdle}) rotate(${(1 - badgeP) * -24}deg)`,
+            opacity: fadeOpacity,
+            transform: `translateY(${fadeSlide}px) scale(${badgeIdle})`,
           }}
         >
           {resolvedMark}
