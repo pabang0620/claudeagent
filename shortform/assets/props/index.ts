@@ -9,3 +9,7 @@ export type { RulerProps } from './Ruler';
 export { QMark, HumanNeckIcon } from './Symbols';
 export { ThemedIcon, IconBrowser, ICON_NAMES } from './ThemedIcon';
 export type { ThemedIconProps } from './ThemedIcon';
+export { IceCream } from './IceCream';
+export type { IceCreamProps } from './IceCream';
+export { HeadNerveDiagram, MOUTH_PT, FOREHEAD_PT } from './HeadNerveDiagram';
+export type { HeadNerveDiagramProps } from './HeadNerveDiagram';

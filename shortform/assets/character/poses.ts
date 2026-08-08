@@ -106,6 +106,17 @@ export const WAVE_BYE: Pose = {
   legL: { h: 3.8, k: 0 }, legR: { h: -3.8, k: 0 },
 };
 
+/** 이마를 짚고 놀란/찡그린 표정 (바스트샷 전용). 차가운 음식 통증 리액션용으로 만들었다.
+ *  손이 관자놀이 부근(원본 좌표 약 764,455)에 오도록 handPos('R', armR) 로 역산해 맞춘 각도.
+ *  더 위(이마 꼭대기)를 노리면 팔이 거의 일직선으로 펴져 막대기처럼 보여서, 팔꿈치가 뚜렷이
+ *  꺾이는 이 각도로 낮췄다 - 관자놀이를 짚는 것도 "이마가 찌릿"과 자연스럽게 읽힌다. */
+export const TOUCH_FOREHEAD: Pose = {
+  headTilt: -6, lean: 0,
+  armL: { s: 44.83, e: 21.29 }, armR: { s: -125, e: -95 },
+  legL: { h: 3.8, k: 0 }, legR: { h: -3.8, k: 0 },
+  eyeOpen: 0.8, mouthOpen: 0.3,
+};
+
 /** 쭈그려 앉아 관찰.
  *  무릎각을 고관절각과 정확히 반대(k = -h)로 둬야 정강이가 수직이 되고 발끝이 바깥을
  *  향한다. h + k 가 0 에서 멀어지면 발이 정강이와 함께 회전해 뒤로 꺾인다. */
@@ -132,6 +143,7 @@ export const POSES = {
   cheer: CHEER,
   touchNeck: TOUCH_NECK,
   waveBye: WAVE_BYE,
+  touchForehead: TOUCH_FOREHEAD,
   crouch: CROUCH,
 } as const;
 

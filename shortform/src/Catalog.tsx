@@ -5,10 +5,10 @@ import React from 'react';
 import { AbsoluteFill, Sequence, useCurrentFrame } from 'remotion';
 import {
   Actor, Appear, BoneStack, BustActor, C, Caption, CardGrid, ChoiceList, CompareBars,
-  CountUp, CountdownRing, Character, FONT, FontLoader, Giraffe, HumanNeckIcon, ICON_NAMES,
-  Intro, Label, LabBg, MiniCharacter, Mouse, NightSkyBg, OceanBg, Outro, POSES, PlainBg,
-  PulseRing, QMark, Ruler, SW, SavannaBg, Sloth, Sparkles, SpeechBubble, SpotlightCircle,
-  StepCounter, ThemedIcon, Whale, blendPose,
+  CountUp, CountdownRing, Character, FONT, FontLoader, Giraffe, HeadNerveDiagram, HumanNeckIcon,
+  ICON_NAMES, IceCream, Intro, Label, LabBg, MiniCharacter, Mouse, NightSkyBg, OceanBg, Outro,
+  POSES, PlainBg, PulseRing, QMark, Ruler, SW, SavannaBg, Sloth, Sparkles, SpeechBubble,
+  SpotlightCircle, StepCounter, ThemedIcon, Whale, blendPose,
 } from '../assets';
 
 export const CAT_W = 2560;
@@ -140,39 +140,49 @@ export const Catalog: React.FC = () => {
             </Cell>
           );
         })}
-        <Cell x={60 + 6 * 312} y={470 + 330} w={300} h={280} label="BustActor (바스트샷)">
-          <BustActor size={272} left={14} top={4} pose={POSES.waveBye} mouthOpen={0.7} />
-        </Cell>
-        <Cell x={60 + 7 * 312} y={470 + 330} w={300} h={280} label="Character (실루엣 색 교체)">
-          <Character {...POSES.cheer} width={278} color={C.nightSoft} accent={C.nightSoft} fill={C.nightSoft} style={{ marginLeft: 11 }} />
+        <Cell x={60 + 7 * 312} y={470 + 330} w={300} h={280} label="BustActor touchForehead / 실루엣">
+          <BustActor size={150} left={8} top={0} pose={POSES.touchForehead} mouthOpen={0.6} />
+          <Character
+            {...POSES.cheer} width={150} color={C.nightSoft} accent={C.nightSoft} fill={C.nightSoft}
+            style={{ position: 'absolute', left: 150, top: 20 }}
+          />
         </Cell>
       </Section>
 
       {/* ============ 3. 소품 ============ */}
       <Section y={1220} title="3. 소품 (직접 그린 것)" note="assets/props/">
-        <Cell x={60} y={1290} w={330} h={330} label="Giraffe drink=0">
-          <Giraffe width={210} style={{ marginLeft: 60, marginTop: 6 }} />
+        <Cell x={60} y={1290} w={245} h={330} label="Giraffe drink=0">
+          <Giraffe width={160} style={{ marginLeft: 40, marginTop: 6 }} />
         </Cell>
-        <Cell x={410} y={1290} w={330} h={330} label="Giraffe drink=1">
-          <Giraffe width={210} drink={1} style={{ marginLeft: 60, marginTop: 6 }} />
+        <Cell x={325} y={1290} w={245} h={330} label="Giraffe drink=1">
+          <Giraffe width={160} drink={1} style={{ marginLeft: 40, marginTop: 6 }} />
         </Cell>
-        <Cell x={760} y={1290} w={330} h={330} label="Mouse">
-          <Mouse width={280} style={{ marginLeft: 25, marginTop: 110 }} />
+        <Cell x={590} y={1290} w={245} h={330} label="Mouse">
+          <Mouse width={205} style={{ marginLeft: 18, marginTop: 110 }} />
         </Cell>
-        <Cell x={1110} y={1290} w={330} h={330} label="Whale">
-          <Whale width={300} style={{ marginLeft: 15, marginTop: 90 }} />
+        <Cell x={855} y={1290} w={245} h={330} label="Whale">
+          <Whale width={220} style={{ marginLeft: 10, marginTop: 90 }} />
         </Cell>
-        <Cell x={1460} y={1290} w={330} h={330} label="Sloth (silhouette)">
-          <Sloth width={280} silhouette={C.nightSoft} style={{ marginLeft: 25, marginTop: 40 }} />
+        <Cell x={1120} y={1290} w={245} h={330} label="Sloth (silhouette)">
+          <Sloth width={205} silhouette={C.nightSoft} style={{ marginLeft: 18, marginTop: 40 }} />
         </Cell>
-        <Cell x={1810} y={1290} w={330} h={330} label="BoneStack lit=4/7">
-          <div style={{ position: 'absolute', left: 100, top: 20 }}>
-            <BoneStack count={7} lit={4} blockW={110} blockH={30} gap={8} />
+        <Cell x={1385} y={1290} w={245} h={330} label="BoneStack lit=4/7">
+          <div style={{ position: 'absolute', left: 70, top: 20 }}>
+            <BoneStack count={7} lit={4} blockW={80} blockH={22} gap={6} />
           </div>
         </Cell>
-        <Cell x={2160} y={1290} w={330} h={330} label="HumanNeckIcon / QMark">
-          <HumanNeckIcon width={150} style={{ marginLeft: 20, marginTop: 40 }} />
-          <QMark size={150} style={{ left: 190, top: 70 }} />
+        <Cell x={1650} y={1290} w={245} h={330} label="HumanNeckIcon / QMark">
+          <HumanNeckIcon width={110} style={{ marginLeft: 15, marginTop: 40 }} />
+          <QMark size={110} style={{ left: 140, top: 70 }} />
+        </Cell>
+        <Cell x={1915} y={1290} w={245} h={330} label="IceCream">
+          <IceCream width={150} style={{ marginLeft: 45, marginTop: 10 }} />
+        </Cell>
+        <Cell x={2180} y={1290} w={245} h={330} label="HeadNerveDiagram (mouth+forehead+nerve)">
+          <HeadNerveDiagram
+            f={f} width={190} x={20} y={10}
+            highlightMouth highlightForehead showNerve={1} signalT={(f % 60) / 60}
+          />
         </Cell>
       </Section>
 

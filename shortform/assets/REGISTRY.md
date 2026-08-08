@@ -62,10 +62,11 @@ import { Actor, POSES, Caption, SavannaBg, Intro, Outro, C, SW, FontLoader } fro
 않는다" 는 여전히 유효하다. 이 파일은 캐릭터를 수정하거나 다른 환경에서 원본과 대조할 때 보는
 기준 이미지이며, 코드에서 import 하지 않는다.
 
-**포즈 14종**: `idle` `pointUp` `shrug` `count` `surprised` `measure` `present` `thinking` `wave`
-`wide` `cheer` `touchNeck` `waveBye` `crouch`
+**포즈 15종**: `idle` `pointUp` `shrug` `count` `surprised` `measure` `present` `thinking` `wave`
+`wide` `cheer` `touchNeck` `waveBye` `touchForehead` `crouch`
 
-- `touchNeck` / `waveBye` 는 **바스트샷 전용**이다. 전신으로 쓰면 팔 위치가 어색하다.
+- `touchNeck` / `waveBye` / `touchForehead` 는 **바스트샷 전용**이다. 전신으로 쓰면 팔 위치가 어색하다.
+  `touchForehead` 는 차가운 음식을 먹고 이마가 찌릿한 리액션용(눈 살짝 찡그림, 입 살짝 벌림)이다.
 - `crouch` 는 발끝이 올라오므로 `feetVb: 955` 가 포즈 안에 들어 있다. Actor 가 자동으로 읽는다.
 - 팔을 드는 포즈는 어깨각 `|s|` 를 **105~120** 에 둔다. 이 캐릭터는 머리 반지름(255)이 팔 전체
   길이(191)보다 커서 그냥 들면 손이 머리에 파묻힌다. `armStretch()` 가 어깨각에 따라 팔을
@@ -112,6 +113,8 @@ import { Actor, POSES, Caption, SavannaBg, Intro, Outro, C, SW, FontLoader } fro
 | HumanNeckIcon | `props/Symbols.tsx` | 소품 | 사람 상반신 미니 실루엣 | `width` `stroke` `fill` `strokeWidth` | ep01 |
 | ThemedIcon | `props/ThemedIcon.tsx` | 소품 | Tabler Icons(MIT)를 우리 선굵기·색으로 렌더 | `name` `size` `color` `strokePx` `bg` `bgPad` `style` | 신규 |
 | IconBrowser | `props/ThemedIcon.tsx` | 소품 | **Studio 전용** 아이콘 탐색기 (@iconify/react API 조회). 렌더에 넣지 말 것 | `names[]` `size` | 신규 |
+| IceCream | `props/IceCream.tsx` | 소품 | 아이스크림콘 (스쿱 1~2단 + 콘 와플격자). 음식류 소재 재사용 | `width` `scoopColor` `coneColor` `stroke` `strokeWidth` `doubleScoop` `style` | general-ep01 |
+| HeadNerveDiagram | `props/HeadNerveDiagram.tsx` | 소품 | 머리 옆모습 다이어그램. 입천장·이마 두 지점을 신경선으로 잇는 설명에 재사용 (냉기·통증·신경 공유류) | `f` `width` `x` `y` `highlightMouth`(냉기+혈관펄스) `highlightForehead`(통증) `showNerve`(0~1 신경선 진행도) `signalT`(0~1 이동신호) `stroke` `fill` `style` | general-ep01 |
 
 ---
 
