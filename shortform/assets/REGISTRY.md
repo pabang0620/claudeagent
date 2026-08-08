@@ -46,6 +46,8 @@ import { Actor, POSES, Caption, SavannaBg, Intro, Outro, C, SW, FontLoader } fro
 | MiniCharacter | `character/Actor.tsx` | 캐릭터 | 카드·아이콘 칸에 넣는 정지 미니 캐릭터 (호흡·깜빡임 없음) | `width` `pose` `color` `accent` `fill` | ep01 |
 | 포즈 프리셋 | `character/poses.ts` | 캐릭터 | 14종. `POSES` 로 이름 -> 포즈 조회 가능 | - | ep01 |
 | 원본 참조 이미지 | `character/character_reference.png` | **참조 전용** | 사용자가 확정한 캐릭터 디자인 원본 PNG. `Character.tsx` 는 이 이미지를 픽셀 실측해 복제한 것이다 | - | ep01 |
+| 채널 로고 | `character/logo.png` | **채널 자산** | 유튜브 프로필 사진용. 1254x1254. 캐릭터 + "굼구미" + 코랄 링 | - | - |
+| 채널 배너 | `character/banner.png` | **채널 자산** | 유튜브 배너용. 현재 1672x941 로 **유튜브 최소 규격(2048x1152) 미달** 상태 | - | - |
 
 `character_reference.png` 는 **렌더에 쓰는 자산이 아니다.** 아래 규칙 8의 "이미지 파일 자산을 쓰지
 않는다" 는 여전히 유효하다. 이 파일은 캐릭터를 수정하거나 다른 환경에서 원본과 대조할 때 보는
