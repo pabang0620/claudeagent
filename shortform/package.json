@@ -1,0 +1,34 @@
+{
+  "name": "shortform-assets",
+  "version": "1.0.0",
+  "description": "숏폼 지식 영상 재사용 자산 라이브러리 (Remotion)",
+  "repository": {},
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@iconify/react": "^6.0.2",
+    "@remotion/cli": "4.0.507",
+    "@remotion/noise": "4.0.507",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.507"
+  },
+  "devDependencies": {
+    "@iconify-json/tabler": "^1.2.0",
+    "@remotion/eslint-config-flat": "4.0.507",
+    "@types/react": "19.2.7",
+    "@types/web": "0.0.166",
+    "eslint": "9.19.0",
+    "prettier": "3.8.1",
+    "typescript": "5.9.3"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "build": "remotion bundle",
+    "lint": "eslint assets src && tsc",
+    "sync-icons": "node scripts/sync_icons.mjs"
+  },
+  "sideEffects": [
+    "*.css"
+  ]
+}

@@ -1,0 +1,10 @@
+export { PlainBg } from './PlainBg';
+export type { PlainBgProps } from './PlainBg';
+export { SavannaBg } from './SavannaBg';
+export type { SavannaBgProps, TreeSpec } from './SavannaBg';
+export { NightSkyBg } from './NightSkyBg';
+export type { NightSkyBgProps } from './NightSkyBg';
+export { LabBg } from './LabBg';
+export type { LabBgProps, ShelfSpec } from './LabBg';
+export { OceanBg } from './OceanBg';
+export type { OceanBgProps } from './OceanBg';

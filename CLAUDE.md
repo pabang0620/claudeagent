@@ -101,6 +101,7 @@ project/
 | `/update-codemaps` | 코드베이스 구조 분석 → 아키텍처 코드맵 문서 업데이트 |
 | `/skill-create` | 로컬 git 히스토리 분석 → 코딩 패턴 추출 → SKILL.md 생성 |
 | `/setup-pm` | 선호 패키지 매니저 설정 (npm/pnpm/yarn/bun) |
+| `/shortform` | 숏폼 지식영상 1화 제작 (`/shortform <프로필> <주제>`, planner→critic→builder) |
 
 ## 스킬
 | 스킬 | 역할 | 호출 방식 |
@@ -121,12 +122,14 @@ project/
 | `error-prevention-rules` | React 런타임 에러(무한 렌더·race condition·cleanup 누락 등) 사전 차단 정적 검사 14개 룰 | 자동 (.jsx/.tsx 저장 시) |
 | `mobile-first-checker` | 모바일 안티패턴 사전 차단 정적 검사 12개 룰 (드래그·스크롤락·필터·모달 등) | 자동 (.jsx/.tsx/.css/.scss 저장 시) |
 | `video-use` | 대화형 영상 편집 (전사·컷·색보정·오버레이 애니메이션·자막 번인) | 자동 + `/video-use` |
+| `shortform` | 숏폼 지식영상 제작 오케스트레이션 (주제→사실검증·대본→비평→조립·TTS·렌더→mp4). 자산 라이브러리·프로필은 `~/project/.claude/shortform/` | `/shortform <프로필> <주제>` |
 
 ## 주요 에이전트 (자동 트리거, 스킬 아님)
 | 에이전트 | 역할 | 호출 방식 |
 |---------|------|----------|
 | `proposal-pt-builder` | 정부사업 RFP 제안 PT 생성 (에셋 라이브러리 조합 PPTX, standard/gov 듀얼 트랙) | 자동 트리거("PT 만들어", "제안서 슬라이드" 등) |
 | `pptx-asset-generator` | PPT 에셋 조각(표·차트·프로세스 등) 생성·병합·검증, compose.mjs 확장 (최종 PT 조립은 proposal-pt-builder) | 자동 트리거("pptx 에셋 생성", "compose.mjs 수정" 등) |
+| `shortform-planner` / `shortform-critic` / `shortform-builder` | 숏폼 지식영상 기획·비평·제작 3단 분업 (critic은 읽기전용, 작성자와 분리) | `/shortform` 스킬이 순서대로 호출 |
 
 전체 에이전트 목록·라우팅 SSOT: `rules/agents.md` (에이전트 추가/변경은 그 파일부터)
 
