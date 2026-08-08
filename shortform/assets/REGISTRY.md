@@ -45,6 +45,11 @@ import { Actor, POSES, Caption, SavannaBg, Intro, Outro, C, SW, FontLoader } fro
 | BustActor | `character/Actor.tsx` | 캐릭터 | 얼굴 클로즈업(바스트샷) | `size` `left` `top` `pose` `mouthOpen` `blinkOffset` `breathAmp` `color` `accent` `fill` | ep01 |
 | MiniCharacter | `character/Actor.tsx` | 캐릭터 | 카드·아이콘 칸에 넣는 정지 미니 캐릭터 (호흡·깜빡임 없음) | `width` `pose` `color` `accent` `fill` | ep01 |
 | 포즈 프리셋 | `character/poses.ts` | 캐릭터 | 14종. `POSES` 로 이름 -> 포즈 조회 가능 | - | ep01 |
+| 원본 참조 이미지 | `character/character_reference.png` | **참조 전용** | 사용자가 확정한 캐릭터 디자인 원본 PNG. `Character.tsx` 는 이 이미지를 픽셀 실측해 복제한 것이다 | - | ep01 |
+
+`character_reference.png` 는 **렌더에 쓰는 자산이 아니다.** 아래 규칙 8의 "이미지 파일 자산을 쓰지
+않는다" 는 여전히 유효하다. 이 파일은 캐릭터를 수정하거나 다른 환경에서 원본과 대조할 때 보는
+기준 이미지이며, 코드에서 import 하지 않는다.
 
 **포즈 14종**: `idle` `pointUp` `shrug` `count` `surprised` `measure` `present` `thinking` `wave`
 `wide` `cheer` `touchNeck` `waveBye` `crouch`
