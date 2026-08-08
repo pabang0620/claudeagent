@@ -58,6 +58,23 @@ const EAT_POSE: Pose = {
 const ACTOR_SIZE = 1600;
 const ACTOR_GROUND = 1370;
 
+// IceCream 소품의 viewBox 는 220x320(props/IceCream.tsx, 수정 금지). 그 안에서
+// 콘 뾰족한 끝(쥐는 지점) 은 대략 (104, 303), 스쿱 중심은 (110, 110) 이다.
+// 손이 아니라 "쥐는 지점" 을 손 위치에 고정하고 그 지점을 축으로 회전시켜야
+// 회전각을 바꿔도 손에서 콘이 미끄러지지 않는다 - transformOrigin 을 이 지점으로 잡는다.
+const ICE_WIDTH = 380;
+const ICE_SVG_SCALE = ICE_WIDTH / 220;
+const ICE_GRIP = { x: 104 * ICE_SVG_SCALE, y: 303 * ICE_SVG_SCALE };
+// 회전각 확정: -30~45도 8종을 실제 렌더해서 비교한 결과 10도로 확정했다
+// (out/ice-angle-compare/sheet.png, 2026-08-08). 판단 기준은 두 가지:
+// (1) 스쿱이 눈을 가리면 안 된다 - 20도부터 왼쪽 눈이 스쿱에 가려지기 시작한다
+// (2) 손에서 붕 떠 보이면 안 된다 - -10도 이하는 콘-얼굴 간격이 벌어져
+//     "먹는 중"으로 안 읽힌다. 10도가 이 두 실패 지점 사이의 지점이다.
+// 이전 값(69도)은 스쿱이 뺨~눈 전체를 덮는 결함이 있었다. -18도(그 이전 값)도
+// 스쿱이 관자놀이 높이에 붕 떠 보이는 별개의 결함이 있었다 - 둘 다 감으로 정한
+// 값이었고, 이번처럼 각도를 실제로 여러 개 렌더해서 비교한 적이 없었다.
+const ICE_ROTATE = 10;
+
 export const S1Bite: React.FC<{ f: number }> = ({ f }) => {
   // 아이스크림을 크게 한입 베어 무는 동작: 입이 확 벌어졌다 닫힌다 (한 번의 chomp)
   const bite = Math.max(0, Math.sin(Math.min(1, progress(f, 12, 34)) * Math.PI));
@@ -77,15 +94,16 @@ export const S1Bite: React.FC<{ f: number }> = ({ f }) => {
 
   return (
     <PlainBg ground={ground} groundColor={C.hill}>
+      <Actor size={size} centerX={centerX} ground={ground} pose={EAT_POSE} mouthOpen={mouthOpen} />
       <div
         style={{
-          position: 'absolute', left: iceX - 115, top: iceY - 300,
-          transform: `rotate(-18deg) scale(${1 + 0.006 * Math.sin(f / 25)})`,
+          position: 'absolute', left: iceX - ICE_GRIP.x, top: iceY - ICE_GRIP.y,
+          transformOrigin: `${ICE_GRIP.x}px ${ICE_GRIP.y}px`,
+          transform: `rotate(${ICE_ROTATE}deg) scale(${1 + 0.006 * Math.sin(f / 25)})`,
         }}
       >
-        <IceCream width={380} />
+        <IceCream width={ICE_WIDTH} />
       </div>
-      <Actor size={size} centerX={centerX} ground={ground} pose={EAT_POSE} mouthOpen={mouthOpen} />
     </PlainBg>
   );
 };
