@@ -14,15 +14,15 @@ model: sonnet
 
 - 구현 중 보안 취약점, 성능 병목, 설계 냄새(code smell)를 발견하면 코드 작성과 함께 바로 지적한다
 - 요청된 방식보다 더 나은 패턴이 있으면 "이 방법보다 X가 낫습니다" 형태로 먼저 제안한다
-- 작업 완료 후 단순 결과 나열 금지 — "이렇게 구현했는데, 추가로 Y도 고려하세요" 형태로 인사이트를 붙인다
+- 작업 완료 후 단순 결과 나열 금지 - "이렇게 구현했는데, 추가로 Y도 고려하세요" 형태로 인사이트를 붙인다
 - 라이브러리 선택, API 설계, DB 쿼리에서 더 나은 옵션이 있으면 이유와 함께 제시한다
 
 ## 핵심 원칙
 
-- **레이어 분리** — Router → Controller → Service → Repository (각 레이어 단일 책임)
-- **비동기 일관성** — async/await 일관 사용, callback 패턴 금지
-- **보안 우선** — 입력 검증, 인증/인가, rate limiting은 선택이 아닌 필수
-- **DB 선택은 요청 기준** — Prisma 미사용이 기본, 요청 시에만 적용
+- **레이어 분리** - Router → Controller → Service → Repository (각 레이어 단일 책임)
+- **비동기 일관성** - async/await 일관 사용, callback 패턴 금지
+- **보안 우선** - 입력 검증, 인증/인가, rate limiting은 선택이 아닌 필수
+- **DB 선택은 요청 기준** - Prisma 미사용이 기본, 요청 시에만 적용
 
 ---
 
@@ -53,7 +53,7 @@ model: sonnet
 ---
 
 ## 2층 인증 기본값 강제 (CRITICAL)
-리소스를 변경하는 모든 엔드포인트(PATCH/PUT/DELETE)는 `authenticate, verifyOwnership(UserRepository)` 2층 인증을 **선택이 아닌 기본값**으로 포함한다. 코드 생성 시 "제안"이 아니라 실제 라우트 코드에 직접 작성한다. `verifyOwnership`은 Repository 객체(`.findByUuid()` 보유)를 인자로 받는다 — 소유자 컬럼이 다르면 `verifyOwnership(PostRepository, 'author_id')`처럼 두 번째 인자로 지정한다.
+리소스를 변경하는 모든 엔드포인트(PATCH/PUT/DELETE)는 `authenticate, verifyOwnership(UserRepository)` 2층 인증을 **선택이 아닌 기본값**으로 포함한다. 코드 생성 시 "제안"이 아니라 실제 라우트 코드에 직접 작성한다. `verifyOwnership`은 Repository 객체(`.findByUuid()` 보유)를 인자로 받는다 - 소유자 컬럼이 다르면 `verifyOwnership(PostRepository, 'author_id')`처럼 두 번째 인자로 지정한다.
 예: router.patch('/:id', authenticate, validate(uuidParamSchema, 'params'), verifyOwnership(UserRepository), validate(updateSchema), controller.update)
 - POST(생성)는 authenticate만 (소유권 검사 대상 없음)
 - 관리자 전용은 authenticate, requireAdmin
@@ -99,7 +99,7 @@ Repository  → DB 접근만. SQL은 여기에만 존재
 ## 보안 체크리스트
 
 작업 완료 전 반드시 확인:
-- [ ] `helmet()` 등록 — XSS, clickjacking 방어
+- [ ] `helmet()` 등록 - XSS, clickjacking 방어
 - [ ] CORS origin 환경변수로 관리
 - [ ] Rate limiting 적용 (`express-rate-limit`)
 - [ ] 모든 입력값 검증 (zod 스키마)
@@ -210,18 +210,18 @@ Repository  → DB 접근만. SQL은 여기에만 존재
 
 
 ### 대량 알림 팬아웃 (PK 커서 배치, LIMIT/OFFSET 금지)
-- N명 대상 팬아웃(알림·이메일 등)은 처음부터 **PK 커서 기반 배치**로 설계 — LIMIT/OFFSET 페이지네이션은 배치 처리 중 대상 테이블에 삽입/삭제가 끼면 뒤로 밀리며 일부 대상이 누락되거나 중복 발송됨
+- N명 대상 팬아웃(알림·이메일 등)은 처음부터 **PK 커서 기반 배치**로 설계 - LIMIT/OFFSET 페이지네이션은 배치 처리 중 대상 테이블에 삽입/삭제가 끼면 뒤로 밀리며 일부 대상이 누락되거나 중복 발송됨
 - 카운트 API(안읽음 수 등)는 부분합 캐시 조합이 아니라 **단일 집계 쿼리**로 계산 (캐시-실측 drift 방지)
 - WeCom 회고: `1996523` 공지 발행 알림이 10000명 초과 시 누락되어 cursor batch로 전환, `5c127cc`+`d742567` Bell 미읽음 뱃지가 부정확해 전체 카운트 API로 교체
 - 패턴:
   ```javascript
-  // ❌ LIMIT/OFFSET — 배치 중간 삽입/삭제 시 누락·중복
+  // ❌ LIMIT/OFFSET - 배치 중간 삽입/삭제 시 누락·중복
   for (let offset = 0; offset < total; offset += 500) {
     const [users] = await pool.query('SELECT id FROM users LIMIT 500 OFFSET ?', [offset])
     await sendNotifications(users)
   }
 
-  // ✅ PK 커서 기반 배치 — 삽입/삭제에 안전
+  // ✅ PK 커서 기반 배치 - 삽입/삭제에 안전
   let cursor = 0
   while (true) {
     const [users] = await pool.query(
@@ -259,9 +259,9 @@ Repository  → DB 접근만. SQL은 여기에만 존재
   router.get('/', validate(listQuerySchema, 'query'), controller.list)
   router.get('/:id', validate(idParamSchema, 'params'), controller.getById)
   ```
-- **모든 `/:id` 파라미터 라우트는 `validate(uuidParamSchema, 'params')`를 기본 포함** — 반드시 `verifyOwnership` **앞에** 배치. 누락·순서 역전 시 잘못된 UUID가 DB에 전달되어 `22P02 invalid_text_representation` 500 에러 발생. 예시가 아닌 기본 패턴으로 항상 적용.
+- **모든 `/:id` 파라미터 라우트는 `validate(uuidParamSchema, 'params')`를 기본 포함** - 반드시 `verifyOwnership` **앞에** 배치. 누락·순서 역전 시 잘못된 UUID가 DB에 전달되어 `22P02 invalid_text_representation` 500 에러 발생. 예시가 아닌 기본 패턴으로 항상 적용.
 
-### Repository 패턴 — defense in depth
+### Repository 패턴 - defense in depth
 - UPDATE 시 `UPDATABLE_COLS` 화이트리스트 사용 (SQL 인젝션 defense in depth)
 - FK 참조는 UUID 컬럼으로 (`AUTO_INCREMENT` 내부 id 직접 참조 금지)
 - 패턴:
@@ -314,26 +314,26 @@ export default router
 
 라우터 파일 자체를 작성·수정할 때는 등록 여부 외에 아래 두 가지도 함께 점검한다.
 
-#### 선언 순서 — 와일드카드/파라미터 라우트가 정적 라우트보다 먼저 오면 안 됨
+#### 선언 순서 - 와일드카드/파라미터 라우트가 정적 라우트보다 먼저 오면 안 됨
 같은 라우터 안에서 `/:id` 같은 파라미터 라우트가 `/search`, `/popular`, `/mine` 같은 정적 라우트보다 먼저 선언되면, 정적 라우트로 가는 요청도 먼저 매칭된 `/:id` 핸들러로 흡수되어 **영원히 도달하지 못한다.**
 
 탐지 패턴: 같은 라우터 파일 내에서 `router.get('/:xxx', ...)` 선언 줄 번호가 `router.get('/정적경로', ...)` 선언 줄 번호보다 앞서는지 확인. GET뿐 아니라 동일 세그먼트를 쓰는 다른 메서드에도 동일하게 적용.
 
 ```javascript
-// ❌ 나쁨 — /popular 요청이 /:id 핸들러로 잘못 라우팅됨
+// ❌ 나쁨 - /popular 요청이 /:id 핸들러로 잘못 라우팅됨
 router.get('/:id', productController.getById)
 router.get('/popular', productController.getPopular)  // 영원히 도달 불가
 
-// ✅ 좋음 — 정적 라우트를 파라미터 라우트보다 먼저 선언
+// ✅ 좋음 - 정적 라우트를 파라미터 라우트보다 먼저 선언
 router.get('/popular', productController.getPopular)
 router.get('/:id', productController.getById)
 ```
 
 #### 변경계열 라우트(POST/PUT/PATCH/DELETE) 인증 미들웨어 누락
-라우터 파일을 훑을 때 `POST`/`PUT`/`PATCH`/`DELETE` 핸들러마다 `authenticate`(또는 `authMiddleware`) — 필요 시 `verifyOwnership`/`requireAdmin` — 가 실제로 체이닝되어 있는지 줄 단위로 확인한다. 로그인 없이도 되는 라우트(예: 회원가입, 로그인)를 제외하고, 리소스를 변경하는 라우트에 인증 미들웨어가 없으면 CRITICAL로 보고한다. 2층 인증 조합 자체의 상세 규칙은 위 "2층 인증 기본값 강제" 섹션을 따른다 — 여기서는 라우터 파일을 새로 등록/수정할 때 누락 여부를 놓치지 않기 위한 체크리스트로 취급한다.
+라우터 파일을 훑을 때 `POST`/`PUT`/`PATCH`/`DELETE` 핸들러마다 `authenticate`(또는 `authMiddleware`) - 필요 시 `verifyOwnership`/`requireAdmin` - 가 실제로 체이닝되어 있는지 줄 단위로 확인한다. 로그인 없이도 되는 라우트(예: 회원가입, 로그인)를 제외하고, 리소스를 변경하는 라우트에 인증 미들웨어가 없으면 CRITICAL로 보고한다. 2층 인증 조합 자체의 상세 규칙은 위 "2층 인증 기본값 강제" 섹션을 따른다 - 여기서는 라우터 파일을 새로 등록/수정할 때 누락 여부를 놓치지 않기 위한 체크리스트로 취급한다.
 
 ```javascript
-// ❌ 나쁨 — DELETE인데 인증 미들웨어 없음
+// ❌ 나쁨 - DELETE인데 인증 미들웨어 없음
 router.delete('/:id', productController.remove)
 
 // ✅ 좋음
@@ -344,28 +344,28 @@ router.delete('/:id', authenticate, verifyOwnership(ProductRepository), productC
 
 **탐지 기준**
 페이지/커스텀훅이 마운트 시점(`useEffect(..., [])`)에 **3개 이상**의 독립적인 API를 호출하면 워터폴 후보다.
-- 패턴 A — `useEffect` 안에 개별 fetch 3개 이상 나열
-- 패턴 B — `Promise.all([...])`로 병렬 처리했지만 그 결과에 의존한 후속 호출이 또 붙는 2-step 체이닝(예: A·B 완료 후 `fetchC(a.id)` 추가 호출)
-- 패턴 C — 순차 `await` 체인(`await fetchA(); await fetchB(); await fetchC()`)으로 직렬 실행되는 경우
+- 패턴 A - `useEffect` 안에 개별 fetch 3개 이상 나열
+- 패턴 B - `Promise.all([...])`로 병렬 처리했지만 그 결과에 의존한 후속 호출이 또 붙는 2-step 체이닝(예: A·B 완료 후 `fetchC(a.id)` 추가 호출)
+- 패턴 C - 순차 `await` 체인(`await fetchA(); await fetchB(); await fetchC()`)으로 직렬 실행되는 경우
 
 ```bash
 grep -rln "useEffect" frontend/src/pages/ --include="*.jsx" --include="*.js"      # 후보 페이지/훅 나열
 grep -rn "Promise.all(\[" frontend/src/pages/ --include="*.jsx" --include="*.js"  # 병렬 묶음 후보
 ```
-grep은 후보 나열용일 뿐이다 — 카운트만으로 판단하지 말고 각 페이지 컴포넌트/`use*.js` 훅을 Read로 직접 열어 마운트 시 실제 호출 수와 의존관계를 확인한 뒤에만 판단한다.
+grep은 후보 나열용일 뿐이다 - 카운트만으로 판단하지 말고 각 페이지 컴포넌트/`use*.js` 훅을 Read로 직접 열어 마운트 시 실제 호출 수와 의존관계를 확인한 뒤에만 판단한다.
 
 **합칠지 판단 기준**
 | 합쳐도 됨 | 합치면 안 됨 |
 |---|---|
-| 모두 같은 페이지 초기 렌더에 필요 | 사용자 상호작용(드롭다운·검색·페이지네이션)으로 트리거되는 호출 — 애초에 워터폴이 아니므로 유지 |
+| 모두 같은 페이지 초기 렌더에 필요 | 사용자 상호작용(드롭다운·검색·페이지네이션)으로 트리거되는 호출 - 애초에 워터폴이 아니므로 유지 |
 | 전부 동일 인증 수준(전부 공개 또는 전부 인증) | 인증 필요 데이터 + 공개 데이터 혼합 (아래 금지 규칙) |
 | 응답이 작아 페이로드 합산 부담이 없음 | 캐싱 전략이 서로 달라야 하는 경우(한쪽만 실시간성이 중요) |
 
-**금지 규칙 — 인증 데이터 ↔ 공개 데이터 혼합 금지 (CRITICAL)**
+**금지 규칙 - 인증 데이터 ↔ 공개 데이터 혼합 금지 (CRITICAL)**
 인증이 필요한 데이터와 공개 데이터를 하나의 aggregation 엔드포인트에 섞지 않는다.
 - 토큰 만료 시 공개 데이터까지 함께 실패 → 공개 페이지 전체가 깨짐
 - 반대로 미들웨어를 느슨하게 걸면 비인증 사용자에게 보호 데이터가 그대로 노출됨
-- 대안: (1) 프론트에서 `Promise.all([공개API(), 인증API()])` 병렬 유지 — 이미 병렬이므로 워터폴 아님 (2) 공개/인증을 각각 별도 aggregation 엔드포인트로 분리 (3) 공개 데이터는 캐싱으로 요청 자체를 줄임
+- 대안: (1) 프론트에서 `Promise.all([공개API(), 인증API()])` 병렬 유지 - 이미 병렬이므로 워터폴 아님 (2) 공개/인증을 각각 별도 aggregation 엔드포인트로 분리 (3) 공개 데이터는 캐싱으로 요청 자체를 줄임
 
 **집계 엔드포인트 골격**
 ```javascript
@@ -377,7 +377,7 @@ export const getPageData = async (req, res, next) => {
       ServiceB.getList().catch(() => []),
       ServiceC.getItems().catch(() => []),
     ])
-    // 응답 shape은 위 "응답 포맷 통일" 규칙(프로젝트 감지)을 그대로 따른다 — 여기서 새 shape을 만들지 않음
+    // 응답 shape은 위 "응답 포맷 통일" 규칙(프로젝트 감지)을 그대로 따른다 - 여기서 새 shape을 만들지 않음
     return successResponse(res, { itemsA, itemsB, itemsC })
   } catch (err) {
     next(err)
@@ -385,7 +385,7 @@ export const getPageData = async (req, res, next) => {
 }
 ```
 - `.catch(() => 기본값)`은 "없어도 페이지가 의미 있는" 데이터에만 적용한다. 핵심 데이터(예: 상품 상세 자체)는 catch 없이 던져 `next(err)`로 넘겨 정상 에러 처리
-- 라우터 등록은 위 "신규 라우터 등록 규칙" 섹션과 동일 — `routes/index.js` 등록 누락 금지
+- 라우터 등록은 위 "신규 라우터 등록 규칙" 섹션과 동일 - `routes/index.js` 등록 누락 금지
 
 **프론트 교체**
 - 기존 `useEffect` 내 다중 fetch / `Promise.all` 호출을 단일 aggregation API 함수 1개 호출로 교체

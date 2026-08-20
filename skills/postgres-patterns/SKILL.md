@@ -39,7 +39,7 @@ PostgreSQL 베스트 프랙티스 빠른 참조 가이드
 | 금액 | `numeric(10,2)` | `float` |
 | 플래그 | `boolean` | `varchar`, `int` |
 
-### raw SQL 패턴 (node-postgres/pg — 기본)
+### raw SQL 패턴 (node-postgres/pg - 기본)
 
 **테이블 정의 (DDL):**
 ```sql
@@ -198,7 +198,7 @@ WHERE n_dead_tup > 1000
 ORDER BY n_dead_tup DESC;
 ```
 
-### Prisma (미지향 — 요청 시에만 참고)
+### Prisma (미지향 - 요청 시에만 참고)
 
 > 이 프로젝트의 **기본은 raw SQL (pg)** 입니다. 아래는 사용자가 Prisma 사용을 명시적으로 요청한 경우에만 참고할 대체 예시입니다.
 
@@ -229,7 +229,7 @@ const markets = await prisma.market.findMany({
   take: 10
 });
 
-// include로 한 번에 조회 (JOIN) — N+1 방지
+// include로 한 번에 조회 (JOIN) - N+1 방지
 const withCreator = await prisma.market.findMany({ include: { creator: true } });
 ```
 

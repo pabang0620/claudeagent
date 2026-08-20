@@ -2,7 +2,7 @@
 
 > `.claude/agents/api-contract-designer.md` 의 모드 파일. 엔드포인트 1개에서 6파일을 생성할 때만 읽는다. 마지막 자기검증 절까지 반드시 수행한다.
 
-## GENERATE 모드 — 엔드포인트 1개에서 6파일 생성
+## GENERATE 모드 - 엔드포인트 1개에서 6파일 생성
 
 ### 입력 예시
 ```
@@ -16,7 +16,7 @@
 DB 테이블: webtoons (이중 ID, status ENUM, deleted_at)
 ```
 
-### 출력 파일 6종 (Repository 포함 — 컨트롤러 의존성 해결)
+### 출력 파일 6종 (Repository 포함 - 컨트롤러 의존성 해결)
 
 **경로 및 함수명은 Phase 0 감지 결과에 따라 적응**:
 - 도메인 드리븐 구조: `backend/src/domains/webtoon/webtoonController.js` 등
@@ -49,12 +49,12 @@ DB 테이블: webtoons (이중 ID, status ENUM, deleted_at)
   - 컨트롤러는 `req.body` 그대로 사용 (미들웨어가 `{ body: req.body }` 로 래핑 parse)
 
 
-#### (1) `shared/schemas/webtoon.ts` — Zod SSOT
+#### (1) `shared/schemas/webtoon.ts` - Zod SSOT
 ```typescript
 import { z } from 'zod'
 import { WEBTOON_STATUS } from '../constants/enums'
 
-// DB 컬럼명과 완전 동일 — drift 방지의 핵심
+// DB 컬럼명과 완전 동일 - drift 방지의 핵심
 export const WebtoonSchema = z.object({
   id: z.number().int().positive(),
   webtoon_id: z.string().uuid(),
@@ -70,7 +70,7 @@ export const WebtoonSchema = z.object({
 })
 export type Webtoon = z.infer<typeof WebtoonSchema>
 
-// 생성 시 — 클라이언트가 보내는 필드만
+// 생성 시 - 클라이언트가 보내는 필드만
 // ⚠️ multipart/FormData 경로: 숫자/불리언은 String()으로 직렬화되어 전송됨.
 //    따라서 FormData로 들어오는 필드는 반드시 z.coerce.* 를 사용해야 validate({body})가 통과한다.
 //    (uploadClient.create()는 모든 값을 String(v)로 append → coerce 없으면 validate 거부)
@@ -87,7 +87,7 @@ export const CreateWebtoonInput = z.object({
 })
 export type CreateWebtoonInput = z.infer<typeof CreateWebtoonInput>
 
-// 수정 시 — partial
+// 수정 시 - partial
 export const UpdateWebtoonInput = CreateWebtoonInput.partial()
 export type UpdateWebtoonInput = z.infer<typeof UpdateWebtoonInput>
 
@@ -106,13 +106,13 @@ export const ListCursorQuery = z.object({
 })
 export type ListCursorQuery = z.infer<typeof ListCursorQuery>
 
-// Params — WeCom 이중 ID: 외부 식별자는 항상 UUID(webtoon_id)
+// Params - WeCom 이중 ID: 외부 식별자는 항상 UUID(webtoon_id)
 export const WebtoonIdParam = z.object({
   webtoon_id: z.string().uuid(),
 })
 ```
 
-#### (2) `backend/routes/webtoonRoutes.js` — Express 스캐폴드
+#### (2) `backend/routes/webtoonRoutes.js` - Express 스캐폴드
 ```javascript
 import { Router } from 'express'
 import multer from 'multer'
@@ -188,7 +188,7 @@ router.delete(
 export default router
 ```
 
-#### (3) `backend/controllers/webtoonController.js` — 전체 재조회 패턴
+#### (3) `backend/controllers/webtoonController.js` - 전체 재조회 패턴
 ```javascript
 import * as repo from '../repositories/webtoonRepository.js'
 import { ok, created, notFound, serverError } from '../utils/response.js'
@@ -214,7 +214,7 @@ export const getOne = async (req, res) => {
   }
 }
 
-// verifyOwnership 콜백용 — repo 의존성을 controller에 캡슐화 (routes에서 repo 직접 import 금지)
+// verifyOwnership 콜백용 - repo 의존성을 controller에 캡슐화 (routes에서 repo 직접 import 금지)
 export const getWebtoonOwnerId = async (req) => {
   const row = await repo.findById(req.params.webtoon_id)
   return row?.owner_id ?? null
@@ -259,7 +259,7 @@ export const remove = async (req, res) => {
 }
 ```
 
-#### (3-b) `backend/repositories/webtoonRepository.js` — SQL 최소 CRUD
+#### (3-b) `backend/repositories/webtoonRepository.js` - SQL 최소 CRUD
 
 ```javascript
 import { db } from '../config/db.js'
@@ -300,7 +300,7 @@ export const insert = async (input) => {
   return webtoon_id  // UUID 반환 (AUTO_INCREMENT 내부 ID 노출 금지)
 }
 
-// 화이트리스트 — 스키마와 동기 (zod schema 의 partial() 과 중복 방어)
+// 화이트리스트 - 스키마와 동기 (zod schema 의 partial() 과 중복 방어)
 const UPDATABLE_COLS = new Set(['title', 'author', 'summary', 'episode_count', 'is_featured'])
 
 export const update = async (webtoon_id, input) => {
@@ -320,7 +320,7 @@ export const softDelete = async (webtoon_id) => {
   await db.query(`UPDATE webtoons SET deleted_at = NOW() WHERE webtoon_id = ?`, [webtoon_id])
 }
 
-// cursor 기반 list (무한스크롤용 — Phase 1 에서 pagination=cursor 선택 시)
+// cursor 기반 list (무한스크롤용 - Phase 1 에서 pagination=cursor 선택 시)
 export const listCursor = async ({ after_id, limit }) => {
   const params = after_id ? [after_id, limit] : [limit]
   const where = after_id ? 'WHERE deleted_at IS NULL AND id < ?' : 'WHERE deleted_at IS NULL'
@@ -335,7 +335,7 @@ export const listCursor = async ({ after_id, limit }) => {
 
 > **참고**: 비즈니스 로직이 복잡할 경우 Service 계층은 `express-engineer` 에이전트에 위임. 이 에이전트는 최소 CRUD Repository만 생성.
 
-#### (4) `frontend/src/api/webtoon.ts` — 타입 안전 클라이언트
+#### (4) `frontend/src/api/webtoon.ts` - 타입 안전 클라이언트
 ```typescript
 import { apiClient } from './client'
 import { uploadClient } from './uploadClient'
@@ -363,7 +363,7 @@ export const webtoonApi = {
 }
 ```
 
-#### (5) `frontend/src/mocks/webtoon.ts` — MSW 핸들러
+#### (5) `frontend/src/mocks/webtoon.ts` - MSW 핸들러
 ```typescript
 import { http, HttpResponse } from 'msw'
 import { WebtoonSchema, ListWebtoonQuery, CreateWebtoonInput } from '../../../shared/schemas/webtoon'
@@ -396,7 +396,7 @@ export const webtoonHandlers = [
 
   http.get('/webtoons/:webtoon_id', ({ params }) => {
     const row = fixtures.find((w) => w.webtoon_id === params.webtoon_id)
-    // message 필드가 기본값(원칙 #2-③) — 필드명은 프로젝트 실측 response.js shape을 따를 것(error일 수도 있음)
+    // message 필드가 기본값(원칙 #2-③) - 필드명은 프로젝트 실측 response.js shape을 따를 것(error일 수도 있음)
     if (!row) return HttpResponse.json({ success: false, message: '없음' }, { status: 404 })
     return HttpResponse.json({ success: true, data: row })
   }),
@@ -423,7 +423,7 @@ router.patch('/users/:id/avatar', upload.single('avatar'), updateUserAvatar)
 const formData = new FormData()
 formData.append('avatar', file)
 await apiClient.patch(`/users/${id}/avatar`, formData)
-// ⚠️ Content-Type 헤더를 직접 설정하지 말 것 — 브라우저가 boundary 포함하여 자동 설정
+// ⚠️ Content-Type 헤더를 직접 설정하지 말 것 - 브라우저가 boundary 포함하여 자동 설정
 ```
 
 
@@ -434,7 +434,7 @@ await apiClient.patch(`/users/${id}/avatar`, formData)
 각 출력 파일 생성 후 **반드시** 다음을 검증:
 
 ```bash
-# 1. 필드명 일관성 — Zod 스키마의 모든 키가 DB 스키마 컬럼명과 일치하는가
+# 1. 필드명 일관성 - Zod 스키마의 모든 키가 DB 스키마 컬럼명과 일치하는가
 grep -E "^\s+\w+:" shared/schemas/<domain>.ts
 # 위 결과를 DB 스키마 파일과 비교
 

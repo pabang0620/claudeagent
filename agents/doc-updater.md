@@ -27,11 +27,11 @@ model: sonnet
 
 ### 분석 명령어
 ```bash
-# OS 감지 — BSD(macOS) vs GNU(Linux/WSL) 도구 차이 대응
+# OS 감지 - BSD(macOS) vs GNU(Linux/WSL) 도구 차이 대응
 OS_TYPE=$(uname -s)
 # Darwin(macOS): sed -i '' / ggrep 필요, Linux: sed -i / grep -P 사용 가능
 
-# 0. 사전 확인 (필수 — 명령 실행 전)
+# 0. 사전 확인 (필수 - 명령 실행 전)
 # a) generate.ts 존재 여부 확인
 if [ -f scripts/codemaps/generate.ts ]; then
   npx tsx scripts/codemaps/generate.ts || echo "RUN 실패: generate.ts 실행 오류"
@@ -43,10 +43,10 @@ node -e "require('madge')" 2>/dev/null && echo "madge: 설치됨" || echo "SKIP:
 # c) docs/CODEMAPS 디렉토리 생성
 mkdir -p docs/CODEMAPS
 # d) .js 프로젝트 여부 (TypeScript 단계 건너뜀)
-find backend/ -name "*.ts" 2>/dev/null | head -1 | grep -q . || echo "JS 전용 프로젝트 — ts-morph 단계 생략"
+find backend/ -name "*.ts" 2>/dev/null | head -1 | grep -q . || echo "JS 전용 프로젝트 - ts-morph 단계 생략"
 # e) graphviz 설치 여부 (madge --image 옵션에 필요)
 which dot 2>/dev/null && echo "graphviz: 설치됨" \
-  || echo "WARN: Graphviz 미설치 — sudo apt install graphviz (Ubuntu) 또는 brew install graphviz (macOS). madge --image 스킵됨"
+  || echo "WARN: Graphviz 미설치 - sudo apt install graphviz (Ubuntu) 또는 brew install graphviz (macOS). madge --image 스킵됨"
 
 # 소스 루트 동적 탐지 (모노레포 포함)
 MADGE_DIRS=""
@@ -58,7 +58,7 @@ if [ -n "$MADGE_DIRS" ]; then
   npx madge --image docs/CODEMAPS/graph.svg $MADGE_DIRS 2>/dev/null \
     || echo "SKIP: madge 분석 실패 (graphviz 미설치 또는 소스 파싱 오류)"
 else
-  echo "SKIP: 분석할 디렉토리 없음 — frontend/, backend/, src/, packages/, apps/, services/ 중 하나 필요"
+  echo "SKIP: 분석할 디렉토리 없음 - frontend/, backend/, src/, packages/, apps/, services/ 중 하나 필요"
 fi
 
 # JSDoc 주석 추출 (.ts + .js 모두)
@@ -76,7 +76,7 @@ git rev-parse HEAD~1 >/dev/null 2>&1 && git diff --name-only HEAD~1 -- '*.ts' '*
 b) 변경 파일 목록을 사용자에게 제시하고 문서 업데이트 범위 확인
 c) 신규 파일: 해당 코드맵 섹션에 추가
    삭제 파일: `grep -rlF "<구경로>" docs/ .claude/ README.md` 로 참조 검색 후 제거
-   (`<구경로>`는 플레이스홀더 — git diff/Glob 결과에서 추출한 실제 삭제·이동 경로로 치환한 뒤 실행한다. 각괄호 그대로 실행 금지.)
+   (`<구경로>`는 플레이스홀더 - git diff/Glob 결과에서 추출한 실제 삭제·이동 경로로 치환한 뒤 실행한다. 각괄호 그대로 실행 금지.)
    이동 파일: 구 경로 → 신 경로 치환
 
 **Write 실행 전 필수 (덮어쓸 파일 고지)**:
@@ -176,7 +176,7 @@ if grep -P '' </dev/null 2>/dev/null; then
 elif command -v ggrep >/dev/null 2>&1; then
   GREP_P="ggrep -oP"
 else
-  GREP_P="sed -nE"   # POSIX 폴백 — sed -nE 's/.../\1/p' 형태로 사용
+  GREP_P="sed -nE"   # POSIX 폴백 - sed -nE 's/.../\1/p' 형태로 사용
 fi
 
 if [ "$GREP_P" = "sed -nE" ]; then
@@ -221,7 +221,7 @@ echo "발견된 큐: $QUEUE_NAMES"
 - API 문서 - 엔드포인트 사양
 ```
 
-README.md 갱신 전 Glob('README.md')로 존재 확인 — 없으면 Write로 신규 생성, 있으면 Edit로 갱신.
+README.md 갱신 전 Glob('README.md')로 존재 확인 - 없으면 Write로 신규 생성, 있으면 Edit로 갱신.
 
 ### 3. 문서 검증
 ```
@@ -242,7 +242,7 @@ d) INDEX.md의 링크 목록을 최종 업데이트
 ```bash
 grep -rlF "<구경로>" docs/ .claude/ README.md 2>/dev/null
 ```
-(`<구경로>`는 플레이스홀더 — git diff/Glob 결과에서 추출한 실제 삭제·이동 경로로 치환한 뒤 실행한다. 각괄호 그대로 실행 금지.)
+(`<구경로>`는 플레이스홀더 - git diff/Glob 결과에서 추출한 실제 삭제·이동 경로로 치환한 뒤 실행한다. 각괄호 그대로 실행 금지.)
 
 ## 프로젝트별 코드맵 예시
 
@@ -256,7 +256,7 @@ grep -rlF "<구경로>" docs/ .claude/ README.md 2>/dev/null
 
 ## 구조
 
-[Glob("frontend/src/**") 결과로 실제 디렉토리 트리 삽입 — 예시 복사 금지]
+[Glob("frontend/src/**") 결과로 실제 디렉토리 트리 삽입 - 예시 복사 금지]
 
 ## 주요 컴포넌트
 
@@ -305,7 +305,7 @@ npm run build
 
 ### 주요 디렉터리
 
-[Glob("frontend/src/**") 또는 Glob("backend/src/**") 실행 후 실제 최상위 디렉터리 목록으로 대체 — 예시 복사 금지]
+[Glob("frontend/src/**") 또는 Glob("backend/src/**") 실행 후 실제 최상위 디렉터리 목록으로 대체 - 예시 복사 금지]
 
 ## 기능
 
@@ -325,12 +325,12 @@ npm run build
 
 ## CLAUDE.md 데이트드 체인지로그 포맷 (프로젝트에 이미 이 형식이 있을 때)
 
-일부 프로젝트는 CLAUDE.md를 날짜별 변경이력(living changelog)으로 유지한다 (예: wecom). **이 형식은 프로젝트에 이미 있을 때만 따른다** — 먼저 `grep -n "^## 최근 수정 사항\|^## 완료된 기능 이력" CLAUDE.md` 로 기존 절 존재 여부를 확인하고, 없는 프로젝트에 새로 강제 도입하지 않는다.
+일부 프로젝트는 CLAUDE.md를 날짜별 변경이력(living changelog)으로 유지한다 (예: wecom). **이 형식은 프로젝트에 이미 있을 때만 따른다** - 먼저 `grep -n "^## 최근 수정 사항\|^## 완료된 기능 이력" CLAUDE.md` 로 기존 절 존재 여부를 확인하고, 없는 프로젝트에 새로 강제 도입하지 않는다.
 
 기존 형식 발견 시, 아래 스켈레톤으로 새 절을 CLAUDE.md 상단(또는 가장 최근 날짜 절 바로 아래)에 추가:
 
 ```markdown
-## 최근 수정 사항 (실제 작업 날짜 YYYY-MM-DD — 기능명)
+## 최근 수정 사항 (실제 작업 날짜 YYYY-MM-DD - 기능명)
 
 ### [세부 작업명]
 - 문제/배경, 변경 내용
@@ -342,21 +342,21 @@ npm run build
 
 ### 교훈
 - 이번 작업에서 배운 것
-- **시도했다가 롤백한 것**: 무엇을 시도했고 왜 되돌렸는지 — 같은 실수 반복 방지가 이 형식의 핵심 가치
+- **시도했다가 롤백한 것**: 무엇을 시도했고 왜 되돌렸는지 - 같은 실수 반복 방지가 이 형식의 핵심 가치
 
 ---
 ```
 
-마지막으로 `## 완료된 기능 이력` 원장에 한 줄 추가 (`### [기능명] — 완료` + 요약 불릿).
+마지막으로 `## 완료된 기능 이력` 원장에 한 줄 추가 (`### [기능명] - 완료` + 요약 불릿).
 
-**날짜는 실제 작업 완료일만 기입 — 향후 일정 추정치는 절대 쓰지 않는다.**
+**날짜는 실제 작업 완료일만 기입 - 향후 일정 추정치는 절대 쓰지 않는다.**
 
 ## 품질 체크리스트
 
 ```bash
-# 코드맵 라인수 게이트 — 500줄 초과 시 분할 권고
+# 코드맵 라인수 게이트 - 500줄 초과 시 분할 권고
 for f in docs/CODEMAPS/*.md; do
-  [ -f "$f" ] && lines=$(wc -l < "$f") && [ "$lines" -gt 500 ] && echo "WARN: $f ${lines}줄 — 500줄 초과, 도메인별 분할 검토"
+  [ -f "$f" ] && lines=$(wc -l < "$f") && [ "$lines" -gt 500 ] && echo "WARN: $f ${lines}줄 - 500줄 초과, 도메인별 분할 검토"
 done
 ```
 
@@ -374,7 +374,7 @@ done
 
 다수 문서를 동시에 수정할 경우:
 1. 수정 전 `git diff --name-only` 로 변경 범위 사용자에게 고지
-2. 파일당 1개씩 순서대로 Edit — 전체 일괄 덮어쓰기 금지
+2. 파일당 1개씩 순서대로 Edit - 전체 일괄 덮어쓰기 금지
 3. 각 파일 수정 후 사용자 확인 요청 (영향 범위 넓을 때)
 4. 실수 발생 시: `git checkout -- <파일경로>` 로 단일 파일 복구
 

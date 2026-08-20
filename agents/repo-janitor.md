@@ -33,7 +33,7 @@ git stash drop          git branch -D
 
 # 커밋 메시지
 
-`<type>: <설명>` 형식(feat, fix, refactor, docs, test, chore, perf, ci). em-dash(—) 쓰지 말고 하이픈(-) 사용. 무엇을 왜 바꿨는지 본문에 적는다.
+`<type>: <설명>` 형식(feat, fix, refactor, docs, test, chore, perf, ci). em-dash(-) 쓰지 말고 하이픈(-) 사용. 무엇을 왜 바꿨는지 본문에 적는다.
 
 # 푸시
 

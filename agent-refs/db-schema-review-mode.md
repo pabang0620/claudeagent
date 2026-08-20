@@ -2,7 +2,7 @@
 
 > `.claude/agents/db-schema-architect.md` 의 모드 파일. 기존 스키마를 감사할 때만 읽는다.
 
-### REVIEW 모드 — 기존 스키마 감사
+### REVIEW 모드 - 기존 스키마 감사
 
 > 이 모드는 설계·마이그레이션 직전의 자체 사전점검용이다. 설계 맥락 없는 독립 스키마·쿼리 감사 요청은 database-reviewer 로 위임한다.
 
@@ -19,8 +19,8 @@ echo "REVIEW 대상 파일: $SCHEMA_FILE"
 # .claude/db-review-reports/ 내 리뷰 보고서는 스캔에서 제외
 grep -rE "ENUM|FOREIGN KEY" --include="*.sql" --exclude-dir=".claude" .
 
-# 1. 예약어 충돌 (공식 목록 기반, ERE + 백틱 지원) — status 는 비예약이므로 제외
-# ※ 이 grep이 기준 패턴 — DESIGN 자기검증 grep과 동일한 목록 유지 필수
+# 1. 예약어 충돌 (공식 목록 기반, ERE + 백틱 지원) - status 는 비예약이므로 제외
+# ※ 이 grep이 기준 패턴 - DESIGN 자기검증 grep과 동일한 목록 유지 필수
 grep -iEn "(^|,)[[:space:]]*\`?(rank|order|group|key|desc|read|value|values|match|condition|interval|event|over|window|groups|rows|lead|lag|dense_rank|row_number|cume_dist|percent_rank|first_value|last_value|nth_value|system|current|usage|recursive|precision|function|procedure|trigger|primary|unique)\`?[[:space:]]+(INT|BIGINT|VARCHAR|CHAR|DATETIME|TIMESTAMP|ENUM|TINYINT|SMALLINT|TEXT|DECIMAL|JSON|BOOLEAN|FLOAT|DOUBLE)" "$SCHEMA_FILE"
 # event # 비예약어이지만 혼동 방지를 위해 포함
 
@@ -87,7 +87,7 @@ grep -iEn "UNIQUE KEY|UNIQUE INDEX" "$SCHEMA_FILE"
 
 # 10. 로그 테이블 updated_at 금지 위반 (테이블당 1회만 출력)
 awk '/^CREATE TABLE[[:space:]]+(IF NOT EXISTS[[:space:]]+)?`?[a-z_]+_logs`?/{inlog=1; lname=$0; warned=0; next}
-     inlog && /updated_at/ && !warned {print "WARN: 로그테이블 updated_at 위반 — " lname; warned=1}
+     inlog && /updated_at/ && !warned {print "WARN: 로그테이블 updated_at 위반 - " lname; warned=1}
      /^\);/{inlog=0; warned=0}' "$SCHEMA_FILE"
 ```
 
@@ -108,8 +108,8 @@ awk '/^CREATE TABLE[[:space:]]+(IF NOT EXISTS[[:space:]]+)?`?[a-z_]+_logs`?/{inl
 - 이중 ID 미준수: tags (UUID 컬럼 없음)
 
 [LOW]
-- admin_users.role TINYINT — ENUM 마이그레이션 권장
-- images.width SMALLINT — 픽셀 4096 초과 가능성, INT UNSIGNED 권장
+- admin_users.role TINYINT - ENUM 마이그레이션 권장
+- images.width SMALLINT - 픽셀 4096 초과 가능성, INT UNSIGNED 권장
 
 총 위반: critical 1 / high 3 / medium 2 / low 2
 ```
@@ -119,7 +119,7 @@ awk '/^CREATE TABLE[[:space:]]+(IF NOT EXISTS[[:space:]]+)?`?[a-z_]+_logs`?/{inl
 CRITICAL/HIGH 항목 발견 시 → MIGRATE 모드로 전환하여 수정 파일 생성:
 - 예약어 충돌: `RENAME COLUMN` 마이그레이션 필요
 - deleted_at 누락: `ADD COLUMN deleted_at DATETIME NULL` 마이그레이션
-- JSON 컬럼 잔존: 정규화 마이그레이션 (복잡도 높음 — planner 먼저 협의)
+- JSON 컬럼 잔존: 정규화 마이그레이션 (복잡도 높음 - planner 먼저 협의)
 
 REVIEW 결과를 사용자에게 보고 후 MIGRATE 진행 여부 확인 필수.
 
@@ -129,8 +129,8 @@ WeCom wecom_schema.sql 의 기존 위반 중 설계 의도된 예외:
 
 | 위반 | 사유 | 분류 |
 |---|---|---|
-| `admin_logs.target_type VARCHAR(100)` | 감사 로그 특성상 어떤 엔티티든 기록 가능해야 함. ENUM 으로 제한 시 신규 도메인 로깅 누락 위험 | LOW — 기존 유지 |
-| `ai_shorts_requests.result_files JSON` | AI 결과 파일 URL 배열 (가변 개수). 정규화 테이블 오버엔지니어링 | LOW — 기존 유지 |
+| `admin_logs.target_type VARCHAR(100)` | 감사 로그 특성상 어떤 엔티티든 기록 가능해야 함. ENUM 으로 제한 시 신규 도메인 로깅 누락 위험 | LOW - 기존 유지 |
+| `ai_shorts_requests.result_files JSON` | AI 결과 파일 URL 배열 (가변 개수). 정규화 테이블 오버엔지니어링 | LOW - 기존 유지 |
 | `admin_logs.detail JSON` | 감사 로그 (원칙 6 명시 예외) | 정상 |
 
 REVIEW 스크립트가 이 3건을 탐지하면 자동으로 LOW 로 분류. 신규 도메인에는 여전히 원칙 적용.

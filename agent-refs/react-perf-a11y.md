@@ -4,7 +4,7 @@
 
 ## 성능 최적화
 
-### 메모이제이션 — 측정 후 적용
+### 메모이제이션 - 측정 후 적용
 ```typescript
 // ❌ 과도한 메모이제이션 (오히려 성능 저하)
 const value = useMemo(() => a + b, [a, b]) // 단순 계산은 불필요
@@ -37,7 +37,7 @@ function Dashboard() {
 }
 ```
 
-### 가상화 — 대용량 리스트
+### 가상화 - 대용량 리스트
 ```typescript
 // 1000개 이상 리스트는 가상화 적용
 import { useVirtualizer } from '@tanstack/react-virtual'
@@ -92,7 +92,7 @@ interface State {
   error: Error | null
 }
 
-// ⚠️ React 제약: ErrorBoundary는 React 19에서도 클래스 컴포넌트만 지원 — "함수형 컴포넌트만 사용" 원칙의 유일한 예외
+// ⚠️ React 제약: ErrorBoundary는 React 19에서도 클래스 컴포넌트만 지원 - "함수형 컴포넌트만 사용" 원칙의 유일한 예외
 class ErrorBoundary extends Component<Props, State> {
   state: State = { hasError: false, error: null }
 
@@ -104,7 +104,7 @@ class ErrorBoundary extends Component<Props, State> {
     if (import.meta.env.DEV) {
       console.error('[ErrorBoundary]', error, info)
     }
-    // TODO(필수): 프로덕션 에러 리포팅 연결 — 미연결 시 운영 에러 무음 소멸
+    // TODO(필수): 프로덕션 에러 리포팅 연결 - 미연결 시 운영 에러 무음 소멸
     // errorReporter?.capture(error, info)
   }
 
@@ -184,7 +184,7 @@ export function useIsMobile(breakpoint = 768) {
 
 ### useScrollLock
 ```typescript
-// useScrollLock — body 스크롤 잠금 (iOS Safari 포함)
+// useScrollLock - body 스크롤 잠금 (iOS Safari 포함)
 function useScrollLock(isLocked: boolean) {
   useEffect(() => {
     if (!isLocked) return
@@ -206,7 +206,7 @@ function useScrollLock(isLocked: boolean) {
 
 ### useReturnFocus / useFocusTrap
 ```typescript
-// useReturnFocus — 모달 닫을 때 트리거 요소로 포커스 복원
+// useReturnFocus - 모달 닫을 때 트리거 요소로 포커스 복원
 export function useReturnFocus() {
   const triggerRef = useRef<HTMLElement | null>(null)
 
@@ -226,7 +226,7 @@ function PageWithModal() {
 
   const handleClose = () => {
     setIsOpen(false)
-    returnFocus() // 명시적 호출 — isOpen useEffect 패턴의 언마운트 버그 방지
+    returnFocus() // 명시적 호출 - isOpen useEffect 패턴의 언마운트 버그 방지
   }
 
   return (

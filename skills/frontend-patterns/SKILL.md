@@ -7,7 +7,7 @@ description: React 19 + Vite 7 프론트엔드 개발 패턴. React 19 신규 AP
 
 ## React 19 신규 API
 
-### use() — 비동기 언래핑
+### use() - 비동기 언래핑
 ```javascript
 import { use, Suspense } from 'react'
 
@@ -21,7 +21,7 @@ function UserProfile({ userPromise }) {
 </Suspense>
 ```
 
-### useOptimistic — 낙관적 업데이트
+### useOptimistic - 낙관적 업데이트
 ```javascript
 import { useOptimistic, useTransition } from 'react'
 
@@ -43,7 +43,7 @@ function LikeButton({ post }) {
 }
 ```
 
-### useActionState — 폼 액션 상태
+### useActionState - 폼 액션 상태
 ```javascript
 import { useActionState } from 'react'
 
@@ -221,7 +221,7 @@ function useApp() {
 
 ## 성능 최적화
 
-### 메모이제이션 — 측정 후 적용
+### 메모이제이션 - 측정 후 적용
 ```javascript
 // ❌ 과도한 메모이제이션 (단순 계산은 불필요)
 const value = useMemo(() => a + b, [a, b])
@@ -251,7 +251,7 @@ function Dashboard() {
 }
 ```
 
-### 가상화 — 1000개 이상 리스트
+### 가상화 - 1000개 이상 리스트
 ```javascript
 import { useVirtualizer } from '@tanstack/react-virtual'
 

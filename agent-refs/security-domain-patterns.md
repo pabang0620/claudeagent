@@ -23,7 +23,7 @@ res.write(`data: ${JSON.stringify(allUserEvents)}\n\n`)
 const userEvents = allUserEvents.filter(e => e.userId === req.user.id)
 res.write(`data: ${JSON.stringify(userEvents)}\n\n`)
 
-// Origin 검증 — CSRF-over-WebSocket 방어
+// Origin 검증 - CSRF-over-WebSocket 방어
 const ALLOWED_ORIGINS = ['https://example.com']
 server.on('upgrade', (req, socket, head) => {
   if (!ALLOWED_ORIGINS.includes(req.headers.origin)) {

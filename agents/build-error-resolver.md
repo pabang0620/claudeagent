@@ -43,7 +43,7 @@ npx tsc --noEmit path/to/file.ts
 # ESLint 검사
 npx eslint . --ext .ts,.tsx,.js,.jsx
 
-# Vite 빌드 (프로덕션) — 이 프로젝트 기본 번들러
+# Vite 빌드 (프로덕션) - 이 프로젝트 기본 번들러
 npm run build
 
 # Vite 빌드 상세 출력
@@ -61,11 +61,11 @@ npm install --dry-run 2>&1 | grep -E "WARN|ERR"
 
 | Priority | 에러 유형 | 예시 |
 |---|---|---|
-| P1 — 즉시 | 빌드 완전 차단 | cannot find module, syntax error, TS7016(타입 선언 파일 없음) |
-| P2 — 순서대로 | TypeScript 타입 에러 | TS2xxx (TS2345, TS2532, TS2322 포함) |
+| P1 - 즉시 | 빌드 완전 차단 | cannot find module, syntax error, TS7016(타입 선언 파일 없음) |
+| P2 - 순서대로 | TypeScript 타입 에러 | TS2xxx (TS2345, TS2532, TS2322 포함) |
 
-> TS2305: 모듈은 해결되나 멤버 export 누락 — 빌드 차단이면 P1, 단순 type-only면 P2. import 형태로 판단.
-| P3 — 가능하면 | ESLint 경고 | no-console, no-unused-vars |
+> TS2305: 모듈은 해결되나 멤버 export 누락 - 빌드 차단이면 P1, 단순 type-only면 P2. import 형태로 판단.
+| P3 - 가능하면 | ESLint 경고 | no-console, no-unused-vars |
 
 > 동일 Priority 내 처리 순서: 의존성 트리 상위 파일 우선
 > 동일 에러 코드 5개 이상 시 → 배치 수정 적용 가능
@@ -192,14 +192,14 @@ export default defineConfig({
 import { formatDate } from '../lib/utils'
 
 // ✅ 수정 3: 경로 별칭 대신 실제 패키지 설치 (별칭 설정 문제 시)
-// @/lib/utils는 tsconfig paths/vite alias 설정 필요 — 패키지 설치 대상이 아님
+// @/lib/utils는 tsconfig paths/vite alias 설정 필요 - 패키지 설치 대상이 아님
 // 패키지가 실제로 없는 경우: npm install <실제-패키지명>
 // 예: npm install date-fns  (날짜 유틸이라면)
 ```
 
 ```typescript
 // 패턴 5: 모듈 멤버 내보내기 에러 (TS2305)
-// 분류: 빌드 차단이면 P1, 단순 type-only면 P2 — import 형태로 판단
+// 분류: 빌드 차단이면 P1, 단순 type-only면 P2 - import 형태로 판단
 // 원인 A: @types/ 패키지 버전 불일치 → npm list @types/<패키지명>
 // 원인 B: named import → type-only import 전환
 import type { NextFunction } from 'express'  // ✅ ESM 안전
@@ -218,9 +218,9 @@ import type { NextFunction } from 'express'  // ✅ ESM 안전
 ✅ 타입 정의 업데이트
 ✅ 설정 파일 수정
 ✅ no-console ESLint 에러 → console.log/warn 라인 삭제 (eslint-disable 주석 삽입 금지)
-   단, catch 블록 내 console.error는 rules/coding-style.md 허용 패턴 — 삭제 전 확인
+   단, catch 블록 내 console.error는 rules/coding-style.md 허용 패턴 - 삭제 전 확인
 ✅ console.log/warn 삭제는 catch 블록 밖인 것이 확실할 때만. 라인 단위로 catch 스코프 여부가 불확실하면 삭제하지 않고 보존한다(오삭제 방지). 확신이 없으면 보존이 기본값.
-   catch 블록 내 console.error는 rules/coding-style.md 허용 패턴 — 삭제 금지
+   catch 블록 내 console.error는 rules/coding-style.md 허용 패턴 - 삭제 금지
 
 ### 하지 말아야 할 것:
 ❌ 관련 없는 코드 리팩토링
@@ -266,8 +266,8 @@ function processData(data: Array<{ value: number }>) {
 수정이 새 에러를 유발한 경우:
 1. `git diff` 로 변경 내용 확인
 2. 최소 단위로 되돌리기: `git checkout -- <파일>` (특정 파일만)
-3. 에러 재분석 — 수정 방향이 틀린 경우 대안 전략 선택
-4. 타입 단언(`as any`)은 최후 수단 — 반드시 `// TODO: 타입 개선 필요` 주석 동반
+3. 에러 재분석 - 수정 방향이 틀린 경우 대안 전략 선택
+4. 타입 단언(`as any`)은 최후 수단 - 반드시 `// TODO: 타입 개선 필요` 주석 동반
 
 ## 성공 지표
 

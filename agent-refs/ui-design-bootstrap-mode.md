@@ -2,7 +2,7 @@
 
 > `.claude/agents/ui-design-system.md` 의 모드 파일. Day 0 디자인 시스템을 일괄 생성할 때만 읽는다.
 
-## BOOTSTRAP 모드 — Day 0 일괄 생성
+## BOOTSTRAP 모드 - Day 0 일괄 생성
 
 ### 기존 파일 충돌 확인 (BOOTSTRAP 전 필수)
 기존 공용 컴포넌트 파일이 있으면 사용자에게 확인:
@@ -117,7 +117,7 @@
   --color-shimmer: rgba(0, 0, 0, 0.06);
 }
 
-/* Dark mode (prefers-color-scheme) — 토큰만 덮어쓰면 자동 적용됨 */
+/* Dark mode (prefers-color-scheme) - 토큰만 덮어쓰면 자동 적용됨 */
 @media (prefers-color-scheme: dark) {
   :root {
     --color-bg: #0f172a;
@@ -137,7 +137,7 @@
 
 ```css
 /* ==========================================================================
-   Global Reset — 전역 리셋 7종 (선택적 연계: mobile-first-checker가 있으면 mf-001로 검증, 없으면 건너뜀)
+   Global Reset - 전역 리셋 7종 (선택적 연계: mobile-first-checker가 있으면 mf-001로 검증, 없으면 건너뜀)
    ========================================================================== */
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -198,7 +198,7 @@ import { useEffect, useState } from 'react'
 
 /**
  * 반응형 분기용 훅. CSS `--bp-md` 와 일치.
- * - matchMedia 기반 — 리사이즈·회전 즉시 반영
+ * - matchMedia 기반 - 리사이즈·회전 즉시 반영
  * - SSR-safe (초기값 false)
  */
 export function useIsMobile(breakpoint = 768) {
@@ -221,7 +221,7 @@ export function useIsMobile(breakpoint = 768) {
 import { useCallback, useRef } from 'react'
 
 /**
- * 가로 드래그 스크롤. Pointer Events API 사용 — 마우스+터치+펜 통합 처리.
+ * 가로 드래그 스크롤. Pointer Events API 사용 - 마우스+터치+펜 통합 처리.
  * setPointerCapture 로 커서 이탈 및 엘리먼트 밖 이동 대응.
  * 선택적 연계: mobile-first-checker가 있으면 mf-005로 검증, 없으면 건너뜀.
  *
@@ -267,7 +267,7 @@ import { useEffect } from 'react'
 /**
  * Modal/BottomSheet 스크롤 잠금. 스크롤바 너비 보정 포함.
  * 선택적 연계: mobile-first-checker가 있으면 mf-009로 검증, 없으면 건너뜀.
- * HMR 안전 — window에 카운터 저장하여 Vite 모듈 재평가 시 상태 유지.
+ * HMR 안전 - window에 카운터 저장하여 Vite 모듈 재평가 시 상태 유지.
  *
  * 사용:
  *   useScrollLock(isOpen)
@@ -332,7 +332,7 @@ export const ALL = 'ALL'
 - 8개 상태 중 해당하는 것만 제공 (빈 상태/에러 상태 포함)
 - `className` prop으로 확장 가능, 내부 스타일은 CSS Modules 또는 `[data-component]` 속성 선택자
 - 접근성: ARIA role, keyboard navigation, focus trap (Modal/BottomSheet)
-- 하드코딩 금지 — 모든 값은 `var(--토큰)`
+- 하드코딩 금지 - 모든 값은 `var(--토큰)`
 
 **예시: `components/common/Button.jsx`**
 ```jsx
@@ -397,7 +397,7 @@ export function Button({
 
 회고에서 4~5회 재발명된 **핵심 5개 컴포넌트는 반드시 템플릿 파일의 구현을 기본으로 사용**. 나머지 7개(Input/Select/Chip/Card/Badge/Avatar/Skeleton)도 템플릿 파일에 동일한 토큰 기반 패턴으로 포함되어 있다.
 
-### 12개 컴포넌트 전체 구현 — 템플릿 파일 참조
+### 12개 컴포넌트 전체 구현 - 템플릿 파일 참조
 
 Button을 제외한 나머지 12개(Modal/BottomSheet/Toast/SafeImage/ChipScroller/Input/Select/Chip/Card/Badge/Avatar/Skeleton)의 JSX+CSS 전체 소스는 컨텍스트 절약을 위해 별도 템플릿 파일로 분리되어 있다. BOOTSTRAP 5단계 진입 시, 또는 AUDIT 모드에서 특정 컴포넌트를 추가할 때 다음 파일을 Read해서 사용한다:
 
@@ -432,7 +432,7 @@ Button을 제외한 나머지 12개(Modal/BottomSheet/Toast/SafeImage/ChipScroll
 module.exports = {
   extends: ['stylelint-config-standard'],
   rules: {
-    'color-no-hex': true,  // 하드코딩 hex 차단 — 토큰 사용 강제 (tokens.css는 ignoreFiles로 제외)
+    'color-no-hex': true,  // 하드코딩 hex 차단 - 토큰 사용 강제 (tokens.css는 ignoreFiles로 제외)
     'color-named': 'never',
     'color-hex-length': 'long',   /* #fff → #ffffff 강제 (일관성) */
 
@@ -453,10 +453,10 @@ module.exports = {
 
 ### 7. `index.css` 진입점 생성/수정
 
-**덮어쓰기 금지 — Write로 전체 교체 절대 금지.** `index.css`는 신규 프로젝트가 아닌 이상 거의 항상 이미 존재하며 기존 import(폰트, 서드파티 CSS 등)를 담고 있다.
+**덮어쓰기 금지 - Write로 전체 교체 절대 금지.** `index.css`는 신규 프로젝트가 아닌 이상 거의 항상 이미 존재하며 기존 import(폰트, 서드파티 CSS 등)를 담고 있다.
 1. 먼저 파일 존재 여부를 확인한다.
 2. **존재하지 않으면** → 아래 2줄로 새로 생성 (Write 가능, 신규 파일이므로 덮어쓰기 아님).
-3. **이미 존재하면** → 전체 내용을 읽고 기존 import 목록을 사용자에게 보여준 뒤, 다음 2줄이 없을 때만 파일 **최상단에 추가**하는 형태로 **Edit(append)** 한다. Write로 전체 교체 금지 (프로젝트 최상위 규칙 — 새 산출물 저장 시 기존 동명 파일이 있으면 자동 덮어쓰기 금지).
+3. **이미 존재하면** → 전체 내용을 읽고 기존 import 목록을 사용자에게 보여준 뒤, 다음 2줄이 없을 때만 파일 **최상단에 추가**하는 형태로 **Edit(append)** 한다. Write로 전체 교체 금지 (프로젝트 최상위 규칙 - 새 산출물 저장 시 기존 동명 파일이 있으면 자동 덮어쓰기 금지).
 
 ```css
 @import './styles/tokens.css';
@@ -467,7 +467,7 @@ module.exports = {
 ```
 ✓ tokens.css 생성 (8 카테고리: color/spacing/radius/shadow/typography/breakpoint/z-index/transition)
 ✓ reset.css 생성 (7종)
-✓ hooks 3개 생성 (useIsMobile/useDragScroll/useScrollLock — HMR 안전)
+✓ hooks 3개 생성 (useIsMobile/useDragScroll/useScrollLock - HMR 안전)
 ✓ components/common 13개 생성 (Modal/BottomSheet/Toast/SafeImage/ChipScroller 완전 구현)
 ✓ utils/sentinels.js 생성 (ALL)
 ✓ utils/toast.js 생성 (큐)
@@ -476,7 +476,7 @@ module.exports = {
 다음 단계:
 1. `npm install -D stylelint stylelint-config-standard`
 2. `index.css` 진입점 확인 (기존 import 보존 후 tokens.css/reset.css 추가)
-3. `App.jsx` (또는 루트 컴포넌트) 최상단에 `<ToastContainer />` 추가 — 포털이 document.body 에 마운트되므로 어디서든 `toast(...)` 호출 가능
+3. `App.jsx` (또는 루트 컴포넌트) 최상단에 `<ToastContainer />` 추가 - 포털이 document.body 에 마운트되므로 어디서든 `toast(...)` 호출 가능
 4. 신규 페이지 작성 시 var(--토큰) 만 사용. 하드코딩은 stylelint가 거부
 ```
 
@@ -493,7 +493,7 @@ rm -rf src/components/common/
 rm -f stylelint.config.cjs
 ```
 
-### Bootstrap 자기검증 (필수 — 완료 메시지 출력 전 자동 실행)
+### Bootstrap 자기검증 (필수 - 완료 메시지 출력 전 자동 실행)
 
 7개 산출물 생성 완료 후 즉시 다음 검증 수행. 실패 시 Bootstrap 실패로 판정:
 
@@ -522,12 +522,12 @@ grep -n "export const ALL" src/utils/sentinels.js
 위 "Bootstrap 자기검증" 1번(하드코딩 컬러 잔존 여부 grep)은 CI 뿐 아니라 **husky pre-commit 훅에도 반드시 배선**한다. 그래야 위반이 커밋 단계에서 차단되고, CI까지 도달하지 않는다. `.husky/pre-commit` 에 다음 게이트를 추가:
 
 ```bash
-# .husky/pre-commit — 하드코딩 컬러/shadow 차단 게이트
+# .husky/pre-commit - 하드코딩 컬러/shadow 차단 게이트
 HARDCODED=$(grep -rEn "#[0-9a-fA-F]{3,8}" src/ --include="*.css" --include="*.scss" \
   | grep -v tokens.css | grep -v reset.css)
 SHADOW=$(grep -rEn "box-shadow:[[:space:]]*[0-9]" src/ --include="*.css" --include="*.scss")
 if [ -n "$HARDCODED" ] || [ -n "$SHADOW" ]; then
-  echo "✗ 하드코딩 컬러/shadow 감지 — 토큰(var(--...))으로 치환 후 커밋하세요:"
+  echo "✗ 하드코딩 컬러/shadow 감지 - 토큰(var(--...))으로 치환 후 커밋하세요:"
   echo "$HARDCODED"
   echo "$SHADOW"
   exit 1

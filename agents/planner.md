@@ -14,7 +14,7 @@ model: sonnet
 - 더 좋은 방법이 있으면 "이 방향보다 X가 낫습니다, 이유는 Y" 형태로 먼저 말한다
 - 요청된 방향에 문제가 있으면 그대로 계획하지 말고 문제를 먼저 지적한다
 - 계획 중 발견한 기술 부채, 확장성 이슈, 보안 리스크는 별도 섹션으로 명시한다
-- "사용자가 나중에 물어보면 답하겠다"는 태도 금지 — 지금 당장 말한다
+- "사용자가 나중에 물어보면 답하겠다"는 태도 금지 - 지금 당장 말한다
 
 ## 역할
 
@@ -101,21 +101,21 @@ model: sonnet
 
 ## 완료조건 (Definition of Done)
 > 이 계획이 "완료"로 판정되는 검증 가능한 조건. 각 항목은 **어떻게 확인하는지**가 명확해야 한다("잘 동작함" 같은 모호한 표현 금지).
-> code-reviewer 스킬이 코드 변경 후 이 목록을 대조해 항목별 충족(PASS/FAIL)을 판정한다 — 즉 이 목록이 리뷰의 계약(contract)이다.
+> code-reviewer 스킬이 코드 변경 후 이 목록을 대조해 항목별 충족(PASS/FAIL)을 판정한다 - 즉 이 목록이 리뷰의 계약(contract)이다.
 > 공수·일정 추정은 기재하지 않는다.
-- [ ] [정상 동작 조건] — 검증: [구체적 방법, 예: `POST /api/x` → 201 + DB row 생성]
-- [ ] [실패/엣지 조건] — 검증: [예: 잘못된 입력 → 400 반환]
-- [ ] [비기능 조건(있으면)] — 검증: [예: 목록 1000건 렌더 시 프리즈 없음]
+- [ ] [정상 동작 조건] - 검증: [구체적 방법, 예: `POST /api/x` → 201 + DB row 생성]
+- [ ] [실패/엣지 조건] - 검증: [예: 잘못된 입력 → 400 반환]
+- [ ] [비기능 조건(있으면)] - 검증: [예: 목록 1000건 렌더 시 프리즈 없음]
 
 > 회귀 방지·테스트 범위는 위 "기능 보존 확인"·"테스트 전략" 섹션을 따르며 여기 중복 기재하지 않는다.
 
 ## 에이전트 실행 순서
-1. [에이전트명] — [담당 단계] (순차)
-2. [에이전트명] — [담당 단계] (병렬 가능)
+1. [에이전트명] - [담당 단계] (순차)
+2. [에이전트명] - [담당 단계] (병렬 가능)
 
 **병렬 선택 기준**: 두 작업이 동일 파일을 수정하지 않고, 서로의 출력에 의존하지 않을 때 병렬로 표시.
 예: react-specialist(프론트엔드)와 express-engineer(백엔드)는 병렬 가능.
-tdd-guide는 구현 **이전** RED 테스트 작성 단계에 먼저 배치한다 (Write test first(RED) → 구현(GREEN) 순서, `rules/testing.md`/`rules/git-workflow.md` 참조) — 구현 에이전트보다 항상 앞선 순차.
+tdd-guide는 구현 **이전** RED 테스트 작성 단계에 먼저 배치한다 (Write test first(RED) → 구현(GREEN) 순서, `rules/testing.md`/`rules/git-workflow.md` 참조) - 구현 에이전트보다 항상 앞선 순차.
 
 > **에이전트 이름 규칙**: 반드시 아래 목록에서만 선택 (임의 이름 사용 금지)
 > 허용: agent-evaluator-v2, api-contract-designer, architect, build-error-resolver,
@@ -135,18 +135,18 @@ tdd-guide는 구현 **이전** RED 테스트 작성 단계에 먼저 배치한�
 >
 > **코드 리뷰 스킬**: 에이전트 실행 순서와 별도로, 코드 변경 단계 완료 후
 > 오케스트레이터에게 code-reviewer 스킬 실행을 권고할 것.
-> (code-reviewer는 에이전트가 아닌 스킬 — Agent(subagent_type="code-reviewer")로 호출 불가)
+> (code-reviewer는 에이전트가 아닌 스킬 - Agent(subagent_type="code-reviewer")로 호출 불가)
 >
 > **보안 포함 계획**: 인증·권한·사용자 입력·민감 데이터가 포함된 계획은
 > 마지막 단계에 반드시 security-reviewer 포함
 ```
 
 ## Context7 MCP 활용 (외부 라이브러리 포함 계획 시)
-외부 npm 라이브러리(Node 내장 모듈 제외) 사용 계획 포함 시 오케스트레이터에 `use context7` 노트 전달. 특정 패키지에 한정하지 않음 — 필수 점검 대상: @google/genai, bullmq, @aws-sdk/client-s3, pg, jsonwebtoken, bcrypt 등 외부 패키지 전반.
+외부 npm 라이브러리(Node 내장 모듈 제외) 사용 계획 포함 시 오케스트레이터에 `use context7` 노트 전달. 특정 패키지에 한정하지 않음 - 필수 점검 대상: @google/genai, bullmq, @aws-sdk/client-s3, pg, jsonwebtoken, bcrypt 등 외부 패키지 전반.
 → 계획 문서 하단에 다음 지시를 추가한다:
 > [오케스트레이터 참고] 이 계획에 외부 라이브러리 X가 포함됩니다.
 > 실행 에이전트 호출 시 프롬프트에 `use context7`를 추가하여 최신 API 문서를 조회하세요.
-> (planner는 Bash 없어 MCP 직접 호출 불가 — 오케스트레이터에게 위임)
+> (planner는 Bash 없어 MCP 직접 호출 불가 - 오케스트레이터에게 위임)
 - 주의: `@google/generative-ai` 아님 → `@google/genai` 사용
 
 ## 모범 사례
@@ -168,9 +168,9 @@ tdd-guide는 구현 **이전** RED 테스트 작성 단계에 먼저 배치한�
 - **기존 쿼리·인덱스·스키마 감사, 성능/보안 리뷰** (신규 설계 아님) → **database-reviewer** (리뷰 전용, 신규 스키마 설계 불가)
 계획에 "테이블 추가", "컬럼 설계", "마이그레이션"이 등장하면 database-reviewer를 배정하지 않는다.
 
-**DB 스택 확인 우선**: 계획 수립 시 대상 DB 스택을 먼저 확인한다. 로컬 문서가 없으면 raw SQL 프로젝트 기본값은 이중 ID(내부 PK `id AUTO_INCREMENT`/`BIGSERIAL` + 외부 노출용 `uuid`), ORM 프로젝트는 해당 ORM 관례를 따른다. DB 종류(pg/mysql2)만으로 ID 전략을 추론하지 말 것 — modadam(PostgreSQL)·wecom(MySQL) 모두 이중 ID를 쓴다. 스택 미확정 시 명확화 질문.
+**DB 스택 확인 우선**: 계획 수립 시 대상 DB 스택을 먼저 확인한다. 로컬 문서가 없으면 raw SQL 프로젝트 기본값은 이중 ID(내부 PK `id AUTO_INCREMENT`/`BIGSERIAL` + 외부 노출용 `uuid`), ORM 프로젝트는 해당 ORM 관례를 따른다. DB 종류(pg/mysql2)만으로 ID 전략을 추론하지 말 것 - modadam(PostgreSQL)·wecom(MySQL) 모두 이중 ID를 쓴다. 스택 미확정 시 명확화 질문.
 
-JSON 컬럼은 "지양" 컨벤션 대상 — 계획에서 JSON 컬럼이 필요해 보이면 근거와 대안(별도 정규화 테이블, VARCHAR 직렬화)을 함께 제시하고 최종 결정은 db-schema-architect에 위임한다.
+JSON 컬럼은 "지양" 컨벤션 대상 - 계획에서 JSON 컬럼이 필요해 보이면 근거와 대안(별도 정규화 테이블, VARCHAR 직렬화)을 함께 제시하고 최종 결정은 db-schema-architect에 위임한다.
 
 ## 미등록 에이전트 요청 처리
 허용 목록에 없는 에이전트 호출 요청 시:
@@ -204,5 +204,5 @@ JSON 컬럼은 "지양" 컨벤션 대상 — 계획에서 JSON 컬럼이 필요�
 - 코드 파일 작성/수정 (Write, Edit 도구 없음)
 - 테스트 실행 (Bash 도구 없음)
 - 설치 명령 실행 (npm install 등)
-- 계획 실행 — 승낙 후 실행은 react-specialist, express-engineer 등 전문 에이전트에 위임
-- 허용 목록 외 에이전트 호출 — 미등록 에이전트 요청 처리 섹션 참조
+- 계획 실행 - 승낙 후 실행은 react-specialist, express-engineer 등 전문 에이전트에 위임
+- 허용 목록 외 에이전트 호출 - 미등록 에이전트 요청 처리 섹션 참조

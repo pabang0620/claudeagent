@@ -29,13 +29,13 @@ SELECT * FROM orders WHERE user_id = $current_user_id;
 ALTER TABLE orders ENABLE ROW LEVEL SECURITY;
 ALTER TABLE orders FORCE ROW LEVEL SECURITY;
 
--- raw PostgreSQL 패턴 (WITH CHECK 필수 — INSERT/UPDATE 시 다른 테넌트 데이터 쓰기 차단)
+-- raw PostgreSQL 패턴 (WITH CHECK 필수 - INSERT/UPDATE 시 다른 테넌트 데이터 쓰기 차단)
 CREATE POLICY orders_user_policy ON orders
   FOR ALL
   USING (user_id = current_setting('app.current_user_id')::bigint)
   WITH CHECK (user_id = current_setting('app.current_user_id')::bigint);
 
--- Supabase 패턴 ((SELECT ...) 래핑으로 캐싱 — 행마다 함수 호출 방지)
+-- Supabase 패턴 ((SELECT ...) 래핑으로 캐싱 - 행마다 함수 호출 방지)
 CREATE POLICY orders_user_policy ON orders
   FOR ALL
   TO authenticated
@@ -47,7 +47,7 @@ CREATE POLICY orders_user_policy ON orders
 
 ```sql
 -- PostgreSQL ROLE 기반 접근 제어와 RLS 결합
--- service_role은 RLS를 우회한다 — 백엔드 서버는 app_user 역할을 사용해야 함
+-- service_role은 RLS를 우회한다 - 백엔드 서버는 app_user 역할을 사용해야 함
 GRANT SELECT, INSERT, UPDATE, DELETE ON orders TO app_user;
 
 -- service_role(관리자/백엔드 직접 쿼리)은 RLS 정책 적용 제외

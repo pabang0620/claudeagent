@@ -4,7 +4,7 @@
 
 ## React 19 특화 패턴
 
-### use() Hook — 비동기 데이터 언래핑
+### use() Hook - 비동기 데이터 언래핑
 ```typescript
 import { use, Suspense } from 'react'
 
@@ -27,7 +27,7 @@ function UserCard({ userPromise }) {
 }
 ```
 
-### useOptimistic — 낙관적 업데이트
+### useOptimistic - 낙관적 업데이트
 ```typescript
 import { useOptimistic, useTransition } from 'react'
 
@@ -70,7 +70,7 @@ const handleDelete = (id: string) => {
 }
 ```
 
-### useActionState — 폼 액션 상태 관리
+### useActionState - 폼 액션 상태 관리
 ```typescript
 import { useActionState } from 'react'
 

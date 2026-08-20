@@ -17,8 +17,8 @@ model: sonnet
 
 ## TDD 워크플로우
 
-### 0단계 — 테스트 프레임워크 확인 (필수, 1회)
-package.json의 devDependencies를 Grep으로 확인 — `jest` 있으면 Jest, `vitest` 있으면 Vitest 문법 사용.
+### 0단계 - 테스트 프레임워크 확인 (필수, 1회)
+package.json의 devDependencies를 Grep으로 확인 - `jest` 있으면 Jest, `vitest` 있으면 Vitest 문법 사용.
 이 프로젝트 기본은 Jest(CLAUDE.md)이나, 실제 설치된 프레임워크를 우선한다. 둘 다 없으면 Jest 설치를 먼저 안내.
 
 ### 0.5단계: 기존 테스트 파일 탐색 (Glob)
@@ -27,8 +27,8 @@ Glob 패턴 예시:
 - Glob("**/backend/tests/**/*.test.{ts,js}")
 - Glob("frontend/src/**/*.test.{ts,tsx}")
 
-- `Glob("frontend/src/**/*.test.{ts,tsx}")` — 프론트 기존 테스트 목록
-- `Glob("backend/**/*.test.{ts,js}")` — 백엔드 기존 테스트 목록
+- `Glob("frontend/src/**/*.test.{ts,tsx}")` - 프론트 기존 테스트 목록
+- `Glob("backend/**/*.test.{ts,js}")` - 백엔드 기존 테스트 목록
 - 기존 패턴 파악 후 새 테스트 파일 경로 및 네이밍 결정
 - 백엔드: 별도 `backend/tests/**` 디렉토리에 `[name].test.js` 배치
 - 프론트엔드: 소스 파일과 동일 디렉토리에 `[name].test.tsx` co-located 배치
@@ -119,7 +119,7 @@ npm run test:coverage
 # 80% 이상 커버리지 확인
 ```
 
-jest.config.js의 coverageThreshold.global을 확인 — 없으면 { branches: 80, functions: 80, lines: 80, statements: 80 } 주입하여 80% 미달 시 CI 실패하도록 강제.
+jest.config.js의 coverageThreshold.global을 확인 - 없으면 { branches: 80, functions: 80, lines: 80, statements: 80 } 주입하여 80% 미달 시 CI 실패하도록 강제.
 
 > **80% 미달 시**: 누락된 브랜치를 파악하고 1단계부터 재진입. 측정 → 추가 테스트 작성 → 재측정 반복.
 
@@ -130,7 +130,7 @@ jest.config.js의 coverageThreshold.global을 확인 — 없으면 { branches: 8
 
 1. **탐색**: Glob/Read로 기존 테스트 파일 탐색, 버그 관련 기존 테스트 확인
 2. **재현 테스트 작성 (RED)**: 버그를 재현하는 실패 테스트 먼저 작성
-3. **실패 확인**: `npm test` 실행 — 반드시 실패해야 함
+3. **실패 확인**: `npm test` 실행 - 반드시 실패해야 함
 4. **최소 수정 위임 (GREEN)**:
    - 프론트엔드 버그 → `Agent(subagent_type="react-specialist", prompt="테스트 재현 시나리오와 함께 버그 수정 요청...")`
    - 백엔드 버그 → `Agent(subagent_type="express-engineer", prompt="테스트 재현 시나리오와 함께 버그 수정 요청...")`
@@ -300,7 +300,7 @@ jest.mock('../../services/openaiService', () => ({
 ```
 
 ```typescript
-// 프론트엔드 모킹 (Jest globals — import 불필요)
+// 프론트엔드 모킹 (Jest globals - import 불필요)
 jest.mock('../db', () => ({
   query: jest.fn().mockResolvedValue({ rows: [], rowCount: 0 })
 }))

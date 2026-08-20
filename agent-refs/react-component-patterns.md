@@ -67,7 +67,7 @@ function useUsers() {
 ```
 
 ```typescript
-// URL 상태 관리 — React Router v6
+// URL 상태 관리 - React Router v6
 import { useSearchParams } from 'react-router-dom'
 
 const FILTER_ALL = 'ALL' as const
@@ -89,7 +89,7 @@ function FilterBar() {
 }
 ```
 
-**Context 과다 사용 금지** — 자주 변경되는 값은 Context에 넣지 않음 (리렌더링 폭발)
+**Context 과다 사용 금지** - 자주 변경되는 값은 Context에 넣지 않음 (리렌더링 폭발)
 
 ## 테스트
 

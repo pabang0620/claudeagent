@@ -79,7 +79,7 @@ export default app
 
 ## 레이어별 책임 분리
 
-### Router — 라우트 정의만
+### Router - 라우트 정의만
 ```javascript
 // src/routes/users.js
 import { Router } from 'express'
@@ -101,14 +101,14 @@ router.delete('/:id', authenticate, validate(uuidParamSchema, 'params'), verifyO
 export default router
 ```
 
-### Controller — 요청 파싱 + 응답만
+### Controller - 요청 파싱 + 응답만
 ```javascript
 // src/controllers/userController.js
 import * as userService from '../services/userService.js'
 import { AppError } from '../utils/AppError.js'
 import { successResponse, paginatedResponse, errorResponse } from '../utils/response.js'
 
-// ❌ 직접 res.json() 사용 금지 — 래퍼를 통해 응답 포맷 통일
+// ❌ 직접 res.json() 사용 금지 - 래퍼를 통해 응답 포맷 통일
 // res.json({ data: users })
 
 export const getUsers = async (req, res, next) => {
@@ -145,7 +145,7 @@ export const createUser = async (req, res, next) => {
 }
 ```
 
-### Service — 비즈니스 로직만
+### Service - 비즈니스 로직만
 ```javascript
 // src/services/userService.js
 import * as userRepository from '../repositories/userRepository.js'
@@ -175,9 +175,9 @@ export const createUser = async ({ email, password, name }) => {
 }
 ```
 
-### Repository — DB 접근만
+### Repository - DB 접근만
 ```javascript
-// src/repositories/userRepository.js — raw SQL (pg) 사용 예시
+// src/repositories/userRepository.js - raw SQL (pg) 사용 예시
 import { pool } from '../config/database.js'
 import { AppError } from '../utils/AppError.js'
 
@@ -230,7 +230,7 @@ export const create = async ({ email, password, name }) => {
   return result.rows[0]
 }
 
-// UPDATE — UPDATABLE_COLS 화이트리스트로 동적 컬럼 차단 (defense in depth)
+// UPDATE - UPDATABLE_COLS 화이트리스트로 동적 컬럼 차단 (defense in depth)
 const UPDATABLE_COLS = ['name', 'email', 'bio', 'avatar_url']
 
 export const updateByUuid = async (uuid, data) => {
@@ -253,6 +253,6 @@ export const softDeleteByUuid = async (uuid) => {
   return rows[0] ?? null
 }
 
-// 그룹 export — verifyOwnership(UserRepository) 등 named import 해소
+// 그룹 export - verifyOwnership(UserRepository) 등 named import 해소
 export const UserRepository = { findByUuid, findAll, findByEmail, create, updateByUuid, softDeleteByUuid }
 ```

@@ -37,7 +37,7 @@
 | **아키텍처** | "어떻게 만들까" | architect |
 | **DB 관련** | 기존 쿼리·인덱스·스키마 감사 → database-reviewer / 신규 스키마 설계·마이그레이션 파일 생성 → db-schema-architect | database-reviewer 또는 db-schema-architect |
 | **보안 관련** | 인증, 권한, API 키, 사용자 입력 처리 | security-reviewer |
-| **빌드 에러** | 빌드 실패, 타입 에러, 컴파일 에러 | build-error-resolver |
+| **빌드 에러 / 타입 에러** | 빌드 실패, 타입 에러, 컴파일 에러 - **고쳐달라는 요청은 전부 여기** (기본 경로) | build-error-resolver |
 | **프론트엔드** | React 컴포넌트, hooks, 상태관리, UI | react-specialist |
 | **백엔드** | Express 라우터, 미들웨어, API 엔드포인트 | express-engineer |
 | **HWPX 문서 생성** | 계약서, 용역계약서, 제안요청서, 보고서, 공문, 기안문, 계획서, 회의록 → .hwpx 파일 생성 | hwp-generator |
@@ -50,7 +50,7 @@
 | **숏폼 지식영상 제작** | "숏폼 만들어줘", "쇼츠 1화 뽑아줘", "지식 영상 만들어줘", `/shortform <프로필> <주제>` → 주제발굴·대본·비평·렌더 전체 파이프라인 | `/shortform` 스킬 (shortform-planner → shortform-critic → shortform-builder 순서로 오케스트레이션) |
 | **회의록 작성** | 요점메모·녹취록 기반 실제 업무회의록 작성 (기존 정본 양식 실측 우선) | meeting-minutes-writer |
 | **외부 웹 리서치** | "조사해줘", "회사/경쟁사 조사" → 외부 사이트·SNS·뉴스·공공기관·학술 정보 수집 (앱 검증 아님) | web-crawler |
-| **타입·문법 검증** | TypeScript 타입 오류·문법·임포트·async/await·데코레이터 정적 검증 (발견·보고만, 수정 안 함) | syntax-validator |
+| **타입·문법 "점검만"** | **수정하지 말라는 단서가 붙었을 때만.** "고치지 말고 타입 오류만 알려줘", "점검만 해줘", "어디가 문제인지 목록으로" - TypeScript 타입·문법·임포트·async/await·데코레이터 정적 검증. 단서 없이 "타입 에러 났어"면 위 build-error-resolver로 보낸다 | syntax-validator |
 | **함수 로직 검증** | 특정 함수 비즈니스 로직·엣지케이스·에러 처리·부작용 정적 검증 (발견·보고만) | function-validator |
 | **스키마 필드명 정합성 검증** | Zod 스키마 검증, 필드명 정합성, 스키마 drift → Zod↔Repository SQL↔프론트 전송필드 3축 대조 (발견·보고만, Zod+raw SQL 스택 한정) | schema-drift-auditor |
 | **LINKER HTML→Vue 변환** | HTML 1개를 Vue 3 SFC로 1:1 변환 | linker-html-to-vue |
@@ -67,7 +67,11 @@
 | **자소서·지원서** | "자소서 써줘" | jasoseo-writer |
 | **판정 대리 (사용자에게 물어보기 직전)** | Claude가 사용자에게 선택·승인·확인을 요청하려는 모든 순간. "이렇게 할까요", "A와 B 중 어느 쪽", "이것도 할까요", 완료 보고 직전, 스코프 확장 검토 시 | lee-wonho |
 | **웰콘 사업 자문 판단** | 콘텐츠 해외진출 기업정보 구축 기획(1단계) 웰콘 프로젝트 관련 설계 판단 | welcon-advisor |
-| **Godot 게임 구현** | Lighthaven Depths(`~/Desktop/games/dungeon-legends`) 에셋 통합·씬 배선·카메라/점프 물리·맵 구조·UI/HUD·몬스터/플레이어 스크립트 등 모든 구현 | godot-game-developer |
+| **Godot 게임 구현** | Lighthaven Depths(`/mnt/c/Users/admin/Desktop/games/dungeon-legends`) 게임플레이·전투·스킬·UI·에셋 배선 구현. ※게임 세션은 그 레포의 `CLAUDE.md`+`docs/plans/`가 작업 SSOT | godot-game-developer |
+| **게임 인프라·멀티** | 오토로드/InputMap·콜리전 레이어 기반 공사/멀티플레이(ENet·GodotSteam)/세이브 (게임 레포 로컬 에이전트) | godot-netcode-engineer |
+| **게임 데이터·밸런스** | `data/` .tres 테이블 작성·수치 조정 (게임 레포 로컬 에이전트) | game-data-designer |
+| **게임 레벨 배치** | 맵 씬 발판/몬스터/포탈 배치, 존 추가 (게임 레포 로컬 에이전트) | game-level-designer |
+| **게임 규칙 리뷰** | 멀티-safe/표준 준수 검사, 읽기 전용 (게임 레포 로컬 에이전트) | multiplayer-safety-reviewer |
 | **게임 에셋 생성 프롬프트 작성** | "에셋 프롬프트 만들어줘", "이미지 생성 프롬프트 줘" → 이미지/오디오 생성 프롬프트만 작성(생성·배선은 안 함) | asset-prompt-writer |
 
 ### STEP 1-1: 평가 에이전트 사용 제약 (agent-evaluator-v2 / skill-evaluator)

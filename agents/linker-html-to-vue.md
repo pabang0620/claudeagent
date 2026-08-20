@@ -14,7 +14,7 @@ LINKER 프로젝트의 HTML 파일 1개를 Vue 3 SFC로 변환한다.
 
 ---
 
-## ⛔ 절대 금지 — 위반 시 즉시 중단 (HARD CONSTRAINTS)
+## ⛔ 절대 금지 - 위반 시 즉시 중단 (HARD CONSTRAINTS)
 
 ### [금지 1] 스타일 변경 절대 금지
 - CSS 코드 **한 글자도 수정 불가** (속성값·단위·순서·주석·미디어쿼리·CSS변수 전부)
@@ -151,7 +151,7 @@ const onScroll = () => {
   if (!el) return
   isSticky.value = el.getBoundingClientRect().top <= 66  // top 값(예: 66px)과 비교
 }
-// 핸들러 내부에서 매번 querySelector — 라우터 전환 타이밍에도 안전
+// 핸들러 내부에서 매번 querySelector - 라우터 전환 타이밍에도 안전
 // 자식 컴포넌트(LocBar 등)에 sticky를 넘길 땐 :class="{ 'is-sticky': isSticky }" 로 전달(누락 주의)
 
 // ── 페이지 이동 ───────────────────────────────────────────
@@ -187,7 +187,7 @@ function execFormat(cmd, value = null) {
 
 ---
 
-## CSS 이관 전략 — 외부 파일 분리 (CSS byte 원본 보존)
+## CSS 이관 전략 - 외부 파일 분리 (CSS byte 원본 보존)
 
 **원칙**: HTML `<style>` 블록 내용을 `.css` 파일로 오려내기만 한다. 내용 수정 절대 금지.
 SFC에서는 `<style src="...">` 로 참조만 한다.
@@ -215,26 +215,26 @@ SFC에서는 `<style src="...">` 로 참조만 한다.
 ### SFC CSS 참조 방식
 
 ```vue
-<!-- ✅ SFC에 CSS 직접 작성 금지 — 반드시 외부 파일 참조 -->
+<!-- ✅ SFC에 CSS 직접 작성 금지 - 반드시 외부 파일 참조 -->
 <style src="../assets/styles/home.css" />
 ```
 
-### ⚠️ CSS 이관 누락 방지 (실제 회고 — 가장 자주 누락되어 디버깅 시간 폭증)
+### ⚠️ CSS 이관 누락 방지 (실제 회고 - 가장 자주 누락되어 디버깅 시간 폭증)
 
 > 아래 3가지는 PC 화면만 보면 멀쩡해 보이지만 **모바일·변수·공통블록에서 조용히 깨진다.** 변환 시 반드시 전수 이관·검증할 것.
 
-**[누락 1] `:root` CSS 변수 — 페이지마다 자체 `:root`가 있을 수 있음**
+**[누락 1] `:root` CSS 변수 - 페이지마다 자체 `:root`가 있을 수 있음**
 - 각 HTML의 `<style>` 안 `:root { }` 가 **여러 파일에 분산**될 수 있다. (예: `sub-bigbuyer-finder.html`만 `--slate-mid`, `--text-mid`, `--text-light` 정의)
 - **전 HTML의 `:root` 변수를 모두 합쳐** `variables.css` 한 곳에 모은다. 한 페이지 것만 넣으면 다른 페이지 CSS의 `var(--x)`가 **무효(initial)**가 되어 색/여백이 깨진다.
 - 검증: 각 페이지 CSS에서 `grep -o 'var(--[a-z-]*)'` 한 모든 변수가 `variables.css`에 정의돼 있는지 확인.
 
-**[누락 2] `@media` 블록 — 특히 모바일, 공통 블록이 페이지마다 중복 존재**
+**[누락 2] `@media` 블록 - 특히 모바일, 공통 블록이 페이지마다 중복 존재**
 - 원본은 각 HTML이 독립이라 **헤더/푸터/배너/브레드크럼 모바일 `@media`가 모든 HTML에 중복**으로 들어 있다.
 - 공통 `@media`(배너·브레드크럼·푸터)를 layout.css로 올리든 페이지 CSS에 남기든, **대응되는 모든 페이지에 빠짐없이** 이관해야 한다. 한 페이지(예: apply.css)에만 복사하고 history/detail에서 누락하면 **그 페이지만 모바일에서 배너·브레드크럼이 안 줄고 깨진다.**
 - `body { min-width: 360px }` 같은 **기본 규칙도 @media와 별개로 이관**.
 - 검증: 원본 HTML의 `@media` 블록을 셀렉터 단위로 추출해, 대응 Vue CSS(페이지+layout+global)에 **셀렉터·속성까지 동일하게** 존재하는지 1:1 대조. 조건 개수만 세지 말 것.
 
-**[누락 3] `.wrap` 등 레이아웃 폭은 원본값 그대로** — `min(1280px, calc(100% - 40px))` 형태를 임의 고정 px(`calc(100% - 539px)` 등)로 바꾸면 **모바일에서 음수폭 → 콘텐츠 소멸**. 폭 커스터마이징이 필요하면 반드시 `@media (min-width: …)` 데스크탑 한정으로 격리.
+**[누락 3] `.wrap` 등 레이아웃 폭은 원본값 그대로** - `min(1280px, calc(100% - 40px))` 형태를 임의 고정 px(`calc(100% - 539px)` 등)로 바꾸면 **모바일에서 음수폭 → 콘텐츠 소멸**. 폭 커스터마이징이 필요하면 반드시 `@media (min-width: …)` 데스크탑 한정으로 격리.
 
 ---
 
@@ -345,7 +345,7 @@ export const useBuyerSearchStore = defineStore('buyerSearch', () => {
 })
 ```
 
-> **⚠️ 공유 store 데이터는 생산자-소비자 형식을 SSOT로 통일** — 한 컴포넌트가 `push`하는 형식과 다른 컴포넌트가 읽는 형식이 반드시 일치해야 한다.
+> **⚠️ 공유 store 데이터는 생산자-소비자 형식을 SSOT로 통일** - 한 컴포넌트가 `push`하는 형식과 다른 컴포넌트가 읽는 형식이 반드시 일치해야 한다.
 > 실제 사고: `catCombos`를 finder가 **문자열**(`"A > B > C"`)로 넣었는데 send 페이지는 **객체**(`combo.cat1`)로 읽어 카테고리가 통째로 안 보였다. 변환 시 store 항목의 형식을 한 곳에 주석으로 명시하고, 그 형식을 쓰는·읽는 모든 컴포넌트(SearchSidebar, SendView 등)를 일치시킬 것. 형식 변경 시 `:key` 도 깨지지 않는지 확인(객체면 `combo + idx` 금지).
 
 ### 퍼블릭 에셋 처리
@@ -435,7 +435,7 @@ function handleSomeAction() {
   isOpen.value = true  // classList 조작 대신 state 변경
 }
 
-// 전역 이벤트 — 반드시 onUnmounted에서 제거
+// 전역 이벤트 - 반드시 onUnmounted에서 제거
 onMounted(() => { window.addEventListener('scroll', handleScroll) })
 onUnmounted(() => { window.removeEventListener('scroll', handleScroll) })
 
@@ -451,7 +451,7 @@ function handleScroll() {
   <!-- 목록 렌더링은 v-for 사용 -->
 </template>
 
-<!-- CSS는 인라인 작성 금지 — 반드시 외부 파일 참조 -->
+<!-- CSS는 인라인 작성 금지 - 반드시 외부 파일 참조 -->
 <style src="../assets/styles/home.css" />
 ```
 
@@ -459,19 +459,19 @@ function handleScroll() {
 
 ## 실행 절차
 
-1. **대상 HTML 파일 읽기** — `Read`로 원본 HTML 전문 읽기
-2. **섹션 분리** — `<style>`, `<body>`, `<script>` 블록 식별
-3. **공통 파일 존재 확인** — `Bash`로 `ls` 확인 후 없는 파일만 생성:
+1. **대상 HTML 파일 읽기** - `Read`로 원본 HTML 전문 읽기
+2. **섹션 분리** - `<style>`, `<body>`, `<script>` 블록 식별
+3. **공통 파일 존재 확인** - `Bash`로 `ls` 확인 후 없는 파일만 생성:
    - 공통 CSS (`variables.css`, `global.css`, `layout.css`) 추출·생성
    - `App.vue`, `main.js`, `router/index.js`, `stores/buyerSearch.js` 생성
    - `TheHeader.vue`, `TheFooter.vue`, `LocBar.vue` 생성
-4. **페이지 고유 CSS 파일 추출** — `src/assets/styles/{page}.css` 생성 (내용 수정 금지)
+4. **페이지 고유 CSS 파일 추출** - `src/assets/styles/{page}.css` 생성 (내용 수정 금지)
 5. **페이지별 View 생성**:
    - `<template>`: body 고유 영역 → Vue 문법으로 변환 (`v-for`, `v-model`, `@event`, `:class`)
    - `<script setup>`: JS 로직 → Composition API 변환 (`ref`, `computed`, `onMounted`)
    - `<style src="...">`: 외부 CSS 파일 참조 (인라인 CSS 작성 금지)
-6. **하위 컴포넌트 분리** — 독립적으로 동작하거나 템플릿 100줄 이상인 UI 블록
-7. **자체 검증 체크리스트** (모두 통과해야 완료 — 이번 회고 반영):
+6. **하위 컴포넌트 분리** - 독립적으로 동작하거나 템플릿 100줄 이상인 UI 블록
+7. **자체 검증 체크리스트** (모두 통과해야 완료 - 이번 회고 반영):
    - [ ] **표시제어**: `v-show` 0건, `style=`/`:style` display 토글 0건 (`grep -rn "v-show\|:style.*display\|style=\"[^\"]*display"`)
    - [ ] **CSS 변수**: 각 페이지 CSS의 모든 `var(--x)`가 `variables.css`에 정의됨 (페이지별 `:root` 누락 점검)
    - [ ] **@media 전수 이관**: 원본 HTML의 모든 `@media` 블록(특히 모바일 배너·브레드크럼·푸터)이 대응 Vue CSS에 셀렉터·속성까지 존재. **공통 블록을 한 페이지만 넣고 다른 페이지에서 누락하지 않았는지** 확인

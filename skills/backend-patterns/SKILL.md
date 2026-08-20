@@ -60,7 +60,7 @@ res.status(500).json({ success: false, error: '서버 오류가 발생했습니�
 
 ## Repository 패턴
 
-### PostgreSQL (pg) — pg 감지 시 (예: modadam)
+### PostgreSQL (pg) - pg 감지 시 (예: modadam)
 ```javascript
 import { pool } from '../config/database.js'
 
@@ -101,7 +101,7 @@ export const create = async ({ email, password, name }) => {
 }
 ```
 
-### MySQL2 — mysql2 감지 시 (wecom·speetalk·cosmic-renew 등 MySQL 프로젝트)
+### MySQL2 - mysql2 감지 시 (wecom·speetalk·cosmic-renew 등 MySQL 프로젝트)
 ```javascript
 import { pool } from '../config/database.js'
 
@@ -213,7 +213,7 @@ export const authorize = (...roles) => (req, res, next) => {
 
 ## 비동기 처리
 
-### 병렬 실행 — 항상 우선 고려
+### 병렬 실행 - 항상 우선 고려
 ```javascript
 // ❌ 순차 (느림)
 const user = await getUser(id)
@@ -374,10 +374,10 @@ pool.query(`
 ## WeCom 회고 기반 백엔드 패턴 (347 fix 분석 교훈)
 
 ### API 응답 포맷
-- **shape을 전역 고정하지 말 것** — 다음 우선순위로 확인:
+- **shape을 전역 고정하지 말 것** - 다음 우선순위로 확인:
   1. 로컬 `.claude/CLAUDE.md` 또는 로컬 에이전트가 실제 shape을 문서화했으면 그것 최우선
   2. 없으면 `backend/src/utils/response.js`(또는 동등 래퍼)를 직접 읽어 실제 shape 확인 후 그대로 따름
-  3. 둘 다 없는 신규 프로젝트에 한해 기본값 `{ success: boolean, data?: T, message?: string, errors?: unknown, meta?: { total, page, limit } }` 사용 (wecom·modadam 실증). `error`/`details`/`code`는 speetalk·cosmic-renew 등에서 관찰되는 변형이며 기본값이 아님 — 기존 프로젝트에 붙일 땐 그 프로젝트 실측 response.js를 따를 것
+  3. 둘 다 없는 신규 프로젝트에 한해 기본값 `{ success: boolean, data?: T, message?: string, errors?: unknown, meta?: { total, page, limit } }` 사용 (wecom·modadam 실증). `error`/`details`/`code`는 speetalk·cosmic-renew 등에서 관찰되는 변형이며 기본값이 아님 - 기존 프로젝트에 붙일 땐 그 프로젝트 실측 response.js를 따를 것
 - res.json 직접 호출 금지 → 응답 유틸 래퍼 사용
 - POST/PATCH: 전체 리소스 재조회 반환 (insertId 단독 금지)
 

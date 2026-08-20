@@ -4,7 +4,7 @@
 
 ## DB 연결 설정
 
-### PostgreSQL (pg) — pg 감지 시 (예: modadam)
+### PostgreSQL (pg) - pg 감지 시 (예: modadam)
 ```javascript
 // src/config/database.js
 import pg from 'pg'
@@ -28,7 +28,7 @@ pool.on('error', (err) => {
 })
 ```
 
-### MySQL2 — mysql2 감지 시 (wecom·speetalk·cosmic-renew 등 MySQL 프로젝트)
+### MySQL2 - mysql2 감지 시 (wecom·speetalk·cosmic-renew 등 MySQL 프로젝트)
 ```javascript
 // src/config/database.js
 import mysql from 'mysql2/promise'
@@ -72,7 +72,7 @@ const result = await withTransaction(mysqlPool, async (conn) => {
 })
 ```
 
-### Prisma — 미지향 (명시 요청 시에만)
+### Prisma - 미지향 (명시 요청 시에만)
 ```javascript
 // 사용자가 명시적으로 Prisma 사용을 요청한 경우에만
 import { PrismaClient } from '@prisma/client'

@@ -2,12 +2,12 @@
 
 > `.claude/agents/db-schema-architect.md` 의 모드 파일. 마이그레이션 파일을 생성할 때만 읽는다.
 
-### MIGRATE 모드 — 마이그레이션 파일 생성
+### MIGRATE 모드 - 마이그레이션 파일 생성
 
 기존 스키마에 변경이 필요할 때:
 
 **원칙**:
-- `wecom_schema.sql` 직접 수정 금지 — 반드시 `migrations/YYYYMMDD_HHMM_<desc>.sql` 파일 생성
+- `wecom_schema.sql` 직접 수정 금지 - 반드시 `migrations/YYYYMMDD_HHMM_<desc>.sql` 파일 생성
 - 롤백 가능하도록 `-- DOWN` 섹션 포함
 - 운영 DB 영향 평가: 락 유발(ALTER), 다운타임 필요 여부 주석
 
@@ -34,7 +34,7 @@ ALTER TABLE users DROP COLUMN display_name;
 #### 패턴 0: 컬럼 RENAME (예약어 충돌 수정)
 ```sql
 -- ======================================================================
--- 패턴 0: 컬럼 RENAME (예약어 충돌 수정) — MySQL 8.0.4+ 지원
+-- 패턴 0: 컬럼 RENAME (예약어 충돌 수정) - MySQL 8.0.4+ 지원
 -- ALGORITHM=INPLACE, LOCK=NONE 가능 (무락 DDL)
 -- ⚠️ 애플리케이션 코드(Repository SQL, Zod 스키마) 동시 수정 필수
 -- ======================================================================
@@ -89,7 +89,7 @@ ALTER TABLE webtoons
 -- export const WEBTOON_STATUS = ['draft','scheduled','published','archived','deleted'] as const
 -- (api-contract-designer 에게 위임: Zod 스키마는 enums.ts 를 import 하여 자동 동기화)
 
--- DOWN: ⚠️ 위험 — ENUM 값 제거는 해당 값 보유 row 를 '' (빈 문자열)로 변환하는 파괴적 동작
+-- DOWN: ⚠️ 위험 - ENUM 값 제거는 해당 값 보유 row 를 '' (빈 문자열)로 변환하는 파괴적 동작
 -- 1) 롤백 전 반드시 확인:
 --    SELECT COUNT(*) FROM webtoons WHERE status = 'archived';
 --    -- 위 count가 0 이 아니면 롤백 금지 또는 값 마이그레이션 먼저 수행
@@ -139,14 +139,14 @@ ALTER TABLE webtoons
 ```
 
 #### 트랜잭션 가이드
-- **DDL (ALTER/CREATE/DROP TABLE)** 는 MySQL에서 **암묵적 COMMIT** — 트랜잭션 롤백 불가
+- **DDL (ALTER/CREATE/DROP TABLE)** 는 MySQL에서 **암묵적 COMMIT** - 트랜잭션 롤백 불가
 - 마이그레이션 파일에 여러 DDL 이 있을 경우 각 DDL 을 독립 실행 가능하게 설계 (중간 실패 시 이전 DDL 은 이미 적용됨)
 - **DML 백필**(예: UPDATE ... SET ... WHERE)만 포함된 단계는 `START TRANSACTION; ... COMMIT;` 래핑 가능
 - 다중 테이블 연관 변경 시 **순서 설계**:
-  1. 새 컬럼 추가 (NULL 허용) — 기존 코드 영향 없음
-  2. 백필 DML — 트랜잭션으로 래핑 가능
-  3. NOT NULL 전환 — 모든 코드가 새 컬럼 쓰는지 확인 후
-  4. 구 컬럼 DROP — 충분한 배포 검증 후
+  1. 새 컬럼 추가 (NULL 허용) - 기존 코드 영향 없음
+  2. 백필 DML - 트랜잭션으로 래핑 가능
+  3. NOT NULL 전환 - 모든 코드가 새 컬럼 쓰는지 확인 후
+  4. 구 컬럼 DROP - 충분한 배포 검증 후
 
 #### 다중 테이블 CASCADE 삭제 정책
 WeCom은 FK 미사용이므로 CASCADE는 애플리케이션 레이어 책임:
@@ -159,7 +159,7 @@ WeCom은 FK 미사용이므로 CASCADE는 애플리케이션 레이어 책임:
 - ALGORITHM 명시 (INSTANT/INPLACE/COPY) + LOCK 레벨
 - ENUM 변경 시 enums.ts 동시 수정 안내 주석 포함
 - DOWN 섹션에 데이터 파괴 경고 포함 (해당 시)
-- **컬럼 추가 시 해당 테이블의 모든 INSERT/UPDATE 호출부를 grep해 컬럼 목록에 포함시켰는지 확인** — SELECT만 확인하고 넘어가면, 신규 레코드가 DB 기본값으로 조용히 저장되고 에러가 나지 않아 발견이 늦어진다.
+- **컬럼 추가 시 해당 테이블의 모든 INSERT/UPDATE 호출부를 grep해 컬럼 목록에 포함시켰는지 확인** - SELECT만 확인하고 넘어가면, 신규 레코드가 DB 기본값으로 조용히 저장되고 에러가 나지 않아 발견이 늦어진다.
   ```bash
   # 컬럼명으로 INSERT/UPDATE 호출부 전수 탐색 (Repository 계층)
   grep -rn "INSERT INTO webtoons\|UPDATE webtoons" backend/repositories/ | grep -v "is_public"

@@ -2,11 +2,11 @@
 
 > `.claude/agents/db-schema-architect.md` 의 모드 파일. 신규 도메인 스키마를 설계할 때만 읽는다.
 
-### DESIGN 모드 — 신규 도메인 스키마 생성
+### DESIGN 모드 - 신규 도메인 스키마 생성
 
 #### 입력 수집
-1. **도메인 이름** — 예: `webtoon`, `event`, `notification`
-   ⚠️ 입력 받은 도메인 이름을 즉시 예약어 블랙리스트와 대조 — 충돌 시 사용자에게 대체명 제안 후 중단
+1. **도메인 이름** - 예: `webtoon`, `event`, `notification`
+   ⚠️ 입력 받은 도메인 이름을 즉시 예약어 블랙리스트와 대조 - 충돌 시 사용자에게 대체명 제안 후 중단
 
    사용자가 대체명 확정 시:
    → 확정된 이름을 {domain}으로 치환하여 입력 수집 2번(엔티티 목록)부터 재개
@@ -33,7 +33,7 @@
 
 CREATE TABLE IF NOT EXISTS {domain}s (
   id             INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  {domain}_id    CHAR(36) NOT NULL UNIQUE COMMENT 'UUID — 애플리케이션에서 생성 (uuid.v4()). MySQL 8.0.13+ 에서는 DEFAULT (UUID()) 사용 가능',
+  {domain}_id    CHAR(36) NOT NULL UNIQUE COMMENT 'UUID - 애플리케이션에서 생성 (uuid.v4()). MySQL 8.0.13+ 에서는 DEFAULT (UUID()) 사용 가능',
 
   -- 핵심 컬럼
   title          VARCHAR(200) NOT NULL,
@@ -156,14 +156,14 @@ shared/constants/enums.ts의 NOTIFICATION_TARGET_TYPE 상수도 동시 갱신 �
 ## 자기검증 체크리스트 (DESIGN 모드 완료 시)
 
 ```bash
-# 1. 예약어 사용 여부 (REVIEW grep과 동일한 완전한 목록 유지 — 기준 패턴과 항상 동기화)
+# 1. 예약어 사용 여부 (REVIEW grep과 동일한 완전한 목록 유지 - 기준 패턴과 항상 동기화)
 grep -iEn "^[[:space:]]+\`?(rank|order|group|key|desc|read|value|values|match|condition|interval|event|over|window|groups|rows|lead|lag|dense_rank|row_number|cume_dist|percent_rank|first_value|last_value|nth_value|system|current|usage|recursive|precision|function|procedure|trigger|primary|unique)\`?[[:space:]]+(INT|BIGINT|VARCHAR|CHAR|DATETIME|TIMESTAMP|ENUM|TINYINT|SMALLINT|TEXT|DECIMAL|JSON|BOOLEAN|FLOAT|DOUBLE)" migrations/<new-file>.sql
 # event # 비예약어이지만 혼동 방지를 위해 포함
 
 # 2. 이중 ID 준수 (ERE + 다중 공백 대응)
 grep -cE "CHAR\(36\)[[:space:]]+NOT NULL[[:space:]]+UNIQUE" migrations/<new-file>.sql   # 테이블 개수와 일치해야
 
-# 3. 타임스탬프 3종 (ERE 플래그 — 크로스 플랫폼 호환)
+# 3. 타임스탬프 3종 (ERE 플래그 - 크로스 플랫폼 호환)
 grep -cE "(created_at|updated_at|deleted_at)" migrations/<new-file>.sql
 
 # 4. JSON 컬럼 0 (audit_logs 예외)
@@ -176,7 +176,7 @@ grep -E "ENUM\('([^']+)'" migrations/<new-file>.sql
 # 6. utf8mb4_unicode_ci 설정
 grep -c "utf8mb4_unicode_ci" migrations/<new-file>.sql
 
-# 7. 인덱스 디폴트 — 최소 1개 이상
+# 7. 인덱스 디폴트 - 최소 1개 이상
 grep -c "INDEX idx_" migrations/<new-file>.sql
 ```
 

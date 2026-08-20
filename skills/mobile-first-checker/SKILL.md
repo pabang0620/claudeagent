@@ -9,9 +9,9 @@ description: React/CSS 코드 작성·수정 시 모바일 안티패턴을 사�
 
 ## 적용 트리거
 
-1. **자동** — `.jsx/.tsx/.css/.scss` 파일 저장/편집 직후
-2. **수동** — `/mobile-first-check <경로>` 또는 "모바일 체크해줘"
-3. **계획 단계** — 새 페이지/컴포넌트 설계 시 planner의 사전 체크리스트로 주입
+1. **자동** - `.jsx/.tsx/.css/.scss` 파일 저장/편집 직후
+2. **수동** - `/mobile-first-check <경로>` 또는 "모바일 체크해줘"
+3. **계획 단계** - 새 페이지/컴포넌트 설계 시 planner의 사전 체크리스트로 주입
 
 ## 핵심 원칙 (레드 라인)
 
@@ -19,7 +19,7 @@ description: React/CSS 코드 작성·수정 시 모바일 안티패턴을 사�
 |---|---|---|
 | RL-1 | `pages/mobile/*` **디렉터리 생성 금지**. 반드시 `useIsMobile()` 조건부 렌더. | `HomePage.jsx` 81회, `MobileHomePage.jsx` 34회 재수정 |
 | RL-2 | 기본 CSS는 **모바일(375px) 퍼스트**, PC는 `@media (min-width: 768px)` 확장만 | CSS sed 일괄 수정 `82fbc6a`, `b3f2c44` |
-| RL-3 | 고정 `width:Npx` 금지 (아이콘/보더 예외) — `max-width`/`min-width:0`/`flex` 사용 | `2f3a299` 모바일 오버플로우 |
+| RL-3 | 고정 `width:Npx` 금지 (아이콘/보더 예외) - `max-width`/`min-width:0`/`flex` 사용 | `2f3a299` 모바일 오버플로우 |
 | RL-4 | 전역 reset 7종(아래 §global-reset) 없이는 어떠한 페이지도 작성 금지 | 오버플로우·이미지 흘림 fix 30+건 |
 | RL-5 | 드래그·터치 핸들러는 **window/document 레벨**에 부착. 컴포넌트 요소 레벨 금지 | `add4afe` 커서 이탈 시 드래그 깨짐 |
 | RL-6 | React 합성 `onTouchMove`에 `preventDefault` 금지 (passive:true 고정). `addEventListener('touchmove', fn, { passive: false })` 필수 | `3b3d80e` |
@@ -33,11 +33,11 @@ description: React/CSS 코드 작성·수정 시 모바일 안티패턴을 사�
 
 검사 대상: 변경된 파일. 각 룰은 `severity: error | warn`, `autofix: yes | hint | no`, `match`, `antipattern`, `correct` 을 포함.
 
-### mf-000 — 모바일 복제 페이지 금지 (error, autofix: no)
+### mf-000 - 모바일 복제 페이지 금지 (error, autofix: no)
 **match** (3가지 모드):
-1. **신규 파일** — 경로에 `pages/mobile/` 포함하는 신규 파일 생성 → error (기존 유지)
-2. **전수 감사 모드** (`/mobile-first-check --full` 또는 스킬 최초 적용 시) — 기존 `pages/mobile/*` 전수 탐색 → "기존 복제 구조 N개 파일 발견. 단계적 통합 계획 수립 권장" warn 리포트
-3. **신규 페이지 컴포넌트** — `pages/` 하위 신규 파일에 `useIsMobile` import 없으면 warn
+1. **신규 파일** - 경로에 `pages/mobile/` 포함하는 신규 파일 생성 → error (기존 유지)
+2. **전수 감사 모드** (`/mobile-first-check --full` 또는 스킬 최초 적용 시) - 기존 `pages/mobile/*` 전수 탐색 → "기존 복제 구조 N개 파일 발견. 단계적 통합 계획 수립 권장" warn 리포트
+3. **신규 페이지 컴포넌트** - `pages/` 하위 신규 파일에 `useIsMobile` import 없으면 warn
 
 (하위 호환) 기존 경로 패턴: `pages/mobile/`, `m[A-Z][a-zA-Z]*Page`, `Mobile[A-Z][a-zA-Z]*Page` 패턴 신규 파일
 **antipattern**:
@@ -59,12 +59,12 @@ export default function HomePage() {
 
 ---
 
-### mf-001 — 전역 reset 7종 확인 (error, autofix: hint)
+### mf-001 - 전역 reset 7종 확인 (error, autofix: hint)
 **자동 트리거**: 스킬이 처음 프로젝트에 적용될 때 1회 전수 감사. 이후 `.css/.scss` 저장 시 global 파일 변경 감지 시 재검사.
 **탐색 경로 확장**: `src/styles/global.css`, `src/global.css`, `src/styles/reset.css` 순서
 **match**: `src/**/*.{css,scss,sass,less}` 중 전역 스타일 파일 탐지 순서:
 1. `reset.{css,scss}`, `global.{css,scss}`, `index.{css,scss}`, `main.{css,scss}`, `base.{css,scss}`, `app.{css,scss}`, `App.{css,scss}` 순서로 검색
-2. 1번에 해당하는 파일이 없으면: **error** — "전역 reset CSS 파일 없음. reset.css 생성 필요" (사용자 승인 후 생성)
+2. 1번에 해당하는 파일이 없으면: **error** - "전역 reset CSS 파일 없음. reset.css 생성 필요" (사용자 승인 후 생성)
 3. 파일이 있으면: 아래 7종 규칙 포함 여부 검사
 **필수 포함**:
 ```css
@@ -76,11 +76,11 @@ a { color: inherit; text-decoration: none; }
 input, textarea, select { font: inherit; }
 body { -webkit-tap-highlight-color: transparent; -webkit-text-size-adjust: 100%; }
 ```
-**누락 시**: 사용자에게 생성 여부 확인 후 Edit 적용 (사용자 승인 필수 — 파일 자동 수정 금지)
+**누락 시**: 사용자에게 생성 여부 확인 후 Edit 적용 (사용자 승인 필수 - 파일 자동 수정 금지)
 
 ---
 
-### mf-002 — 고정 px width 금지 (warn, autofix: hint)
+### mf-002 - 고정 px width 금지 (warn, autofix: hint)
 **antipattern** (CSS):
 ```css
 .card { width: 320px; }         /* 모바일 375px - 패딩에서 깨짐 */
@@ -100,18 +100,18 @@ body { -webkit-tap-highlight-color: transparent; -webkit-text-size-adjust: 100%;
 
 ---
 
-### mf-003 — PC-only 미디어 쿼리 구조 강제 (warn, autofix: hint)
+### mf-003 - PC-only 미디어 쿼리 구조 강제 (warn, autofix: hint)
 **antipattern**: `@media (max-width: 767px) { ... }` (PC 기본 → 모바일 override 구조)
 **correct**: 모바일 기본 → `@media (min-width: 768px) { ... }` 로 PC 확장
 **예외 (통과)**:
-- 경로에 `/admin/`, `pages/admin/` 포함 파일 (관리자 패널은 PC 전용 UI — mobile-first 원칙 불필요)
+- 경로에 `/admin/`, `pages/admin/` 포함 파일 (관리자 패널은 PC 전용 UI - mobile-first 원칙 불필요)
 - 파일명이 `Admin*.css`, `Admin*.scss` 형태
-- 경로에 `/layouts/`, `Layout.css`, `Header.css`, `Footer.css` 포함 파일 — PC 레이아웃 컴포넌트 (모바일 분리 아키텍처에서 PC-first 의도)
+- 경로에 `/layouts/`, `Layout.css`, `Header.css`, `Footer.css` 포함 파일 - PC 레이아웃 컴포넌트 (모바일 분리 아키텍처에서 PC-first 의도)
 **이유**: PC-first 구조는 모바일 override를 까먹기 쉽고 CSS 특이도 싸움을 유발. WeCom `2f3a299` 대수술의 원인.
 
 ---
 
-### mf-004 — 부모 체인 overflow-x 검사 (warn, autofix: hint)
+### mf-004 - 부모 체인 overflow-x 검사 (warn, autofix: hint)
 **match**: CSS 파일 내 `overflow-x:\s*(auto|scroll)` 패턴이 있는 모든 파일
 **1단계 자동 감지** (Grep 가능):
 - 동일 CSS 파일 내에 `overflow-x: auto|scroll` 규칙과 별도 선택자의 `overflow:\s*hidden` 규칙이 공존 → warn
@@ -129,7 +129,7 @@ body { -webkit-tap-highlight-color: transparent; -webkit-text-size-adjust: 100%;
 
 ---
 
-### mf-005 — 드래그/커서는 window 리스너 (error, autofix: hint)
+### mf-005 - 드래그/커서는 window 리스너 (error, autofix: hint)
 **감지 패턴**: 동일 JSX 요소에 `onMouseMove` 또는 `onMouseUp`이 props로 존재하면 error. `onMouseDown` 단독은 허용.
 **antipattern** (동일 요소에 Move/Up 함께):
 ```jsx
@@ -159,7 +159,7 @@ const onMouseDown = (e) => {
 
 ---
 
-### mf-006 — touchmove passive 선언 (error, autofix: hint)
+### mf-006 - touchmove passive 선언 (error, autofix: hint)
 **감지 조건** (false positive 방지):
 - JSX 의 `onTouchMove` 핸들러 **인라인 함수** 내부에 `e.preventDefault()` 호출이 있는 경우 → **error**
 - 참조형 핸들러(`onTouchMove={handler}`) 는 **handler 내부에 `preventDefault` 존재 확인이 필요**한 warn 으로 하향
@@ -181,7 +181,7 @@ useEffect(() => {
 
 ---
 
-### mf-007 — 필터 "전체" 센티넬 (error, autofix: hint)
+### mf-007 - 필터 "전체" 센티넬 (error, autofix: hint)
 **match** (필터 맥락으로 한정, 3가지 패턴):
 1. 변수명에 `filter`, `univ`, `genre`, `category`, `tab`, `type`, `sort`, `active*Id`, `selected*Id` 포함 + `useState(null)`
 2. 필터 맥락 state 가 `useState(null)` 인데 조건 분기에서 다음 패턴으로 null 여부를 암묵적 확인:
@@ -189,10 +189,10 @@ useEffect(() => {
    - `!state` (falsy 체크)
    - `Boolean(state)` 
    - `state && ...` 
-   → "truthy null 필터 패턴 — ALL 센티넬 권장" warn
+   → "truthy null 필터 패턴 - ALL 센티넬 권장" warn
 3. 렌더에서 `=== null` / `== null` 직접 비교 → error
-4. **Boolean flag 우회 패턴** — `const [xIsAll, setXIsAll] = useState(true)` 처럼 **null state 와 1:1 대응하는 boolean state 공존** → "ALL 센티넬로 통합 권장" warn
-5. **API 인자 null 전송** — 필터 맥락 함수(`fetchXxx`, `loadXxxWebtoons`, `search*`)에 첫 인자로 `null` 전달 시 → "ALL 센티넬 전송 권장" warn
+4. **Boolean flag 우회 패턴** - `const [xIsAll, setXIsAll] = useState(true)` 처럼 **null state 와 1:1 대응하는 boolean state 공존** → "ALL 센티넬로 통합 권장" warn
+5. **API 인자 null 전송** - 필터 맥락 함수(`fetchXxx`, `loadXxxWebtoons`, `search*`)에 첫 인자로 `null` 전달 시 → "ALL 센티넬 전송 권장" warn
 - 단순 로딩 초기값(`const [data, setData] = useState(null)`) 또는 API 응답 대기는 제외
 - 근거: WeCom MobileHomePage 의 `activeUnivId=null` + `univIsAll=boolean` 혼용 패턴이 실제 배포됨
 **antipattern** (위 match 조건 충족 시):
@@ -214,7 +214,7 @@ if (univ !== ALL) params.univ = univ
 
 ---
 
-### mf-008 — blob URL cleanup 강제 (error, autofix: hint)
+### mf-008 - blob URL cleanup 강제 (error, autofix: hint)
 **antipattern**:
 ```jsx
 const url = URL.createObjectURL(file)
@@ -237,7 +237,7 @@ useEffect(() => {
 
 ---
 
-### mf-009 — Modal/BottomSheet scrollLock 강제 (error, autofix: hint)
+### mf-009 - Modal/BottomSheet scrollLock 강제 (error, autofix: hint)
 **match**: `Modal`, `BottomSheet`, `Drawer`, `Sheet`, `Overlay` 패턴 컴포넌트 파일, 또는 `document.body.style.overflow` 직접 할당 탐지
 **antipattern**:
 ```jsx
@@ -260,15 +260,15 @@ useEffect(() => {
 - `document\.body\.style\.overflow\s*=` 직접 할당 → error
 - Modal/BottomSheet 파일에 `scrollLock` 또는 `lockScroll` import 없음 → warn
 
-**초기화 단계**: 스킬 실행 시 `src/utils/scrollLock.js` 또는 `src/hooks/useScrollLock.js` 존재 여부 1회 확인. 없으면 "scrollLock 유틸 미존재 — 공용 유틸 의존성 섹션 참조. 생성 후 적용 권장" error + 생성 코드 hint 제시 (ui-design-system 에이전트 호출 권장)
+**초기화 단계**: 스킬 실행 시 `src/utils/scrollLock.js` 또는 `src/hooks/useScrollLock.js` 존재 여부 1회 확인. 없으면 "scrollLock 유틸 미존재 - 공용 유틸 의존성 섹션 참조. 생성 후 적용 권장" error + 생성 코드 hint 제시 (ui-design-system 에이전트 호출 권장)
 **근거**: `f247671` 전역 레이아웃 쉬프트, `6be6e1a` 바텀시트 재설계
 
 ---
 
-### mf-010 — 모바일 경로 문자열 리터럴 금지 (warn, autofix: hint)
+### mf-010 - 모바일 경로 문자열 리터럴 금지 (warn, autofix: hint)
 **match** (확장):
 1. `pages/mobile/**/*.jsx` 또는 `MobileXxx` 컴포넌트 파일 내 PC/모바일 경로 하드코딩
-2. **모든 JSX/TSX 파일** 내 `/m/` 접두사 경로 문자열 리터럴 — `navigate('/m/...')`, `<Link to="/m/...">`, `href="/m/..."` 패턴
+2. **모든 JSX/TSX 파일** 내 `/m/` 접두사 경로 문자열 리터럴 - `navigate('/m/...')`, `<Link to="/m/...">`, `href="/m/..."` 패턴
 3. ROUTES 상수 미사용 직접 문자열 리터럴 (PC 파일에서 모바일로 이동하는 경우 포함)
 **antipattern**:
 ```jsx
@@ -285,7 +285,7 @@ navigate(ROUTES.M_WEBTOON_DETAIL(uuid))
 
 ---
 
-### mf-011 — 고정 min-height/min-width 금지 (warn, autofix: hint)
+### mf-011 - 고정 min-height/min-width 금지 (warn, autofix: hint)
 **match**: CSS `min-height:\s*\d+px` / `min-width:\s*\d+px` 중 **값이 48px 초과** 인 경우만 경고
 **antipattern** (CSS):
 ```css
@@ -302,7 +302,7 @@ navigate(ROUTES.M_WEBTOON_DETAIL(uuid))
 **예외 (통과)**:
 - `min-height: 100vh` / `min-width: 100vw` (전체 화면)
 - `min-width: 0` (flex 자식 overflow 방지)
-- **`min-height: 44px` ~ `min-height: 48px` (WCAG/Apple HIG 터치 타겟 최소 기준)** — 삭제 금지
+- **`min-height: 44px` ~ `min-height: 48px` (WCAG/Apple HIG 터치 타겟 최소 기준)** - 삭제 금지
 - **`min-width: 44px` ~ `min-width: 48px` (동일)**
 - 48px 이하 값은 아이콘/버튼 터치타겟으로 간주 → 모두 통과
 **근거**: `2f3a299` entries-wrap/stat-card min-height auto 수정, WCAG 2.1 Target Size (Minimum) 기준 44x44 CSS pixel
@@ -323,7 +323,7 @@ navigate(ROUTES.M_WEBTOON_DETAIL(uuid))
    ]
    ```
 5. **보고**: 사용자에게 테이블 + 수정 권장사항 출력
-6. **자동 수정 없음** — 모든 수정은 힌트/권장사항 형태로만 제시. 파일 수정이 필요한 경우 반드시 사용자 승인 요청 후 진행 (CLAUDE.md "파일 수정 승낙" 원칙 준수)
+6. **자동 수정 없음** - 모든 수정은 힌트/권장사항 형태로만 제시. 파일 수정이 필요한 경우 반드시 사용자 승인 요청 후 진행 (CLAUDE.md "파일 수정 승낙" 원칙 준수)
 
 ### 출력 포맷 (사용자용)
 ```
@@ -343,10 +343,10 @@ navigate(ROUTES.M_WEBTOON_DETAIL(uuid))
 
 이 스킬은 다음 유틸이 프로젝트에 존재한다고 가정. 없으면 `ui-design-system` 에이전트 호출 권장:
 
-- `hooks/useIsMobile.js` — `matchMedia('(max-width: 767px)')` 기반
-- `hooks/useDragScroll.js` — window-level 마우스/터치 드래그
-- `hooks/useScrollLock.js` — body scrollbar width 보존 + overflow hidden
-- `utils/sentinels.js` — `export const ALL = 'ALL'`
+- `hooks/useIsMobile.js` - `matchMedia('(max-width: 767px)')` 기반
+- `hooks/useDragScroll.js` - window-level 마우스/터치 드래그
+- `hooks/useScrollLock.js` - body scrollbar width 보존 + overflow hidden
+- `utils/sentinels.js` - `export const ALL = 'ALL'`
 
 ## 성공 지표
 
@@ -363,12 +363,12 @@ navigate(ROUTES.M_WEBTOON_DETAIL(uuid))
 
 ## 이 스킬이 하지 않는 것
 
-- 접근성(a11y) 전반 — `axe-core` 또는 별도 스킬 담당
-- 성능 측정 — React DevTools Profiler 담당
-- 색상·타이포 일관성 — `ui-design-system` 담당
-- 라우팅 상수화 — `convention-enforcer` 담당
+- 접근성(a11y) 전반 - `axe-core` 또는 별도 스킬 담당
+- 성능 측정 - React DevTools Profiler 담당
+- 색상·타이포 일관성 - `ui-design-system` 담당
+- 라우팅 상수화 - `convention-enforcer` 담당
 
-## 자기검증 — WeCom 현재 기준 예상 탐지
+## 자기검증 - WeCom 현재 기준 예상 탐지
 
 이 스킬을 현재 WeCom 코드베이스에 적용하면 다음을 탐지해야 한다 (3차 평가 실측):
 - mf-001: `styles/global.css` 에 7종 중 4종 누락 (overflow-x hidden, img max-width, -webkit-tap-highlight, button border)

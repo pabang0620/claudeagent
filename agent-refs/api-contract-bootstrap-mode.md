@@ -2,14 +2,14 @@
 
 > `.claude/agents/api-contract-designer.md` 의 모드 파일. 계약 인프라를 1회 생성할 때만 읽는다.
 
-## BOOTSTRAP 모드 — 계약 인프라 1회 생성
+## BOOTSTRAP 모드 - 계약 인프라 1회 생성
 
 신규 프로젝트 또는 `shared/schemas/` 가 없으면 먼저 인프라 생성.
 
 ### 1. `shared/constants/enums.ts`
 ```typescript
 /**
- * DB ENUM SSOT — DB 스키마와 동일한 값. Zod/TS/프론트에서 참조.
+ * DB ENUM SSOT - DB 스키마와 동일한 값. Zod/TS/프론트에서 참조.
  */
 export const USER_STATUS = ['active', 'suspended', 'deleted'] as const
 export type UserStatus = typeof USER_STATUS[number]
@@ -148,10 +148,10 @@ export const uploadErrorHandler = (err, req, res, next) => {
 ```javascript
 /**
  * axios 인스턴스. 응답 포맷 자동 언래핑.
- * ⚠️ 에러 필드명은 프로젝트마다 다름(message vs error) — Phase 0에서
+ * ⚠️ 에러 필드명은 프로젝트마다 다름(message vs error) - Phase 0에서
  *    backend/src/utils/response.js 를 직접 읽어 실제 필드명을 확인하고
  *    아래 message/error 우선순위를 그 프로젝트 실측값으로 맞출 것.
- * Content-Type 자동 설정 금지 — uploadClient 사용.
+ * Content-Type 자동 설정 금지 - uploadClient 사용.
  */
 import axios from 'axios'
 
@@ -163,7 +163,7 @@ export const apiClient = axios.create({
 
 apiClient.interceptors.response.use(
   (res) => {
-    // message 우선, 없으면 error로 폴백 — 필드명은 프로젝트 response.js 실측값을 따를 것
+    // message 우선, 없으면 error로 폴백 - 필드명은 프로젝트 response.js 실측값을 따를 것
     if (res.data?.success === false) throw new Error(res.data.message ?? res.data.error)
     return res.data?.data ?? res.data
   },
@@ -197,7 +197,7 @@ uploadClient.interceptors.request.use((config) => {
 uploadClient.interceptors.response.use(
   (res) => res.data?.data ?? res.data,
   (err) => {
-    // message 우선, 없으면 error로 폴백 — 필드명은 프로젝트 response.js 실측값을 따를 것 (apiClient와 동일 원칙)
+    // message 우선, 없으면 error로 폴백 - 필드명은 프로젝트 response.js 실측값을 따를 것 (apiClient와 동일 원칙)
     const msg = err.response?.data?.message ?? err.response?.data?.error ?? err.message
     return Promise.reject(new Error(msg))
   }
@@ -243,7 +243,7 @@ export const handlers = [
 - [ ] `frontend/src/api/client.js` 생성
 - [ ] `frontend/src/api/uploadClient.js` 생성
 - [ ] `frontend/src/mocks/handlers.js` 생성
-- [ ] `backend/config/env.js` 생성 — `dotenv.config()` 호출 후 필수 환경변수 Zod로 검증 (없으면 프로세스 즉시 종료)
+- [ ] `backend/config/env.js` 생성 - `dotenv.config()` 호출 후 필수 환경변수 Zod로 검증 (없으면 프로세스 즉시 종료)
   ```javascript
   // backend/config/env.js
   import 'dotenv/config'
