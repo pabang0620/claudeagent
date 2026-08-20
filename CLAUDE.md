@@ -87,52 +87,21 @@ project/
 ```
 
 ## 슬래시 커맨드
-| 커맨드 | 용도 |
-|--------|------|
-| `/dispatch` | 자동 도구 선택 |
-| `/plan` | 구현 계획 수립 |
-| `/tdd` | TDD 워크플로우 |
-| `/code-review` | 코드 리뷰 |
-| `/build-fix` | 빌드 에러 수정 |
-| `/e2e` | E2E 테스트 |
-| `/refactor-clean` | 리팩토링 |
-| `/update-docs` | 문서 업데이트 |
-| `/orchestrate` | 복잡한 작업을 위한 순차적 에이전트 워크플로우 |
-| `/update-codemaps` | 코드베이스 구조 분석 → 아키텍처 코드맵 문서 업데이트 |
-| `/skill-create` | 로컬 git 히스토리 분석 → 코딩 패턴 추출 → SKILL.md 생성 |
-| `/setup-pm` | 선호 패키지 매니저 설정 (npm/pnpm/yarn/bun) |
-| `/shortform` | 숏폼 지식영상 1화 제작 (`/shortform <프로필> <주제>`, planner→critic→builder) |
+
+`commands/`에 12개 있고 목록은 자동 주입된다. 실측상 사용자는 슬래시 대신 자연어로 지시하므로, 커맨드 존재를 전제하지 말고 STEP 1 라우팅으로 처리한다.
 
 ## 스킬
-| 스킬 | 역할 | 호출 방식 |
-|------|------|----------|
-| `code-reviewer` | 코드 리뷰 (context: fork) | 자동 + `/code-reviewer` |
-| `feature-critic` | 기능 필요성 검토 | 자동 + `/feature-critic` |
-| `dispatcher` | 자동 도구 선택 | 자동 + `/dispatcher` |
-| `project-structure-guide` | 폴더구조/네이밍 컨벤션 | 자동 적용 |
-| `verify` | 빌드/타입/린트/테스트 검증 | `/verify` (사용자만) |
-| `checkpoint` | 체크포인트 생성/검증 | `/checkpoint` (사용자만) |
-| `test-coverage` | 테스트 커버리지 분석 | 자동 + `/test-coverage` |
-| `deep-research` | 공공기관·논문 PDF 심층 리서치 | `/deep-research` |
-| `backend-patterns` | Node.js/Express 백엔드 아키텍처 패턴 (API 설계·레이어 분리·DB 접근·보안·캐싱·에러 처리) | 자동 적용 |
-| `frontend-patterns` | React 19 + Vite 7 프론트엔드 개발 패턴 (신규 API·컴포넌트·상태관리·성능·접근성) | 자동 적용 |
-| `coding-standards` | JS/TS/React/Node 범용 코딩 표준·베스트 프랙티스 | 자동 적용 |
-| `postgres-patterns` | PostgreSQL 패턴·쿼리 최적화·스키마 설계·인덱싱 (raw SQL/pg) | pg 감지 시 적용 (package.json에 `pg` 의존성 존재하는 프로젝트 한정, 예: modadam) |
-| `convention-enforcer` | 네이밍·라우팅·권한·상태관리·파일구조 컨벤션 정적 강제 (저장·pre-commit·부팅 시점) | 자동 적용 |
-| `error-prevention-rules` | React 런타임 에러(무한 렌더·race condition·cleanup 누락 등) 사전 차단 정적 검사 14개 룰 | 자동 (.jsx/.tsx 저장 시) |
-| `mobile-first-checker` | 모바일 안티패턴 사전 차단 정적 검사 12개 룰 (드래그·스크롤락·필터·모달 등) | 자동 (.jsx/.tsx/.css/.scss 저장 시) |
-| `video-use` | 대화형 영상 편집 (전사·컷·색보정·오버레이 애니메이션·자막 번인) | 자동 + `/video-use` |
-| `quote-builder` | 프리랜서 견적서 → 인쇄(PDF) 최적화 HTML (비사업자 부가세·3.3% 원천징수, 수정 범위 기준 금액) | 자동 + `/quote-builder` |
-| `shortform` | 숏폼 지식영상 제작 오케스트레이션 (주제→사실검증·대본→비평→조립·TTS·렌더→mp4). 자산 라이브러리·프로필은 `~/project/.claude/shortform/` | `/shortform <프로필> <주제>` |
 
-## 주요 에이전트 (자동 트리거, 스킬 아님)
-| 에이전트 | 역할 | 호출 방식 |
-|---------|------|----------|
-| `proposal-pt-builder` | 정부사업 RFP 제안 PT 생성 (에셋 라이브러리 조합 PPTX, standard/gov 듀얼 트랙) | 자동 트리거("PT 만들어", "제안서 슬라이드" 등) |
-| `pptx-asset-generator` | PPT 에셋 조각(표·차트·프로세스 등) 생성·병합·검증, compose.mjs 확장 (최종 PT 조립은 proposal-pt-builder) | 자동 트리거("pptx 에셋 생성", "compose.mjs 수정" 등) |
-| `shortform-planner` / `shortform-critic` / `shortform-builder` | 숏폼 지식영상 기획·비평·제작 3단 분업 (critic은 읽기전용, 작성자와 분리) | `/shortform` 스킬이 순서대로 호출 |
+스킬 목록·설명은 하네스가 매 세션 자동 주입한다(각 `skills/<name>/SKILL.md`의 `description`이 SSOT). 여기 표로 중복 기재하지 않는다.
 
-전체 에이전트 목록·라우팅 SSOT: `rules/agents.md` (에이전트 추가/변경은 그 파일부터)
+- `code-reviewer`가 실사용 1위(264회). 코드 변경 후 반드시 실행 (STEP 2)
+- `backend-patterns`·`frontend-patterns`·`coding-standards`·`convention-enforcer`·`error-prevention-rules`·`mobile-first-checker`·`project-structure-guide`는 호출형이 아니라 **자동 적용**형이다
+- `postgres-patterns`는 `pg` 의존성이 있는 프로젝트에만 적용 (예: modadam). MySQL 프로젝트에는 적용하지 않음
+- `checkpoint`·`verify`는 `disable-model-invocation: true`라 사용자만 호출 가능
+
+## 에이전트
+
+에이전트 목록·트리거는 하네스가 자동 주입하고, **요청 → 에이전트 라우팅 SSOT는 `rules/agents.md`의 STEP 0/STEP 1 표**다. 에이전트를 추가·변경하면 그 파일부터 갱신한다.
 
 ## Context7 MCP
 외부 라이브러리 사용 시 요청 끝에 `use context7` 추가 → 최신 API 문서 자동 조회

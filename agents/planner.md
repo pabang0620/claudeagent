@@ -122,9 +122,10 @@ tdd-guide는 구현 **이전** RED 테스트 작성 단계에 먼저 배치한�
 > database-reviewer, db-schema-architect, doc-generator, doc-updater, ebook-editor,
 > ebook-student, express-engineer, function-validator, gov-followup-outreach-writer,
 > hwp-generator, jasoseo-writer, lee-wonho, linker-html-to-vue, meeting-minutes-writer,
-> planner, playwright-verify-loop, pptx-asset-generator, proposal-pt-builder,
-> react-specialist, refactor-cleaner, schema-drift-auditor, security-reviewer,
-> shortform-builder, shortform-critic, shortform-planner, skill-evaluator,
+> ops-deployer, planner, playwright-verify-loop, pptx-asset-generator,
+> proposal-pt-builder, react-specialist, refactor-cleaner, repo-janitor,
+> schema-drift-auditor, security-reviewer, shortform-builder, shortform-critic,
+> shortform-planner, skill-evaluator, spreadsheet-editor, study-notes-editor,
 > syntax-validator, tdd-guide, ui-design-system, web-crawler, welcon-advisor
 >
 > **목록 동기화 (drift 재발 방지, CRITICAL)**: 위 하드코딩 목록은 스냅샷일 뿐 SSOT가 아니다.

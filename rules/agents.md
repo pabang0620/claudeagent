@@ -20,10 +20,10 @@
 
 | 반복 영역 | 실측 건수 | 담당 | 필수 주의사항 |
 |----------|---------|------|-------------|
-| 파일·레포 잡무 (커밋·푸시·이동·삭제·정리) | ~30 | general-purpose | 위임 프롬프트에 `git reset` / `git checkout .` / `git clean -f` **명시적 금지 목록**을 반드시 포함 (메모리 `feedback_subagent_git_destructive_incident`). 파일 삭제·덮어쓰기는 사용자 승인 후에만 |
-| 홈서버 운영·배포 (PM2·포트·크론·Tailscale Funnel) | 17 | general-purpose | 신규 서비스 노출 전 `funnel status` 선확인 필수 (메모리 `project_home_server` - boothflow가 note-server를 덮어쓴 사고) |
-| 엑셀·스프레드시트 가공 (xlsx 편집·표 재구성·업로드 템플릿) | 23 | general-purpose | 기존 파일 덮어쓰기 금지, 새 파일로 산출 후 대조 |
-| 개인 학습자료 편집 (정보처리기사 노트 등) | ~20 | general-purpose | - |
+| 파일·레포 잡무 (커밋·푸시·이동·삭제·정리) | ~30 | **repo-janitor** | 금지 명령 목록·커밋 전 파일목록 확인 절차가 에이전트 정의에 내장됨 |
+| 홈서버 운영·배포 (PM2·포트·크론·Tailscale Funnel) | 17 | **ops-deployer** | `funnel status` 선확인, serve 서브커맨드 금지, 외부 검증은 WebFetch가 정의에 내장됨 |
+| 엑셀·스프레드시트 가공 (xlsx 편집·표 재구성·업로드 템플릿) | 23 | **spreadsheet-editor** | 원본 무덮어쓰기·산출 후 대조가 정의에 내장됨 |
+| 개인 학습자료 편집 (정보처리기사 노트 등) | ~20 | **study-notes-editor** | li 개수 불변·계산 재검증·탭 숫자 정합이 정의에 내장됨 |
 | 에이전트·스킬·룰 정의 자체 수정 (메타작업) | ~25 | 오케스트레이터 직접 | 정의파일 1개당 수정 범위를 좁게. 파일 전체 재작성 금지 |
 | 숏폼 제작 부수작업 (캐릭터 SVG·인트로/TTS·파일 재배치) | ~45 | shortform-builder | 렌더 파이프라인 밖 잡무여도 자산 REGISTRY 선조회 원칙은 동일 적용 |
 
@@ -47,7 +47,7 @@
 | **Playwright 검증** | "playwright", "검증", "기능 눌러봐", "개발자모드 켜고", "브라우저 운전", "기능 전체 검증" | playwright-verify-loop |
 | **에이전트 평가** | 에이전트 정의파일 품질 점검·개선 | agent-evaluator-v2 |
 | **스킬 평가** | 스킬(.md) 품질 점검·개선 | skill-evaluator |
-| **숏폼 지식영상 제작** | "숏폼 만들어줘", "쇼츠 1화 뽑아줘", "지식 영상 만들어줘", `/shortform <프로필> <주제>` → 주제발굴·대본·비평·렌더 전체 파이프라인 | `/shortform` 스킬 (planner → critic → builder 순서로 오케스트레이션) |
+| **숏폼 지식영상 제작** | "숏폼 만들어줘", "쇼츠 1화 뽑아줘", "지식 영상 만들어줘", `/shortform <프로필> <주제>` → 주제발굴·대본·비평·렌더 전체 파이프라인 | `/shortform` 스킬 (shortform-planner → shortform-critic → shortform-builder 순서로 오케스트레이션) |
 | **회의록 작성** | "회의록 작성해줘", "업무회의록 만들어줘", "자문위원회 회의록", "녹취록으로 회의록 써줘", "회의 정리해줘" → 요점메모·녹취록 기반 실제 업무회의록 작성 (기존 정본 양식 실측 우선) | meeting-minutes-writer |
 | **외부 웹 리서치** | "크롤링", "조사해줘", "긁어와", "회사/경쟁사 조사", "자료 수집", "있는지 확인" → 외부 사이트·SNS·뉴스·공공기관·학술 정보 수집 (앱 검증 아님) | web-crawler |
 | **타입·문법 검증** | TypeScript 타입 오류·문법·임포트·async/await·데코레이터 정적 검증 (발견·보고만, 수정 안 함) | syntax-validator |
@@ -57,6 +57,14 @@
 | **이북 교육자료 검증** | "학생 시점 검증", "이북 챕터 이해도 검사", "비전공자가 읽고 막히는 곳 찾아줘" → 제로베이스 독자 시점 정독·막힘 보고 (읽기 전용) | ebook-student |
 | **이북 교육자료 수정** | "이북 챕터 개선", "학생 피드백 반영", "1주차-1 스타일로 고쳐줘" → 확정 스타일에 맞춰 본문·요약·퀴즈·체크포인트 연쇄 갱신 | ebook-editor |
 | **후속사업 사전영업 자료** | "후속 사업 소개서", "사전영업 자료", "발주처에 미리 보낼 자료", "고도화 사업 선점" → 정식 RFP 공고 전 선점용 회사소개 겸 어필 콘텐츠 | gov-followup-outreach-writer |
+| **홈서버 운영·배포** | "홈서버에 배포해줘", "PM2 상태", "서비스 안 열려", "크론 등록", "공개 URL 노출" → 서버 운영 전반 (앱 코드 수정 아님) | ops-deployer |
+| **레포 잡무** | "커밋해줘", "푸시해줘", "파일 옮겨줘", "정리해줘", "레포 분리" → git·파일 정리 (코드 내용 수정 아님) | repo-janitor |
+| **엑셀·스프레드시트** | "엑셀 수정해줘", "표로 재구성", "업로드 템플릿 만들어줘", "시트 합쳐줘", xlsx/csv 가공 | spreadsheet-editor |
+| **개인 학습자료 편집** | "암기노트 이해되게 고쳐줘", "노트 설명 보강", "문제탭 정리", "오답풀이 붙여줘" → 자격증 단일 HTML 노트 (이북은 ebook-editor) | study-notes-editor |
+| **문서·코드맵 갱신** | "문서 업데이트", "README 갱신", "코드맵 갱신", 기능 완료 후 문서 반영 | doc-updater |
+| **신규 API 계약 설계** | 새 엔드포인트, 업로드 API, 관리자 API → Zod 스키마 1개에서 백엔드·프론트·타입 동시 생성 | api-contract-designer |
+| **디자인 토큰·CSS 일관성** | "디자인 토큰", "공용 컴포넌트 만들어줘", 하드코딩 컬러·radius 정리 | ui-design-system |
+| **자소서·지원서** | "자소서 써줘", "자기소개서", "지원서 작성" | jasoseo-writer |
 | **판정 대리 (사용자에게 물어보기 직전)** | Claude가 사용자에게 선택·승인·확인을 요청하려는 모든 순간. "이렇게 할까요", "A와 B 중 어느 쪽", "이것도 할까요", 완료 보고 직전, 스코프 확장 검토 시 | lee-wonho |
 | **웰콘 사업 자문 판단** | "자문위원이라면 어떻게 볼까", "이 설계 괜찮은지 검토해줘", "웰콘 사업 관점에서 판단해줘", "과업 범위에 맞는지 봐줘" - 콘텐츠 해외진출 기업정보 구축 기획(1단계) 웰콘 프로젝트 관련 설계 판단 | welcon-advisor |
 
@@ -100,46 +108,13 @@
 
 ## Available Agents
 
-Located in `.claude/agents/` (project-local, not `~/.claude/agents/`):
+실존 에이전트의 이름·역할·트리거는 **하네스가 매 세션 "Available agent types" 목록으로 자동 주입**한다(각 정의파일의 `description` 필드가 원본). 같은 내용을 여기 표로 다시 적으면 상시 로드 컨텍스트만 두 배로 먹고 drift가 생기므로, 목록을 중복 기재하지 않는다.
 
-| Agent | Purpose | Specific Triggers |
-|-------|---------|-----------------|
-| planner | 구현 계획 수립 | 모든 기능 구현/리팩토링 시작 전 |
-| architect | 시스템 설계 | "설계", "구조", 신규 서비스/모듈 |
-| tdd-guide | TDD 워크플로우 | 모든 버그 수정, 신규 기능 |
-| react-specialist | React 19 + Vite 7 | 프론트엔드 코드 작성 |
-| express-engineer | Node.js + Express | 백엔드 코드 작성 |
-| api-contract-designer | API 엔드포인트 SSOT 설계 | 신규 API, 업로드, 관리자 엔드포인트 |
-| db-schema-architect | MySQL 8.0 스키마 설계·마이그레이션 | WeCom DB, 신규 테이블, 마이그레이션 |
-| security-reviewer | 보안 분석 (진단 전용) | 인증/권한/민감 데이터 |
-| build-error-resolver | 빌드 에러 수정 | 빌드/타입 실패 시 |
-| playwright-verify-loop | 브라우저 직접 운전 검증 루프 (개발자모드·콘솔·네트워크 수집 → 리포트 → 수정 위임 → 재검증) | "playwright", "검증", "기능 눌러봐", "개발자모드 켜고" |
-| refactor-cleaner | 코드 정리·불필요 코드 제거 | 리팩토링 실행 |
-| database-reviewer | DB 리뷰 (리뷰 전용) | 기존 쿼리/스키마/인덱스 감사 |
-| doc-updater | 문서·코드맵 업데이트 | 기능 완료 후 |
-| doc-generator | DOCX/한글 문서 생성 (계약서·보고서·제안서) | 문서 생성 요청 시 |
-| ui-design-system | 디자인 시스템·토큰 생성 | 디자인 토큰, 공용 컴포넌트 |
-| jasoseo-writer | 자소서·지원서 작성 | 자소서, 자기소개서 요청 |
-| agent-evaluator-v2 | 에이전트 정의파일 3계층 100점 평가 (정적 린트·트리거 F1 → 9 judge 병렬 → 근거잠금 채점·회귀 비교). v1은 agents-archive/로 퇴역 | 에이전트 생성·수정 후 (표준) |
-| skill-evaluator | 스킬(.md) 품질 평가·개선 (100점 척도) | 스킬 생성·수정 후 |
-| proposal-pt-builder | 정부사업 RFP 제안 PT → 에셋 라이브러리 조합 네이티브 PPTX (standard/gov 듀얼 트랙 자동 인지) | PT/발표자료 요청 시 |
-| pptx-asset-generator | PPT 에셋 "조각"(표·KPI·프로세스·비교표·타임라인·조직도·차트·헤더) python-pptx/OOXML 생성·병합·검증, compose.mjs 파이프라인 확장. 최종 PT 조립은 담당 아님(→ proposal-pt-builder) | "pptx 에셋 생성", "슬라이드 조각 만들어줘", "compose.mjs 수정/디버깅", "매니페스트 등록" |
-| hwp-generator | HWPX 공문서 생성 (계약서·제안요청서·보고서·공문·계획서·회의록) | "hwp 만들어", "계약서", "제안요청서", ".hwpx" 요청 시 |
-| shortform-planner | 숏폼 지식영상 주제 발굴 + 주장별 사실검증(확실성 A/B/C 등급, C면 주제 교체) + 타임코드 대본. 길이는 "채우기"가 아니라 "이해에 필요한 최소" | "숏폼 기획", "쇼츠 주제 잡아줘", `/shortform` 실행 시 |
-| shortform-critic | 숏폼 대본 문장 단위 쳐내기 (읽기 전용, 대본 파일 수정 안 함). "빼면 이해가 안 되나?" 기준으로 삭제·압축 판정. 작성자와 반드시 분리 | planner가 대본 쓴 직후, "필러 잡아줘", "쓸데없는 말 빼줘" |
-| shortform-builder | 확정 대본 → 씬 라이브러리 조립 + edge-tts + RMS 립싱크 + Remotion 렌더 → mp4. REGISTRY 선조회 후 없는 것만 신규 제작·등록 | "숏폼 렌더", "영상 뽑아줘", 대본 확정 후 |
-| meeting-minutes-writer | 요점메모+녹취록(1개 이상)으로 업무회의록 작성. 기존 정본 회의록 양식 실측 우선(추측 금지), 화자 매핑(요점메모↔참석자N, 확신 없으면 확인 필요로 표시), 외부 의견자는 이름 태그+의견1)/2)/3) 번호, 우리측은 주어생략 개조식 서술 | "회의록 작성해줘", "업무회의록 만들어줘", "자문위원회 회의록", "녹취록으로 회의록 써줘" |
-| web-crawler | 외부 웹 리서치 크롤러 (기업 사이트·SNS·뉴스·공공기관·학술, WebSearch→WebFetch→Playwright, 단일타겟 병렬). 앱 검증 playwright-verify-loop와 구별 | "크롤링", "조사해줘", "경쟁사 분석", "자료 수집", "있는지 확인" |
-| syntax-validator | TypeScript 타입·문법·임포트·async/await·데코레이터 정적 검증 (발견·보고 전용, 수정 안 함) | 코드 리뷰 전 사전 검증, 병렬 함수 단위 검증 |
-| function-validator | 함수 비즈니스 로직 정확성·엣지케이스·에러 처리·부작용 정적 분석 (발견·보고 전용, 수정 안 함) | 병렬 파일·함수 단위 기능 검증 |
-| schema-drift-auditor | Zod 스키마 ↔ Repository SQL ↔ 프론트 전송 필드 3축 정합성 정적 검증, Zod strip으로 인한 silent 데이터 유실 탐지 (발견·보고 전용, 수정 안 함, Zod+raw SQL 스택 한정) | "필드가 저장이 안 됨", "값이 null로 들어감", "API로 보냈는데 DB에 반영 안 됨", "필드명 정합성", "스키마 drift" |
-| linker-html-to-vue | LINKER 프로젝트 HTML 1개 → Vue 3 Composition API SFC 1:1 변환 (CSS 무변경, 클래스 기반 표시제어) | "linker 변환", "html to vue", "vue로 변환" |
-| ebook-student | 이북 교육자료를 "완전 제로베이스 비전공자" 시점으로 정독하고 막히는 지점 보고 (발견·보고 전용, 수정 안 함) | "학생 시점 검증", "이북 챕터 이해도 검사" |
-| ebook-editor | ebook-student가 보고한 막힘 지점 해소. 본문 수정 시 요약·퀴즈·체크포인트까지 연쇄 갱신 (저자 확정 스타일 9원칙 준수) | "이북 챕터 개선", "학생 피드백 반영" |
-| gov-followup-outreach-writer | 수행 중 사업 공고문에 명시된 후속 사업을 정식 RFP 전에 선점하는 사전 어필 자료 콘텐츠 작성 (최종 파일 산출은 hwp-generator/doc-generator 위임) | "후속 사업 소개서", "사전영업 자료", "고도화 사업 선점" |
-| lee-wonho | 이원호 의사결정 대리 판정 (아이디어 생성 안 함, 판정만). ADOPT / REJECT / CLAUDE_DISCRETION / ESCALATE 4종 출력, 규칙 ID 71개 | 사용자에게 질문하려는 순간, 선택지 앞에서 멈출 때, 완료 보고 직전, 자발적 확장 검토 시 |
-| welcon-advisor | 웰콘(콘텐츠 해외진출 기업정보 구축 기획 1단계) 프로젝트 전용 AI 자문위원. RFP·실행계획서·자문위원 8인 원문·이성민 교수 자문·실측 DB를 직접 읽고 근거 등급([직접 근거]/[데이터 근거]/[추론]/[미확인])을 밝혀 의견 제시(lee-wonho와 달리 의견 창작 가능). 과업 범위(1단계=기획, 2단계 개발 아님) 이탈 여부도 확인 | "자문위원이라면 어떻게 볼까", "이 설계 괜찮은지 검토해줘", "웰콘 사업 관점에서 판단해줘", "과업 범위에 맞는지 봐줘" |
-| **code-reviewer** | **스킬** (에이전트 아님) | `code-reviewer` 스킬로 호출 |
+- 실제 목록 확인: 자동 주입된 에이전트 목록 또는 `ls .claude/agents/*.md`
+- **역할·트리거 정의를 바꾸려면** 해당 `agents/<name>.md`의 `description`을 고친다(그게 SSOT다)
+- **요청 → 에이전트 라우팅**은 위 STEP 1 표가 담당한다(트리거 한국어 표현 기준, description에 없는 정보)
+- 퇴역한 에이전트는 아래 "아카이빙 이력" 참조
+- `code-reviewer`는 에이전트가 아니라 스킬이다
 
 ---
 
