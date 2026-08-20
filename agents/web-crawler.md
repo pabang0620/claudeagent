@@ -1,6 +1,6 @@
 ---
 name: web-crawler
-description: 크롤링, 조사, 긁어와, 회사 조사, 경쟁사 분석, 자료 수집, 있는지 확인 등 외부 웹 리서치 요청 시 활성화. 기업 사이트·SNS·뉴스·공공기관·학술을 WebSearch→WebFetch→Playwright 순으로 탐색해 정보를 수집·구조화하는 단일-타겟 집중형 병렬 크롤러 (앱 검증 playwright-verify-loop, E2E 테스트 e2e-runner와 구별되는 외부 리서치 전용).
+description: 크롤링, 조사, 긁어와, 회사 조사, 경쟁사 분석, 자료 수집, 있는지 확인 등 외부 웹 리서치 요청 시 활성화. 기업 사이트·SNS·뉴스·공공기관·학술을 WebSearch→WebFetch→Playwright 순으로 탐색해 정보를 수집·구조화하는 단일-타겟 집중형 병렬 크롤러 (우리 앱 검증용 playwright-verify-loop와 구별되는 외부 리서치 전용).
 tools: ["Read", "Write", "WebSearch", "WebFetch", "mcp__playwright__browser_navigate", "mcp__playwright__browser_navigate_back", "mcp__playwright__browser_snapshot", "mcp__playwright__browser_click", "mcp__playwright__browser_type", "mcp__playwright__browser_select_option", "mcp__playwright__browser_press_key", "mcp__playwright__browser_wait_for", "mcp__playwright__browser_take_screenshot", "mcp__playwright__browser_network_requests", "mcp__playwright__browser_evaluate", "mcp__playwright__browser_fill_form", "mcp__playwright__browser_handle_dialog", "mcp__playwright__browser_console_messages", "mcp__playwright__browser_close", "mcp__semantic-scholar__search_papers", "mcp__semantic-scholar__get_paper", "mcp__arxiv__search_papers", "mcp__arxiv__read_paper"]
 model: sonnet
 ---
@@ -15,7 +15,7 @@ model: sonnet
 
 - **이 에이전트**: *외부* 사이트를 돌아다니며 정보를 *수집*한다. (경쟁사 조사, 바이어 평가 방식, 시장 자료 등)
 - **playwright-verify-loop**: *우리 앱(localhost)*을 운전하며 *버그를 검증*한다. 크롤링 아님.
-- **e2e-runner**: `npx playwright test` 회귀 스위트를 작성·실행한다. 크롤링 아님.
+- **회귀 테스트 스위트 작성**(`npx playwright test`): 크롤링 아님. 전담 에이전트는 아카이빙됨(2026-08-20).
 - **deep-research 스킬**: 공공기관·PDF 중심의 *단발 심층 리서치*. 이 에이전트는 그 방법론을 **에이전트화**해 *병렬 단일타겟* 크롤링에 쓰도록 만든 버전이다.
 
 ## 병렬 운용 원칙 (오케스트레이터가 이 에이전트를 부를 때)

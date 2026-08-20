@@ -92,7 +92,7 @@ description **만** 보고 라우팅이 정확한지 정량 측정한다:
 
 1. 합성 사용자 프롬프트 10개 생성:
    - **양성 5개** = 이 에이전트로 라우팅되어야 하는 요청. 그중 2개는 description의 키워드를 쓰지 않는 패러프레이즈
-   - **음성 5개** = 인접 에이전트(`rules/agents.md` 라우팅 테이블의 이웃 — 예: e2e-runner vs playwright-verify-loop, doc-generator vs hwp-generator)로 가야 하는 요청
+   - **음성 5개** = 인접 에이전트(`rules/agents.md` 라우팅 테이블의 이웃 — 예: playwright-verify-loop vs web-crawler, doc-generator vs hwp-generator)로 가야 하는 요청
 2. 각 프롬프트에 대해 "description들만 보고 어느 에이전트가 선택되는가" 판정 → TP/FP/FN 집계 → **F1 산출**
 3. 점수 매핑: F1 1.0→10 / ≥0.9→9 / ≥0.8→8 / ≥0.7→6 / ≥0.6→4 / <0.6→2
 

@@ -1,6 +1,6 @@
 ---
 name: ui-design-system
-description: React 프로젝트의 **디자인 토큰·CSS 스타일 일관성** 전문 에이전트 (project-bootstrapper가 Day 0 오케스트레이션 중 하위 실행 대상으로 호출하는 전문 에이전트 — DB/라우팅/인증 등 프로젝트 전체 셋업은 project-bootstrapper 담당, 이 에이전트는 토큰·컴포넌트·CSS 방법론 감지에 한정). Day 0에 디자인 토큰(color/spacing/radius/shadow/typography/breakpoint/z-index/transition — 8개 카테고리) + 전역 reset + 공용 컴포넌트 13종 + 커스텀 훅 3종을 일괄 생성. 호스트 프로젝트의 CSS 방법론(BEM / CSS Modules / styled-components / Tailwind)을 자동 감지하여 충돌 방지 — styled-components/@emotion 기존 프로젝트도 감지 대상. 이후 스타일 PR에서 하드코딩 컬러/radius/shadow 감지 및 토큰 치환 감사. 디자인 토큰 부재, 컴포넌트 재사용 부재, 스타일 일관성 이슈, 하드코딩 컬러/CSS 방법론 충돌, sed 일괄 수정 위험 시 사전에 적극적으로 활용. WeCom 회고 근거 — 하드코딩 컬러/radius/shadow 전역 sed 일괄 수정 30+회 반복 차단.
+description: React 프로젝트의 **디자인 토큰·CSS 스타일 일관성** 전문 에이전트 (디자인 토큰·공용 컴포넌트·CSS 방법론 감지에 한정. DB/라우팅/인증 등 프로젝트 전체 셋업은 담당 아님 - 전담 project-bootstrapper는 2026-08-20 미사용으로 아카이빙되어 현재 담당 없음). Day 0에 디자인 토큰(color/spacing/radius/shadow/typography/breakpoint/z-index/transition — 8개 카테고리) + 전역 reset + 공용 컴포넌트 13종 + 커스텀 훅 3종을 일괄 생성. 호스트 프로젝트의 CSS 방법론(BEM / CSS Modules / styled-components / Tailwind)을 자동 감지하여 충돌 방지 — styled-components/@emotion 기존 프로젝트도 감지 대상. 이후 스타일 PR에서 하드코딩 컬러/radius/shadow 감지 및 토큰 치환 감사. 디자인 토큰 부재, 컴포넌트 재사용 부재, 스타일 일관성 이슈, 하드코딩 컬러/CSS 방법론 충돌, sed 일괄 수정 위험 시 사전에 적극적으로 활용. WeCom 회고 근거 — 하드코딩 컬러/radius/shadow 전역 sed 일괄 수정 30+회 반복 차단.
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
 model: sonnet
 ---

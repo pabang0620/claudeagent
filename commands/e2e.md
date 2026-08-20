@@ -4,7 +4,11 @@ description: Playwright로 E2E 테스트를 생성하고 실행합니다. 테스
 
 # E2E Command
 
-이 명령은 **e2e-runner** 에이전트를 호출하여 Playwright를 사용한 E2E 테스트를 생성, 유지보수, 실행합니다.
+이 명령은 Playwright `npx playwright test` 스위트를 생성·유지·실행합니다.
+
+> **주의 (2026-08-20)**: 전담 `e2e-runner` 에이전트는 전체 세션 로그 실측 호출 0회로 `agents-archive/`에 아카이빙됐습니다.
+> 이 명령은 아래 방법론을 프롬프트에 실어 `general-purpose` 에이전트에 위임합니다.
+> 브라우저를 직접 눌러보며 오류를 잡는 검증은 이 명령이 아니라 `playwright-verify-loop` 에이전트입니다.
 
 ## 이 명령이 하는 일
 
@@ -25,7 +29,7 @@ description: Playwright로 E2E 테스트를 생성하고 실행합니다. 테스
 
 ## 작동 방식
 
-e2e-runner 에이전트는:
+위임받은 에이전트는:
 
 1. **사용자 플로우 분석** 및 테스트 시나리오 식별
 2. **Playwright 테스트 생성** (Page Object Model 패턴 사용)
@@ -39,7 +43,7 @@ e2e-runner 에이전트는:
 ```
 User: /e2e 마켓 검색 및 조회 플로우 테스트해줘
 
-Agent (e2e-runner):
+Agent (general-purpose, 아래 방법론 주입):
 # E2E 테스트 생성: 마켓 검색 및 조회 플로우
 
 ## 식별된 테스트 시나리오
@@ -337,8 +341,8 @@ CI 파이프라인에 추가:
 
 ## 관련 에이전트
 
-이 명령은 다음 위치의 `e2e-runner` 에이전트를 호출합니다:
-`~/.claude/agents/e2e-runner.md`
+전담 에이전트 정의는 `agents-archive/e2e-runner-retired-2026-08-20.md`에 보관돼 있습니다.
+필요해지면 `agents/`로 되돌리고 `rules/agents.md` 표 2곳에 재등재하십시오.
 
 ## 빠른 명령어
 

@@ -549,9 +549,9 @@ grep -oE "^\.[a-zA-Z0-9_-]+" FILE.css | sort -u
 
 ### Phase 0: 사전 확인
 1. `.husky/pre-commit` 파일 존재 여부 확인
-   - 없음: "husky pre-commit 미설치 — project-bootstrapper 에이전트 호출 권장" warn
+   - 없음: "husky pre-commit 미설치 - 직접 설치 필요(전담 project-bootstrapper는 아카이빙됨)" warn
 2. `backend/scripts/verifyAdminRoutes.js` 존재 확인
-   - 없음: "ce-002 부팅 검증 스크립트 미설치 — project-bootstrapper 에이전트에 생성 요청" error
+   - 없음: "ce-002 부팅 검증 스크립트 미설치 - 직접 생성 필요(전담 project-bootstrapper는 아카이빙됨)" error
 3. 실제 `admin*Routes.js` 파일을 대상으로 한 번 시뮬레이션 실행 후 결과 보고
 
 ### 스킬이 호출될 때

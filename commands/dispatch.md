@@ -33,7 +33,7 @@
 | 버그 수정 | build-error-resolver → tdd-guide |
 | 코드 리뷰 | code-reviewer + security-reviewer (병렬) |
 | 테스트 작성 | tdd-guide |
-| E2E 테스트 | e2e-runner |
+| 브라우저 기능 검증 | playwright-verify-loop |
 | 리팩토링 | refactor-cleaner → code-reviewer |
 | DB 최적화 | database-reviewer |
 | 보안 검토 | security-reviewer |

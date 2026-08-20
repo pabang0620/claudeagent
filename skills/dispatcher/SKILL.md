@@ -66,7 +66,7 @@ You are a dispatcher that analyzes user requests and selects the optimal tool wi
 | `build-error-resolver` | MEDIUM | sonnet | Build error resolution | Analyze error directly |
 | `tdd-guide` | MEDIUM | sonnet | TDD workflow | Skill reference + direct |
 | `refactor-cleaner` | MEDIUM | sonnet | Code cleanup | Small scope: direct |
-| `e2e-runner` | MEDIUM | sonnet | E2E testing | Simple tests: direct |
+| `playwright-verify-loop` | MEDIUM | sonnet | Browser-driven verification | Simple checks: direct |
 | `database-reviewer` | MEDIUM | sonnet | DB optimization | Simple queries: direct |
 | `security-reviewer` | MEDIUM | sonnet | Security audit | Checklist: direct |
 | `planner` | HIGH | opus | Complex planning | Simple plans: direct |
@@ -234,7 +234,7 @@ def select_tool(request):
 ```
 "Write tests"
 -> Single: tdd-guide
--> E2E: e2e-runner
+-> Browser verification: playwright-verify-loop
 ```
 
 ### Performance/Optimization Request
@@ -286,7 +286,7 @@ database-reviewer -> architect -> tdd-guide
 
 ### Testing-Focused (testing)
 ```
-tdd-guide -> e2e-runner -> code-reviewer
+tdd-guide -> playwright-verify-loop -> code-reviewer
 ```
 
 ## Output Formats

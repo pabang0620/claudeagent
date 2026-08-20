@@ -118,17 +118,17 @@ model: sonnet
 tdd-guide는 구현 **이전** RED 테스트 작성 단계에 먼저 배치한다 (Write test first(RED) → 구현(GREEN) 순서, `rules/testing.md`/`rules/git-workflow.md` 참조) — 구현 에이전트보다 항상 앞선 순차.
 
 > **에이전트 이름 규칙**: 반드시 아래 목록에서만 선택 (임의 이름 사용 금지)
-> 허용: architect, planner, security-reviewer, tdd-guide, build-error-resolver,
-> e2e-runner, refactor-cleaner, database-reviewer, schema-drift-auditor, doc-updater,
-> react-specialist, express-engineer, api-contract-designer, db-schema-architect,
-> project-bootstrapper, ui-design-system, jasoseo-writer, flutter-game-builder,
-> agent-evaluator-v2, skill-evaluator, doc-generator, hwp-generator,
-> proposal-pt-builder, pptx-asset-generator, playwright-verify-loop,
-> review-plan-builder, meeting-minutes-writer,
-> web-crawler, syntax-validator, function-validator, linker-html-to-vue
+> 허용: agent-evaluator-v2, api-contract-designer, architect, build-error-resolver,
+> database-reviewer, db-schema-architect, doc-generator, doc-updater, ebook-editor,
+> ebook-student, express-engineer, function-validator, gov-followup-outreach-writer,
+> hwp-generator, jasoseo-writer, lee-wonho, linker-html-to-vue, meeting-minutes-writer,
+> planner, playwright-verify-loop, pptx-asset-generator, proposal-pt-builder,
+> react-specialist, refactor-cleaner, schema-drift-auditor, security-reviewer,
+> shortform-builder, shortform-critic, shortform-planner, skill-evaluator,
+> syntax-validator, tdd-guide, ui-design-system, web-crawler, welcon-advisor
 >
 > **목록 동기화 (drift 재발 방지, CRITICAL)**: 위 하드코딩 목록은 스냅샷일 뿐 SSOT가 아니다.
-> 실제 SSOT는 `rules/agents.md`의 "Available Agents" 표다. 계획서에 에이전트명을 쓰기 전
+> 실제 SSOT는 `rules/agents.md`의 "Available Agents" 표다. (2026-08-20 실측 35종으로 재생성. 아카이빙 이력은 같은 파일 하단 "아카이빙 이력" 표 참조) 계획서에 에이전트명을 쓰기 전
 > 반드시 그 표(또는 `ls .claude/agents/*.md` 실제 파일 목록)와 대조해 실존 여부를 확인하고,
 > 이 목록이 낡았다고 판단되면 계획 문서에 그 사실을 명시해 오케스트레이터에게 알린다.
 >
