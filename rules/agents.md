@@ -34,39 +34,39 @@
 | **기능 구현** | "만들어", "구현해", "추가해", "개발해", 새 API/컴포넌트/페이지 | planner → 전문 에이전트 |
 | **버그 수정** | "안 돼", "에러", "고쳐", "수정해", "버그" | tdd-guide → 전문 에이전트 |
 | **리팩토링** | "리팩토링", "정리", "개선", "분리해" | planner → refactor-cleaner |
-| **아키텍처** | "설계", "구조", "어떻게 만들까", "방향" | architect |
-| **DB 관련** | 테이블 설계, 쿼리, 마이그레이션, 스키마 | database-reviewer |
+| **아키텍처** | "어떻게 만들까" | architect |
+| **DB 관련** | 기존 쿼리·인덱스·스키마 감사 → database-reviewer / 신규 스키마 설계·마이그레이션 파일 생성 → db-schema-architect | database-reviewer 또는 db-schema-architect |
 | **보안 관련** | 인증, 권한, API 키, 사용자 입력 처리 | security-reviewer |
 | **빌드 에러** | 빌드 실패, 타입 에러, 컴파일 에러 | build-error-resolver |
 | **프론트엔드** | React 컴포넌트, hooks, 상태관리, UI | react-specialist |
 | **백엔드** | Express 라우터, 미들웨어, API 엔드포인트 | express-engineer |
 | **HWPX 문서 생성** | 계약서, 용역계약서, 제안요청서, 보고서, 공문, 기안문, 계획서, 회의록 → .hwpx 파일 생성 | hwp-generator |
 | **DOCX 문서 생성** | 계약서, 보고서, 제안서, 공문서 → .docx 파일 생성 (md/README/마크다운은 해당 없음) | doc-generator |
-| **PT/발표자료** | "PT 만들어", "제안서 슬라이드", "발표자료", RFP 제안 발표자료, PPTX | proposal-pt-builder |
-| **PPTX 에셋 조각 생성** | "pptx 에셋 생성", "슬라이드 조각 만들어줘", "python-pptx로 생성", "compose.mjs 수정/디버깅", "매니페스트 등록", "audit.py 실패 수정" → 에셋 라이브러리 조각 생성·병합·검증 (최종 PT 조립은 proposal-pt-builder) | pptx-asset-generator |
-| **Playwright 검증** | "playwright", "검증", "기능 눌러봐", "개발자모드 켜고", "브라우저 운전", "기능 전체 검증" | playwright-verify-loop |
+| **PT/발표자료** | RFP 제안 발표자료, PPTX | proposal-pt-builder |
+| **PPTX 에셋 조각 생성** | 에셋 라이브러리 조각 생성·병합·검증 (최종 PT 조립은 proposal-pt-builder) | pptx-asset-generator |
+| **Playwright 검증** | "기능 눌러봐", "브라우저 운전" | playwright-verify-loop |
 | **에이전트 평가** | 에이전트 정의파일 품질 점검·개선 | agent-evaluator-v2 |
 | **스킬 평가** | 스킬(.md) 품질 점검·개선 | skill-evaluator |
 | **숏폼 지식영상 제작** | "숏폼 만들어줘", "쇼츠 1화 뽑아줘", "지식 영상 만들어줘", `/shortform <프로필> <주제>` → 주제발굴·대본·비평·렌더 전체 파이프라인 | `/shortform` 스킬 (shortform-planner → shortform-critic → shortform-builder 순서로 오케스트레이션) |
-| **회의록 작성** | "회의록 작성해줘", "업무회의록 만들어줘", "자문위원회 회의록", "녹취록으로 회의록 써줘", "회의 정리해줘" → 요점메모·녹취록 기반 실제 업무회의록 작성 (기존 정본 양식 실측 우선) | meeting-minutes-writer |
-| **외부 웹 리서치** | "크롤링", "조사해줘", "긁어와", "회사/경쟁사 조사", "자료 수집", "있는지 확인" → 외부 사이트·SNS·뉴스·공공기관·학술 정보 수집 (앱 검증 아님) | web-crawler |
+| **회의록 작성** | 요점메모·녹취록 기반 실제 업무회의록 작성 (기존 정본 양식 실측 우선) | meeting-minutes-writer |
+| **외부 웹 리서치** | "조사해줘", "회사/경쟁사 조사" → 외부 사이트·SNS·뉴스·공공기관·학술 정보 수집 (앱 검증 아님) | web-crawler |
 | **타입·문법 검증** | TypeScript 타입 오류·문법·임포트·async/await·데코레이터 정적 검증 (발견·보고만, 수정 안 함) | syntax-validator |
 | **함수 로직 검증** | 특정 함수 비즈니스 로직·엣지케이스·에러 처리·부작용 정적 검증 (발견·보고만) | function-validator |
-| **스키마 필드명 정합성 검증** | "필드가 저장이 안 됨", "값이 null로 들어감", "API로 보냈는데 DB에 반영 안 됨", Zod 스키마 검증, 필드명 정합성, 스키마 drift → Zod↔Repository SQL↔프론트 전송필드 3축 대조 (발견·보고만, Zod+raw SQL 스택 한정) | schema-drift-auditor |
-| **LINKER HTML→Vue 변환** | "linker 변환", "html to vue", "linker 컴파일", "vue로 변환" → HTML 1개를 Vue 3 SFC로 1:1 변환 | linker-html-to-vue |
-| **이북 교육자료 검증** | "학생 시점 검증", "이북 챕터 이해도 검사", "비전공자가 읽고 막히는 곳 찾아줘" → 제로베이스 독자 시점 정독·막힘 보고 (읽기 전용) | ebook-student |
-| **이북 교육자료 수정** | "이북 챕터 개선", "학생 피드백 반영", "1주차-1 스타일로 고쳐줘" → 확정 스타일에 맞춰 본문·요약·퀴즈·체크포인트 연쇄 갱신 | ebook-editor |
-| **후속사업 사전영업 자료** | "후속 사업 소개서", "사전영업 자료", "발주처에 미리 보낼 자료", "고도화 사업 선점" → 정식 RFP 공고 전 선점용 회사소개 겸 어필 콘텐츠 | gov-followup-outreach-writer |
-| **홈서버 운영·배포** | "홈서버에 배포해줘", "PM2 상태", "서비스 안 열려", "크론 등록", "공개 URL 노출" → 서버 운영 전반 (앱 코드 수정 아님) | ops-deployer |
-| **레포 잡무** | "커밋해줘", "푸시해줘", "파일 옮겨줘", "정리해줘", "레포 분리" → git·파일 정리 (코드 내용 수정 아님) | repo-janitor |
-| **엑셀·스프레드시트** | "엑셀 수정해줘", "표로 재구성", "업로드 템플릿 만들어줘", "시트 합쳐줘", xlsx/csv 가공 | spreadsheet-editor |
-| **개인 학습자료 편집** | "암기노트 이해되게 고쳐줘", "노트 설명 보강", "문제탭 정리", "오답풀이 붙여줘" → 자격증 단일 HTML 노트 (이북은 ebook-editor) | study-notes-editor |
-| **문서·코드맵 갱신** | "문서 업데이트", "README 갱신", "코드맵 갱신", 기능 완료 후 문서 반영 | doc-updater |
+| **스키마 필드명 정합성 검증** | Zod 스키마 검증, 필드명 정합성, 스키마 drift → Zod↔Repository SQL↔프론트 전송필드 3축 대조 (발견·보고만, Zod+raw SQL 스택 한정) | schema-drift-auditor |
+| **LINKER HTML→Vue 변환** | HTML 1개를 Vue 3 SFC로 1:1 변환 | linker-html-to-vue |
+| **이북 교육자료 검증** | 제로베이스 독자 시점 정독·막힘 보고 (읽기 전용) | ebook-student |
+| **이북 교육자료 수정** | 확정 스타일에 맞춰 본문·요약·퀴즈·체크포인트 연쇄 갱신 | ebook-editor |
+| **후속사업 사전영업 자료** | 정식 RFP 공고 전 선점용 회사소개 겸 어필 콘텐츠 | gov-followup-outreach-writer |
+| **홈서버 운영·배포** | "공개 URL 노출" → 서버 운영 전반 (앱 코드 수정 아님) | ops-deployer |
+| **레포 잡무** | "파일 옮겨줘" → git·파일 정리 (코드 내용 수정 아님) | repo-janitor |
+| **엑셀·스프레드시트** | xlsx/csv 가공 | spreadsheet-editor |
+| **개인 학습자료 편집** | 자격증 단일 HTML 노트 (이북은 ebook-editor) | study-notes-editor |
+| **문서·코드맵 갱신** | "README 갱신", "코드맵 갱신", 기능 완료 후 문서 반영 | doc-updater |
 | **신규 API 계약 설계** | 새 엔드포인트, 업로드 API, 관리자 API → Zod 스키마 1개에서 백엔드·프론트·타입 동시 생성 | api-contract-designer |
-| **디자인 토큰·CSS 일관성** | "디자인 토큰", "공용 컴포넌트 만들어줘", 하드코딩 컬러·radius 정리 | ui-design-system |
-| **자소서·지원서** | "자소서 써줘", "자기소개서", "지원서 작성" | jasoseo-writer |
+| **디자인 토큰·CSS 일관성** | "공용 컴포넌트 만들어줘", 하드코딩 컬러·radius 정리 | ui-design-system |
+| **자소서·지원서** | "자소서 써줘" | jasoseo-writer |
 | **판정 대리 (사용자에게 물어보기 직전)** | Claude가 사용자에게 선택·승인·확인을 요청하려는 모든 순간. "이렇게 할까요", "A와 B 중 어느 쪽", "이것도 할까요", 완료 보고 직전, 스코프 확장 검토 시 | lee-wonho |
-| **웰콘 사업 자문 판단** | "자문위원이라면 어떻게 볼까", "이 설계 괜찮은지 검토해줘", "웰콘 사업 관점에서 판단해줘", "과업 범위에 맞는지 봐줘" - 콘텐츠 해외진출 기업정보 구축 기획(1단계) 웰콘 프로젝트 관련 설계 판단 | welcon-advisor |
+| **웰콘 사업 자문 판단** | 콘텐츠 해외진출 기업정보 구축 기획(1단계) 웰콘 프로젝트 관련 설계 판단 | welcon-advisor |
 
 ### STEP 1-1: 평가 에이전트 사용 제약 (agent-evaluator-v2 / skill-evaluator)
 
@@ -93,6 +93,7 @@
 
 > **`model: sonnet` 단일 정책** — 사용자 지시(2026-07-02): "소넷 외에는 쓰지 않는다."
 > 모든 에이전트 정의파일의 `model:` 필드는 `sonnet` 고정. opus/haiku/fable 절대 금지.
+> (이건 **정의파일 필드** 기준이다. 막혔을 때 `Agent` 도구의 `model` 파라미터로 그 작업 1건만 승인 후 상향하는 것은 별개로 허용 - `rules/performance.md`)
 >
 > **신규 에이전트 생성 시 필수 체크리스트** (공식 문서 기준):
 > - [ ] frontmatter: `name`, `description`, `tools`, `model` 4개 필드 모두 포함

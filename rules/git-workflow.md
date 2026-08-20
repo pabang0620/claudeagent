@@ -32,25 +32,7 @@ git log --oneline A..B   # A에는 없고 B에만 있는 커밋 — 동일 메�
 
 사례: `b4dfe54` `cdffec2` `0deb2e9` — 동일 메시지·동일 타임스탬프(2026-04-29 08:58:55)·동일 diff가 `claude/claude_w`/`claude_img` 등 서로 다른 브랜치에 각각 커밋됨.
 
-## Feature Implementation Workflow
+## 기능 구현 워크플로우
 
-1. **Plan First**
-   - Use **planner** agent to create implementation plan
-   - Identify dependencies and risks
-   - Break down into phases
-
-2. **TDD Approach**
-   - Use **tdd-guide** agent
-   - Write tests first (RED)
-   - Implement to pass tests (GREEN)
-   - Refactor (IMPROVE)
-   - Verify 80%+ coverage
-
-3. **Code Review**
-   - Use **code-reviewer** agent immediately after writing code
-   - Address CRITICAL and HIGH issues
-   - Fix MEDIUM issues when possible
-
-4. **Commit & Push**
-   - Detailed commit messages
-   - Follow conventional commits format
+`rules/agents.md`의 "표준 워크플로우" 섹션이 SSOT다(planner → 전문 에이전트 → code-reviewer).
+테스트 커버리지 수치는 개발 중 강제하지 않는다 - `rules/testing.md` 참조.

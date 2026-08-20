@@ -2,27 +2,11 @@
 
 ## Immutability (CRITICAL)
 
-ALWAYS create new objects, NEVER mutate:
-
-```javascript
-// WRONG: Mutation
-function updateUser(user, name) {
-  user.name = name  // MUTATION!
-  return user
-}
-
-// CORRECT: Immutability
-function updateUser(user, name) {
-  return {
-    ...user,
-    name
-  }
-}
-```
+객체를 mutate하지 않고 항상 새 객체를 만든다. 코드 예시는 `coding-standards` 스킬의 "불변성 패턴" 참조.
 
 ## File Organization
 
-> 판정 기준 SSOT는 `~/.claude/agents/lee-wonho.md`. 파일 줄 수 = 규칙 I-06, 지역성 우선 = 규칙 I-01.
+> 판정 기준 SSOT는 `agents/lee-wonho.md`. 파일 줄 수 = 규칙 I-06, 지역성 우선 = 규칙 I-01.
 
 파일 줄 수:
 - 최대 500줄. 500줄을 초과하면 개발 도중이라도 즉시 분할한다. 단 분할 후 연동과 동작이 정상인지 확인한다.
@@ -71,18 +55,7 @@ try {
 
 ## Input Validation
 
-ALWAYS validate user input:
-
-```typescript
-import { z } from 'zod'
-
-const schema = z.object({
-  email: z.string().email(),
-  age: z.number().int().min(0).max(150)
-})
-
-const validated = schema.parse(input)
-```
+사용자 입력은 항상 zod로 검증한다. 스키마 작성 예시는 `coding-standards` 스킬 참조.
 
 ## Code Quality Checklist
 

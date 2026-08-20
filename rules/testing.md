@@ -1,6 +1,6 @@
 # Testing Requirements
 
-> 판정 기준 SSOT는 `~/.claude/agents/lee-wonho.md`. 테스트 전략(유닛/통합 범위·커버리지 수치)은 CLAUDE_DISCRETION 목록에 해당 - 사용자에게 묻지 말고 Claude가 필요하다고 판단하면 넣는다.
+> 판정 기준 SSOT는 `agents/lee-wonho.md`. 테스트 전략(유닛/통합 범위·커버리지 수치)은 CLAUDE_DISCRETION 목록에 해당 - 사용자에게 묻지 말고 Claude가 필요하다고 판단하면 넣는다.
 
 ## 실제 워크플로우
 
