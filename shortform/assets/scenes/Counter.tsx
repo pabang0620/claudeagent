@@ -27,6 +27,9 @@ export interface CountUpProps {
   suffix?: string;
   width?: number;
   align?: 'left' | 'center';
+  /** 정수부에 천 단위 구분 쉼표를 넣는다(예: 9096 -> "9,096"). 기본 false(기존 동작 유지,
+   *  general-ep06에서 큰 숫자를 정확히 표기하려고 추가한 옵션 - REGISTRY 규칙 6: 기본값 불변) */
+  commas?: boolean;
   style?: React.CSSProperties;
 }
 
@@ -35,12 +38,15 @@ const easeOut = (t: number) => 1 - Math.pow(1 - t, 3);
 export const CountUp: React.FC<CountUpProps> = ({
   x, y, to, from = 0, at = 0, duration = 30, frame,
   size = 132, color = C.coral, digits = 0, prefix = '', suffix = '',
-  width = 300, align = 'center', style,
+  width = 300, align = 'center', commas = false, style,
 }) => {
   const t = Math.max(0, Math.min(1, (frame - at) / Math.max(1, duration)));
   const v = from + (to - from) * easeOut(t);
   const pop = 1 + 0.16 * Math.max(0, 1 - (frame - at) / 8);
   if (frame < at) return null;
+  const text = commas
+    ? v.toLocaleString('en-US', { minimumFractionDigits: digits, maximumFractionDigits: digits })
+    : v.toFixed(digits);
   return (
     <div
       style={{
@@ -51,7 +57,7 @@ export const CountUp: React.FC<CountUpProps> = ({
         ...style,
       }}
     >
-      {prefix}{v.toFixed(digits)}{suffix}
+      {prefix}{text}{suffix}
     </div>
   );
 };

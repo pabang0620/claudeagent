@@ -1,0 +1,8 @@
+[
+  {"id": "s2", "text": "Whoa, why does my leg feel like pins and needles?", "rate": "+30%", "pitch": "+35Hz"},
+  {"id": "s3", "text": "Sit on it too long, and the nerve inside your leg gets squeezed - signals can't get through cleanly."},
+  {"id": "s4", "text": "The second the pressure's off, the nerve starts firing again - just unevenly, all at once, and that's the tingle."},
+  {"id": "s5", "text": "This happens a lot when you sit cross-legged for too long - that's exactly the position that presses on the nerve behind your knee."},
+  {"id": "s6", "text": "There's an old Korean folk trick - wet your finger, draw a cross on your forehead, and the numbness is supposed to go away. Turns out the nerve was just about to reset on its own - the cross gets the credit."},
+  {"id": "s7", "text": "Give it about a minute, and the nerve settles back down - the tingling fades on its own."}
+]

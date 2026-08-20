@@ -8,7 +8,8 @@
 ## 폴더 구조
 
 ```
-episodes/<프로필>-ep<NN>-<주제슬러그>/     예) kids-ep02-giraffe-neck, science-ep01-quantum
+episodes/<프로필>-ep<NN>-<주제슬러그>/     숏폼 시리즈. 예) kids-ep02-giraffe-neck, science-ep01-quantum
+episodes/<프로필>-long<NN>-<주제슬러그>/   롱폼 시리즈. 예) general-long01-stopped-clock-illusion
 ├── script-ko.json        구간별 한국어 대본 (tts.py 입력)
 ├── script-en.json        구간별 영어 대본 (tts.py 입력)
 ├── public/
@@ -30,6 +31,41 @@ episodes/<프로필>-ep<NN>-<주제슬러그>/     예) kids-ep02-giraffe-neck, 
 ```
 
 이 채널은 한국어 채널(굼구미)과 영어 채널(Whymo)을 별도 운영하므로 **에피소드 1개의 완성 산출물은 mp4 2개**다. 한쪽만 렌더하고 끝내지 않는다. 상세 근거는 `.claude/skills/shortform/references/pipeline.md`.
+
+## 포맷 (9:16 / 16:9) 및 이중 번호 체계 (2026-08-11 확정)
+
+**숏폼 시리즈와 롱폼 시리즈는 완전히 분리된 번호 체계다.** 롱폼 1화는 숏폼 6화 다음(7화)이
+아니라 롱폼 자체 카운트로 1부터 시작한다. 두 시리즈는 서로 다른 폴더명 prefix로 구분하고,
+각각 1부터 별도로 센다.
+
+| 구분 | 폴더명 | 포맷 | 길이 | 배포 파일명 | 배포 위치 |
+|---|---|---|---|---|---|
+| 숏폼 시리즈 | `<프로필>-ep<NN>-<슬러그>/` | 9:16 | 쇼츠 길이 | `[N화] 제목.mp4` / `[Ep. N] 제목.mp4` | `shorts/ko/`, `shorts/en/` |
+| 롱폼 시리즈 | `<프로필>-long<NN>-<슬러그>/` | 16:9 | 3~4분 | `[N화] 제목.mp4` / `[Ep. N] 제목.mp4` | `shorts/video/ko/`, `shorts/video/en/` |
+
+배포 파일명의 `[N화]`/`[Ep. N]` 표기 자체는 두 시리즈가 동일하지만, 배포 폴더(`shorts/ko|en/`
+vs `shorts/video/ko|en/`)가 문맥으로 시리즈를 구분해주므로 **숫자는 시리즈별로 각각 1부터
+새로 센다** - 숏폼 6화 다음 폴더가 자동으로 "7화"가 되지 않는다.
+
+**포맷은 프로필과 별개 축이다(2026-08-10 확정).** 세로(9:16, 유튜브 쇼츠·인스타 릴스)와 가로(16:9,
+유튜브 롱폼) 중 어떤 배경·브랜드 자산(`PlainBg`/`Intro`/`Outro`/`TitleCard`)을 쓸지의 문제이지,
+프로필(general/kids/science 등 - 말투·TTS·자막 톤) 선택과는 무관하다. 같은 폴더 구조 안에서
+`src/Root.tsx` 가 어떤 `width`/`height`(`W`/`H` vs `W_LANDSCAPE`/`H_LANDSCAPE`, `assets/theme.ts`)를,
+`src/Episode.tsx` 가 어떤 배경·브랜드 컴포넌트(세로 기본값 vs `assets`의 `*Landscape` 16:9 자산,
+`assets/REGISTRY.md` "포맷" 절 참고)를 쓰는지로만 구분한다. 캐릭터·소품·씬 컴포넌트(Caption,
+Effects 등)는 화면 좌표를 들고 있지 않아 포맷과 무관하게 그대로 재사용된다.
+
+| 화 | 시리즈 | 포맷 |
+|---|---|---|
+| general-ep01-untitled | 숏폼 1화 | 9:16 |
+| general-ep02-wrinkly-fingers | 숏폼 2화 | 9:16 |
+| general-ep03-recorded-voice | 숏폼 3화 | 9:16 |
+| general-ep04-apple-browning | 숏폼 4화 | 9:16 |
+| general-ep05-shaken-soda | 숏폼 5화 | 9:16 |
+| general-ep06-dark-night-sky | 숏폼 6화 | 9:16 |
+| general-long01-stopped-clock-illusion | 롱폼 1화 | 16:9 |
+
+새 화를 만들 때는 이 표에 시리즈 구분과 포맷을 함께 기록한다.
 
 ## 제작 순서
 

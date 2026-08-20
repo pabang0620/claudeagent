@@ -788,3 +788,174 @@ TTS 기본값(`+20%/+30Hz`, `+20%/+15Hz`)은 s3~s5(설명 톤)에 그대로 유�
 - v6/v7/v8 mp4·프레임 폴더는 삭제하지 않고 `out/`에 유지(회귀 비교용).
 - `public/audio/`의 중간 산출물(mp3·words.json·mouth.json)은 v9 파라미터로 덮어썼다(이 파일들은
   버전을 남기는 최종 산출물이 아니라 최신 렌더 입력이므로 원칙상 항상 최신 상태 하나만 유지).
+
+## 10. 제목 카드 추가 (v10)
+
+인트로 직후 ~ 본편(s1) 시작 전에 그 화의 제목을 1.8초간 띄우는 표준 요소를 추가했다.
+앞으로 모든 화에 들어가는 재사용 자산이라 `assets/scenes/`(공용 라이브러리)에 만들고
+1화에 처음 통합했다.
+
+### 10-1. 신규 컴포넌트
+
+`assets/scenes/TitleCard.tsx` (`TitleCard`, `TITLE_CARD_FRAMES = 54`).
+
+- **props**: `title`(필수, 화면 문구 - 하드코딩 금지) `frame`(생략 시 `useCurrentFrame()`)
+  `durationInFrames`(기본 54 = 1.8초) `bgTop` `bgBottom` `textColor` `accent` `fontSize`
+  `showCharacter`(기본 true) `pose`(기본 `POINT_UP`).
+- **디자인 방향(절제된 톤)**: 오늘 확정된 Intro의 `fade_minimal`(`Intro.tsx` 주석의
+  "fade_minimal - 4후보 비교 확정" 참고)을 그대로 따랐다 - 스프링 오버슛·회전 팝인을 전혀
+  쓰지 않고 전 요소(accent 점 -> 제목 텍스트 -> 밑줄 -> 캐릭터)를 `progress()` 기반
+  opacity + 14~22px 수준의 미세한 이동만으로 등장시켰다. 퇴장도 Intro의 `outP`(마지막
+  10프레임 동안 배경색 오버레이로 덮는 방식)를 그대로 재사용해 다음 장면(SceneSwitcher
+  첫 씬의 자체 fade-in)과 흰색으로 자연스럽게 이어지게 했다.
+- **줄바꿈 대응**: 제목 문자열 길이가 언어별로 다르므로(KO 14자 무공백, EN 34자) 고정
+  줄바꿈을 강제하지 않고 `maxWidth: 900px` CSS 자연 줄바꿈에 맡겼다. accent 점·제목·밑줄을
+  `flex-direction: column`으로 쌓아 제목이 1줄이든 2줄이든 아래 요소가 자동으로 밀려나게
+  했다 - 줄 수가 언어마다 달라도 겹치지 않는다(REGISTRY 규칙 준수, 실제 렌더로 KO 2줄/EN
+  2줄 모두 확인).
+- **캐릭터**: 기존 포즈 `POINT_UP`(pointUp, "위를 올려다보며 오른팔로 가리킨다")을 그대로
+  재사용했다. 새 포즈를 만들지 않았다. 제목을 가리키는 제스처라 문맥과 맞고, 화면 하단에
+  캐릭터가 서서 세로 공간(1화에서 실제 지적된 "하단 여백 과다" 문제)을 채운다.
+- **REGISTRY 규칙 5 예외**: 이 컴포넌트는 SceneSwitcher 배열에 여러 번 재사용되는 게
+  아니라 Intro/Outro와 같은 자리(고정 브랜드성 구간)에 자체 `<Sequence>`로 한 번만 쓰인다.
+  그래서 Intro/Outro와 동일하게 `useCurrentFrame()`을 직접 쓰는 것을 허용했다(파일 상단
+  주석에 이유를 명시). `frame` prop을 명시적으로 넘기면 그 값이 우선하므로 Catalog.tsx
+  등에서 특정 프레임을 고정해 미리 볼 때는 `frame`을 넘겨 쓸 수 있다.
+
+### 10-2. REGISTRY 등록
+
+`assets/REGISTRY.md`의 "3. 씬 컴포넌트" 표에 `TitleCard` 행을 추가했다(경로 `scenes/TitleCard.tsx`,
+"표준 요소 - 모든 화 공용" 명시, props 전체 나열, 최초 에피소드 `general-ep01`).
+`assets/scenes/index.ts` 배럴에 `TitleCard`/`TITLE_CARD_FRAMES` export를 추가했고,
+`src/Catalog.tsx`에도 Intro/Outro 옆에 `<Sequence from={28}><TitleCard title="..." /></Sequence>`
+데모 칸을 추가했다(카탈로그 세로 길이가 늘어나 `CAT_H`를 4460 -> 4820으로 조정).
+`npx tsc --noEmit`(shortform 루트) 통과, 카탈로그 재렌더로 기존 자산 회귀 없음을 육안 확인했다.
+
+### 10-3. 1화 통합
+
+- `episodes/general-ep01-untitled/src/strings.ts`에 `title` 키 추가 - KO "아이스크림 먹다
+  이마가 아픈 이유", EN "Why Ice Cream Hurts Your Forehead" (`10-title.md` 확정본 "후보 A"
+  그대로, 새로 짓지 않았다).
+- `Episode.tsx`: `Intro`(0~`INTRO_FRAMES`) 다음, 본편 `SceneSwitcher` Sequence 앞에
+  `<Sequence from={INTRO_FRAMES} durationInFrames={TITLE_CARD_FRAMES}><TitleCard
+  title={STRINGS[locale].title} /></Sequence>`를 끼워 넣었다. 이후 본편 Sequence와 Outro
+  Sequence의 `from`을 전부 `INTRO_FRAMES + TITLE_CARD_FRAMES`만큼 뒤로 밀었고,
+  `totalFramesFor(locale)`에도 `TITLE_CARD_FRAMES`를 더했다. s1~s5 대본 문장, 효과음
+  타이밍 상수(`BITE_PEAK_LOCAL` 등은 각 Sequence 내부의 **로컬** 프레임 기준이라 변경 불필요),
+  기존 자산(Character/Intro/Outro/IceCream/HeadNerveDiagram)은 전혀 건드리지 않았다.
+
+### 10-4. 재렌더 (v10)
+
+`npx remotion render --public-dir=episodes/general-ep01-untitled/public
+episodes/general-ep01-untitled/src/index.ts <CompositionId> <출력경로>` (shortform 루트,
+v6~v9와 동일 절차).
+
+| | 계산값(사전) | 렌더 실측(ffprobe) |
+|---|---|---|
+| ko `EpisodeKo` | 822프레임 = 27.400초 | nb_frames=822, duration=27.400000 (완전 일치) |
+| en `EpisodeEn` | 856프레임 = 28.533초 | nb_frames=856, duration=28.533333 (완전 일치) |
+
+프레임 수 계산은 `INTRO_FRAMES(69) + TITLE_CARD_FRAMES(54) + mainTotal + OUTRO_FRAMES(90)`이고,
+`mainTotal`(s1~s5, `SCENE_PAD` 포함)은 v9와 완전히 동일하다(TitleCard가 s1~s5 구간 길이·패딩에
+전혀 개입하지 않으므로) - ko 609f, en 643f로 v9 report(9-6절)의 값과 같다. 언어 간 길이 차이는
+여전히 정상이며 맞추지 않았다(en이 ko보다 약 1.13초 더 김, s2 실측 차이가 그대로 반영).
+
+- ko: `EpisodeKo` -> `out/episode-ko-v10.mp4` (822프레임 렌더·인코딩 완료)
+- en: `EpisodeEn` -> `out/episode-en-v10.mp4` (856프레임 렌더·인코딩 완료)
+- v6~v9 mp4는 삭제하지 않고 `out/`에 그대로 유지했다.
+
+### 10-5. 대표 프레임 검수 (언어별, 재렌더 직후 새 폴더에서 추출 - 캐시 재사용 없음)
+
+`out/frames-ko-v10/`, `out/frames-en-v10/`를 이번 렌더 직후 새로 생성해(`rm -rf` 후 `mkdir`)
+추출했고, `ls`로 방금 갱신됐음을 확인한 뒤 Read했다. 제목 카드 구간(69~122, 언어 공통 - TitleCard
+길이·타이밍이 언어 무관 고정값이라 KO/EN 시작·끝 프레임이 동일하다)은 촘촘히, 나머지 s1~s5·
+아웃트로는 오프셋만 확인하는 수준으로 가볍게 훑었다.
+
+**한국어 (`episode-ko-v10.mp4`)**
+
+- [x] **제목 카드 등장(f004~f008, 프레임 69/81/96)**: f004(로컬0)는 완전한 빈 배경(opacity 0,
+  의도된 페이드인 시작점) - 실제로 Read해서 순백에 가까운 하늘색 그라데이션만 있음을 확인.
+  f006(로컬12)에서 제목 텍스트 "아이스크림 먹다 이마가 아픈 / 이유"가 2줄로 완전히 선명하게
+  보이고 accent 점은 보이는데 밑줄·캐릭터는 아직 없음(밑줄 시작 프레임 16, 캐릭터 시작 10이라
+  캐릭터는 opacity 0.14로 거의 안 보임) - 설계값과 일치. f008(로컬27)에서 밑줄이 거의 다
+  그려졌고(barP 0.79) 캐릭터(POINT_UP 포즈, 오른팔 위로 뻗어 가리키는 자세)가 완전히 나타남을
+  직접 확인.
+- [x] **제목 카드 퇴장 -> s1 전환(f010~f014, 프레임 113/118/122/123/130)**: f010(로컬44,
+  outP=0 시작점)까지는 완전 선명, f011(로컬49)부터 회색조로 페이드되기 시작, f012(로컬53,
+  마지막 프레임)는 거의 흰색까지 페이드됨을 육안 확인. f013(글로벌123, 본편 Sequence 첫
+  프레임)은 완전한 흰 화면(SceneSwitcher 자체 fade-in 0프레임 지점) - 두 흰 배경이 자연스럽게
+  이어져 색이 튀는 컷 없음을 확인. f014(로컬7)에서 아이스크림 장면이 이미 선명하게 보여
+  전환이 8프레임 안에 매끄럽게 끝남을 확인.
+- [x] **자막(제목)이 화면 밖으로 나가지 않는가**: f006~f012 전체에서 "아이스크림 먹다 이마가
+  아픈" / "이유" 2줄 모두 좌우 여백이 넉넉함(maxWidth 900px, 화면폭 1080px)을 직접 확인 -
+  잘림 없음.
+- [x] **장면 전환 캐릭터 잔상 / 등장 전 요소 잔상**: f004(빈 배경)에서 캐릭터·텍스트 어느 것도
+  점처럼 남지 않음(전부 opacity 0으로 시작, scale 0 사용 안 함)을 확인.
+- [x] **요소끼리 겹침 없음**: f006~f008에서 accent 점 - 텍스트 - 밑줄 - 캐릭터가 flex column으로
+  쌓여 서로 겹치지 않음을 확인(텍스트가 2줄이 됐어도 밑줄·캐릭터가 자동으로 아래로 밀림).
+- [x] **화면 하단 여백**: f008에서 캐릭터(POINT_UP, size 700)가 화면 하단부(대략 55~85% 지점)를
+  채워 1화에서 지적됐던 "하단 여백 과다" 문제가 제목 카드에서도 재현되지 않음을 확인.
+- [x] **오프셋 확인(s1~s5·아웃트로, 가벼운 훑기)**: f015(bite 피크, 글로벌146) 아이스크림
+  씬, f016(s1->s2 전환, 183) touchForehead 포즈 시작, f018(s2->s3, 307) 냉기 다이어그램,
+  f020(s3->s4, 507) 신경선 다이어그램, f024(아웃트로 시작, 732)에서 "굼구미" 채널명과
+  "다음 편" 카드가 정상 렌더됨을 각각 Read로 확인 - v9 대비 내용 변화 없이 프레임 번호만
+  54프레임 뒤로 밀린 것을 확인했다(회귀 없음).
+- [x] **음량**: 아래 10-6절 참고.
+- [x] **자막이 프로필 스타일을 따르는가**: 제목 카드는 `FONT`(NanumSquareRound) 상속,
+  `fontWeight 800`, 색 `C.ink`/accent `C.coral` - 기존 자막·Intro와 동일 토큰 사용.
+
+**영어 (`episode-en-v10.mp4`)**
+
+- [x] **제목 카드 줄바꿈**: f006(프레임81)에서 "Why Ice Cream Hurts / Your Forehead" 2줄로
+  자연스럽게 wrap됨을 확인 - maxWidth 900px 안에서 좌우 여백 넉넉, 잘림 없음. KO와 문구
+  길이·문자 폭이 다른데도 동일한 flex column 레이아웃으로 밑줄·캐릭터가 안 겹침을 확인.
+- [x] **채널명 언어별 전환**: f025(아웃트로 중간, 프레임811)에서 채널명 "Whymo", 카드
+  "Next up" / "Another curious question, coming up!", 구독 문구 "Follow for more"가 전부
+  영어로 정상 렌더됨을 확인 - `lang="en"`이 Intro·Outro·TitleCard(문자열은 strings.ts 경유)
+  전부에 올바르게 전달됨.
+- [x] **s3 자막(f019, 프레임423)**: "clamp shut **then** flood" - 강조 단어(then)가 코랄로
+  하이라이트된 것을 확인, v9 대비 문구·스타일 회귀 없음.
+- [x] **제목 카드 등장·퇴장·전환**: KO와 동일한 프레임 번호(69/75/81/90/96/105/113/118/122/123/130)로
+  검수했고 KO에서 확인한 페이드인/아웃 타이밍과 동일하게 동작함을 확인(TitleCard가 언어
+  무관 고정 길이라 KO/EN 완전히 같은 지점에서 같은 값).
+
+### 10-6. 오디오 확인
+
+TitleCard는 오디오를 전혀 재생하지 않는 무음 구간(브랜드성 정적 카드)이라 새 오디오 자산을
+추가하지 않았다. `loudnorm=print_format=summary`로 트랙 전체를 재확인했다:
+
+| | ko v10 | en v10 | ko v9(참고) | en v9(참고) |
+|---|---|---|---|---|
+| Input Integrated | -14.3 LUFS | -16.6 LUFS | -14.3 LUFS | -16.6 LUFS |
+| Input True Peak | -2.7 dBTP | -2.6 dBTP | -2.7 dBTP | -2.6 dBTP |
+
+v9와 소수점까지 완전히 동일하다 - 54프레임(1.8초)의 무음 구간이 27~28초 전체 트랙의
+integrated loudness/True Peak에 영향을 주지 않았음을 확인했다(트랙 전체 길이 대비 무음
+비중이 작고, loudnorm의 integrated 측정은 시간 가중 평균이라 짧은 무음 삽입은 반영폭이
+매우 작다).
+
+### 10-7. 최종 산출물 (v10)
+
+- **한국어 mp4**: `/home/lee/project/.claude/shortform/episodes/general-ep01-untitled/out/episode-ko-v10.mp4` (822프레임, 27.40초)
+- **영어 mp4**: `/home/lee/project/.claude/shortform/episodes/general-ep01-untitled/out/episode-en-v10.mp4` (856프레임, 28.53초)
+- 검수 통과 -> 배포함 갱신:
+  - `/home/lee/project/shorts/ko/2026-08-08_brainfreeze.mp4` (v10으로 갱신, md5
+    `809d779033ece2c08eed09c70126b923` 소스·배포 사본 일치 확인)
+  - `/home/lee/project/shorts/en/2026-08-08_brainfreeze.mp4` (v10으로 갱신, md5
+    `3880fab292e222a1b8ff7eae30924f50` 소스·배포 사본 일치 확인)
+- v6~v9 mp4·프레임 폴더는 삭제하지 않고 `out/`에 유지(회귀 비교용).
+- `public/audio/`는 이번 변경으로 손대지 않았다(TitleCard가 오디오를 쓰지 않으므로 v9 상태
+  그대로).
+
+### 10-8. 표준화 - 에이전트 정의 반영
+
+10-1~10-7의 통합·검증이 실제로 통과한 뒤에만 아래 파일들에 "제목 카드는 인트로 직후
+표준 요소"라는 원칙을 반영했다:
+
+1. `/home/lee/project/.claude/agents/shortform-planner.md` - 대본 산출물에 "제목(한/영)"
+   항목을 표준으로 추가, `10-title.md`의 톤 가이드(서술형 "~이유" 기본값, 질문형은 주제
+   제시용만 허용, 구체적 상황 포함, 반전 비공개, 본편 대사와 비중복, 길이 15~20자)를 그대로
+   옮겼다.
+2. `/home/lee/project/.claude/agents/shortform-builder.md` - 조립 순서 설명에
+   "인트로 -> 제목 카드(`scenes/TitleCard`) -> 본편" 표준 흐름을 반영했다.
+3. `assets/REGISTRY.md` - 10-2절에서 이미 등록 완료(중복 작업 없음).

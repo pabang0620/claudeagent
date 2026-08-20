@@ -26,6 +26,7 @@ check
 clock
 cloud
 dental
+device-mobile
 dna
 dna-2
 droplet
@@ -49,6 +50,7 @@ magnet
 map-pin
 math-symbols
 meteor
+microphone
 microscope
 minus
 moon

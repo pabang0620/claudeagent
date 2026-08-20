@@ -4,8 +4,8 @@
 import React from 'react';
 import { AbsoluteFill, Audio, Sequence, staticFile } from 'remotion';
 import {
-  C, FontLoader, Intro, INTRO_FRAMES, Outro, OUTRO_FRAMES, SceneSwitcher,
-  buildCaptions, sceneFrames, sceneStarts,
+  C, FontLoader, Intro, INTRO_FRAMES, Outro, OUTRO_FRAMES, SceneSwitcher, TitleCard,
+  TITLE_CARD_FRAMES, buildCaptions, sceneFrames, sceneStarts,
 } from '../../../assets';
 import type { MouthFile, SceneSpec, SegmentData } from '../../../assets';
 import koWordsRaw from '../public/audio/ko_words.json';
@@ -13,7 +13,7 @@ import enWordsRaw from '../public/audio/en_words.json';
 import koMouthRaw from '../public/audio/ko_mouth.json';
 import enMouthRaw from '../public/audio/en_mouth.json';
 import { S1Bite, S2Forehead, S3Cold, S4Nerve, S5Signal, wrapCounts } from './scenes';
-import { Locale } from './strings';
+import { Locale, STRINGS } from './strings';
 
 interface WordsFile { segments: SegmentData[] }
 const WORDS_BY_LANG: Record<Locale, WordsFile> = {
@@ -117,7 +117,13 @@ export const Episode: React.FC<EpisodeProps> = ({ locale }) => {
         <Intro lang={locale} />
       </Sequence>
 
-      <Sequence from={INTRO_FRAMES} durationInFrames={mainTotal} layout="none">
+      {/* v10: 인트로 직후 ~ 본편(s1) 시작 전, 표준 제목 카드(assets/scenes/TitleCard.tsx).
+       *  문구는 strings.ts 에서만 읽는다(하드코딩 금지). */}
+      <Sequence from={INTRO_FRAMES} durationInFrames={TITLE_CARD_FRAMES} layout="none">
+        <TitleCard title={STRINGS[locale].title} />
+      </Sequence>
+
+      <Sequence from={INTRO_FRAMES + TITLE_CARD_FRAMES} durationInFrames={mainTotal} layout="none">
         <SceneSwitcher scenes={scenes} starts={starts} />
         {narratedIds.map((id, i) => (
           <Sequence key={id} from={starts[i + 1]} durationInFrames={frames[i + 1]} layout="none">
@@ -138,7 +144,7 @@ export const Episode: React.FC<EpisodeProps> = ({ locale }) => {
         </Sequence>
       </Sequence>
 
-      <Sequence from={INTRO_FRAMES + mainTotal} durationInFrames={OUTRO_FRAMES} layout="none">
+      <Sequence from={INTRO_FRAMES + TITLE_CARD_FRAMES + mainTotal} durationInFrames={OUTRO_FRAMES} layout="none">
         <Outro lang={locale} nextTitle={locale === 'ko' ? '다음 편' : 'Next up'}
           nextHint={locale === 'ko' ? '다음 편에서 또 다른 궁금증이 풀려요!' : 'Another curious question, coming up!'}
         />
@@ -156,7 +162,7 @@ export const totalFramesFor = (locale: Locale) => {
   ];
   const frames = sceneFrames(allSegments, SCENE_PAD);
   const mainTotal = frames.reduce((a, b) => a + b, 0);
-  return INTRO_FRAMES + mainTotal + OUTRO_FRAMES;
+  return INTRO_FRAMES + TITLE_CARD_FRAMES + mainTotal + OUTRO_FRAMES;
 };
 
 export default Episode;

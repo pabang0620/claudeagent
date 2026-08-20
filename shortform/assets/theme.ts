@@ -37,6 +37,11 @@ export const C = {
   /** 자연 계열 (풀·잎) */
   leaf: '#DCEBDF',
 
+  /** 산화·갈변 계열 (사과 갈변, 녹슨 금속 등 "산소와 만나 색이 변하는" 소재 전반 재사용 가능,
+   *  general-ep04 신설). paper/cream 위에 겹쳐 쓰는 오버레이용이라 저채도 브라운으로 잡았다 */
+  browning: '#A9743C',
+  browningSoft: '#E8C9A0',
+
   /* 어두운 배경 계열 */
   night: '#1B2331',
   nightMid: '#2E3A4D',
@@ -53,6 +58,12 @@ export type ColorToken = keyof typeof C;
 export const W = 1080;
 export const H = 1920;
 export const FPS = 30;
+
+/** 유튜브 롱폼 가로 16:9. 세로(W/H)와 별개 캔버스 - 값은 불변, 세로 자산에는 영향 없음.
+ *  이 캔버스를 쓰는 배경·브랜드 자산은 `assets/backgrounds/16x9/`, `assets/brand/16x9/`,
+ *  `assets/scenes/16x9/` 에 폴더 분리로 둔다(REGISTRY.md 참고). 포맷은 프로필과 별개 축이다. */
+export const W_LANDSCAPE = 1920;
+export const H_LANDSCAPE = 1080;
 
 /* ================= 선 굵기 =================
  * 캐릭터를 폭 760 으로 렌더할 때 화면상 22*760/1254 = 13.3px 이 된다.
@@ -92,8 +103,10 @@ export const RADIUS = {
 export const FONT = "'NanumSquareRound', sans-serif";
 
 export const FS = {
-  /** 자막 */
-  caption: 66,
+  /** 자막. 6화 사용자 피드백(2026-08-10)으로 66 -> 50 (-24%, 요청된 -25%에 가장 가까운 정수)
+   *  축소. 좁아진 글자 폭만큼 timeline.ts wrapCounts 의 줄바꿈 글자수 상한도 같이 늘렸다
+   *  (ko 15 -> 20자, en 22 -> 29자) - 둘 중 하나만 바꾸면 의미가 없다. */
+  caption: 50,
   /** 화면 대사·강조 큰 숫자 */
   hero: 210,
   title: 96,

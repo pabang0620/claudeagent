@@ -1,0 +1,51 @@
+/** 이 화 전용 화면 문구. 언어별 테이블에서만 읽는다 - 씬 컴포넌트 안에 문자열을 박지 않는다.
+ *  02-script-v6.md 의 "화면 문자" 열 + "제목" 절과 1:1로 대응한다.
+ */
+export const STRINGS = {
+  ko: {
+    title: '별들이 빛나는데 밤하늘이 캄캄한 이유',
+    s3CountPrefix: '약 ',
+    s3CountSuffix: '개',
+    s3CityLabel: '10여 개',
+    s3FinalTo: 1000,
+    s3FinalSuffix: '억 개+',
+    s4Badge: '1610',
+    s4Label: '케플러',
+    s5Label: "올베르스의 역설",
+    s7Label: '우주 나이 138억 년',
+    s8ShortLabel: '8분 20초',
+    s8LongLabel: '4.2광년',
+    s8LongSub: '프록시마 센타우리',
+    s9SeeLabel: '보이는 빛',
+    s9UnseeLabel: '안 보이는 빛',
+    s10Badge: '1848',
+    s10Label: '에드거 앨런 포',
+    s11GalaxyLabel: '안드로메다 은하',
+    s11GalaxySub: '250만 년 전',
+    s11Rumor: '속설?',
+  },
+  en: {
+    title: 'Why the Night Sky Stays Dark When Every Star Is Shining',
+    s3CountPrefix: '~',
+    s3CountSuffix: '',
+    s3CityLabel: '~a dozen',
+    s3FinalTo: 100,
+    s3FinalSuffix: ' billion+',
+    s4Badge: '1610',
+    s4Label: 'Kepler',
+    s5Label: "Olbers' Paradox",
+    s7Label: 'Age of universe: 13.8B years',
+    s8ShortLabel: '8 min 20 sec',
+    s8LongLabel: '4.2 light-years',
+    s8LongSub: 'Proxima Centauri',
+    s9SeeLabel: 'Light we can see',
+    s9UnseeLabel: "Light we can't see",
+    s10Badge: '1848',
+    s10Label: 'Edgar Allan Poe',
+    s11GalaxyLabel: 'Andromeda Galaxy',
+    s11GalaxySub: '2.5 million years ago',
+    s11Rumor: 'Rumor?',
+  },
+} as const;
+
+export type Locale = keyof typeof STRINGS;

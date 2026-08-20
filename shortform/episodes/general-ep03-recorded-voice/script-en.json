@@ -1,0 +1,6 @@
+[
+  {"id": "s2", "text": "Huh, that sounds different.", "rate": "+30%", "pitch": "+35Hz"},
+  {"id": "s3", "text": "When I talk, my voice reaches my ears two different ways. And only I can hear one of them."},
+  {"id": "s4", "text": "The sound from inside your body is lower and thicker. That's why your own voice sounds richer to you."},
+  {"id": "s5", "text": "A recording only picks up the sound that traveled through the air. That richer part goes missing, so playback sounds like a stranger."}
+]

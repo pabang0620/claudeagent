@@ -14,5 +14,13 @@ export {
   CountdownRing, Sparkles, FlashOverlay, Shake, Appear, PulseRing, SpotlightCircle,
 } from './Effects';
 export type { AppearFrom } from './Effects';
+export { MotionSwoosh } from './MotionSwoosh';
+export type { MotionSwooshProps } from './MotionSwoosh';
+export { DustCloud, ImpactBurst } from './ImpactEffects';
+export type { DustCloudProps, ImpactBurstProps } from './ImpactEffects';
 export { SceneSwitcher } from './SceneSwitcher';
 export type { SceneSwitcherProps, SceneSpec } from './SceneSwitcher';
+export { TitleCard, TITLE_CARD_FRAMES } from './TitleCard';
+export type { TitleCardProps } from './TitleCard';
+export { CellMergeDiagram } from './CellMergeDiagram';
+export type { CellMergeDiagramProps } from './CellMergeDiagram';

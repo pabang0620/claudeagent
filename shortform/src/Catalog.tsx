@@ -7,12 +7,12 @@ import {
   Actor, Appear, BoneStack, BustActor, C, Caption, CardGrid, ChoiceList, CompareBars,
   CountUp, CountdownRing, Character, FONT, FontLoader, Giraffe, HeadNerveDiagram, HumanNeckIcon,
   ICON_NAMES, IceCream, Intro, Label, LabBg, MiniCharacter, Mouse, NightSkyBg, OceanBg, Outro,
-  POSES, PlainBg, PulseRing, QMark, Ruler, SW, SavannaBg, Sloth, Sparkles, SpeechBubble,
-  SpotlightCircle, StepCounter, ThemedIcon, Whale, blendPose,
+  POSES, PlainBg, PulseRing, QMark, Ruler, SW, SavannaBg, Sloth, SodaCan, Sparkles, SpeechBubble,
+  SpotlightCircle, StepCounter, ThemedIcon, TitleCard, VoicePathDiagram, Whale, blendPose,
 } from '../assets';
 
 export const CAT_W = 2560;
-export const CAT_H = 4460;
+export const CAT_H = 4820;
 
 const Section: React.FC<{ x?: number; y: number; title: string; note?: string; children?: React.ReactNode }> = ({
   x = 60, y, title, note, children,
@@ -382,6 +382,23 @@ export const Catalog: React.FC = () => {
         <BgThumb x={2120} y={3790} scale={0.28} label="brand/Outro (3.0초, f=40)">
           <Sequence from={20} layout="none"><Outro nextHint="다음 편엔 이 친구!" /></Sequence>
         </BgThumb>
+        <BgThumb x={60} y={4130} scale={0.28} label="scenes/TitleCard (표준요소, 1.8초, f=28)">
+          <Sequence from={28} layout="none">
+            <TitleCard title="아이스크림 먹다 이마가 아픈 이유" />
+          </Sequence>
+        </BgThumb>
+        <Cell x={400} y={4130} w={220} h={330} label="SodaCan shaken=0 open=0">
+          <SodaCan width={140} style={{ marginLeft: 40, marginTop: 6 }} />
+        </Cell>
+        <Cell x={655} y={4130} w={220} h={330} label="SodaCan shaken=1 open=0.9">
+          <SodaCan width={140} shaken={1} open={0.9} style={{ marginLeft: 40, marginTop: 6 }} />
+        </Cell>
+        <Cell x={910} y={4130} w={245} h={330} label="VoicePathDiagram (air+bone, boneThickness 순환)">
+          <VoicePathDiagram
+            f={f} width={190} x={20} y={10}
+            showAirPath={1} showBonePath={1} boneThickness={(f % 90) / 90} micCapture={0}
+          />
+        </Cell>
       </Section>
 
       <div

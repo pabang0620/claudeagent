@@ -113,6 +113,42 @@ export function buildCaptions(
   });
 }
 
+/** 어절을 한 줄 최대 글자수 기준으로 줄바꿈해 buildCaptions 의 lineSpec 배열(줄별 어절 개수)을
+ *  만든다. general-ep01 에서 처음 필요해 에피소드 로컬로 짰다가, general-ep04 에서 똑같은
+ *  로직이 다시 필요해져 공용으로 승격했다(REGISTRY 원칙 0 - 두 번째로 쓰이면 라이브러리로).
+ *  프로필 규칙(general.md 5절): 한국어 한 줄 최대 15자, 영어는 어절이 길어 22자 정도가
+ *  자연스럽다(육안 검수로 확정). maxChars 를 넘기면 이 기본값을 프로필별로 다르게 줄 수 있다.
+ *
+ *  6화 사용자 피드백(2026-08-10)으로 CAPTION_STYLE.fontSize 가 66 -> 50 (-24%) 로 줄면서,
+ *  아래 wrapCounts 의 기본 상한도 같은 비율(66/50 ≈ 1.32배)로 늘렸다(ko 15 -> 20자,
+ *  en 22 -> 29자). 폰트만 줄이고 여기를 그대로 두면 글자 폭만 좁아질 뿐 한 줄에 들어가는
+ *  글자 수는 그대로라 "더 많이 보여준다"는 요청이 반영되지 않는다. */
+export function wrapByChars(words: { w: string }[], maxChars: number): number[] {
+  const counts: number[] = [];
+  let cur = 0;
+  let curLen = 0;
+  for (const { w } of words) {
+    const nextLen = curLen === 0 ? w.length : curLen + 1 + w.length;
+    if (curLen > 0 && nextLen > maxChars) {
+      counts.push(cur);
+      cur = 1;
+      curLen = w.length;
+    } else {
+      cur += 1;
+      curLen = nextLen;
+    }
+  }
+  if (cur > 0) counts.push(cur);
+  return counts;
+}
+
+/** wrapByChars 를 언어 기본 글자수(ko 20자 / en 29자)로 감싼 편의 함수.
+ *  2026-08-10: CAPTION_STYLE.fontSize 축소(66 -> 50)에 맞춰 15/22 -> 20/29 로 상향(원래 값
+ *  대비 약 1.32배, 축소된 폰트 비율의 역수와 동일). */
+export function wrapCounts(words: { w: string }[], locale: 'ko' | 'en'): number[] {
+  return wrapByChars(words, locale === 'ko' ? 20 : 29);
+}
+
 /** 현재 프레임이 몇 번째 구간인지 + 구간 로컬 시각(초) */
 export function locate(starts: number[], frame: number) {
   let index = 0;

@@ -1,0 +1,14 @@
+[
+  {"id": "s2", "text": "Wait, did that second hand just pause for a beat? Why does it do that?", "rate": "+30%", "pitch": "+35Hz"},
+  {"id": "s3", "text": "This illusion doesn't happen just anytime. It only kicks in when you look away, then whip your eyes onto the clock. If you've been staring at it the whole time, it never happens."},
+  {"id": "s4", "text": "The instant your eyes jump from somewhere else onto the clock, they move incredibly fast. You make jumps like that all day long, more than you'd think."},
+  {"id": "s5", "text": "Moving that fast should turn everything into a blur. But you've never actually seen that blur, have you. That's because your brain shuts off the incoming picture for that split second."},
+  {"id": "s6", "text": "That blacked-out moment still counts as time passing, though. Your brain has to fill that gap somehow. So it takes the very first image you land on and stretches it backward, as if it had been there far longer than it really was."},
+  {"id": "s7", "text": "And that's why the second hand looks like it paused, just for a beat, before it starts ticking normally again."},
+  {"id": "s8", "text": "This illusion even has its own name, inspired by the way time seems to freeze. And it wasn't studied seriously until surprisingly recently."},
+  {"id": "s9", "text": "It happens way more often than you'd think. Each time, it's a tiny blackout, off then back on."},
+  {"id": "s10", "text": "Add all those instants together, and a surprisingly large chunk of your day is spent with your eyes effectively shut. You just never notice it."},
+  {"id": "s11", "text": "Some people actually exploit that blackout on purpose. Magicians time their sleight of hand to exactly when your eyes are jumping. Film editors sneak cuts into that very same window."},
+  {"id": "s12", "text": "And it's not just your eyes, either. Some research suggests a similar illusion happens with the first sound you hear right after you whip your head around."},
+  {"id": "s13", "text": "This illusion isn't really about clocks at all. It happens with anything you glance at right after moving your eyes. Clocks just make it obvious, because you already know that hand is supposed to be moving."}
+]
