@@ -24,7 +24,7 @@ interface ApiResponse<T> {
   }
 }
 
-// 관찰된 변형 (기본값 아님) — speetalk/cosmic-renew 등 기존 프로젝트에 붙일 땐
+// 관찰된 변형 (기본값 아님) - speetalk/cosmic-renew 등 기존 프로젝트에 붙일 땐
 // 위 기본값을 가정하지 말고 해당 프로젝트 response.js 실측값을 따를 것
 interface ApiResponseVariant {
   error?: string

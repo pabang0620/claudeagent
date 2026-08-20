@@ -11,12 +11,12 @@
 
 ---
 
-## 파괴적 작업 절대 금지 규칙 (CRITICAL — 승인 없이 삭제·덮어쓰기 금지)
+## 파괴적 작업 절대 금지 규칙 (CRITICAL - 승인 없이 삭제·덮어쓰기 금지)
 
 > **승인 없이 파일을 삭제하거나 덮어쓰지 않는다.** `rm`, `mv -f`, `cp -f`, 같은 이름 Write 등 기존 파일을 없애거나 내용을 교체하는 모든 작업은 대상 파일 경로·행위를 사용자에게 명시하고 **명시적 승인을 받은 뒤에만** 실행한다.
 > - "직접 수정해"는 **해당 파일을 in-place로 Edit**하라는 뜻이다. 다른 파일로 교체(mv/cp)하라는 뜻이 아니다. 애매하면 먼저 묻는다.
-> - 이름이 비슷한 파일이 여러 개면(예: `X.md` vs `X_보고용.md`) 임의 통합·정리 금지 — 어느 것이 정본인지 확인.
-> - 새 산출물 저장 시 기존 동명 파일이 있으면 자동 덮어쓰기 금지 — 확인 필수.
+> - 이름이 비슷한 파일이 여러 개면(예: `X.md` vs `X_보고용.md`) 임의 통합·정리 금지 - 어느 것이 정본인지 확인.
+> - 새 산출물 저장 시 기존 동명 파일이 있으면 자동 덮어쓰기 금지 - 확인 필수.
 > - 근거: 2026-07-06 `mv -f`로 원본 회의록(git 미추적) 유실 사고. 상세 [[feedback_no_delete_overwrite_without_approval]]
 
 ---
@@ -40,14 +40,14 @@
 
 ### 위임 성능 원칙 (오케스트레이션 품질을 좌우)
 
-1. **스폰 프롬프트에 컨텍스트 전량 명시** — 서브에이전트는 내 대화 이력을 상속하지 않는다.
+1. **스폰 프롬프트에 컨텍스트 전량 명시** - 서브에이전트는 내 대화 이력을 상속하지 않는다.
    대상 파일 절대경로, 제약 조건, 기대 출력 형식, 완료 판정 기준을 프롬프트에 직접 쓴다.
    ("아까 그 파일", "위에서 말한 버그" 같은 참조는 서브에이전트에게 무의미)
-2. **독립 작업은 단일 메시지 병렬 스폰** — 순차 호출 금지. 리서치·리뷰·다중 파일 분석은 동시 실행
-3. **아이템(수정·기능) 1개당 plan → implement → review 3단계 필수** — 단계 생략 금지.
+2. **독립 작업은 단일 메시지 병렬 스폰** - 순차 호출 금지. 리서치·리뷰·다중 파일 분석은 동시 실행
+3. **아이템(수정·기능) 1개당 plan → implement → review 3단계 필수** - 단계 생략 금지.
    구현 에이전트와 리뷰 주체는 반드시 분리 (작성자 가정에서 벗어나야 결함이 잡힌다)
-4. **모델 기본값은 sonnet** — 모든 에이전트 `model: sonnet` 고정. 자발적 상향 금지. 막혔을 때만 아래 7번 절차로 승인 받아 그 작업 1건 상향 (`rules/performance.md` 참조)
-5. **결과 회수 시 재검증** — 에이전트의 "완료" 보고를 그대로 믿지 않고 code-reviewer 스킬로 교차 확인 (STEP 2)
+4. **모델 기본값은 sonnet** - 모든 에이전트 `model: sonnet` 고정. 자발적 상향 금지. 막혔을 때만 아래 7번 절차로 승인 받아 그 작업 1건 상향 (`rules/performance.md` 참조)
+5. **결과 회수 시 재검증** - 에이전트의 "완료" 보고를 그대로 믿지 않고 code-reviewer 스킬로 교차 확인 (STEP 2)
 6. **사용자에게 무언가 물어보기 전에 반드시 `lee-wonho` 에이전트에게 먼저 판정을 받는다.**
    - lee-wonho는 사용자(이원호)의 판단 기준 71개를 담은 의사결정 대리 에이전트다. 아이디어는 내가 내고, 채택 여부만 lee-wonho가 판정한다.
    - 출력 4종: `ADOPT`(그대로 진행) / `REJECT`(근거 규칙 ID와 함께 기각, 사용자 부르지 않고 내가 수정) / `CLAUDE_DISCRETION`(사용자가 의견을 갖지 않는 영역이므로 묻지 말고 알아서 진행) / `ESCALATE`(이때만 실제로 사용자를 부른다)
@@ -69,7 +69,7 @@
 ## 기술 스택
 - **프론트엔드**: React 19, Vite 7
 - **백엔드**: Node.js, Express
-- **DB**: 프로젝트별 상이 (전역 기본값 아님, 프로젝트 감지 필수) — MySQL 8.4: wecom·speetalk·cosmic-renew / PostgreSQL(pg): modadam / Prisma: cosmic-kuji-market
+- **DB**: 프로젝트별 상이 (전역 기본값 아님, 프로젝트 감지 필수) - MySQL 8.4: wecom·speetalk·cosmic-renew / PostgreSQL(pg): modadam / Prisma: cosmic-kuji-market
 - **테스트**: Jest, Playwright
 - **기타**: Python
 
@@ -110,7 +110,7 @@ project/
 - 기능 보존: 수정 시 기존 기능 변경 금지
 - 들여쓰기: 2 spaces
 - 네이밍: 컴포넌트 PascalCase / 함수·변수 camelCase / 상수 UPPER_SNAKE_CASE
-- DB ID: raw SQL 프로젝트는 이중 ID 패턴 — 내부 PK(`id AUTO_INCREMENT`/`BIGSERIAL`) + 외부 노출용 `uuid`/`{table}_id` 컬럼 분리 (IDOR 방지, AUTO_INCREMENT id 직접 노출 금지). ORM(Prisma 등) 프로젝트는 해당 ORM 관례를 따름(예: cosmic-kuji-market은 단일 `id String @id @default(cuid())`). 마이그레이션: raw SQL 스크립트 (MySQL 스키마·마이그레이션은 db-schema-architect 에이전트 담당)
+- DB ID: raw SQL 프로젝트는 이중 ID 패턴 - 내부 PK(`id AUTO_INCREMENT`/`BIGSERIAL`) + 외부 노출용 `uuid`/`{table}_id` 컬럼 분리 (IDOR 방지, AUTO_INCREMENT id 직접 노출 금지). ORM(Prisma 등) 프로젝트는 해당 ORM 관례를 따름(예: cosmic-kuji-market은 단일 `id String @id @default(cuid())`). 마이그레이션: raw SQL 스크립트 (MySQL 스키마·마이그레이션은 db-schema-architect 에이전트 담당)
 - 환경변수: `.env` 사용, 커밋 금지
 - 테스트 커버리지: 개발 중 상시 강제 수치 없음. 80%는 "테스트 맡길게" 시점의 인수 게이트에만 적용 (`rules/testing.md`)
 - em-dash(—) 절대 사용 금지: 모든 산출물(코드·주석·문서·이력서·SNS 글·커밋 메시지·사용자 응답 포함)에서 em-dash("—") 대신 하이픈("-")을 쓴다. em-dash는 AI가 쓴 티가 나는 대표 신호다. (2026-07-25)

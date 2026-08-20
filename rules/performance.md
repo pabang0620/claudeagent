@@ -7,7 +7,7 @@
 > - 비용 절감은 모델 다운그레이드가 아니라 **에이전트 위임(컨텍스트 격리) + 병렬 실행 + 프롬프트 슬림화**로 달성한다
 > - 다만 막혔을 때는 아래 에스컬레이션 절차에 따라 사용자 승인을 받아 해당 작업 1건에 한해 상위 모델 서브에이전트를 스폰할 수 있다
 
-**Sonnet (`claude-sonnet-5`)** — 기본 모델:
+**Sonnet (`claude-sonnet-5`)** - 기본 모델:
 - Main development work
 - Orchestrating multi-agent workflows
 - All agents (workers, reviewers, evaluators)

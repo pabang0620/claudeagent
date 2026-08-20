@@ -26,7 +26,7 @@ DRY보다 지역성(locality) 우선:
 
 ### (A) Express HTTP 핸들러 (컨트롤러/라우트)
 
-`try { ... } catch (err) { next(err) }` — 재throw 금지, 중앙 `errorHandler` 미들웨어가 상태코드·응답 JSON을 단독 책임진다. 컨트롤러에 사용자 노출 에러 문자열을 인라인하지 않는다(중앙에서 결정). 기존 코드베이스가 명시적 try/catch를 쓰고 있으면 그 관례를 따르고, `asyncHandler` 같은 래퍼를 새로 도입하지 않는다.
+`try { ... } catch (err) { next(err) }` - 재throw 금지, 중앙 `errorHandler` 미들웨어가 상태코드·응답 JSON을 단독 책임진다. 컨트롤러에 사용자 노출 에러 문자열을 인라인하지 않는다(중앙에서 결정). 기존 코드베이스가 명시적 try/catch를 쓰고 있으면 그 관례를 따르고, `asyncHandler` 같은 래퍼를 새로 도입하지 않는다.
 
 ```javascript
 export async function getWebtoon(req, res, next) {

@@ -27,10 +27,10 @@ When creating PRs:
 
 병합 전 확인:
 ```bash
-git log --oneline A..B   # A에는 없고 B에만 있는 커밋 — 동일 메시지 중복 여부 확인
+git log --oneline A..B   # A에는 없고 B에만 있는 커밋 - 동일 메시지 중복 여부 확인
 ```
 
-사례: `b4dfe54` `cdffec2` `0deb2e9` — 동일 메시지·동일 타임스탬프(2026-04-29 08:58:55)·동일 diff가 `claude/claude_w`/`claude_img` 등 서로 다른 브랜치에 각각 커밋됨.
+사례: `b4dfe54` `cdffec2` `0deb2e9` - 동일 메시지·동일 타임스탬프(2026-04-29 08:58:55)·동일 diff가 `claude/claude_w`/`claude_img` 등 서로 다른 브랜치에 각각 커밋됨.
 
 ## 기능 구현 워크플로우
 
