@@ -143,6 +143,7 @@ import { Actor, POSES, Caption, SavannaBg, Intro, Outro, C, SW, FontLoader } fro
 | StarlightDiagram | `props/StarlightDiagram.tsx` | 소품 | "빛이 관측자에게 도달하는 과정" 범용 다이어그램. 3개 독립 레이어(각자 undefined면 안 그림): `sightlineProgress`(중심에서 8방향 방사형 점선, 끝에 나무/별 크로스페이드 - "어느 쪽을 보든 뭔가에 닿는다" 비유), `travelProgress`(광원->관측자 빛줄기 이동, "도중에 멈춤" 연출은 호출부가 progress를 캡해서 넘김), `waveProgress`(좌->우로 파장이 늘어지고 옅어지는 파동, 적색편이 비유). CellMergeDiagram과 같은 다단계 독립 progress 설계 | `width` `x` `y` `sightlineProgress`(0~1) `sightlineTargetMix`(0=나무,1=별) `travelProgress`(0~1) `travelLength`(px) `waveProgress`(0~1) `stroke` `fill` `style` | general-ep06 |
 | AnalogClock | `props/AnalogClock.tsx` | 소품 | 아날로그 시계. 문자판(12시 기준 눈금) + 시침/분침/초침(각도 지정, 12시=0도·시계방향) + 초침 끝에 붙는 옅은 글로우 링(`freeze` - "멈춘 듯" 보이는 하이라이트). 시간·타이밍을 소재로 한 향후 화(시차·타임랩스 등)에서도 재사용 가능성이 높아 에피소드 로컬이 아니라 여기 등록 | `width` `x` `y` `hourDeg` `minuteDeg` `secondDeg` `freeze`(0~1) `stroke` `fill` `faceColor` `secondColor` `strokeWidth` `style` | general-long01 |
 | LegNerveDiagram | `props/LegNerveDiagram.tsx` | 소품 | 다리 옆모습(허벅지+종아리+발 캡슐 실루엣) + 무릎 뒤쪽을 지나는 신경 경로 오버레이. HeadNerveDiagram과 같은 원칙(새 신체를 정교하게 그리지 않음). `compressProgress`(0~1, 위에서 체중이 실려 눌리는 막대 애니메이션 + 무릎 구간 신경 신호가 옅어짐)와 `releaseProgress`(0~1, 눌림이 풀리며 신경 경로 여러 지점에서 frame 기반 결정적 위상차로 불균일하게 스파크가 튐)를 독립 진행도로 받아 "오래 눌리면 무감각해지고 풀리면 찌릿해지는" 신경 압박/재개통 서사 전체를 컴포넌트 하나로 커버한다 - 자세·눌림을 소재로 한 다른 화(저림·마비 등)에서도 재사용 가능성이 있어 에피소드 로컬이 아니라 여기 등록 | `f` `width` `x` `y` `compressProgress`(0~1) `releaseProgress`(0~1) `stroke` `fill` `style` | general-ep09 |
+| HiccupDiagram | `props/HiccupDiagram.tsx` | 소품 | 몸통 옆모습 단순 다이어그램(몸통 실루엣 + 갈비뼈 장식 + 목/머리 + 목 입구 통로). CellMergeDiagram과 같은 원칙(이 순간의 상태만 그림, 시간 곡선은 호출 씬이 만듦). `spasmProgress`(0~1, 횡격막 아치가 가슴 쪽에서 배 쪽으로 당겨져 내려오며 은은히 발광)와 `snapProgress`(0~1, 목 입구의 위/아래 두 "눈꺼풀"이 중앙으로 좁혀져 닫히며 중간 지점에서 반짝)를 독립 진행도로 받아 "근육이 경련 -> 통로가 반사적으로 좁아져 닫힘" 2단 인과 전체를 컴포넌트 하나로 커버한다. 라벨 앵커(`HICCUP_DIAPHRAGM_PT`/`HICCUP_THROAT_PT`, viewBox 560x820 좌표계)를 함께 export해 호출 씬이 Label을 정확한 위치에 얹을 수 있게 했다 - 근육 경련 -> 통로 반사적 폐쇄 구조를 갖는 다른 신체 반사 소재 전반(재채기·삼킴 반사 등) 재사용 가능성이 있어 에피소드 로컬이 아니라 여기 등록 | `width` `x` `y` `spasmProgress`(0~1) `snapProgress`(0~1) `stroke` `fill` `accent` `style`, 별도 export `HICCUP_VB_W`/`HICCUP_VB_H`/`HICCUP_DIAPHRAGM_PT`/`HICCUP_THROAT_PT` | general-ep07 |
 
 ---
 
@@ -215,6 +216,7 @@ import { Actor, POSES, Caption, SavannaBg, Intro, Outro, C, SW, FontLoader } fro
 | ui_tap | `audio/ui_tap.mp3` | 효과음 | 화면 속 버튼(정지/재생 등)을 탭하는 짧은 "톡" 클릭음. 사인파 한 번을 아주 짧게 끊음 | 0.10초 | `aevalsrc` 2200Hz 사인파 + `volume=15dB` + `alimiter`(클리핑 방지) + `afade` 아주 짧은 어택/디케이. 실측 피크 -3.2dB | **화면 UI 탭·버튼 누름 동작 전반 재사용 가능** (앱 화면·스위치·클릭 연출 등 무성 구간 액션에) | general-ep03 |
 | realize_ding | `audio/realize_ding.mp3` | 효과음 | "어? 뭔가 알아챘다"는 발견의 순간에 쓰는 짧고 밝은 딩 한 번. cold_zing(날카로운 통증)과 달리 경쾌한 인지 신호 톤 | 0.30초 | `aevalsrc` 감쇠 사인 2겹(`0.42*sin(2*PI*1700*t)*exp(-13*t) + 0.27*sin(2*PI*2550*t)*exp(-15*t)`, 배음 관계로 종소리 느낌) + `afade` in 8ms/out 100ms + `alimiter`. 실측 피크 -4.2dB | **눈을 뜨거나 화면을 보다가 "어?" 하고 알아채는 발견·자각 리액션 전반 재사용 가능** (전구/느낌표 아이콘 팝인과 짝을 이루는 용도) | general-ep02(v5, s1 무성 재연출) |
 | head_whoosh | `audio/head_whoosh.mp3` | 효과음 | 고개를 홱 돌리는 짧은 "휙" 바람 소리. 무성 구간(원칙 7)에 붙여 "지금 뭘 하는지"를 읽히게 한다 | 0.24초 | `anoisesrc=color=white`(대역 500~3800Hz) + `afade` in 20ms/out 100ms(iqsin) + `volume=-3dB`. 실측 피크 -5.6dB | **고개·시선을 빠르게 돌리는 무성 동작 전반 재사용 가능** | general-long01 |
+| hiccup_pop | `audio/hiccup_pop.mp3` | 효과음 | "딸꾹" 소리 자체. 저음 thump(가슴 울림) + 상승 처프(목이 훅 잠기는 느낌) + 고역 노이즈 트랜지언트(닫히는 스냅)를 겹침 | 0.20초 | `aevalsrc` 저음 감쇠 사인(`0.85*sin(2*PI*140*t)*exp(-32*t)`) + `aevalsrc` 선형 상승 처프(`0.55*sin(2*PI*(350*t+6667*t²/2))*exp(-25*t)`, 40ms 딜레이) + `anoisesrc=color=white`(bandpass 3200Hz/w2600, 70ms 딜레이) 를 `amix` + `afade` out + `alimiter`. 실측 피크 -2.4dB | **딸꾹질·순간적 목/숨 걸림 소재 전반 재사용 가능** | general-ep07 |
 
 효과음 볼륨은 내레이션(narration `volume=1.6`)보다 낮게(`volume=0.7~0.9`)두어 보조적인 느낌을
 유지한다. 정확한 청취 판단(듣기 좋은지)은 사용자 몫이다 - Claude 는 ffprobe/volumedetect 로
@@ -229,6 +231,39 @@ import { Actor, POSES, Caption, SavannaBg, Intro, Outro, C, SW, FontLoader } fro
 | `tts.py` | edge-tts 로 구간별 mp3 + 어절 타임스탬프(WordBoundary) 생성 | `python scripts/tts.py --script script.json --out <ep>/public/audio --lang ko` |
 | `rms_mouth.py` | mp3 -> 30fps 프레임별 입벌림 0~1 (RMS) | `python scripts/rms_mouth.py --audio <ep>/public/audio --prefix ko` |
 | `sync_icons.mjs` | Tabler 아이콘을 로컬 캐시 JSON 으로 추출 | `npm run sync-icons` |
+| `precheck.mjs` | **렌더 전 정적 검사.** 에피소드 `src/` 를 TS AST 로 읽어 렌더해 보기 전에 잡을 수 있는 결함을 검출 | `node scripts/precheck.mjs episodes/<에피소드 폴더>` |
+
+### `precheck.mjs` - 렌더 전 정적 검사
+
+```bash
+node scripts/precheck.mjs episodes/general-ep06-dark-night-sky
+node scripts/precheck.mjs general-long01-stopped-clock-illusion   # 폴더명만 줘도 된다
+node scripts/precheck.mjs <경로> --strict                          # 경고도 실패로 처리
+```
+
+종료 코드는 `0`(에러 없음) / `1`(에러 있음) / `2`(사용법·내부 오류)라 CI 처럼 게이트로 쓸 수 있다.
+읽기만 하고 아무 파일도 고치지 않는다.
+
+| 규칙 | 잡는 것 | 등급 | 근거 |
+|---|---|---|---|
+| `KO-STR` | `src/` 안 한국어 문자열 리터럴 (`strings.ts` 와 주석은 제외) | 경고 (JSX 텍스트는 에러) | 6화 - `"약 "`·`"개"` 가 컴포넌트에 박혀 영어판에 한국어 노출 |
+| `RANDOM` | `Math.random()` | 에러 | 규칙 4(결정론) - 프레임마다 값이 달라져 깜빡인다 |
+| `NOWRAP` | `CountUp`/`StepCounter` 에 `width` + `whiteSpace: 'nowrap'` 누락 | 경고 | 6화 - 큰 숫자가 2~3줄로 깨짐 |
+| `WORDBRK` | `maxWidth`/`wrapWidth` 로 줄바꿈되는 텍스트 박스에 `wordBreak: 'keep-all'` 누락 | 경고 | 6화 TitleCard - "캄캄한" 이 "캄"/"캄한" 으로 쪼개짐 |
+| `FORMAT` | `Root.tsx` 캔버스(16:9/9:16)와 import 한 자산의 포맷 불일치 | 에러 | 세로 좌표 자산(배경 5종·Intro/Outro/TitleCard·`props/Bathtub`)을 가로 캔버스에 쓰면 화면 밖으로 나간다 |
+| `IMPORT` | 배럴에 없는 이름·존재하지 않는 경로 import | 에러 | 오타·미등록 자산 |
+
+- 포맷은 `Root.tsx` 의 `<Composition width/height>` 를 읽어 판정한다(`W_LANDSCAPE as W` 같은
+  별칭도 원래 이름으로 되돌려 읽는다). 자산의 세로/가로 전속 여부는 하드코딩 목록이 아니라
+  **그 파일이 `theme.ts` 의 `W`/`H` 를 쓰는지, `16x9/` 폴더에 있는지로 자동 판정**한다 -
+  새 자산을 추가해도 목록을 갱신할 필요가 없다.
+- `src/` 뿐 아니라 **그 화가 실제로 import 한 자산 파일도** `RANDOM`·`WORDBRK` 로 같이 본다
+  (6화의 `wordBreak` 결함은 에피소드가 아니라 공용 `TitleCard.tsx` 에서 났다).
+- 경고는 오탐 가능성이 있다. 지적된 줄을 직접 보고 판단한다 - 화면에 안 나가는 문자열이거나
+  한글이 안 들어가는 박스면 그대로 둔다. `locale`/`lang` 삼항으로 이미 분기된 문구
+  (`locale === 'ko' ? '다음 편' : 'Next up'`)는 누출이 아니므로 자동으로 제외된다.
+- **렌더 후 프레임 검수를 대체하지 않는다.** 좌표 겹침·잔상·오디오는 여전히 프레임으로 본다
+  (shortform-builder 원칙 5).
 
 TTS·립싱크 근거와 실측 수치는 `/home/lee/project/아동지식채널/02_무료도구_실측검증.md` 참고.
 요약: 자막 싱크는 edge-tts WordBoundary(오차 0), 립싱크는 RMS(52초를 0.16초에 처리),

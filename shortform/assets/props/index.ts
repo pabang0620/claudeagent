@@ -29,3 +29,5 @@ export { AnalogClock } from './AnalogClock';
 export type { AnalogClockProps } from './AnalogClock';
 export { LegNerveDiagram } from './LegNerveDiagram';
 export type { LegNerveDiagramProps } from './LegNerveDiagram';
+export { HiccupDiagram, HICCUP_VB_W, HICCUP_VB_H, HICCUP_DIAPHRAGM_PT, HICCUP_THROAT_PT } from './HiccupDiagram';
+export type { HiccupDiagramProps } from './HiccupDiagram';
