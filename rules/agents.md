@@ -67,6 +67,8 @@
 | **자소서·지원서** | "자소서 써줘" | jasoseo-writer |
 | **판정 대리 (사용자에게 물어보기 직전)** | Claude가 사용자에게 선택·승인·확인을 요청하려는 모든 순간. "이렇게 할까요", "A와 B 중 어느 쪽", "이것도 할까요", 완료 보고 직전, 스코프 확장 검토 시 | lee-wonho |
 | **웰콘 사업 자문 판단** | 콘텐츠 해외진출 기업정보 구축 기획(1단계) 웰콘 프로젝트 관련 설계 판단 | welcon-advisor |
+| **Godot 게임 구현** | Lighthaven Depths(`~/Desktop/games/dungeon-legends`) 에셋 통합·씬 배선·카메라/점프 물리·맵 구조·UI/HUD·몬스터/플레이어 스크립트 등 모든 구현 | godot-game-developer |
+| **게임 에셋 생성 프롬프트 작성** | "에셋 프롬프트 만들어줘", "이미지 생성 프롬프트 줘" → 이미지/오디오 생성 프롬프트만 작성(생성·배선은 안 함) | asset-prompt-writer |
 
 ### STEP 1-1: 평가 에이전트 사용 제약 (agent-evaluator-v2 / skill-evaluator)
 
@@ -94,6 +96,8 @@
 > **`model: sonnet` 단일 정책** — 사용자 지시(2026-07-02): "소넷 외에는 쓰지 않는다."
 > 모든 에이전트 정의파일의 `model:` 필드는 `sonnet` 고정. opus/haiku/fable 절대 금지.
 > (이건 **정의파일 필드** 기준이다. 막혔을 때 `Agent` 도구의 `model` 파라미터로 그 작업 1건만 승인 후 상향하는 것은 별개로 허용 - `rules/performance.md`)
+>
+> **정의파일 500줄 제한**: 정의파일에는 판단 규칙만 둔다. 코드 예제·구현 골격이 길어지면 `.claude/agent-refs/<주제>.md` 로 분리하고, 정의파일 상단에 "참조 파일 (필요할 때만 읽는다)" 표로 **언제 읽는지** 조건을 명시한다. `agents/` 하위에 두면 에이전트로 스캔될 수 있으므로 반드시 `agent-refs/` 에 둔다.
 >
 > **신규 에이전트 생성 시 필수 체크리스트** (공식 문서 기준):
 > - [ ] frontmatter: `name`, `description`, `tools`, `model` 4개 필드 모두 포함
