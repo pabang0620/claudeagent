@@ -47,7 +47,7 @@
 | **Playwright 검증** | "기능 눌러봐", "브라우저 운전" | playwright-verify-loop |
 | **에이전트 평가** | 에이전트 정의파일 품질 점검·개선 | agent-evaluator-v2 |
 | **스킬 평가** | 스킬(.md) 품질 점검·개선 | skill-evaluator |
-| **숏폼 지식영상 제작** | "숏폼 만들어줘", "쇼츠 1화 뽑아줘", "지식 영상 만들어줘", `/shortform <프로필> <주제>` → 주제발굴·대본·비평·렌더 전체 파이프라인 | `/shortform` 스킬 (shortform-planner → shortform-critic → shortform-builder 순서로 오케스트레이션) |
+| **숏폼·롱폼 지식영상 제작** | "숏폼 만들어줘", "쇼츠 1화 뽑아줘", "지식 영상 만들어줘", `/shortform <프로필> <주제>` → 주제발굴·대본·렌더 전체 파이프라인 (9:16 숏폼 `ep<NN>` / 16:9 롱폼 `long<NN>` 둘 다 같은 파이프라인) | `/shortform` 스킬 (shortform-planner → 사용자 대본 승인 → shortform-builder 순서로 오케스트레이션. shortform-critic은 파이프라인에서 제거됨 - 파일은 보존하되 호출하지 않는다) |
 | **회의록 작성** | 요점메모·녹취록 기반 실제 업무회의록 작성 (기존 정본 양식 실측 우선) | meeting-minutes-writer |
 | **외부 웹 리서치** | "조사해줘", "회사/경쟁사 조사" → 외부 사이트·SNS·뉴스·공공기관·학술 정보 수집 (앱 검증 아님) | web-crawler |
 | **타입·문법 "점검만"** | **수정하지 말라는 단서가 붙었을 때만.** "고치지 말고 타입 오류만 알려줘", "점검만 해줘", "어디가 문제인지 목록으로" - TypeScript 타입·문법·임포트·async/await·데코레이터 정적 검증. 단서 없이 "타입 에러 났어"면 위 build-error-resolver로 보낸다 | syntax-validator |
@@ -67,11 +67,20 @@
 | **자소서·지원서** | "자소서 써줘" | jasoseo-writer |
 | **판정 대리 (사용자에게 물어보기 직전)** | Claude가 사용자에게 선택·승인·확인을 요청하려는 모든 순간. "이렇게 할까요", "A와 B 중 어느 쪽", "이것도 할까요", 완료 보고 직전, 스코프 확장 검토 시 | lee-wonho |
 | **웰콘 사업 자문 판단** | 콘텐츠 해외진출 기업정보 구축 기획(1단계) 웰콘 프로젝트 관련 설계 판단 | welcon-advisor |
-| **Godot 게임 구현** | Lighthaven Depths(`/mnt/c/Users/admin/Desktop/games/dungeon-legends`) 게임플레이·전투·스킬·UI·에셋 배선 구현. ※게임 세션은 그 레포의 `CLAUDE.md`+`docs/plans/`가 작업 SSOT | godot-game-developer |
+| **Godot 게임 구현** | Lighthaven Depths(`/mnt/c/Users/admin/Desktop/games/dungeon-legends`) 게임플레이·전투·스킬·UI·에셋 배선 구현. ※작업 SSOT는 그 레포의 `CLAUDE.md`+`docs/plans/M*_PLAN.md` - 태스크 착수 전 반드시 읽고, 스폰 시 태스크 ID를 프롬프트에 넣는다 | godot-game-developer |
 | **게임 인프라·멀티** | 오토로드/InputMap·콜리전 레이어 기반 공사/멀티플레이(ENet·GodotSteam)/세이브 (게임 레포 로컬 에이전트) | godot-netcode-engineer |
 | **게임 데이터·밸런스** | `data/` .tres 테이블 작성·수치 조정 (게임 레포 로컬 에이전트) | game-data-designer |
 | **게임 레벨 배치** | 맵 씬 발판/몬스터/포탈 배치, 존 추가 (게임 레포 로컬 에이전트) | game-level-designer |
 | **게임 규칙 리뷰** | 멀티-safe/표준 준수 검사, 읽기 전용 (게임 레포 로컬 에이전트) | multiplayer-safety-reviewer |
+
+> **게임 에이전트 6종은 심볼릭 링크다** (2026-08-20). 실제 파일은 게임 레포
+> `dungeon-legends/.claude/agents/`에 있고 git으로 추적되며, `project/.claude/agents/`의
+> 6개는 그 파일을 가리키는 링크다. 사용자는 항상 `project`에서 세션을 열어 바탕화면
+> 경로로 접근하므로 여기에도 있어야 하고, 링크라서 어느 쪽에서 고쳐도 정본 1개만 바뀐다.
+> - **사본으로 되돌리지 말 것** - 2026-08-20에 구버전 사본 2개가 레포 정본을 가려서
+>   개선된 규칙(경로 지정 커밋·트리거 겹침 해소 등)이 세션에 반영되지 않던 사고가 있었다.
+> - 게임 에이전트를 추가하면 레포에 만들고 링크를 걸어준다:
+>   `ln -s /mnt/c/Users/admin/Desktop/games/dungeon-legends/.claude/agents/<name>.md ~/project/.claude/agents/<name>.md`
 | **게임 에셋 생성 프롬프트 작성** | "에셋 프롬프트 만들어줘", "이미지 생성 프롬프트 줘" → 이미지/오디오 생성 프롬프트만 작성(생성·배선은 안 함) | asset-prompt-writer |
 
 ### STEP 1-1: 평가 에이전트 사용 제약 (agent-evaluator-v2 / skill-evaluator)
