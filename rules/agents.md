@@ -24,10 +24,8 @@
 | **PT/발표자료** | "PT 만들어", "제안서 슬라이드", "발표자료", RFP 제안 발표자료, PPTX | proposal-pt-builder |
 | **PPTX 에셋 조각 생성** | "pptx 에셋 생성", "슬라이드 조각 만들어줘", "python-pptx로 생성", "compose.mjs 수정/디버깅", "매니페스트 등록", "audit.py 실패 수정" → 에셋 라이브러리 조각 생성·병합·검증 (최종 PT 조립은 proposal-pt-builder) | pptx-asset-generator |
 | **Playwright 검증** | "playwright", "검증", "기능 눌러봐", "개발자모드 켜고", "브라우저 운전", "기능 전체 검증" | playwright-verify-loop |
-| **E2E 테스트 코드** | "E2E 테스트 작성", "playwright test 스위트", "테스트 코드 만들어" | e2e-runner |
 | **에이전트 평가** | 에이전트 정의파일 품질 점검·개선 | agent-evaluator-v2 |
 | **스킬 평가** | 스킬(.md) 품질 점검·개선 | skill-evaluator |
-| **리뷰 플랜 수립** | "검증해줘", "플랜 만들어줘", "수정 계획 세워줘", "리뷰 결과 반영", "이슈 플랜" | review-plan-builder |
 | **숏폼 지식영상 제작** | "숏폼 만들어줘", "쇼츠 1화 뽑아줘", "지식 영상 만들어줘", `/shortform <프로필> <주제>` → 주제발굴·대본·비평·렌더 전체 파이프라인 | `/shortform` 스킬 (planner → critic → builder 순서로 오케스트레이션) |
 | **회의록 작성** | "회의록 작성해줘", "업무회의록 만들어줘", "자문위원회 회의록", "녹취록으로 회의록 써줘", "회의 정리해줘" → 요점메모·녹취록 기반 실제 업무회의록 작성 (기존 정본 양식 실측 우선) | meeting-minutes-writer |
 | **외부 웹 리서치** | "크롤링", "조사해줘", "긁어와", "회사/경쟁사 조사", "자료 수집", "있는지 확인" → 외부 사이트·SNS·뉴스·공공기관·학술 정보 수집 (앱 검증 아님) | web-crawler |
@@ -35,7 +33,17 @@
 | **함수 로직 검증** | 특정 함수 비즈니스 로직·엣지케이스·에러 처리·부작용 정적 검증 (발견·보고만) | function-validator |
 | **스키마 필드명 정합성 검증** | "필드가 저장이 안 됨", "값이 null로 들어감", "API로 보냈는데 DB에 반영 안 됨", Zod 스키마 검증, 필드명 정합성, 스키마 drift → Zod↔Repository SQL↔프론트 전송필드 3축 대조 (발견·보고만, Zod+raw SQL 스택 한정) | schema-drift-auditor |
 | **LINKER HTML→Vue 변환** | "linker 변환", "html to vue", "linker 컴파일", "vue로 변환" → HTML 1개를 Vue 3 SFC로 1:1 변환 | linker-html-to-vue |
+| **이북 교육자료 검증** | "학생 시점 검증", "이북 챕터 이해도 검사", "비전공자가 읽고 막히는 곳 찾아줘" → 제로베이스 독자 시점 정독·막힘 보고 (읽기 전용) | ebook-student |
+| **이북 교육자료 수정** | "이북 챕터 개선", "학생 피드백 반영", "1주차-1 스타일로 고쳐줘" → 확정 스타일에 맞춰 본문·요약·퀴즈·체크포인트 연쇄 갱신 | ebook-editor |
+| **후속사업 사전영업 자료** | "후속 사업 소개서", "사전영업 자료", "발주처에 미리 보낼 자료", "고도화 사업 선점" → 정식 RFP 공고 전 선점용 회사소개 겸 어필 콘텐츠 | gov-followup-outreach-writer |
 | **판정 대리 (사용자에게 물어보기 직전)** | Claude가 사용자에게 선택·승인·확인을 요청하려는 모든 순간. "이렇게 할까요", "A와 B 중 어느 쪽", "이것도 할까요", 완료 보고 직전, 스코프 확장 검토 시 | lee-wonho |
+| **웰콘 사업 자문 판단** | "자문위원이라면 어떻게 볼까", "이 설계 괜찮은지 검토해줘", "웰콘 사업 관점에서 판단해줘", "과업 범위에 맞는지 봐줘" - 콘텐츠 해외진출 기업정보 구축 기획(1단계) 웰콘 프로젝트 관련 설계 판단 | welcon-advisor |
+
+### STEP 1-1: 평가 에이전트 사용 제약 (agent-evaluator-v2 / skill-evaluator)
+
+> 두 에이전트는 **신규 생성·대폭 수정 직후 1회 점검**에만 쓴다.
+> 90점/100점 목표로 반복 재평가하는 **점수 루프는 금지**한다 (메모리 `feedback_no_agent_score_loop`).
+> "최상급"의 기준은 점수가 아니라 실제 안전성·정확성 개선이다.
 
 ### STEP 2: 코드 변경 후 필수 (예외 없음)
 
@@ -56,7 +64,6 @@
 
 > **`model: sonnet` 단일 정책** — 사용자 지시(2026-07-02): "소넷 외에는 쓰지 않는다."
 > 모든 에이전트 정의파일의 `model:` 필드는 `sonnet` 고정. opus/haiku/fable 절대 금지.
-> (기존 flutter-game-builder haiku 예외도 2026-07-02 sonnet으로 통일 완료)
 >
 > **신규 에이전트 생성 시 필수 체크리스트** (공식 문서 기준):
 > - [ ] frontmatter: `name`, `description`, `tools`, `model` 4개 필드 모두 포함
@@ -86,31 +93,31 @@ Located in `.claude/agents/` (project-local, not `~/.claude/agents/`):
 | security-reviewer | 보안 분석 (진단 전용) | 인증/권한/민감 데이터 |
 | build-error-resolver | 빌드 에러 수정 | 빌드/타입 실패 시 |
 | playwright-verify-loop | 브라우저 직접 운전 검증 루프 (개발자모드·콘솔·네트워크 수집 → 리포트 → 수정 위임 → 재검증) | "playwright", "검증", "기능 눌러봐", "개발자모드 켜고" |
-| e2e-runner | E2E 테스트 코드 작성·유지·실행 (npx playwright test 스위트 전용) | "테스트 코드 작성", "playwright test 스위트" |
 | refactor-cleaner | 코드 정리·불필요 코드 제거 | 리팩토링 실행 |
 | database-reviewer | DB 리뷰 (리뷰 전용) | 기존 쿼리/스키마/인덱스 감사 |
 | doc-updater | 문서·코드맵 업데이트 | 기능 완료 후 |
 | doc-generator | DOCX/한글 문서 생성 (계약서·보고서·제안서) | 문서 생성 요청 시 |
-| project-bootstrapper | 신규 프로젝트 Day 0 셋업 | 새 프로젝트 초기화 |
 | ui-design-system | 디자인 시스템·토큰 생성 | 디자인 토큰, 공용 컴포넌트 |
 | jasoseo-writer | 자소서·지원서 작성 | 자소서, 자기소개서 요청 |
-| flutter-game-builder | Flutter 게임 APK·웹 빌드 | Flutter 빌드 요청 |
 | agent-evaluator-v2 | 에이전트 정의파일 3계층 100점 평가 (정적 린트·트리거 F1 → 9 judge 병렬 → 근거잠금 채점·회귀 비교). v1은 agents-archive/로 퇴역 | 에이전트 생성·수정 후 (표준) |
 | skill-evaluator | 스킬(.md) 품질 평가·개선 (100점 척도) | 스킬 생성·수정 후 |
 | proposal-pt-builder | 정부사업 RFP 제안 PT → 에셋 라이브러리 조합 네이티브 PPTX (standard/gov 듀얼 트랙 자동 인지) | PT/발표자료 요청 시 |
 | pptx-asset-generator | PPT 에셋 "조각"(표·KPI·프로세스·비교표·타임라인·조직도·차트·헤더) python-pptx/OOXML 생성·병합·검증, compose.mjs 파이프라인 확장. 최종 PT 조립은 담당 아님(→ proposal-pt-builder) | "pptx 에셋 생성", "슬라이드 조각 만들어줘", "compose.mjs 수정/디버깅", "매니페스트 등록" |
 | hwp-generator | HWPX 공문서 생성 (계약서·제안요청서·보고서·공문·계획서·회의록) | "hwp 만들어", "계약서", "제안요청서", ".hwpx" 요청 시 |
-| review-plan-builder | 리뷰 결과 재검토 → 수정 플랜 수립 → 병렬 검증 루프(2회 연속 클린) → FINAL_PLAN.md → 실행 직전 중단 | "검증해줘", "플랜 만들어줘", "수정 계획 세워줘" |
 | shortform-planner | 숏폼 지식영상 주제 발굴 + 주장별 사실검증(확실성 A/B/C 등급, C면 주제 교체) + 타임코드 대본. 길이는 "채우기"가 아니라 "이해에 필요한 최소" | "숏폼 기획", "쇼츠 주제 잡아줘", `/shortform` 실행 시 |
 | shortform-critic | 숏폼 대본 문장 단위 쳐내기 (읽기 전용, 대본 파일 수정 안 함). "빼면 이해가 안 되나?" 기준으로 삭제·압축 판정. 작성자와 반드시 분리 | planner가 대본 쓴 직후, "필러 잡아줘", "쓸데없는 말 빼줘" |
 | shortform-builder | 확정 대본 → 씬 라이브러리 조립 + edge-tts + RMS 립싱크 + Remotion 렌더 → mp4. REGISTRY 선조회 후 없는 것만 신규 제작·등록 | "숏폼 렌더", "영상 뽑아줘", 대본 확정 후 |
 | meeting-minutes-writer | 요점메모+녹취록(1개 이상)으로 업무회의록 작성. 기존 정본 회의록 양식 실측 우선(추측 금지), 화자 매핑(요점메모↔참석자N, 확신 없으면 확인 필요로 표시), 외부 의견자는 이름 태그+의견1)/2)/3) 번호, 우리측은 주어생략 개조식 서술 | "회의록 작성해줘", "업무회의록 만들어줘", "자문위원회 회의록", "녹취록으로 회의록 써줘" |
-| web-crawler | 외부 웹 리서치 크롤러 (기업 사이트·SNS·뉴스·공공기관·학술, WebSearch→WebFetch→Playwright, 단일타겟 병렬). 앱 검증 playwright-verify-loop·E2E e2e-runner와 구별 | "크롤링", "조사해줘", "경쟁사 분석", "자료 수집", "있는지 확인" |
+| web-crawler | 외부 웹 리서치 크롤러 (기업 사이트·SNS·뉴스·공공기관·학술, WebSearch→WebFetch→Playwright, 단일타겟 병렬). 앱 검증 playwright-verify-loop와 구별 | "크롤링", "조사해줘", "경쟁사 분석", "자료 수집", "있는지 확인" |
 | syntax-validator | TypeScript 타입·문법·임포트·async/await·데코레이터 정적 검증 (발견·보고 전용, 수정 안 함) | 코드 리뷰 전 사전 검증, 병렬 함수 단위 검증 |
 | function-validator | 함수 비즈니스 로직 정확성·엣지케이스·에러 처리·부작용 정적 분석 (발견·보고 전용, 수정 안 함) | 병렬 파일·함수 단위 기능 검증 |
 | schema-drift-auditor | Zod 스키마 ↔ Repository SQL ↔ 프론트 전송 필드 3축 정합성 정적 검증, Zod strip으로 인한 silent 데이터 유실 탐지 (발견·보고 전용, 수정 안 함, Zod+raw SQL 스택 한정) | "필드가 저장이 안 됨", "값이 null로 들어감", "API로 보냈는데 DB에 반영 안 됨", "필드명 정합성", "스키마 drift" |
 | linker-html-to-vue | LINKER 프로젝트 HTML 1개 → Vue 3 Composition API SFC 1:1 변환 (CSS 무변경, 클래스 기반 표시제어) | "linker 변환", "html to vue", "vue로 변환" |
+| ebook-student | 이북 교육자료를 "완전 제로베이스 비전공자" 시점으로 정독하고 막히는 지점 보고 (발견·보고 전용, 수정 안 함) | "학생 시점 검증", "이북 챕터 이해도 검사" |
+| ebook-editor | ebook-student가 보고한 막힘 지점 해소. 본문 수정 시 요약·퀴즈·체크포인트까지 연쇄 갱신 (저자 확정 스타일 9원칙 준수) | "이북 챕터 개선", "학생 피드백 반영" |
+| gov-followup-outreach-writer | 수행 중 사업 공고문에 명시된 후속 사업을 정식 RFP 전에 선점하는 사전 어필 자료 콘텐츠 작성 (최종 파일 산출은 hwp-generator/doc-generator 위임) | "후속 사업 소개서", "사전영업 자료", "고도화 사업 선점" |
 | lee-wonho | 이원호 의사결정 대리 판정 (아이디어 생성 안 함, 판정만). ADOPT / REJECT / CLAUDE_DISCRETION / ESCALATE 4종 출력, 규칙 ID 71개 | 사용자에게 질문하려는 순간, 선택지 앞에서 멈출 때, 완료 보고 직전, 자발적 확장 검토 시 |
+| welcon-advisor | 웰콘(콘텐츠 해외진출 기업정보 구축 기획 1단계) 프로젝트 전용 AI 자문위원. RFP·실행계획서·자문위원 8인 원문·이성민 교수 자문·실측 DB를 직접 읽고 근거 등급([직접 근거]/[데이터 근거]/[추론]/[미확인])을 밝혀 의견 제시(lee-wonho와 달리 의견 창작 가능). 과업 범위(1단계=기획, 2단계 개발 아님) 이탈 여부도 확인 | "자문위원이라면 어떻게 볼까", "이 설계 괜찮은지 검토해줘", "웰콘 사업 관점에서 판단해줘", "과업 범위에 맞는지 봐줘" |
 | **code-reviewer** | **스킬** (에이전트 아님) | `code-reviewer` 스킬로 호출 |
 
 ---
@@ -140,10 +147,10 @@ Located in `.claude/agents/` (project-local, not `~/.claude/agents/`):
 
 ### Playwright 검증 요청 ("playwright", "검증해", "기능 눌러봐", "개발자모드 켜고")
 ```
-playwright-verify-loop 에이전트 사용 (e2e-runner 금지)
+playwright-verify-loop 에이전트 사용
 - 브라우저를 직접 운전하며 기능 전체 워크스루
 - 콘솔·네트워크·서버로그 수집 → 병렬 원인조사 → 리포트 → 수정 위임 → 재검증 루프
-- npx playwright test 실행이 아님
+- npx playwright test 스위트 실행이 아님 (전용 e2e-runner는 미사용으로 2026-08-20 아카이빙)
 ```
 
 ### 필드명 전면 변경 (DB+백엔드+프론트)
@@ -181,3 +188,18 @@ For complex problems, use split role sub-agents:
 - Security expert
 - Consistency reviewer
 - Redundancy checker
+
+---
+
+## 아카이빙 이력
+
+`.claude/agents-archive/`로 퇴역한 에이전트는 라우팅 대상이 아니다. 필요해지면 파일을 `agents/`로 되돌리고 위 표 2곳(STEP 1 + Available Agents)에 다시 등재한다.
+
+| 에이전트 | 퇴역일 | 사유 |
+|---|---|---|
+| e2e-runner | 2026-08-20 | 전체 세션 로그 실측 호출 0회. playwright-verify-loop가 실질 대체 |
+| project-bootstrapper | 2026-08-20 | 호출 0회. Day 0 셋업 시나리오 미발생 |
+| review-plan-builder | 2026-08-20 | 호출 0회 |
+| flutter-game-builder | 2026-08-20 | 호출 0회. 대상 게임 프로젝트 전부 폐기 |
+| manus-liaison | 2026-08-20 | raid-forge 폐기로 위임 대상 소멸 |
+| audio-transcriber | 2026-07-24 | (이전 퇴역) |

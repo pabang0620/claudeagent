@@ -29,4 +29,4 @@ TDD 절차 (Claude 재량 영역 - 필요하다고 판단될 때 적용):
 ## Agent Support
 
 - **tdd-guide** - Use PROACTIVELY for new features, enforces write-tests-first
-- **e2e-runner** - Playwright E2E testing specialist
+- **playwright-verify-loop** - 브라우저를 직접 운전하며 기능 워크스루·오류 수집 (최종 손테스트 직전 E2E 담당)

@@ -122,6 +122,7 @@ project/
 | `error-prevention-rules` | React 런타임 에러(무한 렌더·race condition·cleanup 누락 등) 사전 차단 정적 검사 14개 룰 | 자동 (.jsx/.tsx 저장 시) |
 | `mobile-first-checker` | 모바일 안티패턴 사전 차단 정적 검사 12개 룰 (드래그·스크롤락·필터·모달 등) | 자동 (.jsx/.tsx/.css/.scss 저장 시) |
 | `video-use` | 대화형 영상 편집 (전사·컷·색보정·오버레이 애니메이션·자막 번인) | 자동 + `/video-use` |
+| `quote-builder` | 프리랜서 견적서 → 인쇄(PDF) 최적화 HTML (비사업자 부가세·3.3% 원천징수, 수정 범위 기준 금액) | 자동 + `/quote-builder` |
 | `shortform` | 숏폼 지식영상 제작 오케스트레이션 (주제→사실검증·대본→비평→조립·TTS·렌더→mp4). 자산 라이브러리·프로필은 `~/project/.claude/shortform/` | `/shortform <프로필> <주제>` |
 
 ## 주요 에이전트 (자동 트리거, 스킬 아님)
