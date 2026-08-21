@@ -1,13 +1,15 @@
 # Hooks System
 
-## 실제 등록된 훅 (`~/.claude/settings.json`, 2026-08-20 실측)
+## 실제 등록된 훅 (`~/.claude/settings.json`, 2026-08-21 실측)
 
-| 시점 | 명령 | 역할 |
-|------|------|------|
-| SessionStart | `bash ~/.skill-fog/hooks/session-start.sh` | skill-fog 미처리 패턴을 세션 시작 시 주입 |
-| Stop | `bash ~/.skill-fog/hooks/stop.sh` | 세션 종료 시 요청 패턴 기록 |
+**등록된 훅이 하나도 없다.** `settings.json`에 `hooks` 키 자체가 없다.
 
-**등록된 훅은 위 2개가 전부다.** 포맷·타입검사·console.log 점검·git push 리뷰는 자동으로 돌지 않는다. 훅이 있다고 가정하고 동작을 설계하지 말 것.
+포맷·타입검사·console.log 점검·git push 리뷰는 자동으로 돌지 않는다. 훅이 있다고 가정하고 동작을 설계하지 말 것.
+
+> 이력: skill-fog의 SessionStart/Stop 훅 2개가 유일한 등록 훅이었으나 2026-08-21 미사용으로 제거했다
+> (`~/.skill-fog/`, `~/.claude/skills/skill-fog/`, `~/.local/bin/skill-fog` 심볼릭링크, 전역 `CLAUDE.md`
+> 상단 지시문 전부 삭제). 되살릴 일은 없다고 보지만 백업은 `~/.claude/settings.json.backup.20260821_103203`,
+> `~/.claude/CLAUDE.md.backup.20260821_103203`에 있다.
 
 훅을 새로 추가하려면 `update-config` 스킬을 쓴다. 추가 후에는 이 표를 함께 갱신한다.
 
