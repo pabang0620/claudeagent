@@ -102,7 +102,13 @@ function collectRoutes(file, prefix, endpoints, unresolved, root, seen) {
     // 미들웨어는 인자 전체 문자열로 판정하고, 핸들러는 마지막 인자의 식별자로 잡는다
     const middlewares = rest.slice(0, -1).filter((a) => AUTH_HINT.test(a)).map((a) => a.split('(')[0])
     const lastArg = rest[rest.length - 1] || ''
-    const handler = (lastArg.match(/[A-Za-z0-9_$]+/g) || []).pop() || null
+    const idents = lastArg.match(/[A-Za-z0-9_$]+/g) || []
+    const handler = idents.pop() || null
+    // 핸들러가 정의된 파일을 확정해 둔다. 프로젝트 전체에 같은 함수명이 여러 개일 때
+    // (boothflow 실측 60건) 이름만으로 찾으면 엉뚱한 도메인의 SQL이 붙는다.
+    //   named  : import { getWebtoons } from './webtoonController.js' → imports[handler]
+    //   namespace: companiesController.create                          → imports[한정자]
+    const handlerFile = imports[handler] || (idents.length ? imports[idents[0]] : null) || null
     // validate(createWebtoonSchema) 처럼 라우트에 검증 스키마가 명시돼 있으면
     // 이름 추측 없이 그대로 쓴다. 요청 예시의 가장 정확한 근거다.
     const schemaRef = rest
@@ -114,6 +120,8 @@ function collectRoutes(file, prefix, endpoints, unresolved, root, seen) {
       src: `${rel(root, file)}:${lineOf(code, m.index)}`,
       auth: middlewares.length ? middlewares.join(' + ') : null,
       handler,
+      handlerFile,
+      routeDir: path.dirname(file),
       schemaRef,
       touches: [],
       calledBy: [],
@@ -143,36 +151,66 @@ export function tablesFromSql(text) {
   return [...found].map(([table, ops]) => ({ table, ops: [...ops] }))
 }
 
-// 함수명 → 그 함수가 직접 만지는 테이블, 그리고 그 함수가 호출하는 다른 함수명
+// 함수명 → 후보 노드 목록. 같은 이름이 여러 파일에 있을 수 있으므로 배열로 둔다.
 function buildFunctionGraph(files, root) {
-  const nodes = Object.create(null)
+  const byName = Object.create(null)
   for (const file of files) {
     const code = stripComments(read(file))
     const fns = splitFunctions(code)
     for (const [name, body] of Object.entries(fns)) {
       const calls = new Set()
       for (const m of body.matchAll(/\b([A-Za-z0-9_$]{3,})\s*\(/g)) calls.add(m[1])
-      nodes[name] = {
+      ;(byName[name] ||= []).push({
         name,
+        absFile: file,
+        dir: path.dirname(file),
         file: rel(root, file),
         tables: tablesFromSql(body),
         calls: [...calls],
-      }
+      })
     }
   }
-  return nodes
+  return byName
 }
 
-// 핸들러에서 시작해 호출 그래프를 타고 내려가 도달하는 모든 테이블을 모은다
-function resolveTables(handler, graph, depth = 0, seen = new Set()) {
-  if (!handler || depth > 4 || seen.has(handler)) return []
-  seen.add(handler)
-  const node = graph[handler]
-  if (!node || !Array.isArray(node.tables)) return []
+// 같은 이름의 후보 중 하나를 고른다.
+//  1) 한정자로 파일이 확정됐으면 그 파일
+//  2) 후보가 원래 하나뿐이면 그것
+//  3) 여럿이면 같은 도메인 폴더 안의 것만 인정. 폴더 밖이면 추측하지 않고 포기한다
+//     (틀린 테이블을 붙이느니 비워 두는 게 낫다)
+// 이미 지나온 노드는 제외한다. controller와 service가 같은 함수명을 쓰는 구조에서
+// 체인이 한 칸씩 내려가려면 이 제외가 필요하다.
+function pickNode(byName, name, wantFile, nearDir, seen) {
+  const all = byName[name]
+  if (!all || !all.length) return null
+  const cands = all.filter((c) => !seen.has(c.absFile + '::' + name))
+  if (!cands.length) return null
+  if (wantFile) {
+    const hit = cands.find((c) => c.absFile === wantFile)
+    if (hit) return hit
+  }
+  if (all.length === 1) return cands[0]
+  if (nearDir) {
+    const same = cands.filter((c) => c.dir === nearDir)
+    if (same.length === 1) return same[0]
+  }
+  return null
+}
+
+// 핸들러에서 시작해 호출 그래프를 타고 내려가 도달하는 모든 테이블을 모은다.
+// 도메인 폴더(controller/service/repository가 한 폴더)를 따라가므로
+// nearDir 을 물려주면 동명이인 함수에 잘못 붙는 것을 막을 수 있다.
+function resolveTables(name, byName, opts = {}) {
+  const { wantFile = null, nearDir = null, depth = 0, seen = new Set() } = opts
+  if (!name || depth > 5) return []
+  const node = pickNode(byName, name, wantFile, nearDir, seen)
+  if (!node) return []
+  seen.add(node.absFile + '::' + name)
   const out = [...node.tables]
   for (const callee of node.calls) {
-    if (callee === handler) continue
-    out.push(...resolveTables(callee, graph, depth + 1, seen))
+    out.push(...resolveTables(callee, byName, {
+      nearDir: node.dir, depth: depth + 1, seen,
+    }))
   }
   return out
 }
@@ -192,23 +230,39 @@ export function scanBackend(backendRoot, projectRoot) {
   const unresolved = []
   const files = walk(backendRoot)
 
-  const entries = files.filter((f) =>
-    /(routes\/index|app|server|index)\.(js|mjs|ts)$/.test(f.replace(/\\/g, '/')) &&
-    /\/(routes|src)\//.test(f.replace(/\\/g, '/'))
-  )
+  // 진입 순서가 결과를 바꾼다. app.js 의 `app.use('/api', routes)` 를 먼저 보지 않으면
+  // routes/index.js 를 직접 들어가 `/api` 접두사가 통째로 빠진다.
+  // 파일 순회 순서에 맡기지 않고 우선순위를 못박는다.
+  const ENTRY_RANK = [/server\.(js|mjs|ts)$/, /app\.(js|mjs|ts)$/, /routes\/index\.(js|mjs|ts)$/, /index\.(js|mjs|ts)$/]
+  const norm = (f) => f.replace(/\\/g, '/')
+  const rankOf = (f) => {
+    const i = ENTRY_RANK.findIndex((re) => re.test(norm(f)))
+    return i === -1 ? 99 : i
+  }
+  const entries = files
+    .filter((f) => rankOf(f) < 99 && /\/(routes|src)\//.test(norm(f)))
+    // 라우터가 아닌 index.js (cron/, socket/, workers/ 등)는 제외
+    .filter((f) => !/\/(cron|socket|jobs?|workers?|scripts?|migrations?)\//.test(norm(f)))
+    .sort((a, b) => rankOf(a) - rankOf(b) || a.localeCompare(b))
   const seen = new Set()
   for (const entry of entries) collectRoutes(entry, '', endpoints, unresolved, projectRoot, seen)
 
-  const graph = buildFunctionGraph(files, projectRoot)
+  const byName = buildFunctionGraph(files, projectRoot)
   for (const ep of endpoints) {
-    ep.touches = mergeTables(resolveTables(ep.handler, graph))
+    ep.touches = mergeTables(
+      resolveTables(ep.handler, byName, {
+        wantFile: ep.handlerFile,
+        nearDir: ep.handlerFile ? path.dirname(ep.handlerFile) : ep.routeDir,
+      })
+    )
     if (!ep.touches.length) ep.confidence = 'medium'
-    delete ep.dir
+    delete ep.handlerFile
+    delete ep.routeDir
   }
 
   // 중복 정의 제거 (같은 파일이 두 경로로 진입한 경우)
   const uniq = new Map()
   for (const ep of endpoints) uniq.set(`${ep.method} ${ep.path} ${ep.src}`, ep)
 
-  return { endpoints: [...uniq.values()], unresolved, functionGraph: graph }
+  return { endpoints: [...uniq.values()], unresolved }
 }

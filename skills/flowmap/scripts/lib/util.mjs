@@ -38,19 +38,41 @@ export function read(file) {
 // 주석 안의 코드가 오탐으로 잡히는 것을 막는다.
 // wecom jobApi.js처럼 블록 주석 안에 살아있는 apiClient 호출이 들어있는 사례가 실재한다.
 // 줄 번호를 보존해야 하므로 개행은 남기고 나머지만 공백으로 치환한다.
+// `/['"]/g` 같은 정규식 리터럴 안의 따옴표를 문자열 시작으로 오해하면
+// 그 뒤 코드가 통째로 문자열로 먹혀 라우트를 놓친다(boothflow 실측 25건).
+// `/` 가 나눗셈인지 정규식 시작인지는 직전 토큰으로 판별한다.
+const REGEX_PRECEDERS = new Set(['=', '(', ',', '[', ':', ';', '!', '&', '|', '?', '{', '}', '+', '-', '*', '%', '~', '^', '<', '>'])
+const REGEX_KEYWORDS = /\b(return|typeof|instanceof|case|in|of|do|else|yield|await|new|delete|void)$/
+
+function startsRegex(emitted) {
+  const trimmed = emitted.replace(/\s+$/, '')
+  if (!trimmed) return true
+  const last = trimmed[trimmed.length - 1]
+  if (REGEX_PRECEDERS.has(last)) return true
+  return REGEX_KEYWORDS.test(trimmed)
+}
+
 export function stripComments(code) {
   let out = ''
   let i = 0
-  let mode = 'code' // code | line | block | single | double | template
+  let mode = 'code' // code | line | block | single | double | template | regex
   while (i < code.length) {
     const c = code[i]
     const next = code[i + 1]
     if (mode === 'code') {
       if (c === '/' && next === '/') { mode = 'line'; out += '  '; i += 2; continue }
       if (c === '/' && next === '*') { mode = 'block'; out += '  '; i += 2; continue }
+      if (c === '/' && startsRegex(out)) { mode = 'regex'; out += c; i++; continue }
       if (c === "'") mode = 'single'
       else if (c === '"') mode = 'double'
       else if (c === '`') mode = 'template'
+      out += c; i++; continue
+    }
+    if (mode === 'regex') {
+      // 문자 클래스 안의 `/` 는 종료가 아니지만, 여기서는 종료로 봐도
+      // 그 뒤가 코드 모드로 복귀할 뿐이라 따옴표 오인만 막으면 충분하다
+      if (c === '\\') { out += c + (next ?? ''); i += 2; continue }
+      if (c === '/' || c === '\n') mode = 'code'
       out += c; i++; continue
     }
     if (mode === 'line') {

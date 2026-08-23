@@ -27,9 +27,11 @@ const json = JSON.stringify(graph)
   .replace(/\u2028/g, '\\u2028')
   .replace(/\u2029/g, '\\u2029')
 
+// 치환값을 함수로 넘긴다. 문자열로 넘기면 값 안의 `$&` `$\`` 등이
+// 치환 패턴으로 해석돼 문서가 조용히 깨진다.
 const html = template
-  .replace('__TITLE__', String(graph.project?.name || 'project').replace(/[<>]/g, ''))
-  .replace('__DATA__', json)
+  .replace('__TITLE__', () => String(graph.project?.name || 'project').replace(/[<>]/g, ''))
+  .replace('__DATA__', () => json)
 
 fs.writeFileSync(outPath, html)
 
