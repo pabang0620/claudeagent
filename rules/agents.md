@@ -92,6 +92,7 @@
 > - 게임 에이전트를 추가하면 레포에 만들고 링크를 걸어준다:
 >   `ln -s /mnt/c/Users/admin/Desktop/games/dungeon-legends/.claude/agents/<name>.md ~/project/.claude/agents/<name>.md`
 | **게임 에셋 생성 프롬프트 작성** | "에셋 프롬프트 만들어줘", "이미지 생성 프롬프트 줘" → 이미지/오디오 생성 프롬프트만 작성(생성·배선은 안 함) | asset-prompt-writer |
+| **게임 에셋 실제 생성** | "에셋 생성해줘", "이미지 뽑아줘", "캐릭터 시트 만들어줘" → gpt-image 스킬을 직접 호출해 실제 PNG까지 생성(프롬프트만 필요하면 위 asset-prompt-writer, 씬 배선·알파 추출은 godot-game-developer) | game-asset-generator |
 
 ### STEP 1-1: 평가 에이전트 사용 제약 (agent-evaluator-v2 / skill-evaluator)
 
