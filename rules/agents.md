@@ -26,6 +26,7 @@
 | 개인 학습자료 편집 (정보처리기사 노트 등) | ~20 | **study-notes-editor** | li 개수 불변·계산 재검증·탭 숫자 정합이 정의에 내장됨 |
 | 에이전트·스킬·룰 정의 자체 수정 (메타작업) | ~25 | 오케스트레이터 직접 | 정의파일 1개당 수정 범위를 좁게. 파일 전체 재작성 금지 |
 | 숏폼 제작 부수작업 (캐릭터 SVG·인트로/TTS·파일 재배치) | ~45 | shortform-builder | 렌더 파이프라인 밖 잡무여도 자산 REGISTRY 선조회 원칙은 동일 적용 |
+| mobile-idle-rpg 플레이어 애니메이션 프레임 재배선 (걷기·구르기·점프 등 원화 재작업 → 시트분할·정규화·Unity 배선) | 4+ (전사·궁수·법사·암살자 각 재발생) | general-purpose | 스폰 전 대상 레포 `CLAUDE.md`+`docs/WORKFLOW_RULES.md` 1절 선독(-runTests에 -quit 금지, 강제종료 금지), 기존 `_claudelogs/run_tests_retry.sh` 재사용, 원본 png는 스크래치패드에 백업 후 교체, 결과는 반드시 별도 에이전트로 재검증(자체보고 신뢰 금지 - 실제로 프레임 매팅 결함을 자체보고가 놓친 전례 있음) |
 
 ### STEP 1: 요청 분류 (하나라도 해당되면 즉시 해당 에이전트 실행)
 
@@ -67,32 +68,33 @@
 | **신규 API 계약 설계** | 새 엔드포인트, 업로드 API, 관리자 API → Zod 스키마 1개에서 백엔드·프론트·타입 동시 생성 | api-contract-designer |
 | **디자인 토큰·CSS 일관성** | "공용 컴포넌트 만들어줘", 하드코딩 컬러·radius 정리 | ui-design-system |
 | **자소서·지원서** | "자소서 써줘" | jasoseo-writer |
+| **PastLetter 이미지 프롬프트** | 모두의창업2차 지원서 `[사진: 설명]` 자리·홍보용 이미지 생성 프롬프트 작성 (PastLetter 전용, 실제 이미지 생성은 안 함) | pastletter-image-prompt-writer |
 | **판정 대리 (사용자에게 물어보기 직전)** | Claude가 사용자에게 선택·승인·확인을 요청하려는 모든 순간. "이렇게 할까요", "A와 B 중 어느 쪽", "이것도 할까요", 완료 보고 직전, 스코프 확장 검토 시 | lee-wonho |
 | **웰콘 사업 자문 판단** | 콘텐츠 해외진출 기업정보 구축 기획(1단계) 웰콘 프로젝트 관련 설계 판단 | welcon-advisor |
-| **Godot 게임 구현** | Lighthaven Depths(`/mnt/c/Users/admin/Desktop/games/dungeon-legends`) 게임플레이·전투·스킬·UI·에셋 배선 구현. ※작업 SSOT는 그 레포의 `CLAUDE.md`+`docs/plans/M*_PLAN.md` - 태스크 착수 전 반드시 읽고, 스폰 시 태스크 ID를 프롬프트에 넣는다 | godot-game-developer |
+| **Lighthaven 3D 설계 검토** | `/mnt/c/Users/admin/Desktop/games/lighthaven-3d` 모듈 구현 전 계약·상태소유권·저장/취소 충돌 등 임의판단 빈칸 검토 (읽기 전용, 코드 수정 없음). 구현 착수 전 사전 활용 | lh-design-reviewer |
+| **Lighthaven 3D 모듈 구현** | 지정된 모듈 1개를 명세대로 구현·자가검사(컴파일+정상/오류/취소 사례). 설계 검토 통과 후 진행 | lh-module-implementer |
+| **Lighthaven 3D 독립 검증** | 구현 보고 주장이 실제 코드·로그·테스트와 일치하는지 재현 검증, PASS 기준 임의완화 금지 | lh-module-verifier |
+| **Lighthaven 3D 인수인계·자료관리** | 모듈 작업 후 의존성·에셋 매니페스트·HANDOFF 문서 정합성 감사, 원본 삭제는 하지 않음(승인 필요 시 오케스트레이터가 별도 수행) | lh-integration-custodian |
 
-> **게임 레포 작업 전 오케스트레이터가 먼저 `dungeon-legends/CLAUDE.md`를 직접 읽는다.**
-> 세션은 항상 `project`에서 열리므로 그 파일은 자동 주입되지 않는다. 안 읽고 스폰하면
-> 그 레포의 하드 규칙과 어긋나는 지시를 내리게 된다 - 2026-08-22에 "헤드리스 임포트를
-> 돌려라"라고 두 번 지시했다가 에이전트가 규칙 원문을 근거로 거부했고, **에이전트 쪽이
-> 옳았다**(그 레포는 에이전트의 Godot 실행을 전면 금지하고 헤드리스 검증을 오케스트레이터
-> 담당으로 못박아 뒀다). 특히 다음 3가지는 스폰 프롬프트를 쓰기 전에 확인한다:
-> 화면 검증 금지 범위 / 헤드리스 검증을 누가 하는가 / 커밋 경로 지정 방식.
-| **게임 인프라·멀티** | 오토로드/InputMap·콜리전 레이어 기반 공사/멀티플레이(ENet·GodotSteam)/세이브 (게임 레포 로컬 에이전트) | godot-netcode-engineer |
-| **게임 데이터·밸런스** | `data/` .tres 테이블 작성·수치 조정 (게임 레포 로컬 에이전트) | game-data-designer |
-| **게임 레벨 배치** | 맵 씬 발판/몬스터/포탈 배치, 존 추가 (게임 레포 로컬 에이전트) | game-level-designer |
-| **게임 규칙 리뷰** | 멀티-safe/표준 준수 검사, 읽기 전용 (게임 레포 로컬 에이전트) | multiplayer-safety-reviewer |
+> **Lighthaven 3D는 dungeon-legends(Godot)를 대체하는 Unity 리메이크다** (2026-09-09).
+> 기존 프로젝트(dungeon-legends)의 **기획·수치·에셋만 승계**하고 코드·아키텍처·기술스택은
+> 참고하지 않는다 - 레포 `CLAUDE.md`에 명시된 원칙. 작업 SSOT는 그 레포의 `CLAUDE.md`+
+> `AGENTS.md`+`docs/HANDOFF.md`이며, 세션은 항상 `project`에서 열려 자동 주입되지 않으므로
+> 스폰 전 오케스트레이터가 직접 읽는다. 현재 구현 범위는 사용자가 지정한 모듈 1개로 좁게
+> 제한되어 있다 - 다음 모듈 착수는 사용자 지시 없이 확대하지 않는다.
+| **모바일 방치형 RPG 게임 구현** | `/mnt/c/Users/admin/Desktop/games/mobile-idle-rpg-3d-v2/unity/`(Unity 6000.5.9f1, 완전 3D 실시간 렌더링) 이동·전투·장비·강화·방치보상·던전·레이드 등 C# 게임플레이 코드. ※작업 SSOT는 그 레포의 `DESIGN.md`+`CLAUDE.md`. **구 레포 2개(`mobile-idle-rpg`, `mobile-idle-rpg-3d`)는 참고 전용·쓰기 금지, 작업 대상 아님** (2026-09-08 3D 리메이크로 v2 신규 레포 출범). 3D 캐릭터 아트 파이프라인(Blender/Hyper3D/Mixamo)은 이 에이전트가 아니라 오케스트레이터 직접 또는 game-asset-artist 담당 | mobile-idle-rpg-3d-developer |
+| **Lighthaven 3D 에셋 제작** | 지정된 Blender/Unity 에셋(모델·모션·재질) 승인된 비주얼 방향에 맞춰 제작·수정. 전면 교체·수식 변경·대량 제작 금지 | lh-asset-specialist |
 
-> **게임 에이전트 6종은 심볼릭 링크다** (2026-08-20). 실제 파일은 게임 레포
-> `dungeon-legends/.claude/agents/`에 있고 git으로 추적되며, `project/.claude/agents/`의
-> 6개는 그 파일을 가리키는 링크다. 사용자는 항상 `project`에서 세션을 열어 바탕화면
-> 경로로 접근하므로 여기에도 있어야 하고, 링크라서 어느 쪽에서 고쳐도 정본 1개만 바뀐다.
-> - **사본으로 되돌리지 말 것** - 2026-08-20에 구버전 사본 2개가 레포 정본을 가려서
->   개선된 규칙(경로 지정 커밋·트리거 겹침 해소 등)이 세션에 반영되지 않던 사고가 있었다.
-> - 게임 에이전트를 추가하면 레포에 만들고 링크를 걸어준다:
->   `ln -s /mnt/c/Users/admin/Desktop/games/dungeon-legends/.claude/agents/<name>.md ~/project/.claude/agents/<name>.md`
-| **게임 에셋 생성 프롬프트 작성** | "에셋 프롬프트 만들어줘", "이미지 생성 프롬프트 줘" → 이미지/오디오 생성 프롬프트만 작성(생성·배선은 안 함) | asset-prompt-writer |
-| **게임 에셋 실제 생성** | "에셋 생성해줘", "이미지 뽑아줘", "캐릭터 시트 만들어줘" → gpt-image 스킬을 직접 호출해 실제 PNG까지 생성(프롬프트만 필요하면 위 asset-prompt-writer, 씬 배선·알파 추출은 godot-game-developer) | game-asset-generator |
+> **Lighthaven 3D 에이전트 5종은 심볼릭 링크다** (2026-09-09, dungeon-legends 6종 링크를 대체).
+> 실제 파일은 게임 레포 `lighthaven-3d/.claude/agents/`에 있고 git으로 추적되며,
+> `project/.claude/agents/`의 5개(`lh-*.md`)는 그 파일을 가리키는 링크다. 사용자는 항상
+> `project`에서 세션을 열어 바탕화면 경로로 접근하므로 여기에도 있어야 하고, 링크라서
+> 어느 쪽에서 고쳐도 정본 1개만 바뀐다.
+> - **사본으로 되돌리지 말 것** - dungeon-legends 사고(구버전 사본이 정본을 가려 개선 규칙
+>   미반영) 재발 방지, 항상 심볼릭 링크로 유지한다.
+> - 에이전트를 추가하면 레포에 만들고 링크를 걸어준다:
+>   `ln -s /mnt/c/Users/admin/Desktop/games/lighthaven-3d/.claude/agents/<name>.md ~/project/.claude/agents/<name>.md`
+| **게임 에셋 생성** | "에셋 생성해줘", "이미지 뽑아줘", "캐릭터 시트 만들어줘", "에셋 프롬프트 써줘" → 대상 게임 프로젝트(Unity·Godot 등 무관) 기준으로 프롬프트 작성부터 gpt-image 스킬 호출·실제 PNG 생성까지 한 에이전트가 전담(2026-09-01 asset-prompt-writer+game-asset-generator 통합, 특정 프로젝트 한정 없음). 씬/엔진 배선은 대상 프로젝트의 구현 에이전트가 이어받는다 | game-asset-artist |
 
 ### STEP 1-1: 평가 에이전트 사용 제약 (agent-evaluator-v2 / skill-evaluator)
 
@@ -222,6 +224,8 @@ For complex problems, use split role sub-agents:
 
 | 에이전트 | 퇴역일 | 사유 |
 |---|---|---|
+| godot-game-developer, godot-netcode-engineer, game-data-designer, game-level-designer, multiplayer-safety-reviewer | 2026-09-09 | dungeon-legends(Godot 4.7, Lighthaven Depths 2D) 프로젝트가 lighthaven-3d(Unity 3D 리메이크)로 대체됨 - 기존 기술스택은 참고하지 않는다는 신규 레포 CLAUDE.md 원칙에 따라 Godot 전용 에이전트 5종 전부 퇴역. project/.claude/agents/의 심볼릭 링크만 제거(dungeon-legends 레포 원본 파일은 그대로 - 그 레포 자체 세션에서는 계속 유효). 대체 에이전트는 lh-design-reviewer/lh-module-implementer/lh-module-verifier/lh-integration-custodian/lh-asset-specialist 5종. 게임 이미지 에셋 생성은 계속 game-asset-artist 담당(변경 없음) |
+| asset-prompt-writer, game-asset-generator | 2026-09-01 | project/.claude/agents/의 심볼릭 링크만 제거(dungeon-legends 레포 원본 파일은 그대로 - 그 프로젝트 자체 세션에서는 계속 유효). 두 역할(프롬프트 작성+실제 생성)을 프로젝트 한정 없는 game-asset-artist로 통합해 mobile-idle-rpg 등 다른 게임 프로젝트에서도 쓸 수 있게 함 |
 | e2e-runner | 2026-08-20 | 전체 세션 로그 실측 호출 0회. playwright-verify-loop가 실질 대체 |
 | project-bootstrapper | 2026-08-20 | 호출 0회. Day 0 셋업 시나리오 미발생 |
 | review-plan-builder | 2026-08-20 | 호출 0회 |

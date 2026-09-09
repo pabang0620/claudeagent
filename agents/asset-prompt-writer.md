@@ -1,1 +1,0 @@
-/mnt/c/Users/admin/Desktop/games/dungeon-legends/.claude/agents/asset-prompt-writer.md
