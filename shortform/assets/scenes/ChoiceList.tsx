@@ -79,7 +79,13 @@ export const ChoiceList: React.FC<ChoiceListProps> = ({
                 {it.badge}
               </div>
             ) : null}
-            <div style={{ fontFamily: FONT, fontWeight: 700, fontSize: textSize, color: textColor }}>
+            {/* wordBreak: 'keep-all' - 한글 선택지가 어절 중간에서 쪼개지는 것 방지 (Card 와 동일 원칙) */}
+            <div
+              style={{
+                fontFamily: FONT, fontWeight: 700, fontSize: textSize, color: textColor,
+                wordBreak: 'keep-all',
+              }}
+            >
               {it.text}
             </div>
           </div>

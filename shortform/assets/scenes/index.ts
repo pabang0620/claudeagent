@@ -11,9 +11,11 @@ export type { SpeechBubbleProps, BubbleTail } from './SpeechBubble';
 export { ChoiceList } from './ChoiceList';
 export type { ChoiceListProps, ChoiceItem } from './ChoiceList';
 export {
-  CountdownRing, Sparkles, FlashOverlay, Shake, Appear, PulseRing, SpotlightCircle,
+  CountdownRing, Sparkles, FlashOverlay, Shake, Appear, PulseRing, SpotlightCircle, RadialSpikes,
 } from './Effects';
 export type { AppearFrom } from './Effects';
+export { PopIn } from './PopIn';
+export type { PopInProps } from './PopIn';
 export { MotionSwoosh } from './MotionSwoosh';
 export type { MotionSwooshProps } from './MotionSwoosh';
 export { DustCloud, ImpactBurst } from './ImpactEffects';

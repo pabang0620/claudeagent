@@ -1,0 +1,32 @@
+[
+  {
+    "id": "s2",
+    "text": "Huh, it always has six points. Wait, why six?",
+    "rate": "+30%",
+    "pitch": "+35Hz"
+  },
+  {
+    "id": "s3",
+    "text": "As water turns to ice, its molecules only link up at a fixed angle - forming a six-sided crystal structure."
+  },
+  {
+    "id": "s4",
+    "text": "As a snowflake grows, its branches spread out by following that same six-sided crystal structure."
+  },
+  {
+    "id": "s5",
+    "text": "So a snowflake's six sides come from the ice itself - its crystal structure is six-sided from the very start."
+  },
+  {
+    "id": "s6",
+    "text": "But as it grows, the exact branch shape shifts with the temperature and humidity around it."
+  },
+  {
+    "id": "s7",
+    "text": "In fact, a man named Wilson Bentley became the first person to photograph a snowflake up close."
+  },
+  {
+    "id": "s8",
+    "text": "Bentley's own story was that no two snowflakes ever look exactly alike."
+  }
+]

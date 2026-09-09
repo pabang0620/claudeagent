@@ -1,0 +1,9 @@
+[
+  {"id": "s2", "text": "Huh, that doesn't tickle at all. Why not?", "rate": "+30%", "pitch": "+35Hz"},
+  {"id": "s3", "text": "Turns out, even an ancient Greek philosopher wondered about this - or so the story goes."},
+  {"id": "s4", "text": "Tickling only happens when you have no idea when or where that touch is coming."},
+  {"id": "s5", "text": "But when it's your own hand, your brain already knows exactly when and where it's about to land."},
+  {"id": "s6", "text": "So by the time it touches you, there's nothing left to be surprised about."},
+  {"id": "s7", "text": "But add a tiny delay - say, with a robot arm - and even your own hand can tickle you again."},
+  {"id": "s8", "text": "Break the prediction, even slightly, and the tickle comes right back."}
+]

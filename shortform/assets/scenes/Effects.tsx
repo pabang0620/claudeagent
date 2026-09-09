@@ -123,9 +123,13 @@ export const Shake: React.FC<{
   at: number;
   duration?: number;
   amp?: number;
+  /** 프레임당 위상 증가량(rad). 기본 2.2 는 짧은 충격(10~14프레임)용. 길게(40~60프레임)
+   *  미세하게 떠는 연출(추위 등)은 amp 를 낮추고 freq 를 높여써야 "지진"이 아니라
+   *  "덜덜거림"으로 읽힌다 - general-ep08 v2 참고 */
+  freq?: number;
   children: React.ReactNode;
-}> = ({ frame, at, duration = 12, amp = 10, children }) => {
-  const s = shakeAt(frame, at, duration, amp);
+}> = ({ frame, at, duration = 12, amp = 10, freq = 2.2, children }) => {
+  const s = shakeAt(frame, at, duration, amp, freq);
   return (
     <AbsoluteFill style={{ transform: `translate(${s}px, ${s * 0.4}px)` }}>{children}</AbsoluteFill>
   );
@@ -217,5 +221,83 @@ export const SpotlightCircle: React.FC<{
     >
       {children}
     </div>
+  );
+};
+
+/* ================= 상태 표시 방사선 ================= */
+
+const RADIAL_RAD = Math.PI / 180;
+/** 스파이크 길이 변화 배율 - 8개 주기로 반복(전부 같은 길이면 기계적으로 보인다).
+ *  GoosebumpDiagram 의 furSpikes 와 같은 방사형 삼각 스파이크 기법을 재사용한다. */
+const SPIKE_LEN_MULT = [1, 0.76, 1.14, 0.88, 1.04, 0.82, 1.1, 0.94];
+
+/** 캐릭터 몸 주위에 짧고 뾰족한 선을 방사형으로 두르는 "상태 표시" 이펙트.
+ *  추위(파란 계열)뿐 아니라 더위·놀람 등 다른 상태에도 색만 바꿔 재사용할 수 있도록
+ *  일반화했다(general-ep08 신설. "냉기 선" 같은 특정 이름을 쓰지 않은 이유).
+ *
+ *  피부 위에 작은 요소를 여러 개 반복해서 찍는 방식(예전 BumpCluster/BumpDot, 원 여러 개가
+ *  피부 위에 겹쳐 "징그럽다"는 피드백을 받음)과는 다르다 - 스파이크는 몸 윤곽 **바깥쪽**으로만
+ *  뻗어 피부에 닿지 않고, Sparkles 처럼 이미 이 라이브러리에서 검증된 장식용 방사 패턴이다.
+ *
+ *  cx/cy/rx/ry 는 스파이크가 시작되는 타원 경계(대략 캐릭터 몸통 실루엣)다. 등장/소멸 곡선은
+ *  다른 이펙트와 동일하게 호출부가 progress 로 만들어 넘긴다. */
+export const RadialSpikes: React.FC<{
+  cx: number;
+  cy: number;
+  rx: number;
+  ry: number;
+  frame: number;
+  /** 0~1. 0 이면 아무것도 안 그린다 */
+  progress?: number;
+  count?: number;
+  /** 스파이크 길이(px) */
+  length?: number;
+  /** 스파이크 밑동 너비(px) */
+  width?: number;
+  color?: string;
+  /** 길이가 흔들리는 정도(0=고정) */
+  jitter?: number;
+  periodFrames?: number;
+  style?: React.CSSProperties;
+}> = ({
+  cx, cy, rx, ry, frame, progress = 1, count = 12, length = 34, width = 8,
+  color = C.waterCool, jitter = 0.18, periodFrames = 10, style,
+}) => {
+  const p = Math.max(0, Math.min(1, progress));
+  if (p <= 0.001) return null;
+  const pad = length + 12;
+  const boxW = (rx + pad) * 2;
+  const boxH = (ry + pad) * 2;
+  return (
+    <svg
+      width={boxW} height={boxH}
+      style={{
+        position: 'absolute', left: cx - boxW / 2, top: cy - boxH / 2,
+        overflow: 'visible', opacity: p, ...style,
+      }}
+    >
+      <g transform={`translate(${boxW / 2} ${boxH / 2})`}>
+        {Array.from({ length: count }).map((_, i) => {
+          const theta = (i / count) * 360 * RADIAL_RAD;
+          const nx = Math.cos(theta);
+          const ny = Math.sin(theta);
+          const baseX = nx * rx;
+          const baseY = ny * ry;
+          const shimmer = 1 + jitter * Math.sin(frame / periodFrames + i * 1.7);
+          const L = length * SPIKE_LEN_MULT[i % SPIKE_LEN_MULT.length] * shimmer;
+          const tipX = baseX + nx * L;
+          const tipY = baseY + ny * L;
+          const perpX = -ny * (width / 2);
+          const perpY = nx * (width / 2);
+          return (
+            <path
+              key={i}
+              d={`M ${baseX - perpX} ${baseY - perpY} L ${tipX} ${tipY} L ${baseX + perpX} ${baseY + perpY} Z`}
+              fill={color}
+            />
+          );
+        })}
+      </g>
+    </svg>
   );
 };

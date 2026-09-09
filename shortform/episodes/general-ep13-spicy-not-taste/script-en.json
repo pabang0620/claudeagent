@@ -1,0 +1,11 @@
+[
+  {"id": "s1", "text": "Whoa, that's hot. But wait, is \"spicy\" even a taste?", "rate": "+30%", "pitch": "+35Hz"},
+  {"id": "s2", "text": "Your tongue can only actually pick out five true tastes."},
+  {"id": "s3", "text": "And \"spicy\" was never one of them."},
+  {"id": "s4", "text": "It's a compound called capsaicin - and it actually triggers the nerves that sense pain and heat."},
+  {"id": "s5", "text": "So when you eat something spicy, your brain gets the exact same signal as touching something hot."},
+  {"id": "s6", "text": "That's also why spicy food makes you sweat and your heart race - same reaction as touching something hot."},
+  {"id": "s7", "text": "It's also why the unit for spiciness isn't a taste scale - it's the Scoville scale, and it measures how intense the irritation is."},
+  {"id": "s8", "text": "And it's why milk beats water when your mouth's on fire. Capsaicin dissolves in fat, not water."},
+  {"id": "s9", "text": "So \"spicy\" isn't really a taste. It's pain."}
+]

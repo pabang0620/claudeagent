@@ -1,0 +1,9 @@
+[
+  {"id": "s1", "text": "Ooh, look how brown that got. So why doesn't boiled meat ever look like this?", "rate": "+30%", "pitch": "+35Hz"},
+  {"id": "s2", "text": "That browning? It's not actually from oxygen."},
+  {"id": "s3", "text": "It's heat that makes the protein and sugar in meat fuse together into brand-new compounds - the ones that give it that color and smell. That reaction is named after the chemist who first figured it out - it's called the Maillard reaction."},
+  {"id": "s4", "text": "But this reaction needs serious heat to kick in, and boiling water simply can't get that hot."},
+  {"id": "s5", "text": "That's why patting meat dry before you cook it helps it brown better. If the surface is still wet, the temperature can't climb past 100°C until that water's gone."},
+  {"id": "s6", "text": "The same thing browns your toast, and it's what darkens coffee beans when they're roasted."},
+  {"id": "s7", "text": "That's why grilled meat turns brown, and boiled meat never does."}
+]

@@ -40,7 +40,20 @@ export const C = {
   /** 산화·갈변 계열 (사과 갈변, 녹슨 금속 등 "산소와 만나 색이 변하는" 소재 전반 재사용 가능,
    *  general-ep04 신설). paper/cream 위에 겹쳐 쓰는 오버레이용이라 저채도 브라운으로 잡았다 */
   browning: '#A9743C',
+  /** 생고기·단백질 계열 밑색 (열로 갈변하는 고기 소재 전반 재사용 가능, general-ep14 신설).
+   *  browning 을 오버레이해 sear=0~1 로 연속 보간하는 것을 전제로 한 연분홍 베이스다 */
+  meatRaw: '#F0A79C',
+  /** 물·액체 표시용 진한 청색 (온도계·비커 눈금 등 물 채움 표시 전반 재사용 가능,
+   *  general-ep14 신설). water/seaDeep 은 배경용 저채도 톤이라 작은 UI 요소(눈금 채움)에는
+   *  대비가 약해 별도로 뒀다 */
+  waterCool: '#5FA9D6',
   browningSoft: '#E8C9A0',
+
+  /** 다크초콜릿 계열 진한 갈색(고체 상태 기본색, general-ep63 신설). 버터 등 다른 지방
+   *  덩어리 소품도 이 색을 override 해서 재사용한다(Chocolate.tsx 참고) */
+  chocolate: '#5A3A26',
+  /** 초콜릿이 녹아 광택이 도는 웅덩이 상태의 하이라이트 색(밝은 초콜릿 톤, general-ep63 신설) */
+  chocolateMelt: '#8A5A34',
 
   /* 어두운 배경 계열 */
   night: '#1B2331',

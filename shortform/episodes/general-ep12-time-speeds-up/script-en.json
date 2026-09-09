@@ -1,0 +1,9 @@
+[
+  {"id": "s1", "text": "A summer at age five felt like it lasted forever."},
+  {"id": "s2", "text": "Whoa, another year's already gone. Why does it go by so fast now?", "rate": "+30%", "pitch": "+35Hz"},
+  {"id": "s3", "text": "Turns out, this explanation is a pretty old idea - over a century old. People back then apparently felt the same thing."},
+  {"id": "s4", "text": "Your brain judges how long a year feels by comparing it to your whole life so far."},
+  {"id": "s5", "text": "That gap just keeps widening - at five, at twenty, at fifty."},
+  {"id": "s6", "text": "So the more years you've lived, the smaller that same one year starts to feel."},
+  {"id": "s7", "text": "There's also a theory that a year full of new experiences feels longer looking back - or so it's said."}
+]

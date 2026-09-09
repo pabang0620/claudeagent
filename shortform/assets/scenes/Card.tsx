@@ -68,6 +68,9 @@ export const Card: React.FC<CardProps> = ({
           style={{
             position: 'absolute', left: 0, right: 0, bottom: 20, textAlign: 'center',
             fontFamily: FONT, fontWeight: 700, fontSize: labelSize, color: labelColor,
+            // 한글 라벨이 단어 중간에서 쪼개지지 않게 (폭이 카드 w 로 하드 제한돼 있어
+            // 조금만 긴 라벨이 오면 바로 어절 중간이 잘린다 - ep06/ep14 실측 결함)
+            wordBreak: 'keep-all',
           }}
         >
           {label}

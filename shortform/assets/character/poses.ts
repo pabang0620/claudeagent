@@ -117,6 +117,19 @@ export const TOUCH_FOREHEAD: Pose = {
   eyeOpen: 0.8, mouthOpen: 0.3,
 };
 
+/** 크게 하품 - 기지개 켜듯 팔을 위로 뻗고 입을 크게 벌리며 눈을 질끈 감는다.
+ *  general-ep21("남이 하품하면 나도 옮는 이유")에서 신설. mouthOpen 을 1 로 최대치까지 열어
+ *  둥글고 깊은 입 모양(Character.mouthPathD 참고)을 만들고, eyeOpen 을 낮춰 하품할 때
+ *  자연스럽게 감기는 눈을 표현한다. 팔은 CHEER 와 비슷하게 넓게 벌리되 "만세"가 아니라
+ *  "기지개"로 읽히도록 각도를 살짝 좁혔다. 하품·기지개 소재 전반 재사용 가능성이 있어
+ *  에피소드 로컬이 아니라 여기 등록한다. */
+export const YAWN: Pose = {
+  headTilt: -9, lean: -1,
+  armL: { s: 122, e: 18 }, armR: { s: -122, e: -18 },
+  legL: { h: 5, k: 0 }, legR: { h: -5, k: 0 },
+  mouthOpen: 1, eyeOpen: 0.12, blush: 1.1,
+};
+
 /** 쭈그려 앉아 관찰.
  *  무릎각을 고관절각과 정확히 반대(k = -h)로 둬야 정강이가 수직이 되고 발끝이 바깥을
  *  향한다. h + k 가 0 에서 멀어지면 발이 정강이와 함께 회전해 뒤로 꺾인다. */
@@ -145,6 +158,7 @@ export const POSES = {
   waveBye: WAVE_BYE,
   touchForehead: TOUCH_FOREHEAD,
   crouch: CROUCH,
+  yawn: YAWN,
 } as const;
 
 export type PoseName = keyof typeof POSES;

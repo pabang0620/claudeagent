@@ -75,11 +75,34 @@ export function progress(frame: number, a: number, b: number) {
   return clamp01((frame - a) / Math.max(1e-6, b - a));
 }
 
-/** 임팩트 순간 잠깐 흔들기. 0 이면 정지 */
-export function shake(frame: number, at: number, duration = 12, amp = 10) {
+/** 올라갔다(build) - 정점에서 머물렀다(peak) - 내려가는(release) 3단 사다리꼴 envelope.
+ *  0..1 을 반환한다(0 = 평상시, 1 = 정점). 하품·기지개·놀람처럼 "서서히 커졌다가 잠깐
+ *  유지된 뒤 서서히 가라앉는" 반응 애니메이션에서 반복적으로 필요해 general-ep21에서
+ *  공용으로 승격했다(원칙 0 - 두 번째로 필요해지면 라이브러리로). progress() 를 세 구간에
+ *  나눠 적용한 순수 함수라 결정적이다(Math.random 미사용, 원칙 3). */
+export function buildPeakRelease(
+  frame: number, start: number, buildFrames: number, peakFrames: number, releaseFrames: number
+) {
+  const buildEnd = start + buildFrames;
+  const peakEnd = buildEnd + peakFrames;
+  const releaseEnd = peakEnd + releaseFrames;
+  if (frame < start) return 0;
+  if (frame < buildEnd) return progress(frame, start, buildEnd);
+  if (frame < peakEnd) return 1;
+  if (frame < releaseEnd) return 1 - progress(frame, peakEnd, releaseEnd);
+  return 0;
+}
+
+/** 임팩트 순간 잠깐 흔들기(감쇠형). 0 이면 정지.
+ *  freq: 프레임당 위상 증가량(rad). 기본 2.2 는 짧은 충격(10~14프레임)에 맞춘 값이라
+ *  general-ep05/07/10/16 이 그대로 쓴다. 추위에 떠는 것처럼 더 길게(40~60프레임) 미세하게
+ *  떠는 연출은 amp 를 크게 낮추고 freq 를 이 값보다 높여써야 "덜덜거림"으로 읽힌다
+ *  (general-ep08 v2, 2026-08-21 - amp=9 그대로 두면 프레임마다 부호가 거의 무작위로
+ *  뒤집혀 진폭이 큰 채로 유지되는 구간이 많아 "지진처럼 보인다"는 피드백이 있었다). */
+export function shake(frame: number, at: number, duration = 12, amp = 10, freq = 2.2) {
   if (frame < at || frame >= at + duration) return 0;
   const t = (frame - at) / duration;
-  return Math.sin((frame - at) * 2.2) * amp * (1 - t);
+  return Math.sin((frame - at) * freq) * amp * (1 - t);
 }
 
 /* ---------------- 포즈 보간 ----------------

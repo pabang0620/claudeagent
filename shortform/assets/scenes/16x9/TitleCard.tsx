@@ -96,7 +96,7 @@ export const TitleCard: React.FC<TitleCardProps> = ({
           style={{
             maxWidth: TEXT_MAX_WIDTH, textAlign: 'center', fontFamily: FONT, fontWeight: 800,
             fontSize, lineHeight: 1.3, letterSpacing: '-1px', color: textColor,
-            opacity: textP, transform: `translateY(${textY}px)`,
+            opacity: textP, transform: `translateY(${textY}px)`, wordBreak: 'keep-all',
           }}
         >
           {title}

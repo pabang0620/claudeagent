@@ -27,8 +27,8 @@ const clamp01 = (v: number) => Math.max(0, Math.min(1, v));
 export const HICCUP_VB_W = 560;
 export const HICCUP_VB_H = 820;
 
-/** 횡격막(근육) 라벨 앵커 - 아치 아래 배 쪽 여백 */
-export const HICCUP_DIAPHRAGM_PT = { x: 280, y: 655 };
+/** 횡격막(근육) 라벨 앵커 - 몸통 박스 바깥 아래쪽(박스와 겹치지 않도록 y=790으로 박스 바깥에 둠) */
+export const HICCUP_DIAPHRAGM_PT = { x: 280, y: 790 };
 /** 목 입구(통로) 라벨 앵커 - 목 오른쪽 옆 여백 */
 export const HICCUP_THROAT_PT = { x: 430, y: 230 };
 

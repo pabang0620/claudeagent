@@ -1,6 +1,6 @@
 /** 직접 그린 기호·아이콘. Tabler 아이콘으로 대체되지 않는(우리 스타일이 필요한) 것만 둔다. */
 import React from 'react';
-import { C, FONT, SW } from '../theme';
+import { C, FONT, SW, SW_THIN } from '../theme';
 
 /** 큰 물음표. 텍스트 기반이라 폰트 로딩 후에만 정상 표시된다(FontLoader 필수). */
 export const QMark: React.FC<{
@@ -29,6 +29,32 @@ export const QMark: React.FC<{
     {glyph}
   </div>
 );
+
+/** 원 + 작은 핵(nucleus) 점 하나로 그리는 "세포" 글리프(백혈구·면역세포 등).
+ *  BruiseDiagram(general-ep61)의 로컬 WhiteCell과 같은 시각 문법을 두 번째로 쓰게 되어
+ *  (general-ep97 NasalImmuneDiagram) 공용으로 승격했다(REGISTRY 원칙 0 - 두 번째로 쓰이면
+ *  라이브러리로). 점 무리가 아니라 "큰 원 하나"로 그려 "징그럽다" 재발을 방지한다
+ *  (21화 이후 결함 - 신체 표현은 최소한으로). */
+export const ImmuneCell: React.FC<{
+  cx: number;
+  cy: number;
+  r: number;
+  /** 0~1. 0이면 그리지 않는다 */
+  appear: number;
+  stroke?: string;
+  fill?: string;
+  nucleusColor?: string;
+  style?: React.CSSProperties;
+}> = ({ cx, cy, r, appear, stroke = C.ink, fill = C.paper, nucleusColor = C.gold, style }) => {
+  if (appear <= 0.001) return null;
+  const s = 0.5 + 0.5 * appear;
+  return (
+    <g style={{ opacity: appear, ...style }} transform={`translate(${cx} ${cy}) scale(${s})`}>
+      <circle r={r} fill={fill} stroke={stroke} strokeWidth={SW_THIN * 0.7} />
+      <circle r={r * 0.42} fill={nucleusColor} opacity={0.85} />
+    </g>
+  );
+};
 
 /** 사람 상반신 실루엣 (목·어깨가 보이는 미니 아이콘). "사람은 이런데" 대비용. */
 export const HumanNeckIcon: React.FC<{

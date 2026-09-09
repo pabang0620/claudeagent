@@ -19,6 +19,8 @@
  *    4 (WORDBRK)  wordBreak: 'keep-all' 누락    한글 단어 중간에서 줄이 쪼개진다 (경고)
  *    5 (FORMAT)   포맷 불일치                   16:9 에 세로 전용 자산, 9:16 에 가로 전용 자산 (에러)
  *    6 (IMPORT)   존재하지 않는 import          배럴에 없는 이름·없는 파일 (에러)
+ *    7 (SHAREDOUT) 공용 루트 out/ 오염          어떤 화가 산출물을 루트로 흘렸다 (경고)
+ *    8 (AUDIO)    오디오 파일 누락             대본·코드가 참조하는 mp3 가 public/ 에 없다 (에러)
  *
  *  이 스크립트는 읽기만 한다 - 에피소드 코드도, 자산도 고치지 않는다.
  */
@@ -464,6 +466,196 @@ function portraitTwin(barrel, name) {
   return cand !== name && barrel.has(cand) ? cand : null;
 }
 
+/* --------------------------------------------- 검사 7: 공용 루트 out/ 오염 */
+
+/** 렌더 산출물은 언제나 `episodes/<화>/out/` 안에만 있어야 한다.
+ *  공용 루트 `shortform/out/` 에 mp4·프레임 폴더가 보이면, 어떤 화가 출력 경로를
+ *  상대경로(`out/episode-ko.mp4`)로 줘서 cwd(=루트) 기준으로 흘린 것이다.
+ *  여러 화를 병렬로 렌더하면 서로 덮어쓰고 남의 화 산출물을 자기 것으로 착각한다
+ *  (2026-08-20 실제 사고: 8화 렌더 중 루트 out/ 에서 7화의 v1~v3 mp4와 프레임 발견). */
+function checkSharedOut() {
+  const sharedOut = path.join(ROOT, 'out');
+  if (!fs.existsSync(sharedOut)) return;
+
+  const stray = [];
+  for (const e of fs.readdirSync(sharedOut, { withFileTypes: true })) {
+    if (e.isDirectory() && /^frames[-_]/.test(e.name)) stray.push(`${e.name}/`);
+    else if (e.isFile() && path.extname(e.name).toLowerCase() === '.mp4') stray.push(e.name);
+  }
+  if (stray.length === 0) return;
+
+  warn('SHAREDOUT', sharedOut, 0,
+    `공용 루트 out/ 에 렌더 산출물이 있다: ${stray.join(', ')}`,
+    '어떤 화가 출력 경로를 상대경로로 줘서 루트에 흘린 것이다. 렌더는 반드시 '
+    + 'node scripts/render.mjs <화> <ko|en|both> 로 돌려 episodes/<화>/out/ 에만 쓴다. '
+    + '지금 다른 화가 병렬 렌더 중일 수 있으니 이 파일들을 바로 지우지 말고, 타임스탬프와 '
+    + '프레임 수로 소유자를 먼저 확인한다.');
+}
+
+/* --------------------------------------------- 검사 8: 오디오 파일 누락 */
+
+/** 대본과 코드가 참조하는 오디오가 그 화의 `public/audio/` 에 실제로 있는지 본다.
+ *  Remotion 의 `staticFile()` 은 렌더를 시작한 뒤에야 404 로 터지므로, 파일 하나가 빠져도
+ *  20분짜리 렌더가 통째로 날아간다. 특히 `intro_ding.mp3` / `outro_ding.mp3` 는 Intro/Outro
+ *  코드에 내장돼 있어 대본에 안 적히고, 새 화를 만들 때 복사를 빠뜨리기 쉽다
+ *  (2026 실제 사고: ep25·ep29·ep50 에서 같은 이유로 렌더 3회 실패).
+ *
+ *  오탐이 나면 멀쩡한 렌더가 막히므로, 값을 확정하지 못한 참조는 잡지 않고 넘긴다. */
+
+const AUDIO_EXTS = new Set(['.mp3', '.wav', '.m4a', '.ogg']);
+
+function isAudioRef(p) {
+  return AUDIO_EXTS.has(path.extname(p).toLowerCase());
+}
+
+/** Root.tsx 의 Composition 이 실제로 렌더하는 언어. `defaultProps={{ locale: 'ko' }}` 와
+ *  `id="EpisodeKo"` 를 둘 다 본다(render.mjs 의 ko->EpisodeKo 매핑과 같은 규칙).
+ *  Root.tsx 에서 못 정하면 그 화에 있는 script-<lang>.json 으로 대신한다. */
+function episodeLocales(epDir) {
+  const out = new Set();
+  const rootFile = path.join(epDir, 'src', 'Root.tsx');
+  if (fs.existsSync(rootFile)) {
+    const sf = parse(rootFile);
+    visit(sf, (n) => {
+      const open = ts.isJsxSelfClosingElement(n) ? n
+        : (ts.isJsxElement(n) ? n.openingElement : null);
+      if (!open || open.tagName.getText(sf) !== 'Composition') return;
+      for (const a of open.attributes.properties) {
+        if (!ts.isJsxAttribute(a) || !a.name || !a.initializer) continue;
+        const key = a.name.getText(sf);
+        const init = a.initializer;
+        if (key === 'id' && ts.isStringLiteral(init)) {
+          const m = /^Episode([A-Za-z]{2})$/.exec(init.text);
+          if (m) out.add(m[1].toLowerCase());
+          continue;
+        }
+        if (key !== 'defaultProps' || !ts.isJsxExpression(init) || !init.expression) continue;
+        let e = init.expression;
+        // `{{ locale: 'ko' } satisfies EpisodeProps}` 처럼 감싸 쓰는 경우가 있다
+        while (ts.isAsExpression(e) || ts.isParenthesizedExpression(e)
+          || (ts.isSatisfiesExpression && ts.isSatisfiesExpression(e))) e = e.expression;
+        if (!ts.isObjectLiteralExpression(e)) continue;
+        const v = collectObjectProps(e, sf).get('locale');
+        if (!v) continue;
+        const t = v.replace(/['"`]/g, '').trim();
+        if (/^[a-z]{2}$/.test(t)) out.add(t);
+      }
+    });
+  }
+  if (out.size === 0) {
+    for (const e of fs.readdirSync(epDir)) {
+      const m = /^script-([a-z]{2})\.json$/.exec(e);
+      if (m) out.add(m[1]);
+    }
+  }
+  return [...out].sort();
+}
+
+/** script-<lang>.json 의 구간 id 목록. tts.py 가 이 id 로 `<lang>_<id>.mp3` 를 만든다.
+ *  배열 형태와 { segments: [...] } 형태를 둘 다 받는다(tts.py 와 동일). */
+function scriptSegmentIds(epDir, locale) {
+  const file = path.join(epDir, `script-${locale}.json`);
+  if (!fs.existsSync(file)) return [];
+  let raw;
+  try {
+    raw = JSON.parse(fs.readFileSync(file, 'utf8'));
+  } catch {
+    return []; // 대본 JSON 이 깨진 건 이 검사가 판정할 일이 아니다
+  }
+  const arr = Array.isArray(raw) ? raw : (Array.isArray(raw && raw.segments) ? raw.segments : []);
+  return arr.map((s) => s && s.id).filter((s) => typeof s === 'string' && s);
+}
+
+/** 파일 안의 `staticFile(...)` 인자를 실제 파일명으로 편다.
+ *  vars: 템플릿 자리표시자 이름 -> 들어갈 수 있는 값들 (locale -> ['ko'], id -> ['s2', ...]).
+ *  자리표시자 값을 모르면 그 참조는 아예 버린다(모르면 잡지 않는다). */
+function staticFileAudioRefs(sf, vars) {
+  const out = [];
+  visit(sf, (n) => {
+    if (!ts.isCallExpression(n)) return;
+    if (!ts.isIdentifier(n.expression) || n.expression.text !== 'staticFile') return;
+    const arg = n.arguments[0];
+    if (!arg) return;
+    const line = lineOf(sf, n);
+    if (ts.isStringLiteral(arg) || ts.isNoSubstitutionTemplateLiteral(arg)) {
+      if (isAudioRef(arg.text)) out.push({ ref: arg.text, line });
+      return;
+    }
+    if (!ts.isTemplateExpression(arg)) return;
+    let combos = [arg.head.text];
+    for (const span of arg.templateSpans) {
+      const vals = vars.get(span.expression.getText(sf).trim());
+      if (!vals || vals.length === 0) return;
+      combos = combos.flatMap((base) => vals.map((v) => base + v + span.literal.text));
+    }
+    for (const ref of combos) if (isAudioRef(ref)) out.push({ ref, line });
+  });
+  return out;
+}
+
+function checkAudioFiles(epDir, srcFiles, assetFiles) {
+  const publicDir = path.join(epDir, 'public');
+  const locales = episodeLocales(epDir);
+
+  const idsByLocale = new Map();
+  const allIds = new Set();
+  for (const loc of locales) {
+    const ids = scriptSegmentIds(epDir, loc);
+    idsByLocale.set(loc, ids);
+    for (const id of ids) allIds.add(id);
+  }
+
+  /** 참조 파일명 -> 그 참조가 나온 곳들 */
+  const refs = new Map();
+  const add = (ref, file, line) => {
+    const norm = ref.replace(/^\.?\//, '');
+    if (!refs.has(norm)) refs.set(norm, []);
+    refs.get(norm).push({ file, line });
+  };
+
+  // (1) 대본 - script-<lang>.json 의 구간마다 언어별 내레이션 mp3 가 있어야 한다
+  for (const loc of locales) {
+    const scriptFile = path.join(epDir, `script-${loc}.json`);
+    for (const id of idsByLocale.get(loc) || []) add(`audio/${loc}_${id}.mp3`, scriptFile, 0);
+  }
+
+  // (2) 코드 - 그 화의 src + 그 화가 실제로 쓰는 공용 자산의 staticFile(...)
+  //     (intro_ding/outro_ding 은 Intro.tsx·Outro.tsx 안에 있어 여기서만 잡힌다)
+  const ids = [...allIds];
+  const vars = new Map([
+    ['locale', locales], ['lang', locales], ['language', locales],
+    ['id', ids], ['segId', ids],
+  ]);
+  for (const f of [...srcFiles, ...assetFiles]) {
+    for (const r of staticFileAudioRefs(parse(f), vars)) add(r.ref, f, r.line);
+  }
+
+  const missing = [...refs.keys()].filter((r) => !fs.existsSync(path.join(publicDir, r))).sort();
+  if (missing.length === 0) return;
+
+  for (const ref of missing) {
+    const at = refs.get(ref)[0];
+    const base = path.basename(ref);
+    const shared = path.join(ASSETS_DIR, 'audio', base);
+    const narrationLoc = locales.find((l) => base.startsWith(`${l}_`));
+    let hint;
+    if (fs.existsSync(shared)) {
+      hint = `공용 효과음이다. 그대로 복사한다: cp ${path.relative(ROOT, shared)} `
+        + `${path.relative(ROOT, path.join(publicDir, path.dirname(ref)))}/`;
+    } else if (narrationLoc) {
+      hint = `대본 구간 음성이라 TTS 로 만들어야 한다: `
+        + `.venv/bin/python scripts/tts.py --script ${path.relative(ROOT, path.join(epDir, `script-${narrationLoc}.json`))} `
+        + `--out ${path.relative(ROOT, path.join(publicDir, 'audio'))} --prefix ${narrationLoc}`;
+    } else {
+      hint = `assets/audio/ 에도 없는 파일이다. 이름 오타인지 먼저 확인하고, 새 효과음이면 `
+        + `만들어 assets/audio/ 에 두고 assets/REGISTRY.md 에 등재한 뒤 이 화의 public/audio/ 로 복사한다.`;
+    }
+    err('AUDIO', at.file, at.line,
+      `참조하는 오디오가 public/ 에 없다: ${ref}`,
+      `이대로 렌더하면 staticFile() 이 404 를 내며 렌더가 통째로 실패한다. ${hint}`);
+  }
+}
+
 /* ------------------------------------------------------------------ 실행 */
 
 function usage(msg) {
@@ -591,6 +783,12 @@ function main() {
     checkWordBreak(sf, '[자산] ');
   }
 
+  /* 검사 7: 공용 루트 out/ 에 렌더 산출물이 새 있는지 */
+  checkSharedOut();
+
+  /* 검사 8: 대본·코드가 참조하는 오디오가 그 화의 public/ 에 실제로 있는지 */
+  checkAudioFiles(epDirAbs, srcFiles, assetFiles);
+
   /* ---------------- 출력 ---------------- */
   const errors = findings.filter((f) => f.level === 'ERROR');
   const warns = findings.filter((f) => f.level === 'WARN');
@@ -628,6 +826,18 @@ function main() {
   }
 
   const fail = errors.length > 0 || (strict && warns.length > 0);
+
+  if (!fail) {
+    /* 출력 경로를 손으로 적다가 공용 루트 out/ 로 흘리는 사고를 막기 위해,
+       바로 복사해 쓸 수 있는 렌더 명령을 그대로 찍어준다. */
+    const epName = path.basename(epDirAbs);
+    console.log('');
+    console.log('다음 단계 - 렌더 (출력 경로를 손으로 적지 않는다):');
+    console.log(`  cd ${ROOT}`);
+    console.log(`  node scripts/render.mjs ${epName} both`);
+    console.log(`  -> ${path.join(epDirAbs, 'out')}/episode-ko.mp4 , episode-en.mp4`);
+  }
+
   process.exit(fail ? 1 : 0);
 }
 

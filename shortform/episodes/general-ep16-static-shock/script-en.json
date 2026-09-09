@@ -1,0 +1,9 @@
+[
+  {"id": "s2", "text": "Ow, that stings. Wait, why does this only happen in winter?", "rate": "+30%", "pitch": "+35Hz"},
+  {"id": "s3", "text": "Just your clothes brushing against your skin builds up a little static electricity on your body."},
+  {"id": "s4", "text": "In summer, moisture in the air keeps draining that charge away. Winter air is just too dry for that."},
+  {"id": "s5", "text": "So the moment you touch something like a metal doorknob, all that built-up charge rushes out at once - and that's the zap."},
+  {"id": "s6", "text": "Actually, the word \"electricity\" comes from the Greek word for amber. Ancient Greeks noticed that rubbing amber made light things stick to it - that's the first time people ever noticed electricity at all."},
+  {"id": "s7", "text": "The voltage in that spark is actually pretty high, often higher than your wall outlet. But the current is so tiny, it's not dangerous."},
+  {"id": "s8", "text": "Some people say touching a metal key first, instead of your finger, makes the zap less painful."}
+]

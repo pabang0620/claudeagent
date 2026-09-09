@@ -1,0 +1,9 @@
+[
+  {"id": "s2", "text": "Huh, ice always floats. So why doesn't that happen with other stuff?", "rate": "+30%", "pitch": "+35Hz"},
+  {"id": "s3", "text": "When water freezes, its molecules lock into a six-sided pattern - and that actually spreads them further apart."},
+  {"id": "s4", "text": "So the same weight of ice ends up taking up more space."},
+  {"id": "s5", "text": "That's called density - how much space something takes up for its weight. Ice has lower density, so it floats."},
+  {"id": "s6", "text": "This expanding force is actually strong enough to burst frozen water pipes in winter."},
+  {"id": "s7", "text": "Since ice is lighter than water, when a lake freezes, only the surface freezes - the water underneath stays liquid. That's how fish survive the winter, right below the ice."},
+  {"id": "s8", "text": "There's also a claim that under the right conditions, hot water can freeze before cold water. It's called the Mpemba effect, and people still argue about why."}
+]

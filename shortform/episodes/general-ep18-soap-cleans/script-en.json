@@ -1,0 +1,9 @@
+[
+  {"id": "s2", "text": "Huh, I'm rinsing with just water, but the oil's still there. Why won't it go?", "rate": "+30%", "pitch": "+35Hz"},
+  {"id": "s3", "text": "Water and oil are just opposites by nature, so plain water alone can never mix with it."},
+  {"id": "s4", "text": "But soap molecules are what's called surfactants - one end loves water, the other end loves oil."},
+  {"id": "s5", "text": "So it wraps around the grease droplet, forming a tiny ball called a micelle. That micelle floats in the water, so it rinses away with everything else."},
+  {"id": "s6", "text": "That's also why you're supposed to scrub your hands for at least 20 seconds - it takes soap that long to wrap around germs and lift them off your skin."},
+  {"id": "s7", "text": "Viruses like coronavirus have a fatty outer layer, so soap can literally burst that layer and disable them."},
+  {"id": "s8", "text": "By the way, soap has been around for a very long time. The earliest versions were just fat mixed with ash."}
+]

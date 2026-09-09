@@ -1,0 +1,36 @@
+[
+  {
+    "id": "s1",
+    "text": "Here, boy!"
+  },
+  {
+    "id": "s2",
+    "text": "Huh, there's something weird by its nostril. Wait, what is that?",
+    "rate": "+30%",
+    "pitch": "+35Hz"
+  },
+  {
+    "id": "s3",
+    "text": "Turns out that's not just a crack - it's a dedicated exit, just for breathing out."
+  },
+  {
+    "id": "s4",
+    "text": "When it exhales, the air slips out sideways through that slit - so the fresh scent coming in up front stays undisturbed."
+  },
+  {
+    "id": "s5",
+    "text": "So unlike us, a dog never actually stops smelling - not even while breathing out."
+  },
+  {
+    "id": "s6",
+    "text": "Thanks to that, dogs can take quick little sniffs, one after another, without ever losing track of a scent."
+  },
+  {
+    "id": "s7",
+    "text": "Scientists have actually caught that exhaled air escaping sideways on camera, using special imaging techniques."
+  },
+  {
+    "id": "s8",
+    "text": "And they say a dog's nose stays wet to trap even more scent particles."
+  }
+]

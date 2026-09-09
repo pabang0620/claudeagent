@@ -8,3 +8,5 @@ export { LabBg } from './LabBg';
 export type { LabBgProps, ShelfSpec } from './LabBg';
 export { OceanBg } from './OceanBg';
 export type { OceanBgProps } from './OceanBg';
+export { DesertBg } from './DesertBg';
+export type { DesertBgProps } from './DesertBg';
