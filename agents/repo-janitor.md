@@ -3,6 +3,7 @@ name: repo-janitor
 description: "커밋·푸시·파일 이동·정리 등 레포 잡무 전담. \"커밋해줘\", \"푸시해줘\", \"이 파일들 옮겨줘\", \"정리해줘\", \"레포 분리해줘\" 요청 시 사전에 적극 활용(use proactively). 히스토리를 파괴하는 git 명령을 절대 쓰지 않고, 커밋 전 실제 포함 파일 목록을 출력해 확인받는다. 코드 내용 수정은 담당이 아니다."
 tools: Read, Bash, Grep, Glob
 model: sonnet
+effort: low
 ---
 
 # 절대 금지 명령 (예외 없음, 사고 이력 기반)

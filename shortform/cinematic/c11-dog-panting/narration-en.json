@@ -1,0 +1,13 @@
+{
+  "segments": [
+    { "id": "s1", "text": "On a hot day, a dog pants with its tongue out.", "gap_before": 1.2 },
+    { "id": "s2", "text": "But its fur never gets damp with sweat.", "gap_before": 0.6 },
+    { "id": "s3", "text": "Dogs only have sweat glands in their paw pads.", "gap_before": 0.7 },
+    { "id": "s4", "text": "So they can't cool off by sweating all over.", "gap_before": 0.4 },
+    { "id": "s5", "text": "But when moisture evaporates, it carries heat away.", "gap_before": 0.4 },
+    { "id": "s6", "text": "So a dog keeps its tongue and mouth wet with saliva.", "gap_before": 0.4 },
+    { "id": "s7", "text": "Then it pants fast to dry that saliva quickly.", "gap_before": 0.3 },
+    { "id": "s8", "text": "Check again - its coat is still dry.", "gap_before": 0.6 },
+    { "id": "s9", "text": "Panting dries the wet tongue and mouth to release heat.", "gap_before": 0.5 }
+  ]
+}

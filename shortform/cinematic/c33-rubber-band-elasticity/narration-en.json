@@ -1,0 +1,14 @@
+{
+  "segments": [
+    { "id": "s1", "text": "Gummy stretches a rubber band and lets go.", "gap_before": 1.2 },
+    { "id": "s2", "text": "It snaps right back to its original length.", "gap_before": 0.4 },
+    { "id": "s3", "text": "Clay stays stretched once you pull it,", "gap_before": 0.5 },
+    { "id": "s4", "text": "but a rubber band keeps pulling itself back.", "gap_before": 0.35 },
+    { "id": "s5", "text": "Inside, it's packed with long, thin, thread-like molecules.", "gap_before": 0.8 },
+    { "id": "s6", "text": "Normally those threads sit tangled up, like a ball of yarn.", "gap_before": 0.35 },
+    { "id": "s7", "text": "Pulling stretches those tangled threads straight.", "gap_before": 0.35 },
+    { "id": "s8", "text": "Let go, and they want to tangle up again.", "gap_before": 0.35 },
+    { "id": "s9", "text": "That's the threads bunching back together.", "gap_before": 0.5 },
+    { "id": "s10", "text": "That's why the rubber band shrinks back.", "gap_before": 0.35 }
+  ]
+}

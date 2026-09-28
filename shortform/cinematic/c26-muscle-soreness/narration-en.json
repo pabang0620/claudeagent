@@ -1,0 +1,13 @@
+{
+  "segments": [
+    { "id": "s1", "text": "The morning after a hard workout, your whole body aches.", "gap_before": 1.2 },
+    { "id": "s2", "text": "You'd think it's lactic acid, but that clears out fast.", "gap_before": 0.6 },
+    { "id": "s3", "text": "But the soreness doesn't start until a day or two later.", "gap_before": 0.5 },
+    { "id": "s4", "text": "Move muscles in an unfamiliar way, and the fibers get tiny tears.", "gap_before": 0.7 },
+    { "id": "s5", "text": "The body triggers inflammation to repair them.", "gap_before": 0.4 },
+    { "id": "s6", "text": "That inflammation irritates the pain nerves, making them extra sensitive.", "gap_before": 0.4 },
+    { "id": "s7", "text": "This repair process takes a day or two.", "gap_before": 0.4 },
+    { "id": "s8", "text": "That's why it hurts more the next day, not right away.", "gap_before": 0.6 },
+    { "id": "s9", "text": "It's the inflammation from repairing the damage that makes you sore for days.", "gap_before": 0.5 }
+  ]
+}

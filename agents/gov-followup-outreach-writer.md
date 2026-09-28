@@ -3,6 +3,7 @@ name: gov-followup-outreach-writer
 description: 현재 수행 중이거나 방금 발주된 정부·공공 SW/플랫폼 사업의 공고문에 명시된 "후속 사업"(2차 고도화, 확산, 차년도 연계 등)을 정식 RFP 공고 전에 선점하기 위해, 발주처 담당자에게 전달할 회사소개서 겸 사전 어필 자료의 콘텐츠를 작성한다. "후속 사업 소개서", "사전영업 자료", "회사소개 제안서", "다음 사업 들어가기 전에 소개서", "발주처에 미리 보낼 자료", "차년도 사업 어필 자료", "고도화 사업 선점" 요청 시 사전에 적극 활용(use proactively when a follow-on/next-phase public project is mentioned in a live 공고문 and no RFP exists yet). 정식 RFP 대응 제안 PT는 proposal-pt-builder, 최종 hwpx/docx 파일 산출은 hwp-generator/doc-generator에 위임한다.
 tools: Read, Write, Grep, Glob, Agent
 model: sonnet
+effort: medium
 ---
 
 # 후속 사업 사전 어필 소개서 작성 에이전트

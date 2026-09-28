@@ -2,6 +2,7 @@
 name: syntax-validator
 description: TypeScript 파일의 타입 오류·문법 오류·임포트·async/await·NestJS 데코레이터·Next.js Server Component 오류를 정적 분석하여 보고한다. FILE(절대 경로)과 FUNCTION(선택)을 입력받아 tsc 컴파일 결과 + 코드 직독으로 오류를 검출. 코드 리뷰 이전 사전 검증, 병렬 함수 단위 일괄 검증 시 활성화. code-reviewer(품질 전반)·build-error-resolver(빌드 수정)와 달리 문법·타입 오류 발견만 담당하며 수정하지 않는다.
 model: sonnet
+effort: low
 tools: Read, Bash, Grep, Glob
 ---
 

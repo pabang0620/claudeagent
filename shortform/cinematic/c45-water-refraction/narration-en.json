@@ -1,0 +1,14 @@
+{
+  "segments": [
+    { "id": "s1", "text": "Gumgumi dips one leg into a puddle.", "gap_before": 1.2 },
+    { "id": "s2", "text": "But the leg looks strangely short.", "gap_before": 0.5 },
+    { "id": "s3", "text": "The leg hasn't actually changed at all.", "gap_before": 0.5 },
+    { "id": "s4", "text": "Let's take a closer look at the surface.", "gap_before": 0.7 },
+    { "id": "s5", "text": "Light moves at different speeds in water and air.", "gap_before": 0.4 },
+    { "id": "s6", "text": "Right at that boundary, the light bends slightly.", "gap_before": 0.4 },
+    { "id": "s7", "text": "That bent light seems to come from higher up.", "gap_before": 0.4 },
+    { "id": "s8", "text": "But our eyes always assume light travels straight.", "gap_before": 0.4 },
+    { "id": "s9", "text": "A straw in a glass of water bends the same way.", "gap_before": 0.6 },
+    { "id": "s10", "text": "So the leg looks shorter and lifted than it really is.", "gap_before": 0.4 }
+  ]
+}

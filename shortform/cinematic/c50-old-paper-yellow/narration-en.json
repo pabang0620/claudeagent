@@ -1,0 +1,12 @@
+{
+  "segments": [
+    { "id": "s1", "text": "Gumgumi pulls an old, yellowed book off the shelf and opens it.", "gap_before": 1.2 },
+    { "id": "s2", "text": "Even set right beside a new book, nothing has touched it.", "gap_before": 0.5 },
+    { "id": "s3", "text": "Paper still holds a substance that once glued wood fibers together.", "gap_before": 0.8 },
+    { "id": "s4", "text": "Meeting air and light, it slowly turns into something else.", "gap_before": 0.4 },
+    { "id": "s5", "text": "That new substance reflects a lot more yellow light.", "gap_before": 0.4 },
+    { "id": "s6", "text": "Newsprint holds way more of that substance.", "gap_before": 0.5 },
+    { "id": "s7", "text": "So it turns yellow much faster, within days.", "gap_before": 0.3 },
+    { "id": "s8", "text": "That's why old paper turns yellow over time.", "gap_before": 0.6 }
+  ]
+}

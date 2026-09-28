@@ -1,0 +1,15 @@
+{
+  "segments": [
+    { "id": "s1", "text": "A cat sits in a pitch-dark yard at night.", "gap_before": 1.2 },
+    { "id": "s2", "text": "Shine a flashlight, and its eyes flash bright.", "gap_before": 0.6 },
+    { "id": "s3", "text": "But with zero light, they don't glow at all.", "gap_before": 0.5 },
+    { "id": "s4", "text": "Let's zoom into the eye.", "gap_before": 0.5 },
+    { "id": "s5", "text": "Light that enters passes through the retina.", "gap_before": 0.5 },
+    { "id": "s6", "text": "A reflective layer bounces that light back.", "gap_before": 0.4 },
+    { "id": "s7", "text": "The reflected light crosses the retina again.", "gap_before": 0.4 },
+    { "id": "s8", "text": "That's what helps it see better in the dark.", "gap_before": 0.3 },
+    { "id": "s9", "text": "Some of that light escapes back out of the eye.", "gap_before": 0.4 },
+    { "id": "s10", "text": "That's the glow we actually see.", "gap_before": 0.5 },
+    { "id": "s11", "text": "Without light to reflect, the eyes don't shine.", "gap_before": 0.6 }
+  ]
+}

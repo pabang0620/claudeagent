@@ -1,0 +1,12 @@
+{
+  "segments": [
+    { "id": "s1", "text": "A fish swims along, opening and closing its mouth.", "gap_before": 1.2 },
+    { "id": "s2", "text": "But it's not drinking - it's breathing.", "gap_before": 0.5 },
+    { "id": "s3", "text": "Water it takes in flows out through the gill slits.", "gap_before": 0.6 },
+    { "id": "s4", "text": "Gills are thin tissue stacked in layers.", "gap_before": 0.4 },
+    { "id": "s5", "text": "Tiny blood vessels run densely through it.", "gap_before": 0.4 },
+    { "id": "s6", "text": "As water passes, oxygen slips into the blood.", "gap_before": 0.4 },
+    { "id": "s7", "text": "Out of water, those layers stick together.", "gap_before": 0.6 },
+    { "id": "s8", "text": "So they can't take in oxygen, and can't breathe.", "gap_before": 0.5 }
+  ]
+}

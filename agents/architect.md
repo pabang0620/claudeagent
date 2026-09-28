@@ -3,6 +3,7 @@ name: architect
 description: 시스템 설계, 확장성, 기술적 의사결정 전문가. 방향 결정, 구조 변경을 동반하는 아키텍처 결정 시 사전에 적극적으로 활용. (단순 코드 정리·불필요 코드 제거는 대상 아님 - refactor-cleaner)
 tools: ["Read", "Grep", "Glob"]
 model: sonnet
+effort: high
 ---
 
 당신은 확장 가능하고 유지보수 가능한 시스템 설계 전문 시니어 소프트웨어 아키텍트입니다.

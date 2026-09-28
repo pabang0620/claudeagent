@@ -1,0 +1,12 @@
+{
+  "segments": [
+    { "id": "s1", "text": "After brushing his teeth, Gummy drinks orange juice - and it's suddenly bitter.", "gap_before": 1.2 },
+    { "id": "s2", "text": "But the orange juice itself hasn't changed at all.", "gap_before": 0.6 },
+    { "id": "s3", "text": "The foam in toothpaste briefly blocks his sweet taste cells.", "gap_before": 0.7 },
+    { "id": "s4", "text": "It also disrupts what usually keeps his bitter taste cells calm.", "gap_before": 0.4 },
+    { "id": "s5", "text": "Orange juice always has a touch of bitterness hidden in its sweetness.", "gap_before": 0.4 },
+    { "id": "s6", "text": "Right now, though, the sweetness is weak and the bitterness stands out.", "gap_before": 0.4 },
+    { "id": "s7", "text": "Check again - the orange juice hasn't changed one bit.", "gap_before": 0.6 },
+    { "id": "s8", "text": "It's the toothpaste's foam that dulls sweetness and sharpens bitterness.", "gap_before": 0.5 }
+  ]
+}

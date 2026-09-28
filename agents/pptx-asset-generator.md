@@ -7,6 +7,7 @@ description: >
   경계: 이 에이전트는 에셋 "조각"의 생성·등록·검증 전담이며 최종 제안서 PT를 조립하는 오케스트레이션(RFP 분석·슬라이드 플랜·에셋 선택·전체 조합 실행)은 proposal-pt-builder가 담당한다. DOCX 문서는 doc-generator, HWPX 공문서는 hwp-generator를 쓴다.
 tools: Read, Write, Edit, Bash, Grep, Glob
 model: sonnet
+effort: medium
 ---
 
 # PPTX 에셋 생성 에이전트

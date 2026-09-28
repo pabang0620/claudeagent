@@ -1,0 +1,12 @@
+{
+  "segments": [
+    { "id": "s1", "text": "Gummy blinks, again and again.", "gap_before": 1.2 },
+    { "id": "s2", "text": "But that wetness doesn't happen on its own.", "gap_before": 0.6 },
+    { "id": "s3", "text": "Every blink spreads a thin layer of tears.", "gap_before": 0.7 },
+    { "id": "s4", "text": "That layer washes away dust and keeps the surface moist.", "gap_before": 0.4 },
+    { "id": "s5", "text": "But this layer starts drying almost right away.", "gap_before": 0.4 },
+    { "id": "s6", "text": "So it needs a fresh coat before it fully dries.", "gap_before": 0.4 },
+    { "id": "s7", "text": "That's why this keeps happening all day long.", "gap_before": 0.6 },
+    { "id": "s8", "text": "We keep blinking to recoat the tear film before it dries out.", "gap_before": 0.5 }
+  ]
+}

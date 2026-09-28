@@ -10,6 +10,7 @@ import { Intro } from '../assets/brand/Intro';
 import { Outro } from '../assets/brand/Outro';
 import { Intro as IntroLandscape } from '../assets/brand/16x9/Intro';
 import { Outro as OutroLandscape } from '../assets/brand/16x9/Outro';
+import { TitleCard, TITLE_CARD_FRAMES } from '../assets/scenes/TitleCard';
 import { TitleCard as TitleCardLandscape } from '../assets/scenes/16x9/TitleCard';
 import { PlainBg as PlainBgLandscape } from '../assets/backgrounds/16x9/PlainBg';
 
@@ -19,6 +20,13 @@ import { PlainBg as PlainBgLandscape } from '../assets/backgrounds/16x9/PlainBg'
 const TitleCardLandscapePreview: React.FC<{ title?: string }> = ({
   title = '아이스크림 먹다 이마가 아픈 이유',
 }) => <TitleCardLandscape title={title} />;
+
+/** 세로(9:16) 제목 카드 컴포지션. 굼구미 과학 쇼츠 내레이션 파이프라인(engine/brand/render_brand.sh)이
+ * 인트로/아웃트로와 같은 방식으로 이 컴포지션을 --props={"title":"..."}로 개별 렌더한다.
+ * 기존 컴포지션·자산 파일은 건드리지 않고 이 항목만 추가한다. */
+const TitleCardVerticalPreview: React.FC<{ title?: string }> = ({
+  title = '얼음은 왜 물에 뜰까?',
+}) => <TitleCard title={title} />;
 
 export const RemotionRoot: React.FC = () => (
   <>
@@ -58,6 +66,15 @@ export const RemotionRoot: React.FC = () => (
       width={W}
       height={H}
       defaultProps={{ nextHint: '다음 편에서 알려줄게!' }}
+    />
+    <Composition
+      id="TitleCardVertical"
+      component={TitleCardVerticalPreview}
+      durationInFrames={TITLE_CARD_FRAMES}
+      fps={FPS}
+      width={W}
+      height={H}
+      defaultProps={{}}
     />
 
     {/* 16:9(가로) 포맷 자산 미리보기용. 세로 자산과 별개 컴포지션이라 회귀에 영향 없음 */}

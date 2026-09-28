@@ -1,0 +1,13 @@
+{
+  "segments": [
+    { "id": "s1", "text": "A cat tips off the edge of the couch and starts to fall.", "gap_before": 1.2 },
+    { "id": "s2", "text": "There's nothing to grab, no wall to push against.", "gap_before": 0.5 },
+    { "id": "s3", "text": "But midair, it flips its whole body to land feet-first.", "gap_before": 0.6 },
+    { "id": "s4", "text": "The inner ear instantly senses which way is up.", "gap_before": 0.8 },
+    { "id": "s5", "text": "A cat's spine is flexible enough to twist front and back separately.", "gap_before": 0.4 },
+    { "id": "s6", "text": "It tucks its front legs and stretches its back legs, twisting the front half first.", "gap_before": 0.4 },
+    { "id": "s7", "text": "Then it reverses, tucking the back legs to twist the rest.", "gap_before": 0.4 },
+    { "id": "s8", "text": "That's called the righting reflex.", "gap_before": 0.5 },
+    { "id": "s9", "text": "So the cat lands on its feet every time.", "gap_before": 0.6 }
+  ]
+}

@@ -3,6 +3,7 @@ name: database-reviewer
 description: "(리뷰 전용) 기존 쿼리·스키마·인덱스·보안을 감사하고 개선 예시를 보고서로 제시. [USE WHEN] 쿼리 최적화, 인덱스 누락 감지, RLS 리뷰, 보안 진단, 기존 스키마 감사. [DO NOT USE] 신규 스키마 설계·마이그레이션 파일 생성 → db-schema-architect 사용. PostgreSQL RLS·인덱스 모범 사례 및 WeCom MySQL 커스텀 컨벤션 포함."
 tools: ["Read", "Bash", "Grep", "Glob"]
 model: sonnet
+effort: high
 ---
 
 # 데이터베이스 리뷰어

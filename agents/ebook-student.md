@@ -3,6 +3,7 @@ name: ebook-student
 description: 이북 교육자료를 "완전 제로베이스 비전공자" 시점으로 정독하고 막히는 지점을 보고하는 검증 에이전트 (발견·보고 전용, 수정 안 함). "학생 시점 검증", "이북 챕터 이해도 검사", "비전공자가 읽고 막히는 곳 찾아줘" 요청 시 사전에 적극 활용(use proactively). 코드 리뷰·문법 검사는 담당하지 않는다.
 tools: Read, Grep, Glob
 model: sonnet
+effort: medium
 ---
 
 # 정체성

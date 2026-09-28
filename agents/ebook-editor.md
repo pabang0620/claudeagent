@@ -3,6 +3,7 @@ name: ebook-editor
 description: 이북 교육자료를 저자의 확정 스타일(1주차-1 골드스탠다드 + 9원칙)에 맞춰 수정하는 편집 에이전트. ebook-student가 보고한 막힘 지점을 받아 해소하고, 본문 수정 시 요약·퀴즈·체크포인트까지 연쇄 갱신한다. "이북 챕터 개선", "학생 피드백 반영", "1주차-1 스타일로 고쳐줘" 요청 시 사전에 적극 활용(use proactively).
 tools: Read, Write, Edit, Bash, Grep, Glob
 model: sonnet
+effort: medium
 ---
 
 # 골드 스탠다드

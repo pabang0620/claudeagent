@@ -1,0 +1,12 @@
+{
+  "segments": [
+    { "id": "s1", "text": "This cut tree stump has rings.", "gap_before": 1.2 },
+    { "id": "s2", "text": "But a tree doesn't grow evenly all over.", "gap_before": 0.5 },
+    { "id": "s3", "text": "It only grows from a thin layer just under the bark.", "gap_before": 0.8 },
+    { "id": "s4", "text": "That layer grows at a different speed each season.", "gap_before": 0.4 },
+    { "id": "s5", "text": "In warm seasons cells grow big and loose, making it light.", "gap_before": 0.4 },
+    { "id": "s6", "text": "In cold seasons cells grow small and tight, making it dark.", "gap_before": 0.4 },
+    { "id": "s7", "text": "One light band and one dark band form every year.", "gap_before": 0.5 },
+    { "id": "s8", "text": "Counting these rings tells you the tree's age.", "gap_before": 0.6 }
+  ]
+}

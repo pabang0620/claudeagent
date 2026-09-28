@@ -1,0 +1,12 @@
+{
+  "segments": [
+    { "id": "s1", "text": "Gumgumi trips over his own feet.", "gap_before": 1.2 },
+    { "id": "s2", "text": "Flustered, his face goes hot.", "gap_before": 0.4 },
+    { "id": "s3", "text": "The hormone spreads through his whole body,", "gap_before": 0.3 },
+    { "id": "s4", "text": "but only his face turns red.", "gap_before": 0.3 },
+    { "id": "s5", "text": "Feeling embarrassed releases a hormone like adrenaline.", "gap_before": 0.7 },
+    { "id": "s6", "text": "That hormone widens blood vessels.", "gap_before": 0.4 },
+    { "id": "s7", "text": "But facial skin has vessels packed tighter, closer to the surface.", "gap_before": 0.4 },
+    { "id": "s8", "text": "So the face turns visibly red.", "gap_before": 0.5 }
+  ]
+}

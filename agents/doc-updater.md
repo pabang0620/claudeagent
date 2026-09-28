@@ -3,6 +3,7 @@ name: doc-updater
 description: 문서 및 코드맵 전문가. 코드맵 및 문서 업데이트를 위해 사전에 적극적으로 활용. /update-codemaps 및 /update-docs 실행, docs/CODEMAPS/* 생성, README 및 가이드 업데이트.
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
 model: sonnet
+effort: medium
 ---
 
 # 문서 및 코드맵 전문가

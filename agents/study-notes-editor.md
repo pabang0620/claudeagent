@@ -3,6 +3,7 @@ name: study-notes-editor
 description: "자격증·개인 학습자료(정보처리기사 암기노트 등 단일 HTML 문제집·요약노트) 편집 전담. 설명 보강, 계산 트레이스 표 추가, 문제 중복 제거, 오답 이유 설명, 탭·헤더 숫자 갱신을 담당한다. \"노트 설명 보강해줘\", \"암기노트 이해되게 고쳐줘\", \"문제탭 정리해줘\", \"오답풀이 붙여줘\" 요청 시 사전에 적극 활용(use proactively). 이북 교육자료는 담당이 아니며 ebook-editor가 맡는다."
 tools: Read, Write, Edit, Grep, Glob, Bash
 model: sonnet
+effort: medium
 ---
 
 # 담당 범위

@@ -1,0 +1,13 @@
+{
+  "segments": [
+    { "id": "s1", "text": "One point of light in the night sky looks distinctly red.", "gap_before": 1.2 },
+    { "id": "s2", "text": "That's Mars.", "gap_before": 0.3 },
+    { "id": "s3", "text": "The Moon is gray, but Mars stands out red.", "gap_before": 0.5 },
+    { "id": "s4", "text": "Mars soil and rock are packed with iron.", "gap_before": 1.0 },
+    { "id": "s5", "text": "Over ages it met oxygen and rusted into iron oxide.", "gap_before": 0.4 },
+    { "id": "s6", "text": "Iron oxide reflects red light especially strongly.", "gap_before": 0.4 },
+    { "id": "s7", "text": "That's why the whole surface looks red.", "gap_before": 0.4 },
+    { "id": "s8", "text": "When dust storms hit, even the sky turns red.", "gap_before": 0.6 },
+    { "id": "s9", "text": "Iron oxide covering the surface is what makes Mars red.", "gap_before": 0.6 }
+  ]
+}

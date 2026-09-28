@@ -1,0 +1,13 @@
+{
+  "segments": [
+    { "id": "s1", "text": "She drops an egg into a pot of boiling water.", "gap_before": 1.2 },
+    { "id": "s2", "text": "Egg white starts out as a runny liquid.", "gap_before": 0.6 },
+    { "id": "s3", "text": "But after boiling, it turns completely solid.", "gap_before": 0.5 },
+    { "id": "s4", "text": "Inside the white, tiny proteins float around.", "gap_before": 0.8 },
+    { "id": "s5", "text": "Heat unfolds their tightly coiled shape.", "gap_before": 0.4 },
+    { "id": "s6", "text": "The unfolded proteins tangle together into a mesh.", "gap_before": 0.4 },
+    { "id": "s7", "text": "That mesh traps the water and hardens.", "gap_before": 0.4 },
+    { "id": "s8", "text": "This hardening is called coagulation.", "gap_before": 0.5 },
+    { "id": "s9", "text": "That's why boiled egg white turns firm.", "gap_before": 0.6 }
+  ]
+}

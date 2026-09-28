@@ -1,0 +1,13 @@
+{
+  "segments": [
+    { "id": "s1", "text": "Outside the window, lightning flashes in a zigzag.", "gap_before": 1.2 },
+    { "id": "s2", "text": "But air is actually a poor conductor of electricity.", "gap_before": 0.6 },
+    { "id": "s3", "text": "Let's zoom into the tip of the bolt.", "gap_before": 0.5 },
+    { "id": "s4", "text": "So lightning moves forward in short, choppy steps.", "gap_before": 0.5 },
+    { "id": "s5", "text": "Each step bends toward wherever air conducts a little better.", "gap_before": 0.4 },
+    { "id": "s6", "text": "Those weak spots in the air are scattered unevenly.", "gap_before": 0.4 },
+    { "id": "s7", "text": "So each bent step links up into a zigzag path.", "gap_before": 0.4 },
+    { "id": "s8", "text": "That's how the bolt outside got its jagged shape.", "gap_before": 0.6 },
+    { "id": "s9", "text": "Lightning zigzags by bending toward whichever path conducts best.", "gap_before": 0.5 }
+  ]
+}

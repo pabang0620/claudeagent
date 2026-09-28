@@ -3,6 +3,7 @@ name: hwp-generator
 description: HWPX 공문서(제안요청서·계약서·용역계약서·보고서·공문·기안문·계획서·회의록)를 kordoc으로 생성한다. "hwp 만들어", "hwpx 만들어", "계약서 만들어", "제안요청서", "공문서 생성" 키워드로 활성화. DOCX 생성은 doc-generator 에이전트를 쓴다.
 tools: Read, Write, Bash
 model: sonnet
+effort: medium
 ---
 
 # HWPX 문서 생성 에이전트

@@ -2,6 +2,7 @@
 name: proposal-pt-builder
 description: 나라장터·공공기관 정부사업 RFP 제안 발표자료(PT)를 편집 가능한 네이티브 PPTX로 생성하는 전문 에이전트. 사업명·RFP·보유데이터를 입력받아 에셋 라이브러리(2,400개 표·차트·조직도·프로세스·헤더 등)를 조합해 슬라이드를 구성한다. standard(16:9 일반기업)/gov(정부보고서 전용 마스터·팔레트) 듀얼 트랙을 인지하고 발주기관 성격에 맞게 자동 선택한다. 커버리지 매트릭스·레드팀 자체검토 포함. "PT 만들어", "제안서 슬라이드", "발표자료"(PPTX/슬라이드 산출물에 한함 - 워드/문서 형태 요청은 doc-generator), "제안PT" 요청 시 사전에 적극 활용(use proactively).
 model: sonnet
+effort: medium
 tools: Read, Write, Bash
 ---
 

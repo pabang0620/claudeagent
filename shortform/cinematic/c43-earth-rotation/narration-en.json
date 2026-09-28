@@ -1,0 +1,14 @@
+{
+  "segments": [
+    { "id": "s1", "text": "Gumgumi is just standing there, like always.", "gap_before": 1.2 },
+    { "id": "s2", "text": "But right now, it's spinning at incredible speed.", "gap_before": 0.6 },
+    { "id": "s3", "text": "And somehow, none of it feels real.", "gap_before": 0.5 },
+    { "id": "s4", "text": "The balance organ in your ear only notices sudden changes in speed.", "gap_before": 0.6 },
+    { "id": "s5", "text": "But Earth's spin never changes - it's always steady.", "gap_before": 0.4 },
+    { "id": "s6", "text": "So there's no change for your body to catch.", "gap_before": 0.4 },
+    { "id": "s7", "text": "A plane flying at a steady speed feels like it's standing still.", "gap_before": 0.5 },
+    { "id": "s8", "text": "But sudden turbulence? You feel that instantly.", "gap_before": 0.3 },
+    { "id": "s9", "text": "Earth's spin never changes either, so it's the same story.", "gap_before": 0.5 },
+    { "id": "s10", "text": "That's why you can't feel this fast spin at all.", "gap_before": 0.6 }
+  ]
+}

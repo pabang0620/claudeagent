@@ -2,6 +2,7 @@
 name: function-validator
 description: FILE(절대경로)·FUNCTION(선택 - 없으면 파일 전체 분석 모드)·CONTEXT(선택)를 입력받아 특정 함수의 비즈니스 로직 정확성·엣지케이스·에러 처리·부작용을 정적 분석하여 보고한다. 병렬 파일·함수 단위 기능 검증 시 활성화. 코드를 수정하지 않으며 발견·보고만 담당한다. 타입·문법 오류는 syntax-validator, 품질 전반은 code-reviewer가 담당 - 이 에이전트는 비즈니스 로직 정확성에 한정.
 model: sonnet
+effort: high
 tools: Read, Grep, Glob
 ---
 

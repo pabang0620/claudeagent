@@ -1,0 +1,14 @@
+{
+  "segments": [
+    { "id": "s1", "text": "Geese cross the sky in a V shape.", "gap_before": 1.2 },
+    { "id": "s2", "text": "It's not just a line - the effort isn't equal for everyone.", "gap_before": 0.6 },
+    { "id": "s3", "text": "Every wingbeat spins the air at the wingtip into a swirl.", "gap_before": 0.7 },
+    { "id": "s4", "text": "Just behind and outside that swirl, the air lifts upward.", "gap_before": 0.4 },
+    { "id": "s5", "text": "A bird flying right in that spot gets extra lift, so it flaps less.", "gap_before": 0.4 },
+    { "id": "s6", "text": "So birds tuck in diagonally behind each other.", "gap_before": 0.4 },
+    { "id": "s7", "text": "Line enough of them up, and it forms a V.", "gap_before": 0.3 },
+    { "id": "s8", "text": "The front bird gets no help, so that spot is the toughest.", "gap_before": 0.5 },
+    { "id": "s9", "text": "That's why they take turns leading.", "gap_before": 0.4 },
+    { "id": "s10", "text": "Birds fly in a V to ride the updraft made by the bird ahead.", "gap_before": 0.7 }
+  ]
+}

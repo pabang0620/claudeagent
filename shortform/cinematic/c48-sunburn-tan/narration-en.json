@@ -1,0 +1,12 @@
+{
+  "segments": [
+    { "id": "s1", "text": "Gumgumi's lounging in the sunny yard.", "gap_before": 1.2 },
+    { "id": "s2", "text": "After a while, the skin looked different.", "gap_before": 0.4 },
+    { "id": "s3", "text": "It's not just damage - the body's actually defending itself.", "gap_before": 0.5 },
+    { "id": "s4", "text": "UV rays push deep into skin cells and hurt them.", "gap_before": 0.8 },
+    { "id": "s5", "text": "So skin makes more pigment to fight back.", "gap_before": 0.4 },
+    { "id": "s6", "text": "That pigment caps the nucleus to block the UV.", "gap_before": 0.4 },
+    { "id": "s7", "text": "Pigment builds up across many cells.", "gap_before": 0.4 },
+    { "id": "s8", "text": "So skin tans - and if it's too long, it turns into a sunburn.", "gap_before": 0.6 }
+  ]
+}

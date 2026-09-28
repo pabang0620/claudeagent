@@ -380,3 +380,18 @@ export {
   VoiceIdentityDiagram, VOICE_ID_VB_W, VOICE_ID_VB_H, VOICE_ID_LOW_PT, VOICE_ID_HIGH_PT, VOICE_ID_GROW_PT,
 } from './VoiceIdentityDiagram';
 export type { VoiceIdentityDiagramProps } from './VoiceIdentityDiagram';
+export {
+  ArmVein, SkinLightCrossSection, VeinDepthCompare, VEIN_SURFACE_BLUE, BLOOD_RED,
+} from './VeinLightDiagram';
+export type { ArmVeinProps, SkinLightCrossSectionProps, VeinDepthCompareProps } from './VeinLightDiagram';
+export {
+  JointCrackDiagram, JOINT_VB_W, JOINT_VB_H, JOINT_BONE_LABEL_PT, JOINT_BUBBLE_LABEL_PT,
+} from './JointCrackDiagram';
+export type { JointCrackDiagramProps } from './JointCrackDiagram';
+export {
+  Horse, HorseLying, HORSE_STANDING_VB_W, HORSE_STANDING_VB_H, HORSE_STANDING_GROUND_VB,
+  HORSE_LYING_VB_W, HORSE_LYING_VB_H,
+} from './Horse';
+export type { HorseProps, HorseLyingProps } from './Horse';
+export { HorseLegLockDiagram } from './HorseLegLockDiagram';
+export type { HorseLegLockDiagramProps } from './HorseLegLockDiagram';

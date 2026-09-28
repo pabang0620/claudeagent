@@ -1,0 +1,12 @@
+{
+  "segments": [
+    { "id": "s1", "text": "This month's hair-length mark dropped way down.", "gap_before": 1.2 },
+    { "id": "s2", "text": "But the eyebrow mark hasn't moved in months.", "gap_before": 0.6 },
+    { "id": "s3", "text": "Every hair on the body cycles between growing and resting.", "gap_before": 0.7 },
+    { "id": "s4", "text": "How long that growing phase lasts is set by body part.", "gap_before": 0.4 },
+    { "id": "s5", "text": "Scalp hair stays in its growing phase for years.", "gap_before": 0.4 },
+    { "id": "s6", "text": "Eyebrow hair's growing phase ends in just weeks.", "gap_before": 0.4 },
+    { "id": "s7", "text": "Look again - the eyebrow mark hasn't moved at all.", "gap_before": 0.6 },
+    { "id": "s8", "text": "Eyebrows stop growing sooner because their growing phase is short.", "gap_before": 0.5 }
+  ]
+}

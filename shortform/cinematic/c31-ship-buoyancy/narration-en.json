@@ -1,0 +1,12 @@
+{
+  "segments": [
+    { "id": "s1", "text": "Drop an iron nut in water and it sinks right away.", "gap_before": 1.2 },
+    { "id": "s2", "text": "But the boat right next to it is iron too, and it floats.", "gap_before": 0.5 },
+    { "id": "s3", "text": "A submerged object gets pushed up by the water it displaces.", "gap_before": 1.0 },
+    { "id": "s4", "text": "The nut is small, so it barely pushes any water aside.", "gap_before": 0.4 },
+    { "id": "s5", "text": "A ship is shaped like a hollow bowl, so it takes up way more space.", "gap_before": 0.4 },
+    { "id": "s6", "text": "Even just the submerged part pushes aside a lot of water.", "gap_before": 0.4 },
+    { "id": "s7", "text": "That's why this boat stays floating.", "gap_before": 0.5 },
+    { "id": "s8", "text": "The steel isn't lighter, it just takes up more room.", "gap_before": 0.6 }
+  ]
+}

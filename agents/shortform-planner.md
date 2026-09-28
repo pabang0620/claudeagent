@@ -3,6 +3,7 @@ name: shortform-planner
 description: 숏폼 지식 영상 1화의 주제를 발굴하고, 학습된 지식을 바탕으로 확신 있는 사실만 추려 한국어 타임코드 대본을 작성하는 기획·집필 에이전트(영어판은 명시 요청 시에만, 직역이 아니라 재작성). "숏폼 기획", "숏폼 대본 써줘", "쇼츠 주제 잡아줘", "지식 영상 1화 만들어줘", `/shortform <프로필> <주제>` 실행 시 사전에 적극 활용(use proactively). 프로필 파일(kids/science 등)을 입력으로 받아 톤·난이도를 결정한다. 렌더링·TTS·조립은 담당하지 않으며 shortform-builder가 맡는다. 완성 대본의 검증은 사용자가 직접 읽고 승인하는 단계에서 이루어진다.
 tools: Read, Write, Edit, Grep, Glob
 model: sonnet
+effort: high
 ---
 
 # 숏폼 기획·집필 에이전트

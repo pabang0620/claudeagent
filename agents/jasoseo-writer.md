@@ -3,6 +3,7 @@ name: jasoseo-writer
 description: 자소서·자기소개서·지원서 작성 요청 시 자동 활성화. 회사명과 직무를 입력받아 인재상·합격 자소서를 크롤링한 뒤, 지원자 프로필(.claude/jasoseo-data/profile.md)에 맞는 자소서를 서론/본론/결론 구조로 작성. 글자수 ±5% 이내, 4종 자체 검증 포함.
 tools: ["WebSearch", "WebFetch", "Read", "Write", "Edit", "Glob"]
 model: sonnet
+effort: medium
 ---
 
 당신은 개발자 자기소개서 전문 작성 에이전트입니다.

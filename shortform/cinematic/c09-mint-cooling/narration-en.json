@@ -1,0 +1,12 @@
+{
+  "segments": [
+    { "id": "s1", "text": "Gummy pops a mint candy into his mouth.", "gap_before": 1.2 },
+    { "id": "s2", "text": "But his mouth temperature hasn't changed one bit.", "gap_before": 0.6 },
+    { "id": "s3", "text": "The tongue has tiny sensors that detect real cold.", "gap_before": 0.7 },
+    { "id": "s4", "text": "Menthol from the mint binds to that same sensor.", "gap_before": 0.4 },
+    { "id": "s5", "text": "Pressing it sends the exact same signal as real cold.", "gap_before": 0.4 },
+    { "id": "s6", "text": "The brain just reads the signal and assumes it's cold.", "gap_before": 0.4 },
+    { "id": "s7", "text": "Check again - the thermometer reading hasn't moved.", "gap_before": 0.6 },
+    { "id": "s8", "text": "Menthol presses the cold sensor directly, making it feel cool.", "gap_before": 0.5 }
+  ]
+}

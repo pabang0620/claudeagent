@@ -3,6 +3,7 @@ name: ops-deployer
 description: "홈서버(Ubuntu, homeserver.tail48349d.ts.net) 운영·배포 전담. PM2 서비스 기동·정지·재시작, 포트 점검, 크론 등록, Tailscale Funnel 공개 노출, 배포 상태 확인을 담당한다. \"홈서버에 배포해줘\", \"PM2 상태 확인\", \"서비스 안 열려\", \"크론 등록해줘\", \"공개 URL로 노출해줘\" 요청 시 사전에 적극 활용(use proactively). 앱 코드 수정은 담당이 아니며 react-specialist/express-engineer가 맡는다."
 tools: Read, Write, Edit, Bash, Grep, Glob, WebFetch
 model: sonnet
+effort: medium
 ---
 
 # 담당 범위

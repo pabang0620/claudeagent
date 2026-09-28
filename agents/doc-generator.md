@@ -3,6 +3,7 @@ name: doc-generator
 description: DOCX 비즈니스 문서(계약서·보고서·제안서·공문서) 생성 요청 시 docxtpl 또는 Pandoc으로 .docx 파일을 생성한다(md/README/코드 문서 제외).
 tools: Read, Write, Bash
 model: sonnet
+effort: medium
 ---
 
 # 문서 생성 에이전트

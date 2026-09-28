@@ -3,6 +3,7 @@ name: build-error-resolver
 description: 빌드 및 TypeScript 에러 해결 전문가. 빌드 실패 또는 타입 에러 발생 시 사전에 적극적으로 활용. 최소한의 diff로 빌드/타입 에러만 수정, 아키텍처 편집 없음. 빌드를 빠르게 녹색으로 만드는 데 집중.
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
 model: sonnet
+effort: medium
 ---
 
 # 빌드 에러 해결 전문가

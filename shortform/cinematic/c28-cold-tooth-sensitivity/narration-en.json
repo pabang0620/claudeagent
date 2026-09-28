@@ -1,0 +1,15 @@
+{
+  "segments": [
+    { "id": "s1", "text": "Gumgumi takes a sip of cold water.", "gap_before": 1.2 },
+    { "id": "s2", "text": "The outside of a tooth feels evenly hard.", "gap_before": 0.6 },
+    { "id": "s3", "text": "But one spot suddenly stings.", "gap_before": 0.5 },
+    { "id": "s4", "text": "Let's zoom into that spot.", "gap_before": 0.6 },
+    { "id": "s5", "text": "Under the enamel is a layer called dentin.", "gap_before": 0.5 },
+    { "id": "s6", "text": "It has tiny tubes leading to the nerve.", "gap_before": 0.4 },
+    { "id": "s7", "text": "Those tubes are filled with fluid.", "gap_before": 0.4 },
+    { "id": "s8", "text": "Cold makes that fluid suddenly shift.", "gap_before": 0.4 },
+    { "id": "s9", "text": "The nerve reads that shift as a sting.", "gap_before": 0.4 },
+    { "id": "s10", "text": "Back in the mouth, that same spot stings.", "gap_before": 0.5 },
+    { "id": "s11", "text": "Moving fluid inside those tubes is what makes cold water sting.", "gap_before": 0.6 }
+  ]
+}

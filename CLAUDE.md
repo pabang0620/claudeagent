@@ -117,6 +117,7 @@ project/
 - DB ID: raw SQL 프로젝트는 이중 ID 패턴 - 내부 PK(`id AUTO_INCREMENT`/`BIGSERIAL`) + 외부 노출용 `uuid`/`{table}_id` 컬럼 분리 (IDOR 방지, AUTO_INCREMENT id 직접 노출 금지). ORM(Prisma 등) 프로젝트는 해당 ORM 관례를 따름(예: cosmic-kuji-market은 단일 `id String @id @default(cuid())`). 마이그레이션: raw SQL 스크립트 (MySQL 스키마·마이그레이션은 db-schema-architect 에이전트 담당)
 - 환경변수: `.env` 사용, 커밋 금지
 - 테스트 커버리지: 개발 중 상시 강제 수치 없음. 80%는 "테스트 맡길게" 시점의 인수 게이트에만 적용 (`rules/testing.md`)
+- 사용자 응답은 항상 한국어로 쓴다. 작업 중 진행 안내·완료 보고·질문 전부 포함. 코드·명령어·파일 경로·영어 프롬프트 원문만 예외다. (2026-09-22 사용자 지시 "한글로 답해 룰에 적어둬 항상한글로 답하라고")
 - em-dash(—) 절대 사용 금지: 모든 산출물(코드·주석·문서·이력서·SNS 글·커밋 메시지·사용자 응답 포함)에서 em-dash("—") 대신 하이픈("-")을 쓴다. em-dash는 AI가 쓴 티가 나는 대표 신호다. (2026-07-25)
 
 세부 규칙: `rules/` 디렉토리 참조

@@ -1,0 +1,11 @@
+{
+  "segments": [
+    { "id": "s1", "text": "Gummy eats a fried egg, then lets out a fart.", "gap_before": 1.2 },
+    { "id": "s2", "text": "The smell fills the room in an instant.", "gap_before": 0.5 },
+    { "id": "s3", "text": "But most fart gas actually has no smell at all.", "gap_before": 0.6 },
+    { "id": "s4", "text": "It's mostly odorless gas, like nitrogen and carbon dioxide.", "gap_before": 0.8 },
+    { "id": "s5", "text": "Gut bacteria break down food and make a tiny bit of sulfur compound.", "gap_before": 0.4 },
+    { "id": "s6", "text": "Even a trace of that sulfur is strong enough for a nose to catch.", "gap_before": 0.4 },
+    { "id": "s7", "text": "So that small amount of sulfur decides how a fart smells.", "gap_before": 0.6 }
+  ]
+}

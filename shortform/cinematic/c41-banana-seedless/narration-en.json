@@ -1,0 +1,14 @@
+{
+  "segments": [
+    { "id": "s1", "text": "Inside a banana, tiny black specks line up in a row.", "gap_before": 1.3 },
+    { "id": "s2", "text": "Turns out, those are seeds that never got to grow.", "gap_before": 0.5 },
+    { "id": "s3", "text": "Wild bananas used to be packed with big, hard seeds.", "gap_before": 0.5 },
+    { "id": "s4", "text": "The bananas we eat have one extra set of chromosomes than normal.", "gap_before": 0.8 },
+    { "id": "s5", "text": "To make a seed, chromosomes need to pair up two by two.", "gap_before": 0.3 },
+    { "id": "s6", "text": "But since it's an odd number, one always gets left out.", "gap_before": 0.3 },
+    { "id": "s7", "text": "So instead of a real seed, only a trace is left behind.", "gap_before": 0.4 },
+    { "id": "s8", "text": "Instead of seeds, a shoot from the roots gets cut and replanted.", "gap_before": 0.4 },
+    { "id": "s9", "text": "Every banana grown that way shares the same genes.", "gap_before": 0.5 },
+    { "id": "s10", "text": "So the bananas we eat today are basically all clones.", "gap_before": 0.5 }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "segments": [
+    { "id": "s1", "text": "Gummy holds a bowling ball and a ping pong ball on the roof.", "gap_before": 1.2 },
+    { "id": "s2", "text": "He's about to let go of both at once.", "gap_before": 0.5 },
+    { "id": "s3", "text": "You'd guess the heavy one falls faster.", "gap_before": 0.6 },
+    { "id": "s4", "text": "Earth pulls the heavy ball with more force.", "gap_before": 0.8 },
+    { "id": "s5", "text": "But the heavy ball resists moving just as much.", "gap_before": 0.5 },
+    { "id": "s6", "text": "Both the pull and the resistance grow by the same ratio.", "gap_before": 0.5 },
+    { "id": "s7", "text": "So the weight cancels out, leaving only speed.", "gap_before": 0.5 },
+    { "id": "s8", "text": "Without air resistance, both hit the ground at the same time.", "gap_before": 1.0 }
+  ]
+}

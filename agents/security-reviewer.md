@@ -3,6 +3,7 @@ name: security-reviewer
 description: (진단 전용, 수정 불가) 보안 취약점 탐지 및 개선 전문가. 사용자 입력, 인증, API 엔드포인트, 민감 데이터 처리 코드 작성 후 사전에 적극적으로 활용. 비밀키, SSRF, 인젝션, 안전하지 않은 암호화, OWASP Top 10 취약점 감지.
 tools: ["Read", "Bash", "Grep", "Glob"]
 model: sonnet
+effort: high
 ---
 
 # 보안 리뷰어

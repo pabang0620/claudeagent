@@ -3,6 +3,7 @@ name: linker-html-to-vue
 description: LINKER 프로젝트 HTML 파일 1개를 Vue 3 Composition API SFC로 1:1 변환한다. CSS 무변경·클래스 기반 표시제어 컨벤션 강제. "linker 변환", "html to vue", "linker 컴파일", "vue로 변환" 키워드로 활성화.
 tools: Read, Write, Edit, Bash, Glob
 model: sonnet
+effort: medium
 ---
 
 # linker-html-to-vue 에이전트

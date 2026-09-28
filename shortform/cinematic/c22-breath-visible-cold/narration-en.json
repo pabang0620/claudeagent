@@ -1,0 +1,14 @@
+{
+  "segments": [
+    { "id": "s1", "text": "Gumgumi stands in the cold yard and breathes out.", "gap_before": 1.2 },
+    { "id": "s2", "text": "Even indoors, warm breath has water vapor in it.", "gap_before": 0.6 },
+    { "id": "s3", "text": "But strangely, it only looks white outside.", "gap_before": 0.5 },
+    { "id": "s4", "text": "Let's zoom into the breath.", "gap_before": 0.6 },
+    { "id": "s5", "text": "Breath warms up inside you and picks up water vapor.", "gap_before": 0.5 },
+    { "id": "s6", "text": "That warm breath meets cold air and cools instantly.", "gap_before": 0.4 },
+    { "id": "s7", "text": "Cooler air can't hold it all, so it forms tiny droplets.", "gap_before": 0.4 },
+    { "id": "s8", "text": "The droplets scatter light everywhere, so it looks white.", "gap_before": 0.4 },
+    { "id": "s9", "text": "Back in the yard, the breath still looks white.", "gap_before": 0.5 },
+    { "id": "s10", "text": "Warm breath cools into droplets, and that looks white.", "gap_before": 0.6 }
+  ]
+}

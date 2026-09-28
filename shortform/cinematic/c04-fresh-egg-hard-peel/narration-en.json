@@ -1,0 +1,12 @@
+{
+  "segments": [
+    { "id": "s1", "text": "One egg peels smooth, the other tears apart.", "gap_before": 1.2 },
+    { "id": "s2", "text": "You'd think the fresher egg peels easier.", "gap_before": 0.6 },
+    { "id": "s3", "text": "But it's the opposite - fresher eggs peel worse.", "gap_before": 0.5 },
+    { "id": "s4", "text": "Eggshells are covered in tiny invisible pores.", "gap_before": 0.9 },
+    { "id": "s5", "text": "Over time, carbon dioxide seeps out through them.", "gap_before": 0.4 },
+    { "id": "s6", "text": "As it escapes, the egg white turns more alkaline.", "gap_before": 0.4 },
+    { "id": "s7", "text": "That loosens its grip on the inner membrane.", "gap_before": 0.4 },
+    { "id": "s8", "text": "So the older the egg, the easier the shell comes off.", "gap_before": 0.6 }
+  ]
+}

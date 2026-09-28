@@ -6,6 +6,7 @@ description: >
   unresolved 항목이 많을 때 파일 단위로 쪼개 병렬 스폰한다. 코드를 수정하지 않으며
   발견·보고만 한다. flowmap 스킬 실행 중에만 쓰이고 단독 호출 대상이 아니다.
 model: sonnet
+effort: low
 tools: Read, Grep, Glob
 ---
 

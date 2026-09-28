@@ -1,0 +1,11 @@
+{
+  "segments": [
+    { "id": "s1", "text": "Gummy stands on the beach, gazing out at the deep blue sea.", "gap_before": 1.3 },
+    { "id": "s2", "text": "But even under a cloudy sky, the sea still looks blue.", "gap_before": 0.5 },
+    { "id": "s3", "text": "Water absorbs each color of light differently.", "gap_before": 0.8 },
+    { "id": "s4", "text": "Red light gets absorbed quickly and fades away.", "gap_before": 0.4 },
+    { "id": "s5", "text": "Blue light isn't absorbed as easily, so it stays.", "gap_before": 0.4 },
+    { "id": "s6", "text": "That blue light scatters back out in every direction.", "gap_before": 0.4 },
+    { "id": "s7", "text": "The sea looks blue because of the water itself, not the sky.", "gap_before": 0.6 }
+  ]
+}

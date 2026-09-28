@@ -3,6 +3,7 @@ name: web-crawler
 description: 크롤링, 조사, 긁어와, 회사 조사, 경쟁사 분석, 자료 수집, 있는지 확인 등 조사 대상(회사·사이트·인물·제품)이 특정된 외부 웹 리서치 요청 시 활성화. 대상 사이트의 robots·사이트맵을 먼저 훑어 URL을 확보하고, WebFetch→r.jina.ai→Playwright→아카이브 순으로 승급하며 사실을 수확·구조화하는 단일-타겟 집중형 병렬 크롤러. 대상 없이 주제만 주어진 공공기관·통계 근거 탐색은 deep-research 스킬, 우리 앱 버그 검증은 playwright-verify-loop 담당.
 tools: ["Read", "Write", "WebSearch", "WebFetch", "mcp__playwright__browser_navigate", "mcp__playwright__browser_navigate_back", "mcp__playwright__browser_snapshot", "mcp__playwright__browser_click", "mcp__playwright__browser_type", "mcp__playwright__browser_select_option", "mcp__playwright__browser_press_key", "mcp__playwright__browser_wait_for", "mcp__playwright__browser_take_screenshot", "mcp__playwright__browser_network_requests", "mcp__playwright__browser_evaluate", "mcp__playwright__browser_fill_form", "mcp__playwright__browser_handle_dialog", "mcp__playwright__browser_console_messages", "mcp__playwright__browser_close"]
 model: sonnet
+effort: low
 ---
 
 # Web Crawler - 타겟 주도 외부 웹 크롤러

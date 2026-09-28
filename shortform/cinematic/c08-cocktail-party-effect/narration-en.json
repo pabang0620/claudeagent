@@ -1,0 +1,14 @@
+{
+  "segments": [
+    { "id": "s1", "text": "Gumgumi is chatting with one friend at a noisy party.", "gap_before": 1.2 },
+    { "id": "s2", "text": "It feels like every other voice just goes silent.", "gap_before": 0.6 },
+    { "id": "s3", "text": "But say your name, and you catch it instantly.", "gap_before": 0.5 },
+    { "id": "s4", "text": "The reason is hiding inside your brain.", "gap_before": 0.6 },
+    { "id": "s5", "text": "Your brain picks one voice to hear clearly.", "gap_before": 0.5 },
+    { "id": "s6", "text": "But it keeps quietly tracking the other voices too.", "gap_before": 0.4 },
+    { "id": "s7", "text": "A familiar sound, like your name, suddenly stands out.", "gap_before": 0.4 },
+    { "id": "s8", "text": "Right then, your brain snaps its attention over there.", "gap_before": 0.4 },
+    { "id": "s9", "text": "That's called the cocktail party effect.", "gap_before": 0.5 },
+    { "id": "s10", "text": "So even in a noisy room, your name always gets through.", "gap_before": 0.6 }
+  ]
+}

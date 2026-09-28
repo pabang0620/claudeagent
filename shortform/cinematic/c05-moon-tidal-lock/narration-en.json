@@ -1,0 +1,14 @@
+{
+  "segments": [
+    { "id": "s1", "text": "Every night, Gumgumi looks up at the same moon.", "gap_before": 1.2 },
+    { "id": "s2", "text": "The Moon is constantly circling around Earth.", "gap_before": 0.6 },
+    { "id": "s3", "text": "But its markings never seem to change.", "gap_before": 0.5 },
+    { "id": "s4", "text": "Turns out, the Moon is spinning too.", "gap_before": 0.6 },
+    { "id": "s5", "text": "Earth pulls harder on the Moon's near side, stretching it slightly.", "gap_before": 0.5 },
+    { "id": "s6", "text": "Long ago the Moon spun faster, so that stretch kept drifting out of line.", "gap_before": 0.4 },
+    { "id": "s7", "text": "Earth's pull kept tugging it back, slowly braking the spin.", "gap_before": 0.4 },
+    { "id": "s8", "text": "Eventually its spin matched its orbit exactly.", "gap_before": 0.4 },
+    { "id": "s9", "text": "That's called tidal locking.", "gap_before": 0.5 },
+    { "id": "s10", "text": "So the Moon always shows us the very same face.", "gap_before": 0.6 }
+  ]
+}

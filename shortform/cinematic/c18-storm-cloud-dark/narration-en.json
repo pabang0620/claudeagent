@@ -1,0 +1,16 @@
+{
+  "segments": [
+    { "id": "s1", "text": "Fluffy clouds are bright white,", "gap_before": 1.3 },
+    { "id": "s2", "text": "but storm clouds turn almost black.", "gap_before": 0.4 },
+    { "id": "s3", "text": "Yet both are made of clear, colorless droplets.", "gap_before": 0.6 },
+    { "id": "s4", "text": "Each droplet scatters every color of light equally.", "gap_before": 0.9 },
+    { "id": "s5", "text": "That's why clouds normally look white.", "gap_before": 0.3 },
+    { "id": "s6", "text": "Storm clouds just pack in far more droplets,", "gap_before": 0.5 },
+    { "id": "s7", "text": "and the whole cloud is much thicker.", "gap_before": 0.3 },
+    { "id": "s8", "text": "So light keeps hitting droplet after droplet on its way down,", "gap_before": 0.5 },
+    { "id": "s9", "text": "and a lot of it gets scattered back upward.", "gap_before": 0.3 },
+    { "id": "s10", "text": "That leaves much less light reaching the bottom,", "gap_before": 0.4 },
+    { "id": "s11", "text": "so the underside of a storm cloud looks dark.", "gap_before": 0.3 },
+    { "id": "s12", "text": "The droplets aren't different - it's just thicker and denser.", "gap_before": 0.6 }
+  ]
+}

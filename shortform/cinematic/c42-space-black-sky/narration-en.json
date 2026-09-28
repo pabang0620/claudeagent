@@ -1,0 +1,11 @@
+{
+  "segments": [
+    { "id": "s1", "text": "Floating out in space, staring at the sun.", "gap_before": 1.3 },
+    { "id": "s2", "text": "But right next to it, the sky is pitch black.", "gap_before": 0.6 },
+    { "id": "s3", "text": "Sunlight scatters off tiny air molecules in every direction.", "gap_before": 1.0 },
+    { "id": "s4", "text": "That's why Earth's sky glows bright all over.", "gap_before": 0.4 },
+    { "id": "s5", "text": "But space barely has any air at all.", "gap_before": 0.9 },
+    { "id": "s6", "text": "So there's nothing to scatter it, and the light just travels straight.", "gap_before": 0.4 },
+    { "id": "s7", "text": "That's why only the sun's direction looks bright, and the rest stays pitch black.", "gap_before": 0.8 }
+  ]
+}

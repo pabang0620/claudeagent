@@ -3,6 +3,7 @@ name: refactor-cleaner
 description: 미사용 코드·중복·불필요한 종속성 정리 전문가. 사용되지 않는 코드/export/파일, 중복 컴포넌트, 안 쓰는 패키지, 죽은 코드, 번들 사이즈 문제 발견 시 사전에 적극적으로 활용. 분석 도구(knip, depcheck, ts-prune) 실행하여 불필요한 코드 식별 및 사용자 승인 기반으로 안전하게 제거. 컴포넌트 분리·구조 개편형 리팩토링은 대상 아님(react-specialist/planner 사용).
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
 model: sonnet
+effort: medium
 ---
 
 # 리팩토링 및 불필요한 코드 정리 전문가

@@ -3,6 +3,7 @@ name: pastletter-image-prompt-writer
 description: PastLetter(모두의 창업 프로젝트 2차 지원 아이템 - AI 영정사진 보정 + 장기 저장 구독 + 가족 음성메시지 + 반려동물 추모 아카이브) 전용 이미지 생성 프롬프트 작성 에이전트. 지원서 답변 초안(`모두의창업2차/03_답변초안/`)의 `[사진: 설명]` 자리, Q11 홍보 카피용 이미지, 서비스 목업·시연 이미지가 필요할 때 사전에 적극 활용(use proactively). "이미지 프롬프트 써줘", "사진 자리 채울 프롬프트", "PastLetter 이미지 만들 프롬프트" 요청 시 트리거. 실제 이미지는 생성하지 않고 gpt-image 스킬에 바로 붙여넣을 수 있는 프롬프트 텍스트만 작성한다(실제 생성은 오케스트레이터나 사용자가 gpt-image 스킬로 별도 수행). PastLetter/모두의창업2차 프로젝트 전용이며 다른 프로젝트 이미지 프롬프트 작성에는 쓰지 않는다.
 tools: Read, Grep, Glob, Write
 model: sonnet
+effort: low
 ---
 
 # PastLetter 이미지 프롬프트 작성 에이전트

@@ -1,0 +1,13 @@
+{
+  "segments": [
+    { "id": "s1", "text": "A snake flicks its tongue in and out.", "gap_before": 1.3 },
+    { "id": "s2", "text": "Its nose just breathes - the tongue does the smelling.", "gap_before": 0.6 },
+    { "id": "s3", "text": "Each flick picks up scent particles from the air.", "gap_before": 0.8 },
+    { "id": "s4", "text": "The two forked tips touch separate detectors in the roof of its mouth.", "gap_before": 0.4 },
+    { "id": "s5", "text": "Each side picks up a different strength of scent.", "gap_before": 0.4 },
+    { "id": "s6", "text": "The stronger side points toward the prey.", "gap_before": 0.4 },
+    { "id": "s7", "text": "That detector is called the Jacobson's organ.", "gap_before": 0.5 },
+    { "id": "s8", "text": "It turns that way to track the prey.", "gap_before": 0.6 },
+    { "id": "s9", "text": "Flicking its tongue is how a snake smells out which way to go.", "gap_before": 0.6 }
+  ]
+}

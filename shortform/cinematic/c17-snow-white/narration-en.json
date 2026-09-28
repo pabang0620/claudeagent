@@ -1,0 +1,15 @@
+{
+  "segments": [
+    { "id": "s1", "text": "Snow is piling up all over the yard.", "gap_before": 1.0 },
+    { "id": "s2", "text": "Gumgumi catches a single falling snowflake.", "gap_before": 0.6 },
+    { "id": "s3", "text": "This one snowflake is clear as glass.", "gap_before": 0.5 },
+    { "id": "s4", "text": "But the whole snow pile looks pure white.", "gap_before": 0.5 },
+    { "id": "s5", "text": "A single ice crystal lets light pass straight through.", "gap_before": 0.6 },
+    { "id": "s6", "text": "Stack them up, and countless ice-air boundaries appear.", "gap_before": 0.5 },
+    { "id": "s7", "text": "Light bounces off each boundary and scatters everywhere.", "gap_before": 0.4 },
+    { "id": "s8", "text": "Ice doesn't favor any color, so they all scatter evenly.", "gap_before": 0.4 },
+    { "id": "s9", "text": "This is called scattering.", "gap_before": 0.4 },
+    { "id": "s10", "text": "So all those colors mix back into white light.", "gap_before": 0.5 },
+    { "id": "s11", "text": "That's why snow looks pure white.", "gap_before": 0.5 }
+  ]
+}

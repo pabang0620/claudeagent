@@ -1,0 +1,12 @@
+{
+  "segments": [
+    { "id": "s1", "text": "Gumgumi drops popcorn kernels into a pot on the stove.", "gap_before": 1.3 },
+    { "id": "s2", "text": "They look dry and hard, but suddenly pop with a bang.", "gap_before": 0.5 },
+    { "id": "s3", "text": "There's tiny moisture trapped inside the starch.", "gap_before": 0.8 },
+    { "id": "s4", "text": "Heat turns that water into steam.", "gap_before": 0.4 },
+    { "id": "s5", "text": "The steam tries to expand, building up pressure.", "gap_before": 0.4 },
+    { "id": "s6", "text": "The hull holds on until it can't take any more, then bursts.", "gap_before": 0.4 },
+    { "id": "s7", "text": "The moment it bursts, the starch puffs right up.", "gap_before": 0.4 },
+    { "id": "s8", "text": "That's why popcorn puffs up white when it pops.", "gap_before": 0.6 }
+  ]
+}

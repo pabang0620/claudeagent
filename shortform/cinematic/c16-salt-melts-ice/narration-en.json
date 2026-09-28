@@ -1,0 +1,12 @@
+{
+  "segments": [
+    { "id": "s1", "text": "Salt gets sprinkled onto an icy sidewalk.", "gap_before": 1.2 },
+    { "id": "s2", "text": "But the weather outside hasn't gotten any warmer.", "gap_before": 0.6 },
+    { "id": "s3", "text": "Ice always has a super-thin layer of water on its surface.", "gap_before": 0.7 },
+    { "id": "s4", "text": "The salt dissolves right into that water, forming brine.", "gap_before": 0.4 },
+    { "id": "s5", "text": "Saltwater freezes at a much lower temperature than plain water.", "gap_before": 0.4 },
+    { "id": "s6", "text": "So at today's temperature, it simply can't freeze.", "gap_before": 0.4 },
+    { "id": "s7", "text": "That brine keeps spreading and melting the ice next to it.", "gap_before": 0.6 },
+    { "id": "s8", "text": "Because its freezing point drops, salty water just keeps melting.", "gap_before": 0.5 }
+  ]
+}

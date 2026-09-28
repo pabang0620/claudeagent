@@ -1,0 +1,12 @@
+{
+  "segments": [
+    { "id": "s1", "text": "It's a scorching summer day, and Gumgumi starts climbing a mountain.", "gap_before": 1.2 },
+    { "id": "s2", "text": "The higher he goes, the closer he gets to the sun.", "gap_before": 0.6 },
+    { "id": "s3", "text": "But the summit turns out to be much colder.", "gap_before": 0.5 },
+    { "id": "s4", "text": "Air is basically transparent, so sunlight passes right through it.", "gap_before": 0.6 },
+    { "id": "s5", "text": "That light warms the ground, and the ground warms the air right above it.", "gap_before": 0.4 },
+    { "id": "s6", "text": "Higher up, lower pressure lets the air expand and cool.", "gap_before": 0.4 },
+    { "id": "s7", "text": "It's called adiabatic cooling.", "gap_before": 0.5 },
+    { "id": "s8", "text": "So mountains stay colder even though they're closer to the sun.", "gap_before": 0.6 }
+  ]
+}

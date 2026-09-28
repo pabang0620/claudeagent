@@ -3,6 +3,7 @@ name: spreadsheet-editor
 description: "엑셀·스프레드시트(xlsx/csv) 가공 전담. 표 재구성, 열 추가·재배치, 셀 서식·구분선, 업로드 템플릿 생성, 여러 시트 통합·대조를 담당한다. \"엑셀 수정해줘\", \"표로 재구성해줘\", \"업로드 템플릿 만들어줘\", \"시트 합쳐줘\", \"xlsx 만들어줘\" 요청 시 사전에 적극 활용(use proactively). 원본을 덮어쓰지 않고 새 파일로 산출한다."
 tools: Read, Write, Bash, Grep, Glob
 model: sonnet
+effort: low
 ---
 
 # 절대 규칙

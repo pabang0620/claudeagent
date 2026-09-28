@@ -1,0 +1,12 @@
+{
+  "segments": [
+    { "id": "s1", "text": "Your ears can feel plugged when a plane takes off.", "gap_before": 1.2 },
+    { "id": "s2", "text": "There's actually a tube that's meant to fix that.", "gap_before": 0.6 },
+    { "id": "s3", "text": "But that tube is normally closed.", "gap_before": 0.5 },
+    { "id": "s4", "text": "During takeoff and landing, cabin pressure changes fast.", "gap_before": 0.8 },
+    { "id": "s5", "text": "If the tube can't keep up, your eardrum gets stretched tight.", "gap_before": 0.4 },
+    { "id": "s6", "text": "Yawning or swallowing opens the tube again.", "gap_before": 0.4 },
+    { "id": "s7", "text": "That tube is called the Eustachian tube.", "gap_before": 0.5 },
+    { "id": "s8", "text": "So it's the pressure difference behind that plugged feeling.", "gap_before": 0.6 }
+  ]
+}

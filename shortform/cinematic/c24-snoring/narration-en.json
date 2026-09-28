@@ -1,0 +1,14 @@
+{
+  "segments": [
+    { "id": "s1", "text": "Gumgumi climbs into bed.", "gap_before": 1.2 },
+    { "id": "s2", "text": "Lying down, the breathing stays quiet.", "gap_before": 0.6 },
+    { "id": "s3", "text": "But the moment sleep hits, a loud snore starts.", "gap_before": 0.5 },
+    { "id": "s4", "text": "Let's zoom into the throat.", "gap_before": 0.6 },
+    { "id": "s5", "text": "Falling asleep loosens the throat muscles.", "gap_before": 0.5 },
+    { "id": "s6", "text": "The sagging tissue narrows the airway.", "gap_before": 0.4 },
+    { "id": "s7", "text": "Air has to rush faster through the narrow gap.", "gap_before": 0.4 },
+    { "id": "s8", "text": "That fast air makes the loose tissue flutter.", "gap_before": 0.4 },
+    { "id": "s9", "text": "Back in the room, the fluttering keeps going.", "gap_before": 0.5 },
+    { "id": "s10", "text": "That flutter in the narrow airway is the snore.", "gap_before": 0.6 }
+  ]
+}

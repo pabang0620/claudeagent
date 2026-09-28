@@ -1,0 +1,16 @@
+{
+  "segments": [
+    { "id": "s1", "text": "Gumgumi flies a kite at the beach.", "gap_before": 1.2 },
+    { "id": "s2", "text": "No fan is blowing, yet the wind keeps coming.", "gap_before": 0.6 },
+    { "id": "s3", "text": "But the sand feels hot, and the sea feels cool.", "gap_before": 0.5 },
+    { "id": "s4", "text": "Let's zoom into the air itself.", "gap_before": 0.6 },
+    { "id": "s5", "text": "Sunlight heats the sand much faster.", "gap_before": 0.5 },
+    { "id": "s6", "text": "So the air right above the sand gets hotter.", "gap_before": 0.4 },
+    { "id": "s7", "text": "That heated air rises upward.", "gap_before": 0.4 },
+    { "id": "s8", "text": "There, the air pressure - the push of the air - weakens.", "gap_before": 0.4 },
+    { "id": "s9", "text": "Air flows from where pressure is high to where it's low.", "gap_before": 0.4 },
+    { "id": "s10", "text": "That moving air is exactly what wind is.", "gap_before": 0.4 },
+    { "id": "s11", "text": "Back at the beach, wind blows from the sea to the sand.", "gap_before": 0.5 },
+    { "id": "s12", "text": "Uneven heating creates a pressure gap - and that makes wind.", "gap_before": 0.5 }
+  ]
+}
