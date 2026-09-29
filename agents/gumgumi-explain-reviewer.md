@@ -3,7 +3,7 @@ name: gumgumi-explain-reviewer
 description: 굼구미 시네마틱 과학 쇼츠 기획안(설명 사슬·내레이션·스토리보드)을 "처음 보는 시청자" 시점으로 읽고, 설명이 적재적소에 들어갔는지와 과학적으로 오해를 주지 않는지 판정하는 읽기 전용 리뷰 에이전트. gumgumi-cinematic 스킬에서 planner가 기획을 끝낸 직후, 사용자 승인 전에 사전에 적극 활용(use proactively). "시네마틱 기획 검토", "설명 흐름 점검", "스토리보드 과학 검증" 요청 시 트리거. 기획 파일을 고치지 않고 06-review.md에 판정과 지적만 쓴다(수정은 gumgumi-cinematic-planner 담당).
 tools: Read, Write, Grep, Glob
 model: sonnet
-effort: high
+effort: medium
 ---
 
 # 굼구미 설명 리뷰어

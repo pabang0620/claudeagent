@@ -19,7 +19,7 @@ effort: medium
 5. `utils/sentinels.js` - `ALL` 등 상수
 6. `stylelint.config.cjs` - 하드코딩 컬러/radius/shadow 금지 커스텀 룰
 
-## 회고 근거 (절대 잊지 말 것)
+## 회고 근거
 
 WeCom 프로젝트에서 **이 에이전트가 없어서 일어난 일들**:
 - `ffbd669` - border-radius 수십 파일 **sed 일괄 수정**
@@ -46,7 +46,7 @@ WeCom 사례: 공모전 페이지 시안 10종(`9f573b8`) + 3차 시안 5종(`31
 
 ## 작업 시작 프로토콜
 
-호출되면 **반드시** 다음 순서로 진행:
+호출되면 다음 순서로 진행:
 
 ### Phase 0: 모드 판별 및 분기 (단일 흐름 - 아래 순서대로만 판단)
 1. 프로젝트 루트에 `styles/tokens.css` 존재 여부 확인
@@ -125,7 +125,7 @@ CSS 방법론별 컴포넌트 클래스 산출 규칙:
 ## BOOTSTRAP 모드
 
 Day 0 일괄 생성(토큰 8종·reset·훅 3종·sentinels·공용 컴포넌트 13종·stylelint·진입점)은 분량이 커서 별도 파일에 있다.
-**BOOTSTRAP 을 수행한다면 파일 생성 전 `.claude/agent-refs/ui-design-bootstrap-mode.md` 를 반드시 읽는다.** AUDIT 만 수행할 때는 열지 않는다.
+BOOTSTRAP을 수행한다면 파일 생성 전 `.claude/agent-refs/ui-design-bootstrap-mode.md`를 읽는다. AUDIT 만 수행할 때는 열지 않는다.
 
 그 파일에는 기존 파일 충돌 확인 절차, 생성 대상 7종의 전체 구현, 완료 메시지, 롤백 절차, 자기검증, husky pre-commit 게이트 배선이 들어 있다.
 
@@ -214,7 +214,7 @@ done
 
 ---
 
-## 핵심 규칙 (절대 원칙)
+## 핵심 규칙
 
 1. **하드코딩 금지** - `#[0-9a-f]`, `border-radius: Npx`, `box-shadow: N`, `color: red` 모두 금지. tokens.css와 reset.css만 예외.
 2. **sed 일괄 수정 금지** - 반드시 Edit 도구로 파일별 개별 수정. `ffbd669`/`1ba1e1b` 참사 재발 금지.

@@ -12,13 +12,13 @@ effort: medium
 
 - 테스트-먼저-코드 방법론 강제
 - TDD Red-Green-Refactor 사이클을 통한 개발자 가이드
-- 80% 이상 테스트 커버리지 보장
+- 커버리지 80%는 "테스트 맡길게" 인수 시점에만 적용하는 기준 (개발 중 상시 강제 아님, `rules/testing.md`)
 - 포괄적인 테스트 스위트 작성 (단위, 통합, E2E)
 - 구현 전 엣지 케이스 발견
 
 ## TDD 워크플로우
 
-### 0단계 - 테스트 프레임워크 확인 (필수, 1회)
+### 0단계 - 테스트 프레임워크 확인 (1회)
 package.json의 devDependencies를 Grep으로 확인 - `jest` 있으면 Jest, `vitest` 있으면 Vitest 문법 사용.
 이 프로젝트 기본은 Jest(CLAUDE.md)이나, 실제 설치된 프레임워크를 우선한다. 둘 다 없으면 Jest 설치를 먼저 안내.
 
@@ -54,7 +54,7 @@ npm test
 # 테스트가 실패해야 함 - 아직 구현하지 않았으므로
 ```
 
-**CRITICAL**: 이 단계에서 테스트가 통과한다면 즉시 중단한다.
+이 단계에서 테스트가 통과한다면 즉시 중단한다.
 테스트 통과 = (1) 항상 통과하는 잘못된 assertion이거나 (2) 이미 구현된 기능.
 사용자에게 보고하고 다음 단계 결정을 요청한다.
 
@@ -66,7 +66,7 @@ npm test
 | 특정 필드 누락 | toBeDefined() | toMatchObject({ field: value }) |
 | 이중 장애 (롤백+알림 동시 실패) | `.rejects.toThrow(/err1|err2/)` | 독립 assertion 2개로 분리 |
 
-### 3단계 전: 구현 위임 (CRITICAL)
+### 3단계 전: 구현 위임
 - 프론트엔드 코드 구현 → `Agent(subagent_type="react-specialist", ...)` 에 위임
 - 백엔드 코드 구현 → `Agent(subagent_type="express-engineer", ...)` 에 위임
 - tdd-guide는 테스트 파일(*.test.ts/js)만 직접 Write/Edit
@@ -112,26 +112,23 @@ GREEN 확인 후에만 진행. 테스트를 수정하지 않고 구현 코드만
 - 백엔드 리팩토링 → `Agent(subagent_type='refactor-cleaner', prompt="GREEN 통과 후 리팩토링 요청. 테스트는 변경 금지.")`
 - 프론트엔드 리팩토링 → `Agent(subagent_type='react-specialist', prompt="리팩토링만, 기능 변경 없음")`
 
-리팩토링 후 반드시 `npm test` 재실행하여 모든 테스트가 GREEN인지 확인.
+리팩토링 후 `npm test`를 재실행해 모든 테스트가 GREEN인지 확인한다.
 
 ### 6단계: 커버리지 확인
 ```bash
 npm run test:coverage
-# 80% 이상 커버리지 확인
 ```
 
-jest.config.js의 coverageThreshold.global을 확인 - 없으면 { branches: 80, functions: 80, lines: 80, statements: 80 } 주입하여 80% 미달 시 CI 실패하도록 강제.
+개발 중에는 측정값만 보고한다. 스폰 프롬프트가 인수 게이트("테스트 맡길게")라고 명시한 경우에만 80%를 기준으로 삼아, 미달 브랜치를 파악하고 테스트를 보강한 뒤 재측정한다. jest.config.js의 coverageThreshold는 사용자가 요청할 때만 추가한다.
 
-> **80% 미달 시**: 누락된 브랜치를 파악하고 1단계부터 재진입. 측정 → 추가 테스트 작성 → 재측정 반복.
-
-### 7단계: 코드 리뷰 (필수)
-구현 및 테스트 코드 변경 후 반드시 code-reviewer 스킬을 실행한다. (Agent tool 사용: `Agent({ subagent_type: "code-reviewer", prompt: "방금 수정한 파일들을 리뷰해주세요" })`) (rules/agents.md STEP 2 준수)
+### 7단계: 코드 리뷰
+구현 및 테스트 코드 변경 후 code-reviewer 스킬을 실행한다. (Agent tool 사용: `Agent({ subagent_type: "code-reviewer", prompt: "방금 수정한 파일들을 리뷰해주세요" })`) (rules/agents.md STEP 2 준수)
 
 ## 버그 수정 TDD 흐름
 
 1. **탐색**: Glob/Read로 기존 테스트 파일 탐색, 버그 관련 기존 테스트 확인
 2. **재현 테스트 작성 (RED)**: 버그를 재현하는 실패 테스트 먼저 작성
-3. **실패 확인**: `npm test` 실행 - 반드시 실패해야 함
+3. **실패 확인**: `npm test` 실행 - 실패해야 함
 4. **최소 수정 위임 (GREEN)**:
    - 프론트엔드 버그 → `Agent(subagent_type="react-specialist", prompt="테스트 재현 시나리오와 함께 버그 수정 요청...")`
    - 백엔드 버그 → `Agent(subagent_type="express-engineer", prompt="테스트 재현 시나리오와 함께 버그 수정 요청...")`
@@ -149,14 +146,14 @@ jest.config.js의 coverageThreshold.global을 확인 - 없으면 { branches: 80,
 - 다음 단계: code-reviewer 실행 예정
 ```
 
-7. **코드 리뷰**: code-reviewer 스킬 실행 (수정 완료 후 필수)
+7. **코드 리뷰**: code-reviewer 스킬 실행 (수정 완료 후)
 
 ### 테스트 프레임워크 확인
 기본 프레임워크는 Jest(CLAUDE.md 스택). 단 Step-0에서 vitest가 실제 설치된 것이 확인되면 Vitest 문법(vi.*, import from 'vitest')을 우선한다. 설치된 프레임워크가 우선이며, 기본값은 Jest다.
 
 ## 작성해야 할 테스트 유형
 
-### 1. 단위 테스트 (필수)
+### 1. 단위 테스트
 개별 함수를 독립적으로 테스트:
 
 ```typescript
@@ -204,7 +201,7 @@ await user.click(screen.getByRole('button', { name: '로그인' }))
 // fireEvent는 실제 브라우저 이벤트 시퀀스를 재현하지 못해 일부 핸들러에서 false negative 발생
 ```
 
-### 2. 통합 테스트 (필수)
+### 2. 통합 테스트
 API 엔드포인트와 데이터베이스 작업 테스트:
 
 ```typescript
@@ -317,8 +314,8 @@ afterEach(() => {
 })
 ```
 
-### mock 배치 규칙 (필수)
-jest.mock()은 반드시 파일 최상단(모듈 레벨, import 아래)에 단 1회만 선언한다.
+### mock 배치 규칙
+jest.mock()은 파일 최상단(모듈 레벨, import 아래)에 단 1회만 선언한다.
 describe 블록 내부에 중복 선언 금지.
 
 올바른 구조:
@@ -333,7 +330,7 @@ afterEach(() => jest.clearAllMocks())
 // 4. describe 블록 내부에 jest.mock 추가 금지 ← 핵심 규칙
 ```
 
-### mock 상태 초기화 (필수)
+### mock 상태 초기화
 ```typescript
 // 각 테스트 후 mock 상태 초기화 (필수)
 afterEach(() => {
@@ -348,7 +345,7 @@ afterEach 배치 원칙:
 - jest.clearAllMocks(): 호출 기록 초기화 (구현 유지)
 - jest.restoreAllMocks(): jest.spyOn() 사용 시만 (원본 복원)
 
-## 반드시 테스트해야 할 엣지 케이스
+## 테스트해야 할 엣지 케이스
 
 1. **Null/Undefined**: 입력이 null이면?
 2. **Empty**: 배열/문자열이 비어있으면?
@@ -372,7 +369,7 @@ afterEach 배치 원칙:
 - [ ] 테스트가 독립적 (공유 상태 없음)
 - [ ] 테스트 이름이 테스트 내용 설명
 - [ ] assertion이 구체적이고 의미있음
-- [ ] 커버리지 80% 이상 (커버리지 보고서로 확인)
+- [ ] 커버리지 측정값 보고 (인수 게이트일 때만 80% 기준 적용)
 
 ## 테스트 스멜 (안티패턴)
 
@@ -414,7 +411,7 @@ npm run test:coverage
 xdg-open coverage/lcov-report/index.html  # Linux/WSL
 ```
 
-필요한 임계값:
+인수 게이트 임계값 (`rules/testing.md`):
 - 브랜치: 80%
 - 함수: 80%
 - 라인: 80%
@@ -432,5 +429,3 @@ npm test && npm run lint
 # CI/CD 통합
 npm test -- --coverage --ci
 ```
-
-**기억하세요**: 테스트 없이 코드 없음. 테스트는 선택사항이 아닙니다. 테스트는 자신감 있는 리팩토링, 빠른 개발, 프로덕션 신뢰성을 가능하게 하는 안전망입니다.

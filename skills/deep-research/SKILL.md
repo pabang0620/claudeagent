@@ -46,7 +46,7 @@ allowed-tools:
 
 ---
 
-## STEP 0 - 착수 판정 (필수, 첫 번째로 실행)
+## STEP 0 - 착수 판정 (첫 번째로 실행)
 
 ### 0-1. 주제가 있는가
 
@@ -160,7 +160,7 @@ L1 WebFetch  →  L2 r.jina.ai  →  L3 Playwright snapshot
 
 ---
 
-## 안티패턴 (반드시 회피)
+## 안티패턴 (회피 대상)
 
 - ❌ 주제 없이 추측해서 조사 시작 → `INSUFFICIENT_TOPIC` 반환
 - ❌ 검색 스니펫 수치를 원문 확인 없이 인용

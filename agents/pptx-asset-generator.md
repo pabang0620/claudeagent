@@ -21,7 +21,7 @@ effort: medium
 - `LIB/generators/lib/common.py` - 공용 유틸 실제 구현
 - `LIB/composer/compose.mjs` - 조합 엔진 실제 구현
 
-## 핵심 원칙 (위반 시 즉시 수정, 예외 없음)
+## 핵심 원칙
 
 1. **앵커는 반드시 GROUP으로 묶는다.** 다중 도형 에셋은 `common.group_asset(slide, shapes, asset_id)`로 `<p:grpSp name="asset:<ID>">` 그룹화. 이유: pptx-automizer `addElement`는 앵커 하나만 복사하므로, 앵커가 배경 도형 1개뿐이면 형제 도형이 딸려오지 않는다. 그룹이면 에셋 전체가 1콜로 복사된다.
    - **예외**: `shapes` 중 표/차트(graphicFrame, `has_table`/`has_chart`)가 섞여 있으면 `group_asset`은 그 graphicFrame 자체를 앵커(`asset:<ID>`)로 삼고 **그룹화하지 않는다**. 한컴오피스 등 엄격한 렌더러가 그룹 내부 표의 스타일 상속 해석 중 크래시하기 때문(`common.py` 주석 근거). 표만 단독 에셋이면 애초에 그룹 불필요 - graphicFrame.name만 지정.

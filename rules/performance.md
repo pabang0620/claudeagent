@@ -1,18 +1,13 @@
 # Performance Optimization
 
-## Model Selection Strategy (SONNET 기본 + 승인부 에스컬레이션)
+## Model Selection Strategy (2026-09-29 개정)
 
-> **기본값은 Sonnet이다.** 모든 에이전트 정의파일의 `model:` 필드는 `sonnet` 고정.
-> - Claude가 자발적으로 opus/fable로 상향하지 않는다 (자발적 모델 상향 금지)
-> - 비용 절감은 모델 다운그레이드가 아니라 **에이전트 위임(컨텍스트 격리) + 병렬 실행 + 프롬프트 슬림화**로 달성한다
-> - 다만 막혔을 때는 아래 에스컬레이션 절차에 따라 사용자 승인을 받아 해당 작업 1건에 한해 상위 모델 서브에이전트를 스폰할 수 있다
+> - 에이전트 기본: `model: sonnet` + `effort: low|medium`.
+> - **sonnet high는 쓰지 않는다.** high급이 필요하면 `model: opus` + `effort: low`로 한다. 더 강한 모델을 낮은 effort로 쓰는 편이 약한 모델을 세게 돌리는 것보다 품질·비용 모두 낫다(같은 블로그 글, 사용자 지시 2026-09-29).
+> - high급은 **코드 검증에만** 쓴다: security-reviewer·database-reviewer·function-validator. 그 외 에이전트는 medium 이하.
+> - 그 밖의 모델 상향은 막혔을 때 아래 절차로 승인받아 그 작업 1건에만 한다.
 
-**Sonnet (`claude-sonnet-5`)** - 기본 모델:
-- Main development work
-- Orchestrating multi-agent workflows
-- All agents (workers, reviewers, evaluators)
-
-> ⚠️ deprecated: Opus 4 베이스(claude-opus-4)는 2026-06-15 deprecated.
+> 참고: Opus 4 베이스(claude-opus-4)는 2026-06-15 deprecated.
 
 ### 막혔을 때: 승인부 모델 에스컬레이션
 
@@ -70,13 +65,17 @@ Lower context sensitivity tasks:
 - Documentation updates
 - Simple bug fixes
 
-## Ultrathink + Plan Mode
+## 복잡한 작업
 
-For complex tasks requiring deep reasoning:
-1. Use `ultrathink` for enhanced thinking
-2. Enable **Plan Mode** for structured approach
-3. "Rev the engine" with multiple critique rounds
-4. Use split role sub-agents for diverse analysis
+설계가 필요한 복잡한 작업은 Plan Mode로 계획을 먼저 확정한다. 사고량은 에이전트 `effort`로 조절하고, `ultrathink` 키워드·수동 사고 예산·"여러 차례 비평 라운드" 같은 고정 절차는 쓰지 않는다. 최신 모델은 자체 사고가 있어 이런 틀이 토큰만 늘린다 (근거: claude.com 블로그 "Reducing cost and improving performance with Claude Platform", 2026-09-08).
+
+## 토큰 절약 운영 원칙 (같은 글 기준)
+
+- **프롬프트 캐시 유지**: 세션 중간에 `/model`·effort를 바꾸면 캐시가 깨진다. 바꿀 일이 있으면 새 세션이나 compaction 직후에 바꾼다.
+- **매 턴 로드되는 파일에 날짜·ID처럼 자주 바뀌는 값을 넣지 않는다** (CLAUDE.md, `rules/`). 가끔만 필요한 절차는 `rules/` 밖(`agent-refs/`, `docs/`)에 두고 필요할 때 읽는다.
+- **서브에이전트 보고는 짧게 묶는다**: 스폰 프롬프트에 보고 줄 수 상한을 적는다 (`rules/agents.md` STEP 1-2). 긴 보고는 비싼 메인 모델 컨텍스트를 채운다.
+- **effort는 양쪽으로 틀릴 수 있다**: 너무 높으면 증거가 없는데도 계속 고민하고, 너무 낮으면 첫 검색 결과로 답한다. 조사·탐색형 에이전트는 low로 내리지 않는다.
+- **프롬프트 점검**: 에이전트·스킬·룰을 크게 고친 뒤에는 `/claude-api prompt-audit`으로 검증 의식·강조 남발·고정 사고 틀·모순 규칙이 다시 생겼는지 확인한다.
 
 ## Build Troubleshooting
 

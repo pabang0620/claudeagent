@@ -2,9 +2,9 @@
 
 > **이 파일이 에이전트 라우팅·목록의 SSOT다.** 에이전트 추가/변경 시 여기(STEP1 표 + Available Agents 표)부터 갱신하고, 다른 문서는 이 파일을 참조한다.
 
-## ORCHESTRATOR MANDATORY CHECKLIST (매 요청마다 반드시 실행)
+## 위임 라우팅
 
-> 오케스트레이터는 절대 코드를 직접 작성하지 않는다. 아래 체크리스트를 순서대로 확인하고 해당 에이전트를 호출한다.
+> 작은·중간 작업은 메인이 직접 한다(`CLAUDE.md` "작업 방식"). 이 파일은 **위임하기로 했을 때** 담당을 찾는 표다.
 
 ### STEP 0: general-purpose 사용 규율 (2026-08-20 실측 기반 신설)
 
@@ -13,7 +13,7 @@
 > 최다 사례는 교육자료·이북 편집 50건 - `ebook-editor`가 32회나 쓰인 상위 에이전트인데도
 > 이 표에 등재돼 있지 않아서 존재를 인지하지 못한 것이 원인이었다.
 
-1. general-purpose를 스폰하기 전에 **반드시 아래 STEP 1 표를 먼저 대조한다.** 담당이 있으면 그쪽으로 보낸다.
+1. general-purpose를 스폰하기 전에 아래 STEP 1 표를 먼저 대조한다. 담당이 있으면 그쪽으로 보낸다.
 2. 표에 담당이 없으면 general-purpose로 보내되, **같은 유형의 요청이 2회째면 그 자리에서 STEP 1 표에 행을 추가한다.**
    (전문 에이전트를 새로 만들라는 뜻이 아니다. 담당이 general-purpose임을 표에 명시하라는 뜻이다.)
 3. 담당 없이 반복되는 것으로 실측된 영역 - 아래는 general-purpose가 맡되 표기된 주의사항을 지킨다.
@@ -27,7 +27,7 @@
 | 에이전트·스킬·룰 정의 자체 수정 (메타작업) | ~25 | 오케스트레이터 직접 | 정의파일 1개당 수정 범위를 좁게. 파일 전체 재작성 금지 |
 | 숏폼 제작 부수작업 (캐릭터 SVG·인트로/TTS·파일 재배치) | ~45 | shortform-builder | 렌더 파이프라인 밖 잡무여도 자산 REGISTRY 선조회 원칙은 동일 적용 |
 
-### STEP 1: 요청 분류 (하나라도 해당되면 즉시 해당 에이전트 실행)
+### STEP 1: 담당 표 (위임할 때 참조)
 
 | 요청 유형 | 판단 기준 | 필수 에이전트 |
 |----------|----------|-------------|
@@ -68,11 +68,11 @@
 | **디자인 토큰·CSS 일관성** | "공용 컴포넌트 만들어줘", 하드코딩 컬러·radius 정리 | ui-design-system |
 | **자소서·지원서** | "자소서 써줘" | jasoseo-writer |
 | **PastLetter 이미지 프롬프트** | 모두의창업2차 지원서 `[사진: 설명]` 자리·홍보용 이미지 생성 프롬프트 작성 (PastLetter 전용, 실제 이미지 생성은 안 함) | pastletter-image-prompt-writer |
-| **판정 대리 (사용자에게 물어보기 직전)** | Claude가 사용자에게 선택·승인·확인을 요청하려는 모든 순간. "이렇게 할까요", "A와 B 중 어느 쪽", "이것도 할까요", 완료 보고 직전, 스코프 확장 검토 시 | lee-wonho |
+| **판정 대리** | 사용자가 "판정 에이전트 써", "lee-wonho한테 물어봐"처럼 명시적으로 요청했을 때만. 질문 전 자동 경유 금지(2026-09-29) | lee-wonho |
 | **웰콘 사업 자문 판단** | 콘텐츠 해외진출 기업정보 구축 기획(1단계) 웰콘 프로젝트 관련 설계 판단 | welcon-advisor |
 
 | **신규 2D 액션 게임 제작 (전체 파이프라인)** | "2D 게임 만들어줘", "이런 게임 Unity로", `/game2d <컨셉>` -> lantern-rite 템플릿 복제 -> 설계 3문서 -> 골격 -> 이미지 시트 -> 절단 -> 손맛 -> 3중 검증 -> 플레이테스트. 에이전트 4종 배정 순서는 스킬이 정한다 | `game2d-pipeline` 스킬 |
-| **굼구미 시네마틱 과학 영상** | "굼구미 시네마틱", "시네마틱 과학 영상", "코드로 과학 애니메이션", `/gumgumi-cinematic <주제>` -> TTS 내레이션 과학 쇼츠(채널 인트로·제목카드·아웃트로 포함, 기본 9:16, 60초 이하). 영상 생성 AI 없이 코드로 매 프레임을 그림(엔진 `claude-animation/engine/`, 기준 샘플 `claude-animation/gumgumi-intro/`). planner(설명 사슬 먼저·스토리보드·자막) -> explain-reviewer(시청자 시점 설명 검토) -> 사용자 승인 -> animator(장면 코드·도식 헬퍼·정지컷 점검·렌더) -> `shorts/ko`, `shorts/en` 배포 | `gumgumi-cinematic` 스킬 (gumgumi-cinematic-planner -> gumgumi-explain-reviewer -> gumgumi-animator) |
+| **굼구미 시네마틱 과학 영상** | "굼구미 시네마틱", "시네마틱 과학 영상", "코드로 과학 애니메이션", `/gumgumi-cinematic <주제>` -> TTS 내레이션 과학 쇼츠(채널 인트로·제목카드·아웃트로 포함, 기본 9:16, 60초 이하). 영상 생성 AI 없이 코드로 매 프레임을 그림(엔진 `claude-animation/engine/`, 기준 샘플 `claude-animation/gumgumi-intro/`). planner(설명 사슬 먼저·스토리보드·자막) -> explain-reviewer(시청자 시점 설명 검토) -> 사용자 승인 -> animator(장면 코드·도식 헬퍼·정지컷 점검·렌더) -> `shorts/ko` 배포(2026-09-28부로 en 미제작) | `gumgumi-cinematic` 스킬 (gumgumi-cinematic-planner -> gumgumi-explain-reviewer -> gumgumi-animator) |
 | **Readdy Interactive Cinematic 영상 생성** | "영상 생성해줘", "트레일러 만들어줘", "로그인 화면 움직이는 영상", "Readdy로 영상", "인터랙티브 시네마틱" -> 기획(필요 영상 목록·체이닝 여부) -> 첫/마지막 프레임 이미지 준비(재사용 우선) -> 영어 프롬프트 작성(얼굴/눈 잠금 등 하드룰) -> Playwright로 탭별 생성요청 제출(기본은 제출만, 대기 안 함) -> 완료 후 다운로드·검증. 실제 화면 배선(엔진 코드)은 대상 프로젝트 구현 에이전트가 이어받는다 | `readdy-cinematic` 스킬 |
 | **Lantern Rite / Unity 2D 벨트액션 구현** | `/mnt/c/Users/admin/Desktop/games/lantern-rite/` 의 C# 코드·SceneBuilder·ArtImporter·BuildGame 헤드리스 파이프라인 작성/수정 ("씬 만들어줘", "빌더 고쳐줘", "프리팹 배선"). 신규 2D 액션 게임도 이 4종을 그대로 쓴다 (`lantern-rite/docs/PLAYBOOK.md`가 절차 SSOT) | unity2d-scene-architect |
 | **Lantern Rite 손맛 튜닝** | 콤보 버퍼·런처/저글·히트스톱·흔들림·접점·밀어내기·깊이 판정 등 전투 감각 코드 조정 ("타격감", "손맛", "판정 이상해") - 결함 판정은 오케스트레이터가 코드를 직접 읽고 내린 뒤 위임 | game-feel-tuner |
@@ -95,7 +95,7 @@
 
 1. **커밋·푸시는 오케스트레이터가 Bash로 직접 한다.** 에이전트를 스폰하지 않는다.
    근거: 커밋 에이전트 4회에 45~63k 토큰씩, 합계 20만 토큰 초과. 실제 작업은 git 3줄이었다.
-   이것은 "오케스트레이터는 직접 실행하지 않는다" 규칙의 명시적 예외다. 커밋 전 `git status --porcelain`은 눈으로 확인한다.
+   커밋 전 `git status --porcelain`은 눈으로 확인한다.
 2. **스폰 전에 대상 파일 경로·함수명을 프롬프트에 박아준다.** 레포에 코드맵이 있으면 거기서 찾아 적는다.
    근거: 경로를 안 주고 보낸 작업이 도구 호출 190회, 42만 토큰, 37분. 대부분 "어디에 뭐가 있나" 탐색이었다.
 3. **단순 수치·문자열·픽셀 조정은 위임하지 않는다.** 직접 고치고 필요한 검증만 태운다.
@@ -104,39 +104,20 @@
 5. **검증·빌드는 배치 끝에 1회.** 항목마다 돌리지 않는다.
 6. **보고 줄 수 상한을 프롬프트에 적는다.** 로그 원문·코드 블록 붙여넣기를 금지한다.
 
-### STEP 2: 코드 변경 후 필수 (예외 없음)
+### STEP 2: 코드 리뷰
 
-```
-에이전트가 코드를 작성/수정한 후 → 반드시 code-reviewer 스킬 실행
-```
-
-### STEP 3: 단순 작업 기준 (에이전트 생략 가능한 유일한 경우)
-
-아래 **모두** 해당할 때만 직접 처리 가능:
-- 단일 파일의 단순 텍스트 수정 (변수명, 주석, 설정값)
-- 코드 로직 변경 없음
-- 1-3줄 이하 변경
+여러 파일에 걸친 코드 변경 뒤에는 code-reviewer 스킬을 실행한다. 단건·소규모 수정에는 붙이지 않는다.
 
 ---
 
-## 에이전트 모델 제약 (PERMANENT, SONNET-ONLY)
+## 에이전트 모델·effort 정책 (2026-09-29 개정)
 
-> **`model: sonnet` 단일 정책** - 사용자 지시(2026-07-02): "소넷 외에는 쓰지 않는다."
-> 모든 에이전트 정의파일의 `model:` 필드는 `sonnet` 고정. opus/haiku/fable 절대 금지.
-> (이건 **정의파일 필드** 기준이다. 막혔을 때 `Agent` 도구의 `model` 파라미터로 그 작업 1건만 승인 후 상향하는 것은 별개로 허용 - `rules/performance.md`)
+> 기본은 `model: sonnet` + `effort: low|medium`. **sonnet high는 쓰지 않는다** - high가 필요한 작업은 `model: opus` + `effort: low`로 한다(사용자 지시 2026-09-29 "소넷 high로 할 바에 opus low로 하지").
+> high급 작업은 **코드 검증에 한한다**(현재 security-reviewer·database-reviewer·function-validator). 코드 검증 외에는 high를 쓰지 않는다. haiku·fable은 정의파일에 쓰지 않는다.
+> (막혔을 때 `Agent` 도구의 `model` 파라미터로 그 작업 1건만 승인 후 상향하는 것은 별개 - `rules/performance.md`)
 >
 > **정의파일 500줄 제한**: 정의파일에는 판단 규칙만 둔다. 코드 예제·구현 골격이 길어지면 `.claude/agent-refs/<주제>.md` 로 분리하고, 정의파일 상단에 "참조 파일 (필요할 때만 읽는다)" 표로 **언제 읽는지** 조건을 명시한다. `agents/` 하위에 두면 에이전트로 스캔될 수 있으므로 반드시 `agent-refs/` 에 둔다.
 >
-> **신규 에이전트 생성 시 필수 체크리스트** (공식 문서 기준):
-> - [ ] frontmatter: `name`, `description`, `tools`, `model` 4개 필드 모두 포함
-> - [ ] `name`: 소문자+하이픈만 사용, 전체 scope에서 유일 (`/doctor`로 중복 감지 가능)
-> - [ ] `model: sonnet` 확인 (다른 값 입력 시 즉시 거부)
-> - [ ] `description`: "무엇을 하는가" + **"언제 사용하는가"(트리거 키워드)** 명시.
->       자동 위임을 원하면 "~시 사전에 적극 활용(use proactively when ~)" 패턴 포함
-> - [ ] `tools`: 최소 권한 allowlist. 읽기 전용 에이전트에 Write/Edit 금지,
->       서브에이전트 스폰이 필요할 때만 `Agent` 포함
-> - [ ] 생성 후 agent-evaluator-v2 평가 → 90점 이상 달성 후 배포
-
 ---
 
 ## Available Agents
@@ -146,7 +127,7 @@
 - 실제 목록 확인: 자동 주입된 에이전트 목록 또는 `ls .claude/agents/*.md`
 - **역할·트리거 정의를 바꾸려면** 해당 `agents/<name>.md`의 `description`을 고친다(그게 SSOT다)
 - **요청 → 에이전트 라우팅**은 위 STEP 1 표가 담당한다(트리거 한국어 표현 기준, description에 없는 정보)
-- 퇴역한 에이전트는 아래 "아카이빙 이력" 참조
+- 퇴역한 에이전트·신규 생성 체크리스트·필드명 전면 변경 절차는 `docs/agents-reference.md`
 - `code-reviewer`는 에이전트가 아니라 스킬이다
 
 ---
@@ -182,56 +163,13 @@ playwright-verify-loop 에이전트 사용
 - npx playwright test 스위트 실행이 아님 (전용 e2e-runner는 미사용으로 2026-08-20 아카이빙)
 ```
 
-### 필드명 전면 변경 (DB+백엔드+프론트)
-```
-1. 영향범위 스캔 - schema-drift-auditor 또는 grep으로 필드명 등장 지점 전수 수집
-   (DB 스키마/마이그레이션, Repository SQL, Service, Controller, Zod 스키마,
-    프론트 API 함수·폼·store·라벨·CSS 클래스명) + 동명이인 필드(타 테이블 동일명) 충돌 확인
-   → [승인 게이트] 스캔 결과 사용자 확인
-2. db-schema-architect MIGRATE 모드로 UP/DOWN(롤백) SQL 파일만 생성 - 실행하지 않음
-   → [승인 게이트] 마이그레이션 SQL 검토
-3. 사용자가 직접 마이그레이션 실행 (백업 확인 후) - 에이전트는 ALTER TABLE 실행 금지
-   → [승인 게이트] 실행 완료 확인
-4. 코드 반영 - 백엔드(Repository→Service→Controller→Zod) → 프론트(API 함수→폼→store→표시 라벨)
-5. schema-drift-auditor로 3축 정합성 재확인 + 앱 기동 확인 → code-reviewer
-```
-> 전용 에이전트를 만들지 않은 이유: ALTER TABLE 실행 권한을 가진 자율 에이전트는
-> "파괴적 작업 절대 금지" 승인 규칙과 구조적으로 충돌한다.
-
 ---
 
 ## Parallel Task Execution
 
-ALWAYS use parallel Task execution for independent operations:
+독립 작업은 병렬로 실행한다:
 
 ```
 GOOD: 여러 파일 리뷰 → 파일당 에이전트 1개 병렬 실행
 BAD:  파일 1 리뷰 완료 → 파일 2 리뷰 시작 (순차)
 ```
-
-## Multi-Perspective Analysis
-
-For complex problems, use split role sub-agents:
-- Factual reviewer
-- Senior engineer
-- Security expert
-- Consistency reviewer
-- Redundancy checker
-
----
-
-## 아카이빙 이력
-
-`.claude/agents-archive/`로 퇴역한 에이전트는 라우팅 대상이 아니다. 필요해지면 파일을 `agents/`로 되돌리고 위 표 2곳(STEP 1 + Available Agents)에 다시 등재한다.
-
-| 에이전트 | 퇴역일 | 사유 |
-|---|---|---|
-| lh-asset-specialist, lh-design-reviewer, lh-integration-custodian, lh-module-implementer, lh-module-verifier (링크 제거), mobile-idle-rpg-3d-developer (agents-archive/ 이동) | 2026-09-15 | 사용자 지시 "게임 개발 에이전트만 정리". Lantern Rite 제작(2026-09-14/15)에서 확정된 신규 4종(unity2d-scene-architect·game-feel-tuner·sprite-sheet-slicer·unity-build-verifier) + game-asset-artist + `game2d-pipeline` 스킬이 게임 개발 표준 세트가 됨. lh-* 원본은 lighthaven-3d 레포에, lh2d-* 는 레포 교체로 이미 소실. mobile-idle-rpg-3d-v2·mobile-rpg(Sapphire) 작업이 다시 필요하면 game2d-pipeline 세트로 진행하거나 아카이브에서 복원 |
-| godot-game-developer, godot-netcode-engineer, game-data-designer, game-level-designer, multiplayer-safety-reviewer | 2026-09-09 | dungeon-legends(Godot 4.7, Lighthaven Depths 2D) 프로젝트가 lighthaven-3d(Unity 3D 리메이크)로 대체됨 - 기존 기술스택은 참고하지 않는다는 신규 레포 CLAUDE.md 원칙에 따라 Godot 전용 에이전트 5종 전부 퇴역. project/.claude/agents/의 심볼릭 링크만 제거(dungeon-legends 레포 원본 파일은 그대로 - 그 레포 자체 세션에서는 계속 유효). 대체 에이전트는 lh-design-reviewer/lh-module-implementer/lh-module-verifier/lh-integration-custodian/lh-asset-specialist 5종. 게임 이미지 에셋 생성은 계속 game-asset-artist 담당(변경 없음) |
-| asset-prompt-writer, game-asset-generator | 2026-09-01 | project/.claude/agents/의 심볼릭 링크만 제거(dungeon-legends 레포 원본 파일은 그대로 - 그 프로젝트 자체 세션에서는 계속 유효). 두 역할(프롬프트 작성+실제 생성)을 프로젝트 한정 없는 game-asset-artist로 통합해 mobile-idle-rpg 등 다른 게임 프로젝트에서도 쓸 수 있게 함 |
-| e2e-runner | 2026-08-20 | 전체 세션 로그 실측 호출 0회. playwright-verify-loop가 실질 대체 |
-| project-bootstrapper | 2026-08-20 | 호출 0회. Day 0 셋업 시나리오 미발생 |
-| review-plan-builder | 2026-08-20 | 호출 0회 |
-| flutter-game-builder | 2026-08-20 | 호출 0회. 대상 게임 프로젝트 전부 폐기 |
-| manus-liaison | 2026-08-20 | raid-forge 폐기로 위임 대상 소멸 |
-| audio-transcriber | 2026-07-24 | (이전 퇴역) |

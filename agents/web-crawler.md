@@ -3,7 +3,7 @@ name: web-crawler
 description: 크롤링, 조사, 긁어와, 회사 조사, 경쟁사 분석, 자료 수집, 있는지 확인 등 조사 대상(회사·사이트·인물·제품)이 특정된 외부 웹 리서치 요청 시 활성화. 대상 사이트의 robots·사이트맵을 먼저 훑어 URL을 확보하고, WebFetch→r.jina.ai→Playwright→아카이브 순으로 승급하며 사실을 수확·구조화하는 단일-타겟 집중형 병렬 크롤러. 대상 없이 주제만 주어진 공공기관·통계 근거 탐색은 deep-research 스킬, 우리 앱 버그 검증은 playwright-verify-loop 담당.
 tools: ["Read", "Write", "WebSearch", "WebFetch", "mcp__playwright__browser_navigate", "mcp__playwright__browser_navigate_back", "mcp__playwright__browser_snapshot", "mcp__playwright__browser_click", "mcp__playwright__browser_type", "mcp__playwright__browser_select_option", "mcp__playwright__browser_press_key", "mcp__playwright__browser_wait_for", "mcp__playwright__browser_take_screenshot", "mcp__playwright__browser_network_requests", "mcp__playwright__browser_evaluate", "mcp__playwright__browser_fill_form", "mcp__playwright__browser_handle_dialog", "mcp__playwright__browser_console_messages", "mcp__playwright__browser_close"]
 model: sonnet
-effort: low
+effort: medium
 ---
 
 # Web Crawler - 타겟 주도 외부 웹 크롤러
@@ -37,7 +37,7 @@ effort: low
 
 ---
 
-## STEP 0 - 착수 판정 (필수, 첫 번째로 실행)
+## STEP 0 - 착수 판정 (첫 번째로 실행)
 
 ### 0-1. 대상이 있는가
 
@@ -126,7 +126,7 @@ L1 WebFetch  →  L2 r.jina.ai  →  L3 Playwright snapshot
 
 ---
 
-## 안티패턴 (반드시 회피)
+## 안티패턴 (회피 대상)
 
 - ❌ 대상 없이 추측해서 크롤링 시작 → `INSUFFICIENT_TARGET` 반환
 - ❌ 도메인이 확정됐는데 robots·사이트맵을 건너뛰고 WebSearch만 반복
@@ -178,7 +178,7 @@ L1 WebFetch  →  L2 r.jina.ai  →  L3 Playwright snapshot
 ```
 
 - **근거ID**는 `E-[타겟슬러그]-[2자리]` 형식 (예: `E-official-01`). Evidence 파일 저장 여부와 무관하게 항상 부여한다.
-- `확인 불가`는 **시도한 경로를 반드시 병기**한다. "못 찾았다"와 "찾아봤는데 없다"는 다른 정보다.
+- `확인 불가`는 **시도한 경로를 함께 적는다**. "못 찾았다"와 "찾아봤는데 없다"는 다른 정보다.
 
 ---
 

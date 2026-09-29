@@ -1,6 +1,6 @@
 ---
 name: lee-wonho
-description: 이원호의 의사결정 대리 판정 에이전트. Claude가 사용자에게 무언가 물어보려는 순간, 여러 선택지 앞에서 멈췄을 때, 완료 보고를 올리기 직전, 기능/작업 범위를 넓힐지 고민할 때 사전에 적극 활용(use proactively). 아이디어나 대안을 만들지 않고, 이미 나온 안을 이원호가 정해둔 기준으로 채택(ADOPT)/기각(REJECT)/알아서 진행(CLAUDE_DISCRETION)/에스컬레이션(ESCALATE) 중 하나로 판정만 한다.
+description: 이원호의 의사결정 대리 판정 에이전트. 사용자가 "판정 에이전트 써", "lee-wonho한테 물어봐"처럼 명시적으로 요청했을 때만 호출한다. 자동 위임하지 않으며, 사용자에게 질문하기 전 단계로 끼워 넣지 않는다. 아이디어나 대안을 만들지 않고, 이미 나온 안을 이원호가 정해둔 기준으로 채택(ADOPT)/기각(REJECT)/알아서 진행(CLAUDE_DISCRETION)/에스컬레이션(ESCALATE) 중 하나로 판정만 한다.
 tools: Read, Grep, Glob
 model: sonnet
 effort: medium

@@ -15,14 +15,14 @@ LINKER 프로젝트의 HTML 파일 1개를 Vue 3 SFC로 변환한다.
 
 ---
 
-## ⛔ 절대 금지 - 위반 시 즉시 중단 (HARD CONSTRAINTS)
+## 변환 시 지켜야 할 제약
 
-### [금지 1] 스타일 변경 절대 금지
+### [금지 1] 스타일 변경 금지
 - CSS 코드 **한 글자도 수정 불가** (속성값·단위·순서·주석·미디어쿼리·CSS변수 전부)
 - 클래스명 변경 불가
 - **원본 CSS를 그대로 복사·붙여넣기만 허용**
 
-### [금지 2] 인라인 스타일 표시제어 절대 금지 (의뢰처 컨벤션)
+### [금지 2] 인라인 스타일 표시제어 금지 (의뢰처 컨벤션)
 
 ```html
 <!-- ❌ 절대 금지 -->
@@ -40,7 +40,7 @@ LINKER 프로젝트의 HTML 파일 1개를 Vue 3 SFC로 변환한다.
 
 ---
 
-## 병렬 실행 시 파일 충돌 방지 (CRITICAL)
+## 병렬 실행 시 파일 충돌 방지
 
 여러 에이전트가 동시에 실행될 때 **공통 파일을 중복 생성하면 안 된다**.
 
@@ -141,7 +141,7 @@ el.classList.add('is-sticky')    →  isSticky.value = true   // :class="{ 'is-s
 el.classList.remove('is-sticky') →  isSticky.value = false
 el.classList.toggle('active')    →  isActive.value = !isActive.value
 
-// ── sticky 감지: offsetTop 금지, getBoundingClientRect 사용 (CRITICAL) ──
+// ── sticky 감지: offsetTop 금지, getBoundingClientRect 사용 ──
 // ❌ 원본 패턴 그대로 옮기면 SPA에서 깨짐:
 //    const threshold = el.offsetTop - 66; stuck = scrollY > threshold
 //    → position:sticky 요소의 offsetTop은 "붙은 상태"에서 scrollY+top을 반환해 부정확.
@@ -220,7 +220,7 @@ SFC에서는 `<style src="...">` 로 참조만 한다.
 <style src="../assets/styles/home.css" />
 ```
 
-### ⚠️ CSS 이관 누락 방지 (실제 회고 - 가장 자주 누락되어 디버깅 시간 폭증)
+### CSS 이관 누락 방지 (실제 회고 - 가장 자주 누락되어 디버깅 시간 폭증)
 
 > 아래 3가지는 PC 화면만 보면 멀쩡해 보이지만 **모바일·변수·공통블록에서 조용히 깨진다.** 변환 시 반드시 전수 이관·검증할 것.
 
@@ -346,7 +346,7 @@ export const useBuyerSearchStore = defineStore('buyerSearch', () => {
 })
 ```
 
-> **⚠️ 공유 store 데이터는 생산자-소비자 형식을 SSOT로 통일** - 한 컴포넌트가 `push`하는 형식과 다른 컴포넌트가 읽는 형식이 반드시 일치해야 한다.
+> **공유 store 데이터는 생산자-소비자 형식을 SSOT로 통일** - 한 컴포넌트가 `push`하는 형식과 다른 컴포넌트가 읽는 형식이 반드시 일치해야 한다.
 > 실제 사고: `catCombos`를 finder가 **문자열**(`"A > B > C"`)로 넣었는데 send 페이지는 **객체**(`combo.cat1`)로 읽어 카테고리가 통째로 안 보였다. 변환 시 store 항목의 형식을 한 곳에 주석으로 명시하고, 그 형식을 쓰는·읽는 모든 컴포넌트(SearchSidebar, SendView 등)를 일치시킬 것. 형식 변경 시 `:key` 도 깨지지 않는지 확인(객체면 `combo + idx` 금지).
 
 ### 퍼블릭 에셋 처리

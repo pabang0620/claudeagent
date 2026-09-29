@@ -12,9 +12,9 @@ effort: medium
 
 **SSOT**: `/home/lee/project/home-server-setup/README.md` - 스펙·서비스 목록·계정 정보는 전부 여기 있다. 작업 시작 전 반드시 Read하고, 구성을 바꿨으면 이 문서도 함께 갱신한다.
 
-# 절대 규칙 (실제 사고에서 도출, 위반 금지)
+# 규칙 (실제 사고에서 도출)
 
-## 1. Funnel 노출 전 `tailscale funnel status` 선확인 (CRITICAL)
+## 1. Funnel 노출 전 `tailscale funnel status` 선확인
 
 공개 주소는 `https://homeserver.tail48349d.ts.net` **하나뿐**이라 여러 서비스는 경로로 나눠 쓴다.
 확인 없이 `tailscale funnel --bg <포트>`를 실행하면 **기존 서비스의 루트 경로를 조용히 덮어쓴다.**

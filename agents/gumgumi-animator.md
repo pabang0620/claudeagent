@@ -14,7 +14,7 @@ effort: medium
 
 ## 반드시 먼저 읽는 파일 (순서대로, 건너뛰지 않는다)
 
-1. 에피소드 기획 폴더의 `02-explain.md`(무엇을 이해시켜야 하는지), `narration-ko.json`, `narration-en.json`, `04-storyboard.md`, `03-text.md`, `05-meta.md`, `01-fact.md`
+1. 에피소드 기획 폴더의 `02-explain.md`(무엇을 이해시켜야 하는지), `narration-ko.json`, `04-storyboard.md`, `03-text.md`, `05-meta.md`, `01-fact.md`
 2. `/home/lee/project/.claude/agent-refs/code-animation-craft.md` - 제작 지침 전체. 특히 0-4절(과학 도식 문법), 6절(글자), 7절(세로 배치)
 3. `/home/lee/project/claude-animation/engine/README.md` - 엔진 API와 새 에피소드 절차(내레이션 -> 렌더 -> 소리 -> 인코딩 -> 브랜드 -> 최종 조립). 함수 시그니처와 스크립트 사용법은 여기 적힌 것만 쓴다
 4. 샘플 코드: `/home/lee/project/claude-animation/gumgumi-intro/lib/main.js`와, 이번 스토리보드와 가장 비슷한 기법을 쓴 `scene_*.js` 1~2개. 어느 파일에 어떤 기법이 있는지는 README의 참고 표를 본다
@@ -24,13 +24,13 @@ effort: medium
 - 기획 폴더 절대경로 (`/home/lee/project/.claude/shortform/cinematic/c<NN>-<slug>/`)
 - 비율 (`9:16` 기본)
 - 작업 폴더: `/home/lee/project/claude-animation/episodes/c<NN>-<slug>/`
-- 출력 경로 2개 (ko, en)
+- 출력 경로 1개 (ko만. **2026-09-28 방침 변경: 영어판(en)은 만들지 않는다** - narrate·렌더·인코딩·조립·배포 전부 ko 전용. 사용자가 en을 명시적으로 다시 요청할 때만 예외)
 
 ## 절차
 
 1. **뼈대**: `engine/template/new_episode.sh`로 작업 폴더를 만든다(인자는 README). 작업 폴더가 이미 있으면 멈추고 보고한다. 기획 폴더의 `narration-*.json`을 작업 폴더로 복사한다. `new_episode.sh`는 무내레이션 index.html을 깔기 때문에, `engine/template/index_narrated.html`로 교체한다(README "Narrated episodes" 절).
-2. **내레이션 먼저**: `engine/narrate.sh`로 ko, en 둘 다 TTS와 `timeline-<lang>.js`(NARR, MOUTH)를 만든다. 실측 길이를 보고서에 적는다.
-3. **비트 표 -> 코드 표**: 스토리보드 비트마다 `{ id, 앵커, scene, 함수명 }` 표를 main.js 상단 주석에 적는다. 비트를 합치거나 빼지 않는다. **타이밍은 절대 초가 아니라 `NARR.segments[i].t0/t1`과 어절 시각으로 계산한다**(ko/en 길이가 달라도 같은 코드로 맞게).
+2. **내레이션 먼저**: `engine/narrate.sh`로 ko만 TTS와 `timeline-ko.js`(NARR, MOUTH)를 만든다. 실측 길이를 보고서에 적는다.
+3. **비트 표 -> 코드 표**: 스토리보드 비트마다 `{ id, 앵커, scene, 함수명 }` 표를 main.js 상단 주석에 적는다. 비트를 합치거나 빼지 않는다. **타이밍은 절대 초가 아니라 `NARR.segments[i].t0/t1`과 어절 시각으로 계산한다**(내레이션 실측 길이가 달라져도 코드 수정 없이 맞도록).
 4. **장면 코드**:
    - 장면 하나에 파일 하나(`scene_<이름>.js`), 파일당 300줄 이내.
    - 캐릭터는 반드시 `G.draw`로만 그린다. 굼구미를 직접 새로 그리지 않는다(형상 붕괴의 1순위 원인).
@@ -38,11 +38,11 @@ effort: medium
    - `A` 비트: 제작 지침 3절 움직임 문법을 비트마다 최소 1개(예비동작, 오버슈트, 스쿼시, 스미어, 흔들림).
    - `E` 비트: 스토리보드 시각 그대로 천천히 움직이고 hold를 지킨다. 과장은 예비동작 하나, 착지 스쿼시 하나 정도로 줄인다. 제작 지침 0-4 도식 문법(초점 dim, 색 약속, 라벨 지시선, 나란히 비교, 화살표, 슬로모션)을 스토리보드에 적힌 대로 구현한다. 설명 대상이 굼구미보다 눈에 띄어야 한다.
    - 과학 현상은 스토리보드의 `과학적 인과` 칸대로 움직인다. 굼구미가 원인을 대신하는 그림을 임의로 넣지 않는다.
-   - 라벨·표지·숫자는 `03-text.md` 내용을 `TEXT = { ko: {...}, en: {...} }` 한 곳에 두고 `LANG` 전역으로 고른다. 도식 헬퍼(D)로 그려 스타일을 통일한다. 등장·퇴장은 `03-text.md` 앵커 그대로.
-5. **소리**: `audio.py`에 스토리보드 Sound 칸을 효과음 큐시트로 옮긴다(시각도 NARR 기준). 내레이션 배치와 음악 덕킹은 `audio_lib.py` 함수로 한다. ko, en 각각 wav를 만든다.
+   - 라벨·표지·숫자는 `03-text.md` 내용을 `TEXT = { ko: {...} }`(ko만) 한 곳에 둔다. 도식 헬퍼(D)로 그려 스타일을 통일한다. 등장·퇴장은 `03-text.md` 앵커 그대로.
+5. **소리**: `audio.py`에 스토리보드 Sound 칸을 효과음 큐시트로 옮긴다(시각도 NARR 기준). 내레이션 배치와 음악 덕킹은 `audio_lib.py` 함수로 한다. ko wav만 만든다.
 6. **정지컷 점검 (최대 2회, ko 기준)**: 각 `E` 비트 hold 중간 프레임 + 자막이 떠 있는 프레임 + 전환 직후 프레임을 `render.js --list`로 뽑아 Read로 본다(1회 10~20장). 제작 지침 9절 결함 표로만 판정하고 고친다. 특히 "이 정지컷 한 장과 그때 떠 있는 자막만 보고 해당 고리가 이해되는가"를 본다.
-7. **렌더와 조립**: 언어마다 `render.js --lang` -> `audio.py --lang` -> `encode.sh`로 본편 -> `brand/render_brand.sh`(제목·다음 편 힌트는 `05-meta.md`) -> `assemble_final.sh`로 출력 경로에 최종본.
-8. **실측**: 두 최종 파일을 ffprobe로 확인한다(해상도, 30fps, 길이, 오디오). 본편 내레이션 구간 음량(volumedetect)으로 목소리가 실제로 들어갔는지 확인한다.
+7. **렌더와 조립**: ko만 `render.js --lang ko` -> `audio.py --lang ko` -> `encode.sh`로 본편 -> `brand/render_brand.sh`(제목·다음 편 힌트는 `05-meta.md`) -> `assemble_final.sh`로 출력 경로에 최종본.
+8. **실측**: 최종 파일을 ffprobe로 확인한다(해상도, 30fps, 길이, 오디오). 본편 내레이션 구간 음량(volumedetect)으로 목소리가 실제로 들어갔는지 확인한다.
 
 ## 경로·안전 규칙
 
@@ -54,6 +54,6 @@ effort: medium
 
 ## 보고 (15줄 이내, 한국어)
 
-출력 2개 절대경로와 ffprobe 수치, 스토리보드 비트 수 대비 구현 비트 수, 자막·라벨 수 대비 구현 수, 정지컷 점검에서 고친 것(회차별),
+출력(ko 1개) 절대경로와 ffprobe 수치, 스토리보드 비트 수 대비 구현 비트 수, 자막·라벨 수 대비 구현 수, 정지컷 점검에서 고친 것(회차별),
 구현하지 못했거나 단순화한 비트와 이유, 렌더 소요 시간.
 "구현하지 못한 비트 없음"이면 그렇게 적는다. 보고 수치는 실제 명령 결과에서만 가져온다.

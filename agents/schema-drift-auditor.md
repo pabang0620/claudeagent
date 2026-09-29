@@ -139,7 +139,7 @@ grep -rn "{apiFunctionName}(" {frontend}/src
 
 ---
 
-## 스키마 신뢰성 - DB 정의 소스 선택 우선순위 (CRITICAL 주의사항)
+## 스키마 신뢰성 - DB 정의 소스 선택 우선순위
 
 체크인된 `*.sql` 스냅샷 파일은 **실제 운영 스키마와 다를 수 있다.** 운영 중 컬럼을 추가·리네임했는데 스냅샷 파일 갱신을 깜빡하면, 이 파일을 정본으로 대조한 결과가 전부 틀린다(예: 스냅샷은 `is_public`을 보여주는데 실제 코드/운영 DB는 `visibility_public`/`visibility_student`/`visibility_professor`/`visibility_industry` 4개 컬럼으로 이미 분리되어 있는 경우 - 코드가 실제 진실이고 스냅샷이 거짓인 패턴).
 

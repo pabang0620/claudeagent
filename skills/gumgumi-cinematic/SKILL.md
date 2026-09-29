@@ -1,6 +1,6 @@
 ---
 name: gumgumi-cinematic
-description: 굼구미(Whymo) 채널의 "시네마틱 과학 쇼츠" 1편을 기획부터 mp4 배포까지 만드는 오케스트레이션 스킬. TTS 내레이션(edge-tts 채널 목소리) + 채널 인트로·제목카드·아웃트로 포함, 기본 9:16, 60초 이하. 영상·이미지 생성 AI 없이 코드(Canvas2D + 헤드리스 Chromium + ffmpeg + numpy 합성 소리)로 매 프레임을 그린다. gumgumi-cinematic-planner(소재·사실등급·설명 사슬·스토리보드·자막) -> gumgumi-explain-reviewer(처음 보는 시청자 시점 설명 검토, 최대 2라운드) -> 사용자 스토리보드 승인 -> gumgumi-animator(엔진 기반 장면 코드·정지컷 점검·렌더) -> shorts/ko, shorts/en 배포 순서. "굼구미 시네마틱", "시네마틱 과학 영상 만들어줘", "코드로 과학 애니메이션", "궁금이 채널 과학 영상 생성", "/gumgumi-cinematic <주제>" 요청 시 사용. 내레이션+TTS 대본형 숏폼은 shortform 스킬 담당. Google Flow 영상 생성은 쓰지 않는다.
+description: 굼구미(Whymo) 채널의 "시네마틱 과학 쇼츠" 1편을 기획부터 mp4 배포까지 만드는 오케스트레이션 스킬. TTS 내레이션(edge-tts 채널 목소리) + 채널 인트로·제목카드·아웃트로 포함, 기본 9:16, 60초 이하. 영상·이미지 생성 AI 없이 코드(Canvas2D + 헤드리스 Chromium + ffmpeg + numpy 합성 소리)로 매 프레임을 그린다. gumgumi-cinematic-planner(소재·사실등급·설명 사슬·스토리보드·자막) -> gumgumi-explain-reviewer(처음 보는 시청자 시점 설명 검토, 최대 2라운드) -> 사용자 스토리보드 승인 -> gumgumi-animator(엔진 기반 장면 코드·정지컷 점검·렌더) -> shorts/ko 배포 순서(2026-09-28부로 en 미제작). "굼구미 시네마틱", "시네마틱 과학 영상 만들어줘", "코드로 과학 애니메이션", "궁금이 채널 과학 영상 생성", "/gumgumi-cinematic <주제>" 요청 시 사용. 내레이션+TTS 대본형 숏폼은 shortform 스킬 담당. Google Flow 영상 생성은 쓰지 않는다.
 ---
 
 # gumgumi-cinematic
@@ -32,9 +32,10 @@ c01 8초판 피드백("퀄리티는 괜찮은데 너무 빨라서 설명하기�
 
 ## 경로 규칙
 
-- 기획: `/home/lee/project/.claude/shortform/cinematic/c<NN>-<slug>/` (01-fact, 02-explain, narration-ko/en.json, 03-text, 04-storyboard, 05-meta, 06-review)
+- **2026-09-28 방침 변경: 영어판(en)은 만들지 않는다.** ko만 제작·배포한다(사용자가 명시적으로 다시 요청할 때만 예외).
+- 기획: `/home/lee/project/.claude/shortform/cinematic/c<NN>-<slug>/` (01-fact, 02-explain, narration-ko.json, 03-text, 04-storyboard, 05-meta, 06-review)
 - 코드·프레임: `/home/lee/project/claude-animation/episodes/c<NN>-<slug>/`
-- 최종본: `/home/lee/project/shorts/ko/[C<N>] <한국어 제목>.mp4`, `/home/lee/project/shorts/en/[C<N>] <영어 제목>.mp4`
+- 최종본: `/home/lee/project/shorts/ko/[C<N>] <한국어 제목>.mp4`
   - 렌더 완료 = 여기 배포다(메모리 `project_shortform_channel`: 사용자가 shorts/에서 직접 보고 판단한다)
   - 같은 이름이 있으면 `_v2`. `C`는 내레이션 시리즈(`N화`)와 번호가 섞이지 않게 붙이는 시네마틱 시리즈 표시다
 
