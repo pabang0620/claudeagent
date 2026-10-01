@@ -215,4 +215,4 @@ CRITICAL 0건, HIGH {N}건 → "즉시 유실은 없으나 에러 유발 지점 
 - 쿼리 성능·인덱스·N+1·RLS는 **database-reviewer**.
 - ENUM 정합성은 3개 에이전트가 서로 다른 단계를 나눠 맡는다 - 이 에이전트(Z3)는 **기존 `z.enum()` ↔ DB `ENUM(...)` 문자열 집합의 단순 대조**만 한다(신규 생성·수정 없음). DB에 신규 ENUM 컬럼을 만들거나 `shared/constants/enums.ts`를 동시 생성/수정하는 작업은 **db-schema-architect** 전담. 기존 ENUM 컬럼을 전수 스캔하는 SSOT 동기화 감사는 **database-reviewer**도 별도로 수행하므로, 동일 ENUM drift가 두 에이전트 보고서에 중복 등장할 수 있다 - 이는 결함이 아니라 이 경계 서술에 따른 정상 중복이다.
 - 신규 도메인 스키마 설계·운영 DB 마이그레이션 파일 생성은 **db-schema-architect**.
-- TypeScript 타입/문법 오류는 **syntax-validator**, 함수 비즈니스 로직(트랜잭션·경쟁조건·에러처리)은 **function-validator** - 이 에이전트는 그 두 에이전트가 다루지 않는 "레이어 간 필드명·타입 계약 불일치"에 한정한다.
+- TypeScript 타입/문법 오류는 **build-error-resolver**, 함수 비즈니스 로직(트랜잭션·경쟁조건·에러처리)은 **function-validator** - 이 에이전트는 그 두 에이전트가 다루지 않는 "레이어 간 필드명·타입 계약 불일치"에 한정한다.
