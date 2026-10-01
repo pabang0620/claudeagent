@@ -40,7 +40,7 @@ POST   /api/users/:id/orders
 GET /api/users?status=active&sort=created_at&order=desc&page=1&limit=20
 ```
 
-### 응답 형식 (일관성 필수)
+### 응답 형식 예시 (shape은 아래 "API 응답 포맷" 확인 순서로 프로젝트 실측을 우선한다. 이 예시는 `error` 변형)
 ```javascript
 // 성공
 res.json({ success: true, data: result })
@@ -84,17 +84,18 @@ export const findAll = async ({ offset = 0, limit = 20, search }) => {
   return { users: rows.rows, total: parseInt(count.rows[0].count) }
 }
 
-export const findById = async (id) => {
+// 외부 노출·조회는 uuid 컬럼(user_id)으로. 내부 id는 JOIN·FK 전용 (CLAUDE.md 이중 ID)
+export const findByUuid = async (userId) => {
   const { rows } = await pool.query(
-    'SELECT id, email, name, created_at FROM users WHERE id = $1 AND deleted_at IS NULL',
-    [id]
+    'SELECT user_id, email, name, created_at FROM users WHERE user_id = $1 AND deleted_at IS NULL',
+    [userId]
   )
   return rows[0] ?? null
 }
 
 export const create = async ({ email, password, name }) => {
   const { rows } = await pool.query(
-    'INSERT INTO users (email, password, name) VALUES ($1, $2, $3) RETURNING id, email, name, created_at',
+    'INSERT INTO users (email, password, name) VALUES ($1, $2, $3) RETURNING user_id, email, name, created_at',
     [email, password, name]
   )
   return rows[0]
@@ -105,10 +106,10 @@ export const create = async ({ email, password, name }) => {
 ```javascript
 import { pool } from '../config/database.js'
 
-export const findById = async (id) => {
+export const findByUuid = async (userId) => {
   const [rows] = await pool.execute(
-    'SELECT id, email, name, created_at FROM users WHERE id = ? AND deleted_at IS NULL',
-    [id]
+    'SELECT user_id, email, name, created_at FROM users WHERE user_id = ? AND deleted_at IS NULL',
+    [userId]
   )
   return rows[0] ?? null
 }
@@ -130,7 +131,7 @@ export const findPage = async ({ offset = 0, limit = 20 }) => {
 }
 ```
 
-> Prisma는 이 프로젝트에서 미지향입니다. 명시적으로 요청된 경우에만 `prisma.user.findMany(...)` 형태를 사용하세요.
+> Prisma 프로젝트(예: cosmic-kuji-market)는 Prisma 관례를 따른다. raw SQL 프로젝트에는 Prisma를 새로 도입하지 않는다.
 
 ---
 
@@ -367,10 +368,6 @@ pool.query(`
 
 ---
 
-**핵심**: Express는 unopinionated입니다. 레이어를 처음부터 분리하면 리팩토링 비용이 없습니다.
-
----
-
 ## WeCom 회고 기반 백엔드 패턴 (347 fix 분석 교훈)
 
 ### API 응답 포맷
@@ -378,7 +375,7 @@ pool.query(`
   1. 로컬 `.claude/CLAUDE.md` 또는 로컬 에이전트가 실제 shape을 문서화했으면 그것 최우선
   2. 없으면 `backend/src/utils/response.js`(또는 동등 래퍼)를 직접 읽어 실제 shape 확인 후 그대로 따름
   3. 둘 다 없는 신규 프로젝트에 한해 기본값 `{ success: boolean, data?: T, message?: string, errors?: unknown, meta?: { total, page, limit } }` 사용 (wecom·modadam 실증). `error`/`details`/`code`는 speetalk·cosmic-renew 등에서 관찰되는 변형이며 기본값이 아님 - 기존 프로젝트에 붙일 땐 그 프로젝트 실측 response.js를 따를 것
-- res.json 직접 호출 금지 → 응답 유틸 래퍼 사용
+- 프로젝트에 응답 래퍼(response.js 등)가 있으면 그것을 쓰고, 없으면 res.json을 쓴다
 - POST/PATCH: 전체 리소스 재조회 반환 (insertId 단독 금지)
 
 ### 인증

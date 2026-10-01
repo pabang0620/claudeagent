@@ -56,13 +56,7 @@
 - **기타**: Python
 
 ## 프로젝트 구조
-```
-project/
-├── frontend/     # React
-├── backend/      # Express API
-├── .claude/      # agents/ skills/ commands/ rules/
-└── tests/        # E2E
-```
+`project/`는 여러 하위 프로젝트(wecom/, modadam/, cosmic-renew/ 등)를 담는 작업 루트다. 하위 프로젝트마다 자기 `.claude/CLAUDE.md`가 있으면 그것을 따른다. 공용 설정은 `.claude/`(agents/ skills/ commands/ rules/ agent-refs/)에 있다.
 
 ## 슬래시 커맨드
 

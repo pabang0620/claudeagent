@@ -36,14 +36,14 @@ effort: medium
    git status                             # 실행 전 작업트리 확인(공유 매니페스트 보호)
    python3 generators/merge_manifest.py   # _incoming/*.json → manifest.json + INDEX.md
    python3 generators/regroup.py          # 1에셋=1슬라이드 덱 미그룹 도형 소급 그룹화(멱등)
-   python3 generators/audit.py            # 교차검증 - exit 0 필수
+   python3 generators/audit.py            # 교차검증 - 출력의 '문제: 0' 확인
    ```
    성공(문제 0건) 후에도 에이전트가 임의로 커밋하지 않는다 - 사용자가 명시 요청할 때만 커밋하며, 그 전에는 `git add`/`git commit`으로 반영 시점을 남기도록 사용자에게 권유만 한다.
 4. **한글 폰트는 `common.set_kfont`로만 설정한다.** python-pptx의 `run.font.name`은 `a:latin`에만 적용되어 한글이 깨진다. `set_kfont(run, name, size, bold, color)`가 `a:latin`/`a:ea`/`a:cs` 3계열을 동시에 채워야 렌더러에서 한글이 정상 표시된다. `add_text`/`set_shape_text` 헬퍼는 내부적으로 이미 이를 처리하므로 가급적 직접 run을 만들지 말고 이 헬퍼를 우선 사용한다.
 5. **색·폰트·크기는 `design-tokens.json` 참조만, 매직 헥스 금지.** `common.C['navy_800']`(RGBColor) 또는 `common.role('header_fill')`(역할명 간접참조)만 사용한다. 코드에 `RGBColor.from_string("1F3864")` 같은 하드코딩 헥스를 직접 쓰지 않는다. 토큰에 없는 색(예: amber/warn 계열 부재)이 필요하면 임의로 헥스를 지어내지 말고, design-tokens.json에 새 토큰 추가를 먼저 제안하거나 기존 대체 토큰(teal/blue/red/gray)을 쓴다.
    - **예외(gov 트랙)**: 요청이 정부기관/공공기관/gov 톤을 언급하면 `common.role()`/`common.C[...]`(standard 팔레트)는 쓰지 않는다 - `c.TOKENS["gov_theme"]`의 color/role/font를 직접 참조하고(별도 최상위 키, `gen_TBL_gov.py` 패턴 참고), `entry(..., master="gov")`로 저장한다. `master`를 안 넘기면 기본값 `standard`로 저장되어 compose 단계 마스터 호환성 검사에서 조용히 배제된다.
 6. **생성 후 `audit.py`의 출력 `문제:` 카운트가 0이어야 완료로 간주한다.** 주의: 현재 `audit.py`는 `sys.exit()`를 호출하지 않아 문제가 있어도 항상 exit 0을 반환한다 - 따라서 exit code가 아니라 출력된 `문제:` 카운트와 문제 목록(DUP_ID, FILE_MISSING, SLIDE_MISSING, 앵커 부재, 비허용 카테고리의 `<p:pic>` 등)을 실제로 읽고, 하나라도 남으면 작업 미완료로 취급해 원인을 고쳐 전체 재실행한다.
-7. **pptx-automizer API를 다룰 때는 `use context7`로 최신 문서를 확인한다.** 스타(220)·단일 메인테이너 프로젝트라 버전 간 API 변경 리스크가 있다. `compose.mjs`를 확장하기 전 `ModifyShapeHelper`/`ModifyTableHelper`/`ModifyChartHelper`/`Automizer` 관련 API를 임의로 추측해 쓰지 말 것.
+7. **pptx-automizer API를 다룰 때는 설치된 패키지(`node_modules/pptx-automizer`)의 타입 정의(`*.d.ts`)·README를 Read해 확인한다.** 단일 메인테이너 프로젝트라 버전 간 API 변경 리스크가 있다. `compose.mjs`를 확장하기 전 `ModifyShapeHelper`/`ModifyTableHelper`/`ModifyChartHelper`/`Automizer` 관련 API를 임의로 추측해 쓰지 말 것.
 
 ## 병합셀 표(gridSpan/rowSpan) 생성 원칙
 
@@ -59,7 +59,7 @@ OOXML 표에서 병합은 **생성 시점에 굽는다** - python-pptx의 `cell.
 3. **ID 부여**: `<CAT>-<3자리>` 전역 유일(예: TBL-013). 기존 manifest.json/INDEX.md에서 대역 확인 후 다음 번호 사용, 임의로 재사용 금지.
 4. **파이프라인 실행**: merge_manifest.py → regroup.py → audit.py 순서로 Bash 실행. audit 실패 시 원인별로 수정 후 전체 재실행(부분 재실행으로 상태 불일치 만들지 않기).
 5. **조합 검증이 필요하면**: `composer/compose.mjs --plan <plan.json> --out <out.pptx>`로 최소 plan(해당 에셋 1~2개)을 만들어 addElement가 정상 동작하는지, 텍스트/표/차트 치환이 의도대로 되는지 확인. **gov 트랙 에셋(`entry(..., master="gov")`)은 반드시 `--master base_gov.pptx`를 함께 넘긴다** - `--master` 생략 시 compose.mjs가 기본값 `base.pptx`(standard)로 로드하고, gov 자산은 마스터 호환성 검사(`meta.master !== masterKind`)에 걸려 100% "마스터 호환성 위반"으로 실패한다. 이 에러가 나오면 에셋 결함이 아니라 `--master` 누락인지부터 확인할 것. 대규모 슬라이드 플랜 조립 자체는 proposal-pt-builder 몫이므로 여기서는 신규/수정 에셋의 조합 가능성만 스팟체크한다. 실패 시(addElement 에러, 치환 누락 등) 원인이 compose.mjs인지 방금 만든 에셋(앵커명·바인딩 키)인지 구분해 고친 뒤 재실행 - 실패를 무시하고 완료로 보고하지 않는다.
-6. **보고**: 생성/수정한 에셋 ID 목록, manifest 반영 여부, audit.py 결과(exit code + 문제 유무), compose.mjs 스팟체크 결과(수행했다면)를 요약.
+6. **보고**: 생성/수정한 에셋 ID 목록, manifest 반영 여부, audit.py 출력의 문제 건수와 목록, compose.mjs 스팟체크 결과(수행했다면)를 요약.
 
 ## 하지 않는 것
 - 슬라이드 플랜 JSON을 설계하거나 RFP 콘텐츠를 채우는 일(proposal-pt-builder 영역).

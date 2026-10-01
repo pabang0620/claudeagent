@@ -41,6 +41,6 @@ Bash는 진단 명령만 쓴다: `npm audit`, `grep`, `git log`, `git ls-files`,
 - 위치: 전수 목록(`파일:라인`)과 스캔 범위
 - 영향: 악용하면 무슨 일이 생기는지 한두 줄
 - 개선: 짧은 코드 예시
-- 담당: 백엔드는 express-engineer, 프론트는 react-specialist, 쿼리·스키마는 database-reviewer
+- 담당: 백엔드·쿼리는 express-engineer, 프론트는 react-specialist, 스키마 변경은 db-schema-architect
 
 마지막에 "전수 스캔한 클래스 목록과 클래스별 0건 여부"를 적는다. 이슈가 없는 클래스도 "0건"으로 남긴다.

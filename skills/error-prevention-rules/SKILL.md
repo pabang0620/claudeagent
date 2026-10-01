@@ -1,6 +1,6 @@
 ---
 name: error-prevention-rules
-description: React 런타임 에러(무한 렌더, race condition, stale closure, cleanup 누락, 무한 루프) 사전 차단 정적 검사 스킬. useEffect 의존성/cleanup, AbortController, IntersectionObserver/MutationObserver/PerformanceObserver/setTimeout 해제, onError 자기 해제, Mutation pending ref, stale closure, Zustand selector, array key index, localStorage try/catch, BroadcastChannel cleanup, click 핸들러 isMounted 가드 등 14개 룰. `.jsx/.tsx` 저장 시점 자동 적용. WeCom 회고 근거 - React/렌더링 fix 14건, cleanup/race condition fix 36건 차단.
+description: React 런타임 에러(무한 렌더, race condition, stale closure, cleanup 누락, 무한 루프) 사전 차단 정적 검사 스킬. useEffect 의존성/cleanup, AbortController, IntersectionObserver/MutationObserver/PerformanceObserver/setTimeout 해제, onError 자기 해제, Mutation pending ref, stale closure, Zustand selector, array key index, localStorage try/catch, BroadcastChannel cleanup, click 핸들러 isMounted 가드 등 14개 룰. `.jsx/.tsx` 작성·수정 시 적용. WeCom 회고 근거 - React/렌더링 fix 14건, cleanup/race condition fix 36건 차단.
 ---
 
 # error-prevention-rules
@@ -8,14 +8,14 @@ description: React 런타임 에러(무한 렌더, race condition, stale closure
 > WeCom 회고 근거: `e95ea5b` Zustand 무한 렌더, `fa3dc46` img onError 9파일 무한 루프, `4b5168f` mutation 버튼 중복 제출, AbortController 누락 12+건, IntersectionObserver/setTimeout cleanup 누락 다수.
 
 ## 적용 트리거
-1. **자동** - `.jsx/.tsx` 저장 직후
-2. **수동** - `/error-prevention-check <경로>`
+1. **작성·수정 직후** - `.jsx/.tsx` 파일을 작성·수정한 직후 Claude가 직접 적용 (저장 훅은 등록돼 있지 않다)
+2. **수동** - "에러 방지 룰 검사해줘"처럼 경로를 지정해 요청
 3. **planner 사전 체크** - useEffect·fetch·hook 설계 단계에서 룰 사전 주입
 
 ## 핵심 원칙
 - **useEffect는 언마운트 = 잠재적 버그**. cleanup 없이 side effect 걸면 메모리 누수·stale setState
 - **비동기는 반드시 cleanup**. AbortController, IntersectionObserver, setTimeout, WebSocket, EventSource 전부
-- **렌더 중 객체/함수 생성 금지**. 매 렌더 새 참조 → 자식 리렌더·무한 루프
+- **memo된 자식 prop·effect 의존성으로 넘기는 객체/함수는 매 렌더 새 참조가 되지 않게 한다** (ep-008). 새 참조 → 자식 리렌더·effect 무한 루프
 - **사용자 입력은 pending 락**. 중복 제출 방지
 
 ---
@@ -383,7 +383,7 @@ const handleCreateSubmit = async () => {
 - **AST 기반 심층 분석**: 이 스킬은 Grep + 패턴 매칭. 복잡한 JSX 트리(조건부 렌더 내부)는 false negative 가능
 - **Async/await 체인**: `.then()` 내부 revoke, `try/finally` 배치는 Claude 수동 추론 의존
 - **API 레이어 AbortController 자체 관리**: `fetchXxx()` 함수가 내부적으로 signal 을 받고 AbortController 를 처리하는 경우 ep-001 false positive 발생 가능 → 해당 커스텀 훅(`useXxxFetch`)에 `signal` 파라미터 있는지 수동 확인 필요
-- **React 19 `use(promise)` 패턴**: 렌더 함수 내 `use(fetch(...))` 또는 캐시된 promise 전달 - ep-001 대상 외. 컴포넌트 외부 promise 캐시(React Query, SWR, 전역 캐시)와 동일하게 Suspense boundary 에서 관리되므로 제외.
+- **React 19 `use(promise)` 패턴**: 렌더 밖(상위 컴포넌트·React Query/SWR/전역 캐시)에서 만든 promise를 `use()`로 받는 경우만 ep-001 대상 외(Suspense boundary가 관리). 렌더 중 `use(fetch(...))`로 promise를 새로 만드는 코드는 매 렌더 재요청되므로 위반으로 보고.
 - **Strict Mode 이중 렌더링 주의**: React 19 Strict Mode 는 개발환경에서 effect 를 2회 실행. ep-006 의 pendingRef 는 useEffect cleanup 에서 false 로 리셋해야 false positive 방지. `useEffect(() => { return () => { pendingRef.current = false } }, [])` 추가 권장.
 - **Promise.all/Promise.allSettled 병렬 fetch**: 단일 AbortController 로는 cleanup 불충분. 배열 controller 패턴 필요 - 현재 룰 미커버, 수동 검토 권장
   ```jsx
@@ -411,12 +411,6 @@ const handleCreateSubmit = async () => {
 2. **엣지**: `<img onError={e => e.target.src = '/x.png'} />` → ep-002 error (자기 해제 + 가드 힌트)
 3. **복합**: `setInterval` + stale count + 인라인 객체 prop + `key={i}` → ep-004/007/008/009 동시 4건
 
-## 성공 지표
-- **fetch cleanup 관련 fix**: 12+건 → 2건 이하
-- **img onError 무한 루프 fix**: 9건 → 0건
-- **mutation 중복 제출 fix**: 여러 건 → 0건
-- **IntersectionObserver cleanup 누락**: 감지율 100%
-
 ## 자기검증 - WeCom 현재 기준 예상 탐지
 
 이 스킬을 현재 WeCom frontend/src 에 적용하면 다음을 탐지해야 한다:
@@ -427,6 +421,3 @@ const handleCreateSubmit = async () => {
 - ep-009: BannerPositionPreview/MyEpisodePage key={i} (정적 리스트 예외 해당 가능)
 
 이 예상치에서 크게 벗어나면 룰 동작 이상.
-
-## 참고 커밋
-`e95ea5b` (Zustand) · `fa3dc46` (img onError 9파일) · `4b5168f` (mutation pending) · `c1e8d2c` · WeCom fetch/useEffect fix 다수

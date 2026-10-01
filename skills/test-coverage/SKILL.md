@@ -1,12 +1,12 @@
 ---
 name: test-coverage
-description: "Analyzes test coverage, identifies files below the 80% threshold, and generates missing tests. Triggers on 'test coverage', 'check coverage', 'coverage report', 'generate missing tests', or 'improve coverage'."
+description: "Analyzes test coverage, identifies files below the 80% handoff threshold, and generates missing tests for named files. Triggers on 'test coverage', 'check coverage', 'coverage report', 'generate missing tests', or 'improve coverage'."
 allowed-tools: Bash, Read, Write, Edit, Grep, Glob
 ---
 
 # Test Coverage
 
-Analyzes test coverage across the project, identifies gaps, and generates tests to reach the 80% minimum threshold.
+Analyzes test coverage across the project and identifies gaps. The 80% threshold is the handoff gate in rules/testing.md, not a constant requirement during development.
 
 ## Steps
 
@@ -93,4 +93,4 @@ Remaining gaps:
   - file1.ts: X% (needs manual review)
 ```
 
-Ensure the project reaches 80%+ overall coverage. If not achievable in a single pass, list remaining gaps with specific recommendations.
+80% applies as the handoff gate (rules/testing.md). Outside a handoff, report gaps and generate tests only for files the user names. If the gate is not reached in a single pass, list remaining gaps with specific recommendations.

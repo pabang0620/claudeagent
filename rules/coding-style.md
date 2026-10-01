@@ -1,6 +1,6 @@
 # Coding Style
 
-## Immutability (CRITICAL)
+## Immutability
 
 객체를 mutate하지 않고 항상 새 객체를 만든다. 코드 예시는 `coding-standards` 스킬의 "불변성 패턴" 참조.
 
@@ -41,7 +41,7 @@ export async function getWebtoon(req, res, next) {
 
 ### (B) 그 외 일반 코드 (유틸·서비스 내부·스크립트 등, HTTP 핸들러 아님)
 
-ALWAYS handle errors comprehensively:
+에러를 삼키지 않는다. 로그를 남기고 호출자가 이해할 수 있는 에러로 다시 던진다:
 
 ```typescript
 try {
@@ -57,14 +57,6 @@ try {
 
 사용자 입력은 항상 zod로 검증한다. 스키마 작성 예시는 `coding-standards` 스킬 참조.
 
-## Code Quality Checklist
+## 마무리 전 확인
 
-Before marking work complete:
-- [ ] Code is readable and well-named
-- [ ] Functions are small (<50 lines)
-- [ ] Files are focused (<500 lines, 규칙 I-06)
-- [ ] No deep nesting (>4 levels)
-- [ ] Proper error handling
-- [ ] No console.log statements
-- [ ] No hardcoded values
-- [ ] No mutation (immutable patterns used)
+디버깅용 `console.log`를 남기지 않는다. 설정값은 하드코딩하지 않고 `.env`나 상수로 둔다.

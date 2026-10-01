@@ -28,10 +28,11 @@ npm run build 2>&1 | tail -5
 npx tsc --noEmit 2>&1 | tail -5
 ```
 
-2. Create a git commit with the checkpoint name:
+2. Create a git commit with the checkpoint name. `git status --porcelain`으로 포함 파일을 출력해 사용자에게 보여 준 뒤, 확인된 경로만 스테이징한다:
 
 ```bash
-git add -A && git commit -m "checkpoint: $CHECKPOINT_NAME"
+git status --porcelain
+git add <confirmed paths> && git commit -m "checkpoint: $CHECKPOINT_NAME"
 ```
 
 3. Record the checkpoint in `.claude/checkpoints.log`:

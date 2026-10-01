@@ -188,9 +188,9 @@ export async function fetchWebtoonDetail(uuid) {
 
 ## File Size Guidelines
 
-- All files: 400 lines maximum (split immediately if exceeded).
+- Files: 500 lines maximum; split only when needed (well-structured files usually stay under 300).
 - Function level: 50 lines maximum recommended.
-- When Service/Repository exceeds 400 lines, split into domain subfolders.
+- When Service/Repository exceeds 500 lines, split into domain subfolders.
 
 ---
 
@@ -199,7 +199,7 @@ export async function fetchWebtoonDetail(uuid) {
 When creating new files or folders, verify:
 - [ ] Page 3-file set (Page/use/Api) shares the same prefix
 - [ ] Page.jsx contains no direct fetch or state
-- [ ] APIs used across multiple domains live in common/
+- [ ] Frontend page APIs stay in the page folder even if duplicated; only backend shared endpoints (upload/search/notifications/nav) live in domains/common/
 - [ ] Backend filenames contain no dots (`.`) -- `webtoonService.js` not `webtoon.service.js`
 - [ ] Admin master data APIs live in admin/ or common/
-- [ ] File is 400 lines or fewer (split if exceeded)
+- [ ] File is 500 lines or fewer (split if exceeded)

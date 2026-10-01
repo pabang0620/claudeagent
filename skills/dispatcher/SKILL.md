@@ -81,7 +81,6 @@ HIGH-COST agent alternatives:
 - architect -> discuss simple designs directly
 
 MEDIUM-COST agent alternatives:
-- tdd-guide -> reference tdd-workflow skill, then direct
 - security-reviewer -> security-review skill checklist directly
 - database-reviewer -> reference postgres-patterns skill, then direct
 
@@ -94,13 +93,11 @@ LOW-COST choices:
 
 | Skill | Replaces Agent | Purpose |
 |-------|---------------|---------|
-| `tdd-workflow` | tdd-guide | TDD guidelines reference |
 | `security-review` | security-reviewer | Security checklist |
 | `postgres-patterns` | database-reviewer | DB pattern reference |
 | `backend-patterns` | - | API design patterns |
 | `frontend-patterns` | - | React patterns |
 | `coding-standards` | code-reviewer | Coding standards |
-| `verification-loop` | - | Verification checklist |
 
 ### Commands - LOW COST
 
@@ -118,11 +115,8 @@ LOW-COST choices:
 | `backend-patterns` | API, Express, server | Node.js/Express patterns |
 | `frontend-patterns` | React, component, UI | React patterns |
 | `coding-standards` | coding rules, naming, style | Coding standards |
-| `tdd-workflow` | TDD, test-first | TDD workflow |
 | `security-review` | security check, OWASP | Security checklist |
 | `postgres-patterns` | PostgreSQL (raw SQL/pg) | DB patterns |
-| `verification-loop` | verify, QA | Verification checklist |
-| `continuous-learning` | learn, pattern extraction | Auto-learning |
 
 ### Commands (Quick Execution)
 
@@ -134,8 +128,6 @@ LOW-COST choices:
 | `/build-fix` | fix build, fix error | Build error fix |
 | `/verify` | verify, check | Verification loop |
 | `/e2e` | E2E, integration test | E2E testing |
-| `/learn` | learn, extract patterns | Pattern learning |
-| `/evolve` | evolve, make skill | Skill evolution |
 | `/checkpoint` | checkpoint, save | Progress save |
 
 ## Analysis Process (Cost Optimized)
@@ -166,7 +158,6 @@ Can skill reference + direct handling solve it?
 **Replaceable with skills:**
 - Coding standard checks -> `coding-standards` skill
 - Security checks -> `security-review` skill
-- TDD guidance -> `tdd-workflow` skill
 - DB query optimization -> `postgres-patterns` skill
 
 ### Step 3: Complexity and Cost Assessment
@@ -180,7 +171,7 @@ Medium   Direct    medium    medium
 High     low       medium    opus+low (코드 검증만)
 ```
 
-**Effort selection criteria** (모든 에이전트는 `model: sonnet` 고정, 비용 차이는 각 정의파일의 `effort`로 둔다 - `rules/agents.md`, `rules/performance.md`):
+**Effort selection criteria** (에이전트 기본은 `model: sonnet` + low/medium, 코드검증 3종만 opus + low - `rules/agents.md`, `rules/performance.md`):
 - **low**: 단순 탐색·분류·반복 실행
 - **medium**: 일반 코드 작성·수정·테스트, 조사형 작업
 - **opus + low**: 코드 검증(보안·DB 감사·로직 결함 탐지)만. sonnet high는 쓰지 않는다
@@ -209,85 +200,9 @@ def select_tool(request):
     return agent, effort
 ```
 
-## Auto-Matching Rules
+## Routing
 
-### Feature Implementation Request
-```
-"Build login feature"
--> Workflow: planner -> tdd-guide -> code-reviewer -> security-reviewer
-```
-
-### Bug Fix Request
-```
-"Fix this error"
--> Single: build-error-resolver
--> Complex: build-error-resolver -> tdd-guide
-```
-
-### Review Request
-```
-"Review my code"
--> Parallel: code-reviewer + security-reviewer
-```
-
-### Test Request
-```
-"Write tests"
--> Single: tdd-guide
--> Browser verification: playwright-verify-loop
-```
-
-### Performance/Optimization Request
-```
-"Optimize this query"
--> Single: database-reviewer
--> Full: architect -> database-reviewer
-```
-
-### Documentation Request
-```
-"Update docs"
--> Single: doc-updater
-```
-
-### Refactoring Request
-```
-"Clean up the code"
--> Single: refactor-cleaner
--> Safe: refactor-cleaner -> tdd-guide -> code-reviewer
-```
-
-## Workflow Templates
-
-### New Feature (feature)
-```
-planner -> tdd-guide -> code-reviewer -> security-reviewer
-```
-
-### Bug Fix (bugfix)
-```
-build-error-resolver -> tdd-guide -> code-reviewer
-```
-
-### Refactoring (refactor)
-```
-refactor-cleaner -> tdd-guide -> code-reviewer
-```
-
-### Security-Focused (security)
-```
-security-reviewer -> code-reviewer -> architect
-```
-
-### DB Work (database)
-```
-database-reviewer -> architect -> tdd-guide
-```
-
-### Testing-Focused (testing)
-```
-tdd-guide -> playwright-verify-loop -> code-reviewer
-```
+라우팅은 `rules/agents.md` STEP 1 표와 표준 워크플로우를 따른다(SSOT). 여기서는 직접 처리 가능 여부와 비용 순위만 판단한다.
 
 ## Output Formats
 

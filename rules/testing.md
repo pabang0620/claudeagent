@@ -21,12 +21,12 @@ TDD 절차 (Claude 재량 영역 - 필요하다고 판단될 때 적용):
 
 ## Troubleshooting Test Failures
 
-1. Use **tdd-guide** agent
+1. 원인이 분명하면 메인이 직접 고친다. 재현이 어렵거나 회귀 위험이 크면 tdd-guide에 맡긴다
 2. Check test isolation
 3. Verify mocks are correct
 4. Fix implementation, not tests (unless tests are wrong)
 
 ## Agent Support
 
-- **tdd-guide** - Use PROACTIVELY for new features, enforces write-tests-first
+- **tdd-guide** - 재현이 어렵거나 회귀 위험이 큰 버그·로직에 실패 테스트를 먼저 쓴다 (`rules/agents.md` 버그 수정 행)
 - **playwright-verify-loop** - 브라우저를 직접 운전하며 기능 워크스루·오류 수집 (최종 손테스트 직전 E2E 담당)

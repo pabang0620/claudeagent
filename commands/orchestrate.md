@@ -11,19 +11,19 @@
 ### feature
 전체 기능 구현 워크플로우:
 ```
-planner -> tdd-guide -> code-reviewer -> security-reviewer
+planner -> react-specialist|express-engineer -> code-reviewer 스킬 -> [인증·결제·개인정보면] security-reviewer
 ```
 
 ### bugfix
 버그 조사 및 수정 워크플로우:
 ```
-explorer -> tdd-guide -> code-reviewer
+tdd-guide -> react-specialist|express-engineer -> code-reviewer 스킬
 ```
 
 ### refactor
 안전한 리팩토링 워크플로우:
 ```
-architect -> code-reviewer -> tdd-guide
+planner -> refactor-cleaner -> code-reviewer 스킬
 ```
 
 ### security
@@ -84,11 +84,11 @@ security-reviewer -> code-reviewer -> architect
    - 테스트 통과를 위해 구현
    - 출력: `HANDOFF: tdd-guide -> code-reviewer`
 
-3. **Code Reviewer Agent**
+3. **code-reviewer 스킬** (에이전트가 아니므로 스폰하지 않고 스킬로 실행)
    - 구현 검토
    - 이슈 확인
    - 개선사항 제안
-   - 출력: `HANDOFF: code-reviewer -> security-reviewer`
+   - 결과를 security-reviewer 스폰 프롬프트에 전달
 
 4. **Security Reviewer Agent**
    - 보안 감사
@@ -140,7 +140,6 @@ Security Reviewer: [요약]
 ```markdown
 ### 병렬 단계
 동시 실행:
-- code-reviewer (품질)
 - security-reviewer (보안)
 - architect (설계)
 
@@ -166,7 +165,7 @@ $ARGUMENTS:
 ## 팁
 
 1. **planner로 시작** - 복잡한 기능의 경우
-2. **항상 code-reviewer 포함** - 머지 전
+2. **여러 파일 변경이면 code-reviewer 스킬 실행** - 머지 전
 3. **security-reviewer 사용** - 인증/결제/개인정보의 경우
 4. **인계를 간결하게** - 다음 에이전트에 필요한 것에 집중
 5. **에이전트 간 필요시 검증 실행**

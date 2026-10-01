@@ -33,7 +33,7 @@ PostgreSQL 베스트 프랙티스 빠른 참조 가이드
 
 | 용도 | 올바른 타입 | 피해야 할 타입 |
 |------|------------|----------------|
-| ID | `uuid` | `int`, random UUID |
+| ID | 내부 PK `bigserial` + 외부 노출 `uuid` 컬럼(이중 ID) | 외부에 PK 직접 노출 |
 | 문자열 | `text` | `varchar(255)` |
 | 타임스탬프 | `timestamptz` | `timestamp` |
 | 금액 | `numeric(10,2)` | `float` |
@@ -44,12 +44,13 @@ PostgreSQL 베스트 프랙티스 빠른 참조 가이드
 **테이블 정의 (DDL):**
 ```sql
 CREATE TABLE markets (
-  id          uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  id          bigserial PRIMARY KEY,
+  uuid        uuid NOT NULL UNIQUE DEFAULT gen_random_uuid(),
   name        text NOT NULL,
   status      varchar(20) NOT NULL,
   volume      numeric(10, 2) NOT NULL,
   created_at  timestamptz NOT NULL DEFAULT now(),
-  creator_id  uuid NOT NULL REFERENCES users (id)
+  creator_id  bigint NOT NULL REFERENCES users (id)
 );
 
 CREATE INDEX idx_markets_status ON markets (status);

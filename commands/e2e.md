@@ -41,169 +41,11 @@ description: Playwright로 E2E 테스트를 생성하고 실행합니다. 테스
 ## 사용 예시
 
 ```
-User: /e2e 마켓 검색 및 조회 플로우 테스트해줘
-
-Agent (general-purpose, 아래 방법론 주입):
-# E2E 테스트 생성: 마켓 검색 및 조회 플로우
-
-## 식별된 테스트 시나리오
-
-**사용자 여정:** 마켓 검색 → 결과 조회 → 마켓 클릭 → 상세 정보 조회
-
-**테스트 커버리지:**
-1. 마켓 페이지로 이동
-2. 검색 수행
-3. 검색 결과 검증
-4. 첫 번째 결과 클릭
-5. 마켓 상세 페이지 로드 검증
-6. 차트 렌더링 검증
-
-## 생성된 테스트 코드
-
-```typescript
-// tests/e2e/markets/search-and-view.spec.ts
-import { test, expect } from '@playwright/test'
-import { MarketsPage } from '../../pages/MarketsPage'
-import { MarketDetailsPage } from '../../pages/MarketDetailsPage'
-
-test.describe('마켓 검색 및 조회 플로우', () => {
-  test('사용자가 마켓을 검색하고 상세정보를 볼 수 있다', async ({ page }) => {
-    // 1. 마켓 페이지로 이동
-    const marketsPage = new MarketsPage(page)
-    await marketsPage.goto()
-
-    // 페이지 로드 검증
-    await expect(page).toHaveTitle(/Markets/)
-    await expect(page.locator('h1')).toContainText('Markets')
-
-    // 2. 검색 수행
-    await marketsPage.searchMarkets('election')
-
-    // API 응답 대기
-    await page.waitForResponse(resp =>
-      resp.url().includes('/api/markets/search') && resp.status() === 200
-    )
-
-    // 3. 검색 결과 검증
-    const marketCards = marketsPage.marketCards
-    await expect(marketCards.first()).toBeVisible()
-    const resultCount = await marketCards.count()
-    expect(resultCount).toBeGreaterThan(0)
-
-    // 검색 결과 스크린샷 캡처
-    await page.screenshot({ path: 'artifacts/search-results.png' })
-
-    // 4. 첫 번째 결과 클릭
-    const firstMarketTitle = await marketCards.first().textContent()
-    await marketCards.first().click()
-
-    // 5. 마켓 상세 페이지 로드 검증
-    await expect(page).toHaveURL(/\/markets\/[a-z0-9-]+/)
-
-    const detailsPage = new MarketDetailsPage(page)
-    await expect(detailsPage.marketName).toBeVisible()
-    await expect(detailsPage.marketDescription).toBeVisible()
-
-    // 6. 차트 렌더링 검증
-    await expect(detailsPage.priceChart).toBeVisible()
-
-    // 마켓 이름 일치 검증
-    const detailsTitle = await detailsPage.marketName.textContent()
-    expect(detailsTitle?.toLowerCase()).toContain(
-      firstMarketTitle?.toLowerCase().substring(0, 20) || ''
-    )
-
-    // 마켓 상세 정보 스크린샷 캡처
-    await page.screenshot({ path: 'artifacts/market-details.png' })
-  })
-
-  test('결과가 없는 검색은 빈 상태를 표시한다', async ({ page }) => {
-    const marketsPage = new MarketsPage(page)
-    await marketsPage.goto()
-
-    // 존재하지 않는 마켓 검색
-    await marketsPage.searchMarkets('xyznonexistentmarket123456')
-
-    // 빈 상태 검증
-    await expect(page.locator('[data-testid="no-results"]')).toBeVisible()
-    await expect(page.locator('[data-testid="no-results"]')).toContainText(
-      /no.*results|no.*markets/i
-    )
-
-    const marketCount = await marketsPage.marketCards.count()
-    expect(marketCount).toBe(0)
-  })
-
-  test('검색을 지우면 모든 마켓이 다시 표시된다', async ({ page }) => {
-    const marketsPage = new MarketsPage(page)
-    await marketsPage.goto()
-
-    // 초기 마켓 개수
-    const initialCount = await marketsPage.marketCards.count()
-
-    // 검색 수행
-    await marketsPage.searchMarkets('trump')
-    await page.waitForLoadState('networkidle')
-
-    // 필터링된 결과 검증
-    const filteredCount = await marketsPage.marketCards.count()
-    expect(filteredCount).toBeLessThan(initialCount)
-
-    // 검색 지우기
-    await marketsPage.searchInput.clear()
-    await page.waitForLoadState('networkidle')
-
-    // 모든 마켓이 다시 표시되는지 검증
-    const finalCount = await marketsPage.marketCards.count()
-    expect(finalCount).toBe(initialCount)
-  })
-})
-```
-
-## 테스트 실행
-
-```bash
-# 생성된 테스트 실행
-npx playwright test tests/e2e/markets/search-and-view.spec.ts
-
-Running 3 tests using 3 workers
-
-  ✓  [chromium] › search-and-view.spec.ts:5:3 › 사용자가 마켓을 검색하고 상세정보를 볼 수 있다 (4.2s)
-  ✓  [chromium] › search-and-view.spec.ts:52:3 › 결과가 없는 검색은 빈 상태를 표시한다 (1.8s)
-  ✓  [chromium] › search-and-view.spec.ts:67:3 › 검색을 지우면 모든 마켓이 다시 표시된다 (2.9s)
-
-  3 passed (9.1s)
-
-생성된 결과물:
-- artifacts/search-results.png
-- artifacts/market-details.png
-- playwright-report/index.html
-```
-
-## 테스트 리포트
-
-```
-╔══════════════════════════════════════════════════════════════╗
-║                    E2E 테스트 결과                           ║
-╠══════════════════════════════════════════════════════════════╣
-║ 상태:       ✅ 모든 테스트 통과                              ║
-║ 전체:       3 tests                                          ║
-║ 통과:       3 (100%)                                         ║
-║ 실패:       0                                                ║
-║ 불안정:     0                                                ║
-║ 소요시간:   9.1s                                             ║
-╚══════════════════════════════════════════════════════════════╝
-
-결과물:
-📸 스크린샷: 2 files
-📹 비디오: 0 files (실패 시에만)
-🔍 추적: 0 files (실패 시에만)
-📊 HTML 리포트: playwright-report/index.html
-
-리포트 보기: npx playwright show-report
-```
-
-✅ E2E 테스트 스위트 CI/CD 통합 준비 완료!
+# E2E 테스트 생성: <플로우명>
+## 시나리오: <사용자 여정 단계 목록>
+## 생성 파일: tests/e2e/<영역>/<이름>.spec.ts (Page Object Model)
+## 실행 결과: 통과 N / 실패 N / 불안정 N
+## 결과물: playwright-report/index.html, 실패 시 스크린샷·추적
 ```
 
 ## 테스트 결과물
@@ -279,32 +121,11 @@ CI 파이프라인에 추가:
 
 - name: 결과물 업로드
   if: always()
-  uses: actions/upload-artifact@v3
+  uses: actions/upload-artifact@v4
   with:
     name: playwright-report
     path: playwright-report/
 ```
-
-## 우선순위 테스트 플로우
-
-다음 E2E 테스트를 우선적으로 수행:
-
-**🔴 중요 (반드시 통과해야 함):**
-1. 사용자가 지갑을 연결할 수 있다
-2. 사용자가 마켓을 탐색할 수 있다
-3. 사용자가 마켓을 검색할 수 있다
-4. 사용자가 마켓 상세정보를 볼 수 있다
-5. 사용자가 거래할 수 있다
-6. 마켓이 올바르게 해결된다
-7. 사용자가 자금을 출금할 수 있다
-
-**🟡 중요:**
-1. 마켓 생성 플로우
-2. 사용자 프로필 업데이트
-3. 실시간 가격 업데이트
-4. 차트 렌더링
-5. 마켓 필터링 및 정렬
-6. 모바일 반응형 레이아웃
 
 ## 모범 사례
 
@@ -324,14 +145,6 @@ CI 파이프라인에 추가:
 - ❌ 실패 시 결과물 검토 건너뛰기
 - ❌ 모든 엣지 케이스를 E2E로 테스트 (단위 테스트 사용)
 
-## 중요 참고사항
-
-**중요:**
-- 실제 금전이 관련된 E2E 테스트는 반드시 테스트넷/스테이징에서만 실행
-- 프로덕션에서 거래 테스트 실행 금지
-- 금융 테스트에 `test.skip(process.env.NODE_ENV === 'production')` 설정
-- 소액의 테스트 자금만 있는 테스트 지갑 사용
-
 ## 다른 명령과의 통합
 
 - `/plan` - 테스트할 중요한 여정 식별
@@ -342,7 +155,7 @@ CI 파이프라인에 추가:
 ## 관련 에이전트
 
 전담 에이전트 정의는 `agents-archive/e2e-runner-retired-2026-08-20.md`에 보관돼 있습니다.
-필요해지면 `agents/`로 되돌리고 `rules/agents.md` 표 2곳에 재등재하십시오.
+필요해지면 `agents/`로 되돌리고 `rules/agents.md` STEP 1 표에 재등재하십시오.
 
 ## 빠른 명령어
 

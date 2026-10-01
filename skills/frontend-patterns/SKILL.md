@@ -73,15 +73,6 @@ function UserForm() {
 
 ## 컴포넌트 설계 원칙
 
-### 파일 분류 기준
-```
-pages/          → 라우트 진입점 (데이터 페칭 담당)
-features/       → 도메인 기능 단위 (비즈니스 로직 포함)
-components/ui/  → 순수 UI (재사용 가능, 비즈니스 로직 없음)
-hooks/          → 커스텀 훅 (상태·사이드이펙트 로직)
-utils/          → 순수 함수 유틸리티
-```
-
 ### Compound Component 패턴
 ```javascript
 const Card = {
@@ -124,23 +115,28 @@ const DataContext = createContext()
 function useAsync(asyncFn, deps = []) {
   const [state, setState] = useState({ data: null, error: null, isLoading: false })
 
-  const execute = useCallback(async () => {
+  const execute = useCallback(async (signal) => {
     setState({ data: null, error: null, isLoading: true })
     try {
-      const data = await asyncFn()
+      const data = await asyncFn(signal)
       setState({ data, error: null, isLoading: false })
     } catch (error) {
+      if (error.name === 'AbortError') return
       setState({ data: null, error, isLoading: false })
     }
   }, deps)
 
-  useEffect(() => { execute() }, [execute])
+  useEffect(() => {
+    const ac = new AbortController()
+    execute(ac.signal)
+    return () => ac.abort()
+  }, [execute])
 
   return { ...state, refetch: execute }
 }
 
-// 사용
-const { data: users, isLoading, error, refetch } = useAsync(() => getUsers(), [])
+// 사용 (signal을 API 함수까지 전달, ep-001)
+const { data: users, isLoading, error, refetch } = useAsync((signal) => getUsers({ signal }), [])
 ```
 
 ### 디바운스 훅
@@ -172,7 +168,11 @@ function useLocalStorage(key, initialValue) {
   const setValue = useCallback((value) => {
     const valueToStore = value instanceof Function ? value(storedValue) : value
     setStoredValue(valueToStore)
-    localStorage.setItem(key, JSON.stringify(valueToStore))
+    try {
+      localStorage.setItem(key, JSON.stringify(valueToStore))
+    } catch (e) {
+      console.warn('storage 저장 실패', e) // iOS Safari 프라이빗 모드·용량 초과 (ep-010)
+    }
   }, [key, storedValue])
 
   return [storedValue, setValue]
@@ -393,13 +393,17 @@ function useModalFocus(isOpen) {
 ```javascript
 useEffect(() => { fetchData(userId) }, []) // userId 변경 무시
 // ✅
-useEffect(() => { fetchData(userId) }, [userId])
+useEffect(() => {
+  const ac = new AbortController()
+  fetchData(userId, { signal: ac.signal })
+  return () => ac.abort()
+}, [userId])
 ```
 
-### ❌ 인라인 객체/함수 → 매 렌더 재생성
+### ❌ memo된 자식에 인라인 객체/함수 전달 → 매 렌더 새 참조로 memo 무효화
 ```javascript
-<Component config={{ option: 'value' }} />      // 매번 새 객체
-<Component onClick={() => handleClick()} />     // 매번 새 함수
+<MemoChild config={{ option: 'value' }} />      // 매번 새 객체
+<MemoChild onClick={() => handleClick()} />     // 매번 새 함수
 // ✅
 const config = useMemo(() => ({ option: 'value' }), [])
 const handleClick = useCallback(() => { /* ... */ }, [])
@@ -413,10 +417,6 @@ items.push(newItem)
 setUser(prev => ({ ...prev, name: '새 이름' }))
 setItems(prev => [...prev, newItem])
 ```
-
----
-
-**핵심**: React 19는 서버 통합과 낙관적 업데이트를 위한 API가 강화됐습니다. Profile first, optimize what matters.
 
 ---
 

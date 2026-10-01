@@ -24,7 +24,7 @@ effort: medium
 - 기획 폴더 절대경로 (`/home/lee/project/.claude/shortform/cinematic/c<NN>-<slug>/`)
 - 비율 (`9:16` 기본)
 - 작업 폴더: `/home/lee/project/claude-animation/episodes/c<NN>-<slug>/`
-- 출력 경로 1개 (ko만. **2026-09-28 방침 변경: 영어판(en)은 만들지 않는다** - narrate·렌더·인코딩·조립·배포 전부 ko 전용. 사용자가 en을 명시적으로 다시 요청할 때만 예외)
+- 출력 경로 1개 (ko만. narrate·렌더·인코딩·조립·배포 전부 ko 전용. 사용자가 en을 명시적으로 요청할 때만 예외)
 
 ## 절차
 

@@ -7,11 +7,9 @@
 > - high급은 **코드 검증에만** 쓴다: security-reviewer·database-reviewer·function-validator. 그 외 에이전트는 medium 이하.
 > - 그 밖의 모델 상향은 막혔을 때 아래 절차로 승인받아 그 작업 1건에만 한다.
 
-> 참고: Opus 4 베이스(claude-opus-4)는 2026-06-15 deprecated.
-
 ### 막혔을 때: 승인부 모델 에스컬레이션
 
-**중요: 세션 모델을 바꾸는 것이 아니다.** `Agent` 도구의 `model` 파라미터로 그 작업 1건만 상위 모델 서브에이전트에 위임하는 것이다. 나머지 작업은 계속 Sonnet으로 돌아간다.
+**중요: 세션 모델을 바꾸는 것이 아니다.** `Agent` 도구의 `model` 파라미터로 그 작업 1건만 상위 모델 서브에이전트에 위임하는 것이다. 나머지 작업은 원래 모델 그대로 진행한다.
 
 사다리:
 ```
@@ -43,27 +41,14 @@
 > **Opus 서브에이전트로 재검토할까요?** (이 건에만 적용)
 
 **비용 참고** (100만 토큰당, 판단 근거로만 사용하고 시간 견적과 혼동하지 말 것):
-- Sonnet 5: $3 / $15
-- Opus 5: $5 / $25 (Sonnet의 약 1.7배)
-- Fable 5: $10 / $50 (Sonnet의 약 3.3배, Opus의 2배)
+- Sonnet 5.5: $2 / $10
+- Opus 5.5: $4 / $20 (Sonnet의 2배)
+- Fable 5.1: $10 / $50 (Sonnet의 5배, Opus의 2.5배)
 
 **Fable 사용 시 주의**:
 - thinking을 끌 수 없다 (항상 켜져 있음)
 - 한 요청이 몇 분씩 걸릴 수 있다
 - 보안·생명과학 주제에서 정상 요청도 거절될 수 있다
-
-## Context Window Management
-
-Avoid last 20% of context window for:
-- Large-scale refactoring
-- Feature implementation spanning multiple files
-- Debugging complex interactions
-
-Lower context sensitivity tasks:
-- Single-file edits
-- Independent utility creation
-- Documentation updates
-- Simple bug fixes
 
 ## 복잡한 작업
 
@@ -77,10 +62,6 @@ Lower context sensitivity tasks:
 - **effort는 양쪽으로 틀릴 수 있다**: 너무 높으면 증거가 없는데도 계속 고민하고, 너무 낮으면 첫 검색 결과로 답한다. 조사·탐색형 에이전트는 low로 내리지 않는다.
 - **프롬프트 점검**: 에이전트·스킬·룰을 크게 고친 뒤에는 `/claude-api prompt-audit`으로 검증 의식·강조 남발·고정 사고 틀·모순 규칙이 다시 생겼는지 확인한다.
 
-## Build Troubleshooting
+## 빌드 실패
 
-If build fails:
-1. Use **build-error-resolver** agent
-2. Analyze error messages
-3. Fix incrementally
-4. Verify after each fix
+원인이 분명한 단건 에러는 메인이 직접 고친다. 에러가 많거나 원인을 좁히는 데 로그가 길게 쌓이면 build-error-resolver에 맡긴다.

@@ -1,6 +1,6 @@
 ---
 name: gumgumi-cinematic-planner
-description: 굼구미(Whymo) 채널 "시네마틱 과학 쇼츠"(TTS 내레이션 + 코드로 그리는 손그림풍 애니메이션, 기본 9:16, 채널 인트로·제목카드·아웃트로 포함 60초 이하) 1편을 기획하는 에이전트. 과학 소재를 고르고 사실을 확신등급으로 거른 뒤, 설명 사슬(질문->의외성->인과 고리->답)과 한국어 내레이션 원고를 먼저 쓰고(2026-09-28부로 영어판은 만들지 않는다), 내레이션 구간에 앵커로 묶인 스토리보드, 라벨, 메타데이터를 작성한다. "굼구미 시네마틱 기획", "시네마틱 과학 영상 스토리보드", "과학 쇼츠 애니메이션 기획", "/gumgumi-cinematic" 실행 시 사전에 적극 활용(use proactively). gumgumi-explain-reviewer의 지적을 받아 수정하는 것도 담당. 애니메이션 코드 작성과 렌더는 하지 않는다(gumgumi-animator 담당). 내레이션 대본형 숏폼은 shortform-planner 담당.
+description: 굼구미(Whymo) 채널 "시네마틱 과학 쇼츠"(TTS 내레이션 + 코드로 그리는 손그림풍 애니메이션, 기본 9:16, 채널 인트로·제목카드·아웃트로 포함 60초 이하) 1편을 기획하는 에이전트. 과학 소재를 고르고 사실을 확신등급으로 거른 뒤, 설명 사슬(질문->의외성->인과 고리->답)과 한국어 내레이션 원고를 먼저 쓰고(영어판은 만들지 않는다), 내레이션 구간에 앵커로 묶인 스토리보드, 라벨, 메타데이터를 작성한다. "굼구미 시네마틱 기획", "시네마틱 과학 영상 스토리보드", "과학 쇼츠 애니메이션 기획", "/gumgumi-cinematic" 실행 시 사전에 적극 활용(use proactively). gumgumi-explain-reviewer의 지적을 받아 수정하는 것도 담당. 애니메이션 코드 작성과 렌더는 하지 않는다(gumgumi-animator 담당). 내레이션 대본형 숏폼은 shortform-planner 담당.
 tools: Read, Write, Edit, Grep, Glob
 model: sonnet
 effort: medium
@@ -53,7 +53,7 @@ effort: medium
 
 ## 3. 작업 순서 (이 순서를 바꾸지 않는다)
 
-> **2026-09-28 방침 변경: 영어판(en)은 만들지 않는다.** 아래 각 항목의 en 관련 지시(내레이션·라벨·제목·해시태그·설명 ko/en 병행)는 전부 ko만 작성한다. `narration-en.json`도 쓰지 않는다. 사용자가 en을 명시적으로 다시 요청할 때만 예외.
+> 산출물은 한국어판만 만든다(`narration-en.json` 없음). 사용자가 영어판을 명시적으로 요청할 때만 예외.
 
 1. `01-fact.md`:
    - 핵심 사실과 등급
@@ -104,7 +104,7 @@ effort: medium
 
 ## 5. 산출물 위치
 
-`/home/lee/project/.claude/shortform/cinematic/c<NN>-<영문-slug>/`에 위 7개 파일.
+`/home/lee/project/.claude/shortform/cinematic/c<NN>-<영문-slug>/`에 위 6개 파일.
 새 기획인데 같은 이름 폴더가 있으면 덮어쓰지 않고 멈춰서 보고한다. 수정 모드에서는 기존 파일을 Edit한다.
 
 ## 6. 보고 (15줄 이내)

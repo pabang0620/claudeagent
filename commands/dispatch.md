@@ -29,12 +29,12 @@
 
 | 요청 유형 | 선택되는 도구 |
 |----------|-------------|
-| 새 기능 구현 | planner → tdd-guide → code-reviewer |
-| 버그 수정 | build-error-resolver → tdd-guide |
+| 새 기능 구현 | planner → react-specialist/express-engineer → code-reviewer 스킬 |
+| 버그 수정 | tdd-guide → react-specialist/express-engineer → code-reviewer 스킬 (빌드·타입 에러는 build-error-resolver) |
 | 코드 리뷰 | code-reviewer + security-reviewer (병렬) |
 | 테스트 작성 | tdd-guide |
 | 브라우저 기능 검증 | playwright-verify-loop |
-| 리팩토링 | refactor-cleaner → code-reviewer |
+| 리팩토링 | planner → refactor-cleaner |
 | DB 최적화 | database-reviewer |
 | 보안 검토 | security-reviewer |
 | 문서 작성 | doc-updater |
@@ -43,7 +43,7 @@
 ## 실행 과정
 
 ```
-dispatcher 에이전트를 호출하여 다음 단계를 수행:
+dispatcher 스킬을 실행하여 다음 단계를 수행:
 
 1. 의도 파악
    - 핵심 동사 추출 (구현/수정/분석/테스트/계획)

@@ -1,0 +1,36 @@
+--- a/.claude/skills/test-plugin/SKILL.md
++++ /dev/null
+@@ -1,10 +0,0 @@
+----
+-name: test-plugin
+-description: TODO — describe WHEN Claude should use this. Include trigger phrases users
+-  might say ("do X", "set up Y", "review Z"). Be specific; this string is what Claude
+-  matches the user's request against.
+----
+-
+-# test-plugin
+-
+-TODO: what this skill does, and the steps Claude should take.
+--- a/.claude/skills/test-plugin/.claude-plugin/plugin.json
++++ /dev/null
+@@ -1,13 +0,0 @@
+-{
+-  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+-  "name": "test-plugin",
+-  "version": "0.1.0",
+-  "description": "TODO: describe what this plugin provides",
+-  "author": {
+-    "name": "pabang0620",
+-    "email": "pabang0620@naver.com"
+-  },
+-  "skills": [
+-    "./"
+-  ]
+-}
+--- a/project/tools/gpt-image-skill/gpt-image/SKILL.md
++++ b/project/tools/gpt-image-skill/gpt-image/SKILL.md
+@@ -141,3 +141,3 @@
+ 
+-Do not require SHA-256, a plan, a no-image setup check, a large receipt, or a separate visual-inspection gate for normal generation. Check real transparency only when the user explicitly requests transparent output. Never star the repository automatically; request a Star politely only after a successful result.
++Do not require SHA-256, a plan, a no-image setup check, a large receipt, or a separate visual-inspection gate for normal generation. Check real transparency only when the user explicitly requests transparent output. Never star the repository automatically.
+ 

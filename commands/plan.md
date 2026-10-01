@@ -83,10 +83,6 @@ Agent (planner):
 - 낮음: 실시간 구독 오버헤드
 
 ## 예상 복잡도: 중간
-- 백엔드: 4-6시간
-- 프론트엔드: 3-4시간
-- 테스트: 2-3시간
-- 총계: 9-13시간
 
 **확인 대기 중**: 이 계획으로 진행하시겠습니까? (yes/no/modify)
 ```
@@ -110,4 +106,4 @@ Agent (planner):
 ## 관련 에이전트
 
 이 명령은 다음 위치의 `planner` 에이전트를 호출합니다:
-`~/.claude/agents/planner.md`
+`.claude/agents/planner.md`

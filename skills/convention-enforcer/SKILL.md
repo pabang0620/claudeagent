@@ -9,10 +9,10 @@ description: React + Express 프로젝트의 네이밍·라우팅·권한·상�
 
 ## 적용 트리거
 
-1. **자동** - `.jsx/.tsx/.js/.ts` 저장 직후 (파일 경로와 내용 기준으로 룰 적용), `.css` 저장 직후 (ce-013, BEM 대상 프로젝트에 한함)
+1. **작성·수정 직후** - `.jsx/.tsx/.js/.ts` 파일을 작성·수정한 직후 Claude가 직접 적용 (파일 경로와 내용 기준으로 룰 적용), `.css`도 동일 (ce-013, BEM 대상 프로젝트에 한함). 저장 훅은 등록돼 있지 않다
 2. **pre-commit** - `git commit` 직전 staged 파일 검사, 위반 시 커밋 거부
 3. **서버 부팅** - Express 앱 부팅 시 `admin*Routes.js` 파일 정적 검증. `requireAdmin` 누락 시 `process.exit(1)`
-4. **수동** - `/convention-check <경로>` 또는 "컨벤션 검사해줘"
+4. **수동** - "컨벤션 검사해줘"처럼 경로를 지정해 요청
 
 ## 레드 라인 (절대 금지)
 
@@ -324,16 +324,16 @@ const { webtoonId } = useParams()  // 이름 일치
 
 ---
 
-### ce-007 - 파일 크기 제한 (warn, autofix: no)
+### ce-007 - 파일 크기 제한 (warn/error, autofix: no)
 
 **룰**:
 - 함수 50줄 초과: warn
-- 파일 800줄 초과: warn
-- 파일 1500줄 초과: error
+- 파일 500줄 초과: error (즉시 분할, rules/coding-style.md I-06)
+- 500줄 미만은 분할을 강제하지 않는다
 
-**근거**: CLAUDE.md 코딩 스타일. WeCom에서 `HomePage.jsx` 가 2000+ 줄로 비대해져 81회 재수정 발생.
+**근거**: rules/coding-style.md 파일 줄 수 규칙. WeCom에서 `HomePage.jsx` 가 2000+ 줄로 비대해져 81회 재수정 발생.
 
-**조치**: 800줄 초과 시 "분리 권장" 메시지 + 분리 후보 (하위 컴포넌트/섹션 단위) 자동 제안.
+**조치**: 500줄 초과 시 "분할 필요" 메시지 + 분리 후보 (하위 컴포넌트/섹션 단위) 제안. 분할 후 연동·동작 확인.
 
 ---
 
@@ -348,7 +348,7 @@ src/
 ├── pages/             # 라우트 단위 페이지 (PC/모바일 단일 파일)
 ├── hooks/             # use* 훅
 ├── store/             # Zustand 등 상태관리
-├── api/               # 백엔드 API 클라이언트
+├── api/               # 공용 API 클라이언트 (페이지 전용 API 파일은 그 페이지 폴더에 동거 허용, rules/coding-style.md 지역성 우선)
 ├── utils/             # 순수 함수 유틸
 ├── constants/         # routes.js, enums.js 등
 ├── styles/            # tokens.css, reset.css
@@ -539,7 +539,7 @@ grep -oE "^\.[a-zA-Z0-9_-]+" FILE.css | sort -u
 **검사 한계 (명시)**:
 - 자손 결합자 뒤 태그 선택자(`.webtoonCard img`)는 회색지대 - 아이콘 라이브러리 삽입(`.icon svg`) 등 실무상 예외가 있어 자동 error가 아닌 warn으로 보고, Claude가 케이스별 확인.
 - Tailwind arbitrary value(`className="[&>div]:flex"`)는 JSX 내부 문자열이라 이 룰(CSS 파일 대상) 범위 밖.
-- 파일 크기 400줄 초과는 ce-007과 중복 감지 - ce-013에서는 별도 보고하지 않고 ce-007에 위임.
+- 파일 크기는 ce-013에서 별도 보고하지 않고 ce-007에 위임.
 
 **근거**: 측정된 실사례 - flagship 프로젝트 BEM 준수율 90/105(86%). "BEM이 문서화된 표준"이라는 사실만으로는 준수가 강제되지 않음을 보여주는 수치. `wecom-convention-checker` Domain 4 (CSS BEM)를 일반화.
 
@@ -689,16 +689,3 @@ ce-002 (admin 권한) 와 ce-004 (useParams) 는 AST 만으로 검증 불가 →
 - SQL 문법·성능·인덱스 검증 (SQL 자체의 정확성) - `api-contract-designer`, `database-reviewer` 담당. ce-012는 SQL이 어느 레이어(Controller/Service/Repository)에 있는지 배치만 검사
 - CSS 토큰(색상/radius/shadow 등 값) 강제 - `ui-design-system` stylelint 담당. ce-013은 CSS 구조(BEM 선택자·`__` 일관성)만 검사
 - 타입 검증 - TypeScript 컴파일러 위임
-
-## 성공 지표
-
-- **admin 권한 누락 fix**: WeCom 7+건 → 0건 (부팅 실패로 강제)
-- **경로 리터럴**: 10+건 → 0건 (pre-commit 차단)
-- **Zustand 무한 렌더**: 5+건 → 0건
-- **useParams 불일치**: 3건 → 0건
-- **CSS BEM 준수율**: flagship 프로젝트 86%(90/105 파일) → ce-013 강제 적용 후 신규/수정 파일 100% 목표
-- **백엔드 3계층 위반(Controller/Service 내 SQL)**: ce-012 pre-commit 차단으로 신규 커밋 0건 목표
-- **pre-commit 차단율**: 컨벤션 위반 커밋 100% 차단
-
-## 참고 커밋 (WeCom 회고)
-`895043a` · `cb917df` · `7e26d6c` · `e95ea5b` · `c6d79e7` · `1275e75` `8dbd501` `aaaf771` (env 미검증)

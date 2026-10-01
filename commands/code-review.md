@@ -18,7 +18,7 @@ Invoke the code-reviewer skill to perform this review.
 
 **코드 품질 (HIGH):**
 - 50줄을 초과하는 함수
-- 800줄을 초과하는 파일
+- 500줄을 초과하는 파일
 - 4단계를 초과하는 중첩 깊이
 - 에러 처리 누락
 - console.log 구문
@@ -37,6 +37,6 @@ Invoke the code-reviewer skill to perform this review.
    - 이슈 설명
    - 수정 방법 제안
 
-4. CRITICAL 또는 HIGH 이슈 발견 시 커밋 차단
+4. CRITICAL 또는 HIGH 이슈가 있으면 보고 맨 위에 "커밋 보류 권장"을 적는다 (커밋을 막는 훅은 없다)
 
 보안 취약점이 있는 코드는 절대 승인하지 않습니다!

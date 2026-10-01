@@ -1,7 +1,7 @@
 ---
 name: skill-create
 description: 로컬 git 히스토리를 분석하여 코딩 패턴을 추출하고 SKILL.md 파일을 생성합니다. Skill Creator GitHub App의 로컬 버전.
-allowed_tools: ["Bash", "Read", "Write", "Grep", "Glob"]
+allowed-tools: ["Bash", "Read", "Write", "Grep", "Glob"]
 ---
 
 # /skill-create - 로컬 스킬 생성
@@ -14,7 +14,6 @@ allowed_tools: ["Bash", "Read", "Write", "Grep", "Glob"]
 /skill-create                    # 현재 저장소 분석
 /skill-create --commits 100      # 최근 100개 커밋 분석
 /skill-create --output ./skills  # 커스텀 출력 디렉터리
-/skill-create --instincts        # continuous-learning-v2용 본능도 생성
 ```
 
 ## 수행 작업
@@ -22,7 +21,6 @@ allowed_tools: ["Bash", "Read", "Write", "Grep", "Glob"]
 1. **Git 히스토리 파싱** - 커밋, 파일 변경사항, 패턴 분석
 2. **패턴 감지** - 반복되는 워크플로우 및 컨벤션 식별
 3. **SKILL.md 생성** - 유효한 Claude Code 스킬 파일 생성
-4. **선택적 본능 생성** - continuous-learning-v2 시스템용
 
 ## 분석 단계
 
@@ -77,29 +75,6 @@ analyzed_commits: {count}
 
 ## 테스트 패턴
 {감지된 테스트 컨벤션}
-```
-
-### 단계 4: 본능 생성 (--instincts 시)
-
-continuous-learning-v2 통합용:
-
-```yaml
----
-id: {repo}-commit-convention
-trigger: "커밋 메시지 작성 시"
-confidence: 0.8
-domain: git
-source: local-repo-analysis
----
-
-# Conventional Commits 사용
-
-## 액션
-다음으로 커밋에 접두사 추가: feat:, fix:, chore:, docs:, test:, refactor:
-
-## 증거
-- {n}개의 커밋 분석
-- {percentage}%가 conventional commit 형식을 따름
 ```
 
 ## 예시 출력
@@ -162,12 +137,6 @@ src/
 - 설치: [github.com/apps/skill-creator](https://github.com/apps/skill-creator)
 - 이슈에 `/skill-creator analyze` 댓글
 - 생성된 스킬이 포함된 PR 수신
-
-## 관련 명령
-
-- `/instinct-import` - 생성된 본능 가져오기
-- `/instinct-status` - 학습된 본능 보기
-- `/evolve` - 본능을 스킬/에이전트로 클러스터링
 
 ---
 

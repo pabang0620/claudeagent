@@ -1,6 +1,6 @@
 ---
 name: flow-nanobanana
-description: Google Flow(flow.google.com)에서 Nano Banana 2로 이미지를, Omni 1.1 Flash로 영상을 생성하는 Playwright 자동화 스킬. "나노바나나로 생성해줘", "구글 플로우로 이미지/영상 만들어줘", "Flow에서 뽑아줘", 게임 에셋·아이콘 시트·로그인 루프 영상 생성 요청 시 사용. 출력은 항상 JPEG(알파 없음)이므로 투명 배경이 필요한 에셋은 마젠타 배경으로 뽑아 크로마키로 알파를 만든다(gpt-image/Codex는 쓰지 않는다). Playwright MCP 도구가 서브에이전트에 전달되지 않으므로 메인 세션이 직접 실행한다.
+description: Google Flow(flow.google.com)에서 Nano Banana 2로 이미지를, Omni 1.1 Flash로 영상을 생성하는 Playwright 자동화 스킬. "나노바나나로 생성해줘", "구글 플로우로 이미지/영상 만들어줘", "Flow에서 뽑아줘", 게임 에셋·아이콘 시트·로그인 루프 영상 생성 요청 시 사용. 출력은 항상 JPEG(알파 없음)이므로 투명 배경이 필요한 에셋은 마젠타 배경으로 뽑아 크로마키로 알파를 만든다(gpt-image/Codex는 쓰지 않는다). 로그인된 브라우저 하나를 쓰므로 한 번에 한 세션(메인 또는 서브에이전트 하나)만 실행한다.
 ---
 
 # flow-nanobanana
@@ -12,7 +12,7 @@ description: Google Flow(flow.google.com)에서 Nano Banana 2로 이미지를, O
 
 1. 이미지·영상 생성은 전부 이 스킬로 한다. Codex/gpt-image는 쓰지 않는다(2026-09-19 사용자 지시).
 2. 출력은 항상 JPEG(RGB, 알파 없음). 투명이 필요하면 5절의 마젠타 + 크로마키.
-3. **메인 세션이 직접 실행한다.** 서브에이전트는 Playwright 도구를 받지 못한다(per-project MCP 등록에 playwright 없음). 위임하면 실패한다. 프롬프트 작성·절단·검증 같은 브라우저 밖 작업만 위임할 수 있다.
+3. 브라우저는 로그인된 하나뿐이라 동시에 두 세션이 조작하지 않는다. 서브에이전트에 맡길 때는 스폰한 에이전트의 도구 목록에 `mcp__playwright__*`가 있는지 먼저 확인하고, 없으면 메인 세션이 직접 실행한다.
 4. 사용자 이메일을 프롬프트·URL·페이로드에 넣지 않는다.
 
 ## 1. Playwright 도구 규칙 (가장 많이 막히는 곳)
@@ -41,22 +41,22 @@ python3 -c "from PIL import Image; im=Image.open('<경로>'); print(im.format, i
 
 ## 3. 영상 생성
 
-1. 모델 Omni 1.1 Flash, 1건 15 크레딧. 생성 전에 **"Approve" 라디오**를 선택해야 시작된다.
+1. 모델 Omni 1.1 Flash, 1건 15 크레딧. 생성 전에 **"Approve" 라디오**가 보이면 선택한다(한국어 UI 프레임 모드에서는 없이 바로 시작된다).
    - 2026-09-25 한국어 UI 실측: 설정 트리거 -> 모드 `동영상` -> 동영상 유형 `프레임`(시작/종료 이미지 지정) 또는 `소재` -> 길이 4/6/8/10초 라디오 -> 해상도. 8초 720p = 12 크레딧, Approve 라디오 없이 바로 시작됐다. 프레임 모드에서는 소재(+) 버튼이 없다.
 2. 길이는 설정 라디오와 프롬프트 문장 둘 다 맞춘다: `Generate a 10 second VIDEO: ...`.
 3. 참조 이미지는 먼저 2절로 2K 이미지를 새로 만들어 첨부한다(기존 그림 재사용은 사용자가 시킬 때만).
 4. 루프용은 `locked-off camera, no camera movement, cyclical motion`을 넣는다. 카메라가 움직이면 시작과 끝이 안 맞는다.
 5. 다운로드: 720p(즉시) / 1080p 업스케일(수 분, `time:60` 반복 대기).
-6. 부메랑 루프 + 워터마크 제거 + 무음(1920x1080 기준, 다른 해상도는 비율 환산):
+6. 부메랑 루프 + 워터마크 잘라내기 + 무음(1920x1080 기준, 다른 해상도는 비율 환산. 워터마크가 있는 우측 하단을 빼고 16:9로 잘라낸 뒤 원래 크기로 되돌린다):
 ```bash
-ffmpeg -i in.mp4 -filter_complex "[0:v]delogo=x=1628:y=845:w=201:h=167:show=0,split[a][b];[b]reverse[r];[a][r]concat=n=2:v=1:a=0" -an -c:v libx264 -crf 18 -preset slow -movflags +faststart out.mp4
+ffmpeg -i in.mp4 -filter_complex "[0:v]crop=1500:844:210:0,scale=1920:1080,split[a][b];[b]reverse[r];[a][r]concat=n=2:v=1:a=0" -an -c:v libx264 -crf 18 -preset slow -movflags +faststart out.mp4
 ```
 
 ## 4. 워터마크
 
 1. Nano Banana 2는 우측 하단에 반투명 반짝이 로고를 찍는다.
 2. 마젠타 배경 위에서는 약 (255,76,255)로 섞여 크로마키 때 자동으로 지워진다.
-3. 복잡한 배경에서는 남는다. ffmpeg `delogo`로 지운다. 위치는 자동 bbox 검출을 믿지 말고(금속 하이라이트를 오인한 사례) 우측 하단 모서리를 잘라 픽셀을 직접 확인한다.
+3. 복잡한 배경에서는 남는다. 지우지 않고(delogo·패치 복사는 번진 자국이 남는다) 워터마크가 빠지도록 화면을 잘라낸다. 위치는 자동 bbox 검출을 믿지 말고(금속 하이라이트를 오인한 사례) 우측 하단 모서리 픽셀을 직접 확인한다.
 
 ## 5. 투명 배경 (마젠타 + 크로마키)
 
@@ -77,7 +77,7 @@ The background is one flat uniform pure magenta #FF00FF filled edge to edge, ful
 
 - [ ] 프롬프트가 `IMAGE (not a video)` 또는 `N second VIDEO`로 시작하는가
 - [ ] 클릭 직전에 스냅샷을 새로 찍었는가, 파라미터가 `target`인가
-- [ ] 영상이면 Approve를 골랐는가
+- [ ] 영상이면 Approve 라디오 유무를 확인했는가
 - [ ] 다운로드 경로를 도구 결과에서 가져왔는가(옛 파일 아님)
 - [ ] 최종 위치로 복사했고 기존 파일을 덮어쓰지 않았는가
 - [ ] PIL 실측을 했는가

@@ -1,0 +1,863 @@
+--- a/.agents/rules/AGENTS.md
++++ b/.agents/rules/AGENTS.md
+@@ -36 +36 @@
+-  - 검토(Review) 작업 (code-reviewer, syntax-validator)
++  - 검토(Review) 작업 (code-reviewer)
+@@ -41,16 +41,2 @@
+-### 2. Function-by-Function Parallel Analysis (함수 단위 병렬 정밀 분석 프로토콜)
+-> **규칙**: 코드베이스 전체를 한 번에 얕게 훑는(shallow skimming) 일괄 분석을 엄격히 금지한다.
+-> 분석 정확도를 극대화하기 위해 반드시 아래 3단계 파이프라인으로 병렬 처리한다:
+-
+-1. **Step 1: 심볼/함수 인덱싱 (Orchestrator)**
+-   - 분석 대상 파일에서 함수/메서드 목록(함수명, 시작-종료 라인, 핵심 역할)을 먼저 추출한다.
+-2. **Step 2: 함수별 1:1 병렬 디스패치 (invoke_subagent with Model: "flash")**
+-   - 각 함수마다 독립적인 function-validator 서브에이전트를 1:1로 배정한다.
+-   - 단일 invoke_subagent 호출에 모든 서브에이전트 배열(Subagents: [...])을 담아 동시에 병렬(Concurrent) 실행한다.
+-   - 각 서브에이전트는 자신이 맡은 단 1개의 함수에만 집중하여:
+-     - 경계 조건 (Null/Undefined, 비정상 타입, 극단값)
+-     - 에러 처리 및 예외 누락 (try/catch, unhandled promise)
+-     - 부작용 (Side Effect, 외부 상태 오염)
+-     - 비즈니스 로직 정확성을 정밀 분석하여 보고서를 작성한다.
+-3. **Step 3: 오케스트레이터 취합 보고**
+-   - 병렬 완료된 함수별 검증 보고서를 수합하여, 버그/주의/정상 순으로 일목요연하게 정리하여 사용자에게 보고한다.
++### 2. 함수 단위 병렬 검증
++함수 로직 검증을 요청받았을 때는 파일·함수 단위로 function-validator를 병렬 스폰할 수 있다. 스폰 프롬프트에 대상 파일 절대경로와 함수명을 적고, 결과는 버그/주의/정상 순으로 취합해 보고한다.
+@@ -85 +70,0 @@
+-| 개인 학습자료 편집 (정보처리기사 노트 등) | ~20 | **study-notes-editor** | li 개수 불변·계산 재검증·탭 숫자 정합이 정의에 내장됨 |
+@@ -113 +98 @@
+-| **타입·문법 "점검만"** | **수정하지 말라는 단서가 붙었을 때만.** "고치지 말고 타입 오류만 알려줘", "점검만 해줘", "어디가 문제인지 목록으로" - TypeScript 타입·문법·임포트·async/await·데코레이터 정적 검증. 단서 없이 "타입 에러 났어"면 위 build-error-resolver로 보낸다 | syntax-validator |
++| **타입·문법 "점검만"** | **수정하지 말라는 단서가 붙었을 때만.** "고치지 말고 타입 오류만 알려줘", "점검만 해줘", "어디가 문제인지 목록으로" | build-error-resolver (점검 모드: 파일을 수정하지 않고 오류 목록만 보고) |
+@@ -116 +100,0 @@
+-| **LINKER HTML→Vue 변환** | HTML 1개를 Vue 3 SFC로 1:1 변환 | linker-html-to-vue |
+@@ -123 +106,0 @@
+-| **개인 학습자료 편집** | 자격증 단일 HTML 노트 (이북은 ebook-editor) | study-notes-editor |
+@@ -130 +113 @@
+-| **판정 대리 (사용자에게 물어보기 직전)** | Claude가 사용자에게 선택·승인·확인을 요청하려는 모든 순간. "이렇게 할까요", "A와 B 중 어느 쪽", "이것도 할까요", 완료 보고 직전, 스코프 확장 검토 시 | lee-wonho |
++| **판정 대리** | 사용자가 "판정 에이전트 써", "lee-wonho한테 물어봐"처럼 명시적으로 요청했을 때만. 질문 전 자동 경유 금지(2026-09-29) | lee-wonho |
+@@ -139 +122 @@
+-| **게임 에셋 생성** | "에셋 생성해줘", "이미지 뽑아줘", "캐릭터 시트 만들어줘", "에셋 프롬프트 써줘" → 대상 게임 프로젝트(Unity·Godot 등 무관) 기준으로 프롬프트 작성부터 gpt-image 스킬 호출·실제 PNG 생성까지 한 에이전트가 전담(2026-09-01 asset-prompt-writer+game-asset-generator 통합, 특정 프로젝트 한정 없음). 씬/엔진 배선은 대상 프로젝트의 구현 에이전트가 이어받는다 | game-asset-artist |
++| **게임 에셋 생성** | "에셋 생성해줘", "이미지 뽑아줘", "캐릭터 시트 만들어줘", "에셋 프롬프트 써줘" → 대상 게임 프로젝트(Unity·Godot 등 무관) 기준으로 프롬프트 작성부터 실제 이미지 생성까지 한 에이전트가 전담(2026-09-01 asset-prompt-writer+game-asset-generator 통합, 특정 프로젝트 한정 없음). 2026-09-19부로 Codex 기반 gpt-image는 완전히 쓰지 않는다("코덱스는 안써 이제") - 알파(투명 배경)가 필요한 에셋도 예외 없이 flow-nanobanana로 마젠타 배경을 생성한 뒤 자체 크로마키 도구로 알파를 만든다 - 상세는 game-asset-artist.md "사용 도구" 절. 스폰된 에이전트에 Playwright 도구가 전달되지 않는 세션에서는 브라우저 조작만 오케스트레이터가 flow-nanobanana 스킬대로 직접 한다(2026-09-20 실측). 씬/엔진 배선은 대상 프로젝트의 구현 에이전트가 이어받는다 | game-asset-artist |
+@@ -141 +124 @@
+-> **Lantern Rite 에이전트 4종은 심볼릭 링크다** (2026-09-15). 원본 `lantern-rite/.agy/agents/`, `project/.agy/agents/`에는 링크. 교훈 SSOT는 `lantern-rite/docs/LESSONS.md`, 재현 절차는 `docs/PLAYBOOK.md`, 프롬프트 규칙은 `docs/PROMPT_RULES.md`. 이미지 결함(잘림·축소·정렬)은 코드가 아니라 절단 도구/재생성으로 고친다(사용자 지시).
++> **Lantern Rite 에이전트 4종은 심볼릭 링크다** (2026-09-15). 원본 `lantern-rite/.claude/agents/`, `project/.claude/agents/`에는 링크. 교훈 SSOT는 `lantern-rite/docs/LESSONS.md`, 재현 절차는 `docs/PLAYBOOK.md`, 프롬프트 규칙은 `docs/PROMPT_RULES.md`. 이미지 결함(잘림·축소·정렬)은 코드가 아니라 절단 도구/재생성으로 고친다(사용자 지시).
+@@ -165 +148 @@
+-### STEP 2: 코드 변경 후 필수 (예외 없음)
++### STEP 2: 코드 리뷰
+@@ -167,3 +150 @@
+-```
+-에이전트가 코드를 작성/수정한 후 → 반드시 code-reviewer 스킬 실행
+-```
++여러 파일에 걸친 코드 변경 뒤에는 code-reviewer 스킬을 실행한다. 단건 수정에는 붙이지 않는다.
+@@ -186 +167 @@
+-> **정의파일 500줄 제한**: 정의파일에는 판단 규칙만 둔다. 코드 예제·구현 골격이 길어지면 `.agy/agent-refs/<주제>.md` 로 분리하고, 정의파일 상단에 "참조 파일 (필요할 때만 읽는다)" 표로 **언제 읽는지** 조건을 명시한다. `agents/` 하위에 두면 에이전트로 스캔될 수 있으므로 반드시 `agent-refs/` 에 둔다.
++> **정의파일 500줄 제한**: 정의파일에는 판단 규칙만 둔다. 코드 예제·구현 골격이 길어지면 `.claude/agent-refs/<주제>.md` 로 분리하고, 정의파일 상단에 "참조 파일 (필요할 때만 읽는다)" 표로 **언제 읽는지** 조건을 명시한다. `agents/` 하위에 두면 에이전트로 스캔될 수 있으므로 반드시 `agent-refs/` 에 둔다.
+@@ -196 +177 @@
+-> - [ ] 생성 후 agent-evaluator-v2 평가 → 90점 이상 달성 후 배포
++> - [ ] 생성 직후 agent-evaluator-v2로 1회 점검한다 (점수 목표 반복 루프 금지, STEP 1-1)
+@@ -204 +185 @@
+-- 실제 목록 확인: 자동 주입된 에이전트 목록 또는 `ls .agy/agents/*.md`
++- 실제 목록 확인: 자동 주입된 에이전트 목록 또는 `ls .claude/agents/*.md`
+@@ -263 +244 @@
+-ALWAYS use parallel Task execution for independent operations:
++독립 작업은 병렬로 실행한다:
+@@ -270,9 +250,0 @@
+-## Multi-Perspective Analysis
+-
+-For complex problems, use split role sub-agents:
+-- Factual reviewer
+-- Senior engineer
+-- Security expert
+-- Consistency reviewer
+-- Redundancy checker
+-
+@@ -283 +255 @@
+-`.agy/agents-archive/`로 퇴역한 에이전트는 라우팅 대상이 아니다. 필요해지면 파일을 `agents/`로 되돌리고 위 표 2곳(STEP 1 + Available Agents)에 다시 등재한다.
++`.claude/agents-archive/`로 퇴역한 에이전트는 라우팅 대상이 아니다. 필요해지면 파일을 `agents/`로 되돌리고 위 표 2곳(STEP 1 + Available Agents)에 다시 등재한다.
+@@ -288,2 +260,2 @@
+-| godot-game-developer, godot-netcode-engineer, game-data-designer, game-level-designer, multiplayer-safety-reviewer | 2026-09-09 | dungeon-legends(Godot 4.7, Lighthaven Depths 2D) 프로젝트가 lighthaven-3d(Unity 3D 리메이크)로 대체됨 - 기존 기술스택은 참고하지 않는다는 신규 레포 CLAUDE.md 원칙에 따라 Godot 전용 에이전트 5종 전부 퇴역. project/.agy/agents/의 심볼릭 링크만 제거(dungeon-legends 레포 원본 파일은 그대로 - 그 레포 자체 세션에서는 계속 유효). 대체 에이전트는 lh-design-reviewer/lh-module-implementer/lh-module-verifier/lh-integration-custodian/lh-asset-specialist 5종. 게임 이미지 에셋 생성은 계속 game-asset-artist 담당(변경 없음) |
+-| asset-prompt-writer, game-asset-generator | 2026-09-01 | project/.agy/agents/의 심볼릭 링크만 제거(dungeon-legends 레포 원본 파일은 그대로 - 그 프로젝트 자체 세션에서는 계속 유효). 두 역할(프롬프트 작성+실제 생성)을 프로젝트 한정 없는 game-asset-artist로 통합해 mobile-idle-rpg 등 다른 게임 프로젝트에서도 쓸 수 있게 함 |
++| godot-game-developer, godot-netcode-engineer, game-data-designer, game-level-designer, multiplayer-safety-reviewer | 2026-09-09 | dungeon-legends(Godot 4.7, Lighthaven Depths 2D) 프로젝트가 lighthaven-3d(Unity 3D 리메이크)로 대체됨 - 기존 기술스택은 참고하지 않는다는 신규 레포 CLAUDE.md 원칙에 따라 Godot 전용 에이전트 5종 전부 퇴역. project/.claude/agents/의 심볼릭 링크만 제거(dungeon-legends 레포 원본 파일은 그대로 - 그 레포 자체 세션에서는 계속 유효). 대체 에이전트는 lh-design-reviewer/lh-module-implementer/lh-module-verifier/lh-integration-custodian/lh-asset-specialist 5종. 게임 이미지 에셋 생성은 계속 game-asset-artist 담당(변경 없음) |
++| asset-prompt-writer, game-asset-generator | 2026-09-01 | project/.claude/agents/의 심볼릭 링크만 제거(dungeon-legends 레포 원본 파일은 그대로 - 그 프로젝트 자체 세션에서는 계속 유효). 두 역할(프롬프트 작성+실제 생성)을 프로젝트 한정 없는 game-asset-artist로 통합해 mobile-idle-rpg 등 다른 게임 프로젝트에서도 쓸 수 있게 함 |
+@@ -390 +362 @@
+-Note: Attribution disabled globally via ~/.agy/settings.json.
++Note: Attribution disabled globally via ~/.claude/settings.json.
+@@ -410 +382 @@
+-사례: `b4dfe54` `cdffec2` `0deb2e9` - 동일 메시지·동일 타임스탬프(2026-04-29 08:58:55)·동일 diff가 `agy/agy_w`/`agy_img` 등 서로 다른 브랜치에 각각 커밋됨.
++사례: `b4dfe54` `cdffec2` `0deb2e9` - 동일 메시지·동일 타임스탬프(2026-04-29 08:58:55)·동일 diff가 `claude/claude_w`/`claude_img` 등 서로 다른 브랜치에 각각 커밋됨.
+@@ -511 +483 @@
+-**Sonnet (`agy-sonnet-5`)** - 기본 모델:
++**Sonnet (`claude-sonnet-5`)** - 기본 모델:
+@@ -516 +488 @@
+-> ⚠️ deprecated: Opus 4 베이스(agy-opus-4)는 2026-06-15 deprecated.
++> ⚠️ deprecated: Opus 4 베이스(claude-opus-4)는 2026-06-15 deprecated.
+@@ -574 +546 @@
+-## Ultrathink + Plan Mode
++## 복잡한 작업
+@@ -576,5 +548 @@
+-For complex tasks requiring deep reasoning:
+-1. Use `ultrathink` for enhanced thinking
+-2. Enable **Plan Mode** for structured approach
+-3. "Rev the engine" with multiple critique rounds
+-4. Use split role sub-agents for diverse analysis
++설계가 필요한 복잡한 작업은 Plan Mode로 계획을 먼저 확정한다. 사고량은 에이전트 `effort`로 조절하고, `ultrathink` 키워드·수동 사고 예산·"여러 차례 비평 라운드" 같은 고정 절차는 쓰지 않는다. 최신 모델은 자체 사고가 있어 이런 틀이 토큰만 늘린다 (근거: claude.com 블로그 "Reducing cost and improving performance with Claude Platform", 2026-09-08).
+@@ -604 +572 @@
+-> 확인 순서: ① 로컬 `.agy/CLAUDE.md`/로컬 에이전트에 문서화된 shape 최우선 → ② 없으면 `backend/src/utils/response.js`(또는 동등 래퍼)를 직접 읽어 실제 shape 확인 → ③ 그것도 없는 신규 프로젝트에 한해 아래 인터페이스를 기본값으로 사용.
++> 확인 순서: ① 로컬 `.claude/CLAUDE.md`/로컬 에이전트에 문서화된 shape 최우선 → ② 없으면 `backend/src/utils/response.js`(또는 동등 래퍼)를 직접 읽어 실제 shape 확인 → ③ 그것도 없는 신규 프로젝트에 한해 아래 인터페이스를 기본값으로 사용.
+@@ -641 +609 @@
+-## 실제 등록된 훅 (`~/.agy/settings.json`, 2026-08-21 실측)
++## 실제 등록된 훅 (`~/.claude/settings.json`, 2026-08-21 실측)
+@@ -648,3 +616,3 @@
+-> (`~/.skill-fog/`, `~/.agy/skills/skill-fog/`, `~/.local/bin/skill-fog` 심볼릭링크, 전역 `CLAUDE.md`
+-> 상단 지시문 전부 삭제). 되살릴 일은 없다고 보지만 백업은 `~/.agy/settings.json.backup.20260821_103203`,
+-> `~/.agy/CLAUDE.md.backup.20260821_103203`에 있다.
++> (`~/.skill-fog/`, `~/.claude/skills/skill-fog/`, `~/.local/bin/skill-fog` 심볼릭링크, 전역 `CLAUDE.md`
++> 상단 지시문 전부 삭제). 되살릴 일은 없다고 보지만 백업은 `~/.claude/settings.json.backup.20260821_103203`,
++> `~/.claude/CLAUDE.md.backup.20260821_103203`에 있다.
+@@ -658 +626 @@
+-- 권한은 `~/.agy/settings.json`의 `permissions.allow`로 설정한다 (`update-config` 스킬 사용)
++- 권한은 `~/.claude/settings.json`의 `permissions.allow`로 설정한다 (`update-config` 스킬 사용)
+--- a/.claude/commands/build-fix.md
++++ b/.claude/commands/build-fix.md
+@@ -2,2 +2,4 @@
+ 
++Use the build-error-resolver agent to perform this task.
++
+ 빌드 오류를 점진적으로 수정합니다:
+@@ -28,2 +30,2 @@
+ 
+-안전을 위해 한 번에 하나의 에러만 수정합니다!
++기본은 한 번에 하나씩 수정한다. 같은 에러 코드가 같은 패턴으로 여러 개면 build-error-resolver 규칙대로 일괄 수정할 수 있다.
+--- a/.claude/commands/code-review.md
++++ b/.claude/commands/code-review.md
+@@ -20,3 +20,3 @@
+ - 50줄을 초과하는 함수
+-- 800줄을 초과하는 파일
++- 500줄을 초과하는 파일
+ - 4단계를 초과하는 중첩 깊이
+@@ -39,3 +39,3 @@
+ 
+-4. CRITICAL 또는 HIGH 이슈 발견 시 커밋 차단
++4. CRITICAL 또는 HIGH 이슈가 있으면 보고 맨 위에 "커밋 보류 권장"을 적는다 (커밋을 막는 훅은 없다)
+ 
+--- a/.claude/commands/dispatch.md
++++ b/.claude/commands/dispatch.md
+@@ -31,4 +31,4 @@
+ |----------|-------------|
+-| 새 기능 구현 | planner → tdd-guide → code-reviewer |
+-| 버그 수정 | build-error-resolver → tdd-guide |
++| 새 기능 구현 | planner → react-specialist/express-engineer → code-reviewer 스킬 |
++| 버그 수정 | tdd-guide → react-specialist/express-engineer → code-reviewer 스킬 (빌드·타입 에러는 build-error-resolver) |
+ | 코드 리뷰 | code-reviewer + security-reviewer (병렬) |
+@@ -36,3 +36,3 @@
+ | 브라우저 기능 검증 | playwright-verify-loop |
+-| 리팩토링 | refactor-cleaner → code-reviewer |
++| 리팩토링 | planner → refactor-cleaner |
+ | DB 최적화 | database-reviewer |
+@@ -45,3 +45,3 @@
+ ```
+-dispatcher 에이전트를 호출하여 다음 단계를 수행:
++dispatcher 스킬을 실행하여 다음 단계를 수행:
+ 
+--- a/.claude/commands/e2e.md
++++ b/.claude/commands/e2e.md
+@@ -43,165 +43,7 @@
+ ```
+-User: /e2e 마켓 검색 및 조회 플로우 테스트해줘
+-
+-Agent (general-purpose, 아래 방법론 주입):
+-# E2E 테스트 생성: 마켓 검색 및 조회 플로우
+-
+-## 식별된 테스트 시나리오
+-
+-**사용자 여정:** 마켓 검색 → 결과 조회 → 마켓 클릭 → 상세 정보 조회
+-
+-**테스트 커버리지:**
+-1. 마켓 페이지로 이동
+-2. 검색 수행
+-3. 검색 결과 검증
+-4. 첫 번째 결과 클릭
+-5. 마켓 상세 페이지 로드 검증
+-6. 차트 렌더링 검증
+-
+-## 생성된 테스트 코드
+-
+-```typescript
+-// tests/e2e/markets/search-and-view.spec.ts
+-import { test, expect } from '@playwright/test'
+-import { MarketsPage } from '../../pages/MarketsPage'
+-import { MarketDetailsPage } from '../../pages/MarketDetailsPage'
+-
+-test.describe('마켓 검색 및 조회 플로우', () => {
+-  test('사용자가 마켓을 검색하고 상세정보를 볼 수 있다', async ({ page }) => {
+-    // 1. 마켓 페이지로 이동
+-    const marketsPage = new MarketsPage(page)
+-    await marketsPage.goto()
+-
+-    // 페이지 로드 검증
+-    await expect(page).toHaveTitle(/Markets/)
+-    await expect(page.locator('h1')).toContainText('Markets')
+-
+-    // 2. 검색 수행
+-    await marketsPage.searchMarkets('election')
+-
+-    // API 응답 대기
+-    await page.waitForResponse(resp =>
+-      resp.url().includes('/api/markets/search') && resp.status() === 200
+-    )
+-
+-    // 3. 검색 결과 검증
+-    const marketCards = marketsPage.marketCards
+-    await expect(marketCards.first()).toBeVisible()
+-    const resultCount = await marketCards.count()
+-    expect(resultCount).toBeGreaterThan(0)
+-
+-    // 검색 결과 스크린샷 캡처
+-    await page.screenshot({ path: 'artifacts/search-results.png' })
+-
+-    // 4. 첫 번째 결과 클릭
+-    const firstMarketTitle = await marketCards.first().textContent()
+-    await marketCards.first().click()
+-
+-    // 5. 마켓 상세 페이지 로드 검증
+-    await expect(page).toHaveURL(/\/markets\/[a-z0-9-]+/)
+-
+-    const detailsPage = new MarketDetailsPage(page)
+-    await expect(detailsPage.marketName).toBeVisible()
+-    await expect(detailsPage.marketDescription).toBeVisible()
+-
+-    // 6. 차트 렌더링 검증
+-    await expect(detailsPage.priceChart).toBeVisible()
+-
+-    // 마켓 이름 일치 검증
+-    const detailsTitle = await detailsPage.marketName.textContent()
+-    expect(detailsTitle?.toLowerCase()).toContain(
+-      firstMarketTitle?.toLowerCase().substring(0, 20) || ''
+-    )
+-
+-    // 마켓 상세 정보 스크린샷 캡처
+-    await page.screenshot({ path: 'artifacts/market-details.png' })
+-  })
+-
+-  test('결과가 없는 검색은 빈 상태를 표시한다', async ({ page }) => {
+-    const marketsPage = new MarketsPage(page)
+-    await marketsPage.goto()
+-
+-    // 존재하지 않는 마켓 검색
+-    await marketsPage.searchMarkets('xyznonexistentmarket123456')
+-
+-    // 빈 상태 검증
+-    await expect(page.locator('[data-testid="no-results"]')).toBeVisible()
+-    await expect(page.locator('[data-testid="no-results"]')).toContainText(
+-      /no.*results|no.*markets/i
+-    )
+-
+-    const marketCount = await marketsPage.marketCards.count()
+-    expect(marketCount).toBe(0)
+-  })
+-
+-  test('검색을 지우면 모든 마켓이 다시 표시된다', async ({ page }) => {
+-    const marketsPage = new MarketsPage(page)
+-    await marketsPage.goto()
+-
+-    // 초기 마켓 개수
+-    const initialCount = await marketsPage.marketCards.count()
+-
+-    // 검색 수행
+-    await marketsPage.searchMarkets('trump')
+-    await page.waitForLoadState('networkidle')
+-
+-    // 필터링된 결과 검증
+-    const filteredCount = await marketsPage.marketCards.count()
+-    expect(filteredCount).toBeLessThan(initialCount)
+-
+-    // 검색 지우기
+-    await marketsPage.searchInput.clear()
+-    await page.waitForLoadState('networkidle')
+-
+-    // 모든 마켓이 다시 표시되는지 검증
+-    const finalCount = await marketsPage.marketCards.count()
+-    expect(finalCount).toBe(initialCount)
+-  })
+-})
+-```
+-
+-## 테스트 실행
+-
+-```bash
+-# 생성된 테스트 실행
+-npx playwright test tests/e2e/markets/search-and-view.spec.ts
+-
+-Running 3 tests using 3 workers
+-
+-  ✓  [chromium] › search-and-view.spec.ts:5:3 › 사용자가 마켓을 검색하고 상세정보를 볼 수 있다 (4.2s)
+-  ✓  [chromium] › search-and-view.spec.ts:52:3 › 결과가 없는 검색은 빈 상태를 표시한다 (1.8s)
+-  ✓  [chromium] › search-and-view.spec.ts:67:3 › 검색을 지우면 모든 마켓이 다시 표시된다 (2.9s)
+-
+-  3 passed (9.1s)
+-
+-생성된 결과물:
+-- artifacts/search-results.png
+-- artifacts/market-details.png
+-- playwright-report/index.html
+-```
+-
+-## 테스트 리포트
+-
+-```
+-╔══════════════════════════════════════════════════════════════╗
+-║                    E2E 테스트 결과                           ║
+-╠══════════════════════════════════════════════════════════════╣
+-║ 상태:       ✅ 모든 테스트 통과                              ║
+-║ 전체:       3 tests                                          ║
+-║ 통과:       3 (100%)                                         ║
+-║ 실패:       0                                                ║
+-║ 불안정:     0                                                ║
+-║ 소요시간:   9.1s                                             ║
+-╚══════════════════════════════════════════════════════════════╝
+-
+-결과물:
+-📸 스크린샷: 2 files
+-📹 비디오: 0 files (실패 시에만)
+-🔍 추적: 0 files (실패 시에만)
+-📊 HTML 리포트: playwright-report/index.html
+-
+-리포트 보기: npx playwright show-report
+-```
+-
+-✅ E2E 테스트 스위트 CI/CD 통합 준비 완료!
++# E2E 테스트 생성: <플로우명>
++## 시나리오: <사용자 여정 단계 목록>
++## 생성 파일: tests/e2e/<영역>/<이름>.spec.ts (Page Object Model)
++## 실행 결과: 통과 N / 실패 N / 불안정 N
++## 결과물: playwright-report/index.html, 실패 시 스크린샷·추적
+ ```
+@@ -281,3 +123,3 @@
+   if: always()
+-  uses: actions/upload-artifact@v3
++  uses: actions/upload-artifact@v4
+   with:
+@@ -287,23 +129,2 @@
+ 
+-## 우선순위 테스트 플로우
+-
+-다음 E2E 테스트를 우선적으로 수행:
+-
+-**🔴 중요 (반드시 통과해야 함):**
+-1. 사용자가 지갑을 연결할 수 있다
+-2. 사용자가 마켓을 탐색할 수 있다
+-3. 사용자가 마켓을 검색할 수 있다
+-4. 사용자가 마켓 상세정보를 볼 수 있다
+-5. 사용자가 거래할 수 있다
+-6. 마켓이 올바르게 해결된다
+-7. 사용자가 자금을 출금할 수 있다
+-
+-**🟡 중요:**
+-1. 마켓 생성 플로우
+-2. 사용자 프로필 업데이트
+-3. 실시간 가격 업데이트
+-4. 차트 렌더링
+-5. 마켓 필터링 및 정렬
+-6. 모바일 반응형 레이아웃
+-
+ ## 모범 사례
+@@ -326,10 +147,2 @@
+ 
+-## 중요 참고사항
+-
+-**중요:**
+-- 실제 금전이 관련된 E2E 테스트는 반드시 테스트넷/스테이징에서만 실행
+-- 프로덕션에서 거래 테스트 실행 금지
+-- 금융 테스트에 `test.skip(process.env.NODE_ENV === 'production')` 설정
+-- 소액의 테스트 자금만 있는 테스트 지갑 사용
+-
+ ## 다른 명령과의 통합
+@@ -344,3 +157,3 @@
+ 전담 에이전트 정의는 `agents-archive/e2e-runner-retired-2026-08-20.md`에 보관돼 있습니다.
+-필요해지면 `agents/`로 되돌리고 `rules/agents.md` 표 2곳에 재등재하십시오.
++필요해지면 `agents/`로 되돌리고 `rules/agents.md` STEP 1 표에 재등재하십시오.
+ 
+--- a/.claude/commands/orchestrate.md
++++ b/.claude/commands/orchestrate.md
+@@ -13,3 +13,3 @@
+ ```
+-planner -> tdd-guide -> code-reviewer -> security-reviewer
++planner -> react-specialist|express-engineer -> code-reviewer 스킬 -> [인증·결제·개인정보면] security-reviewer
+ ```
+@@ -19,3 +19,3 @@
+ ```
+-explorer -> tdd-guide -> code-reviewer
++tdd-guide -> react-specialist|express-engineer -> code-reviewer 스킬
+ ```
+@@ -25,3 +25,3 @@
+ ```
+-architect -> code-reviewer -> tdd-guide
++planner -> refactor-cleaner -> code-reviewer 스킬
+ ```
+@@ -86,3 +86,3 @@
+ 
+-3. **Code Reviewer Agent**
++3. **code-reviewer 스킬** (에이전트가 아니므로 스폰하지 않고 스킬로 실행)
+    - 구현 검토
+@@ -90,3 +90,3 @@
+    - 개선사항 제안
+-   - 출력: `HANDOFF: code-reviewer -> security-reviewer`
++   - 결과를 security-reviewer 스폰 프롬프트에 전달
+ 
+@@ -142,3 +142,2 @@
+ 동시 실행:
+-- code-reviewer (품질)
+ - security-reviewer (보안)
+@@ -168,3 +167,3 @@
+ 1. **planner로 시작** - 복잡한 기능의 경우
+-2. **항상 code-reviewer 포함** - 머지 전
++2. **여러 파일 변경이면 code-reviewer 스킬 실행** - 머지 전
+ 3. **security-reviewer 사용** - 인증/결제/개인정보의 경우
+--- a/.claude/commands/plan.md
++++ b/.claude/commands/plan.md
+@@ -85,6 +85,2 @@
+ ## 예상 복잡도: 중간
+-- 백엔드: 4-6시간
+-- 프론트엔드: 3-4시간
+-- 테스트: 2-3시간
+-- 총계: 9-13시간
+ 
+@@ -112,2 +108,2 @@
+ 이 명령은 다음 위치의 `planner` 에이전트를 호출합니다:
+-`~/.claude/agents/planner.md`
++`.claude/agents/planner.md`
+--- a/.claude/commands/refactor-clean.md
++++ b/.claude/commands/refactor-clean.md
+@@ -11,20 +11,8 @@
+ 
+-2. .reports/dead-code-analysis.md에 종합 보고서 생성
++2. 1단계: 아무것도 지우지 않고 후보를 등급별 표(안전/주의/위험)로 보고하고 멈춘다.
+ 
+-3. 심각도별로 발견사항 분류:
+-   - SAFE: 테스트 파일, 사용되지 않는 유틸리티
+-   - CAUTION: API 라우트, 컴포넌트
+-   - DANGER: 설정 파일, 메인 진입점
++3. 2단계: 사용자가 승인한 목록만 제거한다. 종류별로 빌드·테스트를 돌리고, 실패하면 그 변경만 되돌린다.
+ 
+-4. 안전한 삭제만 제안
++4. 정리된 항목 요약 표시
+ 
+-5. 각 삭제 전:
+-   - 전체 테스트 스위트 실행
+-   - 테스트 통과 확인
+-   - 변경 적용
+-   - 테스트 재실행
+-   - 테스트 실패 시 롤백
+-
+-6. 정리된 항목 요약 표시
+-
+-테스트를 먼저 실행하지 않고 코드를 절대 삭제하지 마세요!
++승인 목록에 없는 항목은 삭제하지 않는다.
+--- a/.claude/commands/setup-pm.md
++++ /dev/null
+@@ -1,80 +0,0 @@
+----
+-description: 선호하는 패키지 매니저 설정 (npm/pnpm/yarn/bun)
+-disable-model-invocation: true
+----
+-
+-# Package Manager Setup
+-
+-이 프로젝트 또는 전역적으로 선호하는 패키지 매니저를 설정합니다.
+-
+-## 사용법
+-
+-```bash
+-# 현재 패키지 매니저 감지
+-node scripts/setup-package-manager.js --detect
+-
+-# 전역 설정
+-node scripts/setup-package-manager.js --global pnpm
+-
+-# 프로젝트 설정
+-node scripts/setup-package-manager.js --project bun
+-
+-# 사용 가능한 패키지 매니저 목록
+-node scripts/setup-package-manager.js --list
+-```
+-
+-## 감지 우선순위
+-
+-어떤 패키지 매니저를 사용할지 결정할 때 다음 순서로 확인:
+-
+-1. **환경 변수**: `CLAUDE_PACKAGE_MANAGER`
+-2. **프로젝트 설정**: `.claude/package-manager.json`
+-3. **package.json**: `packageManager` 필드
+-4. **락 파일**: package-lock.json, yarn.lock, pnpm-lock.yaml, 또는 bun.lockb의 존재
+-5. **전역 설정**: `~/.claude/package-manager.json`
+-6. **폴백**: 먼저 사용 가능한 패키지 매니저 (pnpm > bun > yarn > npm)
+-
+-## 설정 파일
+-
+-### 전역 설정
+-```json
+-// ~/.claude/package-manager.json
+-{
+-  "packageManager": "pnpm"
+-}
+-```
+-
+-### 프로젝트 설정
+-```json
+-// .claude/package-manager.json
+-{
+-  "packageManager": "bun"
+-}
+-```
+-
+-### package.json
+-```json
+-{
+-  "packageManager": "pnpm@8.6.0"
+-}
+-```
+-
+-## 환경 변수
+-
+-모든 다른 감지 방법을 재정의하려면 `CLAUDE_PACKAGE_MANAGER`를 설정:
+-
+-```bash
+-# Windows (PowerShell)
+-$env:CLAUDE_PACKAGE_MANAGER = "pnpm"
+-
+-# macOS/Linux
+-export CLAUDE_PACKAGE_MANAGER=pnpm
+-```
+-
+-## 감지 실행
+-
+-현재 패키지 매니저 감지 결과를 보려면:
+-
+-```bash
+-node scripts/setup-package-manager.js --detect
+-```
+--- a/.claude/commands/skill-create.md
++++ b/.claude/commands/skill-create.md
+@@ -3,3 +3,3 @@
+ description: 로컬 git 히스토리를 분석하여 코딩 패턴을 추출하고 SKILL.md 파일을 생성합니다. Skill Creator GitHub App의 로컬 버전.
+-allowed_tools: ["Bash", "Read", "Write", "Grep", "Glob"]
++allowed-tools: ["Bash", "Read", "Write", "Grep", "Glob"]
+ ---
+@@ -16,3 +16,2 @@
+ /skill-create --output ./skills  # 커스텀 출력 디렉터리
+-/skill-create --instincts        # continuous-learning-v2용 본능도 생성
+ ```
+@@ -24,3 +23,2 @@
+ 3. **SKILL.md 생성** - 유효한 Claude Code 스킬 파일 생성
+-4. **선택적 본능 생성** - continuous-learning-v2 시스템용
+ 
+@@ -81,25 +79,2 @@
+ 
+-### 단계 4: 본능 생성 (--instincts 시)
+-
+-continuous-learning-v2 통합용:
+-
+-```yaml
+----
+-id: {repo}-commit-convention
+-trigger: "커밋 메시지 작성 시"
+-confidence: 0.8
+-domain: git
+-source: local-repo-analysis
+----
+-
+-# Conventional Commits 사용
+-
+-## 액션
+-다음으로 커밋에 접두사 추가: feat:, fix:, chore:, docs:, test:, refactor:
+-
+-## 증거
+-- {n}개의 커밋 분석
+-- {percentage}%가 conventional commit 형식을 따름
+-```
+-
+ ## 예시 출력
+@@ -165,8 +140,2 @@
+ 
+-## 관련 명령
+-
+-- `/instinct-import` - 생성된 본능 가져오기
+-- `/instinct-status` - 학습된 본능 보기
+-- `/evolve` - 본능을 스킬/에이전트로 클러스터링
+-
+ ---
+--- a/.claude/commands/tdd.md
++++ b/.claude/commands/tdd.md
+@@ -2 +2 @@
+-description: 테스트 주도 개발 워크플로우 강제. 인터페이스 스캐폴딩, 테스트 먼저 생성, 그 다음 테스트를 통과하는 최소한의 코드 구현. 80%+ 커버리지 보장.
++description: 테스트 주도 개발 워크플로우 강제. 인터페이스 스캐폴딩, 테스트 먼저 생성, 그 다음 테스트를 통과하는 최소한의 코드 구현. 커버리지는 측정값만 보고(80%는 인수 게이트에서만).
+@@ -7 +7 @@
+-이 명령은 **tdd-guide** 에이전트를 호출하여 테스트 주도 개발 방법론을 강제합니다.
++이 명령은 **tdd-guide** 에이전트를 호출합니다. tdd-guide는 실패 테스트만 쓰고, 구현은 react-specialist/express-engineer에 위임합니다.
+@@ -15 +15 @@
+-5. **커버리지 검증** - 80%+ 테스트 커버리지 보장
++5. **커버리지 측정** - 측정값만 보고 (80%는 "테스트 맡길게" 인수 게이트에서만)
+@@ -20,5 +20,3 @@
+-- 새 기능 구현
+-- 새 함수/컴포넌트 추가
+-- 버그 수정 (버그를 재현하는 테스트를 먼저 작성)
+-- 기존 코드 리팩토링
+-- 중요한 비즈니스 로직 구축
++- 재현이 어렵거나 회귀 위험이 큰 버그 (재현 테스트를 먼저 작성)
++- 테스트가 필요한 신규 로직
++- 단건·소규모 수정에는 쓰지 않는다
+@@ -33 +31 @@
+-4. **최소한의 구현 작성** - 테스트를 통과하도록
++4. **구현 위임** - react-specialist/express-engineer가 테스트를 통과하는 최소 구현
+@@ -36 +34 @@
+-7. **커버리지 확인** - 80% 미만이면 더 많은 테스트 추가
++7. **커버리지 측정** - 측정값만 보고 (인수 게이트일 때만 80% 기준으로 보강)
+@@ -49 +47 @@
+-## 사용 예시
++## 출력 형식 (예시 골격)
+@@ -52,202 +50,6 @@
+-User: /tdd 마켓 유동성 점수를 계산하는 함수가 필요해
+-
+-Agent (tdd-guide):
+-# TDD 세션: 마켓 유동성 점수 계산기
+-
+-## 단계 1: 인터페이스 정의 (SCAFFOLD)
+-
+-```typescript
+-// lib/liquidity.ts
+-export interface MarketData {
+-  totalVolume: number
+-  bidAskSpread: number
+-  activeTraders: number
+-  lastTradeTime: Date
+-}
+-
+-export function calculateLiquidityScore(market: MarketData): number {
+-  // TODO: Implementation
+-  throw new Error('Not implemented')
+-}
+-```
+-
+-## 단계 2: 실패하는 테스트 작성 (RED)
+-
+-```typescript
+-// lib/liquidity.test.ts
+-import { calculateLiquidityScore } from './liquidity'
+-
+-describe('calculateLiquidityScore', () => {
+-  it('유동성이 높은 마켓은 높은 점수를 반환해야 한다', () => {
+-    const market = {
+-      totalVolume: 100000,
+-      bidAskSpread: 0.01,
+-      activeTraders: 500,
+-      lastTradeTime: new Date()
+-    }
+-
+-    const score = calculateLiquidityScore(market)
+-
+-    expect(score).toBeGreaterThan(80)
+-    expect(score).toBeLessThanOrEqual(100)
+-  })
+-
+-  it('should return low score for illiquid market', () => {
+-    const market = {
+-      totalVolume: 100,
+-      bidAskSpread: 0.5,
+-      activeTraders: 2,
+-      lastTradeTime: new Date(Date.now() - 86400000) // 1 day ago
+-    }
+-
+-    const score = calculateLiquidityScore(market)
+-
+-    expect(score).toBeLessThan(30)
+-    expect(score).toBeGreaterThanOrEqual(0)
+-  })
+-
+-  it('should handle edge case: zero volume', () => {
+-    const market = {
+-      totalVolume: 0,
+-      bidAskSpread: 0,
+-      activeTraders: 0,
+-      lastTradeTime: new Date()
+-    }
+-
+-    const score = calculateLiquidityScore(market)
+-
+-    expect(score).toBe(0)
+-  })
+-})
+-```
+-
+-## Step 3: Run Tests - Verify FAIL
+-
+-```bash
+-npm test lib/liquidity.test.ts
+-
+-FAIL lib/liquidity.test.ts
+-  ✕ should return high score for liquid market (2 ms)
+-    Error: Not implemented
+-
+-1 test failed, 0 passed
+-```
+-
+-✅ Tests fail as expected. Ready to implement.
+-
+-## Step 4: Implement Minimal Code (GREEN)
+-
+-```typescript
+-// lib/liquidity.ts
+-export function calculateLiquidityScore(market: MarketData): number {
+-  // Handle zero volume edge case
+-  if (market.totalVolume === 0) {
+-    return 0
+-  }
+-
+-  // Calculate component scores (0-100 scale)
+-  const volumeScore = Math.min(market.totalVolume / 1000, 100)
+-  const spreadScore = Math.max(100 - (market.bidAskSpread * 1000), 0)
+-  const traderScore = Math.min(market.activeTraders / 10, 100)
+-
+-  // Recent activity bonus
+-  const hoursSinceLastTrade = (Date.now() - market.lastTradeTime.getTime()) / (1000 * 60 * 60)
+-  const recencyScore = Math.max(100 - (hoursSinceLastTrade * 10), 0)
+-
+-  // Weighted average
+-  const score = (
+-    volumeScore * 0.4 +
+-    spreadScore * 0.3 +
+-    traderScore * 0.2 +
+-    recencyScore * 0.1
+-  )
+-
+-  return Math.min(Math.max(score, 0), 100) // Clamp to 0-100
+-}
+-```
+-
+-## Step 5: Run Tests - Verify PASS
+-
+-```bash
+-npm test lib/liquidity.test.ts
+-
+-PASS lib/liquidity.test.ts
+-  ✓ should return high score for liquid market (3 ms)
+-  ✓ should return low score for illiquid market (2 ms)
+-  ✓ should handle edge case: zero volume (1 ms)
+-
+-3 tests passed
+-```
+-
+-✅ All tests passing!
+-
+-## Step 6: Refactor (IMPROVE)
+-
+-```typescript
+-// lib/liquidity.ts - Refactored with constants and better readability
+-const WEIGHTS = {
+-  VOLUME: 0.4,
+-  SPREAD: 0.3,
+-  TRADERS: 0.2,
+-  RECENCY: 0.1,
+-} as const
+-
+-const SCALE_FACTORS = {
+-  VOLUME: 1000,
+-  SPREAD: 1000,
+-  TRADERS: 10,
+-  RECENCY_PENALTY: 10,
+-} as const
+-
+-function clamp(value: number, min: number, max: number): number {
+-  return Math.min(Math.max(value, min), max)
+-}
+-
+-export function calculateLiquidityScore(market: MarketData): number {
+-  if (market.totalVolume === 0) return 0
+-
+-  const volumeScore = Math.min(market.totalVolume / SCALE_FACTORS.VOLUME, 100)
+-  const spreadScore = clamp(100 - (market.bidAskSpread * SCALE_FACTORS.SPREAD), 0, 100)
+-  const traderScore = Math.min(market.activeTraders / SCALE_FACTORS.TRADERS, 100)
+-
+-  const hoursSinceLastTrade = (Date.now() - market.lastTradeTime.getTime()) / (1000 * 60 * 60)
+-  const recencyScore = clamp(100 - (hoursSinceLastTrade * SCALE_FACTORS.RECENCY_PENALTY), 0, 100)
+-
+-  const weightedScore =
+-    volumeScore * WEIGHTS.VOLUME +
+-    spreadScore * WEIGHTS.SPREAD +
+-    traderScore * WEIGHTS.TRADERS +
+-    recencyScore * WEIGHTS.RECENCY
+-
+-  return clamp(weightedScore, 0, 100)
+-}
+-```
+-
+-## Step 7: Verify Tests Still Pass
+-
+-```bash
+-npm test lib/liquidity.test.ts
+-
+-PASS lib/liquidity.test.ts
+-  ✓ should return high score for liquid market (3 ms)
+-  ✓ should return low score for illiquid market (2 ms)
+-  ✓ should handle edge case: zero volume (1 ms)
+-
+-3 tests passed
+-```
+-
+-✅ Refactoring complete, tests still passing!
+-
+-## Step 8: Check Coverage
+-
+-```bash
+-npm test -- --coverage lib/liquidity.test.ts
+-
+-File           | % Stmts | % Branch | % Funcs | % Lines
+----------------|---------|----------|---------|--------
+-liquidity.ts   |   100   |   100    |   100   |   100
+-
+-Coverage: 100% ✅ (Target: 80%)
+-```
+-
+-✅ TDD session complete!
++# TDD 세션: <기능명>
++## RED: 실패 테스트 (파일: <경로>, 테스트명)
++## 실패 확인: <명령> → FAIL (<에러 첫 줄>)
++## GREEN 위임: <에이전트> - <수정 파일>
++## 통과 확인: 통과 N / 실패 N
++## 커버리지: 측정했을 때만
+@@ -264 +66 @@
+-- ✅ 80%+ 커버리지 목표 (중요한 코드는 100%)
++- ✅ 커버리지는 측정값만 보고 (80%는 인수 게이트에서만)
+@@ -293 +95 @@
+-## 커버리지 요구사항
++## 커버리지
+@@ -295,6 +97 @@
+-- **모든 코드 80% 최소**
+-- **다음은 100% 필수:**
+-  - 금융 계산
+-  - 인증 로직
+-  - 보안 중요 코드
+-  - 핵심 비즈니스 로직
++- 개발 중에는 측정값만 보고한다. 80%는 "테스트 맡길게" 인수 게이트에서만 기준으로 삼는다(`rules/testing.md`).
+@@ -323,4 +120 @@
+-`~/.claude/agents/tdd-guide.md`
+-
+-다음 위치의 `tdd-workflow` 스킬도 참조할 수 있습니다:
+-`~/.claude/skills/tdd-workflow/`
++`.claude/agents/tdd-guide.md`
+--- a/.claude/commands/update-codemaps.md
++++ b/.claude/commands/update-codemaps.md
+@@ -2,2 +2,4 @@
+ 
++Use the doc-updater agent to perform this task.
++
+ 코드베이스 구조를 분석하고 아키텍처 문서를 업데이트합니다:
+@@ -5,7 +7,5 @@
+ 1. import, export, 의존성에 대한 모든 소스 파일 스캔
+-2. 다음 형식으로 토큰 절약형 코드맵 생성:
+-   - codemaps/architecture.md - 전체 아키텍처
+-   - codemaps/backend.md - 백엔드 구조
+-   - codemaps/frontend.md - 프론트엔드 구조
+-   - codemaps/data.md - 데이터 모델 및 스키마
++2. 코드맵은 `docs/CODEMAPS/` 규격을 따른다:
++   - docs/CODEMAPS/INDEX.md - 전체 아키텍처
++   - 영역별 파일(frontend, backend, database, integrations, workers) - 실제 있는 영역만
+ 
