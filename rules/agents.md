@@ -67,17 +67,13 @@
 | **PastLetter 이미지 프롬프트** | 모두의창업2차 지원서 `[사진: 설명]` 자리·홍보용 이미지 생성 프롬프트 작성 (PastLetter 전용, 실제 이미지 생성은 안 함) | pastletter-image-prompt-writer |
 | **판정 대리** | 사용자가 "판정 에이전트 써", "lee-wonho한테 물어봐"처럼 명시적으로 요청했을 때만. 질문 전 자동 경유 금지(2026-09-29) | lee-wonho |
 | **웰콘 사업 자문 판단** | 콘텐츠 해외진출 기업정보 구축 기획(1단계) 웰콘 프로젝트 관련 설계 판단 | welcon-advisor |
+| **Starspire 게임 서버** | 캐릿터 키우기(starspire) 서버의 테이블·API 설계 / 서버 코드 작성 / 돈 경로 점검. 계획 SSOT는 게임 레포 `docs/SERVER_DEV_PLAN.md`, 에이전트 정본은 게임 레포 `.claude/agents/`(여기는 심볼릭 링크) | 설계 starspire-server-architect → 구현 starspire-backend-coder → 점검 starspire-economy-auditor |
 
 | **신규 2D 액션 게임 제작 (전체 파이프라인)** | "2D 게임 만들어줘", "이런 게임 Unity로", `/game2d <컨셉>` -> lantern-rite 템플릿 복제 -> 설계 3문서 -> 골격 -> 이미지 시트 -> 절단 -> 손맛 -> 3중 검증 -> 플레이테스트. 에이전트 4종 배정 순서는 스킬이 정한다 | `game2d-pipeline` 스킬 |
 | **굼구미 시네마틱 과학 영상** | "굼구미 시네마틱", "시네마틱 과학 영상", "코드로 과학 애니메이션", `/gumgumi-cinematic <주제>` -> TTS 내레이션 과학 쇼츠(채널 인트로·제목카드·아웃트로 포함, 기본 9:16, 60초 이하). 영상 생성 AI 없이 코드로 매 프레임을 그림(엔진 `claude-animation/engine/`, 기준 샘플 `claude-animation/gumgumi-intro/`). planner(설명 사슬 먼저·스토리보드·자막) -> explain-reviewer(시청자 시점 설명 검토) -> 사용자 승인 -> animator(장면 코드·도식 헬퍼·정지컷 점검·렌더) -> `shorts/ko` 배포(2026-09-28부로 en 미제작) | `gumgumi-cinematic` 스킬 (gumgumi-cinematic-planner -> gumgumi-explain-reviewer -> gumgumi-animator) |
 | **Readdy Interactive Cinematic 영상 생성** | "영상 생성해줘", "트레일러 만들어줘", "로그인 화면 움직이는 영상", "Readdy로 영상", "인터랙티브 시네마틱" -> 기획(필요 영상 목록·체이닝 여부) -> 첫/마지막 프레임 이미지 준비(재사용 우선) -> 영어 프롬프트 작성(얼굴/눈 잠금 등 하드룰) -> Playwright로 탭별 생성요청 제출(기본은 제출만, 대기 안 함) -> 완료 후 다운로드·검증. 실제 화면 배선(엔진 코드)은 대상 프로젝트 구현 에이전트가 이어받는다 | `readdy-cinematic` 스킬 |
-| **Lantern Rite / Unity 2D 벨트액션 구현** | `/mnt/c/Users/admin/Desktop/games/lantern-rite/` 의 C# 코드·SceneBuilder·ArtImporter·BuildGame 헤드리스 파이프라인 작성/수정 ("씬 만들어줘", "빌더 고쳐줘", "프리팹 배선"). 신규 2D 액션 게임도 이 4종을 그대로 쓴다 (`lantern-rite/docs/PLAYBOOK.md`가 절차 SSOT) | unity2d-scene-architect |
-| **Lantern Rite 손맛 튜닝** | 콤보 버퍼·런처/저글·히트스톱·흔들림·접점·밀어내기·깊이 판정 등 전투 감각 코드 조정 ("타격감", "손맛", "판정 이상해") - 결함 판정은 오케스트레이터가 코드를 직접 읽고 내린 뒤 위임 | game-feel-tuner |
-| **AI 스프라이트 시트 절단** | 사용자가 웹에서 만든 시트(`art/incoming/NN_*.png`)를 `art/tools/process_incoming.py`로 프레임화·수치 검증·오버뷰 생성 ("시트 잘라줘", "프레임 정렬", "캐릭터 잘림/작아짐"은 이미지 단계 문제) | sprite-sheet-slicer |
-| **Unity 빌드 3중 검증** | 배치 로그 + .prefab/.unity guid 참조 개수 + `-lr-autoshot` 게임 내부 스크린샷/Player.log. 창 활성화·SendKeys 절대 금지 ("빌드 검증", "배선 확인") | unity-build-verifier |
 | **게임 에셋 생성** | "에셋 생성해줘", "이미지 뽑아줘", "캐릭터 시트 만들어줘", "에셋 프롬프트 써줘" → 대상 게임 프로젝트(Unity·Godot 등 무관) 기준으로 프롬프트 작성부터 실제 이미지 생성까지 한 에이전트가 전담(2026-09-01 asset-prompt-writer+game-asset-generator 통합, 특정 프로젝트 한정 없음). 2026-09-19부로 Codex 기반 gpt-image는 완전히 쓰지 않는다("코덱스는 안써 이제") - 알파(투명 배경)가 필요한 에셋도 예외 없이 flow-nanobanana로 마젠타 배경을 생성한 뒤 자체 크로마키 도구로 알파를 만든다 - 상세는 game-asset-artist.md "사용 도구" 절. 스폰된 에이전트에 Playwright 도구가 전달되지 않는 세션에서는 브라우저 조작만 오케스트레이터가 flow-nanobanana 스킬대로 직접 한다(2026-09-20 실측). 씬/엔진 배선은 대상 프로젝트의 구현 에이전트가 이어받는다 | game-asset-artist |
 
-> **Lantern Rite 에이전트 4종은 심볼릭 링크다** (2026-09-15). 원본 `lantern-rite/.claude/agents/`, `project/.claude/agents/`에는 링크. 교훈 SSOT는 `lantern-rite/docs/LESSONS.md`, 재현 절차는 `docs/PLAYBOOK.md`, 프롬프트 규칙은 `docs/PROMPT_RULES.md`. 이미지 결함(잘림·축소·정렬)은 코드가 아니라 절단 도구/재생성으로 고친다(사용자 지시).
 
 ### STEP 1-1: 평가 에이전트 사용 제약 (agent-evaluator-v2 / skill-evaluator)
 
@@ -103,7 +99,7 @@
 
 ### STEP 2: 코드 리뷰
 
-여러 파일에 걸친 코드 변경 뒤에는 code-reviewer 스킬을 실행한다. 단건·소규모 수정에는 붙이지 않는다.
+code-reviewer 스킬은 사용자가 리뷰를 요청했을 때만 실행한다. 코드 변경 뒤에 자동으로 붙이지 않는다(전역 규칙).
 
 ---
 
@@ -135,14 +131,14 @@
 ```
 1. planner (계획 수립)
 2. react-specialist 또는 express-engineer (구현)
-3. code-reviewer 스킬 (리뷰)
+(리뷰는 사용자가 요청할 때만 code-reviewer 스킬로)
 ```
 
 ### 버그 수정 요청
 ```
 1. [재현 어렵거나 회귀 위험 클 때만] tdd-guide (재현 테스트 작성)
 2. 메인 직접 또는 react-specialist / express-engineer (수정)
-3. [여러 파일 수정 시에만] code-reviewer (리뷰)
+(리뷰는 사용자가 요청할 때만 code-reviewer 스킬로)
 ```
 
 ### 아키텍처/설계 요청

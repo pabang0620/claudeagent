@@ -66,7 +66,7 @@
 
 스킬 목록·설명은 하네스가 매 세션 자동 주입한다(각 `skills/<name>/SKILL.md`의 `description`이 SSOT). 여기 표로 중복 기재하지 않는다.
 
-- `code-reviewer`가 실사용 1위(264회). 여러 파일에 걸친 코드 변경 뒤에 실행한다. 단건·소규모 수정에는 붙이지 않는다
+- `code-reviewer`는 사용자가 리뷰를 요청했을 때만 실행한다. 코드 변경 뒤에 자동으로 붙이지 않는다(전역 규칙 `~/.claude/CLAUDE.md`, 모든 프로젝트 공통)
 - `backend-patterns`·`frontend-patterns`·`coding-standards`·`convention-enforcer`·`error-prevention-rules`·`mobile-first-checker`·`project-structure-guide`는 호출형이 아니라 **자동 적용**형이다
 - `postgres-patterns`는 `pg` 의존성이 있는 프로젝트에만 적용 (예: modadam). MySQL 프로젝트에는 적용하지 않음
 - `checkpoint`·`verify`는 `disable-model-invocation: true`라 사용자만 호출 가능

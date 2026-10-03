@@ -34,5 +34,5 @@ git log --oneline A..B   # A에는 없고 B에만 있는 커밋 - 동일 메시�
 
 ## 기능 구현 워크플로우
 
-`rules/agents.md`의 "표준 워크플로우" 섹션이 SSOT다(여러 파일 신규 기능: planner → 전문 에이전트 → code-reviewer 스킬).
+`rules/agents.md`의 "표준 워크플로우" 섹션이 SSOT다(여러 파일 신규 기능: planner → 전문 에이전트. 리뷰는 요청할 때만).
 테스트 커버리지 수치는 개발 중 강제하지 않는다 - `rules/testing.md` 참조.

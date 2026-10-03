@@ -1,1 +1,0 @@
-/mnt/c/Users/admin/Desktop/games/lantern-rite/.claude/agents/sprite-sheet-slicer.md
