@@ -25,7 +25,7 @@ c01 8초판 피드백("퀄리티는 괜찮은데 너무 빨라서 설명하기�
 
 | 장치 | 위치 | 역할 |
 |---|---|---|
-| 엔진 | `/home/lee/project/claude-animation/engine/` (`README.md`가 API SSOT) | 굼구미 실측 리그, 효과, 한글 글자, 과학 도식 헬퍼(자막 띠·라벨·화살표·초점·비교·유령 윤곽), 병렬 렌더러, 소리 합성, 인코더. 에피소드는 장면 코드만 쓴다 |
+| 엔진 | `/home/lee/project/claude-animation/engine/` (`README.md`가 API SSOT) | 굼구미 실측 리그, 효과, 한글 글자, 과학 도식 헬퍼(자막 띠·라벨·화살표·초점·비교·유령 윤곽·지층 단면), 병렬 렌더러(`--pipe`: PNG 없이 바로 mp4), 화면 이벤트 소리 동기화(`window.CUES`), 소리 합성, 인코더. 에피소드는 장면 코드만 쓴다 |
 | 제작 지침 | `/home/lee/project/.claude/agent-refs/code-animation-craft.md` | 0절 과학 설명 설계(설명 사슬, 굼구미 역할, 구성 틀, 도식 문법), 스토리보드 형식, 시간 모델, 움직임 문법, 자막 규칙, 정지컷 결함 표 |
 | 기준 샘플 | `/home/lee/project/claude-animation/gumgumi-intro/` | **그림 품질** 기준(설명 없는 런칭 필름이라 구성·템포는 따르지 않음). 아무도 수정하지 않는다 |
 | 설명 리뷰어 | `gumgumi-explain-reviewer` | 소리 없이 처음 보는 시청자 시점 판정. 12개 체크 항목 |
@@ -91,4 +91,4 @@ c01 8초판 피드백("퀄리티는 괜찮은데 너무 빨라서 설명하기�
 
 - Google Flow, Nano Banana, Remotion으로 만들기
 - 기준 샘플(`gumgumi-intro/`)과 엔진 수정. 엔진 개선은 사용자 요청이 있을 때 별도 작업으로 한다
-- `frames/` 중간 파일 삭제(용량이 크지만 정리는 사용자 승인 사항)
+- 정지컷 점검용 PNG 삭제(정리는 사용자 승인 사항). 본 렌더는 `--pipe`라 `frames/`가 쌓이지 않는다

@@ -40,15 +40,16 @@ effort: medium
    - 과학 현상은 스토리보드의 `과학적 인과` 칸대로 움직인다. 굼구미가 원인을 대신하는 그림을 임의로 넣지 않는다.
    - 라벨·표지·숫자는 `03-text.md` 내용을 `TEXT = { ko: {...} }`(ko만) 한 곳에 둔다. 도식 헬퍼(D)로 그려 스타일을 통일한다. 등장·퇴장은 `03-text.md` 앵커 그대로.
 5. **소리**: `audio.py`에 스토리보드 Sound 칸을 효과음 큐시트로 옮긴다(시각도 NARR 기준). 내레이션 배치와 음악 덕킹은 `audio_lib.py` 함수로 한다. ko wav만 만든다.
+   - 화면 동작에 붙는 효과음(쾅, 톡, 파이는 소리)은 장면 코드에 `window.CUES = [{t, kind}]`로 적는다. 렌더 때 `build/cues_ko.json`으로 저장되고 `audio.py`에서 `load_cues('ko')` + `place_cues(bus, cues, {kind: 소리})`로 놓는다. 장면 타이밍을 고쳐도 소리가 따라온다.
 6. **정지컷 점검 (최대 2회, ko 기준)**: 각 `E` 비트 hold 중간 프레임 + 자막이 떠 있는 프레임 + 전환 직후 프레임을 `render.js --list`로 뽑아 Read로 본다(1회 10~20장). 제작 지침 9절 결함 표로만 판정하고 고친다. 특히 "이 정지컷 한 장과 그때 떠 있는 자막만 보고 해당 고리가 이해되는가"를 본다.
-7. **렌더와 조립**: ko만 `render.js --lang ko` -> `audio.py --lang ko` -> `encode.sh`로 본편 -> `brand/render_brand.sh`(제목·다음 편 힌트는 `05-meta.md`) -> `assemble_final.sh`로 출력 경로에 최종본.
+7. **렌더와 조립**: ko만 `render.js --lang ko --pipe`(PNG 없이 `build/video_ko.mp4`) -> `audio.py --lang ko` -> `encode.sh --lang ko`(파이프 영상에 소리만 합침) -> `brand/render_brand.sh`(제목·다음 편 힌트는 `05-meta.md`) -> `assemble_final.sh`로 출력 경로에 최종본. 2D 장면에는 `--gpu`를 쓰지 않는다(2026-10-05 실측: 90프레임 CPU 1.6초, GPU 4.7초).
 8. **실측**: 최종 파일을 ffprobe로 확인한다(해상도, 30fps, 길이, 오디오). 본편 내레이션 구간 음량(volumedetect)으로 목소리가 실제로 들어갔는지 확인한다.
 
 ## 경로·안전 규칙
 
 - 쓰기는 작업 폴더와 지정된 출력 경로 2개에만 한다. 엔진(`engine/`)과 샘플(`gumgumi-intro/`)은 **읽기만** 한다. 엔진 버그를 발견하면 고치지 말고 보고한다.
 - 출력 파일이 이미 있으면 덮어쓰지 않고 `_v2`를 붙인다.
-- `frames/` 중간 PNG는 인코딩 후에도 지우지 않는다(정리는 사용자 승인 사항).
+- 본 렌더는 `--pipe`라 `frames/`가 생기지 않는다. 정지컷 점검용 `--list` PNG는 지우지 않는다(정리는 사용자 승인 사항).
 - git 명령을 쓰지 않는다.
 - em-dash 문자를 쓰지 않는다.
 
