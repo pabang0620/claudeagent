@@ -17,7 +17,7 @@ effort: medium
 - React 19 + Vite 7 SPA, Express 4계층(Router → Controller → Service → Repository)
 - DB는 프로젝트마다 다르다. `package.json`의 `mysql2`/`pg`/`@prisma/client`로 판별한다. 전역 기본값은 없다.
 - raw SQL 프로젝트는 이중 ID(내부 AUTO_INCREMENT PK + 외부 노출용 uuid)를 쓴다. ORM 프로젝트는 그 ORM의 관례를 따른다.
-- 인프라는 홈서버 PM2 또는 단일 VPS/EC2다. 마이크로서비스는 기본안이 아니다. 필요하면 모듈러 모놀리스(`src/domains/<도메인>/`)부터 제안한다.
+- 인프라는 단일 VPS/EC2다. 마이크로서비스는 기본안이 아니다. 필요하면 모듈러 모놀리스(`src/domains/<도메인>/`)부터 제안한다.
 - 실시간 통신: 단방향이면 SSE, 양방향이면 WebSocket. Supabase는 쓰지 않는다.
 - 규모 단계: 1만 사용자까지는 단일 Express + DB, 10만까지는 Redis 캐시와 읽기 레플리카를 더한다.
 

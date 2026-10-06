@@ -21,7 +21,6 @@
 | 반복 영역 | 실측 건수 | 담당 | 필수 주의사항 |
 |----------|---------|------|-------------|
 | 파일·레포 잡무 (이동·삭제·정리·레포 분리. 커밋·푸시는 메인이 Bash로 직접) | ~30 | **repo-janitor** | 금지 명령 목록·커밋 전 파일목록 확인 절차가 에이전트 정의에 내장됨 |
-| 홈서버 운영·배포 (PM2·포트·크론·Tailscale Funnel) | 17 | **ops-deployer** | `funnel status` 선확인, serve 서브커맨드 금지, 외부 검증은 WebFetch가 정의에 내장됨 |
 | 엑셀·스프레드시트 가공 (xlsx 편집·표 재구성·업로드 템플릿) | 23 | **spreadsheet-editor** | 원본 무덮어쓰기·산출 후 대조가 정의에 내장됨 |
 | 개인 학습자료 편집 (정보처리기사 노트 등) | ~20 | general-purpose (study-notes-editor는 2026-09-29 미사용 보관) | li 개수 불변·계산 재검증·탭 숫자 정합을 스폰 프롬프트에 적는다 |
 | 에이전트·스킬·룰 정의 자체 수정 (메타작업) | ~25 | 오케스트레이터 직접 | 정의파일 1개당 수정 범위를 좁게. 파일 전체 재작성 금지 |
@@ -56,7 +55,6 @@
 | **이북 교육자료 검증** | 제로베이스 독자 시점 정독·막힘 보고 (읽기 전용) | ebook-student |
 | **이북 교육자료 수정** | 확정 스타일에 맞춰 본문·요약·퀴즈·체크포인트 연쇄 갱신 | ebook-editor |
 | **후속사업 사전영업 자료** | 정식 RFP 공고 전 선점용 회사소개 겸 어필 콘텐츠 | gov-followup-outreach-writer |
-| **홈서버 운영·배포** | "공개 URL 노출" → 서버 운영 전반 (앱 코드 수정 아님) | ops-deployer |
 | **레포 잡무** | "파일 옮겨줘" → git·파일 정리 (코드 내용 수정 아님) | repo-janitor |
 | **엑셀·스프레드시트** | xlsx/csv 가공 | spreadsheet-editor |
 | **문서·코드맵 갱신** | "README 갱신", "코드맵 갱신", 기능 완료 후 문서 반영 | doc-updater |
@@ -68,6 +66,7 @@
 | **판정 대리** | 사용자가 "판정 에이전트 써", "lee-wonho한테 물어봐"처럼 명시적으로 요청했을 때만. 질문 전 자동 경유 금지(2026-09-29) | lee-wonho |
 | **웰콘 사업 자문 판단** | 콘텐츠 해외진출 기업정보 구축 기획(1단계) 웰콘 프로젝트 관련 설계 판단 | welcon-advisor |
 | **Starspire 게임 서버** | 캐릿터 키우기(starspire) 서버의 테이블·API 설계 / 서버 코드 작성 / 돈 경로 점검. 계획 SSOT는 게임 레포 `docs/SERVER_DEV_PLAN.md`, 에이전트 정본은 게임 레포 `.claude/agents/`(여기는 심볼릭 링크) | 설계 starspire-server-architect → 구현 starspire-backend-coder → 점검 starspire-economy-auditor |
+| **dotRPG 게임 서버** | dotRPG 온라인 서버(Node·TypeScript·PostgreSQL)의 테이블·API 설계 / 서버 코드 / 재화 경로 점검. 계획 SSOT는 게임 레포 `Docs/PLAN_SERVER.md`, 에이전트 정본은 게임 레포 `.claude/agents/`(여기는 심볼릭 링크). Unity 클라이언트 연동은 메인이 직접 | 설계 dotrpg-server-architect → 구현 dotrpg-backend-coder → 점검 dotrpg-economy-auditor |
 
 | **신규 2D 액션 게임 제작 (전체 파이프라인)** | "2D 게임 만들어줘", "이런 게임 Unity로", `/game2d <컨셉>` -> lantern-rite 템플릿 복제 -> 설계 3문서 -> 골격 -> 이미지 시트 -> 절단 -> 손맛 -> 3중 검증 -> 플레이테스트. 에이전트 4종 배정 순서는 스킬이 정한다 | `game2d-pipeline` 스킬 |
 | **굼구미 시네마틱 과학 영상** | "굼구미 시네마틱", "시네마틱 과학 영상", "코드로 과학 애니메이션", `/gumgumi-cinematic <주제>` -> TTS 내레이션 과학 쇼츠(채널 인트로·제목카드·아웃트로 포함, 기본 9:16, 60초 이하). 영상 생성 AI 없이 코드로 매 프레임을 그림(엔진 `claude-animation/engine/`, 기준 샘플 `claude-animation/gumgumi-intro/`). planner(설명 사슬 먼저·스토리보드·자막) -> explain-reviewer(시청자 시점 설명 검토) -> 사용자 승인 -> animator(장면 코드·도식 헬퍼·정지컷 점검·렌더) -> `shorts/ko` 배포(2026-09-28부로 en 미제작) | `gumgumi-cinematic` 스킬 (gumgumi-cinematic-planner -> gumgumi-explain-reviewer -> gumgumi-animator) |
