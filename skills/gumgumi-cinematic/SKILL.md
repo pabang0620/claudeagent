@@ -39,7 +39,7 @@ description: 굼구미(Whymo) 채널의 "시네마틱 과학 쇼츠" 1편을 기
 
 ### 1. 기획
 
-`gumgumi-cinematic-planner`를 스폰한다(model: sonnet). 프롬프트에 다음을 적는다.
+`gumgumi-cinematic-planner`를 스폰한다(model: sonnet). 체크리스트 `/home/lee/project/.claude/agent-refs/gumgumi-planner-checklist.md`(V4 표준 절 포함)를 읽게 한다. 프롬프트에 다음을 적는다.
 - 에피소드 번호 `c<NN>`(메인이 `ls shortform/cinematic/`로 정해 준다. 병렬 기획 때 에이전트가 각자 세면 번호가 겹친다)
 - 주제(있으면). 없으면 분야(몸·동물·빛·소리·우주·날씨·음식 등)를 지정해 직전 편들과 겹치지 않게 한다
 - 비율(기본 9:16)
@@ -79,7 +79,7 @@ description: 굼구미(Whymo) 채널의 "시네마틱 과학 쇼츠" 1편을 기
 
 **애니메이터는 한 번에 1편만 스폰한다.** 끝나면 `ls`로 `shorts/ko/`에 출력 파일이 실제로 생겼는지 확인한 뒤 다음 편을 스폰한다. 여러 편을 병렬로 돌리지 않는다(2026-09-28 사용자 중단 사례, 메모리 `feedback_gumgumi_ko_only_sequential`).
 
-**모델**: 기본 `sonnet`이다. 사용자가 결과를 보고 퀄리티가 부족하다고 하면, 그 에피소드에 한해 다시 돌리되 메인 세션이 Fable인 동안은 `model: opus` 서브에이전트 대신 `fork`(메인 모델·전체 맥락)로 가져온다(2026-09-26 사용자가 상향을 미리 승인했으므로 다시 묻지 않는다, `rules/performance.md` 10-08 개정). 다시 돌릴 때는 기존 작업 폴더를 덮어쓰지 않도록 `c<NN>-<slug>-r2`처럼 새 작업 폴더를 준다.
+**모델과 품질 기준 (2026-10-08 사용자 채택 "V4 표준")**: 애니메이터는 `model: opus`로 스폰한다. 결과물은 반드시 V4 표준이어야 한다: 정밀한 그림·움직임 + 카메라 이동·패럴랙스·블룸·색보정·비네트·종이 질감 + 05-meta의 BGM과 덕킹·효과음 층·마스터링 + emph 강조 자막. 기준 샘플은 `/home/lee/project/shorts/ko/퀄리티실험/[V4 사운드판]*_v2.mp4`(코드 `claude-animation/episodes/q01-contrail-v4/`). 고정 카메라·신호음만·기본 자막인 V1 수준(같은 폴더의 V1 기준판)은 실패로 본다. 퀄리티가 부족하다는 지적이 오면 `c<NN>-<slug>-r2` 새 작업 폴더로 다시 돌린다.
 
 ### 5. 보고
 

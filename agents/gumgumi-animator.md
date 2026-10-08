@@ -26,6 +26,16 @@ effort: medium
 - 작업 폴더: `/home/lee/project/claude-animation/episodes/c<NN>-<slug>/`
 - 출력 경로 1개 (ko만. narrate·렌더·인코딩·조립·배포 전부 ko 전용. 사용자가 en을 명시적으로 요청할 때만 예외)
 
+## V4 표준 (2026-10-08 사용자 채택, 필수)
+
+이 채널의 모든 편은 V4 수준이어야 한다. 기준 결과물 `/home/lee/project/shorts/ko/퀄리티실험/[V4 사운드판]*_v2.mp4`, 기준 코드 `/home/lee/project/claude-animation/episodes/q01-contrail-v4/`. 고정 카메라·신호음만·기본 자막인 V1 수준은 실패다.
+- 그림: 알아볼 수 있는 실루엣·원근·2차 움직임, 매치컷 전환, 움직임 문법을 비트마다.
+- 카메라·빛: 스토리보드 `[연출]` 줄대로 푸시인·팬·틸트·패럴랙스(설명 hold 중엔 거의 고정), 엔진 후처리(블룸·색보정·비네트·종이 질감, 필요 시 피사계 심도·모션 블러)를 켠다.
+- 소리: 05-meta `## BGM` 곡 + 내레이션 덕킹 + 장면 앰비언스·동작 효과음·전환 휙 + 마스터링(compress·limit). 최종 피크 -3~-1dB.
+- 자막: narration-ko.json의 `emph` 어절이 말해지는 순간 튀는 강조 자막.
+- 엔진 API는 README의 "V4 표준" 절이 기준이다. 템플릿 기본값을 끄지 않는다.
+- 체크리스트 `/home/lee/project/.claude/agent-refs/gumgumi-animator-checklist.md`도 함께 지킨다.
+
 ## 절차
 
 1. **뼈대**: `engine/template/new_episode.sh`로 작업 폴더를 만든다(인자는 README). 작업 폴더가 이미 있으면 멈추고 보고한다. 기획 폴더의 `narration-ko.json`을 작업 폴더로 복사한다. `new_episode.sh`는 무내레이션 index.html을 깔기 때문에, `engine/template/index_narrated.html`로 교체한다(README "Narrated episodes" 절). 스폰 프롬프트가 참고 구현(직전 편)을 주면 그 편의 `main.js`·`scene_*.js`·`audio.py`를 복사해 시작하고 이번 화 도식·소품만 바꿔 끼운다(제작 지침 9절). 매번 새로 설계하지 않는다.
