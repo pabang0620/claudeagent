@@ -1,0 +1,1 @@
+/mnt/c/Users/admin/Desktop/games/starspire/.claude/agents/starspire-ui-engineer.md
