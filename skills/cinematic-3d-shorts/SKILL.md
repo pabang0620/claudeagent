@@ -1,13 +1,18 @@
 ---
 name: cinematic-3d-shorts
-description: 채널·캐릭터와 무관한 10~20초 "시네마틱 3D 지식 쇼츠"를 영상 생성 AI 없이 코드로 만드는 스킬. Three.js 3D 장면(파티클·블룸·그림자·모션블러·색보정)을 헤드리스 Chromium에서 프레임 단위로 결정적 렌더하고, numpy로 효과음·배경음을 직접 합성하고, edge-tts 나레이션을 붙여 1080x1920 60fps mp4로 낸다. 기준 샘플은 "80억 명을 꽉 누르면 각설탕 하나, 4억 톤"(`claude-animation/showcase/sugar-cube/`). "유튜브 영상 만들어줘", "쇼츠 하나 만들어봐", "최고 퀄리티로 영상 만들어", "3D 영상 코드로", "시네마틱 쇼츠" 요청 시 사용. 굼구미 채널 손그림풍 2D는 gumgumi-cinematic, 씬 라이브러리 조립형 대본 숏폼은 shortform, Google Flow/Readdy 생성 영상은 flow-nanobanana/readdy-cinematic 담당.
+description: 채널·캐릭터와 무관한 "시네마틱 3D 쇼츠"를 영상 생성 AI 없이 코드로 만드는 스킬. Three.js 실사 스케일 장면(PBR·HDRI·그림자·블룸·색보정)을 Chromium(GPU)에서 프레임 단위로 결정적 렌더하고, numpy 효과음·edge-tts 나레이션·Flow Music BGM을 섞어 1080x1920 60fps mp4로 낸다. 모드는 둘, 단발(10~20초 반전형 1장면, 메인 직접, 기준 `showcase/sugar-cube/`)과 팀(30~90초 공정·과정형, 리서치·모듈·사운드 fork 병렬 + 메인 감독, 기준 `showcase/tower-rise/` 초고층 빌딩 시공). "유튜브 영상 만들어줘", "쇼츠 하나 만들어봐", "최고 퀄리티로 영상", "3D 영상 코드로", "시네마틱 쇼츠", "건물 올리는 영상", "만들어지는 과정 영상", "팀 에이전트로 영상" 요청 시 사용. 굼구미 채널 손그림풍 2D는 gumgumi-cinematic, 씬 라이브러리 조립형 대본 숏폼은 shortform, Google Flow/Readdy 생성 영상은 flow-nanobanana/readdy-cinematic 담당.
 ---
-
 # cinematic-3d-shorts
 
-2026-10-03 "할 수 있는 최고 퀄리티로 10초 유튜브 영상" 요청에서 만든 각설탕 영상이 기준이다.
-기준 샘플 폴더: `/home/lee/project/claude-animation/showcase/sugar-cube/` (읽기 전용 참고용, 고치지 않는다).
-메인이 직접 만든다. 장면 코드와 화면 판단이 한 맥락에 있어야 품질이 나오므로 서브에이전트에 넘기지 않는다.
+## 0. 모드 고르기
+| 모드 | 언제 | 기준 샘플 (읽기 전용) | 절차 |
+|---|---|---|---|
+| 단발 | 10~20초, 반전 하나, 장면 1~2개 | `claude-animation/showcase/sugar-cube/` "80억 명을 꽉 누르면 각설탕 하나" (2026-10-03) | 이 문서 1~7절, 메인 직접 |
+| 팀 | 30~90초 "과정" 영상, 피사체 4종 이상(기계·구조물·지형 등) | `claude-animation/showcase/tower-rise/` 초고층 빌딩 시공 62초 (2026-10-08, 사용자 평 "일전에 있던 것보다 좋다") | `agent-refs/cinematic-team-mode.md`를 먼저 읽는다. 1·2·4~7절의 규칙은 그대로 적용 |
+
+- 단발 모드는 장면 코드와 화면 판단이 한 맥락에 있어야 해서 서브에이전트에 넘기지 않는다.
+- 팀 모드는 피사체마다 fork 1명이 모듈을 만들고(스스로 렌더해 점검), 메인은 계약 문서·스토리보드·통합·카메라·믹스를 맡는다. 메인 혼자 디오라마로 만든 2026-10-05 집 짓기 시리즈는 "포크레인이 땅 파는 게 안 읽힌다"로 폐기됐다.
+- 어느 모드든 품질 기준은 하나다: 모든 동작은 원인 -> 결과가 화면에서 읽혀야 한다(기계가 닿은 곳이 변하고, 재료가 어디서 와서 어디로 가는지 보인다). 히어로 동작은 실시간에 가깝게 4초 이상 보여준다.
 
 ## 1. 주제와 사실 (먼저 끝낸다)
 
@@ -33,9 +38,10 @@ ffmpeg -i audio/n1.wav -af silencedetect=n=-38dB:d=0.08 -f null -   # 문장 안
 ## 3. 프로젝트 만들기
 
 ```bash
-bash /home/lee/project/.claude/skills/cinematic-3d-shorts/scripts/new_project.sh <slug>
+bash /home/lee/project/.claude/skills/cinematic-3d-shorts/scripts/new_project.sh <slug>           # 단발: sugar-cube 복제
+bash /home/lee/project/.claude/skills/cinematic-3d-shorts/scripts/new_project.sh <slug> process   # 팀: tower-rise 공용 엔진 복제
 ```
-기준 샘플을 `claude-animation/showcase/<slug>/`로 복제한다. 파일 역할:
+단발 모드 파일 역할(팀 모드 파일 구성은 team-mode 참조 문서):
 
 | 파일 | 역할 | 새 주제에서 |
 |---|---|---|
@@ -66,14 +72,16 @@ bash /home/lee/project/.claude/skills/cinematic-3d-shorts/scripts/new_project.sh
 ## 5. 점검과 렌더
 
 ```bash
-node render.js --workers 1 --list 60,145,300,420,500,590 --out preview   # 장면별 대표 컷
-ffmpeg -pattern_type glob -i 'preview/f*.png' -vf "scale=300:533,tile=6x1:padding=4" -frames:v 1 sheet.png
-node render.js --fps 60 --workers 1 --out frames                          # 전체 (run_in_background)
+node render.js --gpu --workers 1 --list 60,145,300,420,500,590 --out preview   # 장면별 대표 컷
+ffmpeg -pattern_type glob -i 'preview/f*.png' -vf "scale=270:480,tile=8x2:padding=4" -frames:v 1 sheet.png
+node render.js --gpu --workers 1 --fps 60 --crf 14 --pipe build/video.mp4      # 전체 (run_in_background)
 ```
-- **워커는 1개**: 헤드리스는 하드웨어 GPU를 못 잡고 llvmpipe(CPU)로 돈다. 워커를 늘리면 코어를 나눠 써서 오히려 3배 느려졌다.
-  10초 60fps 600프레임이 약 8분 걸린다.
-- 대표 컷 시트로 깨짐·과노출·글자 겹침을 먼저 잡고 전체 렌더한다. 고친 뒤에는 해당 구간만 `--list $(seq -s, a b)`로 다시 렌더한다.
-- 문제를 원인 모를 채로 계속 고치지 말고 진단 패스를 넣는다(예: `?nandbg=1`이 NaN을 빨강으로 표시).
+- `--gpu`는 WSLg + Mesa d3d12로 실제 GPU(RTX 3050)를 쓴다(화면 밖 작은 창). 약 0.4초/프레임, 62초 60fps가 23분. `--gpu` 없이 헤드리스(llvmpipe)는 수 배 느리다. 워커는 1개(늘려도 빨라지지 않았다).
+- `--pipe`는 PNG를 남기지 않고 바로 인코딩한다(`render.js`가 tower-rise 이후 버전에만 있다. sugar-cube 복제본은 PNG 저장 방식).
+- 페이지 첫 렌더는 텍스처 업로드 전이라 어둡거나 거울처럼 나온다. 준비 단계에서 여러 시각을 렌더하고 1초 기다린 뒤 `__ready`를 세운다.
+- `logarithmicDepthBuffer`는 켜지 않는다(높이맵 지형이 검게 나왔다).
+- 대표 컷 시트로 깨짐·과노출·글자 겹침·카메라 구간 오류를 먼저 잡고 전체 렌더한다. 고친 뒤에는 해당 구간만 `--list`로 다시 본다.
+- 문제를 원인 모를 채로 계속 고치지 말고 진단(렌더 순서 바꾸기, 기능 하나씩 끄기)으로 원인을 먼저 특정한다.
 
 ## 6. 소리와 인코딩
 
@@ -84,7 +92,8 @@ ffmpeg -n -framerate 60 -i frames/f%04d.png -i build/audio.wav -c:v libx264 -pre
   -pix_fmt yuv420p -profile:v high -c:a aac -b:a 256k -shortest -movflags +faststart <slug>-shorts.mp4
 ```
 - 장면 경계마다 소리 이벤트를 하나씩 둔다(카운터 틱, 급강하 상승음, 타격, 역재생 스웰, 생성 차임, 낙하 바람, 충돌 붐+파열+잔해).
-- 나레이션 구간은 배경음을 0.4배, 효과음을 약 0.6배로 덕킹한다. 충돌음이 바로 뒤 나레이션을 덮지 않게 한다.
+- 나레이션 구간은 배경음을 0.3배, 효과음·앰비언스를 약 0.25~0.4배로 덕킹한다. 줄마다 나레이션이 나머지보다 8dB 이상 큰지 숫자로 확인한다(tower-rise `audio/mix.py`가 줄별 여유를 출력). 같은 효과음이 짧은 간격으로 겹치면 간격·길이를 잘라 솎는다.
+- BGM은 `claude-animation/showcase/bgm/`의 Flow Music 곡을 재사용한다(새로 만들지 않는다). 곡 구조(베이스 진입·빌드업·정점 초)를 실측해 장면 경계와 맞춘다.
 - Claude는 소리를 들을 수 없다. `showwavespic` 파형과 `ebur128` 수치로만 확인하고, 보고할 때 "직접 듣고 확인 필요"를 명시한다.
 - 완성 후 `fps=2,tile=10x2` 시트로 전체 흐름을 한 번 확인한다. 기존 mp4가 있으면 덮어쓰지 않고 새 이름으로 낸다(`-n`).
 
