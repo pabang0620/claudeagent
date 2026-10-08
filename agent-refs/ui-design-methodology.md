@@ -35,7 +35,7 @@ CSS 방법론별 컴포넌트 클래스 산출 규칙:
 - CSS Modules: styles.button (기본)
 - BEM: block__element--modifier (예: .btn .btn__icon .btn--primary)
 - Tailwind: @apply 또는 유틸 클래스 직접 + cva/clsx 변형
-- styled-components: `const StyledButton = styled.button` 템플릿 리터럴 형태로 변환, `data-variant`/`data-size` 등 상태 속성은 `props`로 받아 템플릿 리터럴 내 조건부 스타일로 처리 (신규 도입이 아니라 **기존 프로젝트에 이미 styled-components가 있을 때만** 이 규칙을 쓴다 - 없는 프로젝트에 새로 들여오지 않는다. 아래 "에이전트가 하지 말아야 할 것" 참조)
+- styled-components: `const StyledButton = styled.button` 템플릿 리터럴 형태로 변환, `data-variant`/`data-size` 등 상태 속성은 `props`로 받아 템플릿 리터럴 내 조건부 스타일로 처리 (신규 도입이 아니라 **기존 프로젝트에 이미 styled-components가 있을 때만** 이 규칙을 쓴다 - 없는 프로젝트에 새로 들여오지 않는다. 정의파일 `ui-design-system.md`의 "에이전트가 하지 말아야 할 것" 참조)
 감지된 방법론에 맞춰 13개 컴포넌트 클래스명을 변환한다.
 
 > 본 문서의 13개 컴포넌트 예시는 모두 CSS Modules(`styles.button`) 기준으로 작성되어 있다. BEM/Tailwind/styled-components가 감지되면 위 규칙에 따라 13개 컴포넌트 전체의 클래스명(또는 styled 정의)을 일괄 변환하여 생성한다.

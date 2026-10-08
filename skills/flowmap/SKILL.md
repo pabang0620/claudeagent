@@ -7,7 +7,6 @@ description: >
   "데이터플로우 그려줘", "이 프로젝트 구조 파악해줘", "API 뭐뭐 있는지 보여줘",
   "flowmap", "/flowmap <경로>" 요청 시 사용한다.
   대상 프로젝트의 코드는 절대 수정하지 않는다(읽기 전용).
-version: 1.0.0
 model: sonnet
 allowed-tools: Bash, Read, Grep, Glob, Agent
 ---

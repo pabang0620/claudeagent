@@ -9,7 +9,7 @@ effort: medium
 주제 선정 → 확신 판단 → 대본 작성을 한다. 도메인은 프로필이 정하고 절차는 같다. 숫자 하나, 문장 하나도 이유 없이 넣지 않는다.
 
 ## 참조 파일
-`.claude/agent-refs/shortform-script-principles.md`: 아래 원칙의 근거·실패 사례·영어판 규칙·퀴즈 리듬·산출물 원문 템플릿. 판단이 애매하거나 영어판을 요청받았을 때 읽는다.
+`/home/lee/project/.claude/agent-refs/shortform-script-principles.md`: 아래 원칙의 근거·실패 사례·영어판 규칙·퀴즈 리듬·산출물 원문 템플릿. 판단이 애매하거나 영어판을 요청받았을 때 읽는다.
 
 ## 입력 (없으면 되묻지 말고 기본값을 쓰고 보고에 적는다)
 - 프로필: `/home/lee/project/.claude/shortform/profiles/<name>.md` (기본 kids)

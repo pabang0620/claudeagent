@@ -1,42 +1,11 @@
+---
+description: 사용자가 리뷰를 요청했을 때만 code-reviewer 스킬을 실행한다. "/code-review", "리뷰해줘", "검토해봐". 코드 변경 뒤 자동 실행 금지(전역 규칙).
+---
+
 # Code Review
 
-Invoke the code-reviewer skill to perform this review.
+code-reviewer 스킬을 실행한다(에이전트가 아니다). 범위·체크 항목·보고 형식은 스킬 본문(`skills/code-reviewer/SKILL.md`)을 따른다.
 
-커밋되지 않은 변경사항에 대한 종합적인 보안 및 품질 리뷰:
+인자로 범위를 넘긴다: 프로젝트 절대경로, 커밋 범위 또는 "미커밋 변경". 없으면 `git diff HEAD` 기준.
 
-1. 변경된 파일 확인: git diff --name-only HEAD
-
-2. 각 변경된 파일에 대해 다음 사항 검토:
-
-**보안 이슈 (CRITICAL):**
-- 하드코딩된 자격증명, API 키, 토큰
-- SQL 인젝션 취약점
-- XSS 취약점
-- 입력 검증 누락
-- 안전하지 않은 의존성
-- 경로 탐색 위험
-
-**코드 품질 (HIGH):**
-- 50줄을 초과하는 함수
-- 500줄을 초과하는 파일
-- 4단계를 초과하는 중첩 깊이
-- 에러 처리 누락
-- console.log 구문
-- TODO/FIXME 주석
-- 공개 API에 대한 JSDoc 누락
-
-**모범 사례 (MEDIUM):**
-- Mutation 패턴 (불변성 사용 권장)
-- 코드/주석에 이모지 사용
-- 새 코드에 대한 테스트 누락
-- 접근성 문제 (a11y)
-
-3. 다음 내용을 포함한 보고서 생성:
-   - 심각도: CRITICAL, HIGH, MEDIUM, LOW
-   - 파일 위치 및 줄 번호
-   - 이슈 설명
-   - 수정 방법 제안
-
-4. CRITICAL 또는 HIGH 이슈가 있으면 보고 맨 위에 "커밋 보류 권장"을 적는다 (커밋을 막는 훅은 없다)
-
-보안 취약점이 있는 코드는 절대 승인하지 않습니다!
+보고는 한국어, 심각도순, 파일·줄 번호·수정안 포함. CRITICAL·HIGH가 있으면 맨 위에 "커밋 보류 권장"을 적는다(커밋을 막는 훅은 없다). 보안은 diff에 보이는 것만 보고, 인증·결제·업로드가 바뀌었으면 security-reviewer를 권한다.

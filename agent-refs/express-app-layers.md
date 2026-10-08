@@ -2,30 +2,29 @@
 
 > `.claude/agents/express-engineer.md` 의 참조 파일이다. 신규 프로젝트를 세팅하거나 Router/Controller/Service/Repository 파일을 실제로 작성할 때만 읽는다.
 
-## 프로젝트 구조
+## 프로젝트 구조 (도메인 드리븐 - wecom·modadam 실측, project-structure-guide 스킬과 동일)
 
 ```
 backend/
 ├── src/
-│   ├── app.js              # Express 앱 설정 (미들웨어 등록)
-│   ├── server.js           # 서버 진입점 (listen)
-│   ├── routes/             # 라우터 정의
-│   │   ├── index.js        # 라우터 통합
-│   │   └── users.js
-│   ├── controllers/        # 요청/응답 처리 (비즈니스 로직 없음)
-│   │   └── userController.js
-│   ├── services/           # 비즈니스 로직
-│   │   └── userService.js
-│   ├── repositories/       # DB 접근 계층
-│   │   └── userRepository.js
-│   ├── middlewares/        # 커스텀 미들웨어
-│   │   ├── auth.js
-│   │   ├── errorHandler.js
-│   │   └── validate.js
-│   ├── utils/              # 순수 유틸 함수
-│   └── config/             # 설정 (DB, 환경변수)
+│   ├── app.js                      # Express 앱 설정 (미들웨어 등록)
+│   ├── server.js                   # 서버 진입점 (listen)
+│   ├── routes/index.js             # 도메인 라우터 통합 등록
+│   ├── domains/
+│   │   ├── user/                   # 도메인 1개 = 4~5파일
+│   │   │   ├── userRoutes.js
+│   │   │   ├── userController.js
+│   │   │   ├── userService.js
+│   │   │   ├── userRepository.js
+│   │   │   └── userSchemas.js      # zod (modadam 명명. wecom은 *Validation.js)
+│   │   └── common/                 # upload·search·notifications·nav
+│   ├── middleware/                 # authMiddleware·roleMiddleware·validationMiddleware·errorHandler·rateLimiter·uploadMiddleware
+│   ├── utils/                      # response.js 등 순수 유틸
+│   └── config/                     # database.js, env.js
 └── tests/
 ```
+
+아래 예시 코드의 import 경로는 설명용이다. 실제 파일은 `domains/<도메인>/` 안에 두고, 미들웨어 디렉토리 이름(`middleware/` 단수)과 파일명(`authMiddleware.js` 등)은 기존 프로젝트 것을 그대로 따른다. 타입별 폴더(`controllers/`, `services/`)로 나누지 않는다.
 
 ---
 
@@ -58,7 +57,7 @@ const limiter = rateLimit({
   max: 100,
   standardHeaders: true,
   legacyHeaders: false,
-  message: { success: false, error: '요청이 너무 많습니다. 잠시 후 다시 시도하세요.' },
+  message: { success: false, message: '요청이 너무 많습니다. 잠시 후 다시 시도하세요.' }, // 응답 shape은 프로젝트 response.js와 맞춘다
 })
 app.use('/api', limiter)
 
@@ -108,7 +107,7 @@ import * as userService from '../services/userService.js'
 import { AppError } from '../utils/AppError.js'
 import { successResponse, paginatedResponse, errorResponse } from '../utils/response.js'
 
-// ❌ 직접 res.json() 사용 금지 - 래퍼를 통해 응답 포맷 통일
+// [금지] 직접 res.json() - 래퍼를 통해 응답 포맷 통일. 래퍼 시그니처는 프로젝트 response.js 실측(wecom·modadam: successResponse(res, data, message, statusCode))
 // res.json({ data: users })
 
 export const getUsers = async (req, res, next) => {
@@ -177,7 +176,7 @@ export const createUser = async ({ email, password, name }) => {
 
 ### Repository - DB 접근만
 ```javascript
-// src/repositories/userRepository.js - raw SQL (pg) 사용 예시
+// src/domains/user/userRepository.js - raw SQL (pg, modadam 계열) 예시. mysql2(wecom·speetalk·cosmic-renew)는 `?` 바인딩 + `const [rows] = await pool.execute(...)` + INSERT 후 insertId로 재조회 - 예시는 express-wecom-patterns.md
 import { pool } from '../config/database.js'
 import { AppError } from '../utils/AppError.js'
 

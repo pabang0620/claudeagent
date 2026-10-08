@@ -1,110 +1,13 @@
 ---
 name: frontend-patterns
-description: React 19 + Vite 7 프론트엔드 개발 패턴. React 19 신규 API, 컴포넌트 설계, 상태관리, 성능 최적화, 접근성 베스트 프랙티스
+description: React 19 + Vite 7 프론트엔드 코드를 작성·수정할 때 자동 적용하는 이 사용자의 컨벤션. React 19 API 선택 기준, 커스텀 훅(useAsync·useDebounce·useLocalStorage) 표준형, 상태관리 선택표, 모바일 퍼스트·디자인 토큰·Zustand·blob·scrollLock 등 WeCom 회고 기반 금지 사항. 일반 React 지식은 담지 않는다. 정적 검사 룰은 error-prevention-rules·mobile-first-checker·convention-enforcer가 담당.
 ---
 
 # 프론트엔드 개발 패턴 (React 19 + Vite 7)
 
-## React 19 신규 API
-
-### use() - 비동기 언래핑
-```javascript
-import { use, Suspense } from 'react'
-
-function UserProfile({ userPromise }) {
-  const user = use(userPromise) // Suspense 경계 안에서만 사용
-  return <div>{user.name}</div>
-}
-
-<Suspense fallback={<Skeleton />}>
-  <UserProfile userPromise={fetchUser(id)} />
-</Suspense>
-```
-
-### useOptimistic - 낙관적 업데이트
-```javascript
-import { useOptimistic, useTransition } from 'react'
-
-function LikeButton({ post }) {
-  const [optimisticLikes, addOptimisticLike] = useOptimistic(
-    post.likes,
-    (current, delta) => current + delta
-  )
-  const [isPending, startTransition] = useTransition()
-
-  const handleLike = () => {
-    startTransition(async () => {
-      addOptimisticLike(1)
-      await likePost(post.id)
-    })
-  }
-
-  return <button onClick={handleLike}>{optimisticLikes} 좋아요</button>
-}
-```
-
-### useActionState - 폼 액션 상태
-```javascript
-import { useActionState } from 'react'
-
-async function submitForm(prevState, formData) {
-  const name = formData.get('name')
-  if (!name) return { error: '이름을 입력하세요' }
-  await saveUser({ name })
-  return { error: null, success: true }
-}
-
-function UserForm() {
-  const [state, formAction, isPending] = useActionState(submitForm, { error: null })
-
-  return (
-    <form action={formAction}>
-      <input name="name" disabled={isPending} />
-      {state.error && <p role="alert">{state.error}</p>}
-      <button type="submit" disabled={isPending}>
-        {isPending ? '저장 중...' : '저장'}
-      </button>
-    </form>
-  )
-}
-```
-
----
-
-## 컴포넌트 설계 원칙
-
-### Compound Component 패턴
-```javascript
-const Card = {
-  Root: ({ children, className }) => (
-    <div className={`rounded-lg border p-4 ${className}`}>{children}</div>
-  ),
-  Header: ({ children }) => <div className="font-semibold mb-3">{children}</div>,
-  Body: ({ children }) => <div className="text-sm">{children}</div>,
-}
-
-// 사용
-<Card.Root>
-  <Card.Header>제목</Card.Header>
-  <Card.Body>내용</Card.Body>
-</Card.Root>
-```
-
-### 상속보다 조합
-```javascript
-// ❌ Props drilling 3단계 이상 → Context로 교체
-<Parent data={data}>
-  <Child data={data}>
-    <GrandChild data={data} />
-  </Child>
-</Parent>
-
-// ✅ Context
-const DataContext = createContext()
-<DataContext.Provider value={data}>
-  <GrandChild /> // useContext(DataContext)로 접근
-</DataContext.Provider>
-```
+## React 19 기준
+- 폼 제출 상태는 `useActionState`, 낙관적 업데이트는 `useOptimistic`, 상위에서 만든 promise 언래핑은 `use()` + Suspense 경계. 렌더 중 `use(fetch(...))`로 promise를 새로 만들지 않는다 (매 렌더 재요청).
+- `forwardRef` 없이 `ref`를 prop으로 받는다. Context는 `<Ctx value={...}>`로 직접 제공한다.
 
 ---
 
@@ -193,101 +96,15 @@ function useLocalStorage(key, initialValue) {
 
 **주의**: 자주 변경되는 값을 Context에 넣으면 하위 트리 전체 리렌더링 발생
 
-### Context + Reducer (전역 UI)
-```javascript
-const AppContext = createContext()
-
-function appReducer(state, action) {
-  switch (action.type) {
-    case 'OPEN_MODAL': return { ...state, modal: { isOpen: true, data: action.payload } }
-    case 'CLOSE_MODAL': return { ...state, modal: { isOpen: false, data: null } }
-    default: return state
-  }
-}
-
-function AppProvider({ children }) {
-  const [state, dispatch] = useReducer(appReducer, { modal: { isOpen: false, data: null } })
-  return <AppContext.Provider value={{ state, dispatch }}>{children}</AppContext.Provider>
-}
-
-function useApp() {
-  const context = useContext(AppContext)
-  if (!context) throw new Error('useApp은 AppProvider 안에서만 사용 가능')
-  return context
-}
-```
-
 ---
 
 ## 성능 최적화
-
-### 메모이제이션 - 측정 후 적용
-```javascript
-// ❌ 과도한 메모이제이션 (단순 계산은 불필요)
-const value = useMemo(() => a + b, [a, b])
-
-// ✅ 비싼 연산에만
-const filtered = useMemo(
-  () => largeList.filter(item => item.active && item.score > threshold),
-  [largeList, threshold]
-)
-
-// ✅ 자식에게 내려주는 함수
-const handleSubmit = useCallback(async (data) => {
-  await submit(data)
-}, []) // 의존성 없으면 빈 배열
-```
-
-### 지연 로딩
-```javascript
-const HeavyChart = lazy(() => import('./HeavyChart'))
-
-function Dashboard() {
-  return (
-    <Suspense fallback={<ChartSkeleton />}>
-      <HeavyChart />
-    </Suspense>
-  )
-}
-```
-
-### 가상화 - 1000개 이상 리스트
-```javascript
-import { useVirtualizer } from '@tanstack/react-virtual'
-
-function VirtualList({ items }) {
-  const parentRef = useRef(null)
-  const virtualizer = useVirtualizer({
-    count: items.length,
-    getScrollElement: () => parentRef.current,
-    estimateSize: () => 60,
-  })
-
-  return (
-    <div ref={parentRef} style={{ height: '400px', overflow: 'auto' }}>
-      <div style={{ height: virtualizer.getTotalSize() }}>
-        {virtualizer.getVirtualItems().map(row => (
-          <div
-            key={row.key}
-            style={{ position: 'absolute', top: 0, transform: `translateY(${row.start}px)`, width: '100%' }}
-          >
-            <ItemRow item={items[row.index]} />
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
-```
+- `useMemo`/`useCallback`은 측정 후, 비싼 연산과 memo된 자식에 내려주는 참조에만 쓴다.
+- 무거운 화면은 `lazy` + Suspense로 분할한다. 1000개 이상 리스트는 가상화한다(프로젝트에 이미 있는 훅 우선, 예: wecom `useVirtualList`).
 
 ---
 
 ## 폼 처리
-
-### useActionState (React 19 권장)
-```javascript
-// 위 React 19 섹션 참조
-```
 
 ### 제어 컴포넌트 + zod 검증
 ```javascript
@@ -323,76 +140,33 @@ function Form() {
 ---
 
 ## 에러 처리
+- 라우트 단위 ErrorBoundary 1개 + 기능 단위 fallback. 프로젝트에 공용 ErrorBoundary가 있으면 그것을 쓴다. 없을 때의 최소형:
 
-### Error Boundary
 ```javascript
 import { Component } from 'react'
 
 class ErrorBoundary extends Component {
   state = { hasError: false }
-
-  static getDerivedStateFromError() {
-    return { hasError: true }
-  }
-
-  componentDidCatch(error, info) {
-    console.error('컴포넌트 오류:', error, info)
-  }
-
-  render() {
-    if (this.state.hasError) return this.props.fallback
-    return this.props.children
-  }
+  static getDerivedStateFromError() { return { hasError: true } }
+  componentDidCatch(error, info) { console.error('컴포넌트 오류:', error, info) }
+  render() { return this.state.hasError ? this.props.fallback : this.props.children }
 }
-
-// 사용
-<ErrorBoundary fallback={<ErrorPage />}>
-  <FeatureComponent />
-</ErrorBoundary>
 ```
 
 ---
 
-## 접근성 (a11y)
-
-```javascript
-// ✅ 시맨틱 HTML + ARIA
-function Modal({ isOpen, onClose, title, children }) {
-  return (
-    <dialog open={isOpen} aria-labelledby="modal-title" aria-modal="true">
-      <h2 id="modal-title">{title}</h2>
-      {children}
-      <button onClick={onClose} aria-label="모달 닫기">×</button>
-    </dialog>
-  )
-}
-
-// ✅ 포커스 관리
-function useModalFocus(isOpen) {
-  const ref = useRef(null)
-  const previousFocus = useRef(null)
-
-  useEffect(() => {
-    if (isOpen) {
-      previousFocus.current = document.activeElement
-      ref.current?.focus()
-    } else {
-      previousFocus.current?.focus()
-    }
-  }, [isOpen])
-
-  return ref
-}
-```
+## 접근성
+- 모달은 `<dialog>` 또는 `role="dialog"` + `aria-labelledby`, 열릴 때 포커스 이동, 닫힐 때 이전 포커스 복귀. 아이콘 버튼은 `aria-label` 필수.
+- 아이콘은 CSS/인라인 SVG. OS 기본 이모지를 화면에 쓰지 않는다 (메모리 feedback_no_default_emoji_in_ui).
 
 ---
 
 ## 자주 하는 실수
 
-### ❌ useEffect 의존성 누락
+### useEffect 의존성 누락 (ep-001·ep-012)
 ```javascript
 useEffect(() => { fetchData(userId) }, []) // userId 변경 무시
-// ✅
+// 올바른 형태
 useEffect(() => {
   const ac = new AbortController()
   fetchData(userId, { signal: ac.signal })
@@ -400,20 +174,20 @@ useEffect(() => {
 }, [userId])
 ```
 
-### ❌ memo된 자식에 인라인 객체/함수 전달 → 매 렌더 새 참조로 memo 무효화
+### memo된 자식에 인라인 객체/함수 전달 (ep-008)
 ```javascript
 <MemoChild config={{ option: 'value' }} />      // 매번 새 객체
 <MemoChild onClick={() => handleClick()} />     // 매번 새 함수
-// ✅
+// 올바른 형태
 const config = useMemo(() => ({ option: 'value' }), [])
 const handleClick = useCallback(() => { /* ... */ }, [])
 ```
 
-### ❌ 상태 직접 변이
+### 상태 직접 변이 (rules/coding-style.md 불변성)
 ```javascript
 user.name = '새 이름'  // 렌더링 안됨
 items.push(newItem)
-// ✅
+// 올바른 형태
 setUser(prev => ({ ...prev, name: '새 이름' }))
 setItems(prev => [...prev, newItem])
 ```
@@ -424,9 +198,11 @@ setItems(prev => [...prev, newItem])
 
 ### 모바일 퍼스트 원칙
 - CSS 기본: 모바일(375px) → `@media (min-width: 768px)` PC 확장만
-- `pages/mobile/*` 복제 파일 금지 → `useIsMobile()` 조건부 렌더
+- `pages/mobile/*` 복제 파일 금지 → 프로젝트의 모바일 감지 훅(`useIsMobile`, wecom은 `useMobileDetect`)으로 조건부 렌더
 - 고정 `width: Npx` 금지 (아이콘 80px 미만 예외) → `max-width`/`min()` 사용
 - 전역 reset 7종 필수 (box-sizing, img max-width, button font, overflow-x hidden 등)
+- 모바일 하단 고정 네비·툴바는 `position: fixed` 금지, `position: sticky` + bottom 여유값. viewport-fit·translateZ(0)·safe-area 높이 재계산은 전부 롤백된 시도이니 반복하지 않는다 (메모리 feedback_ios_safari_sticky_bottomnav)
+- 페이지·카드 배경은 순백(#ffffff). 베이지·크림(#f5f5f3, #faf9f6 등) 금지 (메모리 feedback_no_beige_background)
 
 ### 디자인 토큰 필수
 - 모든 color/spacing/radius/shadow/font-weight 는 `var(--토큰)` 참조
@@ -437,7 +213,7 @@ setItems(prev => [...prev, newItem])
 - 필터 "전체" 값: `null` 금지 → `ALL` 센티넬 상수 사용
 - Zustand: `useStore((s) => s)` 금지 → 개별 셀렉터
 - blob URL 생성 즉시 `useEffect return` 에 `revokeObjectURL` 짝
-- Modal/BottomSheet: `useScrollLock` 필수 (document.body.style.overflow 직접 조작 금지)
+- Modal/BottomSheet: 프로젝트의 scrollLock 유틸(wecom `utils/scrollLock.js`) 필수 (document.body.style.overflow 직접 조작 금지)
 
 ### 이벤트 핸들러 안전
 - 드래그: window/document 레벨 Pointer Events API (`onPointerDown` → `window.addEventListener`)

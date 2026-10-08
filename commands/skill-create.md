@@ -1,6 +1,6 @@
 ---
 name: skill-create
-description: 로컬 git 히스토리를 분석하여 코딩 패턴을 추출하고 SKILL.md 파일을 생성합니다. Skill Creator GitHub App의 로컬 버전.
+description: 레포의 git 히스토리에서 반복 패턴을 뽑아 SKILL.md 초안을 만든다. "/skill-create", "이 레포 패턴으로 스킬 만들어줘". 생성된 초안은 `.claude/skills/`에 바로 넣지 말고 스크래치패드에 두고 사용자가 보게 한다.
 allowed-tools: ["Bash", "Read", "Write", "Grep", "Glob"]
 ---
 
@@ -126,18 +126,5 @@ src/
 ## 테스트 패턴
 
 - 테스트 파일: `__tests__/` 디렉터리 또는 `.test.ts` 접미사
-- 커버리지 목표: 80%+
 - 프레임워크: Vitest
 ```
-
-## GitHub App 통합
-
-고급 기능(10k+ 커밋, 팀 공유, 자동 PR)을 위해 [Skill Creator GitHub App](https://github.com/apps/skill-creator) 사용:
-
-- 설치: [github.com/apps/skill-creator](https://github.com/apps/skill-creator)
-- 이슈에 `/skill-creator analyze` 댓글
-- 생성된 스킬이 포함된 PR 수신
-
----
-
-*[Everything Claude Code](https://github.com/affaan-m/everything-claude-code)의 일부*

@@ -12,33 +12,31 @@ express-engineer 본문 규칙의 코드 예시다. 해당 규칙을 구현할 �
   2. 없으면 `backend/src/utils/response.js`(또는 동등 래퍼)를 직접 읽어 기존 코드가 실제로 쓰는 shape을 따름
   3. 신규 프로젝트에 한해 기본값 `{ success: true, message?, data, meta? }` / `{ success: false, message, errors? }` 채택
 - 직접 `res.json({ ... })` 호출 금지 → 응답 유틸(`successResponse`/`errorResponse` 등) 래퍼 사용
-- 래퍼 예시:
+- 신규 프로젝트 기본 래퍼(wecom·modadam `utils/response.js` 실측과 동일한 시그니처):
   ```javascript
   // src/utils/response.js
-  export const successResponse = (res, data, statusCode = 200) =>
-    res.status(statusCode).json({ success: true, data })
+  export const successResponse = (res, data = null, message = 'success', statusCode = 200) =>
+    res.status(statusCode).json({ success: true, message, data })
 
-  export const errorResponse = (res, error, statusCode = 400) =>
-    res.status(statusCode).json({ success: false, error })
+  export const errorResponse = (res, message = 'error', statusCode = 400, errors = null) =>
+    res.status(statusCode).json(errors ? { success: false, message, errors } : { success: false, message })
 
-  export const paginatedResponse = (res, data, meta) =>
-    res.json({ success: true, data, meta })
-
-  export const messageResponse = (res, message, statusCode = 200) =>
-    res.status(statusCode).json({ success: true, message })
+  export const paginatedResponse = (res, data, meta, message = 'success') =>
+    res.status(200).json({ success: true, message, data, meta })
   ```
-- DELETE 등 데이터 없는 응답도 래퍼 사용: `messageResponse(res, '삭제되었습니다.')` (res.json 직접 호출 금지). messageResponse는 response.js에 항상 포함한다 (누락 시 신규 추가). `successResponse(res, null, '삭제되었습니다.')` 형태는 statusCode 자리에 문자열이 들어가는 버그이므로 사용 금지.
+- DELETE 등 데이터 없는 응답도 래퍼로: wecom·modadam은 `successResponse(res, null, '삭제되었습니다.')`(3번째 인자가 message). `messageResponse`는 프로젝트 response.js에 이미 있을 때만 쓴다.
+- 인자 순서는 래퍼마다 다르다(cosmic-renew는 `ok(res, data, meta)` / `fail(res, status, message, code)`). 호출 전에 response.js의 시그니처를 읽고, 문자열을 statusCode 자리에 넣는 실수를 피한다.
 
 ### POST/PATCH 전체 리소스 재조회
 - INSERT 후 `insertId`만 반환 금지 → 전체 리소스 `findById` 재조회 후 반환
 - 외부에 `AUTO_INCREMENT` id 노출 금지 → UUID만 반환
 - 패턴:
   ```javascript
-  // ❌ insertId만 반환
+  // [나쁨] insertId만 반환
   const { insertId } = await pool.query('INSERT INTO ...')
   return { id: insertId }
 
-  // ✅ 전체 리소스 재조회
+  // [좋음] 전체 리소스 재조회
   const { insertId } = await pool.query('INSERT INTO ...')
   return findById(insertId)  // UUID 포함 전체 필드 반환
 
@@ -68,16 +66,16 @@ express-engineer 본문 규칙의 코드 예시다. 해당 규칙을 구현할 �
 - admin 라우트에 `requireAdmin` 누락 시 부팅 실패로 강제 (convention-enforcer ce-002)
 - 패턴:
   ```javascript
-  // ❌ 인증만 있고 권한 없음
+  // [나쁨] 인증만 있고 권한 없음
   router.delete('/admin/users/:id', authenticate, adminController.deleteUser)
 
-  // ✅ 인증 + 권한 2층
+  // [좋음] 인증 + 권한 2층
   router.delete('/admin/users/:id', authenticate, requireAdmin, adminController.deleteUser)
   ```
 
 ### verifyOwnership 미들웨어 구현
 
-`src/middlewares/verifyOwnership.js` 가 없으면 신규 생성한다. 서비스 레이어 소유권 처리로 대체하는 것은 컨벤션 위반이다.
+신규 프로젝트는 `src/middleware/verifyOwnership.js`를 만들어 라우터 체인에 둔다. wecom·modadam은 미들웨어 없이 Service에서 소유권을 검사한다(`webtoonService.js`: `author_uuid !== userUuid` → 403). 기존 프로젝트에서는 그 관례를 따르고, 빠진 소유권 검사를 보완할 때도 같은 자리(Service)에 넣는다. 둘 중 어느 방식이든 "검사 자체가 없는" 변경 라우트가 CRITICAL이다.
 구현체와 라우터 적용 예시는 `agent-refs/express-middleware-auth.md` 참조.
 핵심 제약: `verifyOwnership(Model, ownerField = 'user_id')` 시그니처, ADMIN 역할은 우회 허용, 검증 통과 시 `req.resource` 에 레코드 주입, 라우터에서 `validate(uuidParamSchema, 'params')` **뒤에** 배치.
 
@@ -95,13 +93,13 @@ express-engineer 본문 규칙의 코드 예시다. 해당 규칙을 구현할 �
 - WeCom 회고: `1996523` 공지 발행 알림이 10000명 초과 시 누락되어 cursor batch로 전환, `5c127cc`+`d742567` Bell 미읽음 뱃지가 부정확해 전체 카운트 API로 교체
 - 패턴:
   ```javascript
-  // ❌ LIMIT/OFFSET - 배치 중간 삽입/삭제 시 누락·중복
+  // [나쁨] LIMIT/OFFSET - 배치 중간 삽입/삭제 시 누락·중복
   for (let offset = 0; offset < total; offset += 500) {
     const [users] = await pool.query('SELECT id FROM users LIMIT 500 OFFSET ?', [offset])
     await sendNotifications(users)
   }
 
-  // ✅ PK 커서 기반 배치 - 삽입/삭제에 안전
+  // [좋음] PK 커서 기반 배치 - 삽입/삭제에 안전
   let cursor = 0
   while (true) {
     const [users] = await pool.query(
@@ -115,7 +113,7 @@ express-engineer 본문 규칙의 코드 예시다. 해당 규칙을 구현할 �
 
 ### Zod 검증
 - 요청 `body`/`query`/`params` 모두 Zod 스키마로 검증 → `validate` 미들웨어
-- Zod 에러 시 **400** + 구체적 필드별 메시지
+- Zod 에러 시 필드별 메시지. 상태코드·형식은 프로젝트 실측: wecom·modadam은 `validate(schema)` 하나가 `{ body, query, params }`를 받아 `422` + `errors[{field,message}]`, 결과는 `req.validated`. 아래는 그런 미들웨어가 없는 신규 프로젝트 기본(`400` + `details`)이다.
 - 패턴:
   ```javascript
   // body 외에 query, params도 검증
@@ -146,27 +144,26 @@ express-engineer 본문 규칙의 코드 예시다. 해당 규칙을 구현할 �
 - FK 참조는 UUID 컬럼으로 (`AUTO_INCREMENT` 내부 id 직접 참조 금지)
 - 패턴:
   ```javascript
-  // ❌ 동적 컬럼 무검증
+  // [나쁨] 동적 컬럼 무검증
   const setClauses = Object.keys(data).map((k, i) => `${k} = $${i + 1}`)
 
-  // ✅ 화이트리스트 필터링
+  // [좋음] 화이트리스트 필터링
   const UPDATABLE_COLS = ['name', 'email', 'bio', 'avatar_url']
   const entries = Object.entries(data).filter(([k]) => UPDATABLE_COLS.includes(k))
   const setClauses = entries.map(([k], i) => `${k} = $${i + 1}`)
   const values = entries.map(([, v]) => v)
   ```
 
-- Repository에서 AppError 직접 throw (일반 Error에 .statusCode 설정 금지)
+- 상태코드는 프로젝트 errorHandler가 읽는 필드에 맞춰 던진다. 필드명이 어긋나면 500이 된다.
   ```javascript
-  // Repository에서 AppError 직접 throw (일반 Error에 .statusCode 설정 금지)
-  // ❌ 잘못됨: errorHandler가 statusCode를 무시하고 500으로 응답
-  const err = new Error('주문을 찾을 수 없습니다.')
-  err.statusCode = 404
-  throw err
+  // wecom·modadam (AppError 없음, errorHandler가 err.status를 읽음)
+  if (!row) throw Object.assign(new Error('주문을 찾을 수 없습니다'), { status: 404 })
 
-  // ✅ 올바름: AppError 사용
+  // AppError가 있는 프로젝트 (errorHandler가 err.statusCode를 읽음)
   import { AppError } from '../utils/AppError.js'
   if (!row) throw new AppError('주문을 찾을 수 없습니다.', 404)
+
+  // [나쁨] 프로젝트가 읽지 않는 필드에 넣기 - wecom에서 err.statusCode = 404 는 500으로 응답된다
   ```
 
 ### 트랜잭션 헬퍼
@@ -200,23 +197,23 @@ export default router
 탐지 패턴: 같은 라우터 파일 내에서 `router.get('/:xxx', ...)` 선언 줄 번호가 `router.get('/정적경로', ...)` 선언 줄 번호보다 앞서는지 확인. GET뿐 아니라 동일 세그먼트를 쓰는 다른 메서드에도 동일하게 적용.
 
 ```javascript
-// ❌ 나쁨 - /popular 요청이 /:id 핸들러로 잘못 라우팅됨
+// [나쁨] 나쁨 - /popular 요청이 /:id 핸들러로 잘못 라우팅됨
 router.get('/:id', productController.getById)
 router.get('/popular', productController.getPopular)  // 영원히 도달 불가
 
-// ✅ 좋음 - 정적 라우트를 파라미터 라우트보다 먼저 선언
+// [좋음] 좋음 - 정적 라우트를 파라미터 라우트보다 먼저 선언
 router.get('/popular', productController.getPopular)
 router.get('/:id', productController.getById)
 ```
 
 #### 변경계열 라우트(POST/PUT/PATCH/DELETE) 인증 미들웨어 누락
-라우터 파일을 훑을 때 `POST`/`PUT`/`PATCH`/`DELETE` 핸들러마다 `authenticate`(또는 `authMiddleware`) - 필요 시 `verifyOwnership`/`requireAdmin` - 가 실제로 체이닝되어 있는지 줄 단위로 확인한다. 로그인 없이도 되는 라우트(예: 회원가입, 로그인)를 제외하고, 리소스를 변경하는 라우트에 인증 미들웨어가 없으면 CRITICAL로 보고한다. 2층 인증 조합 자체의 상세 규칙은 위 "2층 인증 기본값 강제" 섹션을 따른다 - 여기서는 라우터 파일을 새로 등록/수정할 때 누락 여부를 놓치지 않기 위한 체크리스트로 취급한다.
+라우터 파일을 훑을 때 `POST`/`PUT`/`PATCH`/`DELETE` 핸들러마다 `authenticate`(또는 `authMiddleware`) - 필요 시 `verifyOwnership`/`requireAdmin` - 가 실제로 체이닝되어 있는지 줄 단위로 확인한다. 로그인 없이도 되는 라우트(예: 회원가입, 로그인)를 제외하고, 리소스를 변경하는 라우트에 인증 미들웨어가 없으면 CRITICAL로 보고한다. 2층 인증 조합 자체의 상세 규칙은 위 "인증 2층 구조" 섹션을 따른다 - 여기서는 라우터 파일을 새로 등록/수정할 때 누락 여부를 놓치지 않기 위한 체크리스트로 취급한다.
 
 ```javascript
-// ❌ 나쁨 - DELETE인데 인증 미들웨어 없음
+// [나쁨] 나쁨 - DELETE인데 인증 미들웨어 없음
 router.delete('/:id', productController.remove)
 
-// ✅ 좋음
+// [좋음] 좋음
 router.delete('/:id', authenticate, verifyOwnership(ProductRepository), productController.remove)
 ```
 

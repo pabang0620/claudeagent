@@ -1,6 +1,6 @@
 # express-engineer 참조: DB 연결·트랜잭션·비동기·테스트
 
-> `.claude/agents/express-engineer.md` 의 참조 파일이다. DB 연결 설정, 트랜잭션 헬퍼, 병렬/스트리밍 처리, Supertest 테스트를 작성할 때만 읽는다.
+> `.claude/agents/express-engineer.md` 의 참조 파일이다. DB 연결 설정, 트랜잭션 헬퍼, Supertest 테스트를 작성할 때만 읽는다.
 
 ## DB 연결 설정
 
@@ -30,8 +30,12 @@ pool.on('error', (err) => {
 
 ### MySQL2 - mysql2 감지 시 (wecom·speetalk·cosmic-renew 등 MySQL 프로젝트)
 ```javascript
-// src/config/database.js
+// src/config/database.js (wecom 실측 기준)
 import mysql from 'mysql2/promise'
+
+for (const key of ['DB_HOST', 'DB_USER', 'DB_PASSWORD', 'DB_NAME']) {
+  if (!process.env[key]) throw new Error(`${key} 환경변수가 설정되지 않았습니다.`) // 값 없으면 부팅 차단 (rules/security.md)
+}
 
 export const pool = mysql.createPool({
   host: process.env.DB_HOST,
@@ -41,12 +45,18 @@ export const pool = mysql.createPool({
   waitForConnections: true,
   connectionLimit: 20,
   queueLimit: 0,
+  timezone: '+09:00', // db-schema-architect 원칙: 시간대 누락 시 날짜 버그
+})
+
+pool.on('connection', (connection) => {
+  connection.query("SET time_zone = '+09:00'")
 })
 ```
 
 ### MySQL2 트랜잭션 헬퍼
+wecom은 헬퍼 없이 Service/Repository 안에서 `pool.getConnection()` → `beginTransaction()` → `commit/rollback` → `release()`를 직접 쓴다. 기존 프로젝트는 그 관례를 따르고, 헬퍼는 새로 만들 때만(cosmic-renew는 `src/utils/withTransaction.js`에 있음) 아래처럼 둔다.
 ```javascript
-// src/config/mysql.js
+// src/utils/withTransaction.js
 export async function withTransaction(pool, fn) {
   const conn = await pool.getConnection()
   await conn.beginTransaction()
@@ -72,9 +82,9 @@ const result = await withTransaction(mysqlPool, async (conn) => {
 })
 ```
 
-### Prisma - 미지향 (명시 요청 시에만)
+### Prisma - Prisma 프로젝트(예: cosmic-kuji-market)에서만
 ```javascript
-// 사용자가 명시적으로 Prisma 사용을 요청한 경우에만
+// package.json에 @prisma/client가 있는 프로젝트에서만. raw SQL 프로젝트에 새로 들이지 않는다
 import { PrismaClient } from '@prisma/client'
 
 const globalForPrisma = globalThis
@@ -82,38 +92,6 @@ export const prisma = globalForPrisma.prisma ?? new PrismaClient()
 if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma
 ```
 
-
-## 비동기 처리 패턴
-
-### 병렬 처리
-```javascript
-// ❌ 순차 실행 (느림)
-const user = await getUser(id)
-const orders = await getOrders(id)
-const reviews = await getReviews(id)
-
-// ✅ 병렬 실행
-const [user, orders, reviews] = await Promise.all([
-  getUser(id),
-  getOrders(id),
-  getReviews(id),
-])
-```
-
-### 스트리밍 대용량 데이터
-```javascript
-import { pipeline } from 'stream/promises'
-import { createReadStream } from 'fs'
-
-export const downloadFile = async (req, res) => {
-  const filePath = getFilePath(req.params.filename)
-  res.setHeader('Content-Type', 'application/octet-stream')
-  res.setHeader('Content-Disposition', `attachment; filename="${req.params.filename}"`)
-  await pipeline(createReadStream(filePath), res)
-}
-```
-
----
 
 ### pg 트랜잭션 패턴
 ```javascript
@@ -139,44 +117,8 @@ export const withTransaction = async (callback) => {
 
 ## 테스트 (Supertest + Jest)
 
-```javascript
-// tests/users.test.js
-import request from 'supertest'
-import app from '../src/app.js'
-import { pool } from '../src/config/database.js'
-
-describe('GET /api/users', () => {
-  it('인증 없이 접근 시 401 반환', async () => {
-    const res = await request(app).get('/api/users')
-    expect(res.status).toBe(401)
-    expect(res.body.success).toBe(false)
-  })
-
-  it('유효한 토큰으로 사용자 목록 반환', async () => {
-    const token = generateTestToken({ id: 1, role: 'admin' })
-    const res = await request(app)
-      .get('/api/users')
-      .set('Authorization', `Bearer ${token}`)
-
-    expect(res.status).toBe(200)
-    expect(res.body.success).toBe(true)
-    expect(Array.isArray(res.body.data)).toBe(true)
-    expect(res.body.meta).toHaveProperty('total')
-  })
-})
-
-describe('POST /api/users', () => {
-  it('이메일 누락 시 400 반환', async () => {
-    const res = await request(app)
-      .post('/api/users')
-      .send({ password: 'password123', name: '테스트' })
-
-    expect(res.status).toBe(400)
-    expect(res.body.details[0].field).toBe('email')
-  })
-})
-
-afterAll(async () => {
-  await pool.end()
-})
-```
+이 프로젝트군에서 틀리기 쉬운 점만 적는다. Supertest 문법 자체는 설명하지 않는다.
+- `app`(listen 안 함)을 import하고 `server.js`는 import하지 않는다. `afterAll`에서 `pool.end()`를 호출하지 않으면 Jest가 종료되지 않는다.
+- 검증 실패 응답은 프로젝트마다 다르다: wecom·modadam은 `422` + `body.errors[{field,message}]`, 이 참조의 신규 기본 `validate`는 `400` + `body.details[...]`. 테스트 기대값은 실제 `validationMiddleware.js`를 읽고 맞춘다.
+- 토큰은 프로젝트의 `utils/jwt.js` 발급 함수로 만든다(`req.user`에 들어가는 필드명이 `user_type`인지 `role`인지 프로젝트마다 다르다).
+- 테스트 DB는 `.env.test`로 분리하고 운영 DB 접속 정보로 테스트를 돌리지 않는다.

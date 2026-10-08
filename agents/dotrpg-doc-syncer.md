@@ -1,0 +1,1 @@
+/mnt/c/Users/admin/Desktop/games/dotRPG/.claude/agents/dotrpg-doc-syncer.md

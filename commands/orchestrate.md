@@ -1,171 +1,25 @@
-# Orchestrate Command
+---
+description: 여러 파일에 걸친 신규 기능·큰 리팩토링을 계획-구현 순서로 돌린다. "/orchestrate feature|refactor <설명>". 단건 수정·버그에는 쓰지 않는다(메인 직접).
+---
 
-복잡한 작업을 위한 순차적 에이전트 워크플로우.
+# Orchestrate
 
-## 사용법
+`rules/agents.md` "표준 워크플로우"를 그대로 실행한다. 이 커맨드는 순서를 고정할 뿐 새 규칙을 만들지 않는다.
 
-`/orchestrate [workflow-type] [task-description]`
+## feature
+1. planner: 계획 문서(단계·파일·완료 조건). 리뷰 단계·시간 견적은 넣지 않는다.
+2. 구현: 지금 대화 맥락이 필요하면 fork로 묶음을 나눠 병렬, 아니면 react-specialist / express-engineer. 파일 소유를 겹치지 않게 나눈다.
+3. 메인이 diff·빌드·실행으로 확인한다. 인증·결제·업로드·개인정보를 건드렸으면 security-reviewer를 추가한다.
 
-## 워크플로우 타입
+## refactor
+- 구조 개편·컴포넌트 분리: planner → react-specialist / express-engineer
+- 미사용 코드·패키지 정리: refactor-cleaner (1단계 후보 보고 → 승인 목록만 제거)
 
-### feature
-전체 기능 구현 워크플로우:
-```
-planner -> react-specialist|express-engineer -> code-reviewer 스킬 -> [인증·결제·개인정보면] security-reviewer
-```
+## bugfix
+커맨드로 돌리지 않는다. 메인이 직접 고치고, 재현이 어렵거나 회귀 위험이 크면 tdd-guide로 실패 테스트만 먼저 쓴다.
 
-### bugfix
-버그 조사 및 수정 워크플로우:
-```
-tdd-guide -> react-specialist|express-engineer -> code-reviewer 스킬
-```
+## 인계
+에이전트 간 인계는 스폰 프롬프트에 직접 적는다: 바뀐 파일 목록, 결정 사항, 미해결 항목. 별도 인계 문서 파일은 만들지 않는다.
 
-### refactor
-안전한 리팩토링 워크플로우:
-```
-planner -> refactor-cleaner -> code-reviewer 스킬
-```
-
-### security
-보안 중심 리뷰:
-```
-security-reviewer -> code-reviewer -> architect
-```
-
-## 실행 패턴
-
-워크플로우의 각 에이전트에 대해:
-
-1. **에이전트 호출** - 이전 에이전트의 컨텍스트와 함께
-2. **출력 수집** - 구조화된 인계 문서로
-3. **다음 에이전트에 전달** - 체인의 다음 에이전트로
-4. **결과 집계** - 최종 보고서로
-
-## 인계 문서 형식
-
-에이전트 간에 인계 문서 생성:
-
-```markdown
-## HANDOFF: [previous-agent] -> [next-agent]
-
-### 컨텍스트
-[수행된 작업 요약]
-
-### 발견사항
-[주요 발견 또는 결정 사항]
-
-### 수정된 파일
-[수정된 파일 목록]
-
-### 미해결 질문
-[다음 에이전트를 위한 미해결 항목]
-
-### 권장사항
-[제안된 다음 단계]
-```
-
-## 예시: 기능 워크플로우
-
-```
-/orchestrate feature "사용자 인증 추가"
-```
-
-실행:
-
-1. **Planner Agent**
-   - 요구사항 분석
-   - 구현 계획 생성
-   - 의존성 식별
-   - 출력: `HANDOFF: planner -> tdd-guide`
-
-2. **TDD Guide Agent**
-   - planner 인계 읽기
-   - 테스트 먼저 작성
-   - 테스트 통과를 위해 구현
-   - 출력: `HANDOFF: tdd-guide -> code-reviewer`
-
-3. **code-reviewer 스킬** (에이전트가 아니므로 스폰하지 않고 스킬로 실행)
-   - 구현 검토
-   - 이슈 확인
-   - 개선사항 제안
-   - 결과를 security-reviewer 스폰 프롬프트에 전달
-
-4. **Security Reviewer Agent**
-   - 보안 감사
-   - 취약점 확인
-   - 최종 승인
-   - 출력: 최종 보고서
-
-## 최종 보고서 형식
-
-```
-오케스트레이션 보고서
-==================
-워크플로우: feature
-작업: 사용자 인증 추가
-에이전트: planner -> tdd-guide -> code-reviewer -> security-reviewer
-
-요약
-----
-[한 문단 요약]
-
-에이전트 출력
------------
-Planner: [요약]
-TDD Guide: [요약]
-Code Reviewer: [요약]
-Security Reviewer: [요약]
-
-변경된 파일
-----------
-[수정된 모든 파일 목록]
-
-테스트 결과
-----------
-[테스트 통과/실패 요약]
-
-보안 상태
---------
-[보안 발견사항]
-
-권장사항
---------
-[배포 / 추가 작업 필요 / 차단됨]
-```
-
-## 병렬 실행
-
-독립적인 확인의 경우 에이전트를 병렬로 실행:
-
-```markdown
-### 병렬 단계
-동시 실행:
-- security-reviewer (보안)
-- architect (설계)
-
-### 결과 병합
-출력을 단일 보고서로 결합
-```
-
-## 인자
-
-$ARGUMENTS:
-- `feature <description>` - 전체 기능 워크플로우
-- `bugfix <description>` - 버그 수정 워크플로우
-- `refactor <description>` - 리팩토링 워크플로우
-- `security <description>` - 보안 리뷰 워크플로우
-- `custom <agents> <description>` - 커스텀 에이전트 시퀀스
-
-## 커스텀 워크플로우 예시
-
-```
-/orchestrate custom "architect,tdd-guide,code-reviewer" "캐싱 레이어 재설계"
-```
-
-## 팁
-
-1. **planner로 시작** - 복잡한 기능의 경우
-2. **여러 파일 변경이면 code-reviewer 스킬 실행** - 머지 전
-3. **security-reviewer 사용** - 인증/결제/개인정보의 경우
-4. **인계를 간결하게** - 다음 에이전트에 필요한 것에 집중
-5. **에이전트 간 필요시 검증 실행**
+## 보고
+변경 파일 목록 / 확인 방법과 결과 / 남은 항목. 리뷰는 사용자가 요청할 때만.

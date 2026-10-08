@@ -10,7 +10,7 @@
 
 Types: feat, fix, refactor, docs, test, chore, perf, ci
 
-Note: Attribution disabled globally via ~/.claude/settings.json.
+Attribution: `~/.claude/settings.json`에 끄는 설정이 없고(2026-10-08 실측), 하네스가 커밋 끝에 `Co-Authored-By: Claude ...` 줄을 붙이라고 안내한다. 그대로 둔다. 끄고 싶으면 `update-config` 스킬로 설정한다.
 
 ## Pull Request Workflow
 

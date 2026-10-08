@@ -18,15 +18,15 @@ effort: medium
 | 스크립트 | `scripts/tts.py`, `scripts/rms_mouth.py`, `scripts/precheck.mjs`, `scripts/render.mjs` |
 | 프로필 | `profiles/<name>.md` |
 | 에피소드 | `episodes/<profile>-ep<NN>-<slug>/` 또는 `<profile>-long<NN>-<slug>/` |
-| 절차 SSOT | `episodes/README.md` (이 문서와 다르면 README를 따른다) |
+| 폴더 구조·파일명 SSOT | `episodes/README.md` (구조·파일명이 이 문서와 다르면 README를 따른다. 단 README의 "mp4 2개"는 영어 채널 중단 전 서술이라 언어는 원칙 6을 따른다) |
 
 캐릭터·팔레트·씬은 모든 프로필 공용이다. 프로필이 바꾸는 것은 목소리, 자막 스타일, 배경 톤뿐이다.
 
 ## 참조 파일 (해당 단계에서만 읽는다)
 | 파일 | 언제 |
 |---|---|
-| `.claude/agent-refs/shortform-defects.md` | 컴포넌트를 새로 만들 때, 스틸 선점검·렌더 후 검수 때 (21화 이후 결함 목록, 예방·검수 체크리스트) |
-| `.claude/agent-refs/shortform-render-ops.md` | TTS·립싱크 입출력 형식, 타임라인·제목카드 배치, precheck 규칙표, 렌더·스틸 명령, 효과음 측정, 배치 모드, venv, 산출물 구조·배포 상세가 필요할 때 |
+| `/home/lee/project/.claude/agent-refs/shortform-defects.md` | 컴포넌트를 새로 만들 때, 스틸 선점검·렌더 후 검수 때 (21화 이후 결함 목록, 예방·검수 체크리스트) |
+| `/home/lee/project/.claude/agent-refs/shortform-render-ops.md` | TTS·립싱크 입출력 형식, 타임라인·제목카드 배치, precheck 규칙표, 렌더·스틸 명령, 효과음 측정, 배치 모드, venv, 산출물 구조·배포 상세가 필요할 때 |
 
 ## 원칙 0: 자산 라이브러리 우선
 1. `REGISTRY.md`를 먼저 읽는다. 없으면 라이브러리를 훑어 새로 만든다(기존 파일은 덮어쓰지 않는다).
@@ -99,7 +99,7 @@ effort: medium
 - 기술적 검증을 마치면 승인 질문 없이 바로 복사한다.
   - 숏폼: `/home/lee/project/shorts/ko/[N화] <제목>.mp4`
   - 롱폼: `shorts/video/ko/[N화] <제목>.mp4`
-- N은 폴더명의 ep/long 번호이고, 두 시리즈는 번호를 따로 센다. 제목은 `02-script-v1.md`의 "제목" 절 그대로다.
+- N은 폴더명의 ep/long 번호이고, 두 시리즈는 번호를 따로 센다. 제목은 확정 대본(가장 최신 `02-script-v<N>.md`)의 "제목" 절 그대로다.
 - 배포본은 같은 파일명에 덮어쓴다. 이 `shorts/` 덮어쓰기와 아래 `out/` mp4 삭제는 사용자가 정한 CLAUDE.md 파괴적 작업 규칙의 예외다(2026-08-09·08-11 지시).
 - md5 일치를 확인한 뒤 `out/`의 mp4는 전부 지우고, 지운 목록을 보고한다. `frames-*/`는 이 정책과 무관하다.
 - 배포 전 수정 사이클 안에서는 `out/`에 `-v2` 접미사를 붙여 이전 mp4를 덮어쓰지 않는다.

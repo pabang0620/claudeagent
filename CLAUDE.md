@@ -28,6 +28,8 @@
 - 전용 파이프라인이 있는 작업 (숏폼·굼구미·게임 에셋·HWPX/DOCX/PPTX 생성·회의록 등)
 - 로그가 길게 쌓이는 장시간 작업 (대량 렌더, 긴 빌드 루프)
 
+**수단 선택은 `rules/agents.md` STEP 0-1**: 지금 대화 맥락이 필요하면 `fork`(메인 모델·전체 맥락 상속), 넓은 읽기 전용 탐색은 `Explore`, 담당이 있으면 전문 에이전트, 그 밖의 독립 작업만 general-purpose.
+
 ### 위임할 때 원칙
 
 1. **스폰 프롬프트에 필요한 맥락을 적는다** - 서브에이전트는 대화 이력을 모른다. 대상 파일 절대경로, 제약 조건, 기대 출력 형식, 완료 기준, 보고 줄 수 상한을 적는다.
@@ -35,7 +37,7 @@
 3. **위임 결과는 diff·실행 결과로 확인한다.** 보고 문장만 믿지 않는다.
 4. **모델·effort**: 에이전트 기본은 `model: sonnet` + low/medium. high가 필요한 작업은 sonnet high 대신 `model: opus` + `effort: low`로 한다(현재 코드 검증 3종: security-reviewer·database-reviewer·function-validator). 코드 검증 외에는 high를 쓰지 않는다. 상세는 `rules/performance.md`.
 5. **`lee-wonho`(판정 대리 에이전트)는 사용자가 명시적으로 요청할 때만 쓴다.** 사용자에게 질문하기 전 단계로 끼워 넣지 않는다.
-6. **막혔을 때는 혼자 더 시도하지 말고 모델 상향을 제안한다.** 같은 문제에 2회 실패했거나 원인을 특정 못 한 채 추측으로 고치려 하면 멈추고 제안한다. 절차는 `rules/performance.md`.
+6. **서브에이전트가 막히면 추측 수정으로 밀지 않는다.** 같은 문제에 2회 실패했거나 원인을 특정 못 했으면 시도 요약을 보고하고 메인(또는 fork)이 직접 가져온다. 메인 세션이 Fable인 지금은 상위 모델 서브에이전트가 없다. 절차는 `rules/performance.md`.
 
 
 ### 반복 실수 차단 (2026-07-28 추가)
@@ -60,7 +62,7 @@
 
 ## 슬래시 커맨드
 
-`commands/`에 12개 있고 목록은 자동 주입된다. 실측상 사용자는 슬래시 대신 자연어로 지시하므로, 커맨드 존재를 전제하지 말고 STEP 1 라우팅으로 처리한다.
+`commands/` 목록은 자동 주입된다. 실측상 사용자는 슬래시 대신 자연어로 지시하므로, 커맨드 존재를 전제하지 말고 STEP 1 라우팅으로 처리한다. 커맨드 본문은 `rules/agents.md`를 다시 쓰지 않고 가리키기만 한다.
 
 ## 스킬
 
@@ -75,10 +77,8 @@
 
 에이전트 목록·트리거는 하네스가 자동 주입하고, **요청 → 에이전트 라우팅 SSOT는 `rules/agents.md`의 STEP 0/STEP 1 표**다. 에이전트를 추가·변경하면 그 파일부터 갱신한다.
 
-## Context7 MCP
-외부 라이브러리 사용 시 요청 끝에 `use context7` 추가 → 최신 API 문서 자동 조회
-
-필수 점검: `@google/genai`, `bullmq`, `@aws-sdk/client-s3`, `pg`
+## 외부 라이브러리 최신 API
+Context7 MCP는 설치돼 있지 않다(실측 MCP: playwright, playwright-music, blender). 버전에 민감한 라이브러리(`@google/genai`, `bullmq`, `@aws-sdk/client-s3`, `pg`)는 학습 지식으로 쓰지 말고 WebFetch로 공식 문서나 `node_modules/<pkg>/README`·타입 정의를 읽고 쓴다.
 
 > 주의: `@google/generative-ai` 아님 → `@google/genai` 사용할 것
 

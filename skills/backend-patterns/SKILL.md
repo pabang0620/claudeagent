@@ -1,6 +1,6 @@
 ---
 name: backend-patterns
-description: Node.js/Express 백엔드 아키텍처 패턴. API 설계, 레이어 분리, DB 접근(프로젝트별 pg/mysql2 감지, 전역 기본값 아님), 보안, 캐싱, 에러 처리 베스트 프랙티스
+description: Node.js/Express 백엔드 코드를 작성·수정할 때 자동 적용하는 이 사용자의 컨벤션. Router/Controller/Service/Repository 3계층, 응답 shape 확인 순서, DB 드라이버(pg/mysql2/Prisma 프로젝트별 감지), 중앙 errorHandler, zod validate, 이중 ID, WeCom 회고 기반 금지 사항. 일반 Express 지식은 담지 않는다. 신규 API 계약 설계는 api-contract-designer, 쿼리 감사는 database-reviewer.
 ---
 
 # 백엔드 개발 패턴 (Node.js + Express)
@@ -23,24 +23,7 @@ Router → Controller → Service → Repository
 
 ## API 설계
 
-### RESTful URL 컨벤션
-```
-GET    /api/users           → 목록
-GET    /api/users/:id       → 단일
-POST   /api/users           → 생성
-PUT    /api/users/:id       → 전체 수정
-PATCH  /api/users/:id       → 부분 수정
-DELETE /api/users/:id       → 삭제
-
-# 중첩 리소스
-GET    /api/users/:id/orders
-POST   /api/users/:id/orders
-
-# 필터·정렬·페이지네이션
-GET /api/users?status=active&sort=created_at&order=desc&page=1&limit=20
-```
-
-### 응답 형식 예시 (shape은 아래 "API 응답 포맷" 확인 순서로 프로젝트 실측을 우선한다. 이 예시는 `error` 변형)
+### 응답 형식 예시 (shape은 아래 "API 응답 포맷" 확인 순서로 프로젝트 실측을 우선한다. 예시는 기본값 `message` 형)
 ```javascript
 // 성공
 res.json({ success: true, data: result })
@@ -48,12 +31,9 @@ res.json({ success: true, data: list, meta: { total, page, limit, totalPages } }
 res.status(201).json({ success: true, data: created })
 
 // 에러
-res.status(400).json({ success: false, error: '메시지' })
-res.status(401).json({ success: false, error: '인증이 필요합니다.' })
-res.status(403).json({ success: false, error: '권한이 없습니다.' })
-res.status(404).json({ success: false, error: '리소스를 찾을 수 없습니다.' })
-res.status(409).json({ success: false, error: '이미 존재합니다.' })
-res.status(500).json({ success: false, error: '서버 오류가 발생했습니다.' })
+res.status(400).json({ success: false, message: '메시지' })
+res.status(404).json({ success: false, message: '리소스를 찾을 수 없습니다.' })
+// 401/403/409/500도 같은 shape. 컨트롤러에서 직접 쓰지 말고 next(err)로 중앙 errorHandler에 넘긴다 (rules/coding-style.md A)
 ```
 
 ---
@@ -63,26 +43,6 @@ res.status(500).json({ success: false, error: '서버 오류가 발생했습니�
 ### PostgreSQL (pg) - pg 감지 시 (예: modadam)
 ```javascript
 import { pool } from '../config/database.js'
-
-export const findAll = async ({ offset = 0, limit = 20, search }) => {
-  const searchWhere = search ? `AND (name ILIKE $3 OR email ILIKE $3)` : ''
-  const params = search ? [limit, offset, `%${search}%`] : [limit, offset]
-
-  const [rows, count] = await Promise.all([
-    pool.query(
-      `SELECT id, email, name, created_at FROM users
-       WHERE deleted_at IS NULL ${searchWhere}
-       ORDER BY created_at DESC LIMIT $1 OFFSET $2`,
-      params
-    ),
-    pool.query(
-      `SELECT COUNT(*) FROM users WHERE deleted_at IS NULL ${searchWhere}`,
-      search ? [`%${search}%`] : []
-    ),
-  ])
-
-  return { users: rows.rows, total: parseInt(count.rows[0].count) }
-}
 
 // 외부 노출·조회는 uuid 컬럼(user_id)으로. 내부 id는 JOIN·FK 전용 (CLAUDE.md 이중 ID)
 export const findByUuid = async (userId) => {
@@ -115,29 +75,13 @@ export const findByUuid = async (userId) => {
 }
 ```
 
-### 페이지네이션 조회 (pg raw SQL)
-```javascript
-import { pool } from '../config/database.js'
-
-export const findPage = async ({ offset = 0, limit = 20 }) => {
-  const { rows } = await pool.query(
-    `SELECT id, email, name, created_at FROM users
-     WHERE deleted_at IS NULL
-     ORDER BY created_at DESC
-     LIMIT $1 OFFSET $2`,
-    [limit, offset]
-  )
-  return rows
-}
-```
-
 > Prisma 프로젝트(예: cosmic-kuji-market)는 Prisma 관례를 따른다. raw SQL 프로젝트에는 Prisma를 새로 도입하지 않는다.
 
 ---
 
 ## 미들웨어 패턴
 
-### 에러 핸들러 (필수)
+### 에러 핸들러 (중앙 1개, 컨트롤러는 next(err)만)
 ```javascript
 // utils/AppError.js
 export class AppError extends Error {
@@ -151,21 +95,20 @@ export class AppError extends Error {
 // middlewares/errorHandler.js
 export const errorHandler = (err, req, res, next) => {
   if (err.name === 'AppError') {
-    return res.status(err.statusCode).json({ success: false, error: err.message })
+    return res.status(err.statusCode).json({ success: false, message: err.message })
   }
   if (err.code === '23505') { // pg 고유키 위반
-    return res.status(409).json({ success: false, error: '이미 존재하는 데이터입니다.' })
+    return res.status(409).json({ success: false, message: '이미 존재하는 데이터입니다.' })
   }
   if (err.code === 'ER_DUP_ENTRY') { // mysql2 고유키 위반
-    return res.status(409).json({ success: false, error: '이미 존재하는 데이터입니다.' })
+    return res.status(409).json({ success: false, message: '이미 존재하는 데이터입니다.' })
   }
 
   console.error('[ERROR]', err)
   const isDev = process.env.NODE_ENV === 'development'
   res.status(500).json({
     success: false,
-    error: isDev ? err.message : '서버 오류가 발생했습니다.',
-    ...(isDev && { stack: err.stack }),
+    message: isDev ? err.message : '서버 오류가 발생했습니다.',
   })
 }
 ```
@@ -178,8 +121,8 @@ export const validate = (schema) => (req, res, next) => {
   if (!result.success) {
     return res.status(400).json({
       success: false,
-      error: '입력값이 올바르지 않습니다.',
-      details: result.error.errors.map(e => ({ field: e.path.join('.'), message: e.message })),
+      message: '입력값이 올바르지 않습니다.',
+      errors: result.error.issues.map(e => ({ field: e.path.join('.'), message: e.message })),
     })
   }
   req.body = result.data // 검증된 데이터로 교체
@@ -188,55 +131,9 @@ export const validate = (schema) => (req, res, next) => {
 ```
 
 ### JWT 인증
-```javascript
-import jwt from 'jsonwebtoken'
-import { AppError } from '../utils/AppError.js'
-
-export const authenticate = (req, res, next) => {
-  const token = req.headers.authorization?.slice(7) // 'Bearer ' 제거
-  if (!token) return next(new AppError('인증이 필요합니다.', 401))
-
-  try {
-    req.user = jwt.verify(token, process.env.JWT_SECRET)
-    next()
-  } catch {
-    next(new AppError('유효하지 않은 토큰입니다.', 401))
-  }
-}
-
-export const authorize = (...roles) => (req, res, next) => {
-  if (!roles.includes(req.user?.role)) return next(new AppError('권한이 없습니다.', 403))
-  next()
-}
-```
-
----
-
-## 비동기 처리
-
-### 병렬 실행 - 항상 우선 고려
-```javascript
-// ❌ 순차 (느림)
-const user = await getUser(id)
-const orders = await getOrders(id)
-
-// ✅ 병렬
-const [user, orders] = await Promise.all([getUser(id), getOrders(id)])
-```
-
-### 재시도 (지수 백오프)
-```javascript
-async function withRetry(fn, maxRetries = 3) {
-  for (let i = 0; i < maxRetries; i++) {
-    try {
-      return await fn()
-    } catch (err) {
-      if (i === maxRetries - 1) throw err
-      await new Promise(r => setTimeout(r, Math.pow(2, i) * 1000))
-    }
-  }
-}
-```
+- 토큰 검증 미들웨어(authMiddleware) + 역할 검사(requireAdmin 등) 2층으로 나눈다. 실패는 `next(new AppError(..., 401|403))`.
+- JWT payload에는 외부용 uuid만 넣는다. AUTO_INCREMENT id 금지 (CLAUDE.md 이중 ID).
+- 프로젝트에 기존 미들웨어가 있으면 그 이름·시그니처를 따른다. 새로 만들지 않는다.
 
 ---
 
@@ -251,14 +148,14 @@ if (!process.env.DATABASE_URL) throw new Error('DATABASE_URL 미설정')
 export const pool = new pg.Pool({
   connectionString: process.env.DATABASE_URL,
   max: 20,
-  idleTimeoutMillis: 30000,
-  ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
 })
 ```
 
 ### MySQL2
 ```javascript
 import mysql from 'mysql2/promise'
+
+if (!process.env.DB_HOST) throw new Error('DB_HOST 미설정')
 
 export const pool = mysql.createPool({
   host: process.env.DB_HOST,
@@ -272,99 +169,9 @@ export const pool = mysql.createPool({
 
 ---
 
-## 캐싱 (Redis)
-
-### Cache-Aside 패턴
-```javascript
-async function getCachedUser(id) {
-  const key = `user:${id}`
-  const cached = await redis.get(key)
-  if (cached) return JSON.parse(cached)
-
-  const user = await userRepository.findById(id)
-  if (user) await redis.setex(key, 300, JSON.stringify(user)) // 5분
-  return user
-}
-
-async function invalidateUser(id) {
-  await redis.del(`user:${id}`)
-}
-```
-
----
-
-## 보안 체크리스트
-
-```javascript
-// app.js 필수 설정
-app.use(helmet())
-app.use(cors({ origin: process.env.ALLOWED_ORIGINS?.split(','), credentials: true }))
-app.use('/api', rateLimit({ windowMs: 15 * 60 * 1000, max: 100 }))
-app.use(express.json({ limit: '10mb' }))
-
-// 절대 하지 말 것
-// ❌ SQL 문자열 직접 조합 → 인젝션 위험
-const q = `SELECT * FROM users WHERE id = ${req.params.id}`
-
-// ✅ 파라미터 바인딩
-pool.query('SELECT * FROM users WHERE id = $1', [req.params.id])
-
-// ❌ 비밀번호 평문 응답
-res.json({ id: user.id, password: user.password })
-
-// ✅ 민감 필드 제외
-const { password, ...safeUser } = user
-res.json({ success: true, data: safeUser })
-```
-
----
-
-## 구조화된 로깅
-
-```javascript
-const log = {
-  info: (msg, ctx = {}) => console.log(JSON.stringify({ level: 'info', msg, ...ctx, ts: new Date().toISOString() })),
-  error: (msg, err, ctx = {}) => console.error(JSON.stringify({ level: 'error', msg, error: err.message, ...ctx, ts: new Date().toISOString() })),
-}
-
-// 사용
-router.get('/users', async (req, res, next) => {
-  const reqId = crypto.randomUUID()
-  log.info('사용자 목록 조회', { reqId })
-  try {
-    const data = await userService.getUsers()
-    res.json({ success: true, data })
-  } catch (err) {
-    log.error('사용자 조회 실패', err, { reqId })
-    next(err)
-  }
-})
-```
-
----
-
 ## N+1 방지
 
-```javascript
-// ❌ N+1 (루프 안에서 쿼리)
-for (const order of orders) {
-  order.user = await getUser(order.userId) // orders.length번 쿼리
-}
-
-// ✅ 배치 조회
-const userIds = [...new Set(orders.map(o => o.userId))]
-const users = await getUsersByIds(userIds) // 1번 쿼리
-const userMap = new Map(users.map(u => [u.id, u]))
-orders.forEach(o => { o.user = userMap.get(o.userId) })
-
-// ✅ JOIN 사용
-pool.query(`
-  SELECT o.*, u.name as user_name, u.email
-  FROM orders o
-  JOIN users u ON u.id = o.user_id
-  WHERE o.status = $1
-`, ['pending'])
-```
+루프 안에서 쿼리하지 않는다. id 배열로 한 번에 조회(`WHERE id IN (...)`)하거나 JOIN으로 가져온다.
 
 ---
 

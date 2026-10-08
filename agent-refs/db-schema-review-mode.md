@@ -93,7 +93,7 @@ awk '/^CREATE TABLE[[:space:]]+(IF NOT EXISTS[[:space:]]+)?`?[a-z_]+_logs`?/{inl
 
 #### REVIEW 리포트 포맷
 ```
-🔍 스키마 감사 리포트
+스키마 감사 리포트
 
 [CRITICAL]
 - 예약어 충돌: results.rank (라인 142)
@@ -121,7 +121,7 @@ CRITICAL/HIGH 항목 발견 시 → MIGRATE 모드로 전환하여 수정 파일
 - deleted_at 누락: `ADD COLUMN deleted_at DATETIME NULL` 마이그레이션
 - JSON 컬럼 잔존: 정규화 마이그레이션 (복잡도 높음 - planner 먼저 협의)
 
-REVIEW 결과를 사용자에게 보고 후 MIGRATE 진행 여부 확인 필수.
+REVIEW 결과와 "MIGRATE로 만들 파일 목록"을 보고서에 적고 종료한다. MIGRATE로 넘어갈지는 오케스트레이터와 사용자가 정한다(서브에이전트는 확인을 받을 수 없다).
 
 #### 알려진 예외 (LOW 분류)
 

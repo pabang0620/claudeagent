@@ -14,7 +14,7 @@ description: Google Flow Music(Lyria 3.5)으로 instrumental BGM을 생성하고
 
 ## 0. 정책
 
-1. 브라우저는 로그인된 하나뿐이라 동시에 두 세션이 조작하지 않는다. 서브에이전트에 맡길 때는 그 에이전트의 도구 목록에 `mcp__playwright__*`가 있는지 먼저 확인하고, 없으면 메인 세션이 직접 실행한다.
+1. 공용 Playwright MCP 브라우저는 로그인된 하나뿐이라 동시에 두 세션이 조작하지 않는다. 서브에이전트에 맡길 때는 그 에이전트의 도구 목록에 `mcp__playwright__*`가 있는지 먼저 확인하고, 없으면 메인 세션이 직접 실행한다. 공용 브라우저가 "already in use"면 종료하지 말고(그 세션이 즉시 다시 띄우고 남의 작업만 끊긴다) 로그인된 프로필을 scratchpad로 복사(rsync, `Singleton*`·캐시 제외)해 `chromium.launchPersistentContext`로 따로 띄운다. 정본 스크립트는 `skills/bgm-factory/helpers/flow_music_gen.mjs`다(`SUBMIT_ONLY=1`로 요청만 연달아 넣고 나중에 세션별로 받는 모드, `GAP_SEC`로 제출 간격, 선택 `PLAYWRIGHT_MODULE`·`CHROME_PATH`). 게임 레포 사본(nyang-bakja `tools/`)은 소비자이며, 거기서 바뀌면 여기로 역반영한다. 대량 생성은 이 스크립트를 가져다 쓰고 MCP 수동 조작은 소량일 때만 한다.
 2. 곡은 전부 instrumental이다. 가사·보컬은 쓰지 않는다.
 3. Gemini API의 Lyria RealTime 경로는 쓰지 않는다. AI Pro 구독과 무관한 별도 종량 과금이다(곡당 $0.08, 무료 티어 없음).
 4. `03_생성곡/`의 생성 원본은 어떤 단계에서도 덮어쓰지 않는다. 후처리 산출물은 전부 `04_납품/`으로 나간다.
@@ -95,7 +95,7 @@ Array.from(document.querySelectorAll('button'))
 
 생성이 시작되면 URL이 `/session/<uuid>`로 바뀐다. **이게 성공 신호다.** URL이 그대로면 Generate가 눌리지 않은 것이므로 3-3을 다시 한다.
 
-대기는 25~30초. `browser_wait_for time:30` 후 스냅샷을 찍는다.
+대기는 25~30초. `browser_wait_for time:30` 후 스냅샷을 찍는다. 곡당 약 1분, 동시 12곡까지 생성된다. 2026-10-03 23곡을 1시간 안에 연속 요청해도 차단되지 않았다(이미지 Flow와 달리 Flow Music은 연속 제출 차단이 관측되지 않았다). 단 차단 문구가 뜨면 즉시 멈추고 보고하며 우회하지 않는다.
 
 ## 4. 길이 제어
 
@@ -130,6 +130,7 @@ Array.from(document.querySelectorAll('button'))
 - 포맷은 M4A / MP3 / WAV를 고를 수 있다. 7절의 Matchering 후처리를 쓰므로 **WAV를 받는다.**
 - 곡 단위로 "Get stems" / "Split stems"도 같은 메뉴에 있다. 크몽 PREMIUM 패키지의 스템 분리 항목이 여기서 나온다.
 - 다운로드 이벤트가 몇 초 늦게 뜰 수 있다. 파일이 안 보이면 도구를 한 번 더 호출해 확인한다.
+- **WAV 메뉴가 "Download failed"로 끝나는 경우가 있다(MP3는 됨, 2026-10-03 실측).** 그때는 페이지 요청에서 `authorization: Bearer` 헤더를 잡아 `GET https://www.flowmusic.app/__api/download/audio/<clipId>?format=wav`를 그 헤더로 직접 받는다(헤더 없이는 403). clipId는 세션 URL을 다시 열고 목록의 `button[aria-label^="Play"]`(플레이어 밖)를 눌러 나가는 `storage.googleapis.com/.../clips/<id>.m4a` 요청에서 얻는다. 홈 화면 플레이어는 마지막 곡을 복원하므로 그 id를 새 곡으로 착각하지 않는다. 위 스크립트가 이 경로를 구현해 두었다.
 - 저장 위치는 `.playwright-mcp/Untitled.wav` 다. **매번 같은 이름이라 곧바로 옮기지 않으면 다음 곡이 덮어쓴다.**
 
 받자마자 이동한다.
@@ -170,6 +171,10 @@ Lyria 3.5(Flow Music UI)는 **자연어만 받는다.** `bpm`, `scale`, `density
 3. **구조 블록**: `[0:00 - 0:07] Intro: ...` 형식. 마지막 줄의 끝 시각이 곡 길이를 정한다(4절).
 
 확정된 프롬프트 5종이 `02_분석결과/장르별_프롬프트.md`에 있다. **그대로 복사해 쓴다.** 5종은 숏폼 / 게임(서사) / 게임(아케이드) / 로파이(드럼) / 로파이(앰비언트) 다. 이 파일은 `scripts/09_genre_prompts.py`가 자동 생성하므로 손으로 고치지 말고 스크립트를 다시 돌린다.
+
+### 6-1-1. 박 안정 (리듬게임·루프용, 2026-10-03 실측)
+
+"exactly N BPM, steady constant tempo, kick on every beat"만으로는 박이 흔들리거나 템포가 빗나간다(120 요청에 130). `programmed drum machine, perfectly quantized and locked to the grid, no swing, no rubato`를 넣으면 95p 편차 2~6ms로 안정됐다(통과율 약 65%). 금속 타악기(clanky cans, stamping press) 묘사가 들어가면 박 검출이 흐려져 거의 탈락하므로 뺀다. 박이 중요한 곡은 `16_qc.py`로 실측한다.
 
 ### 6-2. 제어할 수 없는 것
 

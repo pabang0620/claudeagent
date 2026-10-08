@@ -7,7 +7,11 @@ description: >
   analysis is needed for team disagreements, or when asking "should we build this?",
   "is this feature necessary?", "feature validation", or "feature prioritization".
   Searches the codebase, researches industry cases, and analyzes from user, business,
-  and technical perspectives. Always use before committing to new feature development.
+  and technical perspectives. Run ONLY when the user explicitly asks for a necessity check
+  ("이 기능 꼭 필요해?", "기능 타당성 검토해줘", "만들어야 하나 판단해줘"). Never run on
+  its own before feature work, during an audit, or to re-examine a decision the user has
+  already made (business/marketing calls are the user's; see memory
+  feedback_dont_second_guess_business_decisions).
 context: fork
 model: sonnet
 allowed-tools:
@@ -120,12 +124,9 @@ Final recommendation: [Verdict] - [2-line reason]
 Instead of this feature: [Better approach]
 ```
 
-### Phase 6: Close with Conversation
+### Phase 6: Report and Stop
 
-After showing the verdict:
-> "This is my analysis. What do you think? Is there context I missed?"
-
-Decision authority always belongs to the human. The skill provides information and perspectives.
+This skill runs as a forked subagent: it cannot converse with the user or wait for an answer. End the report with one line listing the context that could change the verdict, then stop. Decision authority always belongs to the human; the orchestrator relays the report.
 
 ## Conversation Style
 
@@ -139,3 +140,9 @@ Decision authority always belongs to the human. The skill provides information a
 - When setting direction in early planning stages
 - When the backlog is piled up and unclear what to do first
 - When neutral analysis is needed for team disagreements
+
+## When NOT to Use
+
+- The user has already decided to build it or stated the direction: implement, do not re-litigate.
+- A spec or requirement list was shared without a build request (that is not a go signal, but it is also not a request for critique).
+- During an audit or review of existing code: report defects, do not propose new features.

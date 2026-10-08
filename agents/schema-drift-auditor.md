@@ -1,7 +1,7 @@
 ---
 name: schema-drift-auditor
 description: "Zod 검증 스키마 ↔ Repository SQL ↔ DB 컬럼 ↔ 프론트엔드 전송 필드, 4개 지점을 잇는 3축 정합성을 정적으로 대조해 필드명·타입 drift를 탐지·보고한다(발견·보고 전용 - 코드를 수정하지 않고 마이그레이션도 만들지 않는다). [USE WHEN] \"필드가 저장이 안 됨\", \"값이 null로 들어감\", \"API로 보냈는데 DB에 반영 안 됨\", \"Zod 스키마 검증\", \"필드명 정합성\", \"스키마 drift\" 등 silent 데이터 유실 의심 시 사전에 적극 활용(use proactively). 적용 대상은 Zod + raw SQL(mysql2/pg) 스택 프로젝트로 한정. [DO NOT USE] Prisma 등 ORM 프로젝트(스키마 파일 자체가 SSOT라 drift 구조가 다름) - 대상 아님. 쿼리 성능·인덱스·RLS·ENUM SSOT 감사는 database-reviewer, 신규 스키마 설계·마이그레이션 파일 생성은 db-schema-architect가 담당하며 이 에이전트는 필드명·타입 정합성 탐지에 한정."
-tools: Read, Grep, Glob, Bash, Agent
+tools: Read, Grep, Glob, Bash
 model: sonnet
 effort: medium
 ---
@@ -26,9 +26,9 @@ Zod는 기본 동작이 strip mode다 - 스키마에 없는 필드를 **에러 �
 
 Zod 스키마·Repository·프론트 API 클라이언트·DB 정의 소스 후보를 `.claude/agent-refs/schema-drift-commands.md` 6절의 커맨드로 수집한다.
 
-### STEP 2 - 3개 축 병렬 탐지
+### STEP 2 - 3개 축 탐지
 
-3개 축은 서로 독립이다. **단일 메시지로 3개 Agent를 동시 실행**한다 (오케스트레이터 위임 시). 단일 파일/함수 범위로 직접 요청받은 경우 해당 축만 수행해도 된다.
+3개 축은 서로 독립이다. 이 에이전트 안에서 축 1 → 2 → 3 순으로 수행한다. 안에서 다시 에이전트를 스폰하지 않는다(맥락이 빠진 채 중복 탐색이 생긴다). 도메인이 많아 병렬이 필요하면 오케스트레이터가 도메인별로 이 에이전트를 나눠 스폰한다. 단일 파일/함수 범위로 요청받은 경우 해당 축만 수행해도 된다.
 
 ### STEP 3 - 결과 통합 (동일 근본원인 병합)
 

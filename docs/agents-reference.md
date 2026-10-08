@@ -14,6 +14,7 @@
 > - [ ] `tools`: 최소 권한 allowlist. 읽기 전용 에이전트에 Write/Edit 금지,
 >       서브에이전트 스폰이 필요할 때만 `Agent` 포함
 > - [ ] 생성 후 agent-evaluator-v2로 1회 점검 (점수 루프 금지, `rules/agents.md` STEP 1-1)
+> - [ ] 게임 레포처럼 정본이 다른 레포에 있으면 `project/.claude/agents/`에는 심볼릭 링크만 두고 `git add`로 링크를 추적한다(2026-10-08 dotRPG 6종이 untracked로 남아 있던 사례)
 
 ## 필드명 전면 변경 (DB+백엔드+프론트)
 
@@ -38,6 +39,10 @@
 
 | 에이전트 | 퇴역일 | 사유 |
 |---|---|---|
+| ops-deployer | 2026-10-05 | 홈서버 매각으로 배포 대상 소멸. 파일 삭제(35eb527), 아카이브 없음. 서버 현황은 `docs/SERVERS.md` |
+| game2d-pipeline 스킬(퇴역 대기), unity2d-scene-architect·sprite-sheet-slicer·game-feel-tuner·unity-build-verifier | 2026-10-02 | lantern-rite 레포 로컬 삭제로 템플릿·에이전트 정본 소실. 후속 haru 레포에는 재구축되지 않음. 스킬은 호출 금지 표시 상태, 삭제·보관 이동은 승인 대기 |
+| shortform-critic | 2026-10-01 | 수동 비평 단계로 전환, `agents-archive/shortform-critic-retired-2026-10-01.md` |
+| linker-html-to-vue, syntax-validator, study-notes-editor | 2026-09-29 | 2개월 스폰 0회. `agents-archive/` 보관 |
 | lh-asset-specialist, lh-design-reviewer, lh-integration-custodian, lh-module-implementer, lh-module-verifier (링크 제거), mobile-idle-rpg-3d-developer (agents-archive/ 이동) | 2026-09-15 | 사용자 지시 "게임 개발 에이전트만 정리". Lantern Rite 제작(2026-09-14/15)에서 확정된 신규 4종(unity2d-scene-architect·game-feel-tuner·sprite-sheet-slicer·unity-build-verifier) + game-asset-artist + `game2d-pipeline` 스킬이 게임 개발 표준 세트가 됨. lh-* 원본은 lighthaven-3d 레포에, lh2d-* 는 레포 교체로 이미 소실. mobile-idle-rpg-3d-v2·mobile-rpg(Sapphire) 작업이 다시 필요하면 game2d-pipeline 세트로 진행하거나 아카이브에서 복원 |
 | godot-game-developer, godot-netcode-engineer, game-data-designer, game-level-designer, multiplayer-safety-reviewer | 2026-09-09 | dungeon-legends(Godot 4.7, Lighthaven Depths 2D) 프로젝트가 lighthaven-3d(Unity 3D 리메이크)로 대체됨 - 기존 기술스택은 참고하지 않는다는 신규 레포 CLAUDE.md 원칙에 따라 Godot 전용 에이전트 5종 전부 퇴역. project/.claude/agents/의 심볼릭 링크만 제거(dungeon-legends 레포 원본 파일은 그대로 - 그 레포 자체 세션에서는 계속 유효). 대체 에이전트는 lh-design-reviewer/lh-module-implementer/lh-module-verifier/lh-integration-custodian/lh-asset-specialist 5종. 게임 이미지 에셋 생성은 계속 game-asset-artist 담당(변경 없음) |
 | asset-prompt-writer, game-asset-generator | 2026-09-01 | project/.claude/agents/의 심볼릭 링크만 제거(dungeon-legends 레포 원본 파일은 그대로 - 그 프로젝트 자체 세션에서는 계속 유효). 두 역할(프롬프트 작성+실제 생성)을 프로젝트 한정 없는 game-asset-artist로 통합해 mobile-idle-rpg 등 다른 게임 프로젝트에서도 쓸 수 있게 함 |

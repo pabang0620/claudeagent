@@ -1,33 +1,12 @@
+---
+description: 코드 변경을 README·docs/에 반영한다. "/update-docs", "README 갱신", "문서 반영해줘". doc-updater 에이전트에 위임.
+---
+
 # Update Documentation
 
-Use the doc-updater agent to perform this task.
+doc-updater 에이전트에 위임한다. 스폰 프롬프트에 대상 프로젝트 절대경로와 반영할 변경 요약을 적는다.
 
-단일 출처(source-of-truth)에서 문서 동기화:
-
-1. package.json scripts 섹션 읽기
-   - 스크립트 참조 테이블 생성
-   - 주석에서 설명 포함
-
-2. .env.example 읽기
-   - 모든 환경 변수 추출
-   - 목적 및 형식 문서화
-
-3. 다음 내용으로 docs/CONTRIB.md 생성:
-   - 개발 워크플로우
-   - 사용 가능한 스크립트
-   - 환경 설정
-   - 테스트 절차
-
-4. 다음 내용으로 docs/RUNBOOK.md 생성:
-   - 배포 절차
-   - 모니터링 및 알림
-   - 일반적인 문제 및 해결 방법
-   - 롤백 절차
-
-5. 오래된 문서 식별:
-   - 90일 이상 수정되지 않은 문서 찾기
-   - 수동 검토를 위해 목록화
-
-6. 차이 요약 표시
-
-단일 출처: package.json 및 .env.example
+1. 정본은 코드다: package.json scripts, .env.example, 실제 라우트·폴더 구조를 읽고 문서가 다르면 문서를 고친다.
+2. 기존 문서(README, docs/*)를 갱신한다. 새 문서(CONTRIB·RUNBOOK 등)는 레포에 그 관례가 이미 있을 때만 만든다. 문서 삭제·이동은 하지 않는다.
+3. 90일 이상 안 바뀐 문서는 고치지 않고 목록으로 보고한다.
+4. 보고(15줄 이내): 고친 파일 / 바뀐 내용 요약 / 손봐야 할 낡은 문서 목록.

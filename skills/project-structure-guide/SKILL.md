@@ -1,12 +1,12 @@
 ---
 name: project-structure-guide
-description: "Enforces WeCom project folder structure and naming conventions. Applies automatically when creating new files, folders, or moving code between directories. Ensures backend domain-driven structure and frontend 3-layer separation."
+description: "wecom 및 같은 컨벤션(백엔드 도메인 드리븐 3계층 + 프론트 페이지별 Page/use/Api 3파일)을 쓰는 React+Express 프로젝트에서 파일·폴더를 새로 만들거나 옮길 때 자동 적용되는 구조·네이밍 규칙. 대상 프로젝트에 자체 .claude/CLAUDE.md가 있으면 그쪽이 우선하고, 이 레이아웃이 없는 프로젝트(평면 routes/controllers, 게임 레포 등)에는 적용하지 않는다."
 user-invocable: false
 ---
 
 # WeCom Project Structure Conventions
 
-When creating, moving, or renaming files and folders in the WeCom project, enforce the following structure and naming conventions.
+When creating, moving, or renaming files and folders in the WeCom project (or a project that follows the same layout), enforce the following structure and naming conventions. If the target project has its own `.claude/CLAUDE.md`, that file wins. Skip this skill when `backend/src/domains/` and `frontend/src/pages/` do not exist.
 
 ---
 
@@ -188,8 +188,7 @@ export async function fetchWebtoonDetail(uuid) {
 
 ## File Size Guidelines
 
-- Files: 500 lines maximum; split only when needed (well-structured files usually stay under 300).
-- Function level: 50 lines maximum recommended.
+- Files: 500 lines maximum; split only when needed (well-structured files usually stay under 300). See rules/coding-style.md.
 - When Service/Repository exceeds 500 lines, split into domain subfolders.
 
 ---

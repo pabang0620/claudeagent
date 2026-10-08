@@ -4,6 +4,8 @@
 
 ## 미들웨어 패턴
 
+> 디렉토리·파일명은 기존 프로젝트 것을 따른다. wecom·modadam은 `src/middleware/`(단수)에 `authMiddleware.js`(`authMiddleware`)·`roleMiddleware.js`(`requireRole`, `requireAdmin`)·`validationMiddleware.js`(`validate`)·`errorHandler.js`가 있고 `AppError` 클래스는 없다(`Object.assign(new Error(msg), { status: 403 })`로 던지고 errorHandler가 `err.status`를 읽는다). 아래는 그런 파일이 없는 신규 프로젝트용 기본 구현이다. 기존 프로젝트에 AppError·verifyOwnership을 새로 들이지 않는다.
+
 ### AppError 클래스
 ```javascript
 // src/utils/AppError.js
@@ -32,12 +34,12 @@ export const errorHandler = (err, req, res, next) => {
     })
   }
 
-  // DB 고유 제약 위반
-  if (err.code === '23505') {
+  // DB 고유 제약 위반 (pg 23505 / mysql2 ER_DUP_ENTRY)
+  if (err.code === '23505' || err.code === 'ER_DUP_ENTRY') {
     return res.status(409).json({ success: false, error: '이미 존재하는 데이터입니다.' })
   }
 
-  // pg 22P02: 잘못된 UUID 형식 (defense in depth - validate 미들웨어 통과 후 발생 케이스)
+  // pg 22P02: 잘못된 UUID 형식 (defense in depth - validate 미들웨어 통과 후 발생 케이스). mysql2는 CHAR(36) 비교라 에러 없이 0건이 되므로 validate 누락을 여기서 못 잡는다
   if (err.code === '22P02') {
     return res.status(400).json({ success: false, error: '잘못된 ID 형식입니다.' })
   }
@@ -53,8 +55,9 @@ export const errorHandler = (err, req, res, next) => {
 ```
 
 ### 입력 검증 (zod)
+wecom·modadam의 `validate(schema)`는 `{ body, query, params }`를 한 스키마로 받아 `422` + `errors[{field,message}]`로 응답하고 결과를 `req.validated`에 넣는다. 그 프로젝트에서는 그 시그니처를 쓴다. 아래 `validate(schema, source)` + `400`은 신규 프로젝트 기본이다.
 ```javascript
-// src/validators/userSchema.js
+// src/domains/user/userSchemas.js
 import { z } from 'zod'
 
 export const createUserSchema = z.object({
@@ -90,7 +93,7 @@ export const authenticate = (req, res, next) => {
 
   const token = authHeader.slice(7)
   try {
-    req.user = jwt.verify(token, process.env.JWT_SECRET)
+    req.user = jwt.verify(token, process.env.JWT_SECRET, { algorithms: ['HS256'] }) // algorithms 미지정은 security-reviewer 위반 항목
     next()
   } catch {
     next(new AppError('유효하지 않은 토큰입니다.', 401))

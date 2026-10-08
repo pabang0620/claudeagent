@@ -77,11 +77,9 @@ web-crawler·deep-research가 생성한 `evidence_*.md` 경로가 요청에 포�
 ## 5. 환경 준비 블록 (첫 Bash 호출)
 
 ```bash
-BASE=$(find "$HOME" -maxdepth 4 -type d -name "doc-generator" 2>/dev/null | head -1)
-if [ -z "$BASE" ]; then
-  echo "NOT_FOUND"
-elif [ ! -f "$BASE/scripts/gen_docxtpl.py" ] || [ ! -f "$BASE/scripts/gen_pandoc.py" ]; then
-  echo "SCRIPTS_MISSING: $BASE"
+BASE=/home/lee/project/doc-generator
+if [ ! -f "$BASE/scripts/gen_docxtpl.py" ] || [ ! -f "$BASE/scripts/gen_pandoc.py" ] || [ ! -f "$BASE/scripts/list_vars.py" ]; then
+  echo "SCRIPTS_MISSING: $BASE"; ls "$BASE/scripts/" 2>&1
 else
   echo "OK: $BASE"
   mkdir -p "$BASE/output"

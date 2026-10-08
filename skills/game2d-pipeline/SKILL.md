@@ -1,10 +1,12 @@
 ---
 name: game2d-pipeline
-description: 유튜브 레퍼런스나 한 줄 컨셉에서 시작해 Unity 2D 액션 게임(벨트스크롤·횡스크롤 등)을 "실제 게임으로 보이는 완성도"로 한 번에 만드는 오케스트레이션 스킬. "2D 게임 만들어줘", "이런 게임 Unity로 만들어줘", "/game2d <컨셉>" 요청 시 사용. lantern-rite 레포를 템플릿으로 복제하고 설계 3문서 -> 골격 -> 이미지 프롬프트 시트 -> 절단 -> 손맛 -> 3중 검증 순으로 에이전트 4종(unity2d-scene-architect, sprite-sheet-slicer, game-feel-tuner, unity-build-verifier)을 배정한다. 3D 게임·Godot·웹게임은 대상이 아니다.
-disable-model-invocation: false
+description: (현재 실행 불가 - 2026-10-02 템플릿 레포 lantern-rite 삭제, 에이전트 4종 소실. 재구축 전까지 호출하지 않는다. 새 2D 게임 작업은 haru 레포에서 메인 직접.) 유튜브 레퍼런스나 한 줄 컨셉에서 시작해 Unity 2D 액션 게임(벨트스크롤·횡스크롤 등)을 "실제 게임으로 보이는 완성도"로 한 번에 만드는 오케스트레이션 스킬. "2D 게임 만들어줘", "이런 게임 Unity로 만들어줘", "/game2d <컨셉>" 요청 시 사용. lantern-rite 레포를 템플릿으로 복제하고 설계 3문서 -> 골격 -> 이미지 프롬프트 시트 -> 절단 -> 손맛 -> 3중 검증 순으로 에이전트 4종(unity2d-scene-architect, sprite-sheet-slicer, game-feel-tuner, unity-build-verifier)을 배정한다. 3D 게임·Godot·웹게임은 대상이 아니다.
+disable-model-invocation: true
 ---
 
 # game2d-pipeline
+
+> **현재 실행 불가 (2026-10-08 확인).** 템플릿 레포 `/mnt/c/Users/admin/Desktop/games/lantern-rite/`는 2026-10-02 삭제됐고(후속 `haru`에는 `docs/PLAYBOOK.md`·`LESSONS.md`·`PROMPT_RULES.md`·`.claude/agents/`가 없다), 아래 에이전트 4종(unity2d-scene-architect, sprite-sheet-slicer, game-feel-tuner, unity-build-verifier)도 `agents/`에 없다. 재구축하기 전까지 이 스킬을 호출하지 않는다. 아래 절차는 재구축 시 참고용 기록이다.
 
 Lantern Rite(2026-09-14/15) 제작에서 실측으로 확정된 절차. 원천 문서는 레포 `/mnt/c/Users/admin/Desktop/games/lantern-rite/docs/`의 `PLAYBOOK.md`(절차), `LESSONS.md`(함정 17개), `PROMPT_RULES.md`(이미지 규칙)이며 이 스킬은 그 문서를 언제 어떤 에이전트로 실행하는지만 정한다. 절차가 바뀌면 그 문서를 고치고 여기는 참조만 유지한다.
 

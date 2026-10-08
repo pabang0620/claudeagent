@@ -51,7 +51,7 @@ app.post('/webhook', express.json(), (req, res) => {
   processPayment(req.body)
 })
 
-// [완료] 올바름: HMAC 서명 검증 (Stripe 예시)
+// [완료] 올바름: HMAC 서명 검증 (Stripe SDK 예시. 국내 PG(KCP 등)는 각사 규격의 서명·해시 검증 함수로 같은 자리에서 검증한다. raw body를 먼저 파싱하면 서명이 깨진다)
 app.post('/webhook', express.raw({ type: 'application/json' }), (req, res) => {
   const sig = req.headers['stripe-signature']
   let event
@@ -68,7 +68,7 @@ app.post('/webhook', express.raw({ type: 'application/json' }), (req, res) => {
 
 ---
 
-### 8. 금융 작업에서 경쟁 조건 (치명적)
+### 금융 작업에서 경쟁 조건 (치명적)
 
 ```javascript
 // [금지] 치명적: 잔액 확인에서 경쟁 조건
@@ -77,23 +77,28 @@ if (balance >= amount) {
   await withdraw(userId, amount) // 다른 요청이 병렬로 출금할 수 있음!
 }
 
-// [완료] 올바름: 락이 있는 원자적 트랜잭션
-await db.transaction(async (trx) => {
-  const balance = await trx('balances')
-    .where({ user_id: userId })
-    .forUpdate() // 행 잠금
-    .first()
+// [완료] mysql2 raw SQL 패턴 (wecom·speetalk·cosmic-renew)
+const conn = await pool.getConnection()
+try {
+  await conn.beginTransaction()
+  const [rows] = await conn.execute(
+    'SELECT amount FROM balances WHERE user_id = ? FOR UPDATE',
+    [userId]
+  )
+  if (!rows[0] || rows[0].amount < amount) throw new Error('잔액 부족')
+  await conn.execute(
+    'UPDATE balances SET amount = amount - ? WHERE user_id = ?',
+    [amount, userId]
+  )
+  await conn.commit()
+} catch (err) {
+  await conn.rollback()
+  throw err
+} finally {
+  conn.release()
+}
 
-  if (balance.amount < amount) {
-    throw new Error('잔액 부족')
-  }
-
-  await trx('balances')
-    .where({ user_id: userId })
-    .decrement('amount', amount)
-})
-
-// [완료] pg raw SQL 패턴 (프로젝트 기본 스택)
+// [완료] pg raw SQL 패턴 (modadam)
 const client = await pool.connect()
 try {
   await client.query('BEGIN')

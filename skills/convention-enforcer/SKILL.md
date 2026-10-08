@@ -1,6 +1,6 @@
 ---
 name: convention-enforcer
-description: React + Express 프로젝트의 네이밍·라우팅·권한·상태관리·파일구조·백엔드 3계층 배치·CSS BEM 구조 컨벤션을 파일 저장 시점·pre-commit·부팅 시점에 강제하는 정적 검사 스킬. 라우팅 상수(ROUTES) 강제, admin 라우트 requireAdmin 강제, Zustand 셀렉터 단일 필드 구독, useParams 네이밍 일치, 파일명 prefix 규칙, 경로 문자열 리터럴 금지, Controller/Service SQL 직접 호출 금지(도메인 드리븐 3계층 프로젝트 한정), CSS 태그/ID 선택자·`__` 혼용 금지(파일별 BEM 프로젝트 한정). WeCom 회고 근거 - admin 권한 누락 7+회, 경로 리터럴 10+회, Zustand 무한 렌더, useParams 불일치 등 50+건 fix 반복 차단. CSS BEM 준수율 86%(90/105) 측정 근거로 ce-013 추가.
+description: React + Express 코드 작업 묶음이 끝날 때 1회(또는 "컨벤션 검사해줘" 요청 시) 적용하는 컨벤션 정적 검사 스킬(네이밍·라우팅 상수·admin 권한·Zustand 셀렉터·파일구조·백엔드 3계층 배치·CSS BEM). pre-commit·부팅 검증은 해당 스크립트가 설치된 프로젝트에서만 동작한다. 라우팅 상수(ROUTES) 강제, admin 라우트 requireAdmin 강제, Zustand 셀렉터 단일 필드 구독, useParams 네이밍 일치, 파일명 prefix 규칙, 경로 문자열 리터럴 금지, Controller/Service SQL 직접 호출 금지(도메인 드리븐 3계층 프로젝트 한정), CSS 태그/ID 선택자·`__` 혼용 금지(파일별 BEM 프로젝트 한정). WeCom 회고 근거 - admin 권한 누락 7+회, 경로 리터럴 10+회, Zustand 무한 렌더, useParams 불일치 등 50+건 fix 반복 차단. CSS BEM 준수율 86%(90/105) 측정 근거로 ce-013 추가.
 ---
 
 # convention-enforcer
@@ -9,9 +9,9 @@ description: React + Express 프로젝트의 네이밍·라우팅·권한·상�
 
 ## 적용 트리거
 
-1. **작성·수정 직후** - `.jsx/.tsx/.js/.ts` 파일을 작성·수정한 직후 Claude가 직접 적용 (파일 경로와 내용 기준으로 룰 적용), `.css`도 동일 (ce-013, BEM 대상 프로젝트에 한함). 저장 훅은 등록돼 있지 않다
-2. **pre-commit** - `git commit` 직전 staged 파일 검사, 위반 시 커밋 거부
-3. **서버 부팅** - Express 앱 부팅 시 `admin*Routes.js` 파일 정적 검증. `requireAdmin` 누락 시 `process.exit(1)`
+1. **묶음 작업 끝에 1회** - 한 요청(또는 연속 요청 묶음)에서 손댄 `.jsx/.tsx/.js/.ts`(ce-013은 `.css`, BEM 대상 프로젝트만)를 모아 마지막에 한 번 검사한다. 파일마다 돌리지 않는다(rules/agents.md STEP 1-2 #5 "검증은 배치 끝에 1회"). 저장 훅은 등록돼 있지 않다
+2. **pre-commit** - 프로젝트에 husky가 설치돼 있을 때만. staged 파일 검사, 위반 시 커밋 거부 (wecom 등 기존 프로젝트에는 미설치. 없으면 커밋 전에 Claude가 2번 룰을 직접 돌린다)
+3. **서버 부팅** - `backend/scripts/verifyAdminRoutes.js`가 있는 프로젝트만. `requireAdmin` 누락 시 `process.exit(1)`
 4. **수동** - "컨벤션 검사해줘"처럼 경로를 지정해 요청
 
 ## 레드 라인 (절대 금지)
@@ -57,31 +57,7 @@ navigate(ROUTES.M_UNIVERSITY_DETAIL(id))
 <Navigate to={ROUTES.LOGIN} replace />
 ```
 
-**constants/routes.js 구조 (없으면 생성 제안)**:
-```javascript
-export const ROUTES = {
-  HOME: '/',
-  LOGIN: '/login',
-  SIGNUP: '/signup',
-  NOTIFICATIONS: '/notifications',
-
-  WEBTOON_LIST: '/webtoon',
-  WEBTOON_DETAIL: (id) => `/webtoon/${id}`,
-
-  // 모바일 접두사 M_
-  M_HOME: '/m',
-  M_WEBTOON_DETAIL: (id) => `/m/webtoon/${id}`,
-  M_UNIVERSITY_DETAIL: (id) => `/m/university/${id}`,
-
-  // 관리자
-  ADMIN_DASHBOARD: '/admin',
-  ADMIN_LOGIN: '/admin/login',
-  ADMIN_USERS: '/admin/users',
-  ADMIN_BANNERS: '/admin/banners',
-  ADMIN_NOTICES: '/admin/notices',
-  ADMIN_EVENTS: '/admin/events',
-}
-```
+**constants/routes.js 구조 (없으면 생성 제안)**: 정적 경로는 문자열, 동적 경로는 함수(`WEBTOON_DETAIL: (id) => \`/webtoon/${id}\``), 모바일은 `M_` 접두사, 관리자는 `ADMIN_` 접두사. wecom `frontend/src/constants/routes.js`가 실측 예.
 
 **예외**: 외부 URL (`http://`, `https://`, `mailto:`, `tel:`), 동일 파일 내 앵커 (`#section`)
 
@@ -92,109 +68,7 @@ export const ROUTES = {
 **match**: 파일명 `admin*Routes.js` 또는 `admin*Controller.js` (대소문자 무관)
 
 **검사 방법**:
-```javascript
-// backend/scripts/verifyAdminRoutes.js
-// ESM 프로젝트 기준. CommonJS 프로젝트는 require(...)로 변환 필요.
-
-import fs from 'fs'
-import { glob } from 'glob'
-import { fileURLToPath } from 'url'
-import { dirname, resolve } from 'path'
-
-const __dirname = dirname(fileURLToPath(import.meta.url))
-const projectRoot = resolve(__dirname, '../..')   // scripts/ → backend/ → projectRoot
-
-// 폴더 구조 자동 감지 (평면 vs 도메인 드리븐)
-const candidatePaths = [
-  resolve(projectRoot, 'backend/routes'),
-  resolve(projectRoot, 'backend/src/routes'),
-  resolve(projectRoot, 'backend/src/domains'),
-]
-let files = []
-for (const cwd of candidatePaths) {
-  if (!fs.existsSync(cwd)) continue
-  const found = glob.sync('**/admin*Routes.js', {
-    cwd,
-    absolute: true,
-    ignore: ['**/node_modules/**'],
-  })
-  if (found.length > 0) { files = found; break }
-}
-
-if (files.length === 0) {
-  console.warn('[ce-002] admin*Routes.js 파일 없음 - 모든 candidate 경로에서 탐지 실패')
-  console.warn('  검색 경로:', candidatePaths.join(', '))
-  process.exit(0)
-}
-
-const EXEMPT_PATTERNS = [
-  /^adminMasterRoutes\.js$/,  // 파일 단위 예외
-]
-const EXEMPT_ROUTES = [
-  { method: 'get', paths: ['/genres', '/universities', '/skills'] },
-  { method: 'get', pathRegex: /^\/universities\/:/ },
-]
-
-const errors = []
-for (const file of files) {
-  let code
-  try {
-    code = fs.readFileSync(file, 'utf-8')
-  } catch (e) {
-    errors.push(`${file}: 파일 읽기 실패 - ${e.message}`)
-    continue
-  }
-  // 멀티라인 라우트 대응: 개행·공백 압축 후 검사
-  const normalized = code
-    .replace(/\r?\n\s*/g, ' ')
-    .replace(/\s+\./g, '.')  // 체인 메서드 공백 제거: "router .post" → "router.post"
-  // [\s\S]*? 사용해 멀티라인·비탐욕 매칭
-  // 1) router.get/post/put/delete/patch/use 직접 호출
-  const routeRegex = /router\.(get|post|put|delete|patch|use)\s*\(\s*['"`]([^'"`]+)['"`]\s*,([\s\S]*?)\)/g
-  // 2) router.route('/x').post(...) 체인 메서드 - 추가 검사
-  const routeChainRegex = /router\.route\s*\(\s*['"`]([^'"`]+)['"`]\s*\)\.(get|post|put|delete|patch)\s*\(([\s\S]*?)\)/g
-
-  const fileName = file.split('/').pop()
-  const isFileExempt = EXEMPT_PATTERNS.some((re) => re.test(fileName))
-
-  let m
-  while ((m = routeRegex.exec(normalized)) !== null) {
-    const [, method, route, middlewares] = m
-    if (/requireAdmin|requireRole\(['"`]admin/.test(middlewares)) continue
-
-    // 예외 체크
-    const isRouteExempt = EXEMPT_ROUTES.some((ex) =>
-      ex.method === method.toLowerCase() && (
-        ex.paths?.includes(route) || ex.pathRegex?.test(route)
-      )
-    )
-    if (isFileExempt && isRouteExempt) continue
-
-    errors.push(`${file}: ${method.toUpperCase()} ${route} - requireAdmin 누락`)
-  }
-
-  // router.route() 체인 메서드 검사
-  while ((m = routeChainRegex.exec(normalized)) !== null) {
-    const [, route, method, middlewares] = m
-    if (/requireAdmin|requireRole\(['"`]admin/.test(middlewares)) continue
-
-    const isRouteExempt = EXEMPT_ROUTES.some((ex) =>
-      ex.method === method.toLowerCase() && (
-        ex.paths?.includes(route) || ex.pathRegex?.test(route)
-      )
-    )
-    if (isFileExempt && isRouteExempt) continue
-
-    errors.push(`${file}: ${method.toUpperCase()} ${route} - requireAdmin 누락 (route chain)`)
-  }
-}
-
-if (errors.length) {
-  console.error('[convention-enforcer] Admin 라우트 권한 검증 실패:')
-  errors.forEach((e) => console.error('  ' + e))
-  process.exit(1)
-}
-```
+스크립트 `skills/convention-enforcer/scripts/verifyAdminRoutes.js`를 대상 프로젝트 `backend/scripts/`에 복사해 쓴다(ESM, `glob` 필요). 부팅 시 `verifyAdminRoutes()`가 누락 목록을 반환하면 `process.exit(1)`, 단독 실행(`node backend/scripts/verifyAdminRoutes.js`)도 가능. 예외 목록(EXEMPT_PATTERNS·EXEMPT_ROUTES)은 스크립트 상단에서 프로젝트별로 조정한다.
 
 **검사 한계 (명시)**:
 - 배열 형태 미들웨어(`router.post('/x', [auth, requireAdmin], fn)`)는 정규식에 잡히지만 JSON.stringify 유사 패턴은 false negative 가능성 존재
@@ -222,9 +96,7 @@ router.post('/notices', authMiddleware, requireAdmin, adminNoticeController.crea
 router.delete('/notices/:id', authMiddleware, requireAdmin, adminNoticeController.delete)
 ```
 
-**부팅 통합**: `backend/app.js` 또는 `server.js` 의 app.listen() 호출 직전에 `verifyAdminRoutes()` 호출 필수.
-
-**왜 부팅 시점인가**: ESLint 룰이 감지해도 개발자가 무시할 수 있음. 부팅 실패로 강제하면 배포 전 발견 100% 보장.
+**부팅 통합**: `backend/app.js` 또는 `server.js` 의 app.listen() 호출 직전에 `verifyAdminRoutes()` 호출. 부팅 실패로 강제해야 배포 전에 반드시 걸린다.
 
 ---
 
@@ -327,9 +199,8 @@ const { webtoonId } = useParams()  // 이름 일치
 ### ce-007 - 파일 크기 제한 (warn/error, autofix: no)
 
 **룰**:
-- 함수 50줄 초과: warn
 - 파일 500줄 초과: error (즉시 분할, rules/coding-style.md I-06)
-- 500줄 미만은 분할을 강제하지 않는다
+- 500줄 미만은 분할을 강제하지 않는다. 함수 길이는 룰이 아니다
 
 **근거**: rules/coding-style.md 파일 줄 수 규칙. WeCom에서 `HomePage.jsx` 가 2000+ 줄로 비대해져 81회 재수정 발생.
 
@@ -355,7 +226,7 @@ src/
 └── mocks/             # MSW 핸들러 (있을 경우)
 ```
 
-**위반 예시**: `pages/mobile/`, `helpers/` (utils와 중복), `services/` (api와 중복)
+**위반 예시**: `pages/mobile/`, `helpers/` (utils와 중복), `services/` (api와 중복). 프로젝트에 자체 .claude/CLAUDE.md나 project-structure-guide 적용 구조가 있으면 그쪽이 우선
 
 ---
 
@@ -431,14 +302,6 @@ export const getWebtoons = async (req, res, next) => {
   } catch (err) { next(err) }
 }
 ```
-```javascript
-// backend/src/domains/webtoon/webtoonService.js - SQL이 Service에 직접 있음
-export const getWebtoon = async (uuid) => {
-  const [rows] = await pool.query('SELECT * FROM webtoons WHERE webtoon_id = ?', [uuid])
-  return rows[0]
-}
-```
-
 **correct** (실제 파일 구조 - `backend/src/domains/webtoon/`):
 ```javascript
 // webtoonRepository.js - SQL은 이 레이어만
@@ -557,7 +420,7 @@ grep -oE "^\.[a-zA-Z0-9_-]+" FILE.css | sort -u
 ### 스킬이 호출될 때
 
 1. **변경 파일 수집**:
-   - 자동 트리거: 저장된 파일
+   - 묶음 끝 1회: 이번 묶음에서 손댄 파일(`git diff --name-only HEAD`)
    - pre-commit: `git diff --cached --name-only`
    - 수동: 사용자 지정 경로
 
@@ -571,7 +434,7 @@ grep -oE "^\.[a-zA-Z0-9_-]+" FILE.css | sort -u
 
 3. **룰 적용 순서**: 심각도 error 먼저 → warn 나중
 
-4. **결과 취합**:
+4. **결과 취합** (위반 0건이면 한 줄로 끝낸다):
    ```
    ✗ src/pages/HomePage.jsx:42  ce-001 error  navigate('/webtoon/' + id) → ROUTES.WEBTOON_DETAIL(id)
    ✗ src/store/userStore.js:18  ce-003 error  useUserStore((s) => s) 전체 구독 → 개별 셀렉터로 분리
@@ -585,33 +448,7 @@ grep -oE "^\.[a-zA-Z0-9_-]+" FILE.css | sort -u
 
 ### pre-commit 훅 통합
 
-**`.husky/pre-commit` (실제 동작 스크립트)**:
-```bash
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
-# ce-002: Admin 라우트 권한 검증
-node backend/scripts/verifyAdminRoutes.js || exit 1
-
-# ce-001: staged JSX/TSX 파일에서 경로 리터럴 탐지
-STAGED=$(git diff --cached --name-only --diff-filter=ACMR | grep -E '\.(jsx|tsx|js|ts)$' || true)
-if [ -n "$STAGED" ]; then
-  VIOLATION=0
-  for f in $STAGED; do
-    if grep -nE "(navigate\s*\(|<Link[^>]+to=|<Navigate[^>]+to=|href=)\{?[\"'\`][/]" "$f" 2>/dev/null \
-       | grep -vE "(http|https|mailto|tel|^[[:space:]]*//)"; then
-      echo "[ce-001] $f: 경로 리터럴 감지 - ROUTES 상수 사용"
-      VIOLATION=1
-    fi
-    # ce-003: Zustand 전체 구독 (macOS BSD grep 호환 POSIX 문자 클래스)
-    if grep -nE "use[A-Z][a-zA-Z]*Store[[:space:]]*\([[:space:]]*\)|use[A-Z][a-zA-Z]*Store[[:space:]]*\([[:space:]]*\([a-z]\)[[:space:]]*=>[[:space:]]*[a-z][[:space:]]*\)" "$f" 2>/dev/null; then
-      echo "[ce-003] $f: Zustand 전체 구독 감지 - 개별 셀렉터 사용"
-      VIOLATION=1
-    fi
-  done
-  [ $VIOLATION -eq 1 ] && exit 1
-fi
-```
+**`.husky/pre-commit`**: 스크립트 `skills/convention-enforcer/scripts/pre-commit.sh`를 `.husky/pre-commit`으로 복사한다(ce-002 부팅 검증 + staged 파일 ce-001·ce-003 grep). husky가 없는 프로젝트는 설치하지 않고, 커밋 전에 Claude가 같은 검사를 직접 돌린다.
 
 ### 서버 부팅 훅
 
@@ -620,7 +457,8 @@ fi
 import { verifyAdminRoutes } from './scripts/verifyAdminRoutes.js'
 import { env } from './config/env.js'   // zod 파싱 실패 시 여기서 종료
 
-verifyAdminRoutes()   // ce-002 실패 시 process.exit(1)
+const adminErrors = verifyAdminRoutes()
+if (adminErrors.length) { adminErrors.forEach((e) => console.error(e)); process.exit(1) }   // ce-002
 
 app.listen(env.PORT)
 ```
@@ -633,53 +471,6 @@ app.listen(env.PORT)
 - **ui-design-system** - 디자인 토큰/컴포넌트 생성 담당. convention-enforcer는 네이밍/권한/라우팅/3계층/CSS **구조**(BEM)만 담당. CSS **값** 규칙(하드코딩 색상/radius/shadow)은 ui-design-system 의 stylelint가 담당 - ce-013은 선택자 구조·`__` 일관성만 보고 값은 다루지 않음.
 - **database-reviewer** - DB 스키마·쿼리. convention-enforcer는 admin 테이블 접두사 일관성만 체크 (ce-009). SQL이 어느 레이어에 있는지(배치 위치)는 ce-012가 체크하되, 쿼리 자체의 문법·성능·인덱스 적정성은 database-reviewer 담당.
 - **security-reviewer** - 권한·취약점 전반. convention-enforcer 는 `requireAdmin` 미사용만 한정 (ce-002).
-
----
-
-## ESLint 커스텀 플러그인 매핑 (선택적 CI/CD 통합)
-
-grep 기반 대신 ESLint 네이티브 룰로 통합하려면 다음 매핑 사용:
-
-```javascript
-// .eslintrc.js 또는 eslint.config.js
-{
-  rules: {
-    'no-restricted-syntax': [
-      'error',
-      // ce-001: navigate 리터럴 경로
-      {
-        selector: "CallExpression[callee.name='navigate'] > Literal[value=/^\\//]",
-        message: '[ce-001] 경로 리터럴 금지 - ROUTES 상수 사용'
-      },
-      // ce-003: Zustand 전체 구독 (인자 없음)
-      {
-        selector: "CallExpression[callee.type='Identifier'][callee.name=/^use[A-Z].*Store$/]:not(:has(ArrowFunctionExpression))",
-        message: '[ce-003] Zustand 전체 구독 금지 - 개별 셀렉터 사용'
-      },
-      // ce-003: Zustand selector 가 s => s 패턴
-      {
-        selector: "CallExpression[callee.name=/^use[A-Z].*Store$/] > ArrowFunctionExpression[body.type='Identifier']",
-        message: '[ce-003] Zustand selector 전체 반환 금지 - 개별 필드 분리'
-      },
-    ]
-  }
-}
-```
-
-ce-002 (admin 권한) 와 ce-004 (useParams) 는 AST 만으로 검증 불가 → grep/awk 스크립트 유지.
-
----
-
-## 자기검증 시나리오
-
-1. **기본**: 신입이 `backend/routes/adminBannerRoutes.js` 에 `requireAdmin` 없이 POST 추가 + 서버 부팅
-   → 부팅 실패 (`ce-002`) + 명확한 메시지 "POST /banners - requireAdmin 누락"
-
-2. **엣지**: 숙련자가 `useParams()` 에서 `{ id }` 로 받았는데 라우트는 `/university/:universityId`
-   → `ce-004` error + autofix 힌트 `{ universityId }`
-
-3. **복합**: 한 파일에 `navigate('/admin/login')` + `useUserStore()` 전체 구독 + 파일명 `myPage.jsx`
-   → `ce-001` error, `ce-003` error, `ce-005` warn (3건 동시 감지)
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: error-prevention-rules
-description: React 런타임 에러(무한 렌더, race condition, stale closure, cleanup 누락, 무한 루프) 사전 차단 정적 검사 스킬. useEffect 의존성/cleanup, AbortController, IntersectionObserver/MutationObserver/PerformanceObserver/setTimeout 해제, onError 자기 해제, Mutation pending ref, stale closure, Zustand selector, array key index, localStorage try/catch, BroadcastChannel cleanup, click 핸들러 isMounted 가드 등 14개 룰. `.jsx/.tsx` 작성·수정 시 적용. WeCom 회고 근거 - React/렌더링 fix 14건, cleanup/race condition fix 36건 차단.
+description: React 런타임 에러(무한 렌더, race condition, stale closure, cleanup 누락, 무한 루프)를 잡는 정적 검사 스킬. 코드 작업 묶음이 끝날 때 1회(또는 "에러 방지 룰 검사해줘" 요청 시) 적용한다. useEffect 의존성/cleanup, AbortController, IntersectionObserver/MutationObserver/PerformanceObserver/setTimeout 해제, onError 자기 해제, Mutation pending ref, stale closure, Zustand selector, array key index, localStorage try/catch, BroadcastChannel cleanup, click 핸들러 isMounted 가드 등 14개 룰. 대상은 `.jsx/.tsx`. WeCom 회고 근거 - React/렌더링 fix 14건, cleanup/race condition fix 36건 차단.
 ---
 
 # error-prevention-rules
@@ -8,9 +8,9 @@ description: React 런타임 에러(무한 렌더, race condition, stale closure
 > WeCom 회고 근거: `e95ea5b` Zustand 무한 렌더, `fa3dc46` img onError 9파일 무한 루프, `4b5168f` mutation 버튼 중복 제출, AbortController 누락 12+건, IntersectionObserver/setTimeout cleanup 누락 다수.
 
 ## 적용 트리거
-1. **작성·수정 직후** - `.jsx/.tsx` 파일을 작성·수정한 직후 Claude가 직접 적용 (저장 훅은 등록돼 있지 않다)
+1. **묶음 작업 끝에 1회** - 한 요청(또는 연속 요청 묶음)에서 손댄 `.jsx/.tsx`를 모아 마지막에 한 번 검사한다. 파일마다 돌리지 않는다(rules/agents.md STEP 1-2 #5). 저장 훅은 등록돼 있지 않다
 2. **수동** - "에러 방지 룰 검사해줘"처럼 경로를 지정해 요청
-3. **planner 사전 체크** - useEffect·fetch·hook 설계 단계에서 룰 사전 주입
+3. **위임 전 주입** - react-specialist 등에 .jsx 작업을 위임할 때 스폰 프롬프트에 해당 룰 ID와 한 줄 기준을 적는다 (서브에이전트는 이 스킬을 자동으로 받지 않는다)
 
 ## 핵심 원칙
 - **useEffect는 언마운트 = 잠재적 버그**. cleanup 없이 side effect 걸면 메모리 누수·stale setState
@@ -29,7 +29,7 @@ description: React 런타임 에러(무한 렌더, race condition, stale closure
 - `api.` 또는 `api(` 호출 (apiClient 포함)
 - `fetch` 로 시작하는 API 레이어 함수 호출 (`fetchUsers(`, `fetchEvents(`, `fetchUniversities(` 등) → warn
 - `get*`, `load*`, `request*` 접두사 async 함수 호출 → warn
-- ⚠️ false positive 가능성 명시: API 레이어가 AbortController 를 내부 처리하는 경우
+- false positive 가능성 명시: API 레이어가 AbortController 를 내부 처리하는 경우
 - 내부 async 함수 선언 후 즉시 호출 패턴:
   - `const \w+ = async (...) => { ... }` + `\w+()`
   - `(async () => { ... })()` IIFE
@@ -41,19 +41,7 @@ useEffect(() => {
   fetch(`/api/user/${id}`).then(r => r.json()).then(setUser)
 }, [id])
 ```
-**correct** (동기 then 체인):
-```jsx
-useEffect(() => {
-  const ac = new AbortController()
-  fetch(`/api/user/${id}`, { signal: ac.signal })
-    .then(r => r.json())
-    .then(setUser)
-    .catch((e) => { if (e.name !== 'AbortError') console.error(e) })
-  return () => ac.abort()
-}, [id])
-```
-
-**correct** (async IIFE 패턴 - WeCom에서 가장 흔한 형태):
+**correct** (async 함수 선언·IIFE·then 체인 모두 같은 형태. signal을 API 함수까지 전달):
 ```jsx
 useEffect(() => {
   const ac = new AbortController()
@@ -70,35 +58,6 @@ useEffect(() => {
 }, [id])
 ```
 
-**antipattern** (추가):
-```jsx
-// 패턴: named async function (useAdminDashboard.js 실제 WeCom 패턴)
-useEffect(() => {
-  async function loadStats() {
-    const data = await fetchDashboardStats()
-    setStats({ ... })
-  }
-  loadStats()
-  // ❌ return 없음 → error
-}, [])
-```
-
-**correct** (named async + cleanup):
-```jsx
-useEffect(() => {
-  const ac = new AbortController()
-  async function loadStats() {
-    try {
-      const data = await fetchDashboardStats({ signal: ac.signal })
-      setStats(data)
-    } catch (e) {
-      if (e.name !== 'AbortError') console.error(e)
-    }
-  }
-  loadStats()
-  return () => ac.abort()
-}, [])
-```
 **근거**: WeCom fetch fix 12+건에서 언마운트 후 setState 발생 → React 경고 + stale 상태
 
 ### ep-002 - img onError 자기 해제 (error, autofix: hint)
@@ -126,51 +85,10 @@ useEffect(() => {
 → convention-enforcer ce-003 와 동일. 본 스킬은 "감지" 동일하되 에러 메시지에 **무한 렌더 원인**을 설명
 
 ### ep-004 - setTimeout/setInterval cleanup (error, autofix: hint)
-**match**: `useEffect` 내부 `setTimeout(` 또는 `setInterval(` + cleanup 누락
-**antipattern**:
-```jsx
-useEffect(() => {
-  setTimeout(() => setVisible(true), 1000)  // 언마운트 후에도 발동 → stale setState
-}, [])
-```
-**correct**:
-```jsx
-useEffect(() => {
-  const t = setTimeout(() => setVisible(true), 1000)
-  return () => clearTimeout(t)
-}, [])
-```
+**판정**: `useEffect` 안의 `setTimeout(`/`setInterval(`에 cleanup `clearTimeout`/`clearInterval`이 없으면 위반. 언마운트 후 stale setState.
 
-### ep-005 - IntersectionObserver/ResizeObserver cleanup (error, autofix: hint)
-**match**: 다음 Observer 생성 + cleanup 누락
-- `new IntersectionObserver(`
-- `new ResizeObserver(`
-- `new MutationObserver(`
-- `new PerformanceObserver(`
-**antipattern**:
-```jsx
-useEffect(() => {
-  const io = new IntersectionObserver(onIntersect)
-  io.observe(ref.current)
-  // disconnect 누락
-}, [])
-```
-**correct**:
-```jsx
-useEffect(() => {
-  const io = new IntersectionObserver(onIntersect)
-  io.observe(ref.current)
-  return () => io.disconnect()
-}, [])
-```
-```jsx
-// MutationObserver 예시
-useEffect(() => {
-  const mo = new MutationObserver(onMutation)
-  mo.observe(ref.current, { childList: true, subtree: true })
-  return () => mo.disconnect()
-}, [])
-```
+### ep-005 - Observer cleanup (error, autofix: hint)
+**판정**: `new IntersectionObserver|ResizeObserver|MutationObserver|PerformanceObserver(`에 cleanup `disconnect()`가 없으면 위반.
 
 ### ep-006 - Mutation 버튼 pending ref (error, autofix: hint)
 **match**: `onClick` 이 async 함수 + API 호출 + `useState` 로 pending 관리
@@ -245,17 +163,7 @@ const handleSelect = useCallback((v) => setX(v), [])
 ```
 
 ### ep-009 - array key index 금지 (warn, autofix: hint)
-**match**: `.map((item, i) => <Component key={i}`
-**antipattern**:
-```jsx
-items.map((it, i) => <Card key={i} data={it} />)
-// 중간 삽입/삭제 시 React reconciliation 오류 → 입력값 섞임
-```
-**correct**:
-```jsx
-items.map((it) => <Card key={it.id} data={it} />)
-```
-**예외**: 절대 불변 정적 리스트 (생성 후 순서 변경 없음) - 주석으로 명시 시 통과
+**판정**: `.map((item, i) => <X key={i}`이면 위반, `key={item.id}`로. 예외: 생성 후 순서가 절대 바뀌지 않는 정적 리스트(주석으로 명시).
 
 ### ep-010 - localStorage/sessionStorage try/catch (warn, autofix: hint)
 **match**:
@@ -281,41 +189,10 @@ const safeSet = (key, val) => {
 **이유**: iOS Safari 프라이빗 모드·용량 초과 시 throw. 대부분의 앱은 이 보호 없이 충돌
 
 ### ep-011 - WebSocket/EventSource/BroadcastChannel cleanup (error, autofix: hint)
-**match**: `new WebSocket(` 또는 `new EventSource(` 또는 `new BroadcastChannel(` + cleanup 누락
-**correct**:
-```jsx
-useEffect(() => {
-  const ws = new WebSocket(url)
-  ws.onmessage = handleMessage
-  return () => ws.close()
-}, [url])
-```
-```jsx
-useEffect(() => {
-  const bc = new BroadcastChannel('notifications')
-  bc.onmessage = handleMessage
-  return () => bc.close()
-}, [])
-```
+**판정**: `new WebSocket|EventSource|BroadcastChannel(`에 cleanup `close()`가 없으면 위반.
 
 ### ep-013 - window/document addEventListener cleanup (error, autofix: hint)
-**match**: `useEffect` 콜백 내부에서 `window.addEventListener(` 또는 `document.addEventListener(` 호출 + cleanup `return` 에 `removeEventListener` 없음
-**antipattern**:
-```jsx
-useEffect(() => {
-  const onKey = (e) => { if (e.key === 'Escape') close() }
-  window.addEventListener('keydown', onKey)  // 언마운트 후에도 리스너 잔존 → stale setState
-}, [])
-```
-**correct**:
-```jsx
-useEffect(() => {
-  const onKey = (e) => { if (e.key === 'Escape') close() }
-  window.addEventListener('keydown', onKey)
-  return () => window.removeEventListener('keydown', onKey)
-}, [])
-```
-**근거**: WeCom EpisodeViewerPage 에서 scroll/touch/keydown 리스너 4개 사용. 현재는 cleanup 되어 있으나 신규 코드 작성 시 누락 위험 높음. mf-005 는 드래그 전용이지만 이 룰은 일반 이벤트 리스너 전반.
+**판정**: `useEffect` 안의 `window.|document.addEventListener(`에 같은 핸들러 참조로 `removeEventListener`가 없으면 위반. 인라인 화살표 함수를 등록해 해제 못 하는 경우도 위반. mf-005(드래그)와 별개로 일반 리스너 전반.
 
 ### ep-014 - Click 핸들러 내 Promise.all/allSettled isMounted 가드 (warn, autofix: hint)
 **match**: 컴포넌트 함수 내 async 이벤트 핸들러 (`onClick`, `onSubmit` 등) 에서 `Promise.all(` 또는 `Promise.allSettled(` 호출 후 결과로 setState
@@ -359,12 +236,12 @@ const handleCreateSubmit = async () => {
 
 0. **환경 확인**: `package.json` 의 `eslintConfig` 또는 `eslint.config.*` / `.eslintrc*` 파일 존재 체크
    - 없으면: ep-012 실행 전 "ESLint react-hooks/exhaustive-deps 플러그인 설정을 권장합니다" 출력 후 진행
-1. **변경 파일 수집**: 저장된 `.jsx/.tsx` 파일
+1. **변경 파일 수집**: 이번 묶음에서 손댄 `.jsx/.tsx` (`git diff --name-only HEAD` 또는 지정 경로)
 2. **룰 적용 순서**: error 심각도 먼저 (ep-001/002/004/005/006/011/013) → warn (ep-007/008/009/010/012/014)
 3. **각 룰**: Grep + JSX 구조 정적 분석
-4. **출력 형식**:
+4. **출력 형식** (위반 0건이면 한 줄로 끝낸다):
    ```
-   🚨 error-prevention-check 결과
+   error-prevention-check 결과
 
    | 파일 | 라인 | 룰 | 심각도 | 메시지 |
    |---|---|---|---|---|
@@ -404,20 +281,3 @@ const handleCreateSubmit = async () => {
 - **mobile-first-checker mf-008** (blob URL cleanup): 본 스킬은 blob 이 아닌 일반 리소스 cleanup 담당
 - **ui-design-system SafeImage**: ep-002는 raw `<img>` 대상. SafeImage 사용 시 통과
 - **api-contract-designer**: API 응답 형식·계약 담당, 본 스킬은 클라이언트 호출 패턴만
-
-## 자기검증 시나리오
-
-1. **기본**: `useEffect` 내 fetch cleanup 없음 → ep-001 error + AbortController 템플릿 힌트
-2. **엣지**: `<img onError={e => e.target.src = '/x.png'} />` → ep-002 error (자기 해제 + 가드 힌트)
-3. **복합**: `setInterval` + stale count + 인라인 객체 prop + `key={i}` → ep-004/007/008/009 동시 4건
-
-## 자기검증 - WeCom 현재 기준 예상 탐지
-
-이 스킬을 현재 WeCom frontend/src 에 적용하면 다음을 탐지해야 한다:
-- ep-001: useNotices/useAdminDashboard/Header/MobileLayout 4+건 (fetch cleanup 없음)
-- ep-002: UniversityDetailPage/MobileJobPostDetailPage/AdminBannersPage (onerror=null 없이 src 재할당) - 단 style.display='none' 만 조작하는 건 예외
-- ep-004: setTimeout/setInterval cleanup (MobileEventDetailPage 는 정상)
-- ep-008: Swiper autoplay={{ delay: 3500 }} 는 원시값 단일 레벨 예외 적용 → warn 하향
-- ep-009: BannerPositionPreview/MyEpisodePage key={i} (정적 리스트 예외 해당 가능)
-
-이 예상치에서 크게 벗어나면 룰 동작 이상.

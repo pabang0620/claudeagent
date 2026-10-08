@@ -5,10 +5,7 @@
 ## BOOTSTRAP 모드 - Day 0 일괄 생성
 
 ### 기존 파일 충돌 확인 (BOOTSTRAP 전 필수)
-기존 공용 컴포넌트 파일이 있으면 사용자에게 확인:
-> "다음 파일이 이미 존재합니다: [목록]
-> 덮어쓰기하면 기존 커스터마이징이 사라집니다. 진행하시겠습니까? (Y/N)"
-> N 선택 시 AUDIT 모드로 전환
+생성 대상 경로(`styles/tokens.css`, `styles/reset.css`, `hooks/use*.js`, `utils/sentinels.js`, `components/common/*`, `stylelint.config.cjs`)에 이미 있는 파일은 **덮어쓰지 않는다**(CLAUDE.md: 동명 파일 자동 덮어쓰기 금지, 서브에이전트는 승인을 받을 수 없다). 없는 파일만 만들고, 있던 파일 목록을 보고서에 "기존 파일 - 미변경"으로 적는다. 전부 이미 있으면 AUDIT 모드로 전환한다.
 
 ### 1. `styles/tokens.css` 생성
 
@@ -39,7 +36,7 @@
   --color-border-strong: #d1d5db;
   --color-text: #111827;
   --color-text-muted: #6b7280;
-  --color-text-subtle: #9ca3af;  /* ⚠️ WCAG AA 미달 (2.5:1). 텍스트 아닌 장식용(non-text)으로만 사용 */
+  --color-text-subtle: #9ca3af;  /* [주의] WCAG AA 미달 (2.5:1). 텍스트 아닌 장식용(non-text)으로만 사용 */
   --color-text-inverse: #ffffff;
 
   /* --- Spacing (4px scale) --- */
@@ -202,12 +199,14 @@ import { useEffect, useState } from 'react'
  * - SSR-safe (초기값 false)
  */
 export function useIsMobile(breakpoint = 768) {
-  const [isMobile, setIsMobile] = useState(false)
+  const [isMobile, setIsMobile] = useState(() => {
+    if (typeof window === 'undefined') return false
+    return window.matchMedia(`(max-width: ${breakpoint - 1}px)`).matches // 첫 렌더부터 정확 (false 초기화 시 PC 레이아웃이 한 프레임 깜빡임)
+  })
 
   useEffect(() => {
     const mq = window.matchMedia(`(max-width: ${breakpoint - 1}px)`)
     const onChange = (e) => setIsMobile(e.matches)
-    setIsMobile(mq.matches)
     mq.addEventListener('change', onChange)
     return () => mq.removeEventListener('change', onChange)
   }, [breakpoint])
@@ -265,16 +264,17 @@ export function useDragScroll() {
 import { useEffect } from 'react'
 
 /**
- * Modal/BottomSheet 스크롤 잠금. 스크롤바 너비 보정 포함.
+ * Modal/BottomSheet 스크롤 잠금. 스크롤바 너비 보정 + iOS Safari(overflow:hidden 무시) 대응(position:fixed) + 중첩 카운터.
  * 선택적 연계: mobile-first-checker가 있으면 mf-009로 검증, 없으면 건너뜀.
  * HMR 안전 - window에 카운터 저장하여 Vite 모듈 재평가 시 상태 유지.
+ * react-perf-a11y.md의 useScrollLock과 같은 구현이다 - 한쪽을 고치면 다른 쪽도 맞춘다.
  *
  * 사용:
  *   useScrollLock(isOpen)
  */
 const getStore = () => {
-  if (typeof window === 'undefined') return { count: 0 }
-  if (window.__scrollLockStore == null) window.__scrollLockStore = { count: 0 }
+  if (typeof window === 'undefined') return { count: 0, scrollY: 0 }
+  if (window.__scrollLockStore == null) window.__scrollLockStore = { count: 0, scrollY: 0 }
   return window.__scrollLockStore
 }
 
@@ -283,8 +283,12 @@ export function useScrollLock(locked) {
     if (!locked) return
     const store = getStore()
     if (store.count === 0) {
+      store.scrollY = window.scrollY
       const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth
       document.body.style.overflow = 'hidden'
+      document.body.style.position = 'fixed'
+      document.body.style.top = `-${store.scrollY}px`
+      document.body.style.width = '100%'
       document.body.style.paddingRight = `${scrollbarWidth}px`
     }
     store.count++
@@ -292,7 +296,11 @@ export function useScrollLock(locked) {
       store.count--
       if (store.count === 0) {
         document.body.style.overflow = ''
+        document.body.style.position = ''
+        document.body.style.top = ''
+        document.body.style.width = ''
         document.body.style.paddingRight = ''
+        window.scrollTo(0, store.scrollY)
       }
     }
   }, [locked])
@@ -456,7 +464,7 @@ module.exports = {
 **덮어쓰기 금지 - Write로 전체 교체 절대 금지.** `index.css`는 신규 프로젝트가 아닌 이상 거의 항상 이미 존재하며 기존 import(폰트, 서드파티 CSS 등)를 담고 있다.
 1. 먼저 파일 존재 여부를 확인한다.
 2. **존재하지 않으면** → 아래 2줄로 새로 생성 (Write 가능, 신규 파일이므로 덮어쓰기 아님).
-3. **이미 존재하면** → 전체 내용을 읽고 기존 import 목록을 사용자에게 보여준 뒤, 다음 2줄이 없을 때만 파일 **최상단에 추가**하는 형태로 **Edit(append)** 한다. Write로 전체 교체 금지 (프로젝트 최상위 규칙 - 새 산출물 저장 시 기존 동명 파일이 있으면 자동 덮어쓰기 금지).
+3. **이미 존재하면** → 전체 내용을 읽고, 다음 2줄이 없을 때만 파일 **최상단에 추가**하는 형태로 **Edit** 한다. 기존 import 목록은 보고서에 적는다. Write로 전체 교체 금지 (프로젝트 최상위 규칙 - 새 산출물 저장 시 기존 동명 파일이 있으면 자동 덮어쓰기 금지).
 
 ```css
 @import './styles/tokens.css';
@@ -465,13 +473,14 @@ module.exports = {
 
 ### Bootstrap 완료 메시지
 ```
-✓ tokens.css 생성 (8 카테고리: color/spacing/radius/shadow/typography/breakpoint/z-index/transition)
-✓ reset.css 생성 (7종)
-✓ hooks 3개 생성 (useIsMobile/useDragScroll/useScrollLock - HMR 안전)
-✓ components/common 13개 생성 (Modal/BottomSheet/Toast/SafeImage/ChipScroller 완전 구현)
-✓ utils/sentinels.js 생성 (ALL)
-✓ utils/toast.js 생성 (큐)
-✓ stylelint.config.cjs 생성
+- tokens.css 생성 (8 카테고리: color/spacing/radius/shadow/typography/breakpoint/z-index/transition)
+- reset.css 생성 (7종)
+- hooks 3개 생성 (useIsMobile/useDragScroll/useScrollLock - HMR 안전)
+- components/common 13개 생성 (Modal/BottomSheet/Toast/SafeImage/ChipScroller 완전 구현)
+- utils/sentinels.js 생성 (ALL)
+- utils/toast.js 생성 (큐)
+- stylelint.config.cjs 생성
+- 기존 파일이라 건너뛴 것: [목록 또는 없음]
 
 다음 단계:
 1. `npm install -D stylelint stylelint-config-standard`
@@ -481,17 +490,13 @@ module.exports = {
 ```
 
 ## Bootstrap 실패 시 롤백
-생성된 파일을 되돌리려면:
+에이전트는 파일을 지우지 않는다(삭제는 사용자 승인 사항). 이번 실행에서 **새로 만든** 파일 목록을 보고서에 적고, 되돌리는 명령은 사용자가 실행하도록 제안만 한다:
 ```bash
-# Git 사용 시 (권장):
-git checkout -- src/ stylelint.config.cjs
-
-# Git 미사용 시:
-rm -f src/styles/tokens.css src/styles/reset.css
-rm -f src/hooks/useIsMobile.js src/hooks/useDragScroll.js src/hooks/useScrollLock.js
-rm -rf src/components/common/
-rm -f stylelint.config.cjs
+# 이번 실행에서 새로 만든 파일만 (git 추적 전이면 git status로 확인)
+git status --porcelain
+git clean -n src/styles src/hooks src/components/common stylelint.config.cjs   # -n은 미리보기
 ```
+기존 파일을 Edit한 것(index.css 상단 2줄)은 그 줄만 Edit로 되돌린다.
 
 ### Bootstrap 자기검증 (필수 - 완료 메시지 출력 전 자동 실행)
 
@@ -515,11 +520,11 @@ grep -l "useDragScroll" src/components/common/ChipScroller.jsx
 grep -n "export const ALL" src/utils/sentinels.js
 ```
 
-각 항목이 예상대로 나오면 성공. 잔존 하드코딩 또는 필수 훅/유틸 누락 발견 시 Bootstrap 실패 보고 후 자동 재시도.
+각 항목이 예상대로 나오면 성공. 잔존 하드코딩 또는 필수 훅/유틸 누락이 있으면 그 항목을 1회 고치고 다시 검증한다. 두 번째도 실패하면 재시도하지 않고 실패 항목을 보고서에 적고 종료한다.
 
-### 하드코딩 grep gate를 husky pre-commit에 배선 (필수)
+### 하드코딩 grep gate를 husky pre-commit에 배선 (husky가 이미 있는 프로젝트만)
 
-위 "Bootstrap 자기검증" 1번(하드코딩 컬러 잔존 여부 grep)은 CI 뿐 아니라 **husky pre-commit 훅에도 반드시 배선**한다. 그래야 위반이 커밋 단계에서 차단되고, CI까지 도달하지 않는다. `.husky/pre-commit` 에 다음 게이트를 추가:
+`.husky/` 디렉토리가 이미 있는 프로젝트에서만 아래 게이트를 `.husky/pre-commit`에 추가한다. husky가 없는 프로젝트에 새로 설치하지 않는다(의존성·훅 추가는 사용자 결정). 그 경우 보고서에 "husky 미설치 - 게이트 미배선, 필요하면 `npm install -D husky && npx husky init` 후 아래 스크립트 추가"로 적는다.
 
 ```bash
 # .husky/pre-commit - 하드코딩 컬러/shadow 차단 게이트
@@ -527,11 +532,11 @@ HARDCODED=$(grep -rEn "#[0-9a-fA-F]{3,8}" src/ --include="*.css" --include="*.sc
   | grep -v tokens.css | grep -v reset.css)
 SHADOW=$(grep -rEn "box-shadow:[[:space:]]*[0-9]" src/ --include="*.css" --include="*.scss")
 if [ -n "$HARDCODED" ] || [ -n "$SHADOW" ]; then
-  echo "✗ 하드코딩 컬러/shadow 감지 - 토큰(var(--...))으로 치환 후 커밋하세요:"
+  echo "[차단] 하드코딩 컬러/shadow 감지 - 토큰(var(--...))으로 치환 후 커밋하세요:"
   echo "$HARDCODED"
   echo "$SHADOW"
   exit 1
 fi
 ```
 
-husky 미설치 시: `npm install -D husky && npx husky init` 후 위 게이트를 `.husky/pre-commit` 에 추가한다. 이 게이트는 stylelint 실행과 별개로 항상 커밋을 차단한다.
+이 게이트는 stylelint 실행과 별개로 커밋을 차단한다.

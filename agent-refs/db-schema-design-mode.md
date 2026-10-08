@@ -6,11 +6,8 @@
 
 #### 입력 수집
 1. **도메인 이름** - 예: `webtoon`, `event`, `notification`
-   ⚠️ 입력 받은 도메인 이름을 즉시 예약어 블랙리스트와 대조 - 충돌 시 사용자에게 대체명 제안 후 중단
-
-   사용자가 대체명 확정 시:
-   → 확정된 이름을 {domain}으로 치환하여 입력 수집 2번(엔티티 목록)부터 재개
-   → notifications.target_type ENUM의 도메인 참조값도 대체명으로 수정 필요 여부 확인
+   입력 받은 도메인 이름을 즉시 예약어 블랙리스트와 대조한다. 충돌하면 파일을 만들지 않고 대체명 후보 2~3개와 질문 문안을 보고에 적고 종료한다(서브에이전트는 사용자와 대화할 수 없다).
+   오케스트레이터가 확정된 이름으로 재스폰하면 그 이름을 {domain}으로 치환해 2번(엔티티 목록)부터 진행하고, notifications.target_type ENUM의 도메인 참조값도 그 이름으로 맞춘다.
 
 2. 엔티티 목록 + 관계
 3. 상태 머신 여부 (로그테이블 필요 판단)
@@ -76,7 +73,8 @@ CREATE TABLE IF NOT EXISTS {domain}_logs (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 ```
 
-#### 출력 2: `shared/constants/enums.ts` 패치
+#### 출력 2: ENUM 상수 파일 패치
+경로는 프로젝트 실측을 따른다 - wecom은 `frontend/src/constants/enums.js`(JS)만 있고 `shared/`는 없다. 기존 파일이 있으면 그 파일·언어에 병합하고, 어디에도 없을 때만 `shared/constants/enums.ts`를 새로 만든다. 아래 `shared/constants/enums.ts` 표기는 전부 이 규칙으로 읽는다.
 ```typescript
 // 파일이 없으면 생성, 있으면 병합
 export const WEBTOON_STATUS = ['draft', 'scheduled', 'published', 'deleted'] as const

@@ -24,11 +24,10 @@ effort: medium
 
 ## 환경 준비 (STEP 0 진입 전 필수, 첫 Bash 호출)
 
-첫 Bash 호출로 `.claude/agent-refs/doc-generator-extras.md` 5절의 환경 준비 블록을 그대로 실행한다. 출력은 `NOT_FOUND` / `SCRIPTS_MISSING: <경로>` / `OK: <경로>` + 템플릿 목록 중 하나다.
+도구 폴더는 `/home/lee/project/doc-generator`다(스크립트 `scripts/gen_docxtpl.py`·`gen_pandoc.py`·`list_vars.py`, 템플릿 `templates/`, 산출 `output/`). 첫 Bash 호출로 `.claude/agent-refs/doc-generator-extras.md` 5절의 환경 준비 블록을 실행해 스크립트·템플릿 존재를 확인한다. 출력은 `SCRIPTS_MISSING` / `OK` + 템플릿 목록 중 하나다.
 
-- `NOT_FOUND` → "doc-generator 폴더 절대경로 필요"를 반환하고 종료한다.
-- `SCRIPTS_MISSING` → 누락을 알리고 중단한다.
-- `OK: <경로>` → **출력된 절대경로를 기억하고, 이후 모든 단계에서 이 경로를 리터럴로 사용한다.** 출력된 템플릿 목록도 기억한다. (이 문서의 예시는 `/abs/doc-generator`로 표기 - 실제 경로로 치환할 것)
+- `SCRIPTS_MISSING` → 누락 파일을 보고하고 중단한다.
+- `OK` → 출력된 템플릿 목록을 기억한다. 이 문서의 `/abs/doc-generator`는 `/home/lee/project/doc-generator`로 치환한다.
 
 ## STEP 0: 입력 검증 게이트 (생성 전 필수)
 
@@ -132,6 +131,8 @@ effort: medium
 
 **마크다운 작성 기준:** `# 제목` / `## 섹션` / 표·목록·강조 모두 지원 / 한국어 완벽 지원
 
+**본문 작성 규칙 (docxtpl JSON 값에도 적용):** em-dash 대신 하이픈, 이모지 금지. 제출용 문서에는 작업 과정·수정 이력("재검토 결과", 날짜 도장, "정정")을 쓰지 않고 결론과 근거만 쓴다. 사용자가 주지 않은 수치·실적·일정을 지어내지 않는다 - 빈 자리는 `[확인 필요: 항목]`으로 남기고 STEP 3 보고에 모은다. 일정·기간은 요청에 있는 값만 쓰고 자체 산정하지 않는다.
+
 ## STEP 2.5: 레드팀 자체검토 (제안서·보고서 등 경쟁/심사 문서만, 문서는 수정하지 않는다)
 
 대상이면 `.claude/agent-refs/doc-generator-extras.md` 3절을 읽고 발견사항 표를 STEP 3 보고에 첨부한다. 계약서·공문서는 생략한다.
@@ -143,7 +144,7 @@ F="/abs/doc-generator/output/<문서명>_<날짜>.docx"
 if [ -s "$F" ]; then ls -lh "$F"; echo "생성 완료: $F"; else echo "실패: 출력 파일이 없거나 비어 있습니다. 위 오류를 확인하세요."; fi
 ```
 - 성공 시: 파일 경로·크기·사용한 방식/템플릿을 보고한다.
-- STEP 1-A를 실행했다면(제안서 + RFP 제공 시): **커버리지 매트릭스**를 표로 첨부하고, "대응 섹션"이 비어있는 요구항목이 있으면 "⚠ 미대응 요구항목: R3, R5" 형태로 경고한다.
+- STEP 1-A를 실행했다면(제안서 + RFP 제공 시): **커버리지 매트릭스**를 표로 첨부하고, "대응 섹션"이 비어있는 요구항목이 있으면 "미대응 요구항목: R3, R5" 형태로 경고한다.
 - STEP 2.5를 수행했다면 레드팀 검토 결과 목록을 함께 첨부한다(문서는 수정하지 않음 - 반영은 사용자 승인 후 별도 진행).
 - 실패 시: 원인과 다음 조치를 안내한다.
 

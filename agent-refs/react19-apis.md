@@ -13,7 +13,7 @@ function UserProfile({ userPromise }: { userPromise: Promise<User> }) {
   return <div>{user.name}</div>
 }
 
-// ⚠️ 주의: 렌더링마다 fetchUser(id)가 호출되면 무한 재요청 발생
+// [주의] 렌더링마다 fetchUser(id)가 호출되면 무한 재요청 발생
 // useMemo로 Promise를 한 번만 생성해야 함
 
 // 부모: Promise를 useMemo로 한 번만 생성 (무한 재요청 방지)
@@ -53,7 +53,7 @@ function LikeButton({ post }: { post: Post }) {
 }
 
 // 아이템 삭제 패턴 (배열에서 제거)
-// ⚠️ 필수: useOptimistic의 set 함수는 반드시 startTransition 내에서 호출
+// [필수] useOptimistic의 set 함수는 반드시 startTransition 내에서 호출
 // Transition 밖에서 호출하면 즉시 원래 상태로 되돌아감 (React 19 제약)
 const [isPending, startTransition] = useTransition()
 

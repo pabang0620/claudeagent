@@ -4,38 +4,7 @@
 
 ## 성능 최적화
 
-### 메모이제이션 - 측정 후 적용
-```typescript
-// ❌ 과도한 메모이제이션 (오히려 성능 저하)
-const value = useMemo(() => a + b, [a, b]) // 단순 계산은 불필요
-
-// ✅ 비싼 연산에만
-const filteredList = useMemo(
-  () => largeList.filter(item => item.active && item.score > threshold),
-  [largeList, threshold]
-)
-
-// ✅ 자식에게 넘기는 함수
-const handleSubmit = useCallback(async (data: FormData) => {
-  await submitForm(data)
-}, []) // 의존성 없으면 빈 배열
-```
-
-### 지연 로딩
-```typescript
-import { lazy, Suspense } from 'react'
-
-const HeavyChart = lazy(() => import('./HeavyChart'))
-const AdminPanel = lazy(() => import('./AdminPanel'))
-
-function Dashboard() {
-  return (
-    <Suspense fallback={<ChartSkeleton />}>
-      <HeavyChart />
-    </Suspense>
-  )
-}
-```
+메모이제이션·`lazy`/`Suspense`는 일반 지식이라 적지 않는다. 이 프로젝트군의 판단 기준만: React DevTools로 측정한 뒤 적용하고, 단순 계산에 `useMemo`를 붙이지 않는다. `@tanstack/react-virtual`은 package.json에 있을 때만 쓴다(없으면 설치 제안을 보고에 적는다).
 
 ### 가상화 - 대용량 리스트
 ```typescript
@@ -92,7 +61,7 @@ interface State {
   error: Error | null
 }
 
-// ⚠️ React 제약: ErrorBoundary는 React 19에서도 클래스 컴포넌트만 지원 - "함수형 컴포넌트만 사용" 원칙의 유일한 예외
+// [주의] React 제약: ErrorBoundary는 React 19에서도 클래스 컴포넌트만 지원 - "함수형 컴포넌트만 사용" 원칙의 유일한 예외
 class ErrorBoundary extends Component<Props, State> {
   state: State = { hasError: false, error: null }
 
@@ -124,31 +93,7 @@ class ErrorBoundary extends Component<Props, State> {
 
 ## 접근성 (a11y)
 
-```typescript
-// ✅ 시맨틱 HTML + ARIA
-function Modal({ isOpen, onClose, title, children }: ModalProps) {
-  return (
-    <dialog
-      open={isOpen}
-      aria-labelledby="modal-title"
-      aria-modal="true"
-    >
-      <h2 id="modal-title">{title}</h2>
-      {children}
-      <button onClick={onClose} aria-label="모달 닫기">×</button>
-    </dialog>
-  )
-}
-
-// ✅ 로딩 상태 스크린 리더 알림
-function LoadingButton({ isLoading, children, ...props }: ButtonProps) {
-  return (
-    <button {...props} aria-busy={isLoading} aria-disabled={isLoading}>
-      {isLoading ? <span aria-hidden>로딩 중...</span> : children}
-    </button>
-  )
-}
-```
+필수 항목(정의파일 "핵심 원칙" 접근성 줄과 같다): 모달은 `role="dialog"` + `aria-modal` + focus trap + return focus + ESC 닫기, 토스트는 심각도별 `role="alert"`/`"status"`, `outline: none` 금지(포커스 링 유지), `prefers-reduced-motion` 대응, 아이콘 버튼은 `aria-label`. 모달은 아래 `useFocusTrap` + `useReturnFocus` + `useScrollLock` 세 훅을 함께 쓴다.
 
 ---
 
@@ -184,21 +129,38 @@ export function useIsMobile(breakpoint = 768) {
 
 ### useScrollLock
 ```typescript
-// useScrollLock - body 스크롤 잠금 (iOS Safari 포함)
-function useScrollLock(isLocked: boolean) {
+// useScrollLock - body 스크롤 잠금. iOS Safari(overflow:hidden 무시)까지 막으려면 position:fixed 방식이 필요하고,
+// 중첩 모달을 위해 카운터를 둔다. ui-design-bootstrap-mode.md의 hooks/useScrollLock.js와 같은 구현이다 - 한쪽을 고치면 다른 쪽도 맞춘다.
+const getStore = () => {
+  if (typeof window === 'undefined') return { count: 0, scrollY: 0 }
+  if (window.__scrollLockStore == null) window.__scrollLockStore = { count: 0, scrollY: 0 } // HMR 안전
+  return window.__scrollLockStore
+}
+
+export function useScrollLock(isLocked: boolean) {
   useEffect(() => {
     if (!isLocked) return
-    const scrollY = window.scrollY
-    document.body.style.overflow = 'hidden'
-    document.body.style.position = 'fixed'
-    document.body.style.top = `-${scrollY}px`
-    document.body.style.width = '100%'
+    const store = getStore()
+    if (store.count === 0) {
+      store.scrollY = window.scrollY
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth
+      document.body.style.overflow = 'hidden'
+      document.body.style.position = 'fixed'
+      document.body.style.top = `-${store.scrollY}px`
+      document.body.style.width = '100%'
+      document.body.style.paddingRight = `${scrollbarWidth}px` // 스크롤바 너비 보정 (레이아웃 쉬프트 방지)
+    }
+    store.count++
     return () => {
-      document.body.style.overflow = ''
-      document.body.style.position = ''
-      document.body.style.top = ''
-      document.body.style.width = ''
-      window.scrollTo(0, scrollY)
+      store.count--
+      if (store.count === 0) {
+        document.body.style.overflow = ''
+        document.body.style.position = ''
+        document.body.style.top = ''
+        document.body.style.width = ''
+        document.body.style.paddingRight = ''
+        window.scrollTo(0, store.scrollY)
+      }
     }
   }, [isLocked])
 }

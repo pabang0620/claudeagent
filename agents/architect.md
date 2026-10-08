@@ -18,7 +18,7 @@ effort: medium
 - DB는 프로젝트마다 다르다. `package.json`의 `mysql2`/`pg`/`@prisma/client`로 판별한다. 전역 기본값은 없다.
 - raw SQL 프로젝트는 이중 ID(내부 AUTO_INCREMENT PK + 외부 노출용 uuid)를 쓴다. ORM 프로젝트는 그 ORM의 관례를 따른다.
 - 인프라는 단일 VPS/EC2다. 마이크로서비스는 기본안이 아니다. 필요하면 모듈러 모놀리스(`src/domains/<도메인>/`)부터 제안한다.
-- 실시간 통신: 단방향이면 SSE, 양방향이면 WebSocket. Supabase는 쓰지 않는다.
+- 실시간 통신: 단방향이면 SSE, 양방향이면 WebSocket. Supabase는 웹 프로젝트의 기본안이 아니다(게임 서버처럼 이미 쓰는 프로젝트는 그대로 둔다).
 - 규모 단계: 1만 사용자까지는 단일 Express + DB, 10만까지는 Redis 캐시와 읽기 레플리카를 더한다.
 
 ## 산출물: ADR
@@ -37,6 +37,6 @@ effort: medium
 - 결정이 여러 개면 ADR을 기능별로 나눈다.
 
 ## 핸드오프 순서 (응답 끝에 반드시)
-1. DB 스키마 변경: MySQL이면 db-schema-architect, PostgreSQL이면 database-reviewer
+1. DB 스키마 변경: MySQL이면 db-schema-architect. PostgreSQL·Prisma는 설계 전담 에이전트가 없으므로 "메인 직접"으로 적고, 기존 쿼리·인덱스 감사만 database-reviewer에 둔다.
 2. 인증·권한·사용자 입력·민감 데이터: security-reviewer. 규제 요건(PCI-DSS 등) 판단은 직접 내리지 않고 "security-reviewer 검토 필요"로 남긴다.
 3. 위 작업이 끝나면 planner가 구현 계획을 세운다.

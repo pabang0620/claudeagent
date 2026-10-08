@@ -1,6 +1,6 @@
 ---
 name: mobile-first-checker
-description: React/CSS 코드 작성·수정 시 모바일 안티패턴을 사전 차단하는 정적 검사 스킬. "PC 먼저 → 모바일 복제" 이중 파일 구조 금지, 드래그/터치/스크롤 락/blob cleanup/필터 센티넬/scrollLock/모바일 경로/고정 min 크기 등 WeCom 프로젝트 36건의 mobile fix를 근거로 도출된 12개 룰(mf-000~mf-011). `.jsx/.tsx/.css/.scss` 저장 시점, 모바일 레이아웃 작업 시, 드래그·스크롤·필터·모달 UI 설계 시 자동·수동 적용.
+description: React/CSS 코드의 모바일 안티패턴을 잡는 정적 검사 스킬. 코드 작업 묶음이 끝날 때 1회(또는 "모바일 체크해줘" 요청 시) 적용한다. "PC 먼저 → 모바일 복제" 이중 파일 구조 금지, 드래그/터치/스크롤 락/blob cleanup/필터 센티넬/scrollLock/모바일 경로/고정 min 크기 등 WeCom 프로젝트 36건의 mobile fix와 iOS Safari 하단 고정 UI 롤백 사례를 근거로 도출된 13개 룰(mf-000~mf-012). 대상은 `.jsx/.tsx/.css/.scss`이고 모바일 레이아웃·드래그·스크롤·필터·모달·하단 네비 작업이 있었던 묶음에서 적용. 라우팅·권한 컨벤션은 convention-enforcer, 런타임 에러 룰은 error-prevention-rules.
 ---
 
 # mobile-first-checker
@@ -9,9 +9,9 @@ description: React/CSS 코드 작성·수정 시 모바일 안티패턴을 사�
 
 ## 적용 트리거
 
-1. **자동** - `.jsx/.tsx/.css/.scss` 파일 저장/편집 직후
-2. **수동** - `/mobile-first-check <경로>` 또는 "모바일 체크해줘"
-3. **계획 단계** - 새 페이지/컴포넌트 설계 시 planner의 사전 체크리스트로 주입
+1. **묶음 작업 끝에 1회** - 한 요청(또는 연속 요청 묶음)에서 손댄 `.jsx/.tsx/.css/.scss`를 모아 마지막에 한 번 검사한다. 파일마다 돌리지 않는다(rules/agents.md STEP 1-2 #5)
+2. **수동** - "모바일 체크해줘"처럼 경로를 지정해 요청 (별도 슬래시 커맨드는 없다)
+3. **위임 전 주입** - react-specialist 등에 모바일 화면 작업을 위임할 때 스폰 프롬프트에 해당 룰 ID와 한 줄 기준을 적는다 (서브에이전트는 이 스킬을 자동으로 받지 않는다)
 
 ## 핵심 원칙 (레드 라인)
 
@@ -26,18 +26,19 @@ description: React/CSS 코드 작성·수정 시 모바일 안티패턴을 사�
 | RL-7 | 필터 "전체" 값은 `null` 금지, **`ALL` 센티넬 문자열** 사용 | `03bb2d4` 전체 필터 활성화 실패 5회 |
 | RL-8 | `URL.createObjectURL` 호출 지점 옆에 **반드시 cleanup 짝** (`useEffect` return 또는 `onLoad` 후 revoke) | `fd329d7`, `4793511` 메모리 누수 |
 | RL-9 | Modal/BottomSheet 열릴 때 **scrollLock 유틸 필수**. `document.body.style.overflow` 직접 조작 금지 | `f247671` 전역 레이아웃 쉬프트 |
+| RL-10 | 모바일 하단 고정 UI(BottomNav·툴바)는 `position: fixed` 금지. `position: sticky` + bottom 여유값 | iOS Safari 툴바 hide/show로 fixed가 어긋남. viewport-fit·translateZ(0)·safe-area 재계산 3종은 전부 롤백(`6949b72`) |
 
 ---
 
-## 체크리스트 룰 (mf-000 ~ mf-011)
+## 체크리스트 룰 (mf-000 ~ mf-012)
 
 검사 대상: 변경된 파일. 각 룰은 `severity: error | warn`, `autofix: yes | hint | no`, `match`, `antipattern`, `correct` 을 포함.
 
 ### mf-000 - 모바일 복제 페이지 금지 (error, autofix: no)
 **match** (3가지 모드):
 1. **신규 파일** - 경로에 `pages/mobile/` 포함하는 신규 파일 생성 → error (기존 유지)
-2. **전수 감사 모드** (`/mobile-first-check --full` 또는 스킬 최초 적용 시) - 기존 `pages/mobile/*` 전수 탐색 → "기존 복제 구조 N개 파일 발견. 단계적 통합 계획 수립 권장" warn 리포트
-3. **신규 페이지 컴포넌트** - `pages/` 하위 신규 파일에 `useIsMobile` import 없으면 warn
+2. **전수 감사 모드** ("전수 검사" 요청 또는 스킬 최초 적용 시) - 기존 `pages/mobile/*` 전수 탐색 → "기존 복제 구조 N개 파일 발견. 단계적 통합 계획 수립 권장" warn 리포트
+3. **신규 페이지 컴포넌트** - `pages/` 하위 신규 파일에 프로젝트의 모바일 감지 훅(`useIsMobile`, wecom은 `useMobileDetect`) import 없으면 warn. 훅 이름은 프로젝트 `hooks/`에서 먼저 확인
 
 (하위 호환) 기존 경로 패턴: `pages/mobile/`, `m[A-Z][a-zA-Z]*Page`, `Mobile[A-Z][a-zA-Z]*Page` 패턴 신규 파일
 **antipattern**:
@@ -60,7 +61,7 @@ export default function HomePage() {
 ---
 
 ### mf-001 - 전역 reset 7종 확인 (error, autofix: hint)
-**자동 트리거**: 스킬이 처음 프로젝트에 적용될 때 1회 전수 감사. 이후 `.css/.scss` 저장 시 global 파일 변경 감지 시 재검사.
+**트리거**: 스킬이 처음 프로젝트에 적용될 때 1회 전수 감사. 이후 묶음에서 전역 CSS 파일을 손댔을 때만 재검사.
 **탐색 경로 확장**: `src/styles/global.css`, `src/global.css`, `src/styles/reset.css` 순서
 **match**: `src/**/*.{css,scss,sass,less}` 중 전역 스타일 파일 탐지 순서:
 1. `reset.{css,scss}`, `global.{css,scss}`, `index.{css,scss}`, `main.{css,scss}`, `base.{css,scss}`, `app.{css,scss}`, `App.{css,scss}` 순서로 검색
@@ -76,7 +77,7 @@ a { color: inherit; text-decoration: none; }
 input, textarea, select { font: inherit; }
 body { -webkit-tap-highlight-color: transparent; -webkit-text-size-adjust: 100%; }
 ```
-**누락 시**: 사용자에게 생성 여부 확인 후 Edit 적용 (사용자 승인 필수 - 파일 자동 수정 금지)
+**누락 시**: 지금 작업 중인 프로젝트의 전역 CSS면 누락 규칙을 바로 추가한다. 전역 파일이 아예 없으면 생성 전에 보고한다(새 파일)
 
 ---
 
@@ -307,12 +308,25 @@ navigate(ROUTES.M_WEBTOON_DETAIL(uuid))
 - 48px 이하 값은 아이콘/버튼 터치타겟으로 간주 → 모두 통과
 **근거**: `2f3a299` entries-wrap/stat-card min-height auto 수정, WCAG 2.1 Target Size (Minimum) 기준 44x44 CSS pixel
 
+### mf-012 - 모바일 하단 고정 UI는 sticky (error, autofix: hint)
+**match**: BottomNav·TabBar·하단 툴바 성격의 컴포넌트 CSS에 `position: fixed` + `bottom:` 조합
+**antipattern**:
+```css
+.bottom-nav { position: fixed; bottom: 0; }   /* iOS Safari 툴바 hide/show 시 어긋남 */
+```
+**correct**:
+```css
+.bottom-nav { position: sticky; bottom: 8px; }   /* 여유값은 실기기에서 조정 */
+```
+**금지된 보정 시도**: `viewport-fit=cover`, `translateZ(0)` GPU 레이어, `env(safe-area-inset-bottom)` 높이 재계산. 셋 다 시도 후 악화되어 롤백됨(`6949b72`). 다시 제안하지 않는다.
+**근거**: 메모리 feedback_ios_safari_sticky_bottomnav
+
 ---
 
 ## 실행 프로토콜
 
 ### 스킬이 호출될 때
-1. **변경 파일 수집**: `git diff --name-only HEAD` 또는 사용자가 지정한 경로
+1. **변경 파일 수집**: 이번 묶음에서 손댄 파일(`git diff --name-only HEAD`) 또는 사용자가 지정한 경로
 2. **룰 적용 순서**: mf-000 → mf-001 → mf-002..mf-011 (병렬 가능)
 3. **각 룰**: Grep + 정적 AST 의미 검사(수동). React 합성 이벤트는 JSX 파싱이 필요.
 4. **결과**: 룰별 JSON 어레이
@@ -323,11 +337,11 @@ navigate(ROUTES.M_WEBTOON_DETAIL(uuid))
    ]
    ```
 5. **보고**: 사용자에게 테이블 + 수정 권장사항 출력
-6. **자동 수정 없음** - 모든 수정은 힌트/권장사항 형태로만 제시. 파일 수정이 필요한 경우 반드시 사용자 승인 요청 후 진행
+6. **수정 범위** - 지금 작성·수정 중인 파일의 확실한 위반은 바로 고친다. 기존 코드 전수 감사에서 나온 건은 "확실한 오류 / 판단 필요"로 나눠 보고하고, 판단 필요 건만 지시를 받는다 (메모리 feedback_audit_findings_classify_before_fixing)
 
 ### 출력 포맷 (사용자용)
 ```
-🚨 mobile-first-check 결과
+mobile-first-check 결과 (위반 0건이면 한 줄로 끝낸다)
 
 | 파일 | 라인 | 룰 | 심각도 | 메시지 |
 |---|---|---|---|---|
@@ -343,42 +357,16 @@ navigate(ROUTES.M_WEBTOON_DETAIL(uuid))
 
 이 스킬은 다음 유틸이 프로젝트에 존재한다고 가정. 없으면 `ui-design-system` 에이전트 호출 권장:
 
-- `hooks/useIsMobile.js` - `matchMedia('(max-width: 767px)')` 기반
+- `hooks/useIsMobile.js` - `matchMedia('(max-width: 767px)')` 기반 (wecom은 `hooks/useMobileDetect.js`가 이 역할)
 - `hooks/useDragScroll.js` - window-level 마우스/터치 드래그
-- `hooks/useScrollLock.js` - body scrollbar width 보존 + overflow hidden
+- `hooks/useScrollLock.js` 또는 `utils/scrollLock.js`(wecom) - body scrollbar width 보존 + overflow hidden
 - `utils/sentinels.js` - `export const ALL = 'ALL'`
-
-## 성공 지표
-
-- **mobile fix 커밋 비율**: WeCom 36건 → 다음 프로젝트 **5건 이하**
-- **`pages/mobile/*` 디렉터리**: 0
-- **`URL.createObjectURL` 호출 대비 `revokeObjectURL` 호출 비율**: 100%
-- **`useIsMobile` 도입률**: 반응형 페이지 100%
-
-## 검증 시나리오 (self-test)
-
-1. **기본**: 일반 CSS에 `width: 300px` 포함 → mf-002 경고 발생
-2. **엣지**: 개발자가 `onMouseMove` 를 컴포넌트에 부착 → mf-005 에러 + `useDragScroll` 힌트
-3. **복합**: 신규 `pages/mobile/HomePage.jsx` 생성 + 그 안에 `useState(null)` 필터 + `URL.createObjectURL` cleanup 누락 → mf-000/mf-007/mf-008 3개 동시 감지
 
 ## 이 스킬이 하지 않는 것
 
-- 접근성(a11y) 전반 - `axe-core` 또는 별도 스킬 담당
-- 성능 측정 - React DevTools Profiler 담당
+- 접근성·성능 측정 - 담당 아님
 - 색상·타이포 일관성 - `ui-design-system` 담당
 - 라우팅 상수화 - `convention-enforcer` 담당
-
-## 자기검증 - WeCom 현재 기준 예상 탐지
-
-이 스킬을 현재 WeCom 코드베이스에 적용하면 다음을 탐지해야 한다 (3차 평가 실측):
-- mf-001: `styles/global.css` 에 7종 중 4종 누락 (overflow-x hidden, img max-width, -webkit-tap-highlight, button border)
-- mf-003: 비 admin 파일 10+ PC-first 쿼리 (UniversityWebtoonPage.css, EpisodeViewerPage.css 등)
-- mf-007: MobileHomePage/HomePage `activeUnivId/activeGenreId` 2건 truthy 체크
-- mf-009: EpisodeViewerPage `document.body.style.overflow` 직접 조작 3건
-- mf-010: MobileWebtoonDetailPage `navigate('/m/mypage/conversations')` 1건
-- mf-011: `min-height: 140/88/64px` 등 48px 초과 다수
-
-이 숫자가 나오지 않으면 스킬이 정상 동작하지 않는 것이다.
 
 ## 참고 커밋 (근거)
 

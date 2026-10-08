@@ -4,27 +4,30 @@
 
 ## 컴포넌트 설계 패턴
 
-### 컴포넌트 분류 기준
+### 컴포넌트 배치 기준 (wecom 실측, project-structure-guide 스킬과 동일)
 ```
-pages/          → 라우트 진입점 (데이터 페칭 담당)
-features/       → 도메인 기능 단위 컴포넌트 (비즈니스 로직 포함)
-components/ui/  → 순수 UI 컴포넌트 (재사용 가능, 비즈니스 로직 없음)
-hooks/          → 커스텀 훅 (상태·사이드이펙트 로직)
-utils/          → 순수 함수 유틸리티
+pages/<page>/        → XxxPage.jsx + useXxx.js + xxxApi.js 3파일. 그 페이지의 API 호출은 여기 둔다(중복돼도 공통 추출 안 함)
+components/common/   → Header·Footer·Modal·Pagination·ProtectedRoute 등 전역 공용
+components/<domain>/ → WebtoonCard처럼 도메인 안에서 여러 페이지가 쓰는 것
+layouts/             → MainLayout·AuthLayout·AdminLayout
+hooks/               → 전역 공용 훅만 (useAuth·useDebounce·usePagination)
+store/               → zustand 스토어
+config/apiClient.js  → axios + JWT 인터셉터
 ```
+`features/`, `components/ui/` 폴더는 쓰지 않는다. 대상 프로젝트에 자체 `.claude/CLAUDE.md` 레이아웃이 있으면 그쪽이 우선한다.
 
 ### Compound Component 패턴
 ```typescript
-// 복잡한 UI를 유연하게 조합할 때
+// 복잡한 UI를 유연하게 조합할 때. 클래스명은 프로젝트 CSS 방법론(wecom: BEM + Component.css)을 따르고 Tailwind 유틸을 새로 들이지 않는다
 const Card = {
-  Root: ({ children, className }: CardProps) => (
-    <div className={cn('rounded-lg border p-4', className)}>{children}</div>
+  Root: ({ children, className = '' }: CardProps) => (
+    <div className={`card ${className}`}>{children}</div>
   ),
   Header: ({ children }: { children: React.ReactNode }) => (
-    <div className="mb-3 font-semibold">{children}</div>
+    <div className="card__header">{children}</div>
   ),
   Body: ({ children }: { children: React.ReactNode }) => (
-    <div className="text-sm text-gray-600">{children}</div>
+    <div className="card__body">{children}</div>
   ),
 }
 
@@ -67,7 +70,7 @@ function useUsers() {
 ```
 
 ```typescript
-// URL 상태 관리 - React Router v6
+// URL 상태 관리 - React Router v6/v7 (wecom은 v7, API 동일)
 import { useSearchParams } from 'react-router-dom'
 
 const FILTER_ALL = 'ALL' as const
@@ -93,40 +96,7 @@ function FilterBar() {
 
 ## 테스트
 
-### React Testing Library 원칙
-```typescript
-import { render, screen, fireEvent, waitFor } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
-
-describe('LoginForm', () => {
-  it('이메일과 비밀번호 입력 후 로그인 버튼 클릭 시 onSubmit 호출', async () => {
-    const user = userEvent.setup()
-    const onSubmit = jest.fn()
-
-    render(<LoginForm onSubmit={onSubmit} />)
-
-    await user.type(screen.getByLabelText('이메일'), 'test@example.com')
-    await user.type(screen.getByLabelText('비밀번호'), 'password123')
-    await user.click(screen.getByRole('button', { name: '로그인' }))
-
-    await waitFor(() => {
-      expect(onSubmit).toHaveBeenCalledWith({
-        email: 'test@example.com',
-        password: 'password123',
-      })
-    })
-  })
-
-  it('이메일 미입력 시 에러 메시지 표시', async () => {
-    const user = userEvent.setup()
-    render(<LoginForm onSubmit={jest.fn()} />)
-
-    await user.click(screen.getByRole('button', { name: '로그인' }))
-
-    expect(screen.getByRole('alert')).toHaveTextContent('이메일을 입력하세요')
-  })
-})
-```
+React Testing Library + `userEvent.setup()` + Jest(프로젝트 설정 확인: vitest인 곳도 있다). 사용자 관점 쿼리(`getByRole`/`getByLabelText`)만 쓰고 구현 세부(state, 클래스명)를 단언하지 않는다. 테스트 범위·커버리지는 Claude 재량이고 수치 강제는 인수 게이트에서만(`rules/testing.md`).
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: checkpoint
-description: "Creates, verifies, and lists workflow checkpoints with git integration. Triggers on 'checkpoint', 'save checkpoint', 'compare checkpoint', 'list checkpoints', or 'rollback to checkpoint'."
+description: "git 커밋과 체크포인트 로그로 작업 진행 지점을 만들고 비교·목록화한다. 사용자가 '/checkpoint', '체크포인트 저장', '체크포인트 비교', '체크포인트 목록'이라고 명시 호출할 때만 실행된다(자동 호출 없음). 롤백은 하지 않고 비교 보고까지만 한다."
 disable-model-invocation: true
 allowed-tools: Bash, Read, Grep
 ---
@@ -21,7 +21,7 @@ If $ARGUMENTS is empty, default to `list`.
 
 ## Create Checkpoint
 
-1. Run a quick verification to confirm the current state is clean:
+1. Run a quick verification to confirm the current state is clean (`tsc` only when `tsconfig.json` exists):
 
 ```bash
 npm run build 2>&1 | tail -5

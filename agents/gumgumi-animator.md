@@ -28,7 +28,7 @@ effort: medium
 
 ## 절차
 
-1. **뼈대**: `engine/template/new_episode.sh`로 작업 폴더를 만든다(인자는 README). 작업 폴더가 이미 있으면 멈추고 보고한다. 기획 폴더의 `narration-*.json`을 작업 폴더로 복사한다. `new_episode.sh`는 무내레이션 index.html을 깔기 때문에, `engine/template/index_narrated.html`로 교체한다(README "Narrated episodes" 절).
+1. **뼈대**: `engine/template/new_episode.sh`로 작업 폴더를 만든다(인자는 README). 작업 폴더가 이미 있으면 멈추고 보고한다. 기획 폴더의 `narration-ko.json`을 작업 폴더로 복사한다. `new_episode.sh`는 무내레이션 index.html을 깔기 때문에, `engine/template/index_narrated.html`로 교체한다(README "Narrated episodes" 절). 스폰 프롬프트가 참고 구현(직전 편)을 주면 그 편의 `main.js`·`scene_*.js`·`audio.py`를 복사해 시작하고 이번 화 도식·소품만 바꿔 끼운다(제작 지침 9절). 매번 새로 설계하지 않는다.
 2. **내레이션 먼저**: `engine/narrate.sh`로 ko만 TTS와 `timeline-ko.js`(NARR, MOUTH)를 만든다. 실측 길이를 보고서에 적는다.
 3. **비트 표 -> 코드 표**: 스토리보드 비트마다 `{ id, 앵커, scene, 함수명 }` 표를 main.js 상단 주석에 적는다. 비트를 합치거나 빼지 않는다. **타이밍은 절대 초가 아니라 `NARR.segments[i].t0/t1`과 어절 시각으로 계산한다**(내레이션 실측 길이가 달라져도 코드 수정 없이 맞도록).
 4. **장면 코드**:
@@ -39,11 +39,12 @@ effort: medium
    - `E` 비트: 스토리보드 시각 그대로 천천히 움직이고 hold를 지킨다. 과장은 예비동작 하나, 착지 스쿼시 하나 정도로 줄인다. 제작 지침 0-4 도식 문법(초점 dim, 색 약속, 라벨 지시선, 나란히 비교, 화살표, 슬로모션)을 스토리보드에 적힌 대로 구현한다. 설명 대상이 굼구미보다 눈에 띄어야 한다.
    - 과학 현상은 스토리보드의 `과학적 인과` 칸대로 움직인다. 굼구미가 원인을 대신하는 그림을 임의로 넣지 않는다.
    - 라벨·표지·숫자는 `03-text.md` 내용을 `TEXT = { ko: {...} }`(ko만) 한 곳에 둔다. 도식 헬퍼(D)로 그려 스타일을 통일한다. 등장·퇴장은 `03-text.md` 앵커 그대로.
+   - 라벨 지시선처럼 "자라나는" 요소의 진행률은 `1-p`로 뒤집어 쓰지 않는다. 퇴장 때 지시선이 점으로 줄어드는 결함이 C62~C64에서 나왔다.
 5. **소리**: `audio.py`에 스토리보드 Sound 칸을 효과음 큐시트로 옮긴다(시각도 NARR 기준). 내레이션 배치와 음악 덕킹은 `audio_lib.py` 함수로 한다. ko wav만 만든다.
    - 화면 동작에 붙는 효과음(쾅, 톡, 파이는 소리)은 장면 코드에 `window.CUES = [{t, kind}]`로 적는다. 렌더 때 `build/cues_ko.json`으로 저장되고 `audio.py`에서 `load_cues('ko')` + `place_cues(bus, cues, {kind: 소리})`로 놓는다. 장면 타이밍을 고쳐도 소리가 따라온다.
-6. **정지컷 점검 (최대 2회, ko 기준)**: 각 `E` 비트 hold 중간 프레임 + 자막이 떠 있는 프레임 + 전환 직후 프레임을 `render.js --list`로 뽑아 Read로 본다(1회 10~20장). 제작 지침 9절 결함 표로만 판정하고 고친다. 특히 "이 정지컷 한 장과 그때 떠 있는 자막만 보고 해당 고리가 이해되는가"를 본다.
+6. **정지컷 점검 (최대 2회, ko 기준)**: 각 `E` 비트 hold 중간 프레임 + 자막이 떠 있는 프레임 + 전환 직후 프레임을 `render.js --list`로 뽑아 Read로 본다(1회 6~10장. 비트가 많으면 새 소품이 나오는 프레임과 전환 프레임을 우선). 제작 지침 9절 결함 표로만 판정하고 고친다. 1회차에 결함이 없으면 2회차는 하지 않는다. 특히 "이 정지컷 한 장과 그때 떠 있는 자막만 보고 해당 고리가 이해되는가"를 본다.
 7. **렌더와 조립**: ko만 `render.js --lang ko --pipe`(PNG 없이 `build/video_ko.mp4`) -> `audio.py --lang ko` -> `encode.sh --lang ko`(파이프 영상에 소리만 합침) -> `brand/render_brand.sh`(제목·다음 편 힌트는 `05-meta.md`) -> `assemble_final.sh`로 출력 경로에 최종본. 2D 장면에는 `--gpu`를 쓰지 않는다(2026-10-05 실측: 90프레임 CPU 1.6초, GPU 4.7초).
-8. **실측**: 최종 파일을 ffprobe로 확인한다(해상도, 30fps, 길이, 오디오). 본편 내레이션 구간 음량(volumedetect)으로 목소리가 실제로 들어갔는지 확인한다.
+8. **실측**: 최종 파일을 ffprobe로 확인한다(해상도, 30fps, 길이, 오디오). 본편 내레이션 구간 음량(volumedetect)으로 목소리가 실제로 들어갔는지 확인하고, 최종 mp4의 최대 피크가 -3 ~ -1dB 안에 있는지 본다. AAC 인코딩에서 피크가 1~2.5dB 오르므로 `finalize` headroom은 0.75에서 시작한다(C54·C56 클리핑 사례). 넘으면 headroom을 낮춰 소리만 다시 합치고 영상은 재렌더하지 않는다.
 
 ## 경로·안전 규칙
 

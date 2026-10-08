@@ -1,6 +1,6 @@
 ---
 name: test-coverage
-description: "Analyzes test coverage, identifies files below the 80% handoff threshold, and generates missing tests for named files. Triggers on 'test coverage', 'check coverage', 'coverage report', 'generate missing tests', or 'improve coverage'."
+description: "테스트 커버리지를 측정해 80% 인수 게이트(rules/testing.md, \"테스트 맡길게\" 시점에만 적용) 미달 파일을 찾고, 사용자가 지목한 파일의 빠진 테스트를 생성한다. '커버리지 확인', '커버리지 리포트', '빠진 테스트 만들어줘', 'test coverage', 'improve coverage' 요청 시 사용. 개발 중 상시 커버리지 수치는 강제하지 않는다."
 allowed-tools: Bash, Read, Write, Edit, Grep, Glob
 ---
 
@@ -45,7 +45,7 @@ List all files with less than 80% coverage. Sort by lowest coverage first. For e
 
 ### 4. Generate Missing Tests
 
-For each file below the 80% threshold:
+Only at a handoff gate, or for files the user names. For each such file:
 
 1. Read the source file to understand its functionality.
 2. Analyze uncovered code paths (branches, error handlers, edge cases).

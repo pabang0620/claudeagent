@@ -40,14 +40,14 @@ episodes/<프로필>-long<NN>-<주제슬러그>/   롱폼 시리즈. 예) genera
 ```bash
 cd /home/lee/project/.claude/shortform
 node scripts/precheck.mjs <에피소드 폴더명>          # 먼저
-node scripts/render.mjs   <에피소드 폴더명> both     # -> episodes/<화>/out/episode-ko.mp4, episode-en.mp4
+node scripts/render.mjs   <에피소드 폴더명> ko       # -> episodes/<화>/out/episode-ko.mp4 (en은 사용자가 명시 요청할 때만 both)
 ```
 
 ffmpeg 검수 프레임 추출도 같은 이유로 에피소드 절대경로로 뽑는다. 공용 루트 `shortform/out/` 은
 렌더 산출물을 두는 곳이 아니며, 거기서 남의 화 파일을 발견해도 병렬 렌더 중일 수 있으니 바로 지우지
 말고 소유자를 먼저 확인한다.
 
-이 채널은 한국어 채널(굼구미)과 영어 채널(Whymo)을 별도 운영하므로 **에피소드 1개의 완성 산출물은 mp4 2개**다. 한쪽만 렌더하고 끝내지 않는다. 상세 근거는 `.claude/skills/shortform/references/pipeline.md`.
+**에피소드 1개의 기본 산출물은 한국어판 mp4 1개**다(2026-09-28부로 영어 채널 Whymo 제작 중단). 영어판은 사용자가 명시 요청할 때만 같은 파이프라인으로 추가한다. 상세 근거는 `.claude/skills/shortform/references/pipeline.md`.
 
 ## 포맷 (9:16 / 16:9) 및 이중 번호 체계 (2026-08-11 확정)
 

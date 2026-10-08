@@ -1,6 +1,6 @@
 ---
 name: verify
-description: "Comprehensive validation loop for codebase state. Checks build, types, lint, tests, console.log, and git status. Use when the user says 'verify', 'check everything', 'pre-commit check', or 'is it ready for PR'."
+description: "코드베이스 상태 일괄 점검(빌드·타입·린트·테스트·console.log·git status)을 돌리고 짧은 보고서를 낸다. 사용자가 '/verify', '전부 점검', '커밋 전 점검', 'PR 준비됐나'라고 명시 호출할 때만 실행된다. 브라우저를 눌러보는 검증은 playwright-verify-loop 에이전트 몫이다."
 disable-model-invocation: true
 allowed-tools: Bash, Read, Grep, Glob
 ---
@@ -33,7 +33,7 @@ If build fails, report the error and stop. Do not proceed to further steps.
 
 ### 2. Type Check
 
-Run TypeScript type checker:
+Only if `tsconfig.json` exists in the package being checked (most projects here are plain JS; skip and report "Types: n/a" otherwise):
 
 ```bash
 npx tsc --noEmit 2>&1 | head -30
@@ -45,7 +45,7 @@ If mode is `quick`, stop here and produce the report.
 
 ### 3. Lint Check
 
-Run the linter:
+Run the linter only if a `lint` script exists in package.json (report "Lint: n/a" otherwise):
 
 ```bash
 npm run lint 2>&1 | head -30
@@ -61,7 +61,7 @@ Run all tests with coverage:
 npm test -- --coverage 2>&1 | tail -50
 ```
 
-Report pass/fail counts and coverage percentage.
+Report pass/fail counts and coverage percentage as a measurement only (80% is the handoff gate in rules/testing.md, not a pass condition here).
 
 ### 5. Console.log Audit
 

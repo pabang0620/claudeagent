@@ -33,7 +33,7 @@ effort: medium
 ## 하지 않는 것
 - **중복 코드 공통화.** 이 사용자의 규칙은 "DRY보다 지역성 우선"이다(`rules/coding-style.md`). 같은 코드가 여러 페이지 폴더에 있어도 합치지 않는다. 사용자가 명시적으로 요청했을 때만 한다.
 - 컴포넌트 분리나 구조 개편. 이건 react-specialist와 planner 담당이다.
-- `git reset --hard`, `git checkout .`, `git clean`, `git push`.
+- `git reset`, `git checkout .`, `git clean`, `git stash`, `git push`. 필요해 보이면 멈추고 보고한다.
 
 ## 보고 (15줄 이내)
 - 1단계: 등급별 개수와 후보 표
