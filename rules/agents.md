@@ -21,7 +21,7 @@
 | 반복 영역 | 실측 건수 | 담당 | 필수 주의사항 |
 |----------|---------|------|-------------|
 | 파일·레포 잡무 (이동·삭제·정리·레포 분리. 커밋·푸시는 메인이 Bash로 직접) | ~30 | **repo-janitor** | 금지 명령 목록·커밋 전 파일목록 확인 절차가 에이전트 정의에 내장됨 |
-| 엑셀·스프레드시트 가공 (xlsx 편집·표 재구성·업로드 템플릿) | 23 | **spreadsheet-editor** | 원본 무덮어쓰기·산출 후 대조가 정의에 내장됨 |
+| 엑셀·스프레드시트 가공 (xlsx 편집·표 재구성·업로드 템플릿) | 23 | 메인 직접 (`anthropic-skills:xlsx`) | 원본을 덮어쓰지 않고 새 파일로 산출, 산출 후 원본과 대조 |
 | 개인 학습자료 편집 (정보처리기사 노트 등) | ~20 | general-purpose (study-notes-editor는 2026-09-29 미사용 보관) | li 개수 불변·계산 재검증·탭 숫자 정합을 스폰 프롬프트에 적는다 |
 | 에이전트·스킬·룰 정의 자체 수정 (메타작업) | ~25 | 오케스트레이터 직접 | 정의파일 1개당 수정 범위를 좁게. 파일 전체 재작성 금지 |
 | 숏폼 제작 부수작업 (캐릭터 SVG·인트로/TTS·파일 재배치) | ~45 | shortform-builder | 렌더 파이프라인 밖 잡무여도 자산 REGISTRY 선조회 원칙은 동일 적용 |
@@ -54,35 +54,27 @@
 | **빌드 에러 / 타입 에러** | 빌드 실패, 타입 에러, 컴파일 에러 - **고쳐달라는 요청은 전부 여기** (기본 경로) | build-error-resolver |
 | **프론트엔드** | React 컴포넌트, hooks, 상태관리, UI | react-specialist |
 | **백엔드** | Express 라우터, 미들웨어, API 엔드포인트 | express-engineer |
-| **HWPX 문서 생성** | 계약서, 용역계약서, 제안요청서, 보고서, 공문, 기안문, 계획서, 회의록 → .hwpx 파일 생성 | hwp-generator |
+| **문서·자료 산출물** | HWPX·PPTX 발표자료·엑셀·회의록·자소서·이북 편집 | 메인 직접. 전담 에이전트 10종은 스폰 0회로 2026-10-14 `agents-archive/`에 보관(되살리려면 `agents/`로 옮긴다). docx·pptx·xlsx 파일은 `anthropic-skills:docx`·`pptx`·`xlsx` 스킬, HWPX 양식은 `agent-refs/hwp-templates.md` |
 | **DOCX 문서 생성** | 계약서, 보고서, 제안서, 공문서 → .docx 파일 생성 (md/README/마크다운은 해당 없음) | doc-generator |
-| **PT/발표자료** | RFP 제안 발표자료, PPTX. 스폰 전에 사업명·발주기관·RFP 경로·저장 경로·슬라이드 수를 모아 프롬프트에 넣는다(빠지면 질문 문안만 돌아와 재스폰) | proposal-pt-builder |
-| **PPTX 에셋 조각 생성** | 에셋 라이브러리 조각 생성·병합·검증 (최종 PT 조립은 proposal-pt-builder) | pptx-asset-generator |
 | **Playwright 검증** | "기능 눌러봐", "브라우저 운전" | playwright-verify-loop |
 | **에이전트 평가** | 에이전트 정의파일 품질 점검·개선 | agent-evaluator-v2 |
 | **스킬 평가** | 스킬(.md) 품질 점검·개선 | skill-evaluator |
 | **숏폼·롱폼 지식영상 제작** | "숏폼 만들어줘", "쇼츠 1화 뽑아줘", "지식 영상 만들어줘", `/shortform <프로필> <주제>` → 주제발굴·대본·렌더 전체 파이프라인 (9:16 숏폼 `ep<NN>` / 16:9 롱폼 `long<NN>` 둘 다 같은 파이프라인) | `/shortform` 스킬 (shortform-planner → 사용자 대본 승인 → shortform-builder 순서로 오케스트레이션. shortform-critic은 2026-10-01 agents-archive로 보관) |
-| **회의록 작성** | 요점메모·녹취록 기반 실제 업무회의록 작성 (기존 정본 양식 실측 우선). HWPX 파일이 필요하면 meeting-minutes-writer의 결과 경로를 hwp-generator에 넘겨 메인이 2단계로 스폰한다(에이전트끼리 중첩 스폰하지 않는다) | meeting-minutes-writer |
 | **외부 웹 리서치 (대상 특정)** | "조사해줘", "회사/경쟁사 조사" → **볼 사이트가 이미 정해진** 대상(회사·URL·제품)의 사실 수확 (앱 검증 아님) | web-crawler |
 | **외부 웹 리서치 (주제형)** | "근거자료 찾아줘", "통계 찾아줘" → **어디 있는지 모르는** 공공기관·연구기관 보고서·PDF 발굴 | `deep-research` 스킬 |
 | **함수 로직 검증** | 특정 함수 비즈니스 로직·엣지케이스·에러 처리·부작용 정적 검증 (발견·보고만) | function-validator |
 | **스키마 필드명 정합성 검증** | Zod 스키마 검증, 필드명 정합성, 스키마 drift → Zod↔Repository SQL↔프론트 전송필드 3축 대조 (발견·보고만, Zod+raw SQL 스택 한정) | schema-drift-auditor |
-| **이북 교육자료 검증** | 제로베이스 독자 시점 정독·막힘 보고 (읽기 전용) | ebook-student |
-| **이북 교육자료 수정** | 확정 스타일에 맞춰 본문·요약·퀴즈·체크포인트 연쇄 갱신 | ebook-editor |
-| **후속사업 사전영업 자료** | 정식 RFP 공고 전 선점용 회사소개 겸 어필 콘텐츠(마크다운 콘텐츠까지). hwpx/docx 파일 산출은 메인이 hwp-generator/doc-generator에 2단계로 스폰 | gov-followup-outreach-writer |
 | **레포 잡무** | "파일 옮겨줘" → git·파일 정리 (코드 내용 수정 아님) | repo-janitor |
-| **엑셀·스프레드시트** | xlsx/csv 가공 | spreadsheet-editor |
 | **문서·코드맵 갱신** | "README 갱신", "코드맵 갱신", 기능 완료 후 문서 반영 | doc-updater |
 | **프로젝트 구조·데이터흐름 파악** | "데이터플로우 그려줘", "이 프로젝트 구조 파악해줘", "API 뭐뭐 있는지 보여줘", AI가 짜준 코드를 넘겨받아 훑어야 할 때 → 단일 HTML 지도 생성 (읽기 전용, 코드 수정 안 함) | `flowmap` 스킬 |
 | **신규 API 계약 설계** | 새 엔드포인트, 업로드 API, 관리자 API → Zod 스키마 1개에서 백엔드·프론트·타입 동시 생성 | api-contract-designer |
 | **디자인 토큰·CSS 일관성** | "공용 컴포넌트 만들어줘", 하드코딩 컬러·radius 정리 | ui-design-system |
-| **자소서·지원서** | "자소서 써줘" | jasoseo-writer |
-| **PastLetter 이미지 프롬프트** | 모두의창업2차 지원서 `[사진: 설명]` 자리·홍보용 이미지 생성 프롬프트 작성 (PastLetter 전용, 실제 이미지 생성은 안 함). 접수 마감(2026-09-17) 경과로 퇴역 후보, 사용자 결정 대기 | pastletter-image-prompt-writer |
 | **판정 대리** | 사용자가 "판정 에이전트 써", "lee-wonho한테 물어봐"처럼 명시적으로 요청했을 때만. 질문 전 자동 경유 금지(2026-09-29) | lee-wonho |
 | **웰콘 사업 자문 판단** | 콘텐츠 해외진출 기업정보 구축 기획(1단계) 웰콘 프로젝트 관련 설계 판단 | welcon-advisor |
 | **Starspire 게임 서버** | 캐릿터 키우기(starspire) 서버의 테이블·API 설계 / 서버 코드 작성 / 돈 경로 점검. 계획 SSOT는 게임 레포 `docs/SERVER_DEV_PLAN.md`, 에이전트 정본은 게임 레포 `.claude/agents/`(여기는 심볼릭 링크) | 설계 starspire-server-architect → 구현 starspire-backend-coder → 점검 starspire-economy-auditor |
 | **dotRPG 게임 서버** | dotRPG 온라인 서버(Node·TypeScript·PostgreSQL)의 테이블·API 설계 / 서버 코드 / 재화 경로 점검. 계획 SSOT는 게임 레포 `Docs/PLAN_SERVER.md`, 에이전트 정본은 게임 레포 `.claude/agents/`(여기는 심볼릭 링크). Unity 클라이언트 연동은 메인이 직접. 스폰 프롬프트에는 소유 파일 범위와 돌릴 테스트 파일 이름(여러 개면 `npm test -- a b c`로 한 번에)을 적고, 설계 문서 없이 프롬프트가 설계를 대신할 때는 그렇다고 명시한다(브랜치·git 금지는 정의파일에 있음) | 설계 dotrpg-server-architect → 구현 dotrpg-backend-coder → 점검 dotrpg-economy-auditor |
 | **dotRPG 클라이언트 정리** | Unity 클라이언트 500줄 초과 파일 분할 / 온라인 계층(ApiClient·OnlineSession·OnlineEconomy·세이브) 견고화·분기 누락 점검 / 기획 문서를 코드에 맞춰 갱신. 정본은 게임 레포 `.claude/agents/`(여기는 심볼릭 링크), 개선 계획 SSOT는 게임 레포 `Docs/IMPROVEMENT_PLAN.md` | 분할 dotrpg-unity-splitter / 네트워크 dotrpg-client-net-engineer / 문서 dotrpg-doc-syncer |
+| **dotRPG 클라이언트 기능·모바일 UI** | Unity 클라이언트 신규 기능(레이드 보상 화면 등)·모바일 터치/창 개편 구현. 계획 SSOT는 게임 레포 `Docs/MOBILE_UI_PLAN.md`(파일 소유권 표 준수), 컴파일·캡처는 메인이 단계 끝에 1회 | general-purpose(sonnet medium), 프롬프트에 대상 파일 절대경로·소유 파일·PC 회귀 금지 규칙을 적는다 |
 | **Starspire 클라이언트·배포 개선** | 캐릿터 키우기 Unity 클라이언트의 재화·세이브 / 퀘스트·결투장 콘텐츠 / 전투 / UI·앱 조립 수정, 서버 배포 준비물. 파일 소유를 나눠 병렬 투입하고 Unity 테스트는 메인이 끝에 1회. 공통 규칙은 게임 레포 `.claude/agent-refs/starspire-common.md`, 정본은 게임 레포 `.claude/agents/`(여기는 심볼릭 링크) | 재화 starspire-client-economy / 콘텐츠 starspire-client-content / 전투 starspire-battle-engineer / UI starspire-ui-engineer / 배포 starspire-deploy-engineer |
 | **신규 2D 액션 게임 제작** | "2D 게임 만들어줘", "이런 게임 Unity로" → **현재 전담 없음.** `game2d-pipeline` 스킬은 템플릿 레포(lantern-rite)와 에이전트 4종이 2026-10-02 소실되어 실행 불가(스킬에 호출 금지 표시됨, 퇴역 대기). 새 게임은 haru 레포 방식대로 메인이 직접 설계·골격을 잡고, 에셋은 game-asset-artist, Unity 배선은 공식 플러그인 스킬(`unity:*`)을 먼저 본다 | 메인 직접 |
 | **굼구미 시네마틱 과학 영상** | "굼구미 시네마틱", "시네마틱 과학 영상", "코드로 과학 애니메이션", `/gumgumi-cinematic <주제>` -> TTS 내레이션 과학 쇼츠(채널 인트로·제목카드·아웃트로 포함, 기본 9:16, 60초 이하). 영상 생성 AI 없이 코드로 매 프레임을 그림(엔진 `claude-animation/engine/`, 기준 샘플 `claude-animation/gumgumi-intro/`). planner(설명 사슬 먼저·스토리보드·자막) -> explain-reviewer(시청자 시점 설명 검토) -> 사용자 승인 -> animator(장면 코드·도식 헬퍼·정지컷 점검·렌더) -> `shorts/ko` 배포(2026-09-28부로 en 미제작) | `gumgumi-cinematic` 스킬 (gumgumi-cinematic-planner -> gumgumi-explain-reviewer -> gumgumi-animator) |

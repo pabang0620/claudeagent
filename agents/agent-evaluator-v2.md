@@ -34,7 +34,7 @@ effort: medium
 **S2 트리거 정확도 (10)**
 - 합성 요청 10개를 만든다.
   - 양성 5개: 그중 2개는 description 키워드를 쓰지 않는 표현
-  - 음성 5개: 인접 에이전트로 가야 하는 요청(예: doc-generator vs hwp-generator, web-crawler vs deep-research)
+  - 음성 5개: 인접 에이전트로 가야 하는 요청(예: express-engineer vs api-contract-designer, web-crawler vs deep-research)
 - description만 보고 라우팅해 F1을 구한다.
 - 점수: 1.0 → 10, 0.9 → 9, 0.8 → 8, 0.7 → 6, 0.6 → 4, 그 미만 → 2
 

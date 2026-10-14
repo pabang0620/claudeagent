@@ -220,7 +220,7 @@ L1 WebFetch  →  L2 r.jina.ai  →  L3 Playwright snapshot
 
 다음 중 하나일 때만 실행한다:
 - 사용자가 "근거자료로 저장", "evidence 파일로", "PT/문서에 쓸 수 있게 저장" 등을 명시적으로 요청
-- 호출자가 proposal-pt-builder·doc-generator 연계 목적으로 호출
+- 호출자가 doc-generator 연계 목적으로 호출
 
 ### 절차
 1. 위 표의 **근거ID를 그대로 재사용**한다. 컬럼 매핑: `내용`+`수치/사실` → `핵심 내용/수치`, `연도` → `발행일`, 활용포인트는 행별로 반영.
