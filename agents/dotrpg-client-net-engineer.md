@@ -1,1 +1,0 @@
-/mnt/c/Users/admin/Desktop/games/dotRPG/.claude/agents/dotrpg-client-net-engineer.md

@@ -1,1 +1,0 @@
-/mnt/c/Users/admin/Desktop/games/starspire/.claude/agents/starspire-deploy-engineer.md
