@@ -1,5 +1,7 @@
 # 코드 애니메이션 제작 지침 (굼구미 시네마틱 과학 쇼츠)
 
+> 2026-10-18 폐기: 이 문서를 읽던 굼구미 에이전트 3종·스킬은 `agents-archive/`, `skills-archive/`로 옮겼다. 기록용으로만 남긴다.
+
 `gumgumi-cinematic-planner`, `gumgumi-explain-reviewer`, `gumgumi-animator`가 읽는다.
 
 - **그림 품질 기준**: `/home/lee/project/claude-animation/gumgumi-intro/`(2026-09-26 Opus 제작, 사용자 평가 "퀄리티 미쳤네"). 그림체·움직임·효과·소리의 기준이다.

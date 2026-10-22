@@ -1,6 +1,6 @@
 ---
 name: cinematic-3d-shorts
-description: 채널·캐릭터와 무관한 "시네마틱 3D 쇼츠"를 영상 생성 AI 없이 코드로 만드는 스킬. Three.js 실사 스케일 장면(PBR·HDRI·그림자·블룸·색보정)을 Chromium(GPU)에서 프레임 단위로 결정적 렌더하고, numpy 효과음·edge-tts 나레이션·Flow Music BGM을 섞어 1080x1920 60fps mp4로 낸다. 모드는 둘, 단발(10~20초 반전형 1장면, 메인 직접, 기준 `showcase/sugar-cube/`)과 팀(30~90초 공정·과정형, 리서치·모듈·사운드 fork 병렬 + 메인 감독, 기준 `showcase/tower-rise/` 초고층 빌딩 시공). "유튜브 영상 만들어줘", "쇼츠 하나 만들어봐", "최고 퀄리티로 영상", "3D 영상 코드로", "시네마틱 쇼츠", "건물 올리는 영상", "만들어지는 과정 영상", "팀 에이전트로 영상" 요청 시 사용. 굼구미 채널 손그림풍 2D는 gumgumi-cinematic, 씬 라이브러리 조립형 대본 숏폼은 shortform, Google Flow/Readdy 생성 영상은 flow-nanobanana/readdy-cinematic 담당.
+description: 채널·캐릭터와 무관한 "시네마틱 3D 쇼츠"를 영상 생성 AI 없이 코드로 만드는 스킬. Three.js 실사 스케일 장면(PBR·HDRI·그림자·블룸·색보정)을 Chromium(GPU)에서 프레임 단위로 결정적 렌더하고, numpy 효과음·edge-tts 나레이션·Flow Music BGM을 섞어 1080x1920 60fps mp4로 낸다. 모드는 둘, 단발(10~20초 반전형 1장면, 메인 직접, 기준 `showcase/sugar-cube/`)과 팀(30~90초 공정·과정형, 리서치·모듈·사운드 fork 병렬 + 메인 감독, 기준 `showcase/tower-rise/` 초고층 빌딩 시공). "유튜브 영상 만들어줘", "쇼츠 하나 만들어봐", "최고 퀄리티로 영상", "3D 영상 코드로", "시네마틱 쇼츠", "건물 올리는 영상", "만들어지는 과정 영상", "팀 에이전트로 영상" 요청 시 사용. 씬 라이브러리 조립형 대본 숏폼은 shortform, Google Flow/Readdy 생성 영상은 flow-nanobanana/readdy-cinematic 담당.
 ---
 # cinematic-3d-shorts
 
@@ -82,6 +82,14 @@ node render.js --gpu --workers 1 --fps 60 --crf 14 --pipe build/video.mp4      #
 - `logarithmicDepthBuffer`는 켜지 않는다(높이맵 지형이 검게 나왔다).
 - 대표 컷 시트로 깨짐·과노출·글자 겹침·카메라 구간 오류를 먼저 잡고 전체 렌더한다. 고친 뒤에는 해당 구간만 `--list`로 다시 본다.
 - 문제를 원인 모를 채로 계속 고치지 말고 진단(렌더 순서 바꾸기, 기능 하나씩 끄기)으로 원인을 먼저 특정한다.
+
+### 5-1. Blender 고화질 렌더 (새 편부터, 기존 편은 다시 렌더하지 않는다)
+바다·하늘을 실사로 올리려면 Three.js가 장면을 계산하고 Blender Cycles가 그린다(2026-10-15 시험, 화질 확정).
+- 굽기: `node series/bake.js --page <편>/index.html --fps 15 --out <편>/build/bake --hud` (매 프레임 바뀐 물체만 기록, 자막은 hud/ 투명층).
+- 렌더: `RESPCT=67 SPP=16 <claude-animation/tools/blender-4.2.3-linux-x64/blender> -b -P series/kit/bake/blender_render.py -- <bake> <out> a:b:1 [wi wn]`.
+- 합치기: 15fps 프레임을 30fps로 보간(ffmpeg `minterpolate`)하고 1080x1920으로 키운 뒤 hud층과 audio.wav를 얹는다.
+- 속도가 관건이다. 30fps·원본 크기·32샘플로는 다리 장면이 장당 30초(10초에 2시간 반)라 쓸 수 없었다. 위 설정(프레임 절반, 크기 2/3, 샘플 16)을 기본으로 하고, WSL 메모리 16GB 이상일 때만 2개 동시 실행, 렌더 중 에뮬레이터(LDPlayer 등)는 끈다(GPU 공유 시 3배 느려짐).
+- 바다만 나오는 컷은 `claude-animation/tools/sea_clip.py`(Ocean 모디파이어, 프리셋 day/sunset/drone/storm/calm). 노을은 `EXPO=-1` + `AgX - Punchy`로 하얗게 뜨지 않게.
 
 ## 6. 소리와 인코딩
 

@@ -17,6 +17,7 @@ effort: medium
 
 | 파일 | 언제 |
 |---|---|
+| `/home/lee/project/.claude/agent-refs/flow-bulk-generation.md` | 수십 장 이상 한 번에 생성할 때(계정 여러 개 일꾼, 결과 중복 검사, 감시 규칙. 한두 장이면 읽지 않는다) |
 | `/home/lee/project/.claude/skills/flow-nanobanana/SKILL.md` | 생성 호출 전 항상(절차·대기·다운로드·워터마크·마젠타 키 조건·제출 간격·차단 대응의 SSOT). 대량 생성은 `helpers/flow_image_gen.mjs` 정본 스크립트 |
 | `.claude/agent-refs/game-asset-keying-pitfalls.md` | 작업 시작 전 2절(자주 틀린 것). 흰 배경 키잉(1절), JPEG 키잉 실측 항목(3절), 렌더 크기 역산(4절), 포즈 서술 세부(5절)는 해당 단계에서 |
 | `.claude/agent-refs/pixel-art-combat-gif.md` | "전투 애니메이션 GIF" 요청일 때만 |
