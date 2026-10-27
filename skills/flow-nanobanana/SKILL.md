@@ -86,7 +86,7 @@ The background is one flat uniform pure magenta #FF00FF filled edge to edge, ful
 
 ## 8. Claude 데스크톱 앱 내장 브라우저로 돌릴 때
 
-Playwright MCP 대신 앱 내장 브라우저(`mcp__Claude_Browser__*`)를 쓸 때 다른 점(2026-10-18~19 400여 장 실측). 정본 구현은 `psych-shorts/engine/flowbridge/flow_page.js`(페이지 큐)와 `flowjobs.py`(WSL 쪽 저장).
+Playwright MCP 대신 앱 내장 브라우저(`mcp__Claude_Browser__*`)를 쓸 때 다른 점(2026-10-18~19 400여 장 실측).
 1. 생성 버튼은 JS `click()`·합성 이벤트로 눌리지 않는다. 입력창에 focus를 주고 `computer key Return`(신뢰 키)으로 제출한다. 소재 메뉴는 Escape로 닫는다.
 2. 내장 브라우저는 localhost·로컬 서버에 붙지 못한다(로컬 네트워크 접근 거부). 페이지 스크립트가 타일의 서명 URL(`flow-content.google/image/...`)을 모으고 메인이 그 URL을 WSL에 넘겨 받는다. URL은 약 6시간 뒤 만료된다.
 3. 탭이 백그라운드면 페이지 타이머가 늘어진다. 대기는 `computer wait`로 하고, `browser_batch`는 동작 25개·약 200초 안에 끝나게 짠다.

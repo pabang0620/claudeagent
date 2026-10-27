@@ -17,6 +17,7 @@ effort: medium
 - 3차: `webtoon/storyboard_v3/epNN.json`(컷의 scene, refs, props, prompt와 최상위 scenes 장면 표), `webtoon/WORLD.md`(시대·복장·장소·반복 소품), `webtoon/design_nb/` 시트(인물, bg_ 장소, prop_ 소품, style_anchor 그림체 기준)
 - 2차: `webtoon/storyboard/epNN.json`과 `webtoon/storyboard_v2/epNN.json`(있으면): 컷마다 나와야 할 인물과 프롬프트. 인물 판별의 기준
 - 2차 `webtoon/design/` 캐릭터 시트는 헷갈릴 때만 본다(hes_day, vesper, hes_penumbra, luca, zora, astor, argus, nell, pryce, aten, garrow, tyrell, parents)
+- `/home/lee/project/.claude/agent-refs/webtoon-staging-rules.md` 1~2절: 장면 표 layout·state와 컷 blocking을 그림과 대조하는 기준
 
 ## 읽는 법
 - 이미지는 Read로 직접 본다. 큰 이미지는 축소본이 보이므로, 좌표는 본 이미지의 가로·세로에 대한 비율(0~1, 소수 둘째 자리)로 적는다. 좌상단이 (0,0)
@@ -45,6 +46,9 @@ effort: medium
   - prop: 반복 소품이 소품 시트와 다른 모양(판정 바늘이 직립 해시계·룬 문자판 등)
   - scale: 인물과 가구·건물·다른 인물의 크기 비례가 어긋남(넬이 병상만 함, 종 크기가 컷마다 다름)
   - light: 장면 표의 시각과 빛이 다름(정오인데 흐린 하늘, 같은 밤인데 달 모양이 바뀜)
+  - staging: 장면 표 layout·컷 blocking과 다름(단상 높이·위치, 인물 좌우 뒤바뀜, 문·창 위치)
+  - state: 장면 표 state와 다름(옷, 얼굴에 붙은 것, 소품 자리, 묶은 방법, 쓰러진 인물이 서 있음, 전화 중이던 손에 전화 없음)
+  - acting: 표정이 콘티와 반대(놀랄 컷에 무표정, 무서운 장면에 웃음), 대사 컷인데 입을 다묾, 엑스트라 전원이 정면·주인공을 응시
 - empty: 말풍선을 올려도 인물·중요 소품을 가리지 않는 넓은 영역(top/bottom/left/right/none)
 
 ## 잘라 쓰기 확인 (스폰 프롬프트가 요청할 때)

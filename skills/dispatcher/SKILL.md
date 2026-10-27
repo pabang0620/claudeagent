@@ -27,7 +27,7 @@ allowed-tools:
 - 파일 1~2개, 원인이 분명한 버그, 수치·문자열 조정, 문서 수정 → 1.
 - "어디 있나"만 모름 → 3.
 - 같은 묶음 안에서 결정 사항을 공유해야 함 → 4.
-- 도메인 파이프라인(숏폼·굼구미·게임·HWPX·PPTX·엑셀·회의록·크롤링) → 5(표의 담당).
+- 도메인 파이프라인(숏폼·게임·HWPX·PPTX·엑셀·회의록·크롤링) → 5(표의 담당).
 - 외부 사실 조사 → `deep-research` 스킬(주제형) / web-crawler(대상 특정).
 - 코드 검증 요청(보안·DB·함수 로직) → security-reviewer / database-reviewer / function-validator(opus low). 품질 리뷰는 요청 시 code-reviewer 스킬.
 

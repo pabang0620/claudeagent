@@ -19,13 +19,16 @@ const LOG = `${NB}/log_${account}.md`;
 const RAW = `${NB}/raw/${account}`;
 mkdirSync(RAW, { recursive: true });
 const GAP = (acc.gap_sec ?? 10) * 1000;
-const today = new Date().toISOString().slice(0, 10);
+const today = new Date().toLocaleDateString('sv-SE');  // 로컬 날짜(YYYY-MM-DD). toISOString은 UTC라 한국 오전 9시 전에는 전날로 찍혀 차단 1시간 판정이 틀렸다
 const log = (msg) => { const line = `- ${today} ${new Date().toTimeString().slice(0, 8)} ${msg}`; console.log(line); appendFileSync(LOG, line + '\n'); };
 const doneToday = () => (existsSync(LOG) ? readFileSync(LOG, 'utf8').split('\n').filter((l) => l.startsWith(`- ${today}`) && l.includes(' 성공')).length : 0);
 const BLOCK = /비정상적인 활동|사용량 한도|unusual activity|usage limit/;
+const BLOCKG = new RegExp(BLOCK.source, 'g');
 
 const ctx = await chromium.launchPersistentContext(acc.profile, {
-  headless: false,
+  // NB_HEADLESS=1 이면 창 없이 백그라운드로 돈다(Flow가 헤드리스 표식을 보지 못하게 사용자 에이전트를 일반 크롬으로 맞춘다)
+  headless: process.env.NB_HEADLESS === '1',
+  ...(process.env.NB_HEADLESS === '1' ? { userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36' } : {}),
   executablePath: process.env.CHROME_PATH ?? '/home/lee/.cache/ms-playwright/chromium-1232/chrome-linux64/chrome',
   viewport: { width: 1500, height: 950 },
   ignoreDefaultArgs: ['--enable-automation'],
@@ -123,14 +126,23 @@ for (const job of jobs) {
       await page.getByRole('button', { name: '생성 시작' }).click();
       lastSubmit = Date.now();
       let got = null;
-      const failsBefore = ((await page.locator('body').innerText().catch(() => '')).match(/정책을 위반|이미지를 생성할 수 없습니다/g) || []).length;
+      const blockBefore = ((await page.locator('body').innerText().catch(() => '')).match(BLOCKG) || []).length;
+      const bodyBefore = await page.locator('body').innerText().catch(() => '');
+      const failsBefore = (bodyBefore.match(/정책을 위반|이미지를 생성할 수 없습니다/g) || []).length;
+      const policyBefore = (bodyBefore.match(/정책을 위반/g) || []).length;
       for (let k = 0; k < 60 && !got; k++) {
         await wait(4000);
         const body = await page.locator('body').innerText().catch(() => '');
-        if (BLOCK.test(body)) { log(`차단 문구 감지(${job.id}). 이 계정은 멈춘다`); await ctx.close(); process.exit(2); }
+        // 화면에 남아 있던 옛 실패 타일의 문구가 아니라, 이번 제출 뒤에 새로 늘어난 문구만 차단으로 본다
+        if ((body.match(BLOCKG) || []).length > blockBefore) { log(`차단 문구 감지(${job.id}). 이 계정은 멈춘다`); await ctx.close(); process.exit(2); }
         // 정책 거부·생성 불가 실패 타일이 새로 뜨면 4분을 기다리지 않고 바로 실패 처리한다
         const fails = (body.match(/정책을 위반|이미지를 생성할 수 없습니다/g) || []).length;
-        if (fails > failsBefore) throw new Error('Flow가 이 프롬프트를 거부함(정책 또는 생성 불가)');
+        if (fails > failsBefore) {
+          // 정책 위반 문구가 늘었으면 프롬프트 문제, 아니면 Flow 쪽 일시적 생성 불가(혼잡). 혼잡이면 1분 쉬고 다음 시도
+          const policy = (body.match(/정책을 위반/g) || []).length > policyBefore;
+          if (!policy) await wait(60000);
+          throw new Error(policy ? 'Flow 정책 거부(프롬프트 문제)' : 'Flow 일시 생성 불가(혼잡, 1분 쉼)');
+        }
         got = (await tiles()).find((t) => !before.has(t.key) && t.w >= 800 && !/\.(png|jpe?g)$/i.test(t.label));
       }
       if (!got) throw new Error('시간 초과');
@@ -153,6 +165,11 @@ for (const job of jobs) {
       log(`${job.id} 실패(${tries}회): ${String(e.message).split('\n')[0].slice(0, 120)}`);
       await page.screenshot({ path: `${RAW}/fail_${job.id}_${tries}.png` }).catch(() => {});
       await page.keyboard.press('Escape').catch(() => {});
+      // 버튼이 안 눌리거나 시간 초과면 화면이 걸린 것이다. 새로고침해서 다음 시도를 깨끗한 화면에서 한다
+      if (/locator\.click|시간 초과/.test(String(e.message))) {
+        await page.goto(acc.project, { waitUntil: 'domcontentloaded' }).catch(() => {});  // reload는 편집 화면 주소면 'Project not found'가 된다
+        await wait(8000);
+      }
       await wait(GAP);
     }
   }
