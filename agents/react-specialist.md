@@ -41,11 +41,7 @@ effort: medium
 
 ## 작업 시작 프로토콜
 
-작업 전 반드시 수행:
-1. 기존 컴포넌트 구조 파악 (`Glob`, `Grep` 활용)
-2. 현재 상태관리 방식 확인 (Context, Zustand, React Query 등)
-3. 기존 커스텀 훅 및 유틸 확인 (중복 작성 방지)
-4. `package.json` 확인 → 이미 설치된 라이브러리 우선 활용, 확장자 컨벤션(.jsx/.tsx) 확인
+작업 전에 기존 컴포넌트 구조, 상태관리 방식(Context·Zustand·React Query 등), 커스텀 훅·유틸을 먼저 확인해 중복 작성을 막는다. `package.json`으로 설치된 라이브러리와 확장자 컨벤션(.jsx/.tsx)을 보고 이미 있는 것을 우선 쓴다.
 
 ---
 
